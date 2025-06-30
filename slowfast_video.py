@@ -22,7 +22,7 @@ import torch
 import yaml
 import time
 
-from dataset import KineticsDataset2
+from dataset_mimetics import Mimetics
 
 
 def parse_args():
@@ -51,7 +51,6 @@ def train_epoch(model, epoch, optimizer, loss_fn, dataloader):
     global train_step
     total_train_loss = [] #Contains a list of the train loss for each batch in the epoch
     total_correct = [] #contains a list of the # of correctly classified samples for each batch in the epoch
-
     starttime = time.time()
     for batch in tqdm(dataloader, desc=f"Train epoch {epoch}"):
             batch_size = batch["inputs"][0].shape[0]  # Number of samples in the batch                                         
@@ -75,7 +74,7 @@ def train_epoch(model, epoch, optimizer, loss_fn, dataloader):
                     "train loss": loss, 
                     "train accuracy": accuracy,
                     "global_step": train_step,
-                    "step_time": time.time() - starttime
+                    'step_time': time.time()-starttime,
             })
             starttime = time.time()
             train_step += 1
@@ -120,7 +119,7 @@ def test_epoch(model, epoch, loss_fn, dataloader):
         "epoch": epoch
     })
 
-    print(f"Test Loss (epoch avg): {np.array(test_loss).mean()}, Test Accuracy (epoch avg): {np.array(correct).mean()}")
+    print(f"Test Loss ({epoch}): {np.array(test_loss).mean()}, Test Accuracy (epoch avg): {np.array(correct).mean()}")
     return np.array(correct).mean()
 
 # ========== TRAINING PIPELINE ==========
@@ -215,8 +214,8 @@ if __name__ == "__main__":
 
     run.define_metric("train loss", step_metric="train_step")
     run.define_metric("train accuracy", step_metric="train_step")
-    # run.define_metric("test loss", step_metric="test_step")
-    # run.define_metric("test accuracy", step_metric="test_step")
+    run.define_metric("test loss", step_metric="test_step")
+    run.define_metric("test accuracy", step_metric="test_step")
 
     run.define_metric("train loss (epoch avg)", step_metric="epoch")
     run.define_metric("train accuracy (epoch avg)", step_metric="epoch")

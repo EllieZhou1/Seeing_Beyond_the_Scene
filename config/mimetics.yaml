@@ -1,0 +1,11 @@
+device: cuda  # Will need to be dynamically determined in code
+metadata_dir: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset  # Directory containing curated CSV files
+batch_size: 60 
+#learning_rate: 0.01
+#num_epochs: 200
+#train_csv: dataset/mimetics.csv
+val_csv: mimetics.csv
+#weights_dir: None  # Directory to save model weights
+#last epoch saved: None # Last epoch saved, used for resuming training
+num_dataloader_workers: 36
+wandb_name: mimetics

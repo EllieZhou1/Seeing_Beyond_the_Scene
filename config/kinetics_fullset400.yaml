@@ -1,0 +1,9 @@
+device: cuda  # Will need to be dynamically determined in code
+metadata_dir: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics  # Directory containing curated CSV files
+batch_size: 128 
+learning_rate: 0.01
+num_epochs: 196
+train_csv: clean_train.csv
+val_csv: clean_validate.csv
+weights_dir: slowfast_kinetics400  # Directory to save model weights
+num_dataloader_workers: 20

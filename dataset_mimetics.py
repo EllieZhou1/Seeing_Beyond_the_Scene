@@ -16,6 +16,10 @@ import argparse
 from typing import Dict
 import json
 import urllib
+from decord import VideoReader, cpu
+from decord.bridge import set_bridge
+set_bridge('torch')
+
 
 from torchvision.transforms import Compose, Lambda
 from torchvision.transforms._transforms_video import (
@@ -62,8 +66,8 @@ for k, v in kinetics_classnames.items():
 kinetics_classname_to_id = {v: k for k, v in kinetics_id_to_classname.items()}
 
 # ========== DATA PIPELINE ==========
-class KineticsDataset2(torch.utils.data.Dataset):
-    def __init__(self, csv_path, split, stride=2.0, max_videos=None):
+class MimeticsDataset(torch.utils.data.Dataset):
+    def __init__(self, csv_path, max_videos=None):
         self.max_videos = max_videos
         self.df = pd.read_csv(csv_path)
         #TODO: reduce df to the max_videos if specified
@@ -74,44 +78,31 @@ class KineticsDataset2(torch.utils.data.Dataset):
             return len(self.df)
         else:
             return min(len(self.df), self.max_videos)
-
-    
-    # Compute indices for 8 and 32 evenly spaced frames
-    def sample_indices(self, n, total_frames):
-        return [int(round(i * (total_frames - 1) / (n - 1) + 1)) for i in range(n)]
     
     #Given the path to the frames directory and a list of indicies, load the video frames
     #Returns a tensor of the video frames
-    def load_video_frames(self, frames_path, indices):
-        frames = []
-        for i in indices:
-            image_path = os.path.join(frames_path, f"{i:06d}.jpg")  # Assuming frames are named as 000001.jpg, 000002.jpg, etc.
-            img = Image.open(image_path).convert('RGB')  # Load as RGB
-            img_tensor = torch.from_numpy(np.array(img)).permute(2, 0, 1)  # [C, H, W]
-            #img_tensor = img_tensor.to(device)
-            frames.append(img_tensor)
+    def load_video_frames(self, video_path, num_frames):
+
+        vr = VideoReader(video_path, ctx=cpu(0))
+        duration = len(vr)
+        target_frame_idx = np.linspace(0, duration-1, num_frames).round().astype(int)
+
+        frames = vr.get_batch(target_frame_idx)
+        frames = frames.permute(3,0,1,2)
     
-        video_tensor = torch.stack(frames, dim=1)  # [3, num_frames, H, W]
-        video_tensor = transform(video_tensor)  # Apply transformations
+        video_tensor = transform(frames)  # Apply transformations
         return video_tensor
             
 
     def __getitem__(self, idx):
-        #if(idx % 10 == 0):
-        # print("Get item ", idx)
-
         row = self.df.iloc[idx]
         label = row['label']
 
-        total_frames = row ['num_files']
-
-        idx_fast = self.sample_indices(num_frames_fast, total_frames)
-        idx_slow = self.sample_indices(num_frames_slow, total_frames)
-
         #Shape should be [3, 32, 256, 256] for the fast tensor
         #Shape should be [3, 8, 256, 256] for the slow tensor
-        fast_tensor = self.load_video_frames(row['full_path'], idx_fast)
-        slow_tensor = self.load_video_frames(row['full_path'], idx_slow)
+        video_path = row['full_path']
+        fast_tensor = self.load_video_frames(video_path, 32)
+        slow_tensor = fast_tensor[:, ::4]
 
         inputs=[slow_tensor, fast_tensor]
 
