@@ -134,10 +134,11 @@ def train_model():
 
 
     #TODO: Change the "last epoch" to the last epoch you want to load
-    weights_path = os.path.join(CONFIG['metadata_dir'], "saved_weights", CONFIG['weights_dir'], f"weights_{CONFIG['last epoch saved']:06d}.pth")
-    if os.path.exists(weights_path):
-        my_model.load_state_dict(torch.load(weights_path, map_location=CONFIG['device'])['model'])
-        print(f"Loaded weights from {weights_path}")
+    if not (CONFIG['last_epoch_saved'] == "None"):
+        weights_path = os.path.join(CONFIG['metadata_dir'], "saved_weights", CONFIG['weights_dir'], f"weights_{CONFIG['last_epoch_saved']:06d}.pth")
+        if os.path.exists(weights_path):
+            my_model.load_state_dict(torch.load(weights_path, map_location=CONFIG['device'])['model'])
+            print(f"Loaded weights from {weights_path}")
                         
     # Create a dataset instance for training set
     train_dataset = KineticsDataset2(

@@ -101,8 +101,8 @@ class MimeticsDataset(torch.utils.data.Dataset):
         #Shape should be [3, 32, 256, 256] for the fast tensor
         #Shape should be [3, 8, 256, 256] for the slow tensor
         video_path = row['full_path']
-        fast_tensor = self.load_video_frames(video_path, 32)
-        slow_tensor = fast_tensor[:, ::4]
+        fast_tensor = self.load_video_frames(video_path, 64)
+        slow_tensor = fast_tensor[:, ::8]
 
         inputs=[slow_tensor, fast_tensor]
 
