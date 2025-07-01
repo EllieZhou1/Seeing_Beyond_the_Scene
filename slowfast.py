@@ -85,7 +85,7 @@ def train_epoch(model, epoch, optimizer, loss_fn, dataloader):
                             
     run.log({
         "train loss (epoch avg)": np.array(total_train_loss).mean(),
-        "train accuracy/ (epoch avg)": np.array(total_correct).mean(),
+        "train accuracy (epoch avg)": np.array(total_correct).mean(),
         "global_step": train_step,
         "epoch": epoch
     })
