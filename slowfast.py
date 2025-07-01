@@ -85,7 +85,7 @@ def train_epoch(model, epoch, optimizer, loss_fn, dataloader):
                             
     run.log({
         "train loss (epoch avg)": np.array(total_train_loss).mean(),
-        "train accuracy (epoch avg)": np.array(total_correct).mean(),
+        "train accuracy/ (epoch avg)": np.array(total_correct).mean(),
         "global_step": train_step,
         "epoch": epoch
     })
@@ -134,8 +134,9 @@ def train_model():
 
 
     #TODO: Change the "last epoch" to the last epoch you want to load
-    if not (CONFIG['last_epoch_saved'] == "None"):
-        weights_path = os.path.join(CONFIG['metadata_dir'], "saved_weights", CONFIG['weights_dir'], f"weights_{CONFIG['last_epoch_saved']:06d}.pth")
+    if not (CONFIG['last_epoch_saved'] == "None" or CONFIG['last_epoch_saved'] is None):
+        weights_path = os.path.join(CONFIG['metadata_dir'], "saved_weights", CONFIG['weights_dir'], 
+                                    f"weights_{CONFIG['last_epoch_saved']:06d}.pth")
         if os.path.exists(weights_path):
             my_model.load_state_dict(torch.load(weights_path, map_location=CONFIG['device'])['model'])
             print(f"Loaded weights from {weights_path}")
@@ -177,8 +178,13 @@ def train_model():
     test_acc = test_epoch(my_model, -1, my_loss_fn, my_validation_dataloader)
     print("Test Accuracy before training=", test_acc)
 
-    for epoch in tqdm(range(CONFIG['last epoch saved'] + 1, CONFIG['last epoch saved'] + 1 + CONFIG['num_epochs']), desc='Training Epochs'):
+    last_epoc_saved = CONFIG['last_epoch_saved']
+    if last_epoc_saved == "None" or last_epoc_saved is None:
+         last_epoc_saved = 0
+    else:
+         last_epoc_saved = int(CONFIG['last_epoch_saved'])
 
+    for epoch in tqdm(range(last_epoc_saved + 1, last_epoc_saved + 1 + CONFIG['num_epochs']), desc='Training Epochs'):
         print("Starting epoch", epoch)
         my_model.train()
         train_epoch(my_model, epoch, my_optimizer, my_loss_fn, my_train_dataloader)
