@@ -7,5 +7,5 @@ train_csv: dataset/mini50_clean_train.csv
 val_csv: dataset/mini50_clean_validation.csv
 weights_dir: slowfast_minikinetics50/8gpu  # Directory to save model weights
 last_epoch_saved: None # Last epoch saved, used for resuming training
-num_dataloader_workers: 36
+num_dataloader_workers: 80
 wandb_name: miniKinetics_8gpu

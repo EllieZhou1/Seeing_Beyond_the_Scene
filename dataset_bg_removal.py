@@ -18,6 +18,9 @@ import argparse
 from typing import Dict
 import json
 import urllib
+from matplotlib import pyplot as plt
+from sam2.sam2.build_sam import build_sam2_video_predictor
+
 
 from torchvision.transforms import Compose, Lambda
 from torchvision.transforms._transforms_video import (
@@ -68,6 +71,12 @@ class KineticsDataset2(torch.utils.data.Dataset):
     def __init__(self, csv_path, split, stride=2.0, max_videos=None):
         self.max_videos = max_videos
         self.df = pd.read_csv(csv_path)
+        self.yolo = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
+
+        sam2_checkpoint = "sam2/checkpoints/sam2.1_hiera_large.pt"
+        model_cfg = "sam2/configs/sam2.1/sam2.1_hiera_l.yaml"
+
+        self.predictor = build_sam2_video_predictor(model_cfg, sam2_checkpoint, device=device)
         #TODO: reduce df to the max_videos if specified
 
 
@@ -84,17 +93,59 @@ class KineticsDataset2(torch.utils.data.Dataset):
     
     #Given the path to the frames directory and a list of indicies, load the video frames
     #Returns a tensor of the video frames
-    def load_video_frames(self, frames_path, indices):
+    def load_video_frames(self, frames_path, indices, counter):
         frames = []
         for i in indices:
             image_path = os.path.join(frames_path, f"{i:06d}.jpg")  # Assuming frames are named as 000001.jpg, 000002.jpg, etc.
             img = Image.open(image_path).convert('RGB')  # Load as RGB
-            img_tensor = torch.from_numpy(np.array(img)).permute(2, 0, 1)  # [C, H, W]
-            frames.append(img_tensor)
+            img_np = np.array(img) #convert to np image
+            frames.append(img_np)
     
-        video_tensor = torch.stack(frames, dim=1)  # [3, num_frames, H, W]
+        video_np = np.stack(frames, axis=0)
+        img0_np = video_np[0]
 
+        print("Starting YOLO")
+        results = self.yolo(img0_np) #get bbox for the first frame
+        print("Finished YOLO")
+
+        bboxes = results.xyxy[0]
+        person_bboxes = bboxes[bboxes[:, 5] == 0] # get bboxes for class == person only
+        person_bboxes = person_bboxes[:, :4].cpu().numpy()
+        print("PERSON BOUNDING BOX:", person_bboxes)
+    
+        print("Saving the images with bounding boxes")
+        plt.figure(figsize=(9, 6))
+        plt.imshow(img)
+        ax = plt.gca()
+        for bbox in person_bboxes:
+            x0, y0, x1, y1 = bbox
+            w, h = x1 - x0, y1 - y0
+            rect = plt.Rectangle((x0, y0), w, h, edgecolor='red', facecolor='none', linewidth=2)
+            ax.add_patch(rect)
+        plt.title("Image with Bounding Boxes")
+        plt.savefig("boundingboxes/output_with_boxes_{counter}.png")  # Save the figure
         
+        inference_state = self.predictor.init_state(video_path=frames_path)
+
+        box = np.array(person_bboxes[0], dtype=np.float32)
+        _, out_obj_ids, out_mask_logits = self.predictor.add_new_points_or_box(
+            inference_state=inference_state,
+            frame_idx=0,
+            obj_id=1,
+            box=box,
+        )
+
+        imgs = []
+
+        #Get the video segmentation
+        for out_frame_idx, _, out_mask_logits in self.predictor.propagate_in_video(inference_state):
+            binarymask = (out_mask_logits.squeeze(0).squeeze(0)) > 0.0 #binary mask, where 1 is person, 0 isnot
+            binarymask = binarymask.unsqueeze(2).to(device) 
+            img = torch.from_numpy(video_np[out_frame_idx].convert("RGB")).to(device)
+            seg_img = binarymask * img
+            imgs.append(seg_img)
+
+        video_tensor = torch.stack(imgs, dim=0)
         video_tensor = transform(video_tensor)  # Apply transformations
         return video_tensor
             
@@ -113,8 +164,8 @@ class KineticsDataset2(torch.utils.data.Dataset):
 
         #Shape should be [3, 32, 256, 256] for the fast tensor
         #Shape should be [3, 8, 256, 256] for the slow tensor
-        fast_tensor = self.load_video_frames(row['full_path'], idx_fast)
-        slow_tensor = self.load_video_frames(row['full_path'], idx_slow)
+        fast_tensor = self.load_video_frames(row['full_path'], idx_fast, idx)
+        slow_tensor = self.load_video_frames(row['full_path'], idx_slow, idx)
 
         inputs=[slow_tensor, fast_tensor]
 
@@ -123,4 +174,27 @@ class KineticsDataset2(torch.utils.data.Dataset):
             "label": kinetics_classname_to_id[label],
         }
         return result
-    
+
+    def show_mask(mask, ax, obj_id=None, random_color=False):
+        if random_color:
+            color = np.concatenate([np.random.random(3), np.array([0.6])], axis=0)
+        else:
+            cmap = plt.get_cmap("tab10")
+            cmap_idx = 0 if obj_id is None else obj_id
+            color = np.array([*cmap(cmap_idx)[:3], 0.6])
+        h, w = mask.shape[-2:]
+        mask_image = mask.reshape(h, w, 1) * color.reshape(1, 1, -1)
+        ax.imshow(mask_image)
+
+
+    def show_points(coords, labels, ax, marker_size=200):
+        pos_points = coords[labels==1]
+        neg_points = coords[labels==0]
+        ax.scatter(pos_points[:, 0], pos_points[:, 1], color='green', marker='*', s=marker_size, edgecolor='white', linewidth=1.25)
+        ax.scatter(neg_points[:, 0], neg_points[:, 1], color='red', marker='*', s=marker_size, edgecolor='white', linewidth=1.25)
+
+
+    def show_box(box, ax):
+        x0, y0 = box[0], box[1]
+        w, h = box[2] - box[0], box[3] - box[1]
+        ax.add_patch(plt.Rectangle((x0, y0), w, h, edgecolor='green', facecolor=(0, 0, 0, 0), lw=2))
