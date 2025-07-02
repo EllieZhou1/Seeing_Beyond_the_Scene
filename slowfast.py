@@ -23,6 +23,7 @@ import yaml
 import time
 
 from dataset import KineticsDataset2
+from dataset_bg_removal import KineticsDataset_RemoveBG
 
 
 def parse_args():
@@ -82,6 +83,7 @@ def train_epoch(model, epoch, optimizer, loss_fn, dataloader):
 
             total_train_loss.append(train_loss)
             total_correct += correct.tolist()
+            torch.cuda.empty_cache()
                             
     run.log({
         "train loss (epoch avg)": np.array(total_train_loss).mean(),
@@ -142,17 +144,15 @@ def train_model():
             print(f"Loaded weights from {weights_path}")
                         
     # Create a dataset instance for training set
-    train_dataset = KineticsDataset2(
+    train_dataset = KineticsDataset_RemoveBG(
         csv_path=os.path.join(CONFIG['metadata_dir'], CONFIG['train_csv']),
-        split="train",
-        max_videos=None
+        max_videos=1
     )
 
     #create a dataset instance for validation set
-    validation_dataset = KineticsDataset2(
+    validation_dataset = KineticsDataset_RemoveBG(
         csv_path = os.path.join(CONFIG['metadata_dir'], CONFIG['val_csv']),
-        split="validate",
-        max_videos=None
+        max_videos=1
     )
 
     train_len = len(train_dataset)
@@ -164,10 +164,10 @@ def train_model():
 
     #my_train_dataloader = torch.utils.data.DataLoader(train_dataset, CONFIG['batch_size'], shuffle=True)
     my_train_dataloader = torch.utils.data.DataLoader(train_dataset, CONFIG['batch_size'], 
-                                                    num_workers=CONFIG['num_dataloader_workers'], pin_memory=True, shuffle=True, drop_last=True)
+                                                    num_workers=CONFIG['num_dataloader_workers'], pin_memory=False, shuffle=True, drop_last=True)
 
     my_validation_dataloader = torch.utils.data.DataLoader(validation_dataset, CONFIG['batch_size'], 
-                                                        num_workers=CONFIG['num_dataloader_workers'], pin_memory=True, shuffle=False, drop_last=False)
+                                                        num_workers=CONFIG['num_dataloader_workers'], pin_memory=False, shuffle=False, drop_last=False)
 
     my_optimizer = optim.SGD(my_model.parameters(), lr=CONFIG['learning_rate'])
     my_scheduler = ReduceLROnPlateau(my_optimizer, mode='max')
@@ -205,7 +205,6 @@ def train_model():
     test_epoch(my_model, epoch, my_loss_fn, my_validation_dataloader)
     
             
-
 if __name__ == "__main__":
     CONFIG = parse_args()
     print(CONFIG)
