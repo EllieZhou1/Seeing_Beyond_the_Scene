@@ -1,4 +1,6 @@
 #REMOVING BACKGROUND
+#Use
+
 
 import torch
 from datetime import datetime
@@ -147,11 +149,6 @@ class KineticsDataset_RemoveBG(torch.utils.data.Dataset):
             )
 
             imgs = []
-
-            #issue:
-            # - Out_frame_index/out_mask_logits are getting masks for each vid in frames_path, not the indices i want
-            # - Img is geting the image that I sampled
-            # - I am going to print out the segmented image to see if its right...
 
             #Go through each video frame, propogate the segmentation, calculate the binary mask
             for out_frame_idx, _, out_mask_logits in self.predictor.propagate_in_video(inference_state):
