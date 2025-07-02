@@ -14,12 +14,23 @@ import torch.nn as nn
 import glob
 import wandb
 import argparse
+import gc
 
 from typing import Dict
 import json
 import urllib
 from matplotlib import pyplot as plt
-from sam2.sam2.build_sam import build_sam2_video_predictor
+import os
+import sys
+import shutil
+import tempfile
+
+os.chdir("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/sam2")
+sys.path.insert(0, "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/sam2")
+# print("current working direcotry", os.getcwd())
+from sam2.build_sam import build_sam2_video_predictor
+os.chdir("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics")
+# print("current working direcotry", os.getcwd())
 
 
 from torchvision.transforms import Compose, Lambda
@@ -31,6 +42,9 @@ from pytorchvideo.data.encoded_video import EncodedVideo
 from pytorchvideo.transforms import (
     ShortSideScale,
 ) 
+
+import multiprocessing as mp
+mp.set_start_method('spawn', force=True)
 
 #Define input transforms
 side_size = 256
@@ -67,14 +81,17 @@ for k, v in kinetics_classnames.items():
 kinetics_classname_to_id = {v: k for k, v in kinetics_id_to_classname.items()}
 
 # ========== DATA PIPELINE ==========
-class KineticsDataset2(torch.utils.data.Dataset):
-    def __init__(self, csv_path, split, stride=2.0, max_videos=None):
+class KineticsDataset_RemoveBG(torch.utils.data.Dataset):
+    def __init__(self, csv_path, max_videos=None):
         self.max_videos = max_videos
         self.df = pd.read_csv(csv_path)
         self.yolo = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
 
-        sam2_checkpoint = "sam2/checkpoints/sam2.1_hiera_large.pt"
-        model_cfg = "sam2/configs/sam2.1/sam2.1_hiera_l.yaml"
+        sam2_checkpoint = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/sam2/checkpoints/sam2.1_hiera_large.pt"
+
+        #model_cfg, expects a config path, not an absolute path
+        os.chdir("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/sam2/sam2")
+        model_cfg = "configs/sam2.1/sam2.1_hiera_l.yaml"
 
         self.predictor = build_sam2_video_predictor(model_cfg, sam2_checkpoint, device=device)
         #TODO: reduce df to the max_videos if specified
@@ -93,59 +110,79 @@ class KineticsDataset2(torch.utils.data.Dataset):
     
     #Given the path to the frames directory and a list of indicies, load the video frames
     #Returns a tensor of the video frames
-    def load_video_frames(self, frames_path, indices, counter):
+    def load_video_frames(self, frames_path, indices):
         frames = []
+
+
+        #Make a temporary directory with only the sampled frames
+        temp_dir = tempfile.mkdtemp()
         for i in indices:
-            image_path = os.path.join(frames_path, f"{i:06d}.jpg")  # Assuming frames are named as 000001.jpg, 000002.jpg, etc.
-            img = Image.open(image_path).convert('RGB')  # Load as RGB
+            source = os.path.join(frames_path, f"{i:06d}.jpg")
+            dest = os.path.join(temp_dir, f"{i:06d}.jpg")
+            os.symlink(source, dest)
+
+            img = Image.open(source).convert('RGB')  # Load as RGB
             img_np = np.array(img) #convert to np image
             frames.append(img_np)
     
         video_np = np.stack(frames, axis=0)
+        print("VIDEO NP shape", video_np.shape)
+
         img0_np = video_np[0]
-
-        print("Starting YOLO")
         results = self.yolo(img0_np) #get bbox for the first frame
-        print("Finished YOLO")
-
         bboxes = results.xyxy[0]
         person_bboxes = bboxes[bboxes[:, 5] == 0] # get bboxes for class == person only
         person_bboxes = person_bboxes[:, :4].cpu().numpy()
-        print("PERSON BOUNDING BOX:", person_bboxes)
-    
-        print("Saving the images with bounding boxes")
-        plt.figure(figsize=(9, 6))
-        plt.imshow(img)
-        ax = plt.gca()
-        for bbox in person_bboxes:
-            x0, y0, x1, y1 = bbox
-            w, h = x1 - x0, y1 - y0
-            rect = plt.Rectangle((x0, y0), w, h, edgecolor='red', facecolor='none', linewidth=2)
-            ax.add_patch(rect)
-        plt.title("Image with Bounding Boxes")
-        plt.savefig("boundingboxes/output_with_boxes_{counter}.png")  # Save the figure
         
-        inference_state = self.predictor.init_state(video_path=frames_path)
+        inference_state = self.predictor.init_state(video_path=temp_dir)
 
-        box = np.array(person_bboxes[0], dtype=np.float32)
-        _, out_obj_ids, out_mask_logits = self.predictor.add_new_points_or_box(
-            inference_state=inference_state,
-            frame_idx=0,
-            obj_id=1,
-            box=box,
-        )
+        #If a person was detected, then segment out the person
+        if person_bboxes.shape[0] >= 1:
+            box = np.array(person_bboxes[0], dtype=np.float32)
+            _, out_obj_ids, out_mask_logits = self.predictor.add_new_points_or_box(
+                inference_state=inference_state,
+                frame_idx=0,
+                obj_id=1,
+                box=box,
+            )
 
-        imgs = []
+            imgs = []
 
-        #Get the video segmentation
-        for out_frame_idx, _, out_mask_logits in self.predictor.propagate_in_video(inference_state):
-            binarymask = (out_mask_logits.squeeze(0).squeeze(0)) > 0.0 #binary mask, where 1 is person, 0 isnot
-            binarymask = binarymask.unsqueeze(2).to(device) 
-            img = torch.from_numpy(video_np[out_frame_idx].convert("RGB")).to(device)
-            seg_img = binarymask * img
-            imgs.append(seg_img)
+            #issue:
+            # - Out_frame_index/out_mask_logits are getting masks for each vid in frames_path, not the indices i want
+            # - Img is geting the image that I sampled
+            # - I am going to print out the segmented image to see if its right...
 
-        video_tensor = torch.stack(imgs, dim=0)
+            #Go through each video frame, propogate the segmentation, calculate the binary mask
+            for out_frame_idx, _, out_mask_logits in self.predictor.propagate_in_video(inference_state):
+                binarymask = (out_mask_logits.squeeze(0).squeeze(0)) > 0.0 #binary mask, where 1 is person, 0 isnot
+                binarymask = binarymask.unsqueeze(2).to(device)
+
+                img = torch.from_numpy(video_np[out_frame_idx]).to(device)
+                seg_img = binarymask * img
+                imgs.append(seg_img)
+
+                seg_img_np = seg_img.cpu().numpy()
+                if seg_img_np.shape[0] == 3:  # (3, H, W) -> (H, W, 3)
+                    seg_img_np = np.transpose(seg_img_np, (1, 2, 0))
+
+                seg_img_np = np.clip(seg_img_np, 0, 255).astype(np.uint8)
+                print("Seg image shape:", seg_img_np.shape, seg_img_np.min(), seg_img_np.max())
+                Image.fromarray(seg_img_np).save(f"/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/segmented_frames/seg_img_{out_frame_idx}.png")
+
+            video_tensor = torch.stack(imgs, dim=0)
+
+            #Delete the temp directory
+            shutil.rmtree(temp_dir)  # Clean up after
+        
+        else:
+            print(f"Could not find a person in this video: {frames_path}")
+            video_tensor = torch.from_numpy(video_np)
+        
+
+        video_tensor = video_tensor.permute(3, 0, 1, 2)
+        print("Video_tensor shape: ", video_tensor.shape)
+
         video_tensor = transform(video_tensor)  # Apply transformations
         return video_tensor
             
@@ -164,8 +201,8 @@ class KineticsDataset2(torch.utils.data.Dataset):
 
         #Shape should be [3, 32, 256, 256] for the fast tensor
         #Shape should be [3, 8, 256, 256] for the slow tensor
-        fast_tensor = self.load_video_frames(row['full_path'], idx_fast, idx)
-        slow_tensor = self.load_video_frames(row['full_path'], idx_slow, idx)
+        fast_tensor = self.load_video_frames(row['full_path'], idx_fast)
+        slow_tensor = self.load_video_frames(row['full_path'], idx_slow)
 
         inputs=[slow_tensor, fast_tensor]
 
