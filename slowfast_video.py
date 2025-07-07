@@ -167,7 +167,7 @@ def train_model():
                                                         num_workers=CONFIG['num_dataloader_workers'], pin_memory=True, shuffle=False, drop_last=False)
 
     my_optimizer = optim.SGD(my_model.parameters(), lr=CONFIG['learning_rate'])
-    my_scheduler = ReduceLROnPlateau(my_optimizer, mode='max')
+    my_scheduler = ReduceLROnPlateau(my_optimizer, mode='max', patience=30)
     my_loss_fn = nn.CrossEntropyLoss(reduction='mean')
 
     #for epoch in range(CONFIG['num_epochs']):
