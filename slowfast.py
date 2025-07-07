@@ -70,13 +70,15 @@ def train_epoch(model, epoch, optimizer, loss_fn, dataloader):
             predicted = torch.argmax(outputs, dim=1)
             correct = (predicted == labels).detach().cpu().numpy() #add the number of correct predictions in this batch
             accuracy = correct.mean()
+            current_lr = optimizer.param_groups[0]['lr']
 
             #Log performance every 50 batch
             run.log({
                     "train loss": loss, 
                     "train accuracy": accuracy,
                     "global_step": train_step,
-                    "step_time": time.time() - starttime
+                    "step_time": time.time() - starttime,
+                    "learning rate": current_lr
             })
             starttime = time.time()
             train_step += 1
@@ -84,12 +86,15 @@ def train_epoch(model, epoch, optimizer, loss_fn, dataloader):
             total_train_loss.append(train_loss)
             total_correct += correct.tolist()
             torch.cuda.empty_cache()
-                            
+
+    current_lr = optimizer.param_groups[0]['lr']   
+
     run.log({
         "train loss (epoch avg)": np.array(total_train_loss).mean(),
         "train accuracy (epoch avg)": np.array(total_correct).mean(),
         "global_step": train_step,
-        "epoch": epoch
+        "epoch": epoch,
+        "learning rate": current_lr
     })
                 
 
@@ -128,31 +133,48 @@ def test_epoch(model, epoch, loss_fn, dataloader):
 # ========== TRAINING PIPELINE ==========
 def train_model():
     # 1. load the model 
-    my_model = torch.hub.load('facebookresearch/pytorchvideo', 'slowfast_r50', pretrained=False)
+    my_model = torch.hub.load('facebookresearch/pytorchvideo', 'slow_r50', pretrained=False)
     my_model = my_model.to(CONFIG['device'])
+
+    # my_model = my_model.to('cpu')
+
+    my_model.blocks[-1].proj = torch.nn.Linear(in_features=2048, out_features=50, bias=True)
+    # print("Last block", my_model.blocks[-1])  # Final classification head
+
+    # test_tensor = torch.zeros(1, 3, 8, 256, 256).float().to('cpu') #B, C, T, H, W
+    # print("slow first block", my_model.blocks[0])
+
+    # my_model.eval()
+    # output = my_model(test_tensor)
+    # print(output.shape)
+
+
     if torch.cuda.device_count() > 1:
         print(f"Using {torch.cuda.device_count()} GPUs")
         my_model = nn.DataParallel(my_model)
 
-
+    #If continuing training, then load in the model's weights
     #TODO: Change the "last epoch" to the last epoch you want to load
-    if not (CONFIG['last_epoch_saved'] == "None" or CONFIG['last_epoch_saved'] is None):
-        weights_path = os.path.join(CONFIG['metadata_dir'], "saved_weights", CONFIG['weights_dir'], 
-                                    f"weights_{CONFIG['last_epoch_saved']:06d}.pth")
-        if os.path.exists(weights_path):
-            my_model.load_state_dict(torch.load(weights_path, map_location=CONFIG['device'])['model'])
-            print(f"Loaded weights from {weights_path}")
+
+    last_epoc_saved = CONFIG['last_epoch_saved']
+    if last_epoc_saved == "None" or last_epoc_saved is None:
+         last_epoc_saved = 0
+    else:
+        print(f"Loading in epoch {CONFIG['last_epoch_saved']} weights")
+        last_epoc_saved = int(CONFIG['last_epoch_saved'])
+        checkpoint = torch.load(f"saved_weights/slowfast_minikinetics50/slow_finetune/weights_{last_epoc_saved:06d}.pth", map_location=CONFIG['device'])
+        my_model.load_state_dict(checkpoint['model'])
                         
     # Create a dataset instance for training set
-    train_dataset = KineticsDataset_RemoveBG(
+    train_dataset = KineticsDataset2(
         csv_path=os.path.join(CONFIG['metadata_dir'], CONFIG['train_csv']),
-        max_videos=1
+        max_videos=None
     )
 
     #create a dataset instance for validation set
-    validation_dataset = KineticsDataset_RemoveBG(
+    validation_dataset = KineticsDataset2(
         csv_path = os.path.join(CONFIG['metadata_dir'], CONFIG['val_csv']),
-        max_videos=1
+        max_videos=None
     )
 
     train_len = len(train_dataset)
@@ -169,22 +191,21 @@ def train_model():
     my_validation_dataloader = torch.utils.data.DataLoader(validation_dataset, CONFIG['batch_size'], 
                                                         num_workers=CONFIG['num_dataloader_workers'], pin_memory=False, shuffle=False, drop_last=False)
 
+
+
+    print("Made dataloaders")
+
     my_optimizer = optim.SGD(my_model.parameters(), lr=CONFIG['learning_rate'])
-    my_scheduler = ReduceLROnPlateau(my_optimizer, mode='max')
+    my_scheduler = ReduceLROnPlateau(my_optimizer, mode='max', patience=40, threshold=1e-2)
     my_loss_fn = nn.CrossEntropyLoss(reduction='mean')
 
-    #for epoch in range(CONFIG['num_epochs']):
+    print("initialized optimizer, scheduler, and loss function")
 
     test_acc = test_epoch(my_model, -1, my_loss_fn, my_validation_dataloader)
     print("Test Accuracy before training=", test_acc)
 
-    last_epoc_saved = CONFIG['last_epoch_saved']
-    if last_epoc_saved == "None" or last_epoc_saved is None:
-         last_epoc_saved = 0
-    else:
-         last_epoc_saved = int(CONFIG['last_epoch_saved'])
-
     for epoch in tqdm(range(last_epoc_saved + 1, last_epoc_saved + 1 + CONFIG['num_epochs']), desc='Training Epochs'):
+    #for epoch in range(CONFIG['num_epochs']):
         print("Starting epoch", epoch)
         my_model.train()
         train_epoch(my_model, epoch, my_optimizer, my_loss_fn, my_train_dataloader)
@@ -216,18 +237,18 @@ if __name__ == "__main__":
         project="Slowfast_Kinetics",
         name=CONFIG['wandb_name'],
         config=CONFIG,
-        mode=CONFIG['wandb_mode'] if 'wandb_mode' in CONFIG else None
+        #mode=CONFIG['wandb_mode'] if 'wandb_mode' in CONFIG else None
+        mode='disabled'
     )
 
-    run.define_metric("train loss", step_metric="train_step")
-    run.define_metric("train accuracy", step_metric="train_step")
-    # run.define_metric("test loss", step_metric="test_step")
-    # run.define_metric("test accuracy", step_metric="test_step")
+    # run.define_metric("learning rate")
+    # run.define_metric("train loss", step_metric="train_step")
+    # run.define_metric("train accuracy", step_metric="train_step")
 
-    run.define_metric("train loss (epoch avg)", step_metric="epoch")
-    run.define_metric("train accuracy (epoch avg)", step_metric="epoch")
-    run.define_metric("test loss (epoch avg)", step_metric="epoch")
-    run.define_metric("test accuracy (epoch avg)", step_metric="epoch")
+    # run.define_metric("train loss (epoch avg)", step_metric="epoch")
+    # run.define_metric("train accuracy (epoch avg)", step_metric="epoch")
+    # run.define_metric("test loss (epoch avg)", step_metric="epoch")
+    # run.define_metric("test accuracy (epoch avg)", step_metric="epoch")
 
     train_model()
 
