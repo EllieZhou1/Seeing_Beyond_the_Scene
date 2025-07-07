@@ -22,7 +22,7 @@ import urllib
 import torch
 import yaml
 
-from dataset import KineticsDataset2
+from dataset import HAT_bg_Dataset
 from dataset_mimetics import MimeticsDataset
 
 print("Starting evaluation script")
@@ -57,7 +57,8 @@ if torch.cuda.device_count() > 1:
 
 #Initiate the Wandb
 run = wandb.init(
-    project="Slowfast_Evaluation_on_Mimetics",
+    project="SlowFast_Kinetics",
+    name="Evaluation of pretrained slowfast on HAT background only"
 )
 
 run.define_metric("test loss (epoch avg)")
@@ -73,7 +74,7 @@ print("Using device:", CONFIG['device'])
 print("Started making dataset")
 
 #create a dataset instance for validation set
-validation_dataset = MimeticsDataset(
+validation_dataset = HAT_bg_Dataset(
      csv_path = os.path.join(CONFIG['metadata_dir'], CONFIG['val_csv']),
      max_videos=None
 )
