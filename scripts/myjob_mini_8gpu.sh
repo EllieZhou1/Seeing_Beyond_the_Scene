@@ -1,9 +1,9 @@
 #!/bin/sh
 #SBATCH --nodes=1             # nodes requested
 #SBATCH --ntasks=1            # tasks requested
-#SBATCH --cpus-per-task=24     # Specify the number of CPUs your task will need.
-#SBATCH --gres=gpu:8          # the number of GPUs requested
-#SBATCH --mem=500G           # memory
+#SBATCH --cpus-per-task=20     # Specify the number of CPUs your task will need.
+#SBATCH --gres=gpu:6         # the number of GPUs requested
+#SBATCH --mem=300G           # memory
 #SBATCH -o /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/slurm/outfile_minikinetics        # send stdout to outfile
 #SBATCH -e /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/slurm/errfile_minikinetics  # send stderr to errfile
 #SBATCH -t 168:00:00           # time requested in hour:minute:second
@@ -11,5 +11,5 @@
 #SBATCH --mail-user=ez9517@princeton.edu
 
 source ~/miniconda3/etc/profile.d/conda.sh
-conda activate ellie_env
+conda activate ellie_env2
 python slowfast.py --config $1
