@@ -23,7 +23,7 @@ class SumConcat(nn.Module):
         output_orig = self.orig_layer1(output_orig)
         output_orig = self.orig_layer2(output_orig)
 
-        output_seg = self.segstem(seg_img)
+        output_seg = self.seg_stem(seg_img)
         output_seg = self.seg_layer1(output_seg)
         output_seg = self.seg_layer2(output_seg)
 
