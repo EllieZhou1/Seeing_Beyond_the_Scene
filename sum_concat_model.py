@@ -23,7 +23,8 @@ import torch
 import yaml
 import time
 
-from dataset_classes.dataset_slow import DatasetSlow
+from dataset_classes.dataset_sum_concat import DatasetSumConcat
+from custom_models import SumConcat
 
 
 def parse_args():
@@ -134,34 +135,39 @@ def test_epoch(model, epoch, loss_fn, dataloader):
     print(f"Test Loss (epoch avg): {np.array(test_loss).mean()}, Test Accuracy (epoch avg): {np.array(correct).mean()}")
     return np.array(correct).mean()
 
-# ========== TRAINING PIPELINE ==========
+
+#Construct the given model
+def build_model(model_type: str):
+    if model_type == "slow_r50":
+        model = torch.hub.load('facebookresearch/pytorchvideo', 'slow_r50', pretrained=False)
+        model.blocks[-1].proj = nn.Linear(2048, 50)
+        return model
+    elif model_type == "sum_concat":
+        slow_model = torch.hub.load('facebookresearch/pytorchvideo', 'slow_r50', pretrained=False)
+        orig_stem = copy.deepcopy(slow_model.blocks[0])
+        orig_layer1 = copy.deepcopy(slow_model.blocks[1])
+        orig_layer2 = copy.deepcopy(slow_model.blocks[2])
+
+        seg_stem = copy.deepcopy(slow_model.blocks[0])
+        seg_layer1 = copy.deepcopy(slow_model.blocks[1])
+        seg_layer2 = copy.deepcopy(slow_model.blocks[2])
+
+        layer3 = slow_model.blocks[3]
+        layer4 = slow_model.blocks[4]
+        layer5 = slow_model.blocks[5]
+        layer5.proj = torch.nn.Linear(in_features=2048, out_features=50, bias=True)
+
+        return SumConcat(orig_stem, orig_layer1, orig_layer2,
+                            seg_stem, seg_layer1, seg_layer2, 
+                            layer3, layer4, layer5)
+
+
+
 def train_model():
     # 1. load the model 
 
-
-    my_model = torch.hub.load('facebookresearch/pytorchvideo', 'slow_r50', pretrained=False)
-
-    #Making copies of parts of the model
-    orig_stem = copy.deepcopy(my_model.blocks[0])
-    orig_layer1 = copy.deepcopy(my_model.blocks[1])
-    orig_layer2 = copy.deepcopy(my_model.blocks[2])
-
-    seg_stem = copy.deepcopy(my_model.blocks[0])
-    seg_layer1 = copy.deepcopy(my_model.blocks[1])
-    seg_layer2 = copy.deepcopy(my_model.blocks[2])
-
-    layer3 = my_model.blocks[3]
-    layer4 = my_model.blocks[4]
-    layer5 = my_model.blocks[5]
-
-    sum_concat_model = 
-
-
-    my_model.blocks[-1].proj = torch.nn.Linear(in_features=2048, out_features=50, bias=True)
+    my_model = build_model(CONFIG['model_type'])
     my_model = my_model.to(CONFIG['device'])
-
-    print(my_model.blocks)
-
 
     if torch.cuda.device_count() > 1:
         print(f"Using {torch.cuda.device_count()} GPUs")
@@ -180,13 +186,13 @@ def train_model():
         my_model.load_state_dict(checkpoint['model'])
                         
     # Create a dataset instance for training set
-    train_dataset = DatasetSlow(
+    train_dataset = DatasetSumConcat(
         csv_path=os.path.join(CONFIG['metadata_dir'], CONFIG['train_csv']),
         max_videos=None
     )
 
     #create a dataset instance for validation set
-    validation_dataset = DatasetSlow(
+    validation_dataset = DatasetSumConcat(
         csv_path = os.path.join(CONFIG['metadata_dir'], CONFIG['val_csv']),
         max_videos=None
     )
