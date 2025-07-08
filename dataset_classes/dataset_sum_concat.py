@@ -112,9 +112,6 @@ class DatasetSumConcat(torch.utils.data.Dataset):
         orig_tensor = self.load_video_frames(row['full_path'], idx_orig)
         seg_tensor = self.load_video_frames(row['segmented_path'], idx_seg)
 
-        print("Original Tensor shape", orig_tensor.shape)
-        print("Seg Tensor shape", seg_tensor.shape)
-
         result = {
             "inputs": [orig_tensor, seg_tensor],
             "label": kinetics_classname_to_id[label],
