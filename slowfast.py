@@ -22,8 +22,7 @@ import torch
 import yaml
 import time
 
-from dataset import KineticsDataset2
-from dataset_bg_removal import KineticsDataset_RemoveBG
+from dataset_classes.dataset_slow import DatasetSlow
 
 
 def parse_args():
@@ -55,8 +54,10 @@ def train_epoch(model, epoch, optimizer, loss_fn, dataloader):
 
     starttime = time.time()
     for batch in tqdm(dataloader, desc=f"Train epoch {epoch}"):
+            print(f" Starting batch {batch}")
             batch_size = batch["inputs"][0].shape[0]  # Number of samples in the batch                                         
-            inputs = [x.to(CONFIG['device']) for x in batch["inputs"]]
+            inputs = torch.stack([x.to(CONFIG['device']) for x in batch["inputs"]])
+            print("Input shape:", inputs.shape)
             labels = batch["label"].to(CONFIG['device'])
 
             optimizer.zero_grad()
@@ -89,6 +90,8 @@ def train_epoch(model, epoch, optimizer, loss_fn, dataloader):
 
     current_lr = optimizer.param_groups[0]['lr']   
 
+    print(f"Train Loss (epoch avg): {np.array(total_train_loss).mean()}, Train Accuracy (epoch avg): {np.array(total_correct).mean()}")
+
     run.log({
         "train loss (epoch avg)": np.array(total_train_loss).mean(),
         "train accuracy (epoch avg)": np.array(total_correct).mean(),
@@ -107,7 +110,7 @@ def test_epoch(model, epoch, loss_fn, dataloader):
 
     with torch.no_grad():
         for batch in tqdm(dataloader, desc=f"Testing Epoch {epoch}", disable=(epoch != 0)):                                
-                inputs = [x.to(CONFIG['device']) for x in batch["inputs"]]
+                inputs = torch.stack([x.to(CONFIG['device']) for x in batch["inputs"]])
                 labels = batch["label"].to(CONFIG['device'])
 
                 #print("         Starting batch ", i, " with batch size ", batch_size)
@@ -134,11 +137,10 @@ def test_epoch(model, epoch, loss_fn, dataloader):
 def train_model():
     # 1. load the model 
     my_model = torch.hub.load('facebookresearch/pytorchvideo', 'slow_r50', pretrained=False)
-    my_model = my_model.to(CONFIG['device'])
 
-    # my_model = my_model.to('cpu')
 
     my_model.blocks[-1].proj = torch.nn.Linear(in_features=2048, out_features=50, bias=True)
+    my_model = my_model.to(CONFIG['device'])
     # print("Last block", my_model.blocks[-1])  # Final classification head
 
     # test_tensor = torch.zeros(1, 3, 8, 256, 256).float().to('cpu') #B, C, T, H, W
@@ -162,17 +164,17 @@ def train_model():
     else:
         print(f"Loading in epoch {CONFIG['last_epoch_saved']} weights")
         last_epoc_saved = int(CONFIG['last_epoch_saved'])
-        checkpoint = torch.load(f"saved_weights/slowfast_minikinetics50/slow_finetune/weights_{last_epoc_saved:06d}.pth", map_location=CONFIG['device'])
+        checkpoint = torch.load(f"saved_weights/slowfast_minikinetics50/slow_baseline/weights_{last_epoc_saved:06d}.pth", map_location=CONFIG['device'])
         my_model.load_state_dict(checkpoint['model'])
                         
     # Create a dataset instance for training set
-    train_dataset = KineticsDataset2(
+    train_dataset = DatasetSlow(
         csv_path=os.path.join(CONFIG['metadata_dir'], CONFIG['train_csv']),
         max_videos=None
     )
 
     #create a dataset instance for validation set
-    validation_dataset = KineticsDataset2(
+    validation_dataset = DatasetSlow(
         csv_path = os.path.join(CONFIG['metadata_dir'], CONFIG['val_csv']),
         max_videos=None
     )
@@ -205,7 +207,6 @@ def train_model():
     print("Test Accuracy before training=", test_acc)
 
     for epoch in tqdm(range(last_epoc_saved + 1, last_epoc_saved + 1 + CONFIG['num_epochs']), desc='Training Epochs'):
-    #for epoch in range(CONFIG['num_epochs']):
         print("Starting epoch", epoch)
         my_model.train()
         train_epoch(my_model, epoch, my_optimizer, my_loss_fn, my_train_dataloader)
@@ -237,18 +238,17 @@ if __name__ == "__main__":
         project="Slowfast_Kinetics",
         name=CONFIG['wandb_name'],
         config=CONFIG,
-        #mode=CONFIG['wandb_mode'] if 'wandb_mode' in CONFIG else None
-        mode='disabled'
+        mode=CONFIG['wandb_mode'] if 'wandb_mode' in CONFIG else None
     )
 
-    # run.define_metric("learning rate")
-    # run.define_metric("train loss", step_metric="train_step")
-    # run.define_metric("train accuracy", step_metric="train_step")
+    run.define_metric("learning rate")
+    run.define_metric("train loss", step_metric="train_step")
+    run.define_metric("train accuracy", step_metric="train_step")
 
-    # run.define_metric("train loss (epoch avg)", step_metric="epoch")
-    # run.define_metric("train accuracy (epoch avg)", step_metric="epoch")
-    # run.define_metric("test loss (epoch avg)", step_metric="epoch")
-    # run.define_metric("test accuracy (epoch avg)", step_metric="epoch")
+    run.define_metric("train loss (epoch avg)", step_metric="epoch")
+    run.define_metric("train accuracy (epoch avg)", step_metric="epoch")
+    run.define_metric("test loss (epoch avg)", step_metric="epoch")
+    run.define_metric("test accuracy (epoch avg)", step_metric="epoch")
 
     train_model()
 
