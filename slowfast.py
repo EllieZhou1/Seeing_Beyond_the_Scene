@@ -141,6 +141,7 @@ def train_model():
 
     my_model.blocks[-1].proj = torch.nn.Linear(in_features=2048, out_features=50, bias=True)
     my_model = my_model.to(CONFIG['device'])
+
     # print("Last block", my_model.blocks[-1])  # Final classification head
 
     # test_tensor = torch.zeros(1, 3, 8, 256, 256).float().to('cpu') #B, C, T, H, W
