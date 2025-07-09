@@ -22,7 +22,7 @@ import torch
 import yaml
 import time
 
-from dataset_classes.dataset_slow import DatasetSlow
+from slowfast_kinetics.dataset_classes.datasets_for_slow import DatasetSlow
 
 
 def parse_args():
