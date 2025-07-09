@@ -23,9 +23,10 @@ import torch
 import yaml
 import time
 
-from dataset_classes.dataset_sum_concat import DatasetSumConcat
-from custom_models import SumConcat
+from slowfast_kinetics.dataset_classes.dataset_dual_orig_seg import DatasetConcat
+from slowfast_kinetics.dataset_classes.datasets_for_slow import DatasetSlow
 
+from custom_models import *
 
 def parse_args():
  #Create an argument parser to allow for a dynamic batch size
@@ -167,9 +168,85 @@ def build_model(model_type: str):
                             seg_stem, seg_layer1, seg_layer2, 
                             layer3, layer4, layer5)
     
+    elif model_type == "stack_concat":
+        print("Starting creating stack_concat model")
+        slow_model = torch.hub.load('facebookresearch/pytorchvideo', 'slow_r50', pretrained=False)
+
+        orig_stem = copy.deepcopy(slow_model.blocks[0])
+        orig_layer1 = copy.deepcopy(slow_model.blocks[1])
+        orig_layer2 = copy.deepcopy(slow_model.blocks[2])
+
+        seg_stem = copy.deepcopy(slow_model.blocks[0])
+        seg_layer1 = copy.deepcopy(slow_model.blocks[1])
+        seg_layer2 = copy.deepcopy(slow_model.blocks[2])
+
+        layer3 = slow_model.blocks[3]
+
+        #change input channels of these from 512 to 1024 bc we stacked
+        layer3.res_blocks[0].branch1_conv = nn.Conv3d(1024, 1024, kernel_size=(1, 1, 1), stride=(1, 2, 2), bias=False)
+        layer3.res_blocks[0].branch2.conv_a = nn.Conv3d(1024, 256, kernel_size=(3, 1, 1), 
+                                                                        stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+
+        layer4 = slow_model.blocks[4]
+        layer5 = slow_model.blocks[5]
+        layer5.proj = torch.nn.Linear(in_features=2048, out_features=50, bias=True)
+
+        return StackConcat(orig_stem, orig_layer1, orig_layer2,
+                            seg_stem, seg_layer1, seg_layer2, 
+                            layer3, layer4, layer5)     
+             
     print("Finished building the model")
 
+def build_dataset():
+    #TRAIN DATASET
+    if CONFIG['dataset_type_train'] == 'segmented_minikinetics50_train':
+        train_dataset = DatasetSlow(
+            csv_path=os.path.join(CONFIG['metadata_dir'], CONFIG['segmented_minikinetics50_train']),
+            max_videos=None
+        )
 
+    elif CONFIG['dataset_type_train'] == 'original_minikinetics50_train':
+        train_dataset = DatasetSlow(
+            csv_path=os.path.join(CONFIG['metadata_dir'], CONFIG['original_minikinetics50_train']),
+            max_videos=None
+        )
+        validation_dataset = DatasetSlow(
+            csv_path=os.path.join(CONFIG['metadata_dir'], CONFIG['original_minikinetics50_val']),
+            max_videos=None
+        )
+
+    elif CONFIG['dataset_type_train'] == 'dual_original_and_segmented_minikinetics50_train':
+        train_dataset = DatasetConcat(
+            seg_csv_path=os.path.join(CONFIG['metadata_dir'], CONFIG['dual_original_and_segmented_minikinetics50_train']),
+            max_videos=None
+        )
+        validation_dataset = DatasetConcat(
+            seg_csv_path=os.path.join(CONFIG['metadata_dir'], CONFIG['dual_original_and_segmented_minikinetics50_val']),
+            max_videos=None
+        )
+    else:
+        raise ValueError(f"Unknown dataset type for train: {CONFIG['dataset_type_train']}")
+    
+    #Validation dataset
+    if CONFIG['dataset_type_val'] == 'segmented_minikinetics50_val':
+        validation_dataset = DatasetSlow(
+            csv_path=os.path.join(CONFIG['metadata_dir'], CONFIG['segmented_minikinetics50_val']),
+            max_videos=None
+        )
+    elif CONFIG['dataset_type_val'] == 'original_minikinetics50_val':
+        validation_dataset = DatasetSlow(
+            csv_path=os.path.join(CONFIG['metadata_dir'], CONFIG['original_minikinetics50_val']),
+            max_videos=None
+        )
+    elif CONFIG['dataset_type_val'] == 'dual_original_and_segmented_minikinetics50_val':
+        validation_dataset = DatasetConcat(
+            seg_csv_path=os.path.join(CONFIG['metadata_dir'], CONFIG['dual_original_and_segmented_minikinetics50_val']),
+            max_videos=None
+        )
+    else:
+        raise ValueError(f"Unknown dataset type for validation: {CONFIG['dataset_type_val']}")
+    
+    return train_dataset, validation_dataset
 
 def train_model():
     # 1. load the model 
@@ -192,19 +269,10 @@ def train_model():
         last_epoc_saved = int(CONFIG['last_epoch_saved'])
         checkpoint = torch.load(f"saved_weights/slowfast_minikinetics50/slow_baseline/weights_{last_epoc_saved:06d}.pth", map_location=CONFIG['device'])
         my_model.load_state_dict(checkpoint['model'])
-                        
+                  
     # Create a dataset instance for training set
-    train_dataset = DatasetSumConcat(
-        seg_csv_path=os.path.join(CONFIG['metadata_dir'], CONFIG['train_csv']),
-        max_videos=None
-    )
-
-    #create a dataset instance for validation set
-    validation_dataset = DatasetSumConcat(
-        seg_csv_path = os.path.join(CONFIG['metadata_dir'], CONFIG['val_csv']),
-        max_videos=None
-    )
-
+    train_dataset, validation_dataset = build_dataset()
+    
     train_len = len(train_dataset)
     validation_len = len(validation_dataset)
 
@@ -263,7 +331,7 @@ if __name__ == "__main__":
         project="Slowfast_Kinetics",
         name=CONFIG['wandb_name'],
         config=CONFIG,
-        mode=CONFIG['wandb_mode'] if 'wandb_mode' in CONFIG else None    
+        mode=CONFIG['wandb_mode'] if 'wandb_mode' in CONFIG else None,
     )
 
     run.define_metric("learning rate")
