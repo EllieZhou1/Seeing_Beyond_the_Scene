@@ -66,6 +66,9 @@ class DatasetSlow(torch.utils.data.Dataset):
     def __init__(self, csv_path, max_videos=None):
         self.max_videos = max_videos
         self.df = pd.read_csv(csv_path)
+
+        #reduce to max videos if specified
+        # self.df = self.df.sample(n=max_videos) if max_videos is not None else self.df
         #TODO: reduce df to the max_videos if specified
 
 
@@ -108,7 +111,7 @@ class DatasetSlow(torch.utils.data.Dataset):
 
         result = {
             "inputs": slow_tensor,
-            "label": kinetics_classname_to_id[label],
+            "label": kinetics_classname_to_id[label]
         }
         return result
     
