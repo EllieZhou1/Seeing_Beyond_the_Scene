@@ -67,6 +67,9 @@ class DatasetConcat(torch.utils.data.Dataset):
     def __init__(self, seg_csv_path, max_videos=None):
         self.max_videos = max_videos
         self.df = pd.read_csv(seg_csv_path)
+
+        #reduce to_max videos
+        self.df = self.df.sample(n=max_videos) if max_videos is not None else self.df
         #TODO: reduce df to the max_videos if specified
 
 
