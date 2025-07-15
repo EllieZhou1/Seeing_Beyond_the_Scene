@@ -3,11 +3,9 @@ metadata_dir: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics  # Directory c
 
 #Predefining paths that can be used later
 segmented_minikinetics50_train: dataset/segmented_minikinetics50/segmented_minikinetics50_train.csv
-segmented_minikinetics50_val: dataset/segmented_minikinetics50/segmented_minikinetics50_train.csv
+segmented_minikinetics50_val: dataset/segmented_minikinetics50/segmented_minikinetics50_validation.csv
 original_minikinetics50_train: dataset/mini50_clean_train.csv
 original_minikinetics50_val: dataset/HAT_minikinetics50_validation.csv
-dual_original_and_segmented_minikinetics50_train: dataset/segmented_minikinetics50_train
-dual_original_and_segmented_minikinetics50_val: dataset/segmented_minikinetics50/segmented_minikinetics50_validation.csv
 
 batch_size: 20
 learning_rate: 0.01
@@ -18,12 +16,14 @@ num_dataloader_workers: 20
 
 model_type: stack_concat #options: ['stack_concat', 'sum_concat', 'slow_r50']
 
-dataset_train_type: 
-#options: ['segmented_minikinetics50_train', 'original_minikinetics50_train', 'dual_original_and_segmented_minikinetics50_train']
+dataset_type_train: dual_original_and_segmented_minikinetics50_train
+#options: ['segmented_minikinetics50_train', 'original_minikinetics50_train', 'dual_original_and_segmented_minikinetics50_train',
+# 'original_and_binmask_minikinetics50_train']
 
-dataset_val_type: 
-#options: ['segmented_minikinetics50_val', 'original_minikinetics50_val', 'dual_original_and_segmented_minikinetics50_val']
+dataset_type_val: dual_original_and_segmented_minikinetics50_val 
+#options: ['segmented_minikinetics50_val', 'original_minikinetics50_val', 'dual_original_and_segmented_minikinetics50_val',
+# 'original_and_binmask_minikinetics50_val']
 
 #TODO: change this name
-wandb_name: Training my custom stack-concat model on MiniKinetics50 seg & original
-weights_dir: slowfast_minikinetics50/stack_concat  # Directory to save model weights
+wandb_name: Stack-Concat (ADAM, LR 0.01)
+weights_dir: slowfast_minikinetics50/stack_concat_adam_lr_01_new  # Directory to save model weights
