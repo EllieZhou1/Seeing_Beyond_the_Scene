@@ -55,7 +55,7 @@ def train_epoch(model, epoch, optimizer, loss_fn, dataloader):
     starttime = time.time()
     for batch in tqdm(dataloader, desc=f"Train epoch {epoch}"):
             print(f" Starting batch {batch}")
-            batch_size = batch["inputs"][0].shape[0]  # Number of samples in the batch                                         
+            #batch_size = batch["inputs"][0].shape[0]  # Number of samples in the batch                                         
             inputs = torch.stack([x.to(CONFIG['device']) for x in batch["inputs"]])
             print("Input shape:", inputs.shape)
             labels = batch["label"].to(CONFIG['device'])
