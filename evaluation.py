@@ -18,12 +18,8 @@ import argparse
 from typing import Dict
 import json
 import urllib
-
 import torch
 import yaml
-
-from dataset import HAT_bg_Dataset
-from dataset_mimetics import MimeticsDataset
 
 print("Starting evaluation script")
 #Create an argument parser to allow for a dynamic batch size
@@ -43,27 +39,8 @@ print("Loaded yaml file")
 print("Using config file: ", f"config/{args.config}")
 print("Config loaded: ", CONFIG)
 
-CONFIG['device'] = "cuda" if torch.cuda.is_available() else "cpu"
-
-# 1. load the model 
 my_model = torch.hub.load('facebookresearch/pytorchvideo', 'slowfast_r50', pretrained=True)
-# 2. Move to device
 my_model = my_model.to(CONFIG['device'])
-# 3. Wrap with DataParallel if multiple GPUs
-if torch.cuda.device_count() > 1:
-    print(f"Using {torch.cuda.device_count()} GPUs")
-    my_model = nn.DataParallel(my_model)
-
-
-#Initiate the Wandb
-run = wandb.init(
-    project="SlowFast_Kinetics",
-    name="Evaluation of pretrained slowfast on HAT background only"
-)
-
-run.define_metric("test loss (epoch avg)")
-run.define_metric("test accuracy (epoch avg)")
-
 
 wandb.watch(my_model, log='all', log_freq = 100)
 
