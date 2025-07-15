@@ -26,6 +26,7 @@ from PIL import Image
 import wandb
 
 import wandb
+from ultralytics import YOLO
 
 os.chdir("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/sam2")
 sys.path.insert(0, "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/sam2")
@@ -33,25 +34,26 @@ sys.path.insert(0, "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/sam2")
 from sam2.build_sam import build_sam2_video_predictor
 os.chdir("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics")
 
-output_root = "dataset/segmented_minikinetics50/val"
-og_csv_path = "dataset/HAT_minikinetics50_validation.csv"
-final_csv_path = "dataset/segmented_minikinetics50/segmented_minikinetics50_validation.csv"
+output_root = "dataset/segmented_mimetics"
+og_csv_path = "dataset/mimetics.csv"
+final_csv_path = "dataset/segmented_mimetics/segmented_mimetics.csv"
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print("Using device", device)
 
 
-wandb.init(
-    project="SlowFast_Kinetics",  # Change to your project name
-    name="save_segmented_vids_for_HAT_minikinetics50_validation",             # Optional: run name
-    config={
-        "og_csv_path": og_csv_path,
-        "output_root": output_root,
-        "final_csv_path": final_csv_path,
-        "device": device
-    }
-)
+# wandb.init(
+#     project="SlowFast_Kinetics",  # Change to your project name
+#     name="save_segmented_vids_for_HAT_minikinetics50_validation",             # Optional: run name
+#     config={
+#         "og_csv_path": og_csv_path,
+#         "output_root": output_root,
+#         "final_csv_path": final_csv_path,
+#         "device": device
+#     }
+# )
 
-yolo = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True).to(device)
+#yolo = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True).to(device)
+yolo = YOLO("yolov5s.pt")  # Load the YOLOv5 model
 
 sam2_checkpoint = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/sam2/checkpoints/sam2.1_hiera_large.pt"
 
@@ -76,6 +78,7 @@ def run_yolo_and_seg(row):
     segmented_frames = [] #A list of PIL images containing all the segmented frames
 
     video_path = row['full_path']
+    label = row['label']
     num_files = row['num_files']
     indices = sample_indices(32, num_files)
     hasPerson = False
@@ -99,9 +102,43 @@ def run_yolo_and_seg(row):
 
     img0_np = video_np[0]
     results = yolo(img0_np) #get bbox for the first frame
-    bboxes = results.xyxy[0]
+    # print("trtying to get bounding box")
+    boxes = results[0].boxes
+    xyxy = boxes.xyxy.cpu().numpy()
+    confidence = boxes.conf.cpu().numpy()
+    class_id = boxes.cls.cpu().numpy()
+    bboxes = np.concatenate([xyxy, confidence[:, None], class_id[:, None]], axis=1)
+    # print("got bboxes", bboxes.shape, bboxes)
     person_bboxes = bboxes[bboxes[:, 5] == 0] # get bboxes for class == person only
-    person_bboxes = person_bboxes[:, :4].cpu().numpy()
+    person_bboxes = person_bboxes[:, :4]
+
+    # Save bboxes, confidences, and class names for the first frame
+    all_bboxes_info = []
+    for i in range(bboxes.shape[0]):
+        class_idx = int(bboxes[i, 5])
+        class_name = class_names[class_idx]
+        conf = float(bboxes[i, 4])
+        coords = bboxes[i, :4].tolist()
+        all_bboxes_info.append({
+            "class": class_name,
+            "confidence": conf,
+            "bbox": coords
+        })
+
+    # Draw bounding boxes on the first frame and save visualization
+    import cv2
+    vis_img = img0_np.copy()
+    for info in all_bboxes_info:
+        x1, y1, x2, y2 = map(int, info["bbox"])
+        label_conf = f"{info['class']} {info['confidence']:.2f}"
+        cv2.rectangle(vis_img, (x1, y1), (x2, y2), (0, 255, 0), 2)
+        cv2.putText(vis_img, label_conf, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 1)
+
+    vis_img_path = os.path.join("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/segmented_mimetics", 
+                                label, f"{row['youtube_id']}_{row['time_start']:06d}_{row['time_end']:06d}",
+                                "bbox_img", "bbox_image.jpg")
+    os.makedirs(os.path.dirname(vis_img_path), exist_ok=True)
+    cv2.imwrite(vis_img_path, vis_img)
     
     inference_state = predictor.init_state(video_path=temp_dir)
 
@@ -130,8 +167,12 @@ def run_yolo_and_seg(row):
             segmented_frames.append(seg_img_np)
 
     shutil.rmtree(temp_dir)
-    return segmented_frames, hasPerson 
+    return segmented_frames, hasPerson, all_bboxes_info, vis_img_path
 
+
+class_names = yolo.names  # dict: {0: 'person', 1: 'bicycle', ...}
+# print("Class names:", class_names)
+# hello
 
 #stores the rows with person & no_person, to be written into the csv
 has_person_rows = []
@@ -139,7 +180,7 @@ has_person_rows = []
 total_row = len(df)
 
 for idx, row in df.iterrows():
-    wandb.log({"current_row": idx, "total_rows": total_row})
+    # wandb.log({"current_row": idx, "total_rows": total_row})
     print(f"Starting row {idx} / {total_row}")
     video_path = row['full_path']
     label = row['label']
@@ -147,9 +188,9 @@ for idx, row in df.iterrows():
     num_files = row['num_files']    
     time_start = row['time_start']
     time_end = row['time_end']
+    # print("Full path:", video_path)
     
-
-    segmented_frames, hasPerson = run_yolo_and_seg(row)
+    segmented_frames, hasPerson, all_bboxes_info, vis_img_path = run_yolo_and_seg(row)
 
     if hasPerson == False:
         continue
@@ -167,6 +208,9 @@ for idx, row in df.iterrows():
 
     #Add a new column which will map to the video that was segmented, not the original
     new_row['segmented_path'] = os.path.join("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics", video_dir)
+    new_row['bboxes_info'] = str(all_bboxes_info)
+
+    new_row['bbox_vis_path'] = vis_img_path
     has_person_rows.append(new_row)
 
 new_df = pd.DataFrame(has_person_rows)
