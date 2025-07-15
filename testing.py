@@ -34,7 +34,6 @@ from pytorchvideo.transforms import (
 ) 
 import concurrent.futures
 
-
 #Define input transforms
 side_size = 256
 mean = [0.45, 0.45, 0.45]
@@ -104,4 +103,8 @@ print(len(sample_indices(32, 12)))
 
 # print("Length of dataset after removing empty directories is ", len(df))
 
+import sklearn
+from sklearn.metrics import classification_report
+report = classification_report(y_true=[1, 2, 3], y_pred=[1, 2, 3], labels=[1,2,3,4,5], target_names=['class0', 'class1', 'class2', 'class3', 'class4'])
+## print(report)
 
