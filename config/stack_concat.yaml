@@ -6,7 +6,12 @@ segmented_minikinetics50_train: dataset/segmented_minikinetics50/segmented_minik
 segmented_minikinetics50_val: dataset/segmented_minikinetics50/segmented_minikinetics50_validation.csv
 original_minikinetics50_train: dataset/mini50_clean_train.csv
 original_minikinetics50_val: dataset/HAT_minikinetics50_validation.csv
+mimetics: dataset/mimetics.csv
+segmented_mimetics: dataset/segmented_mimetics/segmented_mimetics.csv
+action_swap: dataset/action_swap/action_swap_dataset.csv
+segmented_action_swap: dataset/segmented_action_swap/segmented_action_swap_dataset.csv
 
+mode: test #[train, test]
 batch_size: 20
 learning_rate: 0.01
 num_epochs: 300
