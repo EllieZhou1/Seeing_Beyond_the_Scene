@@ -5,6 +5,7 @@ import numpy as np
 from pathlib import Path
 import shutil
 from tqdm import tqdm
+from multiprocessing import Pool, cpu_count
 
 def create_action_swap_image(original_a_path, seg_a_path, inpaint_b_path, output_path):
     """
@@ -95,7 +96,9 @@ def process_video_sequence(row, output_base_dir, sample_idx):
     sample_name = f"sample_{sample_idx:06d}_{label_a}_to_{label_b}_{yt_id_a}_{time_start_a}_{time_end_a}_bg_{yt_id_b}_{time_start_b}_{time_end_b}"
     sample_output_dir = os.path.join(output_base_dir, sample_name)
     os.makedirs(sample_output_dir, exist_ok=True)
-    
+
+
+
     # Create metadata file for this sample
     metadata_path = os.path.join(sample_output_dir, "metadata.txt")
     with open(metadata_path, 'w') as f:
@@ -137,7 +140,19 @@ def process_video_sequence(row, output_base_dir, sample_idx):
         else:
             failed_frames += 1
     
-    return successful_frames, failed_frames, sample_output_dir
+    row['action_swap_path'] = sample_output_dir
+
+    return successful_frames, failed_frames, sample_output_dir, row
+
+
+
+def wrapper(args):
+    row, output_base_dir, sample_idx = args
+    try:
+        successful_frames, failed_frames, sample_dir, updated_row = process_video_sequence(row, output_base_dir, sample_idx)
+        return (updated_row, successful_frames, failed_frames, sample_dir, None)
+    except Exception as e:
+        return (row, 0, 0, None, str(e))
 
 def generate_action_swap_dataset(csv_path, output_base_dir):
     """
@@ -158,33 +173,37 @@ def generate_action_swap_dataset(csv_path, output_base_dir):
     total_failed_frames = 0
     successful_samples = 0
     failed_samples = 0
-    
-    # Process each row with progress bar
-    for sample_idx, row in enumerate(tqdm(rows, desc="Processing samples")):
-        try:
-            successful_frames, failed_frames, sample_dir = process_video_sequence(row, output_base_dir, sample_idx)
-            
-            if successful_frames > 0:
-                successful_samples += 1
-                total_successful_frames += successful_frames
-                total_failed_frames += failed_frames
-                
-                if failed_frames > 0:
-                    print(f"Sample {sample_idx}: {successful_frames} successful, {failed_frames} failed frames")
-            else:
-                failed_samples += 1
-                print(f"Sample {sample_idx}: FAILED - no frames processed successfully")
-                # Remove empty directory
+
+    args_list = [(row, output_base_dir, idx) for idx, row in enumerate(rows)]
+
+    results = []
+    NUM_CPUS = 8
+    with Pool(processes=NUM_CPUS) as pool:
+        for result in tqdm(pool.imap(wrapper, args_list), total=len(rows), desc="Processing samples"):
+            results.append(result)
+
+    updated_rows = []
+    for idx, (row, successful_frames, failed_frames, sample_dir, error) in enumerate(results):
+        if error:
+            print(f"Sample {idx}: ERROR - {error}")
+            failed_samples += 1
+            continue
+        if successful_frames > 0:
+            successful_samples += 1
+            total_successful_frames += successful_frames
+            total_failed_frames += failed_frames
+            updated_rows.append(row)
+            if failed_frames > 0:
+                print(f"Sample {idx}: {successful_frames} successful, {failed_frames} failed frames")
+        else:
+            failed_samples += 1
+            print(f"Sample {idx}: FAILED - no frames processed successfully")
+            if sample_dir:
                 try:
                     shutil.rmtree(sample_dir)
                 except:
                     pass
-                    
-        except Exception as e:
-            failed_samples += 1
-            print(f"Sample {sample_idx}: ERROR - {str(e)}")
-    
-    # Generate final summary
+
     summary_path = os.path.join(output_base_dir, "dataset_summary.txt")
     with open(summary_path, 'w') as f:
         f.write("Action-Swap Dataset Generation Summary\n")
@@ -195,7 +214,16 @@ def generate_action_swap_dataset(csv_path, output_base_dir):
         f.write(f"Total successful frames: {total_successful_frames}\n")
         f.write(f"Total failed frames: {total_failed_frames}\n")
         f.write(f"Output directory: {output_base_dir}\n")
-    
+
+    # Save the path to the action_swap img into csv
+    with open('/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/action_swap_dataset.csv', 'w', newline='') as csvfile:
+        fieldnames = ['path_seg_A','path_original_A','path_inpaint_B','path_original_B', 'num_files_A','num_files_B','label_A',
+                      'label_B','yt_id_A','time_start_A','time_end_A','yt_id_B','time_start_B','time_end_B',
+                      'action_swap_path']  # Define columns
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(updated_rows)
+
     print("\n" + "="*50)
     print("DATASET GENERATION COMPLETE")
     print("="*50)

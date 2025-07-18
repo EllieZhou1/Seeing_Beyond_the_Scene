@@ -64,9 +64,11 @@ kinetics_classname_to_id = {v: k for k, v in kinetics_id_to_classname.items()}
 # ========== DATA PIPELINE ==========
 
 class DatasetConcat(torch.utils.data.Dataset):
-    def __init__(self, seg_csv_path, max_videos=None):
+    def __init__(self, seg_csv_path, col_orig, col_seg, max_videos=None):
         self.max_videos = max_videos
         self.df = pd.read_csv(seg_csv_path)
+        self.col_orig = col_orig
+        self.col_seg = col_seg
 
         #reduce to_max videos
         self.df = self.df.sample(n=max_videos) if max_videos is not None else self.df
@@ -104,16 +106,18 @@ class DatasetConcat(torch.utils.data.Dataset):
 
     def __getitem__(self, idx): #only outputs one tensor as opposed to
         row = self.df.iloc[idx]
-        label = row['label']
+        label = row['label_A']
 
-        total_frames = row ['num_files'] #number of files in the original Data/Kinetics_cvf/____ video folder
+        total_frames = row ['num_files_A'] #number of files in the original Data/Kinetics_cvf/____ video folder
 
+        #TODO: Change the NUM TOTAL FRAMES HERE IF NEEDED
         idx_orig = self.sample_indices_oneindexed(num_frames_slow, total_frames)
         idx_seg = self.sample_indices_zeroindexed(num_frames_slow, 32) #all of the segmented vids now have 32 frames
 
         #Shape should be [3, 8, 256, 256] for both tensors
-        orig_tensor = self.load_video_frames(row['full_path'], idx_orig)
-        seg_tensor = self.load_video_frames(row['segmented_path'], idx_seg)
+
+        orig_tensor = self.load_video_frames(row[self.col_orig], idx_orig)
+        seg_tensor = self.load_video_frames(row[self.col_seg], idx_seg)
 
         result = {
             "inputs": [orig_tensor, seg_tensor],

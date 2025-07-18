@@ -73,9 +73,11 @@ kinetics_classname_to_id = {v: k for k, v in kinetics_id_to_classname.items()}
 # ========== DATA PIPELINE ==========
 
 class DatasetOrigBinmask(torch.utils.data.Dataset):
-    def __init__(self, seg_csv_path, max_videos=None):
+    def __init__(self, seg_csv_path, col_orig, col_mask, max_videos=None):
         self.max_videos = max_videos
         self.df = pd.read_csv(seg_csv_path)
+        self.col_orig = col_orig
+        self.col_mask = col_mask
 
         self.df = self.df.sample(n=max_videos) if max_videos is not None else self.df
         #TODO: reduce df to the max_videos if specified
@@ -124,16 +126,16 @@ class DatasetOrigBinmask(torch.utils.data.Dataset):
 
     def __getitem__(self, idx): #only outputs one tensor as opposed to
         row = self.df.iloc[idx]
-        label = row['label']
+        label = row['label_A']
 
-        total_frames = row ['num_files'] #number of files in the original Data/Kinetics_cvf/____ video folder
+        total_frames = row ['num_files_A'] #number of files in the original Data/Kinetics_cvf/____ video folder
 
         idx_orig = self.sample_indices_oneindexed(num_frames_slow, total_frames)
         idx_mask = self.sample_indices_zeroindexed(num_frames_slow, 32) #all of the segmented vids now have 32 frames
 
         #Shape should be [3, 8, 256, 256] for both tensors
-        orig_tensor = self.load_video_frames(row['full_path'], idx_orig)
-        mask_tensor = self.load_binary_masks(row['mask_path'], idx_mask)
+        orig_tensor = self.load_video_frames(row[self.col_orig], idx_orig)
+        mask_tensor = self.load_binary_masks(row[self.col_mask], idx_mask)
 
         result = {
             "inputs": [orig_tensor, mask_tensor],

@@ -85,9 +85,12 @@ class StackConcat(nn.Module):
 
         return out
 
+
+############################# VERSION 1 OF WEIGHTED FOCUS NET ###############################
+
 #Given the output of ResStage 2, we want to predict delta_a and delta_b
 # this will be used for the weighting for human and background
-class HumanBackgroundWeighting(nn.Module):
+class HumanBackgroundWeighting1(nn.Module):
     #In channels: ([B, C=512, T=8, H=32, W=32])
     def __init__(self, in_channels, hidden_channels):
         super().__init__()
@@ -108,15 +111,17 @@ class HumanBackgroundWeighting(nn.Module):
         out = self.linear1(out) # [B, hidden_channels=64]
         out = F.relu(out)  # [B, hidden_channels=64]
         out = self.linear2(out)
-        out = F.sigmoid(out) * 2.0 - 1.0  # Scale to [-1, 1]
         return out
 
-class WeightedFocusNet2(nn.Module):
+
+
+#This version clips values of alpha and beta
+class WeightedFocusNet1(nn.Module):
     def __init__ (self):
         super().__init__()
         self.slow_model = torch.hub.load('facebookresearch/pytorchvideo', 'slow_r50', pretrained=False)
         self.slow_model.blocks[5].proj = torch.nn.Linear(in_features=2048, out_features=50, bias=True)
-        self.ab_deltas = HumanBackgroundWeighting(in_channels=512, hidden_channels=64)
+        self.ab_deltas = HumanBackgroundWeighting1(in_channels=512, hidden_channels=64)
 
     def forward (self, inputs, binary_mask):
         x = inputs
@@ -124,65 +129,63 @@ class WeightedFocusNet2(nn.Module):
             if i == 3:
                 ab_delta = self.ab_deltas(x) #[B, 2]
                 alpha_delta = ab_delta[:, 0].unsqueeze(1).unsqueeze(2).unsqueeze(3).unsqueeze(4) #[B, 1, 1, 1, 1]
-                # beta_delta = ab_delta[:, 1].unsqueeze(1).unsqueeze(2).unsqueeze(3).unsqueeze(4) # [B, 1, 1, 1, 1]
+                beta_delta = ab_delta[:, 1].unsqueeze(1).unsqueeze(2).unsqueeze(3).unsqueeze(4) # [B, 1, 1, 1, 1]
                 
                 alpha = 1.0 + alpha_delta
-                beta = 1.0 - alpha_delta
+                beta = 1.0 + beta_delta
                 x = alpha * binary_mask * x + beta * (1-binary_mask) * x
 
             x = block(x)
         return alpha, beta, x
-
-
-# #after res stage 2, we multiply the output of the res stage 2 
-# # with the output of the human background weighting module
-# class WeightedFocusNet(nn.Module):
-#     def __init__ (self, stem, layer1, layer2, layer3, layer4, layer5):
-#         super().__init__()
-#         self.stem = stem
-#         self.layer1 = layer1
-#         self.layer2 = layer2
-#         self.ab_deltas = HumanBackgroundWeighting(in_channels=512, hidden_channels=64)
-#         self.layer3 = layer3
-#         self.layer4 = layer4
-#         self.layer5 = layer5
     
-#     #Input: [B, C=3, T=8, H=256, W=256]]
-#     #Binary Mask: [B, C=1, T=8, H=32, W=32]
-#     #Dim after Layer 2: [B, C=512, T=8, H=32, W=32]
-#     def forward (self, inputs, binary_mask):
 
-#         print("starting forward pass")
-#         out = self.stem(inputs)
-#         print("shape after stem:", out.shape, out.device)
-#         out = self.layer1(out)
-#         print("shape after layer 1:", out.shape, out.device)
-#         out = self.layer2(out) #[B, 512, 8, 32, 32]
-#         print("shape after layer 2:", out.shape, out.device)
+############################# VERSION 2 OF WEIGHTED FOCUS NET ###############################
 
-#         ab_delta = self.ab_deltas(out) #[B, 2]
-#         print("ab delta:", ab_delta.shape, ab_delta.device)
-#         alpha_delta = ab_delta[:, 0].unsqueeze(1).unsqueeze(2).unsqueeze(3).unsqueeze(4) #[B, 1, 1, 1, 1]
-#         print("alpha delta:", alpha_delta.shape, alpha_delta.device)
-#         beta_delta = ab_delta[:, 1].unsqueeze(1).unsqueeze(2).unsqueeze(3).unsqueeze(4) # [B, 1, 1, 1, 1]
-#         print("beta delta:", beta_delta.shape, beta_delta.device)
+#Given the output of ResStage 2, we want to predict "ratio" which is a value that determines 
+class HumanBackgroundWeighting2(nn.Module):
+    #In channels: ([B, C=512, T=8, H=32, W=32])
+    def __init__(self, in_channels, hidden_channels):
+        super().__init__()
+        self.conv= nn.Conv3d(in_channels, 16, kernel_size=1)
+        self.linear1 = nn.Linear(16*8*4*4, hidden_channels)
+        self.linear2 = nn.Linear(hidden_channels, 1)
 
-#         alpha = 1.0 + alpha_delta
-#         beta = 1.0 + beta_delta
-#         print("alpha:", alpha.shape, alpha.device)
-#         print("beta:", beta.shape, beta.device)
+        #to make alpha and beta be 1 initially
+        nn.init.constant_(self.linear2.bias, 0.0)
+        nn.init.constant_(self.linear2.weight, 0.0)
 
-#         weighted = alpha * binary_mask * out + beta * (1-binary_mask) * out
-#         print("weighted shape:", weighted.shape, weighted.device)
+    #x is the output of ResStage 2
+    #x dimensions: [B, C=512, T=8, H=32, W=32]
+    def forward(self, x):
+        out = self.conv(x) # [B, C=16, T=8, H=32, W=32], reduce channels
+        out = F.adaptive_avg_pool3d(out, output_size=(8, 4, 4))  # [B, 16, 8, 4, 4], make 2048 neurons
+        out = out.view(out.size(0), -1)  # Flatten everything except batch dim
+        out = self.linear1(out) # [B, hidden_channels=64]
+        out = F.relu(out)  # [B, hidden_channels=64]
+        out = self.linear2(out) #[B, 1]
+        out = F.sigmoid(out) * 2.0 - 1.0  # Scale to [-1, 1]
+        return out
 
-#         out = weighted
-#         print("shape after weighted:", out.shape, out.device)
-        
-#         out = self.layer3(out)
-#         print("shape after layer 3:", out.shape, out.device)
-#         out = self.layer4(out)
-#         print("shape after layer 4:", out.shape, out.device)
-#         out = self.layer5(out)
-#         print("shape after layer 5:", out.shape, out.device)
-#         return alpha, beta, out
 
+
+#This version clips values of alpha and beta
+class WeightedFocusNet2(nn.Module):
+    def __init__ (self):
+        super().__init__()
+        self.slow_model = torch.hub.load('facebookresearch/pytorchvideo', 'slow_r50', pretrained=False)
+        self.slow_model.blocks[5].proj = torch.nn.Linear(in_features=2048, out_features=50, bias=True)
+        self.ratios = HumanBackgroundWeighting2(in_channels=512, hidden_channels=64)
+
+    def forward (self, inputs, binary_mask):
+        x = inputs
+        for i, block in enumerate(self.slow_model.blocks):
+            if i == 3:
+                ratio = self.ratios(x) #[B, 2]
+                ratio = ratio[:, 0].unsqueeze(1).unsqueeze(2).unsqueeze(3).unsqueeze(4) #[B, 1, 1, 1, 1]
+
+                alpha = 1.0 + ratio
+                beta = 1.0 - ratio
+                x = alpha * binary_mask * x + beta * (1-binary_mask) * x
+
+            x = block(x)
+        return alpha, beta, x

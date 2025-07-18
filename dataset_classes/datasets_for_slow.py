@@ -63,8 +63,9 @@ kinetics_classname_to_id = {v: k for k, v in kinetics_id_to_classname.items()}
 # ========== DATA PIPELINE ==========
 
 class DatasetSlow(torch.utils.data.Dataset):
-    def __init__(self, csv_path, max_videos=None):
+    def __init__(self, csv_path, col, max_videos=None):
         self.max_videos = max_videos
+        self.col = col
         self.df = pd.read_csv(csv_path)
 
         #reduce to max videos if specified
@@ -80,8 +81,11 @@ class DatasetSlow(torch.utils.data.Dataset):
 
     
     # Compute indices for 8 and 32 evenly spaced frames
-    def sample_indices(self, n, total_frames):
+    def sample_indices_oneidx(self, n, total_frames):
         return [int(round(i * (total_frames - 1) / (n - 1) + 1)) for i in range(n)]
+    
+    def sample_indices_zeroidx(self, n, total_frames):
+        return [int(round(i * (total_frames - 1) / (n - 1))) for i in range(n)]
     
     #Given the path to the frames directory and a list of indicies, load the video frames
     #Returns a tensor of the video frames
@@ -101,13 +105,21 @@ class DatasetSlow(torch.utils.data.Dataset):
     def __getitem__(self, idx): #only outputs one tensor as opposed to
         row = self.df.iloc[idx]
         label = row['label']
+        full_path = row['full_path']
 
         total_frames = row ['num_files']
 
-        idx_slow = self.sample_indices(num_frames_slow, total_frames)
+        #comes from places365 --> 0-31
 
-        #Shape should be [3, 8, 256, 256] for the slow tensor
-        slow_tensor = self.load_video_frames(row['full_path'], idx_slow)
+        if self.col == 'full_path':
+            if full_path.startswith("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/places365/"):
+                idx_slow = self.sample_indices_zeroidx(num_frames_slow, 32)
+            else:
+                idx_slow = self.sample_indices_oneidx(num_frames_slow, total_frames)
+        elif self.col == 'segmented_path':
+            idx_slow = self.sample_indices_zeroidx(num_frames_slow, 32)
+
+        slow_tensor = self.load_video_frames(row[self.col], idx_slow)
 
         result = {
             "inputs": slow_tensor,

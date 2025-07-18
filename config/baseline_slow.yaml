@@ -6,6 +6,7 @@ segmented_minikinetics50_train: dataset/segmented_minikinetics50/segmented_minik
 segmented_minikinetics50_val: dataset/segmented_minikinetics50/segmented_minikinetics50_validation.csv
 original_minikinetics50_train: dataset/mini50_clean_train.csv
 original_minikinetics50_val: dataset/HAT_minikinetics50_validation.csv
+places365_action_swap: 
 
 batch_size: 20
 learning_rate: 0.001
@@ -16,7 +17,7 @@ num_dataloader_workers: 20
 
 model_type: slow_r50 #options: ['stack_concat', 'sum_concat', 'slow_r50']
 
-dataset_type_train: original_minikinetics50_train
+dataset_type_train: original_mix_train
 #options: ['segmented_minikinetics50_train', 'original_minikinetics50_train', 'dual_original_and_segmented_minikinetics50_train']
 
 dataset_type_val: original_minikinetics50_val

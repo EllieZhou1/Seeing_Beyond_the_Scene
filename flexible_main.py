@@ -74,7 +74,7 @@ def train_epoch(model, epoch, optimizer, loss_fn, dataloader):
                 inputs_orig = torch.stack([x.to(CONFIG['device']) for x in batch["inputs"][0]])
                 inputs_seg = torch.stack([x.to(CONFIG['device']) for x in batch["inputs"][1]])
                 outputs = model(inputs_orig, inputs_seg)
-            elif CONFIG['model_type'] == 'weighted_focus':
+            elif CONFIG['model_type'] == 'weighted_focus1' or CONFIG['model_type'] == 'weighted_focus2':
                 inputs_orig = torch.stack([x.to(CONFIG['device']) for x in batch["inputs"][0]])
                 inputs_mask = torch.stack([x.to(CONFIG['device']) for x in batch["inputs"][1]])
                 alpha, beta, outputs = model(inputs_orig, inputs_mask)
@@ -121,7 +121,7 @@ def train_epoch(model, epoch, optimizer, loss_fn, dataloader):
     # report = classification_report(y_true=total_labels, y_pred=total_predicted, labels=list(range(50)), target_names=target_names, zero_division=0)
     # print("Report:\n", report)
 
-    if CONFIG['model_type'] == 'weighted_focus':
+    if CONFIG['model_type'] == 'weighted_focus1' or CONFIG['model_type'] == 'weighted_focus2':
         print(f"Alpha: {alpha.mean().item()}, Beta: {beta.mean().item()}")
 
     run.log({
@@ -133,7 +133,7 @@ def train_epoch(model, epoch, optimizer, loss_fn, dataloader):
     })
                 
 
-def test_epoch(model, epoch, loss_fn, dataloader):
+def test_epoch(model, epoch, loss_fn, dataloader, which_set):
     model.eval()
     global train_step
     test_loss = []
@@ -153,7 +153,7 @@ def test_epoch(model, epoch, loss_fn, dataloader):
                 inputs_orig = torch.stack([x.to(CONFIG['device']) for x in batch["inputs"][0]])
                 inputs_seg = torch.stack([x.to(CONFIG['device']) for x in batch["inputs"][1]])
                 outputs = model(inputs_orig, inputs_seg)
-            elif CONFIG['model_type'] == 'weighted_focus':
+            elif CONFIG['model_type'] == 'weighted_focus1' or CONFIG['model_type'] == 'weighted_focus2':
                 inputs_orig = torch.stack([x.to(CONFIG['device']) for x in batch["inputs"][0]])
                 inputs_mask = torch.stack([x.to(CONFIG['device']) for x in batch["inputs"][1]])
 
@@ -174,20 +174,30 @@ def test_epoch(model, epoch, loss_fn, dataloader):
             # total_predicted += predicted.detach().cpu().numpy().tolist()
             # total_labels += labels.detach().cpu().numpy().tolist()
             
+    if which_set == 'places365_action_swap':
+        run.log({
+            "Action Swap Test Loss (epoch avg)": np.array(test_loss).mean(),
+            "Action Swap Test Accuracy (epoch avg)": np.array(correct).mean(),
+            "global_step": train_step,
+            "epoch": epoch
+        })
+        print("Action Swap Test Loss (epoch avg): ", np.array(test_loss).mean())
+        print("Action Swap Test Accuracy (epoch avg): ", np.array(correct).mean())
 
-    run.log({
-        "test loss (epoch avg)": np.array(test_loss).mean(),
-        "test accuracy (epoch avg)": np.array(correct).mean(),
-        "global_step": train_step,
-        "epoch": epoch
-    })
-
-    print(f"Test Loss (epoch avg): {np.array(test_loss).mean()}, Test Accuracy (epoch avg): {np.array(correct).mean()}")
+    elif which_set == 'minikinetics50':
+        run.log({
+            "MK50 test loss (epoch avg)": np.array(test_loss).mean(),
+            "MK50 test accuracy (epoch avg)": np.array(correct).mean(),
+            "global_step": train_step,
+            "epoch": epoch
+        })
+        print("MK50 Test Loss (epoch avg): ", np.array(test_loss).mean())
+        print("MK50 Test Accuracy (epoch avg): ", np.array(correct).mean())
 
     # report = classification_report(y_true=total_labels, y_pred=total_predicted, labels=list(range(50)), target_names=target_names, zero_division=0)
     # print("Report:\n", report)
 
-    if CONFIG['model_type'] == 'weighted_focus':
+    if CONFIG['model_type'] == 'weighted_focus1' or CONFIG['model_type'] == 'weighted_focus2':
         print(f"Alpha: {alpha.mean().item()}, Beta: {beta.mean().item()}")
 
     torch.cuda.empty_cache()
@@ -208,9 +218,12 @@ def build_model(model_type: str):
     elif model_type == "stack_concat":
         print("Starting creating stack_concat model")
         return StackConcat()     
-    elif model_type == "weighted_focus":
-        print("Starting creating weighted focus model")
-        return WeightedFocusNet2()             
+    elif model_type == "weighted_focus1":
+        print("Starting creating weighted focus 1 model")
+        return WeightedFocusNet1()    
+    elif model_type == "weighted_focus2":
+        print("Starting creating weighted focus 2 model")        
+        return WeightedFocusNet2() 
     print("Finished building the model")
 
 def build_dataset():
@@ -237,6 +250,30 @@ def build_dataset():
             seg_csv_path = os.path.join(CONFIG['metadata_dir'], CONFIG['segmented_minikinetics50_train']),
             max_videos=None
         )
+
+    ###### FOR TRAINING ON THE PLACES365 ACTION SWAP MIXED WITH MINIKINETICS ############
+    elif CONFIG['dataset_type_train'] == 'original_mix_train': #Mix (Places365Bg+MKforeground) & Minikinetics
+        train_dataset = DatasetSlow(
+            csv_path = os.path.join(CONFIG['metadata_dir'], "dataset/places365/mix_train.csv"),
+            col='full_path',
+            max_videos=None
+        )
+    elif CONFIG['dataset_type_train'] == 'segmented_mix_train':
+        train_dataset = DatasetSlow(
+            csv_path = os.path.join(CONFIG['metadata_dir'], "dataset/places365/mix_train.csv"),
+            col='segmented_path',
+            max_videos=None
+        )
+    elif CONFIG['dataset_type_train'] == 'dual_original_and_segmented_mix_train':
+        train_dataset = DatasetConcat(
+            seg_csv_path=os.path.join(CONFIG['metadata_dir'], "dataset/places365/mix_train.csv"),
+            max_videos=None
+        )
+    elif CONFIG['dataset_type_train'] == 'dual_original_and_binmask_mix_train':
+        train_dataset = DatasetOrigBinmask(
+            seg_csv_path=os.path.join(CONFIG['metadata_dir'], "dataset/places365/mix_train.csv"),
+            max_videos=None
+        )
     else:
         raise ValueError(f"Unknown dataset type for train: {CONFIG['dataset_type_train']}")
     
@@ -261,10 +298,55 @@ def build_dataset():
             seg_csv_path = os.path.join(CONFIG['metadata_dir'], CONFIG['segmented_minikinetics50_val']),
             max_videos=None
         )
+
+    ###### FOR VALIDATION ON THE PLACES365 ACTION SWAP MIXED WITH MINIKINETICS ############
+    elif CONFIG['dataset_type_val'] == 'original_mix_val': #Mix (Places365Bg+MKforeground) & Minikinetics
+        validation_dataset = DatasetSlow(
+            csv_path = os.path.join(CONFIG['metadata_dir'], "dataset/places365/places365_actionswap_val.csv"),
+            col='full_path',
+            max_videos=None
+        )
+
+        validation_dataset2 = DatasetSlow(
+            csv_path = os.path.join(CONFIG['metadata_dir'], "dataset/minikinetics50/minikinetics50_validation_all.csv"),
+            col='full_path',
+            max_videos=None
+        )
+    elif CONFIG['dataset_type_val'] == 'segmented_mix_val':
+        validation_dataset = DatasetSlow(
+            csv_path = os.path.join(CONFIG['metadata_dir'], "dataset/places365/places365_actionswap_val.csv"),
+            col='segmented_path',
+            max_videos=None
+        )
+        validation_dataset2 = DatasetSlow(
+            csv_path = os.path.join(CONFIG['metadata_dir'], "dataset/minikinetics50/minikinetics50_validation_all.csv"),
+            col='segmented_path',
+            max_videos=None
+        )
+    elif CONFIG['dataset_type_val'] == 'dual_original_and_segmented_mix_val':
+        validation_dataset = DatasetConcat(
+            seg_csv_path=os.path.join(CONFIG['metadata_dir'], "dataset/places365/places365_actionswap_val.csv"),
+            max_videos=None
+        )
+
+        validation_dataset2 = DatasetConcat(
+            seg_csv_path=os.path.join(CONFIG['metadata_dir'], "dataset/minikinetics50/minikinetics50_validation_all.csv"),
+            max_videos=None
+        )
+    elif CONFIG['dataset_type_val'] == 'dual_original_and_binmask_mix_val':
+        validation_dataset = DatasetOrigBinmask(
+            seg_csv_path=os.path.join(CONFIG['metadata_dir'], "dataset/places365/places365_actionswap_val.csv"),
+            max_videos=None
+        )
+
+        validation_dataset2 = DatasetOrigBinmask(
+            seg_csv_path=os.path.join(CONFIG['metadata_dir'], "dataset/minikinetics50/minikinetics50_validation_all.csv"),
+            max_videos=None
+        )
     else:
         raise ValueError(f"Unknown dataset type for validation: {CONFIG['dataset_type_val']}")
     
-    return train_dataset, validation_dataset
+    return train_dataset, validation_dataset, validation_dataset2
 
 def train_model():
     # 1. load the model 
@@ -275,7 +357,7 @@ def train_model():
         my_model = nn.DataParallel(my_model)
     
     my_model = my_model.to(CONFIG['device'])
-    my_optimizer = optim.SGD(my_model.parameters(), lr=CONFIG['learning_rate'])
+    my_optimizer = optim.Adam(my_model.parameters(), lr=CONFIG['learning_rate'])
     my_scheduler = ReduceLROnPlateau(my_optimizer, mode='max', patience=40, threshold=1e-2)
 
     #If continuing training, then load in the model's weights
@@ -298,19 +380,25 @@ def train_model():
     #         print(f"{name}: {param.shape}")
 
     # Create a dataset instance for training set
-    train_dataset, validation_dataset = build_dataset()
+    train_dataset, validation_dataset_places365_actionswap, validation_dataset_mk = build_dataset()
 
     train_len = len(train_dataset)
-    validation_len = len(validation_dataset)
+    validation_len_swap = len(validation_dataset_places365_actionswap)
+    validation_len_mk = len(validation_dataset_mk)
 
     print("Made dataset. Length of training dataset is ", train_len)
-    print("Made dataset. Length of validation dataset is ", validation_len)
+    print("Made dataset. Length of validation dataset places365 action swap is ", validation_len_swap)
+    print("Made dataset. Length of validation dataset minikinetics ", validation_len_mk)
+
 
 
     my_train_dataloader = torch.utils.data.DataLoader(train_dataset, CONFIG['batch_size'], 
                                                     num_workers=CONFIG['num_dataloader_workers'], pin_memory=False, shuffle=True, drop_last=True)
 
-    my_validation_dataloader = torch.utils.data.DataLoader(validation_dataset, CONFIG['batch_size'], 
+    my_validation_swap_dataloader = torch.utils.data.DataLoader(validation_dataset_places365_actionswap, CONFIG['batch_size'], 
+                                                        num_workers=CONFIG['num_dataloader_workers'], pin_memory=False, shuffle=False, drop_last=False)
+    
+    my_validation_mk_dataloader = torch.utils.data.DataLoader(validation_dataset_mk, CONFIG['batch_size'], 
                                                         num_workers=CONFIG['num_dataloader_workers'], pin_memory=False, shuffle=False, drop_last=False)
 
     print("Made dataloaders")
@@ -320,16 +408,22 @@ def train_model():
     print("initialized optimizer, scheduler, and loss function")
 
     # TODO: uncomment this
-    test_acc = test_epoch(my_model, -1, my_loss_fn, my_validation_dataloader)
-    print("Test Accuracy before training=", test_acc)
+    test_acc = test_epoch(my_model, -1, my_loss_fn, my_validation_swap_dataloader, which_set='places365_action_swap')
+    print("Places365 Action Swap Test Accuracy before training=", test_acc)
+
+    test_acc = test_epoch(my_model, -1, my_loss_fn, my_validation_mk_dataloader, which_set='minikinetics50')
+    print("MiniKinetics50 Test Accuracy before training=", test_acc)
+
 
     for epoch in tqdm(range(last_epoc_saved + 1, last_epoc_saved + 1 + CONFIG['num_epochs']), desc='Training Epochs'):
         print("Starting epoch", epoch)
         my_model.train()
         train_epoch(my_model, epoch, my_optimizer, my_loss_fn, my_train_dataloader)
 
-        test_acc = test_epoch(my_model, epoch, my_loss_fn, my_validation_dataloader)
-        my_scheduler.step(test_acc)
+        swap_test_acc = test_epoch(my_model, epoch, my_loss_fn, my_validation_swap_dataloader, which_set='places365_action_swap')
+        mk_test_acc = test_epoch(my_model, epoch, my_loss_fn, my_validation_mk_dataloader, which_set='minikinetics50')
+
+        my_scheduler.step((swap_test_acc + mk_test_acc)/2)
 
         print("Finish epoch ", epoch, "training. Starting validation")
 
@@ -341,7 +435,8 @@ def train_model():
                     "optimizer": my_optimizer.state_dict(), "scheduler": my_scheduler.state_dict()}, file_path)
 
     my_model.eval()
-    test_epoch(my_model, epoch, my_loss_fn, my_validation_dataloader)
+    test_acc = test_epoch(my_model, epoch, my_loss_fn, my_validation_swap_dataloader, which_set='places365_action_swap')
+    test_acc = test_epoch(my_model, epoch, my_loss_fn, my_validation_mk_dataloader, which_set='minikinetics50')
     
             
 if __name__ == "__main__":
@@ -355,7 +450,8 @@ if __name__ == "__main__":
         project="Slowfast_Kinetics",
         name=CONFIG['wandb_name'],
         config=CONFIG,
-        mode=CONFIG['wandb_mode'] if 'wandb_mode' in CONFIG else None, #TODO
+        mode='online',
+        settings=wandb.Settings(_service_wait=300)
         # mode='disabled'
     )
 
@@ -365,8 +461,12 @@ if __name__ == "__main__":
 
     run.define_metric("train loss (epoch avg)", step_metric="epoch")
     run.define_metric("train accuracy (epoch avg)", step_metric="epoch")
-    run.define_metric("test loss (epoch avg)", step_metric="epoch")
-    run.define_metric("test accuracy (epoch avg)", step_metric="epoch")
+    # run.define_metric("test loss (epoch avg)", step_metric="epoch")
+    # run.define_metric("test accuracy (epoch avg)", step_metric="epoch")
+    run.define_metric("Action Swap Test Loss (epoch avg)", step_metric="epoch")
+    run.define_metric("Action Swap Test Accuracy (epoch avg)", step_metric="epoch")
+    run.define_metric("MK50 test loss (epoch avg)", step_metric="epoch")
+    run.define_metric("MK50 test accuracy (epoch avg)", step_metric="epoch")
 
     target_names = ['playing guitar', 'bowling', 'playing saxophone', 'brushing teeth', 
                     'playing basketball', 'tying tie', 'skiing slalom', 'brushing hair', 
