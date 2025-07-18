@@ -34,33 +34,32 @@ sys.path.insert(0, "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/sam2")
 from sam2.build_sam import build_sam2_video_predictor
 os.chdir("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics")
 
-output_root_seg = "dataset/minikinetics50/new_segmented_minikinetics50_train"
-output_root_binarymask = "dataset/minikinetics50/new_binarymasks_minikinetics50_train"
+output_root_seg = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_segmented_minikinetics50_validation"
+output_root_binarymask = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_binarymasks_minikinetics50_validation"
 
-og_csv_path = "dataset/minikinetics50/minikinetics50_train_all.csv"
-final_csv_path_only_hasHuman = "dataset/action_swap_only_hasHuman.csv" #the csv where we will put ONLY the 
+og_csv_path = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/minikinetics50_validation_all.csv"
+
+final_csv_path_all = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_minikinetics50_validation_all.csv"
+final_csv_path_only_hasHuman = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_minikinetics50_validation_only_hasHuman.csv" #the csv where we will put ONLY the 
 #samples where a human was found
-final_csv_path = "dataset/action_swap.csv" #contains both segmented samples where a human was found and 
+final_csv_path_only_noHuman = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_minikinetics50_validation_only_noHuman.csv"
+
 #also samples where a human was not found (in which case it would just be a black box)
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print("Using device", device)
 
 
-# wandb.init(
-#     project="SlowFast_Kinetics",  # Change to your project name
-#     name="save_segmented_vids_for_HAT_minikinetics50_validation",             # Optional: run name
-#     config={
-#         "og_csv_path": og_csv_path,
-#         "output_root": output_root,
-#         "final_csv_path": final_csv_path,
-#         "device": device
-#     }
-# )
+wandb.init(
+    project="SlowFast_Kinetics",  # Change to your project name
+    name="save_segmented_vids_for_MK50_validation",             # Optional: run name
+    config={
+        "og_csv_path": og_csv_path,
+    }
+)
 
 #yolo = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True).to(device)
 print("Loading YOLO model")
 yolo = YOLO("yolov5su.pt")  # Let Ultralytics handle CUDA automatically
-print("Here1")
 class_names = yolo.names  # dict: {0: 'person', 1: 'bicycle', ...}
 
 sam2_checkpoint = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/sam2/checkpoints/sam2.1_hiera_large.pt"
@@ -85,10 +84,7 @@ def sample_indices(n, total_frames):
 #   - hasPerson: a boolean
 def run_yolo_and_seg(row):
     segmented_frames = [] #A list of PIL images containing all the segmented frames
-
-    video_path = row['action_swap_path']
-    sample_name = os.path.basename(video_path)  # 'sample_000000_deadlifting_to_juggling soccer ball_...'
-    sample_idx = int(sample_name.split('_')[1])
+    binarymask_frames = [] #A list of PIL images containing all the binarymask frames
 
     label = row['label']
     youtube_id = row['youtube_id']
@@ -97,6 +93,11 @@ def run_yolo_and_seg(row):
     split = row['split']
     full_path = row['full_path']
     num_files = row['num_files']
+
+
+    vid_name = f"{youtube_id}_{time_start:06d}_{time_end:06d}"
+    seg_path = os.path.join(output_root_seg, label, vid_name)
+    binarymask_path = os.path.join(output_root_binarymask, label, vid_name)
 
     indices = list(range(1, num_files + 1))
     hasPerson = False
@@ -107,7 +108,7 @@ def run_yolo_and_seg(row):
     frames = []
 
     for counter, i in enumerate(indices):
-        source = os.path.join(video_path, f"{i:06d}.jpg")
+        source = os.path.join(full_path, f"{i:06d}.jpg")
         dest = os.path.join(temp_dir, f"{counter:06d}.jpg")
         os.symlink(source, dest)
 
@@ -116,7 +117,6 @@ def run_yolo_and_seg(row):
         frames.append(img_np)
 
     video_np = np.stack(frames, axis=0)
-    print("Here 3")
 
     img0_np = video_np[0]
     results = yolo.predict(img0_np, device='cuda' if torch.cuda.is_available() else 'cpu') #get bbox for the first frame
@@ -154,9 +154,7 @@ def run_yolo_and_seg(row):
         cv2.rectangle(vis_img, (x1, y1), (x2, y2), (0, 255, 0), 2)
         cv2.putText(vis_img, label_conf, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 1)
 
-    vis_img_path = os.path.join(output_root, 
-                                f"sample_{sample_idx:06d}_{label_a}_to_{label_b}_{yt_id_a}_{time_start_a}_{time_end_a}_bg_{yt_id_b}_{time_start_b}_{time_end_b}", 
-                                "bbox_img", "bbox_image.jpg")
+    vis_img_path = os.path.join(seg_path, "bbox_img", "bbox_image.jpg")
     
     os.makedirs(os.path.dirname(vis_img_path), exist_ok=True)
     cv2.imwrite(vis_img_path, vis_img)
@@ -182,19 +180,23 @@ def run_yolo_and_seg(row):
 
             img = torch.from_numpy(video_np[out_frame_idx]).to(device)
             seg_img = binarymask * img
+
+            binary_mask_np = binarymask.cpu().numpy()
             seg_img_np = seg_img.cpu().numpy()
             if seg_img_np.shape[0] == 3:  # (3, H, W) -> (H, W, 3)
                 seg_img_np = np.transpose(seg_img_np, (1, 2, 0))
-
             segmented_frames.append(seg_img_np)
+            img_bw = (binary_mask_np.squeeze() * 255).astype(np.uint8)  # shape [H, W]
+            binarymask_frames.append(img_bw)
         print("Here 6")
     else:
         for frame in video_np:
             zero_frame = np.zeros_like(frame, dtype=np.uint8)
             segmented_frames.append(zero_frame)
+            binarymask_frames.append(zero_frame)
 
     shutil.rmtree(temp_dir)
-    return segmented_frames, hasPerson, all_bboxes_info, vis_img_path
+    return segmented_frames, binarymask_frames, hasPerson, all_bboxes_info, vis_img_path
 
 global count
 count = 0
@@ -202,35 +204,44 @@ count = 0
 def process_row(row):
     global count
     count += 1
-    print(f"On row {count} of 2485" )
-    segmented_frames, hasPerson, all_bboxes_info, vis_img_path = run_yolo_and_seg(row)
+    print(f"On row {count} of 6167" )
+    segmented_frames, binarymask_frames, hasPerson, all_bboxes_info, vis_img_path = run_yolo_and_seg(row)
 
-    path = row['action_swap_path']
-    sample_name = os.path.basename(path)  # 'sample_000000_deadlifting_to_juggling soccer ball_...'
-    sample_idx = int(sample_name.split('_')[1])
+    label = row['label']
+    youtube_id = row['youtube_id']
+    time_start = row['time_start']
+    time_end = row['time_end']
+    split = row['split']
+    full_path = row['full_path']
+    num_files = row['num_files']
 
-    label_a = row['label_A']
-    label_b = row['label_B']
-    yt_id_a = row['yt_id_A']
-    yt_id_b = row['yt_id_B']
-    time_start_a = row['time_start_A']
-    time_end_a = row['time_end_A']
-    time_start_b = row['time_start_B']
-    time_end_b = row['time_end_B']
+    sample_name = f"{youtube_id}_{time_start:06d}_{time_end:06d}"
+    video_dir_seg = os.path.join(output_root_seg, label, sample_name)
+    video_dir_binarymask = os.path.join(output_root_binarymask, label, sample_name)
 
-    sample_name = f"sample_{sample_idx:06d}_{label_a}_to_{label_b}_{yt_id_a}_{time_start_a}_{time_end_a}_bg_{yt_id_b}_{time_start_b}_{time_end_b}"
-    video_dir = os.path.join(output_root, sample_name)
-
-    os.makedirs(video_dir, exist_ok=True)
+    os.makedirs(video_dir_seg, exist_ok=True)
+    os.makedirs(video_dir_binarymask, exist_ok=True)
 
     for i, seg_frame in enumerate(segmented_frames):
-        Image.fromarray(seg_frame).save(os.path.join(video_dir, f"{i:06d}.jpg"))
+        Image.fromarray(seg_frame).save(os.path.join(video_dir_seg, f"{(i+1):06d}.jpg"))
+    
+    for i, binarymask_frame in enumerate(binarymask_frames):
+        Image.fromarray(binarymask_frame, mode='L').save(os.path.join(video_dir_binarymask, f"{(i+1):06d}.jpg"))
 
-    new_row = row.copy()
-    new_row["hasPerson"] = hasPerson
-    new_row['segmented_path'] = os.path.join("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics", video_dir)
-    new_row['bboxes_info'] = str(all_bboxes_info)
-    new_row['bbox_vis_path'] = vis_img_path
+    new_row = {
+        'label':label,
+        'youtube_id':youtube_id,
+        'time_start':time_start,
+        'time_end':time_end,
+        'full_path':full_path,
+        'num_files':num_files,
+        'hasPerson':hasPerson,
+        'segmented_path':video_dir_seg,
+        'mask_path':video_dir_binarymask,
+        'bboxes_info':str(all_bboxes_info),
+        'bbox_vis_path':vis_img_path
+    }
+
     return new_row
 
 
@@ -241,14 +252,19 @@ for idx, row in df.iterrows():
     all_rows.append(process_row(row))
 
 hasHuman_rows = [row for row in all_rows if row['hasPerson']]
+noHuman_rows = [row for row in all_rows if not row['hasPerson']]
 
 new_df = pd.DataFrame(all_rows)
-new_df.to_csv(final_csv_path, index=False)
+new_df.to_csv(final_csv_path_all, index=False)
 
 new_df_hasHuman = pd.DataFrame(hasHuman_rows)
 new_df_hasHuman.to_csv(final_csv_path_only_hasHuman, index=False)
 
+new_df_noHuman = pd.DataFrame(noHuman_rows)
+new_df_noHuman.to_csv(final_csv_path_only_noHuman, index=False)
+
 
 print("============= DATASET CREATION IS COMPLETE ============")
-print(f"A total of {len(new_df)} rows were written to {final_csv_path}")
+print(f"A total of {len(new_df)} rows were written to {final_csv_path_all}")
 print(f"A total of {len(new_df_hasHuman)} rows were written to {final_csv_path_only_hasHuman}")
+print(f"A total of {len(new_df_noHuman)} rows were written to {final_csv_path_only_noHuman}")
