@@ -21,11 +21,14 @@ import tempfile
 import shutil
 import numpy as np
 import torch
+import torch.multiprocessing as mp
+mp.set_start_method("spawn", force=True)
 import sys
 from PIL import Image
 import wandb
+import multiprocessing
+from functools import partial
 
-import wandb
 from ultralytics import YOLO
 
 os.chdir("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/sam2")
@@ -244,28 +247,33 @@ def process_row(row, gpu_id=0):
     return new_row
 
 
-total_row = len(df)
+def process_row_with_device_count(row_dict, num_gpus):
+    row = pd.Series(row_dict)
+    pid = os.getpid()
+    gpu_id = pid % num_gpus
+    return process_row(row, gpu_id)
 
-all_rows = []
-NUM_GPUS = torch.cuda.device_count()
-for idx, row in df.iterrows():
-    gpu_id = idx % NUM_GPUS
-    all_rows.append(process_row(row, gpu_id))
+if __name__ == "__main__":
+    total_row = len(df)
+    NUM_GPUS = torch.cuda.device_count()
 
-hasHuman_rows = [row for row in all_rows if row['hasPerson']]
-noHuman_rows = [row for row in all_rows if not row['hasPerson']]
+    with multiprocessing.Pool(processes=NUM_GPUS) as pool:
+        all_rows = list(filter(None, pool.map(partial(process_row_with_device_count, num_gpus=NUM_GPUS), df.to_dict('records'))))
 
-new_df = pd.DataFrame(all_rows)
-new_df.to_csv(final_csv_path_all, index=False)
+    hasHuman_rows = [row for row in all_rows if row['hasPerson']]
+    noHuman_rows = [row for row in all_rows if not row['hasPerson']]
 
-new_df_hasHuman = pd.DataFrame(hasHuman_rows)
-new_df_hasHuman.to_csv(final_csv_path_only_hasHuman, index=False)
+    new_df = pd.DataFrame(all_rows)
+    new_df.to_csv(final_csv_path_all, index=False)
 
-new_df_noHuman = pd.DataFrame(noHuman_rows)
-new_df_noHuman.to_csv(final_csv_path_only_noHuman, index=False)
+    new_df_hasHuman = pd.DataFrame(hasHuman_rows)
+    new_df_hasHuman.to_csv(final_csv_path_only_hasHuman, index=False)
+
+    new_df_noHuman = pd.DataFrame(noHuman_rows)
+    new_df_noHuman.to_csv(final_csv_path_only_noHuman, index=False)
 
 
-print("============= DATASET CREATION IS COMPLETE ============")
-print(f"A total of {len(new_df)} rows were written to {final_csv_path_all}")
-print(f"A total of {len(new_df_hasHuman)} rows were written to {final_csv_path_only_hasHuman}")
-print(f"A total of {len(new_df_noHuman)} rows were written to {final_csv_path_only_noHuman}")
+    print("============= DATASET CREATION IS COMPLETE ============")
+    print(f"A total of {len(new_df)} rows were written to {final_csv_path_all}")
+    print(f"A total of {len(new_df_hasHuman)} rows were written to {final_csv_path_only_hasHuman}")
+    print(f"A total of {len(new_df_noHuman)} rows were written to {final_csv_path_only_noHuman}")

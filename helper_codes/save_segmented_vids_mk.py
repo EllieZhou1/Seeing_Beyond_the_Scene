@@ -34,15 +34,15 @@ sys.path.insert(0, "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/sam2")
 from sam2.build_sam import build_sam2_video_predictor
 os.chdir("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics")
 
-output_root_seg = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_segmented_minikinetics50_validation"
-output_root_binarymask = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_binarymasks_minikinetics50_validation"
+output_root_seg = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_segmented_minikinetics50_train"
+output_root_binarymask = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_binarymasks_minikinetics50_train"
 
-og_csv_path = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/minikinetics50_validation_all.csv"
+og_csv_path = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/minikinetics50_train_all.csv"
 
-final_csv_path_all = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_minikinetics50_validation_all.csv"
-final_csv_path_only_hasHuman = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_minikinetics50_validation_only_hasHuman.csv" #the csv where we will put ONLY the 
+final_csv_path_all = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_minikinetics50_train_all.csv"
+final_csv_path_only_hasHuman = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_minikinetics50_train_only_hasHuman.csv" #the csv where we will put ONLY the 
 #samples where a human was found
-final_csv_path_only_noHuman = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_minikinetics50_validation_only_noHuman.csv"
+final_csv_path_only_noHuman = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_minikinetics50_train_only_noHuman.csv"
 
 #also samples where a human was not found (in which case it would just be a black box)
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -72,7 +72,6 @@ predictor = build_sam2_video_predictor(model_cfg, sam2_checkpoint, device=device
 os.chdir("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics")
 
 df = pd.read_csv(og_csv_path)
-print("Here2")
 
 # Compute indices for 8 and 32 evenly spaced frames
 def sample_indices(n, total_frames):
@@ -144,7 +143,6 @@ def run_yolo_and_seg(row):
             "bbox": coords
         })
 
-    print("Here 4")
     # Draw bounding boxes on the first frame and save visualization
     import cv2
     vis_img = img0_np.copy()
@@ -171,7 +169,6 @@ def run_yolo_and_seg(row):
             obj_id=1,
             box=box,
         )
-        print("Here 5")
 
         #Go through each video frame, propogate the segmentation, calculate the binary mask
         for out_frame_idx, _, out_mask_logits in predictor.propagate_in_video(inference_state):
@@ -188,12 +185,12 @@ def run_yolo_and_seg(row):
             segmented_frames.append(seg_img_np)
             img_bw = (binary_mask_np.squeeze() * 255).astype(np.uint8)  # shape [H, W]
             binarymask_frames.append(img_bw)
-        print("Here 6")
     else:
         for frame in video_np:
             zero_frame = np.zeros_like(frame, dtype=np.uint8)
             segmented_frames.append(zero_frame)
-            binarymask_frames.append(zero_frame)
+            gray_zero_frame = np.zeros((frame.shape[0], frame.shape[1]), dtype=np.uint8)
+            binarymask_frames.append(gray_zero_frame)
 
     shutil.rmtree(temp_dir)
     return segmented_frames, binarymask_frames, hasPerson, all_bboxes_info, vis_img_path
@@ -226,7 +223,7 @@ def process_row(row):
         Image.fromarray(seg_frame).save(os.path.join(video_dir_seg, f"{(i+1):06d}.jpg"))
     
     for i, binarymask_frame in enumerate(binarymask_frames):
-        Image.fromarray(binarymask_frame, mode='L').save(os.path.join(video_dir_binarymask, f"{(i+1):06d}.jpg"))
+        Image.fromarray(binarymask_frame.squeeze(), mode='L').save(os.path.join(video_dir_binarymask, f"{(i+1):06d}.jpg"))
 
     new_row = {
         'label':label,
