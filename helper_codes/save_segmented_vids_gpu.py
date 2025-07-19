@@ -1,19 +1,4 @@
-#Created by Ellie Zhou on July 2, 2025
-
-#Making a new "dataset" with segmented MiniKinetics50 videos
-
-#1. Go through each video of dataset/mini50_clean_train.csv
-#2. Run YOLO + segmentation on it
-#3. If it could not find a person:
-    # Continue
-#4. If it did find a person:
-    # a) Add the video frames to the directory I just made
-        # in dataset/segmented_minikinetics50/train, create (if not created yet)
-        # or go to the directory corresponding to the label
-            # Create a new subdirectory with the youtube id only
-            # Add in the segmented images
-    # b) Add a new col in the new csv for the new vid path
-    #       Write the row into the new csv
+#Created by Ellie Zhou on July 18, 2025
 
 import os
 import pandas as pd

@@ -10,12 +10,12 @@ import concurrent.futures
 base_dir = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics"
 
 #TODO: Change to be validation
-minikinetics_csv_path = os.path.join(base_dir, "dataset/minikinetics50/minikinetics50_train_all.csv")
+minikinetics_csv_path = os.path.join(base_dir, "dataset/minikinetics50/new_minikinetics50_validation_all.csv")
 places365_csv_path= os.path.join(base_dir, "dataset/places365.csv")
 
-summary_csv_path = os.path.join(base_dir, "dataset/places365/places365_actionswap_summary.csv")
-out_csv_path = os.path.join(base_dir, "dataset/places365/places365_actionswap_train.csv")
-out_img_path = os.path.join(base_dir, "dataset/places365/places365_actionswap_train")
+summary_csv_path = os.path.join(base_dir, "dataset/places365/new_places365_actionswap_validation_summary.csv")
+out_csv_path = os.path.join(base_dir, "dataset/places365/new_places365_actionswap_validation.csv")
+out_img_path = os.path.join(base_dir, "dataset/places365/new_places365_actionswap_validation")
 
 #Go through each row in minikinetics_csv_path
 #Randomly sample a random element in places365
@@ -54,7 +54,7 @@ def process_row(row):
     label_path = os.path.join(out_img_path, mk_label, f"{mk_youtube_id}_{mk_time_start:06d}_{mk_time_end:06d}")
     os.makedirs(label_path, exist_ok=True)
 
-    for index in range (0, 32):
+    for index in range (1, 33):
         seg_path = os.path.join(mk_segmented_path, f"{index:06d}.jpg")
         mask_path = os.path.join(mk_mask_path, f"{index:06d}.jpg")
 
@@ -81,7 +81,6 @@ def process_row(row):
         'youtube_id':mk_youtube_id, 
         'time_start':mk_time_start, 
         'time_end':mk_time_end, 
-        'split':mk_split,
         'full_path':label_path,
         'num_files':mk_num_files,
         'segmented_path':mk_segmented_path,
