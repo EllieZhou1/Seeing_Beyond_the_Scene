@@ -10,12 +10,12 @@ import concurrent.futures
 base_dir = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics"
 
 #TODO: Change to be validation
-minikinetics_csv_path = os.path.join(base_dir, "dataset/minikinetics50/new_minikinetics50_validation_all.csv")
+minikinetics_csv_path = os.path.join(base_dir, "dataset/minikinetics50/new_minikinetics50_train_all.csv")
 places365_csv_path= os.path.join(base_dir, "dataset/places365.csv")
 
-summary_csv_path = os.path.join(base_dir, "dataset/places365/new_places365_actionswap_validation_summary.csv")
-out_csv_path = os.path.join(base_dir, "dataset/places365/new_places365_actionswap_validation.csv")
-out_img_path = os.path.join(base_dir, "dataset/places365/new_places365_actionswap_validation")
+summary_csv_path = os.path.join(base_dir, "dataset/places365/new_places365_actionswap_train_summary.csv")
+out_csv_path = os.path.join(base_dir, "dataset/places365/new_places365_actionswap_train.csv")
+out_img_path = os.path.join(base_dir, "dataset/places365/new_places365_actionswap_train")
 
 #Go through each row in minikinetics_csv_path
 #Randomly sample a random element in places365

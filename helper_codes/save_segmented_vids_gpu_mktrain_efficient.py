@@ -13,6 +13,7 @@ from PIL import Image
 import wandb
 import multiprocessing
 from functools import partial
+import random
 
 from ultralytics import YOLO
 
@@ -82,6 +83,16 @@ def run_yolo_and_seg(row, predictor, yolo, device):
     vid_name = f"{youtube_id}_{time_start:06d}_{time_end:06d}"
     seg_path = os.path.join(output_root_seg, label, vid_name)
     binarymask_path = os.path.join(output_root_binarymask, label, vid_name)
+
+    frame1_seg = os.path.join(seg_path, "000001.jpg")
+    frame32_seg = os.path.join(seg_path, "000032.jpg")
+    frame1_bmask = os.path.join(binarymask_path, "000001.jpg")
+    frame32_bmask = os.path.join(binarymask_path, "000032.jpg")
+
+    if os.path.exists(seg_path) and os.path.exists(binarymask_path) and os.path.exists(frame1_seg) and os.path.exists(frame32_seg) and os.path.exists(frame1_bmask) and os.path.exists(frame32_bmask):
+        print("File already exists. Skipping...")
+        return None, None, None, None, None 
+
 
     indices = sample_indices(32, num_files)
     hasPerson = False
@@ -199,11 +210,14 @@ def process_single_row(row, predictor, yolo, device):
     os.makedirs(video_dir_seg, exist_ok=True)
     os.makedirs(video_dir_binarymask, exist_ok=True)
 
-    for i, seg_frame in enumerate(segmented_frames):
-        Image.fromarray(seg_frame).save(os.path.join(video_dir_seg, f"{(i+1):06d}.jpg"))
-    
-    for i, binarymask_frame in enumerate(binarymask_frames):
-        Image.fromarray(binarymask_frame.squeeze(), mode='L').save(os.path.join(video_dir_binarymask, f"{(i+1):06d}.jpg"))
+    if segmented_frames is not None:
+        for i, seg_frame in enumerate(segmented_frames):
+            Image.fromarray(seg_frame).save(os.path.join(video_dir_seg, f"{(i+1):06d}.jpg"))
+        
+        for i, binarymask_frame in enumerate(binarymask_frames):
+            Image.fromarray(binarymask_frame.squeeze(), mode='L').save(os.path.join(video_dir_binarymask, f"{(i+1):06d}.jpg"))
+    else:
+        print("Skipping saving files in this directory: {sample_name}")
 
     new_row = {
         'label':label,
@@ -247,7 +261,9 @@ if __name__ == "__main__":
 
     chunks = [[] for _ in range(NUM_GPUS)]
     for i, row in enumerate(df.to_dict('records')):
-        chunks[i % NUM_GPUS].append(row)
+        gpu = random.randint(0, 3)
+        #chunks[i % NUM_GPUS].append(row)
+        chunks[gpu].append(row)
 
     with multiprocessing.Pool(processes=NUM_GPUS) as pool:
         results = pool.starmap(gpu_worker, [(chunks[i], i) for i in range(NUM_GPUS)])

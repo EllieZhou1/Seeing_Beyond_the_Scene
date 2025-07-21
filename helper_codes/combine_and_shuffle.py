@@ -3,11 +3,14 @@ import csv
 
 print("imported libraries, starting loading first df")
 # Your original data
-original_df = pd.read_csv("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/minikinetics50_train_all.csv")
+original_df = pd.read_csv("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/minikinetics50/new_minikinetics50_train_all.csv")
+original_df = original_df.drop(columns=["hasPerson", "bboxes_info", "bbox_vis_path"])
+print(original_df.columns)
 
 print("loaded first df")
 # Your new action swap data  
-actionswap_df = pd.read_csv("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/places365/places365_actionswap_train.csv")
+actionswap_df = pd.read_csv("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/places365/new_places365_actionswap_train.csv")
+print(actionswap_df.columns)
 print("loaded second df")
 
 # Combine and shuffle
@@ -19,5 +22,5 @@ print("shuffled, starting saving to csv")
 
 
 # Save combined training set
-shuffled_training_data.to_csv('/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/places365/mix_train.csv', index=False)
+shuffled_training_data.to_csv('/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/places365/new_mix_train.csv', index=False)
 print("saved to csv")
