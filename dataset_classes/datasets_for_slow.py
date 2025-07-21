@@ -105,15 +105,16 @@ class DatasetSlow(torch.utils.data.Dataset):
 
         if self.isHATActionSwap:
             label = row['label_A']
-            backgroundLabel = row['label_B']
+            backgroundLabel = kinetics_classname_to_id[row['label_B']]
             total_frames = row['num_files_A']
         else:
             label = row['label']
-            backgroundLabel = None
+            backgroundLabel = 100
             total_frames = row['num_files']
 
         if self.col == 'full_path' or self.col == 'action_swap_path':
-            if full_path.startswith("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/places365/"):
+            #If in places365, then always use 32 frames for sampling
+            if row[self.col].startswith("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/places365/"):
                 idx_slow = self.sample_indices(num_frames_slow, 32)
             else:
                 idx_slow = self.sample_indices(num_frames_slow, total_frames)

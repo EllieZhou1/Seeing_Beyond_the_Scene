@@ -64,11 +64,12 @@ kinetics_classname_to_id = {v: k for k, v in kinetics_id_to_classname.items()}
 # ========== DATA PIPELINE ==========
 
 class DatasetConcat(torch.utils.data.Dataset):
-    def __init__(self, seg_csv_path, col_orig, col_seg, max_videos=None):
+    def __init__(self, csv_path, col_orig, col_seg, isHATActionSwap, max_videos=None):
         self.max_videos = max_videos
-        self.df = pd.read_csv(seg_csv_path)
+        self.df = pd.read_csv(csv_path)
         self.col_orig = col_orig
         self.col_seg = col_seg
+        self.isHATActionSwap = isHATActionSwap
 
         #reduce to_max videos
         self.df = self.df.sample(n=max_videos) if max_videos is not None else self.df
@@ -83,11 +84,8 @@ class DatasetConcat(torch.utils.data.Dataset):
 
     
     # Compute indices for 8 and 32 evenly spaced frames
-    def sample_indices_oneindexed(self, n, total_frames):
+    def sample_indices(self, n, total_frames):
         return [int(round(i * (total_frames - 1) / (n - 1) + 1)) for i in range(n)]
-    
-    def sample_indices_zeroindexed(self, n, total_frames):
-        return [int(round(i * (total_frames - 1) / (n - 1))) for i in range(n)]
     
     #Given the path to the frames directory and a list of indicies, load the video frames
     #Returns a tensor of the video frames
@@ -106,13 +104,24 @@ class DatasetConcat(torch.utils.data.Dataset):
 
     def __getitem__(self, idx): #only outputs one tensor as opposed to
         row = self.df.iloc[idx]
-        label = row['label_A']
 
-        total_frames = row ['num_files_A'] #number of files in the original Data/Kinetics_cvf/____ video folder
+        if self.isHATActionSwap:
+            label = row['label_A']
+            backgroundLabel = kinetics_classname_to_id[row['label_B']]
+            total_frames = row['num_files_A']
+        else:
+            label = row['label']
+            backgroundLabel = 100
+            total_frames = row['num_files']
 
-        #TODO: Change the NUM TOTAL FRAMES HERE IF NEEDED
-        idx_orig = self.sample_indices_oneindexed(num_frames_slow, total_frames)
-        idx_seg = self.sample_indices_zeroindexed(num_frames_slow, 32) #all of the segmented vids now have 32 frames
+    
+        if self.col_orig == 'full_path' or self.col_orig == 'action_swap_path':
+            if row[self.col_orig].startswith("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/places365/"):
+                idx_orig = self.sample_indices(num_frames_slow, 32)
+            else:
+                idx_orig = self.sample_indices(num_frames_slow, total_frames)
+
+        idx_seg = self.sample_indices(num_frames_slow, 32) #all of the segmented vids now have 32 frames
 
         #Shape should be [3, 8, 256, 256] for both tensors
 
@@ -122,6 +131,7 @@ class DatasetConcat(torch.utils.data.Dataset):
         result = {
             "inputs": [orig_tensor, seg_tensor],
             "label": kinetics_classname_to_id[label],
+            "label_background":backgroundLabel
         }
         return result
     
