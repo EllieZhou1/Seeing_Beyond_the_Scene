@@ -1,0 +1,48 @@
+device: cuda  # Will need to be dynamically determined in code
+metadata_dir: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics  # Directory containing curated CSV files
+
+
+#Predefining paths that can be used later
+minikinetics50_train: dataset/minikinetics50/new_minikinetics50_train_all.csv
+minikinetics50_validation: dataset/minikinetics50/new_minikinetics50_validation_all.csv
+minikinetics50_test: dataset/minikinetics50/new_minikinetics50_test_all.csv
+minikinetics50_places365_mix_train: dataset/places365/new_mix_train.csv #NOT EXISTING YET!
+minikinetics50_places365_mix_validation: dataset/places365/new_mix_validation.csv
+mimetics_test: dataset/mimetics/new_mimetics_all.csv
+hat_actionswap_test: dataset/action_swap/new_action_swap_all.csv
+
+batch_size: 20
+learning_rate: 0.001
+num_epochs: 300
+last_epoch_saved: None # Last epoch saved, used for resuming training
+num_dataloader_workers: 20
+
+model_type: sum_concat #options: ['stack_concat', 'sum_concat', 'slow_r50', 'slow_humanseg', 
+# 'weighted_focus1', 'weighted_focus2']
+
+dataset_type_train: dual_original_and_segmented_mix_train
+#options (mix means that we mix the minikinetics with the places365 action-action swap)
+# segmented_minikinetics50_train
+# original_minikinetics50_train
+# dual_original_and_segmented_minikinetics50_train
+# original_and_binmask_minikinetics50_train
+# original_mix_train
+# segmented_mix_train
+# dual_original_and_segmented_mix_train
+# dual_original_and_binmask_mix_train
+
+dataset_type_val: dual_original_and_segmented_mix_val
+#options:
+# segmented_minikinetics50_val
+# original_minikinetics50_val
+# dual_original_and_segmented_minikinetics50_val
+# original_and_binmask_minikinetics50_val
+# original_mix_val
+# segmented_mix_val
+# dual_original_and_segmented_mix_val
+# dual_original_and_binmask_mix_val
+
+
+#TODO: change this name
+wandb_name: Sum-Concat - Mix Dataset (1)
+weights_dir: new_weights_dir/sum_concat_mix_1  # Directory to save model weights
