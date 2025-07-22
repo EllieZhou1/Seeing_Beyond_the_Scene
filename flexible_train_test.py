@@ -198,7 +198,7 @@ def validation_epoch(model, epoch, optimizer, loss_fn, dataloader):
     return np.array(correct).mean()
 
 
-def test_epoch(model, epoch, loss_fn, dataloader, isHATActionSwap):
+def test_epoch(model, epoch, loss_fn, dataloader, isHATActionSwap, dataset_name):
     model.eval()
     test_loss = []
 
@@ -274,6 +274,17 @@ def test_epoch(model, epoch, loss_fn, dataloader, isHATActionSwap):
     all_labels_bin = label_binarize(all_labels, classes=np.arange(all_outputs.shape[1]))
     map_score = average_precision_score(all_labels_bin, all_outputs, average="macro")
 
+    run.log({
+        f"top 1 accuracy {dataset_name}": top1_acc, 
+        f"top 5 accuracy {dataset_name}": top5_acc,
+        f"mean ap {dataset_name}": map_score
+    })
+
+    if isHATActionSwap:
+        run.log({
+            f"top 1 accuracy GT = background {dataset_name}": top1_acc_bg,
+            f"top 5 accuracy GT = background {dataset_name}": top5_acc_bg
+        })
 
     report = classification_report(y_true=all_labels, y_pred=all_predicted, labels=list(range(50)), target_names=target_names, zero_division=0)
 
@@ -281,7 +292,7 @@ def test_epoch(model, epoch, loss_fn, dataloader, isHATActionSwap):
 
     if isHATActionSwap:
         summary = (
-            f"\n\n=== Report for Epoch {epoch}===\n"
+            f"\n\n=== Report for Epoch {epoch} {dataset_name}===\n"
             f"{report}\n"
             f"Top-1 Accuracy w/ GT = Human: {top1_acc * 100:.2f}%\n"
             f"Top-5 Accuracy w/ GT = Human: {top5_acc * 100:.2f}%\n"
@@ -291,7 +302,7 @@ def test_epoch(model, epoch, loss_fn, dataloader, isHATActionSwap):
         )
     else:
         summary = (
-            f"\n\n=== Report for Epoch {epoch}===\n"
+            f"\n\n=== Report for Epoch {epoch} {dataset_name}===\n"
             f"{report}\n"
             f"Top-1 Accuracy w/ GT = Human: {top1_acc * 100:.2f}%\n"
             f"Top-5 Accuracy w/ GT = Human: {top5_acc * 100:.2f}%\n"
@@ -625,13 +636,13 @@ def train_model():
     print("Initialized optimizer, scheduler, and loss function")
 
     # TODO: uncomment this
-    test_acc1 = test_epoch(my_model, -1, my_loss_fn, my_test_mk50_dataloader, isHATActionSwap=False)
+    test_acc1 = test_epoch(my_model, -1, my_loss_fn, my_test_mk50_dataloader, isHATActionSwap=False, dataset_name="mini-kinetics 50 initial")
     print("MiniKinetics50 Test Accuracy before training=", test_acc1)
 
-    test_acc2 = test_epoch(my_model, -1, my_loss_fn, my_test_mimetics_dataloader, isHATActionSwap=False)
+    test_acc2 = test_epoch(my_model, -1, my_loss_fn, my_test_mimetics_dataloader, isHATActionSwap=False, dataset_name="mimetics initial")
     print("Mimetics Test Accuracy before training=", test_acc2)
 
-    test_acc3 = test_epoch(my_model, -1, my_loss_fn, my_test_hat_actionswap_dataloader, isHATActionSwap=True)
+    test_acc3 = test_epoch(my_model, -1, my_loss_fn, my_test_hat_actionswap_dataloader, isHATActionSwap=True, dataset_name="hat action swap initial")
     print("HAT Action-Swap Test Accuracy before training=", test_acc3)
 
 
@@ -699,13 +710,13 @@ if __name__ == "__main__":
     my_model, my_optimizer, my_scheduler, my_loss_fn, my_test_mk50_dataloader, my_test_mimetics_dataloader, my_test_hat_actionswap_dataloader = train_model()
     
     print("Finished Training Model. Starting Evaluation Now:")
-    test_acc1 = test_epoch(my_model, CONFIG['num_epochs'], my_loss_fn, my_test_mk50_dataloader, isHATActionSwap=False)
+    test_acc1 = test_epoch(my_model, CONFIG['num_epochs'], my_loss_fn, my_test_mk50_dataloader, isHATActionSwap=False, dataset_name="mini-kinetics 50 final")
     print("MiniKinetics50 Test Top 1 Accuracy after training=", test_acc1)
 
-    test_acc2 = test_epoch(my_model, CONFIG['num_epochs'], my_loss_fn, my_test_mimetics_dataloader, isHATActionSwap=False)
+    test_acc2 = test_epoch(my_model, CONFIG['num_epochs'], my_loss_fn, my_test_mimetics_dataloader, isHATActionSwap=False, dataset_name="mimetics final")
     print("Mimetics Test Top 1 Accuracy after training=", test_acc2)
 
-    test_acc3 = test_epoch(my_model, CONFIG['num_epochs'], my_loss_fn, my_test_hat_actionswap_dataloader, isHATActionSwap=True)
+    test_acc3 = test_epoch(my_model, CONFIG['num_epochs'], my_loss_fn, my_test_hat_actionswap_dataloader, isHATActionSwap=True, dataset_name="hat action swap final")
     print("HAT Action-Swap Test Top 1 Accuracy after training=", test_acc3)
 
 
