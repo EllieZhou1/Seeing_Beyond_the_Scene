@@ -166,8 +166,6 @@ class HumanBackgroundWeighting2(nn.Module):
         out = F.sigmoid(out) * 2.0 - 1.0  # Scale to [-1, 1]
         return out
 
-
-
 #This version clips values of alpha and beta
 class WeightedFocusNet2(nn.Module):
     def __init__ (self):
