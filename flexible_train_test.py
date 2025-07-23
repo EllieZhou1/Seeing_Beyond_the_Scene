@@ -587,8 +587,46 @@ def train_model():
         print(f"Loading in epoch {CONFIG['last_epoch_saved']} weights")
         last_epoc_saved = int(CONFIG['last_epoch_saved'])
         checkpoint = torch.load(os.path.join("saved_weights", CONFIG['weights_dir'], f"weights_{last_epoc_saved:06d}.pth"), map_location=CONFIG['device'])
-        my_model.load_state_dict(checkpoint['model'])
-        my_optimizer.load_state_dict(checkpoint['optimizer'])
+        model_checkpoint = checkpoint['model']
+        optimizer_checkpoint = checkpoint['optimizer']
+        scheduler_checkpoint = checkpoint['scheduler']
+
+        my_model.load_state_dict(model_checkpoint)
+        my_optimizer.load_state_dict(optimizer_checkpoint)
+        my_scheduler.load_state_dict(scheduler_checkpoint)
+
+        # if list(model_checkpoint.keys())[0].startswith('module.'):
+        #     # Remove 'module.' prefix
+        #     print("Removing module prefix in model")
+        #     new_model_checkpoint = {k[7:]: v for k, v in model_checkpoint.items()}
+        #     my_model.load_state_dict(new_model_checkpoint)
+        #     print("Loaded model")
+        # else:
+        #     print("Not Removing module prefix in model")
+        #     my_model.load_state_dict(model_checkpoint)
+        #     print("Loaded model")
+
+        # if list(optimizer_checkpoint.keys())[0].startswith('module.'):
+        #     # Remove 'module.' prefix
+        #     print("Removing module prefix in optimizer")
+        #     new_optimizer_checkpoint = {k[7:]: v for k, v in optimizer_checkpoint.items()}
+        #     my_optimizer.load_state_dict(new_optimizer_checkpoint)
+        #     print("Loaded optimizer")
+        # else:
+        #     print("Not Removing module prefix in optimizer")
+        #     my_optimizer.load_state_dict(optimizer_checkpoint)
+        #     print("Loaded optimizer")
+
+        # if list(scheduler_checkpoint.keys())[0].startswith('module.'):
+        #     # Remove 'module.' prefix
+        #     print("Removing module prefix in scheduler")
+        #     new_scheduler_checkpoint = {k[7:]: v for k, v in scheduler_checkpoint.items()}
+        #     my_scheduler.load_state_dict(new_scheduler_checkpoint)
+        #     print("Loaded scheduler")
+        # else:
+        #     print("Not Removing module prefix in scheduler")
+        #     my_scheduler.load_state_dict(scheduler_checkpoint)
+        #     print("Loaded scheduler")
 
 
     # print("\nTrainable Parameters:")
@@ -646,7 +684,7 @@ def train_model():
     print("HAT Action-Swap Test Accuracy before training=", test_acc3)
 
 
-    for epoch in tqdm(range(last_epoc_saved + 1, last_epoc_saved + 1 + CONFIG['num_epochs']), desc='Training Epochs'):
+    for epoch in tqdm(range(last_epoc_saved + 1, CONFIG['num_epochs']+1), desc='Training Epochs'):
         print("Starting epoch", epoch)
         my_model.train()
         train_epoch(my_model, epoch, my_optimizer, my_loss_fn, my_train_dataloader)
