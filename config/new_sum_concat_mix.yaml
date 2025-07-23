@@ -14,7 +14,7 @@ hat_actionswap_test: dataset/action_swap/new_action_swap_all.csv
 batch_size: 20
 learning_rate: 0.001
 num_epochs: 300
-last_epoch_saved: None # Last epoch saved, used for resuming training
+last_epoch_saved: 57 # Last epoch saved, used for resuming training
 num_dataloader_workers: 20
 
 model_type: sum_concat #options: ['stack_concat', 'sum_concat', 'slow_r50', 'slow_humanseg', 
