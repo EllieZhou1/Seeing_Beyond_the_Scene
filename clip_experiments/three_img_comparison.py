@@ -63,9 +63,9 @@ from tqdm import tqdm
 import json
 
 # Load CLIP model once at the start
-model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
-processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
-print("Loaded CLIP model")
+# model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
+# processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
+# print("Loaded CLIP model")
 
 def get_frame_path(base_path, frame_num=50):
     """Get path to specific frame number"""
@@ -288,38 +288,48 @@ def analyze_bias_results(results_csv):
     print(f"  Mean original similarity score: {original['correct_score'].mean():.1f}")
     
     # Most biased actions
-    print(f"\nMOST BIASED ACTIONS (actions w/ the highest avg ranking on background-only):")
+    print(f"\nBIASED ACTIONS FROM MOST TO LEAST (actions w/ the highest % of predicting correct label in background only):")
+
+    bg_only = bg_only.assign(is_rank_1 = bg_only['correct_ranking'] == 1) #add a new column (1 if correct_ranking=1, 0 if correct ranking is not 1)
+
     biased_actions = bg_only.groupby('label').agg({ 
+        'is_rank_1': 'mean',
         'correct_ranking': ['count', 'mean'], 
         'correct_score': 'mean'
     }).round(3)
-    biased_actions.columns = ['count', 'avg_rank', 'avg_score']
-    biased_actions = biased_actions.sort_values('avg_rank')
-    print(biased_actions.head(10))
+    biased_actions.columns = ['bg_only_top_1_rate','count', 'avg_rank', 'avg_score']
+    #bg_only_top_1_rate: for each label (based on human action), # of times bg-only predicted the label correctly/total num vids with that label
+    #count: total num of vids with that label
+    #avg_rank: how high did the correct label rank when compared to similarity scores for the other labels
+    #avg_score: the avg similarity score of the correct labels
+    biased_actions = biased_actions.sort_values('bg_only_top_1_rate', ascending=False)
+    pd.set_option('display.max_rows', 100)  # Set to a number > your row count
+    print(biased_actions.to_string(float_format="{:.3f}".format))
+
     
-    # Least biased actions  
-    print(f"\nLEAST BIASED ACTIONS (actions w/ the lowest avg ranking background-only):")
-    all_bg_by_action = bg_only.groupby('label').agg({
-        'correct_ranking': ['count', 'mean'],
-        'correct_score': 'mean'
-    }).round(3)
-    all_bg_by_action.columns = ['count', 'avg_rank', 'avg_score']
-    all_bg_by_action = all_bg_by_action.sort_values('avg_rank', ascending=False)
-    print(all_bg_by_action.head(10))
+    # # Least biased actions  
+    # print(f"\nLEAST BIASED ACTIONS (actions w/ the least % of predicting correct label in background only):")
+    # all_bg_by_action = bg_only.groupby('label').agg({
+    #     'correct_ranking': ['count', 'mean'],
+    #     'correct_score': 'mean'
+    # }).round(3)
+    # all_bg_by_action.columns = ['count', 'avg_rank', 'avg_score']
+    # all_bg_by_action = all_bg_by_action.sort_values('avg_rank', ascending=False)
+    # print(all_bg_by_action.head(10))
 
 if __name__ == "__main__":
     # Analyze dataset - start with a small sample for testing
     csv_path = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/hat2_dataset.csv"  # Your CSV file path
     
-    results_csv_path = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/clip_experiments/three_img_comparison_results.csv"
-    results_df = analyze_hat2_dataset(
-        csv_path=csv_path,
-        output_csv=results_csv_path, 
-        sample_size=None  # Test with 50 videos first
-    )
+    results_csv_path = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/clip_experiments/results/three_img_comparison_results.csv"
+    # results_df = analyze_hat2_dataset(
+    #     csv_path=csv_path,
+    #     output_csv=results_csv_path, 
+    #     sample_size=None  # Test with 50 videos first
+    # )
     
     # Analyze results
-    if len(results_df) > 0:
-        analyze_bias_results(results_csv_path)
+    # if len(results_df) > 0:
+    analyze_bias_results(results_csv_path)
         
     print("\nTo run on full dataset, set sample_size=None")
