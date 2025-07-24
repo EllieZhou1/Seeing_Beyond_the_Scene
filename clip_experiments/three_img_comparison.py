@@ -1,5 +1,5 @@
 def save_detailed_results_to_txt(result, label, youtube_id, time_start, time_end, 
-                                frame_num, output_dir="clip_experiments/detailed_results"):
+                                frame_num, output_dir="clip_experiments/three_img_comparison_results/per_video_results"):
     """
     Save detailed results for one video to a txt file
     
@@ -63,9 +63,9 @@ from tqdm import tqdm
 import json
 
 # Load CLIP model once at the start
-# model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
-# processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
-# print("Loaded CLIP model")
+model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
+processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
+print("Loaded CLIP model")
 
 def get_frame_path(base_path, frame_num=50):
     """Get path to specific frame number"""
@@ -321,12 +321,12 @@ if __name__ == "__main__":
     # Analyze dataset - start with a small sample for testing
     csv_path = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/hat2_dataset.csv"  # Your CSV file path
     
-    results_csv_path = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/clip_experiments/results/three_img_comparison_results.csv"
-    # results_df = analyze_hat2_dataset(
-    #     csv_path=csv_path,
-    #     output_csv=results_csv_path, 
-    #     sample_size=None  # Test with 50 videos first
-    # )
+    results_csv_path = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/clip_experiments/three_img_comparison_results/three_img_comparison_results.csv"
+    results_df = analyze_hat2_dataset(
+        csv_path=csv_path,
+        output_csv=results_csv_path, 
+        sample_size=None  # Test with 50 videos first
+    )
     
     # Analyze results
     # if len(results_df) > 0:
