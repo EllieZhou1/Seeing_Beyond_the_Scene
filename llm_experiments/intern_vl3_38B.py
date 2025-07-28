@@ -118,7 +118,7 @@ def load_video(frame_dir, bound=None, input_size=448, max_num=1, num_segments=32
     pixel_values = torch.cat(pixel_values_list)
     return pixel_values, num_patches_list
 
-def split_model(model_name, model_path):
+def split_model(model_path):
     device_map = {}
     world_size = torch.cuda.device_count()
     config = AutoConfig.from_pretrained(model_path, trust_remote_code=True)
@@ -202,6 +202,9 @@ def run_dif_seg(model, model_name, num_seg, tokenizer, generation_config):
         new_row['choice_is_bg'] = (choice==mapping[bg_choice])
         rows.append(new_row)
 
+        del pixel_values, num_patches_list  # free the memory
+        torch.cuda.empty_cache()
+
     print(f"Predicted Human: {pred_human}/{total} = {pred_human/total:.6f}")
     print(f"Predicted Background: {pred_bg}/{total} = {pred_bg/total:.6f}")
 
@@ -216,15 +219,16 @@ def run_dif_seg(model, model_name, num_seg, tokenizer, generation_config):
 def run_model(model_name):
     base_dir = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics"
     path = os.path.join(base_dir, "llm_experiments", model_name)
-    device_map = split_model(model_name, path)
+    device_map = split_model(path)
     print("Started creating model")
     model = AutoModel.from_pretrained(
         path,
         torch_dtype=torch.bfloat16,
-        low_cpu_mem_usage=True,
+        load_in_8bit=False, #Changed from unspecified to specify as false
+        low_cpu_mem_usage=True, 
         use_flash_attn=True,
         trust_remote_code=True,
-        device_map=device_map).eval().cuda()
+        device_map=device_map).eval() #got rid of to cuda
 
     print("Finished creating model")
     tokenizer = AutoTokenizer.from_pretrained(path, trust_remote_code=True, use_fast=False)
@@ -246,7 +250,6 @@ run = wandb.init(
     name="InternVL3-38B",
     mode='online',
     settings=wandb.Settings(_service_wait=300)
-    # mode='disabled'
 )
 num_gpus = torch.cuda.device_count()
 wandb.log({"num_gpus": num_gpus})
