@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002186_playing accordion_to_bowling_jEeV0LPXPxI_000015_000025_bg_IknWrGi3QzI_000004_000014
+Frame: 000050.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.1569)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #9/50 (score: 0.0291)
+  Background Action 'bowling' ranked: #13/50 (score: 0.0188)
+
+Top 10 predictions:
+      1. climbing ladder (0.1569)
+      2. climbing a rope (0.1526)
+      3. playing piano (0.0906)
+      4. playing violin (0.0850)
+      5. eating ice cream (0.0792)
+      6. playing trumpet (0.0417)
+      7. playing saxophone (0.0340)
+      8. tying tie (0.0308)
+  👤  9. playing accordion (0.0291)
+     10. skipping rope (0.0242)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 4
+Score gap (bg_score - human_score): -0.0102

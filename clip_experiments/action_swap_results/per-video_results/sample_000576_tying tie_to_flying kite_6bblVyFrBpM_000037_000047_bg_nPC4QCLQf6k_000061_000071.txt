@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000576_tying tie_to_flying kite_6bblVyFrBpM_000037_000047_bg_nPC4QCLQf6k_000061_000071
+Frame: 000050.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.2852)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #2/50 (score: 0.2668)
+  Background Action 'flying kite' ranked: #9/50 (score: 0.0242)
+
+Top 10 predictions:
+      1. climbing a rope (0.2852)
+  👤  2. tying tie (0.2668)
+      3. golf driving (0.0784)
+      4. juggling soccer ball (0.0737)
+      5. hitting baseball (0.0396)
+      6. catching or throwing frisbee (0.0371)
+      7. opening bottle (0.0368)
+      8. catching or throwing baseball (0.0346)
+  🏞️  9. flying kite (0.0242)
+     10. juggling balls (0.0223)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 7
+Score gap (bg_score - human_score): -0.2426
+✅ Human action in top 5

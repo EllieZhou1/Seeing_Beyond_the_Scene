@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001318_smoking_to_dunking basketball_ID55j2rq1sc_000007_000017_bg_S5b7-MnHens_000003_000013
+Frame: 000050.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): dunking basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.2340)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #10/50 (score: 0.0273)
+  Background Action 'dunking basketball' ranked: #15/50 (score: 0.0226)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.2340)
+      2. brushing hair (0.0891)
+      3. juggling soccer ball (0.0807)
+      4. bowling (0.0591)
+      5. tying tie (0.0545)
+      6. driving car (0.0443)
+      7. playing basketball (0.0333)
+      8. dribbling basketball (0.0325)
+      9. drinking (0.0302)
+  👤 10. smoking (0.0273)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 5
+Score gap (bg_score - human_score): -0.0047

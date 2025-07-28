@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001055_playing basketball_to_opening bottle_Of6LQZ7jGaM_000008_000018_bg_zg4lecMUjCo_000004_000014
+Frame: 000050.jpg
+Human Action Label (Correct): playing basketball
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: playing guitar (score: 0.2259)
+
+RANKING ANALYSIS:
+  Human Action 'playing basketball' ranked: #38/50 (score: 0.0019)
+  Background Action 'opening bottle' ranked: #13/50 (score: 0.0122)
+
+Top 10 predictions:
+      1. playing guitar (0.2259)
+      2. playing violin (0.1938)
+      3. brushing hair (0.0839)
+      4. playing bass guitar (0.0812)
+      5. sword fighting (0.0586)
+      6. playing saxophone (0.0489)
+      7. playing accordion (0.0339)
+      8. playing trumpet (0.0238)
+      9. punching person (boxing) (0.0226)
+     10. playing piano (0.0221)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -25
+Score gap (bg_score - human_score): 0.0103

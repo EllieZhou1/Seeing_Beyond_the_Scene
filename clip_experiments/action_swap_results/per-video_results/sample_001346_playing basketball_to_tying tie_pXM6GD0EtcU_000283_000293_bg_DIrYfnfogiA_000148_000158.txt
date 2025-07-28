@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001346_playing basketball_to_tying tie_pXM6GD0EtcU_000283_000293_bg_DIrYfnfogiA_000148_000158
+Frame: 000050.jpg
+Human Action Label (Correct): playing basketball
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: playing trumpet (score: 0.1705)
+
+RANKING ANALYSIS:
+  Human Action 'playing basketball' ranked: #4/50 (score: 0.0628)
+  Background Action 'tying tie' ranked: #45/50 (score: 0.0002)
+
+Top 10 predictions:
+      1. playing trumpet (0.1705)
+      2. dunking basketball (0.0963)
+      3. brushing teeth (0.0932)
+  👤  4. playing basketball (0.0628)
+      5. eating ice cream (0.0615)
+      6. sword fighting (0.0565)
+      7. hurdling (0.0505)
+      8. shooting basketball (0.0493)
+      9. hitting baseball (0.0445)
+     10. bowling (0.0380)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 41
+Score gap (bg_score - human_score): -0.0626
+✅ Human action in top 5

@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: o018kcJ4CqU
+Action: bowling
+Time: 0-10s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 4/50 (score: 0.0630)
+  Top 10 predictions:
+        1. climbing ladder (0.2832)
+        2. climbing a rope (0.1998)
+        3. cleaning windows (0.0843)
+    👉  4. bowling (0.0630)
+        5. skiing slalom (0.0312)
+        6. surfing water (0.0290)
+        7. sweeping floor (0.0263)
+        8. juggling balls (0.0228)
+        9. juggling soccer ball (0.0197)
+       10. dunking basketball (0.0186)
+
+HUMAN ONLY:
+  Correct action rank: 25/50 (score: 0.0138)
+  Top 10 predictions:
+        1. climbing ladder (0.1207)
+        2. opening bottle (0.0980)
+        3. playing saxophone (0.0601)
+        4. smoking (0.0474)
+        5. climbing a rope (0.0469)
+        6. punching person (boxing) (0.0448)
+        7. juggling soccer ball (0.0431)
+        8. cleaning windows (0.0309)
+        9. dunking basketball (0.0301)
+       10. walking the dog (0.0300)
+
+BACKGROUND ONLY:
+  Correct action rank: 3/50 (score: 0.0947)
+  Top 10 predictions:
+        1. climbing ladder (0.2589)
+        2. climbing a rope (0.1646)
+    👉  3. bowling (0.0947)
+        4. cleaning windows (0.0652)
+        5. skiing slalom (0.0433)
+        6. sweeping floor (0.0351)
+        7. surfing water (0.0314)
+        8. skiing (not slalom or crosscountry) (0.0252)
+        9. sword fighting (0.0233)
+       10. hurdling (0.0232)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -1
+Ranking drop from human to background: -22
+🚨 WARNING: Background ranks higher than human-only!

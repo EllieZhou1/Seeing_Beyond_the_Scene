@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002093_flying kite_to_drinking_3dnRiA5pSwU_000024_000034_bg_0JFH2o8xhOc_000013_000023
+Frame: 000050.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): drinking
+
+CLIP PREDICTIONS:
+  Predicted Label: flying kite (score: 0.6581)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #1/50 (score: 0.6581)
+  Background Action 'drinking' ranked: #6/50 (score: 0.0153)
+
+Top 10 predictions:
+  👤  1. flying kite (0.6581)
+      2. smoking (0.0211)
+      3. writing (0.0202)
+      4. playing piano (0.0193)
+      5. eating ice cream (0.0189)
+  🏞️  6. drinking (0.0153)
+      7. bowling (0.0135)
+      8. dunking basketball (0.0123)
+      9. hurdling (0.0121)
+     10. surfing water (0.0115)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 5
+Score gap (bg_score - human_score): -0.6428
+✅ Human action in top 5

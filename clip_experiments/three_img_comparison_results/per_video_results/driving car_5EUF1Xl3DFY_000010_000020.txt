@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 5EUF1Xl3DFY
+Action: driving car
+Time: 10-20s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 4/50 (score: 0.0692)
+  Top 10 predictions:
+        1. walking the dog (0.1706)
+        2. cleaning windows (0.1399)
+        3. climbing ladder (0.0739)
+    👉  4. driving car (0.0692)
+        5. climbing a rope (0.0644)
+        6. juggling balls (0.0558)
+        7. golf driving (0.0504)
+        8. surfing water (0.0420)
+        9. eating ice cream (0.0338)
+       10. juggling soccer ball (0.0305)
+
+HUMAN ONLY:
+  Correct action rank: 26/50 (score: 0.0111)
+  Top 10 predictions:
+        1. smoking (0.1427)
+        2. playing saxophone (0.1010)
+        3. playing violin (0.0819)
+        4. playing guitar (0.0399)
+        5. playing bass guitar (0.0378)
+        6. playing piano (0.0373)
+        7. skiing (not slalom or crosscountry) (0.0364)
+        8. juggling soccer ball (0.0360)
+        9. skiing slalom (0.0323)
+       10. playing trumpet (0.0306)
+
+BACKGROUND ONLY:
+  Correct action rank: 3/50 (score: 0.1302)
+  Top 10 predictions:
+        1. golf driving (0.1620)
+        2. cleaning windows (0.1389)
+    👉  3. driving car (0.1302)
+        4. walking the dog (0.1245)
+        5. juggling balls (0.0767)
+        6. juggling soccer ball (0.0649)
+        7. climbing ladder (0.0370)
+        8. climbing a rope (0.0273)
+        9. punching person (boxing) (0.0250)
+       10. surfing water (0.0223)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -1
+Ranking drop from human to background: -23
+🚨 WARNING: Background ranks higher than human-only!

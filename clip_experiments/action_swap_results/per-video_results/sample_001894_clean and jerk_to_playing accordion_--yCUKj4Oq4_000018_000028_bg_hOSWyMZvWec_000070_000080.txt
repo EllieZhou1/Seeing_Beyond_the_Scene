@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001894_clean and jerk_to_playing accordion_--yCUKj4Oq4_000018_000028_bg_hOSWyMZvWec_000070_000080
+Frame: 000050.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.1442)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #44/50 (score: 0.0008)
+  Background Action 'playing accordion' ranked: #16/50 (score: 0.0174)
+
+Top 10 predictions:
+      1. dunking basketball (0.1442)
+      2. hurdling (0.1101)
+      3. climbing ladder (0.1017)
+      4. punching person (boxing) (0.0819)
+      5. playing saxophone (0.0737)
+      6. climbing a rope (0.0629)
+      7. dribbling basketball (0.0520)
+      8. cleaning windows (0.0399)
+      9. juggling soccer ball (0.0377)
+     10. catching or throwing frisbee (0.0338)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -28
+Score gap (bg_score - human_score): 0.0166

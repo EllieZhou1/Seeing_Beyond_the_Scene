@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000021_playing bass guitar_to_brushing hair_qx8eYKeDhmw_000187_000197_bg_gkNaCAQyU_0_000034_000044
+Frame: 000050.jpg
+Human Action Label (Correct): playing bass guitar
+Background Label (Incorrect): brushing hair
+
+CLIP PREDICTIONS:
+  Predicted Label: playing guitar (score: 0.8614)
+
+RANKING ANALYSIS:
+  Human Action 'playing bass guitar' ranked: #2/50 (score: 0.1164)
+  Background Action 'brushing hair' ranked: #21/50 (score: 0.0001)
+
+Top 10 predictions:
+      1. playing guitar (0.8614)
+  👤  2. playing bass guitar (0.1164)
+      3. playing accordion (0.0088)
+      4. playing violin (0.0053)
+      5. playing saxophone (0.0018)
+      6. opening bottle (0.0010)
+      7. playing trumpet (0.0010)
+      8. writing (0.0009)
+      9. playing piano (0.0005)
+     10. juggling balls (0.0004)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 19
+Score gap (bg_score - human_score): -0.1163
+✅ Human action in top 5

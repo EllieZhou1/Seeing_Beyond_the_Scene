@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002249_catching or throwing baseball_to_climbing ladder_d2RIQkmy9cE_000159_000169_bg_zZ9Zb41KNR4_000328_000338
+Frame: 000050.jpg
+Human Action Label (Correct): catching or throwing baseball
+Background Label (Incorrect): climbing ladder
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.2127)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing baseball' ranked: #15/50 (score: 0.0110)
+  Background Action 'climbing ladder' ranked: #3/50 (score: 0.1069)
+
+Top 10 predictions:
+      1. cleaning windows (0.2127)
+      2. juggling soccer ball (0.1604)
+  🏞️  3. climbing ladder (0.1069)
+      4. juggling balls (0.0829)
+      5. hitting baseball (0.0707)
+      6. climbing a rope (0.0630)
+      7. playing tennis (0.0465)
+      8. dunking basketball (0.0425)
+      9. golf driving (0.0394)
+     10. playing basketball (0.0237)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -12
+Score gap (bg_score - human_score): 0.0959
+⚠️  Background action in top 5!

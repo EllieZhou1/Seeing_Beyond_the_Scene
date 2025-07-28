@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: z6Xahf4nv7U
+Action: cleaning windows
+Time: 129-139s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.8295)
+  Top 10 predictions:
+    👉  1. cleaning windows (0.8295)
+        2. golf driving (0.0708)
+        3. hitting baseball (0.0107)
+        4. skipping rope (0.0099)
+        5. climbing a rope (0.0091)
+        6. skiing (not slalom or crosscountry) (0.0081)
+        7. juggling soccer ball (0.0079)
+        8. dribbling basketball (0.0074)
+        9. driving car (0.0059)
+       10. playing basketball (0.0050)
+
+HUMAN ONLY:
+  Correct action rank: 17/50 (score: 0.0122)
+  Top 10 predictions:
+        1. hitting baseball (0.1766)
+        2. skiing slalom (0.1554)
+        3. juggling soccer ball (0.1003)
+        4. juggling balls (0.0706)
+        5. catching or throwing frisbee (0.0602)
+        6. punching person (boxing) (0.0527)
+        7. catching or throwing baseball (0.0503)
+        8. climbing a rope (0.0353)
+        9. skiing (not slalom or crosscountry) (0.0321)
+       10. skipping rope (0.0288)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.1208)
+  Top 10 predictions:
+        1. flying kite (0.4133)
+    👉  2. cleaning windows (0.1208)
+        3. driving car (0.0964)
+        4. catching or throwing frisbee (0.0778)
+        5. golf driving (0.0775)
+        6. catching or throwing baseball (0.0347)
+        7. dunking basketball (0.0329)
+        8. juggling soccer ball (0.0182)
+        9. hitting baseball (0.0171)
+       10. playing basketball (0.0160)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 1
+Ranking drop from human to background: -15
+🚨 WARNING: Background ranks higher than human-only!

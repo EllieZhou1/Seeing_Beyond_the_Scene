@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000323_playing volleyball_to_clean and jerk_BYRSePXrZFY_000003_000013_bg_WzmcmNxVGIs_000031_000041
+Frame: 000050.jpg
+Human Action Label (Correct): playing volleyball
+Background Label (Incorrect): clean and jerk
+
+CLIP PREDICTIONS:
+  Predicted Label: playing basketball (score: 0.2165)
+
+RANKING ANALYSIS:
+  Human Action 'playing volleyball' ranked: #2/50 (score: 0.1234)
+  Background Action 'clean and jerk' ranked: #12/50 (score: 0.0219)
+
+Top 10 predictions:
+      1. playing basketball (0.2165)
+  👤  2. playing volleyball (0.1234)
+      3. shooting goal (soccer) (0.1086)
+      4. hitting baseball (0.1021)
+      5. shooting basketball (0.0724)
+      6. dribbling basketball (0.0599)
+      7. dunking basketball (0.0507)
+      8. bowling (0.0443)
+      9. juggling soccer ball (0.0432)
+     10. playing tennis (0.0264)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 10
+Score gap (bg_score - human_score): -0.1016
+✅ Human action in top 5

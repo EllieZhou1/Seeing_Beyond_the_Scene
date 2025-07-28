@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002190_playing volleyball_to_hitting baseball_86c82gw-FlQ_000020_000030_bg_5-jBTNp5IQA_000075_000085
+Frame: 000050.jpg
+Human Action Label (Correct): playing volleyball
+Background Label (Incorrect): hitting baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: hitting baseball (score: 0.8371)
+
+RANKING ANALYSIS:
+  Human Action 'playing volleyball' ranked: #19/50 (score: 0.0000)
+  Background Action 'hitting baseball' ranked: #1/50 (score: 0.8371)
+
+Top 10 predictions:
+  🏞️  1. hitting baseball (0.8371)
+      2. catching or throwing baseball (0.1572)
+      3. catching or throwing frisbee (0.0042)
+      4. sword fighting (0.0003)
+      5. hurdling (0.0003)
+      6. shooting goal (soccer) (0.0001)
+      7. juggling balls (0.0001)
+      8. shooting basketball (0.0001)
+      9. playing tennis (0.0001)
+     10. juggling soccer ball (0.0001)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -18
+Score gap (bg_score - human_score): 0.8371
+⚠️  Background action in top 5!

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001816_brushing teeth_to_flying kite_A_0bhesqVfA_000024_000034_bg_uHERxfY_li8_000071_000081
+Frame: 000050.jpg
+Human Action Label (Correct): brushing teeth
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.4693)
+
+RANKING ANALYSIS:
+  Human Action 'brushing teeth' ranked: #3/50 (score: 0.0698)
+  Background Action 'flying kite' ranked: #37/50 (score: 0.0017)
+
+Top 10 predictions:
+      1. brushing hair (0.4693)
+      2. eating ice cream (0.0836)
+  👤  3. brushing teeth (0.0698)
+      4. eating cake (0.0566)
+      5. opening bottle (0.0513)
+      6. climbing a rope (0.0318)
+      7. sword fighting (0.0299)
+      8. punching person (boxing) (0.0270)
+      9. drinking (0.0149)
+     10. bowling (0.0147)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 34
+Score gap (bg_score - human_score): -0.0681
+✅ Human action in top 5

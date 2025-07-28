@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001369_flying kite_to_playing accordion_U6THcz2Qt3Q_000199_000209_bg_1gQkxY9-sL4_000006_000016
+Frame: 000050.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.3498)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #4/50 (score: 0.0704)
+  Background Action 'playing accordion' ranked: #13/50 (score: 0.0104)
+
+Top 10 predictions:
+      1. skipping rope (0.3498)
+      2. juggling balls (0.1189)
+      3. juggling soccer ball (0.1077)
+  👤  4. flying kite (0.0704)
+      5. sword fighting (0.0473)
+      6. archery (0.0372)
+      7. opening bottle (0.0264)
+      8. reading newspaper (0.0204)
+      9. playing violin (0.0199)
+     10. shooting goal (soccer) (0.0183)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 9
+Score gap (bg_score - human_score): -0.0600
+✅ Human action in top 5

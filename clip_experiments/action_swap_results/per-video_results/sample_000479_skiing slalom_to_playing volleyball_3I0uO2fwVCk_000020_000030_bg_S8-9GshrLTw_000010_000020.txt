@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000479_skiing slalom_to_playing volleyball_3I0uO2fwVCk_000020_000030_bg_S8-9GshrLTw_000010_000020
+Frame: 000050.jpg
+Human Action Label (Correct): skiing slalom
+Background Label (Incorrect): playing volleyball
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.3727)
+
+RANKING ANALYSIS:
+  Human Action 'skiing slalom' ranked: #1/50 (score: 0.3727)
+  Background Action 'playing volleyball' ranked: #9/50 (score: 0.0167)
+
+Top 10 predictions:
+  👤  1. skiing slalom (0.3727)
+      2. flying kite (0.2085)
+      3. surfing water (0.0710)
+      4. skiing (not slalom or crosscountry) (0.0556)
+      5. shooting goal (soccer) (0.0434)
+      6. skipping rope (0.0411)
+      7. shooting basketball (0.0206)
+      8. dunking basketball (0.0180)
+  🏞️  9. playing volleyball (0.0167)
+     10. sweeping floor (0.0155)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 8
+Score gap (bg_score - human_score): -0.3560
+✅ Human action in top 5

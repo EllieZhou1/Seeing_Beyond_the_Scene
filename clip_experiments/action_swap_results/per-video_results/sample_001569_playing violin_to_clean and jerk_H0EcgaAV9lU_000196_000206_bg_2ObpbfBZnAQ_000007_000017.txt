@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001569_playing violin_to_clean and jerk_H0EcgaAV9lU_000196_000206_bg_2ObpbfBZnAQ_000007_000017
+Frame: 000050.jpg
+Human Action Label (Correct): playing violin
+Background Label (Incorrect): clean and jerk
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling balls (score: 0.7006)
+
+RANKING ANALYSIS:
+  Human Action 'playing violin' ranked: #7/50 (score: 0.0135)
+  Background Action 'clean and jerk' ranked: #15/50 (score: 0.0051)
+
+Top 10 predictions:
+      1. juggling balls (0.7006)
+      2. playing trumpet (0.0661)
+      3. sword fighting (0.0516)
+      4. juggling soccer ball (0.0265)
+      5. skipping rope (0.0247)
+      6. archery (0.0245)
+  👤  7. playing violin (0.0135)
+      8. sweeping floor (0.0129)
+      9. playing accordion (0.0120)
+     10. playing saxophone (0.0087)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 8
+Score gap (bg_score - human_score): -0.0084

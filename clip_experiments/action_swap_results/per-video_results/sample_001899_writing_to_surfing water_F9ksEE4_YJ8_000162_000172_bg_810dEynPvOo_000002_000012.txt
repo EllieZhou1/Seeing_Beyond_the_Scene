@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001899_writing_to_surfing water_F9ksEE4_YJ8_000162_000172_bg_810dEynPvOo_000002_000012
+Frame: 000050.jpg
+Human Action Label (Correct): writing
+Background Label (Incorrect): surfing water
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2659)
+
+RANKING ANALYSIS:
+  Human Action 'writing' ranked: #38/50 (score: 0.0017)
+  Background Action 'surfing water' ranked: #19/50 (score: 0.0092)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2659)
+      2. dribbling basketball (0.1555)
+      3. juggling balls (0.1403)
+      4. dunking basketball (0.0507)
+      5. skipping rope (0.0434)
+      6. flying kite (0.0344)
+      7. eating cake (0.0313)
+      8. climbing a rope (0.0303)
+      9. eating ice cream (0.0271)
+     10. brushing hair (0.0239)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -19
+Score gap (bg_score - human_score): 0.0075

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000153_cleaning windows_to_dribbling basketball_Yh2-DcIWt88_000006_000016_bg_6RQ2rLKLsv8_000006_000016
+Frame: 000050.jpg
+Human Action Label (Correct): cleaning windows
+Background Label (Incorrect): dribbling basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.1877)
+
+RANKING ANALYSIS:
+  Human Action 'cleaning windows' ranked: #5/50 (score: 0.0441)
+  Background Action 'dribbling basketball' ranked: #19/50 (score: 0.0147)
+
+Top 10 predictions:
+      1. skipping rope (0.1877)
+      2. juggling balls (0.1127)
+      3. smoking (0.0758)
+      4. juggling soccer ball (0.0729)
+  👤  5. cleaning windows (0.0441)
+      6. playing trumpet (0.0410)
+      7. punching person (boxing) (0.0356)
+      8. sweeping floor (0.0334)
+      9. playing accordion (0.0298)
+     10. writing (0.0235)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 14
+Score gap (bg_score - human_score): -0.0294
+✅ Human action in top 5

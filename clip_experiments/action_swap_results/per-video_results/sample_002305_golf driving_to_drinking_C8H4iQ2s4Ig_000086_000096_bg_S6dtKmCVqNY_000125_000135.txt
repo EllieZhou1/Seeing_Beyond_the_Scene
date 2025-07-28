@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002305_golf driving_to_drinking_C8H4iQ2s4Ig_000086_000096_bg_S6dtKmCVqNY_000125_000135
+Frame: 000050.jpg
+Human Action Label (Correct): golf driving
+Background Label (Incorrect): drinking
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.1750)
+
+RANKING ANALYSIS:
+  Human Action 'golf driving' ranked: #10/50 (score: 0.0317)
+  Background Action 'drinking' ranked: #26/50 (score: 0.0084)
+
+Top 10 predictions:
+      1. skiing slalom (0.1750)
+      2. flying kite (0.1277)
+      3. climbing ladder (0.0737)
+      4. skiing (not slalom or crosscountry) (0.0665)
+      5. sweeping floor (0.0556)
+      6. climbing a rope (0.0502)
+      7. driving car (0.0421)
+      8. walking the dog (0.0344)
+      9. sword fighting (0.0334)
+  👤 10. golf driving (0.0317)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 16
+Score gap (bg_score - human_score): -0.0234

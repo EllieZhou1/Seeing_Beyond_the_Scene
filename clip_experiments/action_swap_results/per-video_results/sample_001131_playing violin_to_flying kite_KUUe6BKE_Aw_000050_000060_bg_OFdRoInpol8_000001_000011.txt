@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001131_playing violin_to_flying kite_KUUe6BKE_Aw_000050_000060_bg_OFdRoInpol8_000001_000011
+Frame: 000050.jpg
+Human Action Label (Correct): playing violin
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: playing violin (score: 0.2311)
+
+RANKING ANALYSIS:
+  Human Action 'playing violin' ranked: #1/50 (score: 0.2311)
+  Background Action 'flying kite' ranked: #2/50 (score: 0.2158)
+
+Top 10 predictions:
+  👤  1. playing violin (0.2311)
+  🏞️  2. flying kite (0.2158)
+      3. playing trumpet (0.0979)
+      4. shooting goal (soccer) (0.0574)
+      5. playing saxophone (0.0476)
+      6. sword fighting (0.0411)
+      7. skipping rope (0.0407)
+      8. skiing slalom (0.0281)
+      9. playing accordion (0.0222)
+     10. golf driving (0.0180)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0154
+⚠️  Background action in top 5!
+✅ Human action in top 5

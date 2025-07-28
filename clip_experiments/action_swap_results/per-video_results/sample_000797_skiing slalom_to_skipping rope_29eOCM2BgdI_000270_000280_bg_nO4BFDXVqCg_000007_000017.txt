@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000797_skiing slalom_to_skipping rope_29eOCM2BgdI_000270_000280_bg_nO4BFDXVqCg_000007_000017
+Frame: 000050.jpg
+Human Action Label (Correct): skiing slalom
+Background Label (Incorrect): skipping rope
+
+CLIP PREDICTIONS:
+  Predicted Label: dribbling basketball (score: 0.5848)
+
+RANKING ANALYSIS:
+  Human Action 'skiing slalom' ranked: #11/50 (score: 0.0041)
+  Background Action 'skipping rope' ranked: #9/50 (score: 0.0084)
+
+Top 10 predictions:
+      1. dribbling basketball (0.5848)
+      2. playing basketball (0.1821)
+      3. shooting basketball (0.0748)
+      4. dunking basketball (0.0563)
+      5. shooting goal (soccer) (0.0195)
+      6. playing volleyball (0.0133)
+      7. sweeping floor (0.0105)
+      8. juggling soccer ball (0.0087)
+  🏞️  9. skipping rope (0.0084)
+     10. hurdling (0.0076)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.0043

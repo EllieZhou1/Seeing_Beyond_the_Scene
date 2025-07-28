@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000127_hurdling_to_flying kite_vNOJj2XzgzA_000015_000025_bg_zIf7WC3ASzc_000694_000704
+Frame: 000050.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.4995)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #2/50 (score: 0.1368)
+  Background Action 'flying kite' ranked: #3/50 (score: 0.0709)
+
+Top 10 predictions:
+      1. sword fighting (0.4995)
+  👤  2. hurdling (0.1368)
+  🏞️  3. flying kite (0.0709)
+      4. climbing a rope (0.0568)
+      5. catching or throwing frisbee (0.0437)
+      6. archery (0.0320)
+      7. skipping rope (0.0234)
+      8. hitting baseball (0.0175)
+      9. climbing ladder (0.0165)
+     10. dunking basketball (0.0125)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0659
+⚠️  Background action in top 5!
+✅ Human action in top 5

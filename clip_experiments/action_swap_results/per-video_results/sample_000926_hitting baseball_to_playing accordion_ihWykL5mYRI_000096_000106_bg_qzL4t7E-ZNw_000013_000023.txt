@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000926_hitting baseball_to_playing accordion_ihWykL5mYRI_000096_000106_bg_qzL4t7E-ZNw_000013_000023
+Frame: 000050.jpg
+Human Action Label (Correct): hitting baseball
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: hitting baseball (score: 0.6565)
+
+RANKING ANALYSIS:
+  Human Action 'hitting baseball' ranked: #1/50 (score: 0.6565)
+  Background Action 'playing accordion' ranked: #16/50 (score: 0.0016)
+
+Top 10 predictions:
+  👤  1. hitting baseball (0.6565)
+      2. golf driving (0.1933)
+      3. catching or throwing baseball (0.0987)
+      4. hurdling (0.0108)
+      5. playing tennis (0.0035)
+      6. clean and jerk (0.0030)
+      7. playing violin (0.0030)
+      8. cleaning windows (0.0025)
+      9. punching person (boxing) (0.0024)
+     10. playing trumpet (0.0022)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 15
+Score gap (bg_score - human_score): -0.6549
+✅ Human action in top 5

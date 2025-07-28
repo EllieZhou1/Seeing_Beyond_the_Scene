@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000569_sword fighting_to_flying kite_kt8EnaL1xdU_000007_000017_bg_Pqti-H3n2Z8_000021_000031
+Frame: 000050.jpg
+Human Action Label (Correct): sword fighting
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: catching or throwing frisbee (score: 0.3598)
+
+RANKING ANALYSIS:
+  Human Action 'sword fighting' ranked: #2/50 (score: 0.3074)
+  Background Action 'flying kite' ranked: #10/50 (score: 0.0160)
+
+Top 10 predictions:
+      1. catching or throwing frisbee (0.3598)
+  👤  2. sword fighting (0.3074)
+      3. hitting baseball (0.0561)
+      4. hurdling (0.0498)
+      5. catching or throwing baseball (0.0443)
+      6. shooting goal (soccer) (0.0362)
+      7. punching person (boxing) (0.0270)
+      8. juggling soccer ball (0.0185)
+      9. juggling balls (0.0180)
+  🏞️ 10. flying kite (0.0160)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 8
+Score gap (bg_score - human_score): -0.2914
+✅ Human action in top 5

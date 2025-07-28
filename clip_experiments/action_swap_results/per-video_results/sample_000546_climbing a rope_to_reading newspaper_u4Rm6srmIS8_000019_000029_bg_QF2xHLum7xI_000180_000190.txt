@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000546_climbing a rope_to_reading newspaper_u4Rm6srmIS8_000019_000029_bg_QF2xHLum7xI_000180_000190
+Frame: 000050.jpg
+Human Action Label (Correct): climbing a rope
+Background Label (Incorrect): reading newspaper
+
+CLIP PREDICTIONS:
+  Predicted Label: smoking (score: 0.2036)
+
+RANKING ANALYSIS:
+  Human Action 'climbing a rope' ranked: #15/50 (score: 0.0223)
+  Background Action 'reading newspaper' ranked: #13/50 (score: 0.0264)
+
+Top 10 predictions:
+      1. smoking (0.2036)
+      2. playing trumpet (0.0572)
+      3. writing (0.0530)
+      4. cleaning windows (0.0524)
+      5. eating ice cream (0.0521)
+      6. opening bottle (0.0511)
+      7. juggling soccer ball (0.0453)
+      8. playing saxophone (0.0441)
+      9. flying kite (0.0420)
+     10. playing violin (0.0412)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.0042

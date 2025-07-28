@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000745_clean and jerk_to_archery_eb27P4kCJYI_000026_000036_bg_it-IIR-qUIg_000150_000160
+Frame: 000050.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): archery
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.4508)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #6/50 (score: 0.0594)
+  Background Action 'archery' ranked: #22/50 (score: 0.0013)
+
+Top 10 predictions:
+      1. shooting goal (soccer) (0.4508)
+      2. juggling soccer ball (0.1198)
+      3. playing tennis (0.0757)
+      4. hitting baseball (0.0753)
+      5. juggling balls (0.0637)
+  👤  6. clean and jerk (0.0594)
+      7. hurdling (0.0425)
+      8. playing volleyball (0.0313)
+      9. catching or throwing baseball (0.0224)
+     10. shooting basketball (0.0130)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 16
+Score gap (bg_score - human_score): -0.0581

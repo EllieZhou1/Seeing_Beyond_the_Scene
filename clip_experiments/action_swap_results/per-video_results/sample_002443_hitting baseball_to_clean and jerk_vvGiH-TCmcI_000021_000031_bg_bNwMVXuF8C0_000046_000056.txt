@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002443_hitting baseball_to_clean and jerk_vvGiH-TCmcI_000021_000031_bg_bNwMVXuF8C0_000046_000056
+Frame: 000050.jpg
+Human Action Label (Correct): hitting baseball
+Background Label (Incorrect): clean and jerk
+
+CLIP PREDICTIONS:
+  Predicted Label: clean and jerk (score: 0.5392)
+
+RANKING ANALYSIS:
+  Human Action 'hitting baseball' ranked: #2/50 (score: 0.2001)
+  Background Action 'clean and jerk' ranked: #1/50 (score: 0.5392)
+
+Top 10 predictions:
+  🏞️  1. clean and jerk (0.5392)
+  👤  2. hitting baseball (0.2001)
+      3. catching or throwing baseball (0.0910)
+      4. juggling balls (0.0831)
+      5. juggling soccer ball (0.0513)
+      6. deadlifting (0.0188)
+      7. skipping rope (0.0047)
+      8. catching or throwing frisbee (0.0030)
+      9. climbing a rope (0.0027)
+     10. sweeping floor (0.0014)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.3391
+⚠️  Background action in top 5!
+✅ Human action in top 5

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000215_catching or throwing baseball_to_hurdling_F9kCgXa2aTs_000018_000028_bg_oUlbpoJQU0Y_000006_000016
+Frame: 000050.jpg
+Human Action Label (Correct): catching or throwing baseball
+Background Label (Incorrect): hurdling
+
+CLIP PREDICTIONS:
+  Predicted Label: hurdling (score: 0.8610)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing baseball' ranked: #8/50 (score: 0.0031)
+  Background Action 'hurdling' ranked: #1/50 (score: 0.8610)
+
+Top 10 predictions:
+  🏞️  1. hurdling (0.8610)
+      2. skiing slalom (0.0820)
+      3. climbing a rope (0.0127)
+      4. catching or throwing frisbee (0.0102)
+      5. climbing ladder (0.0063)
+      6. shooting goal (soccer) (0.0060)
+      7. skiing (not slalom or crosscountry) (0.0039)
+  👤  8. catching or throwing baseball (0.0031)
+      9. archery (0.0024)
+     10. juggling balls (0.0017)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -7
+Score gap (bg_score - human_score): 0.8578
+⚠️  Background action in top 5!

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000409_deadlifting_to_punching person (boxing)_oyN6ldlYUD8_000032_000042_bg_Cs-CfeLNspE_000126_000136
+Frame: 000050.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.5352)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #10/50 (score: 0.0033)
+  Background Action 'punching person (boxing)' ranked: #15/50 (score: 0.0016)
+
+Top 10 predictions:
+      1. climbing a rope (0.5352)
+      2. climbing ladder (0.3172)
+      3. juggling soccer ball (0.0330)
+      4. skipping rope (0.0280)
+      5. cleaning windows (0.0171)
+      6. juggling balls (0.0158)
+      7. clean and jerk (0.0136)
+      8. dunking basketball (0.0088)
+      9. dribbling basketball (0.0033)
+  👤 10. deadlifting (0.0033)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 5
+Score gap (bg_score - human_score): -0.0017

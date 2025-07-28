@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000535_archery_to_bowling_u2uhrc0GBOo_000034_000044_bg_SUfUbruAUbE_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): archery
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: bowling (score: 0.5509)
+
+RANKING ANALYSIS:
+  Human Action 'archery' ranked: #3/50 (score: 0.0502)
+  Background Action 'bowling' ranked: #1/50 (score: 0.5509)
+
+Top 10 predictions:
+  🏞️  1. bowling (0.5509)
+      2. skiing slalom (0.1309)
+  👤  3. archery (0.0502)
+      4. golf driving (0.0382)
+      5. skiing (not slalom or crosscountry) (0.0329)
+      6. clean and jerk (0.0199)
+      7. deadlifting (0.0171)
+      8. skipping rope (0.0163)
+      9. sword fighting (0.0143)
+     10. driving car (0.0134)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.5007
+⚠️  Background action in top 5!
+✅ Human action in top 5

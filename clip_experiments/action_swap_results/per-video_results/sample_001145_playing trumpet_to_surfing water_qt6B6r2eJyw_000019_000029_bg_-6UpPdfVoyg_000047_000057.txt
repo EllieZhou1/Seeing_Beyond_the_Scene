@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001145_playing trumpet_to_surfing water_qt6B6r2eJyw_000019_000029_bg_-6UpPdfVoyg_000047_000057
+Frame: 000050.jpg
+Human Action Label (Correct): playing trumpet
+Background Label (Incorrect): surfing water
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.4198)
+
+RANKING ANALYSIS:
+  Human Action 'playing trumpet' ranked: #19/50 (score: 0.0071)
+  Background Action 'surfing water' ranked: #49/50 (score: 0.0001)
+
+Top 10 predictions:
+      1. dunking basketball (0.4198)
+      2. dribbling basketball (0.1503)
+      3. hurdling (0.0551)
+      4. playing basketball (0.0494)
+      5. tying tie (0.0338)
+      6. shooting basketball (0.0304)
+      7. reading book (0.0246)
+      8. playing tennis (0.0236)
+      9. climbing ladder (0.0217)
+     10. juggling balls (0.0193)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 30
+Score gap (bg_score - human_score): -0.0071

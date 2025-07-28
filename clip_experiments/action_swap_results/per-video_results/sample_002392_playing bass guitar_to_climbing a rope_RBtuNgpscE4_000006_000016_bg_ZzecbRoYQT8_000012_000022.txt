@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002392_playing bass guitar_to_climbing a rope_RBtuNgpscE4_000006_000016_bg_ZzecbRoYQT8_000012_000022
+Frame: 000050.jpg
+Human Action Label (Correct): playing bass guitar
+Background Label (Incorrect): climbing a rope
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.1418)
+
+RANKING ANALYSIS:
+  Human Action 'playing bass guitar' ranked: #28/50 (score: 0.0047)
+  Background Action 'climbing a rope' ranked: #18/50 (score: 0.0128)
+
+Top 10 predictions:
+      1. cleaning windows (0.1418)
+      2. driving car (0.1338)
+      3. reading newspaper (0.1287)
+      4. golf driving (0.1064)
+      5. reading book (0.0903)
+      6. playing violin (0.0522)
+      7. writing (0.0276)
+      8. canoeing or kayaking (0.0267)
+      9. opening bottle (0.0247)
+     10. skiing (not slalom or crosscountry) (0.0224)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -10
+Score gap (bg_score - human_score): 0.0081

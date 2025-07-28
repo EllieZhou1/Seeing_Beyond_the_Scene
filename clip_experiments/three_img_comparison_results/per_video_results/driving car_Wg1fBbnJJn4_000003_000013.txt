@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: Wg1fBbnJJn4
+Action: driving car
+Time: 3-13s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 40/50 (score: 0.0012)
+  Top 10 predictions:
+        1. brushing teeth (0.2573)
+        2. eating ice cream (0.0903)
+        3. juggling balls (0.0834)
+        4. sword fighting (0.0702)
+        5. smoking (0.0626)
+        6. opening bottle (0.0596)
+        7. brushing hair (0.0433)
+        8. cleaning windows (0.0302)
+        9. drinking (0.0302)
+       10. eating cake (0.0242)
+
+HUMAN ONLY:
+  Correct action rank: 42/50 (score: 0.0012)
+  Top 10 predictions:
+        1. sword fighting (0.3007)
+        2. juggling balls (0.1600)
+        3. brushing teeth (0.0699)
+        4. tying tie (0.0433)
+        5. smoking (0.0341)
+        6. skipping rope (0.0313)
+        7. deadlifting (0.0261)
+        8. brushing hair (0.0246)
+        9. punching person (boxing) (0.0245)
+       10. eating cake (0.0202)
+
+BACKGROUND ONLY:
+  Correct action rank: 8/50 (score: 0.0045)
+  Top 10 predictions:
+        1. cleaning windows (0.8721)
+        2. surfing water (0.0148)
+        3. sweeping floor (0.0130)
+        4. shooting goal (soccer) (0.0116)
+        5. sword fighting (0.0082)
+        6. juggling soccer ball (0.0059)
+        7. reading newspaper (0.0056)
+    👉  8. driving car (0.0045)
+        9. hitting baseball (0.0039)
+       10. climbing ladder (0.0039)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: -32
+Ranking drop from human to background: -34
+🚨 WARNING: Background ranks higher than human-only!

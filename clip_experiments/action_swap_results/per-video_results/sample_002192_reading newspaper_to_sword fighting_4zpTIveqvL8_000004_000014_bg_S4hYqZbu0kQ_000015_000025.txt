@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002192_reading newspaper_to_sword fighting_4zpTIveqvL8_000004_000014_bg_S4hYqZbu0kQ_000015_000025
+Frame: 000050.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: golf driving (score: 0.8269)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #22/50 (score: 0.0019)
+  Background Action 'sword fighting' ranked: #6/50 (score: 0.0070)
+
+Top 10 predictions:
+      1. golf driving (0.8269)
+      2. driving car (0.0293)
+      3. bowling (0.0285)
+      4. walking the dog (0.0213)
+      5. skiing slalom (0.0143)
+  🏞️  6. sword fighting (0.0070)
+      7. punching person (boxing) (0.0064)
+      8. playing tennis (0.0050)
+      9. shooting goal (soccer) (0.0048)
+     10. opening bottle (0.0048)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -16
+Score gap (bg_score - human_score): 0.0051

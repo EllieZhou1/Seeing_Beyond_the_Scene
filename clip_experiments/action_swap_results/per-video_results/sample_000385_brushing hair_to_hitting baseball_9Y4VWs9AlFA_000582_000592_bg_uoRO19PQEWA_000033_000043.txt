@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000385_brushing hair_to_hitting baseball_9Y4VWs9AlFA_000582_000592_bg_uoRO19PQEWA_000033_000043
+Frame: 000050.jpg
+Human Action Label (Correct): brushing hair
+Background Label (Incorrect): hitting baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.8804)
+
+RANKING ANALYSIS:
+  Human Action 'brushing hair' ranked: #1/50 (score: 0.8804)
+  Background Action 'hitting baseball' ranked: #4/50 (score: 0.0076)
+
+Top 10 predictions:
+  👤  1. brushing hair (0.8804)
+      2. tying tie (0.0373)
+      3. shooting goal (soccer) (0.0156)
+  🏞️  4. hitting baseball (0.0076)
+      5. playing tennis (0.0064)
+      6. archery (0.0052)
+      7. skiing (not slalom or crosscountry) (0.0052)
+      8. opening bottle (0.0034)
+      9. skiing slalom (0.0033)
+     10. clean and jerk (0.0033)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 3
+Score gap (bg_score - human_score): -0.8728
+⚠️  Background action in top 5!
+✅ Human action in top 5

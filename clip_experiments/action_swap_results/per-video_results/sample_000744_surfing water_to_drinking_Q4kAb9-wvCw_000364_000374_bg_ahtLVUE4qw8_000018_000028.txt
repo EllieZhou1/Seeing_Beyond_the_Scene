@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000744_surfing water_to_drinking_Q4kAb9-wvCw_000364_000374_bg_ahtLVUE4qw8_000018_000028
+Frame: 000050.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): drinking
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.1889)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #15/50 (score: 0.0231)
+  Background Action 'drinking' ranked: #7/50 (score: 0.0443)
+
+Top 10 predictions:
+      1. driving car (0.1889)
+      2. juggling soccer ball (0.0895)
+      3. golf driving (0.0717)
+      4. juggling balls (0.0700)
+      5. climbing a rope (0.0613)
+      6. cleaning windows (0.0598)
+  🏞️  7. drinking (0.0443)
+      8. dunking basketball (0.0425)
+      9. catching or throwing baseball (0.0414)
+     10. bowling (0.0300)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -8
+Score gap (bg_score - human_score): 0.0212

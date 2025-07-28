@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: HBFln_FTab4
+Action: writing
+Time: 138-148s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.2387)
+  Top 10 predictions:
+    👉  1. writing (0.2387)
+        2. smoking (0.1048)
+        3. shooting goal (soccer) (0.0806)
+        4. dribbling basketball (0.0717)
+        5. skiing slalom (0.0586)
+        6. sweeping floor (0.0527)
+        7. climbing ladder (0.0508)
+        8. opening bottle (0.0318)
+        9. juggling balls (0.0253)
+       10. punching person (boxing) (0.0247)
+
+HUMAN ONLY:
+  Correct action rank: 12/50 (score: 0.0192)
+  Top 10 predictions:
+        1. juggling soccer ball (0.2058)
+        2. juggling balls (0.1812)
+        3. opening bottle (0.0910)
+        4. punching person (boxing) (0.0514)
+        5. playing violin (0.0456)
+        6. smoking (0.0450)
+        7. climbing a rope (0.0366)
+        8. playing trumpet (0.0318)
+        9. dribbling basketball (0.0293)
+       10. shooting goal (soccer) (0.0218)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.1519)
+  Top 10 predictions:
+        1. brushing hair (0.3354)
+    👉  2. writing (0.1519)
+        3. brushing teeth (0.0902)
+        4. smoking (0.0840)
+        5. sweeping floor (0.0799)
+        6. opening bottle (0.0313)
+        7. climbing ladder (0.0234)
+        8. dribbling basketball (0.0181)
+        9. shooting goal (soccer) (0.0160)
+       10. playing trumpet (0.0136)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 1
+Ranking drop from human to background: -10
+🚨 WARNING: Background ranks higher than human-only!

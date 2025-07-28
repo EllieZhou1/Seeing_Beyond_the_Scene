@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002315_hurdling_to_playing trumpet_HeHaCIdpRdo_000006_000016_bg_jwYikLyqs0k_000002_000012
+Frame: 000050.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.2122)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #27/50 (score: 0.0071)
+  Background Action 'playing trumpet' ranked: #15/50 (score: 0.0182)
+
+Top 10 predictions:
+      1. climbing a rope (0.2122)
+      2. cleaning windows (0.1101)
+      3. sword fighting (0.0803)
+      4. flying kite (0.0631)
+      5. climbing ladder (0.0423)
+      6. dunking basketball (0.0405)
+      7. juggling balls (0.0396)
+      8. surfing water (0.0335)
+      9. juggling soccer ball (0.0304)
+     10. skiing (not slalom or crosscountry) (0.0302)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -12
+Score gap (bg_score - human_score): 0.0110

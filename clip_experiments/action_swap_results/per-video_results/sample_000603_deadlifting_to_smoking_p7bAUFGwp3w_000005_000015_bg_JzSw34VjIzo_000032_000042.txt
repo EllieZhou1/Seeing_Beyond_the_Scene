@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000603_deadlifting_to_smoking_p7bAUFGwp3w_000005_000015_bg_JzSw34VjIzo_000032_000042
+Frame: 000050.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.3204)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #7/50 (score: 0.0311)
+  Background Action 'smoking' ranked: #23/50 (score: 0.0071)
+
+Top 10 predictions:
+      1. climbing ladder (0.3204)
+      2. dunking basketball (0.1119)
+      3. cleaning windows (0.0708)
+      4. climbing a rope (0.0684)
+      5. hurdling (0.0424)
+      6. playing basketball (0.0349)
+  👤  7. deadlifting (0.0311)
+      8. dribbling basketball (0.0305)
+      9. juggling soccer ball (0.0259)
+     10. flying kite (0.0252)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 16
+Score gap (bg_score - human_score): -0.0240

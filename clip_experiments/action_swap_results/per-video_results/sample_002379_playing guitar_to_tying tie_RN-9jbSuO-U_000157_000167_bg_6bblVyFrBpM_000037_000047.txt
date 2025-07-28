@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002379_playing guitar_to_tying tie_RN-9jbSuO-U_000157_000167_bg_6bblVyFrBpM_000037_000047
+Frame: 000050.jpg
+Human Action Label (Correct): playing guitar
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: playing guitar (score: 0.9301)
+
+RANKING ANALYSIS:
+  Human Action 'playing guitar' ranked: #1/50 (score: 0.9301)
+  Background Action 'tying tie' ranked: #11/50 (score: 0.0004)
+
+Top 10 predictions:
+  👤  1. playing guitar (0.9301)
+      2. playing bass guitar (0.0509)
+      3. playing violin (0.0050)
+      4. playing saxophone (0.0045)
+      5. playing accordion (0.0027)
+      6. writing (0.0013)
+      7. opening bottle (0.0013)
+      8. playing trumpet (0.0008)
+      9. climbing a rope (0.0005)
+     10. juggling balls (0.0005)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 10
+Score gap (bg_score - human_score): -0.9297
+✅ Human action in top 5

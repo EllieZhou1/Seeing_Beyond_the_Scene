@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000190_reading book_to_playing basketball_I131OC6fVSk_000019_000029_bg_47xG91EAwgY_000346_000356
+Frame: 000050.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): playing basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.4137)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #45/50 (score: 0.0017)
+  Background Action 'playing basketball' ranked: #30/50 (score: 0.0048)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.4137)
+      2. sword fighting (0.1181)
+      3. hitting baseball (0.0508)
+      4. playing violin (0.0461)
+      5. tying tie (0.0441)
+      6. brushing hair (0.0410)
+      7. climbing a rope (0.0254)
+      8. juggling soccer ball (0.0191)
+      9. juggling balls (0.0163)
+     10. dribbling basketball (0.0149)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -15
+Score gap (bg_score - human_score): 0.0031

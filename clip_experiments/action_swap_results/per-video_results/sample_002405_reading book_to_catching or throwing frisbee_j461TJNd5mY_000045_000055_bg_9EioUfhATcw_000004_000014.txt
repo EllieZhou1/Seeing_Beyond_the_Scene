@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002405_reading book_to_catching or throwing frisbee_j461TJNd5mY_000045_000055_bg_9EioUfhATcw_000004_000014
+Frame: 000050.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): catching or throwing frisbee
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.4409)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #42/50 (score: 0.0000)
+  Background Action 'catching or throwing frisbee' ranked: #7/50 (score: 0.0115)
+
+Top 10 predictions:
+      1. skipping rope (0.4409)
+      2. climbing a rope (0.4205)
+      3. flying kite (0.0393)
+      4. hurdling (0.0191)
+      5. juggling soccer ball (0.0154)
+      6. dribbling basketball (0.0122)
+  🏞️  7. catching or throwing frisbee (0.0115)
+      8. juggling balls (0.0089)
+      9. shooting goal (soccer) (0.0086)
+     10. playing tennis (0.0027)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -35
+Score gap (bg_score - human_score): 0.0115

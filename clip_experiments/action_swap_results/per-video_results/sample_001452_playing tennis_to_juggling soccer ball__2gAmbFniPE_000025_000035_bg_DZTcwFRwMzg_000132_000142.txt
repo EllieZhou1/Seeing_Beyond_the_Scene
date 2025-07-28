@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001452_playing tennis_to_juggling soccer ball__2gAmbFniPE_000025_000035_bg_DZTcwFRwMzg_000132_000142
+Frame: 000050.jpg
+Human Action Label (Correct): playing tennis
+Background Label (Incorrect): juggling soccer ball
+
+CLIP PREDICTIONS:
+  Predicted Label: walking the dog (score: 0.8471)
+
+RANKING ANALYSIS:
+  Human Action 'playing tennis' ranked: #5/50 (score: 0.0089)
+  Background Action 'juggling soccer ball' ranked: #7/50 (score: 0.0085)
+
+Top 10 predictions:
+      1. walking the dog (0.8471)
+      2. dribbling basketball (0.0214)
+      3. playing basketball (0.0201)
+      4. skipping rope (0.0161)
+  👤  5. playing tennis (0.0089)
+      6. shooting basketball (0.0086)
+  🏞️  7. juggling soccer ball (0.0085)
+      8. climbing a rope (0.0070)
+      9. juggling balls (0.0069)
+     10. climbing ladder (0.0065)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 2
+Score gap (bg_score - human_score): -0.0004
+✅ Human action in top 5

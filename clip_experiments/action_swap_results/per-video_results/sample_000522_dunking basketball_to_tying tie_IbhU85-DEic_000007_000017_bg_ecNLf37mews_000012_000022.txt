@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000522_dunking basketball_to_tying tie_IbhU85-DEic_000007_000017_bg_ecNLf37mews_000012_000022
+Frame: 000050.jpg
+Human Action Label (Correct): dunking basketball
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.3362)
+
+RANKING ANALYSIS:
+  Human Action 'dunking basketball' ranked: #21/50 (score: 0.0106)
+  Background Action 'tying tie' ranked: #43/50 (score: 0.0031)
+
+Top 10 predictions:
+      1. cleaning windows (0.3362)
+      2. opening bottle (0.0730)
+      3. climbing a rope (0.0613)
+      4. playing violin (0.0428)
+      5. playing trumpet (0.0380)
+      6. playing accordion (0.0294)
+      7. climbing ladder (0.0281)
+      8. skipping rope (0.0272)
+      9. playing piano (0.0232)
+     10. playing saxophone (0.0225)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 22
+Score gap (bg_score - human_score): -0.0075

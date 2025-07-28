@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000583_skiing (not slalom or crosscountry)_to_flying kite_fRiYQEVMcEc_000000_000010_bg_adkK4b6wN1Y_000009_000019
+Frame: 000050.jpg
+Human Action Label (Correct): skiing (not slalom or crosscountry)
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: hitting baseball (score: 0.4422)
+
+RANKING ANALYSIS:
+  Human Action 'skiing (not slalom or crosscountry)' ranked: #29/50 (score: 0.0001)
+  Background Action 'flying kite' ranked: #15/50 (score: 0.0031)
+
+Top 10 predictions:
+      1. hitting baseball (0.4422)
+      2. playing basketball (0.1126)
+      3. catching or throwing frisbee (0.0961)
+      4. juggling soccer ball (0.0921)
+      5. shooting goal (soccer) (0.0616)
+      6. catching or throwing baseball (0.0534)
+      7. dribbling basketball (0.0319)
+      8. shooting basketball (0.0314)
+      9. playing tennis (0.0176)
+     10. playing volleyball (0.0157)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -14
+Score gap (bg_score - human_score): 0.0030

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001057_flying kite_to_hitting baseball_07xOT83TIG4_000040_000050_bg_3USSmzO001k_000058_000068
+Frame: 000050.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): hitting baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.3736)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #17/50 (score: 0.0005)
+  Background Action 'hitting baseball' ranked: #14/50 (score: 0.0011)
+
+Top 10 predictions:
+      1. shooting goal (soccer) (0.3736)
+      2. juggling soccer ball (0.3169)
+      3. dribbling basketball (0.1849)
+      4. shooting basketball (0.0560)
+      5. juggling balls (0.0250)
+      6. dunking basketball (0.0099)
+      7. playing volleyball (0.0082)
+      8. playing basketball (0.0073)
+      9. skipping rope (0.0069)
+     10. catching or throwing baseball (0.0032)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -3
+Score gap (bg_score - human_score): 0.0006

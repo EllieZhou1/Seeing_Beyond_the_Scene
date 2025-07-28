@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002189_reading book_to_skiing slalom_XoO1uEVNgjM_000058_000068_bg_wvZmdTr4-Ag_000669_000679
+Frame: 000050.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): skiing slalom
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.1570)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #3/50 (score: 0.0984)
+  Background Action 'skiing slalom' ranked: #22/50 (score: 0.0095)
+
+Top 10 predictions:
+      1. skipping rope (0.1570)
+      2. brushing hair (0.0993)
+  👤  3. reading book (0.0984)
+      4. reading newspaper (0.0727)
+      5. dribbling basketball (0.0700)
+      6. flying kite (0.0682)
+      7. hurdling (0.0421)
+      8. playing piano (0.0410)
+      9. climbing ladder (0.0326)
+     10. brushing teeth (0.0305)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 19
+Score gap (bg_score - human_score): -0.0889
+✅ Human action in top 5

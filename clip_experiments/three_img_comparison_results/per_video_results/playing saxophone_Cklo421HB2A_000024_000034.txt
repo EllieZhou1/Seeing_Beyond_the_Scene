@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: Cklo421HB2A
+Action: playing saxophone
+Time: 24-34s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.5252)
+  Top 10 predictions:
+    👉  1. playing saxophone (0.5252)
+        2. playing trumpet (0.3717)
+        3. playing guitar (0.0275)
+        4. reading book (0.0209)
+        5. writing (0.0153)
+        6. playing violin (0.0113)
+        7. playing accordion (0.0101)
+        8. playing piano (0.0085)
+        9. playing bass guitar (0.0074)
+       10. reading newspaper (0.0014)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.8040)
+  Top 10 predictions:
+    👉  1. playing saxophone (0.8040)
+        2. playing trumpet (0.1142)
+        3. opening bottle (0.0318)
+        4. playing guitar (0.0098)
+        5. playing accordion (0.0085)
+        6. punching person (boxing) (0.0058)
+        7. playing violin (0.0056)
+        8. smoking (0.0029)
+        9. drinking (0.0024)
+       10. juggling balls (0.0017)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.3854)
+  Top 10 predictions:
+    👉  1. playing saxophone (0.3854)
+        2. writing (0.1341)
+        3. reading book (0.1178)
+        4. playing trumpet (0.1113)
+        5. playing piano (0.1065)
+        6. playing guitar (0.0441)
+        7. playing accordion (0.0397)
+        8. playing violin (0.0224)
+        9. playing bass guitar (0.0106)
+       10. reading newspaper (0.0057)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: 0

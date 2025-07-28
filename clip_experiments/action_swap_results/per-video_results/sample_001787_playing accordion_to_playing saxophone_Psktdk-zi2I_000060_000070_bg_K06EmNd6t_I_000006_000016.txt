@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001787_playing accordion_to_playing saxophone_Psktdk-zi2I_000060_000070_bg_K06EmNd6t_I_000006_000016
+Frame: 000050.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): playing saxophone
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.2585)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #1/50 (score: 0.2585)
+  Background Action 'playing saxophone' ranked: #5/50 (score: 0.0449)
+
+Top 10 predictions:
+  👤  1. playing accordion (0.2585)
+      2. cleaning windows (0.1207)
+      3. climbing a rope (0.1180)
+      4. juggling soccer ball (0.0550)
+  🏞️  5. playing saxophone (0.0449)
+      6. skiing slalom (0.0341)
+      7. sweeping floor (0.0284)
+      8. juggling balls (0.0279)
+      9. skipping rope (0.0258)
+     10. playing trumpet (0.0195)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 4
+Score gap (bg_score - human_score): -0.2136
+⚠️  Background action in top 5!
+✅ Human action in top 5

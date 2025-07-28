@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001513_golf driving_to_tying tie_jr3uNxx0zT4_000004_000014_bg_7Mtprt8_bqM_000060_000070
+Frame: 000050.jpg
+Human Action Label (Correct): golf driving
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.6722)
+
+RANKING ANALYSIS:
+  Human Action 'golf driving' ranked: #29/50 (score: 0.0015)
+  Background Action 'tying tie' ranked: #41/50 (score: 0.0003)
+
+Top 10 predictions:
+      1. playing accordion (0.6722)
+      2. juggling balls (0.0801)
+      3. playing violin (0.0567)
+      4. playing saxophone (0.0340)
+      5. juggling soccer ball (0.0279)
+      6. sweeping floor (0.0187)
+      7. playing bass guitar (0.0160)
+      8. skipping rope (0.0137)
+      9. playing trumpet (0.0102)
+     10. playing piano (0.0088)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 12
+Score gap (bg_score - human_score): -0.0012

@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001875_punching person (boxing)_to_golf driving_JosqyNGpXfs_000208_000218_bg_f3XxDgrh8_M_000012_000022
+Frame: 000050.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.3325)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #5/50 (score: 0.0377)
+  Background Action 'golf driving' ranked: #2/50 (score: 0.2400)
+
+Top 10 predictions:
+      1. sword fighting (0.3325)
+  🏞️  2. golf driving (0.2400)
+      3. hitting baseball (0.0665)
+      4. juggling balls (0.0504)
+  👤  5. punching person (boxing) (0.0377)
+      6. dunking basketball (0.0331)
+      7. playing tennis (0.0221)
+      8. bowling (0.0207)
+      9. dribbling basketball (0.0175)
+     10. catching or throwing frisbee (0.0173)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -3
+Score gap (bg_score - human_score): 0.2023
+⚠️  Background action in top 5!
+✅ Human action in top 5

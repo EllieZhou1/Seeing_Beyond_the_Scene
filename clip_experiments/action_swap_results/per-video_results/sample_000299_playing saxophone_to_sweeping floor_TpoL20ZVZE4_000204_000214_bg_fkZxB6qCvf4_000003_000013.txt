@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000299_playing saxophone_to_sweeping floor_TpoL20ZVZE4_000204_000214_bg_fkZxB6qCvf4_000003_000013
+Frame: 000050.jpg
+Human Action Label (Correct): playing saxophone
+Background Label (Incorrect): sweeping floor
+
+CLIP PREDICTIONS:
+  Predicted Label: sweeping floor (score: 0.6063)
+
+RANKING ANALYSIS:
+  Human Action 'playing saxophone' ranked: #10/50 (score: 0.0188)
+  Background Action 'sweeping floor' ranked: #1/50 (score: 0.6063)
+
+Top 10 predictions:
+  🏞️  1. sweeping floor (0.6063)
+      2. skipping rope (0.0390)
+      3. cleaning windows (0.0366)
+      4. punching person (boxing) (0.0318)
+      5. playing piano (0.0295)
+      6. playing accordion (0.0216)
+      7. shooting goal (soccer) (0.0209)
+      8. playing guitar (0.0196)
+      9. playing violin (0.0190)
+  👤 10. playing saxophone (0.0188)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -9
+Score gap (bg_score - human_score): 0.5876
+⚠️  Background action in top 5!

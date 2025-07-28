@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001341_tying tie_to_skiing slalom_6ZvmpZzG2-I_000052_000062_bg_qDkeQe8eaak_000015_000025
+Frame: 000050.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): skiing slalom
+
+CLIP PREDICTIONS:
+  Predicted Label: tying tie (score: 0.4420)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #1/50 (score: 0.4420)
+  Background Action 'skiing slalom' ranked: #29/50 (score: 0.0012)
+
+Top 10 predictions:
+  👤  1. tying tie (0.4420)
+      2. playing accordion (0.2036)
+      3. opening bottle (0.1815)
+      4. brushing hair (0.0252)
+      5. playing saxophone (0.0183)
+      6. playing trumpet (0.0182)
+      7. smoking (0.0159)
+      8. reading book (0.0116)
+      9. playing violin (0.0095)
+     10. brushing teeth (0.0095)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 28
+Score gap (bg_score - human_score): -0.4408
+✅ Human action in top 5

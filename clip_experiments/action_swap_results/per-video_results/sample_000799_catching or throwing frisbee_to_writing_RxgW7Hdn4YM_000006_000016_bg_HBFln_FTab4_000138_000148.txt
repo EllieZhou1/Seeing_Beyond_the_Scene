@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000799_catching or throwing frisbee_to_writing_RxgW7Hdn4YM_000006_000016_bg_HBFln_FTab4_000138_000148
+Frame: 000050.jpg
+Human Action Label (Correct): catching or throwing frisbee
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.3660)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing frisbee' ranked: #41/50 (score: 0.0011)
+  Background Action 'writing' ranked: #2/50 (score: 0.1289)
+
+Top 10 predictions:
+      1. brushing hair (0.3660)
+  🏞️  2. writing (0.1289)
+      3. brushing teeth (0.1130)
+      4. sweeping floor (0.0812)
+      5. smoking (0.0637)
+      6. opening bottle (0.0294)
+      7. climbing ladder (0.0199)
+      8. dribbling basketball (0.0172)
+      9. playing trumpet (0.0149)
+     10. skipping rope (0.0128)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -39
+Score gap (bg_score - human_score): 0.1278
+⚠️  Background action in top 5!

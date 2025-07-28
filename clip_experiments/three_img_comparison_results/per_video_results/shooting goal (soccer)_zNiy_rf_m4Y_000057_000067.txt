@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: zNiy_rf_m4Y
+Action: shooting goal (soccer)
+Time: 57-67s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.1681)
+  Top 10 predictions:
+        1. juggling soccer ball (0.2876)
+    👉  2. shooting goal (soccer) (0.1681)
+        3. punching person (boxing) (0.1611)
+        4. climbing a rope (0.0751)
+        5. climbing ladder (0.0460)
+        6. opening bottle (0.0357)
+        7. catching or throwing baseball (0.0253)
+        8. juggling balls (0.0219)
+        9. dribbling basketball (0.0171)
+       10. sword fighting (0.0140)
+
+HUMAN ONLY:
+  Correct action rank: 7/50 (score: 0.0307)
+  Top 10 predictions:
+        1. punching person (boxing) (0.2714)
+        2. juggling soccer ball (0.1219)
+        3. opening bottle (0.0980)
+        4. climbing a rope (0.0924)
+        5. tying tie (0.0837)
+        6. playing piano (0.0407)
+    👉  7. shooting goal (soccer) (0.0307)
+        8. climbing ladder (0.0297)
+        9. dribbling basketball (0.0211)
+       10. juggling balls (0.0210)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.2026)
+  Top 10 predictions:
+    👉  1. shooting goal (soccer) (0.2026)
+        2. climbing ladder (0.1465)
+        3. shooting basketball (0.0716)
+        4. catching or throwing baseball (0.0602)
+        5. cleaning windows (0.0574)
+        6. hitting baseball (0.0447)
+        7. dunking basketball (0.0383)
+        8. playing basketball (0.0324)
+        9. bowling (0.0278)
+       10. punching person (boxing) (0.0275)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -1
+Ranking drop from human to background: -6
+🚨 WARNING: Background ranks higher than human-only!

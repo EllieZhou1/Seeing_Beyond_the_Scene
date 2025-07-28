@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: kccasy49Chg
+Action: playing volleyball
+Time: 31-41s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.9723)
+  Top 10 predictions:
+    👉  1. playing volleyball (0.9723)
+        2. catching or throwing frisbee (0.0047)
+        3. juggling soccer ball (0.0041)
+        4. juggling balls (0.0036)
+        5. shooting goal (soccer) (0.0035)
+        6. hurdling (0.0026)
+        7. sweeping floor (0.0016)
+        8. dribbling basketball (0.0013)
+        9. dunking basketball (0.0010)
+       10. shooting basketball (0.0008)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.7147)
+  Top 10 predictions:
+    👉  1. playing volleyball (0.7147)
+        2. skipping rope (0.0669)
+        3. dribbling basketball (0.0555)
+        4. playing basketball (0.0240)
+        5. hurdling (0.0181)
+        6. juggling soccer ball (0.0167)
+        7. dunking basketball (0.0153)
+        8. clean and jerk (0.0146)
+        9. deadlifting (0.0137)
+       10. shooting goal (soccer) (0.0134)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.9064)
+  Top 10 predictions:
+    👉  1. playing volleyball (0.9064)
+        2. juggling soccer ball (0.0108)
+        3. sweeping floor (0.0108)
+        4. shooting goal (soccer) (0.0103)
+        5. juggling balls (0.0100)
+        6. shooting basketball (0.0084)
+        7. dunking basketball (0.0072)
+        8. climbing ladder (0.0071)
+        9. dribbling basketball (0.0053)
+       10. catching or throwing frisbee (0.0039)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: 0

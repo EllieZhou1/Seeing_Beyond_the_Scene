@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000693_canoeing or kayaking_to_tying tie_mA-lWZvha1M_000187_000197_bg_iiWzd1Y9758_000102_000112
+Frame: 000050.jpg
+Human Action Label (Correct): canoeing or kayaking
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: tying tie (score: 0.9990)
+
+RANKING ANALYSIS:
+  Human Action 'canoeing or kayaking' ranked: #48/50 (score: 0.0000)
+  Background Action 'tying tie' ranked: #1/50 (score: 0.9990)
+
+Top 10 predictions:
+  🏞️  1. tying tie (0.9990)
+      2. brushing hair (0.0003)
+      3. climbing a rope (0.0002)
+      4. brushing teeth (0.0001)
+      5. surfing water (0.0001)
+      6. hitting baseball (0.0000)
+      7. skiing (not slalom or crosscountry) (0.0000)
+      8. sword fighting (0.0000)
+      9. playing trumpet (0.0000)
+     10. deadlifting (0.0000)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -47
+Score gap (bg_score - human_score): 0.9990
+⚠️  Background action in top 5!

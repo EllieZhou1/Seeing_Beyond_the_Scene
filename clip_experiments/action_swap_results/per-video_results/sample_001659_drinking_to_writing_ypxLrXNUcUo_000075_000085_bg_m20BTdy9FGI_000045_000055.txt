@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001659_drinking_to_writing_ypxLrXNUcUo_000075_000085_bg_m20BTdy9FGI_000045_000055
+Frame: 000050.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.1198)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #25/50 (score: 0.0069)
+  Background Action 'writing' ranked: #28/50 (score: 0.0060)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.1198)
+      2. golf driving (0.0913)
+      3. smoking (0.0880)
+      4. catching or throwing baseball (0.0860)
+      5. sweeping floor (0.0778)
+      6. hitting baseball (0.0706)
+      7. cleaning windows (0.0702)
+      8. juggling balls (0.0500)
+      9. sword fighting (0.0481)
+     10. bowling (0.0359)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 3
+Score gap (bg_score - human_score): -0.0009

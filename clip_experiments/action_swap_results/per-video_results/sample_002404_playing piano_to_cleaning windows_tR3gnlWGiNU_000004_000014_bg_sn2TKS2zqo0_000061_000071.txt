@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002404_playing piano_to_cleaning windows_tR3gnlWGiNU_000004_000014_bg_sn2TKS2zqo0_000061_000071
+Frame: 000050.jpg
+Human Action Label (Correct): playing piano
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: playing piano (score: 0.6871)
+
+RANKING ANALYSIS:
+  Human Action 'playing piano' ranked: #1/50 (score: 0.6871)
+  Background Action 'cleaning windows' ranked: #15/50 (score: 0.0056)
+
+Top 10 predictions:
+  👤  1. playing piano (0.6871)
+      2. playing violin (0.1120)
+      3. juggling soccer ball (0.0255)
+      4. playing bass guitar (0.0252)
+      5. playing accordion (0.0200)
+      6. eating cake (0.0184)
+      7. playing guitar (0.0163)
+      8. playing saxophone (0.0156)
+      9. playing trumpet (0.0129)
+     10. juggling balls (0.0099)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 14
+Score gap (bg_score - human_score): -0.6815
+✅ Human action in top 5

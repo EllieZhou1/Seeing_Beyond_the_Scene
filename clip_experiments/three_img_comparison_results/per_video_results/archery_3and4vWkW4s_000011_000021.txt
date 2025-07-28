@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 3and4vWkW4s
+Action: archery
+Time: 11-21s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.9862)
+  Top 10 predictions:
+    👉  1. archery (0.9862)
+        2. shooting goal (soccer) (0.0045)
+        3. skiing slalom (0.0022)
+        4. flying kite (0.0017)
+        5. golf driving (0.0011)
+        6. skiing (not slalom or crosscountry) (0.0009)
+        7. shooting basketball (0.0008)
+        8. sword fighting (0.0004)
+        9. playing violin (0.0003)
+       10. playing tennis (0.0002)
+
+HUMAN ONLY:
+  Correct action rank: 10/50 (score: 0.0301)
+  Top 10 predictions:
+        1. playing bass guitar (0.1258)
+        2. playing trumpet (0.0878)
+        3. playing accordion (0.0852)
+        4. skiing slalom (0.0586)
+        5. playing saxophone (0.0584)
+        6. smoking (0.0510)
+        7. hitting baseball (0.0425)
+        8. climbing ladder (0.0413)
+        9. playing violin (0.0375)
+    👉 10. archery (0.0301)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.7659)
+  Top 10 predictions:
+    👉  1. archery (0.7659)
+        2. flying kite (0.1726)
+        3. shooting goal (soccer) (0.0522)
+        4. skiing slalom (0.0046)
+        5. catching or throwing frisbee (0.0010)
+        6. skiing (not slalom or crosscountry) (0.0008)
+        7. shooting basketball (0.0006)
+        8. catching or throwing baseball (0.0005)
+        9. hurdling (0.0004)
+       10. hitting baseball (0.0003)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -9
+🚨 WARNING: Background ranks higher than human-only!

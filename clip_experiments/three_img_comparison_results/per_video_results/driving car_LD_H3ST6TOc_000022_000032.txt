@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: LD_H3ST6TOc
+Action: driving car
+Time: 22-32s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 18/50 (score: 0.0101)
+  Top 10 predictions:
+        1. hitting baseball (0.2283)
+        2. golf driving (0.0913)
+        3. playing basketball (0.0858)
+        4. dribbling basketball (0.0744)
+        5. writing (0.0699)
+        6. playing tennis (0.0585)
+        7. shooting basketball (0.0467)
+        8. walking the dog (0.0371)
+        9. dunking basketball (0.0349)
+       10. juggling soccer ball (0.0266)
+
+HUMAN ONLY:
+  Correct action rank: 39/50 (score: 0.0040)
+  Top 10 predictions:
+        1. hitting baseball (0.1203)
+        2. writing (0.1020)
+        3. dribbling basketball (0.0877)
+        4. playing accordion (0.0845)
+        5. juggling balls (0.0675)
+        6. juggling soccer ball (0.0589)
+        7. shooting basketball (0.0452)
+        8. playing basketball (0.0402)
+        9. playing tennis (0.0342)
+       10. catching or throwing baseball (0.0341)
+
+BACKGROUND ONLY:
+  Correct action rank: 12/50 (score: 0.0191)
+  Top 10 predictions:
+        1. dribbling basketball (0.1715)
+        2. surfing water (0.1387)
+        3. dunking basketball (0.1044)
+        4. playing basketball (0.0947)
+        5. skipping rope (0.0814)
+        6. golf driving (0.0730)
+        7. juggling soccer ball (0.0500)
+        8. shooting basketball (0.0302)
+        9. playing tennis (0.0262)
+       10. hitting baseball (0.0249)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: -6
+Ranking drop from human to background: -27
+🚨 WARNING: Background ranks higher than human-only!

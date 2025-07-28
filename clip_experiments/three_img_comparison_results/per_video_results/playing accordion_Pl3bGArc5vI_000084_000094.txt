@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: Pl3bGArc5vI
+Action: playing accordion
+Time: 84-94s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.0831)
+  Top 10 predictions:
+        1. reading newspaper (0.6632)
+    👉  2. playing accordion (0.0831)
+        3. reading book (0.0690)
+        4. playing guitar (0.0320)
+        5. playing trumpet (0.0316)
+        6. writing (0.0220)
+        7. playing saxophone (0.0178)
+        8. playing violin (0.0110)
+        9. driving car (0.0106)
+       10. playing piano (0.0103)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.4455)
+  Top 10 predictions:
+    👉  1. playing accordion (0.4455)
+        2. playing piano (0.3919)
+        3. playing saxophone (0.0316)
+        4. playing trumpet (0.0313)
+        5. playing violin (0.0212)
+        6. writing (0.0139)
+        7. playing guitar (0.0107)
+        8. punching person (boxing) (0.0071)
+        9. reading newspaper (0.0063)
+       10. playing bass guitar (0.0059)
+
+BACKGROUND ONLY:
+  Correct action rank: 7/50 (score: 0.0152)
+  Top 10 predictions:
+        1. driving car (0.3759)
+        2. reading newspaper (0.2000)
+        3. reading book (0.1328)
+        4. golf driving (0.1048)
+        5. writing (0.0275)
+        6. cleaning windows (0.0255)
+    👉  7. playing accordion (0.0152)
+        8. playing saxophone (0.0124)
+        9. flying kite (0.0103)
+       10. playing piano (0.0097)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 5
+Ranking drop from human to background: 6

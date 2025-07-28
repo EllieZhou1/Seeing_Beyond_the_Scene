@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001526_tying tie_to_opening bottle_iYHlztQWOA0_000050_000060_bg_-4szNHl4P0c_000012_000022
+Frame: 000050.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.8231)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #2/50 (score: 0.0761)
+  Background Action 'opening bottle' ranked: #4/50 (score: 0.0113)
+
+Top 10 predictions:
+      1. climbing a rope (0.8231)
+  👤  2. tying tie (0.0761)
+      3. skipping rope (0.0483)
+  🏞️  4. opening bottle (0.0113)
+      5. cleaning windows (0.0045)
+      6. brushing hair (0.0044)
+      7. juggling soccer ball (0.0043)
+      8. juggling balls (0.0038)
+      9. hitting baseball (0.0029)
+     10. clean and jerk (0.0027)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 2
+Score gap (bg_score - human_score): -0.0648
+⚠️  Background action in top 5!
+✅ Human action in top 5

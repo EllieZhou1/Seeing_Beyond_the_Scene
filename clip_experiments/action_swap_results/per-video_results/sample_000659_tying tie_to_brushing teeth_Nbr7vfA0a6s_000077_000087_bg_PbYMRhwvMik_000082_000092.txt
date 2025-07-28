@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000659_tying tie_to_brushing teeth_Nbr7vfA0a6s_000077_000087_bg_PbYMRhwvMik_000082_000092
+Frame: 000050.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): brushing teeth
+
+CLIP PREDICTIONS:
+  Predicted Label: tying tie (score: 0.9862)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #1/50 (score: 0.9862)
+  Background Action 'brushing teeth' ranked: #6/50 (score: 0.0009)
+
+Top 10 predictions:
+  👤  1. tying tie (0.9862)
+      2. juggling balls (0.0027)
+      3. playing trumpet (0.0021)
+      4. juggling soccer ball (0.0016)
+      5. punching person (boxing) (0.0010)
+  🏞️  6. brushing teeth (0.0009)
+      7. playing accordion (0.0005)
+      8. eating cake (0.0004)
+      9. playing saxophone (0.0004)
+     10. drinking (0.0004)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 5
+Score gap (bg_score - human_score): -0.9853
+✅ Human action in top 5

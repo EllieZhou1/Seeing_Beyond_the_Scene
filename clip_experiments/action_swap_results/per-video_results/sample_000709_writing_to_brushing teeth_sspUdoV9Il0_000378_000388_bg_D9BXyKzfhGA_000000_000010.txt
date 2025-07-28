@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000709_writing_to_brushing teeth_sspUdoV9Il0_000378_000388_bg_D9BXyKzfhGA_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): writing
+Background Label (Incorrect): brushing teeth
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.2822)
+
+RANKING ANALYSIS:
+  Human Action 'writing' ranked: #49/50 (score: 0.0003)
+  Background Action 'brushing teeth' ranked: #2/50 (score: 0.1459)
+
+Top 10 predictions:
+      1. surfing water (0.2822)
+  🏞️  2. brushing teeth (0.1459)
+      3. juggling soccer ball (0.0918)
+      4. juggling balls (0.0768)
+      5. dribbling basketball (0.0545)
+      6. eating cake (0.0343)
+      7. eating ice cream (0.0325)
+      8. skipping rope (0.0320)
+      9. opening bottle (0.0289)
+     10. sweeping floor (0.0261)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -47
+Score gap (bg_score - human_score): 0.1456
+⚠️  Background action in top 5!

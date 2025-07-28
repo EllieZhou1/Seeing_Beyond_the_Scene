@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001585_shooting goal (soccer)_to_flying kite_lI9_x10EdY8_000002_000012_bg_skexFUHz3_0_000026_000036
+Frame: 000050.jpg
+Human Action Label (Correct): shooting goal (soccer)
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.2822)
+
+RANKING ANALYSIS:
+  Human Action 'shooting goal (soccer)' ranked: #5/50 (score: 0.0714)
+  Background Action 'flying kite' ranked: #8/50 (score: 0.0357)
+
+Top 10 predictions:
+      1. surfing water (0.2822)
+      2. walking the dog (0.1354)
+      3. cleaning windows (0.0801)
+      4. sweeping floor (0.0769)
+  👤  5. shooting goal (soccer) (0.0714)
+      6. juggling soccer ball (0.0403)
+      7. catching or throwing frisbee (0.0391)
+  🏞️  8. flying kite (0.0357)
+      9. playing saxophone (0.0281)
+     10. playing tennis (0.0192)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 3
+Score gap (bg_score - human_score): -0.0357
+✅ Human action in top 5

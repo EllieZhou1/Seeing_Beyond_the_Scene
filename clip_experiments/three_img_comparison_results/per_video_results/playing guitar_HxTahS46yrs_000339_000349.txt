@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: HxTahS46yrs
+Action: playing guitar
+Time: 339-349s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 13/50 (score: 0.0208)
+  Top 10 predictions:
+        1. opening bottle (0.2141)
+        2. punching person (boxing) (0.1376)
+        3. juggling balls (0.0626)
+        4. brushing hair (0.0508)
+        5. playing violin (0.0484)
+        6. skiing slalom (0.0478)
+        7. sword fighting (0.0418)
+        8. clean and jerk (0.0321)
+        9. juggling soccer ball (0.0315)
+       10. playing bass guitar (0.0312)
+
+HUMAN ONLY:
+  Correct action rank: 4/50 (score: 0.0464)
+  Top 10 predictions:
+        1. punching person (boxing) (0.5206)
+        2. clean and jerk (0.0651)
+        3. deadlifting (0.0509)
+    👉  4. playing guitar (0.0464)
+        5. playing violin (0.0333)
+        6. hitting baseball (0.0317)
+        7. climbing a rope (0.0269)
+        8. sword fighting (0.0213)
+        9. opening bottle (0.0183)
+       10. skipping rope (0.0181)
+
+BACKGROUND ONLY:
+  Correct action rank: 43/50 (score: 0.0017)
+  Top 10 predictions:
+        1. punching person (boxing) (0.1517)
+        2. opening bottle (0.1352)
+        3. cleaning windows (0.1035)
+        4. juggling soccer ball (0.0865)
+        5. catching or throwing baseball (0.0498)
+        6. shooting goal (soccer) (0.0477)
+        7. juggling balls (0.0414)
+        8. dribbling basketball (0.0318)
+        9. playing accordion (0.0304)
+       10. eating cake (0.0253)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 30
+Ranking drop from human to background: 39

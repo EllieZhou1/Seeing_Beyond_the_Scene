@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001277_hurdling_to_deadlifting_e9uK5NIR8z4_000003_000013_bg_oyN6ldlYUD8_000032_000042
+Frame: 000050.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.2772)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #4/50 (score: 0.0562)
+  Background Action 'deadlifting' ranked: #11/50 (score: 0.0149)
+
+Top 10 predictions:
+      1. surfing water (0.2772)
+      2. driving car (0.1510)
+      3. bowling (0.1506)
+  👤  4. hurdling (0.0562)
+      5. cleaning windows (0.0470)
+      6. skiing slalom (0.0379)
+      7. canoeing or kayaking (0.0296)
+      8. dribbling basketball (0.0188)
+      9. golf driving (0.0168)
+     10. skiing (not slalom or crosscountry) (0.0163)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 7
+Score gap (bg_score - human_score): -0.0414
+✅ Human action in top 5

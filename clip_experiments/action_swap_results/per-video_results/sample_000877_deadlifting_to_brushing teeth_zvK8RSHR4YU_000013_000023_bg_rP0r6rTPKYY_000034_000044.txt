@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000877_deadlifting_to_brushing teeth_zvK8RSHR4YU_000013_000023_bg_rP0r6rTPKYY_000034_000044
+Frame: 000050.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): brushing teeth
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.4351)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #18/50 (score: 0.0087)
+  Background Action 'brushing teeth' ranked: #26/50 (score: 0.0024)
+
+Top 10 predictions:
+      1. climbing ladder (0.4351)
+      2. punching person (boxing) (0.1212)
+      3. dunking basketball (0.0855)
+      4. sweeping floor (0.0395)
+      5. cleaning windows (0.0385)
+      6. hurdling (0.0349)
+      7. climbing a rope (0.0323)
+      8. juggling soccer ball (0.0277)
+      9. playing basketball (0.0256)
+     10. juggling balls (0.0177)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 8
+Score gap (bg_score - human_score): -0.0063

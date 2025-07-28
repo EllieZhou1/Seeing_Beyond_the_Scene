@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001372_playing piano_to_deadlifting_6eD0pATYoIY_000008_000018_bg_ZnAx8TRZ0NY_000002_000012
+Frame: 000050.jpg
+Human Action Label (Correct): playing piano
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: clean and jerk (score: 0.7092)
+
+RANKING ANALYSIS:
+  Human Action 'playing piano' ranked: #36/50 (score: 0.0000)
+  Background Action 'deadlifting' ranked: #2/50 (score: 0.2655)
+
+Top 10 predictions:
+      1. clean and jerk (0.7092)
+  🏞️  2. deadlifting (0.2655)
+      3. sword fighting (0.0076)
+      4. hurdling (0.0055)
+      5. archery (0.0037)
+      6. skipping rope (0.0019)
+      7. juggling balls (0.0009)
+      8. sweeping floor (0.0007)
+      9. bowling (0.0006)
+     10. playing trumpet (0.0005)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -34
+Score gap (bg_score - human_score): 0.2655
+⚠️  Background action in top 5!

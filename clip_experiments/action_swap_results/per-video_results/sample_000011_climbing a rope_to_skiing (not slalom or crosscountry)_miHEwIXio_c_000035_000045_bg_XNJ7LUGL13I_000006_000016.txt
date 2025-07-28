@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000011_climbing a rope_to_skiing (not slalom or crosscountry)_miHEwIXio_c_000035_000045_bg_XNJ7LUGL13I_000006_000016
+Frame: 000050.jpg
+Human Action Label (Correct): climbing a rope
+Background Label (Incorrect): skiing (not slalom or crosscountry)
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing (not slalom or crosscountry) (score: 0.3624)
+
+RANKING ANALYSIS:
+  Human Action 'climbing a rope' ranked: #3/50 (score: 0.2708)
+  Background Action 'skiing (not slalom or crosscountry)' ranked: #1/50 (score: 0.3624)
+
+Top 10 predictions:
+  🏞️  1. skiing (not slalom or crosscountry) (0.3624)
+      2. skiing slalom (0.3391)
+  👤  3. climbing a rope (0.2708)
+      4. climbing ladder (0.0226)
+      5. flying kite (0.0019)
+      6. hurdling (0.0018)
+      7. skipping rope (0.0004)
+      8. tying tie (0.0002)
+      9. clean and jerk (0.0001)
+     10. opening bottle (0.0001)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.0916
+⚠️  Background action in top 5!
+✅ Human action in top 5

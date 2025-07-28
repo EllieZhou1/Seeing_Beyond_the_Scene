@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002326_drinking_to_punching person (boxing)_baZKgZy9wdI_000035_000045_bg_BKKZwGtb0HQ_000140_000150
+Frame: 000050.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing teeth (score: 0.5551)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #16/50 (score: 0.0017)
+  Background Action 'punching person (boxing)' ranked: #7/50 (score: 0.0035)
+
+Top 10 predictions:
+      1. brushing teeth (0.5551)
+      2. brushing hair (0.3566)
+      3. opening bottle (0.0241)
+      4. eating cake (0.0132)
+      5. eating ice cream (0.0063)
+      6. playing accordion (0.0055)
+  🏞️  7. punching person (boxing) (0.0035)
+      8. juggling balls (0.0034)
+      9. juggling soccer ball (0.0032)
+     10. climbing ladder (0.0029)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -9
+Score gap (bg_score - human_score): 0.0018

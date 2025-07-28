@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000648_archery_to_driving car_xrAuik7Wxns_000036_000046_bg_CLuayLlBOEY_000064_000074
+Frame: 000050.jpg
+Human Action Label (Correct): archery
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.4280)
+
+RANKING ANALYSIS:
+  Human Action 'archery' ranked: #38/50 (score: 0.0005)
+  Background Action 'driving car' ranked: #33/50 (score: 0.0010)
+
+Top 10 predictions:
+      1. climbing ladder (0.4280)
+      2. punching person (boxing) (0.1851)
+      3. hurdling (0.1049)
+      4. reading newspaper (0.0391)
+      5. dribbling basketball (0.0360)
+      6. climbing a rope (0.0223)
+      7. cleaning windows (0.0210)
+      8. clean and jerk (0.0191)
+      9. bowling (0.0190)
+     10. tying tie (0.0174)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -5
+Score gap (bg_score - human_score): 0.0005

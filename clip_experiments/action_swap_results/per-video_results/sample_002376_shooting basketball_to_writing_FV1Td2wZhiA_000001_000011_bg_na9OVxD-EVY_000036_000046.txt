@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002376_shooting basketball_to_writing_FV1Td2wZhiA_000001_000011_bg_na9OVxD-EVY_000036_000046
+Frame: 000050.jpg
+Human Action Label (Correct): shooting basketball
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: playing saxophone (score: 0.1384)
+
+RANKING ANALYSIS:
+  Human Action 'shooting basketball' ranked: #34/50 (score: 0.0054)
+  Background Action 'writing' ranked: #7/50 (score: 0.0397)
+
+Top 10 predictions:
+      1. playing saxophone (0.1384)
+      2. hurdling (0.0917)
+      3. cleaning windows (0.0835)
+      4. opening bottle (0.0573)
+      5. playing piano (0.0531)
+      6. skiing slalom (0.0419)
+  🏞️  7. writing (0.0397)
+      8. smoking (0.0324)
+      9. climbing ladder (0.0312)
+     10. eating cake (0.0276)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -27
+Score gap (bg_score - human_score): 0.0343

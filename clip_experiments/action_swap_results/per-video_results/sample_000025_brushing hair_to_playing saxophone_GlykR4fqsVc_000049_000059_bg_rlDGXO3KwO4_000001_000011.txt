@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000025_brushing hair_to_playing saxophone_GlykR4fqsVc_000049_000059_bg_rlDGXO3KwO4_000001_000011
+Frame: 000050.jpg
+Human Action Label (Correct): brushing hair
+Background Label (Incorrect): playing saxophone
+
+CLIP PREDICTIONS:
+  Predicted Label: playing violin (score: 0.2615)
+
+RANKING ANALYSIS:
+  Human Action 'brushing hair' ranked: #3/50 (score: 0.1672)
+  Background Action 'playing saxophone' ranked: #10/50 (score: 0.0158)
+
+Top 10 predictions:
+      1. playing violin (0.2615)
+      2. sword fighting (0.1734)
+  👤  3. brushing hair (0.1672)
+      4. playing bass guitar (0.0850)
+      5. playing guitar (0.0642)
+      6. playing piano (0.0430)
+      7. archery (0.0388)
+      8. playing accordion (0.0219)
+      9. climbing ladder (0.0171)
+  🏞️ 10. playing saxophone (0.0158)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 7
+Score gap (bg_score - human_score): -0.1514
+✅ Human action in top 5

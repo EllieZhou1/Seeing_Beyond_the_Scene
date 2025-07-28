@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001007_walking the dog_to_brushing teeth_pprpfyJDcj4_000009_000019_bg_Hwuul-R9x_g_000067_000077
+Frame: 000050.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): brushing teeth
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2746)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #17/50 (score: 0.0067)
+  Background Action 'brushing teeth' ranked: #42/50 (score: 0.0001)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2746)
+      2. dunking basketball (0.1011)
+      3. juggling balls (0.0807)
+      4. skipping rope (0.0786)
+      5. catching or throwing frisbee (0.0709)
+      6. climbing a rope (0.0699)
+      7. hurdling (0.0670)
+      8. dribbling basketball (0.0495)
+      9. playing basketball (0.0356)
+     10. catching or throwing baseball (0.0304)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 25
+Score gap (bg_score - human_score): -0.0066

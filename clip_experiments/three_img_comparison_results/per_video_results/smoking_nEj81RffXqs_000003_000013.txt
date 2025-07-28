@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: nEj81RffXqs
+Action: smoking
+Time: 3-13s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 7/50 (score: 0.0235)
+  Top 10 predictions:
+        1. opening bottle (0.5997)
+        2. punching person (boxing) (0.1015)
+        3. climbing a rope (0.0553)
+        4. eating ice cream (0.0376)
+        5. eating cake (0.0267)
+        6. playing saxophone (0.0266)
+    👉  7. smoking (0.0235)
+        8. drinking (0.0175)
+        9. cleaning windows (0.0137)
+       10. brushing hair (0.0125)
+
+HUMAN ONLY:
+  Correct action rank: 5/50 (score: 0.0243)
+  Top 10 predictions:
+        1. punching person (boxing) (0.5462)
+        2. opening bottle (0.1244)
+        3. cleaning windows (0.0695)
+        4. eating ice cream (0.0301)
+    👉  5. smoking (0.0243)
+        6. climbing a rope (0.0224)
+        7. juggling soccer ball (0.0207)
+        8. drinking (0.0205)
+        9. playing saxophone (0.0154)
+       10. juggling balls (0.0149)
+
+BACKGROUND ONLY:
+  Correct action rank: 12/50 (score: 0.0215)
+  Top 10 predictions:
+        1. punching person (boxing) (0.2281)
+        2. climbing a rope (0.1136)
+        3. playing accordion (0.1077)
+        4. opening bottle (0.0887)
+        5. playing saxophone (0.0539)
+        6. climbing ladder (0.0464)
+        7. cleaning windows (0.0456)
+        8. eating ice cream (0.0441)
+        9. eating cake (0.0339)
+       10. brushing hair (0.0226)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 5
+Ranking drop from human to background: 7

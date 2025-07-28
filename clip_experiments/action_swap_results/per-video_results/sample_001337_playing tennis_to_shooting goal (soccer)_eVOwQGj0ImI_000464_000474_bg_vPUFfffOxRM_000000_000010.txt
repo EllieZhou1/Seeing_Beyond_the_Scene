@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001337_playing tennis_to_shooting goal (soccer)_eVOwQGj0ImI_000464_000474_bg_vPUFfffOxRM_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): playing tennis
+Background Label (Incorrect): shooting goal (soccer)
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.7310)
+
+RANKING ANALYSIS:
+  Human Action 'playing tennis' ranked: #18/50 (score: 0.0001)
+  Background Action 'shooting goal (soccer)' ranked: #1/50 (score: 0.7310)
+
+Top 10 predictions:
+  🏞️  1. shooting goal (soccer) (0.7310)
+      2. juggling soccer ball (0.2453)
+      3. juggling balls (0.0093)
+      4. shooting basketball (0.0030)
+      5. hurdling (0.0029)
+      6. dunking basketball (0.0020)
+      7. dribbling basketball (0.0013)
+      8. clean and jerk (0.0011)
+      9. catching or throwing frisbee (0.0008)
+     10. playing volleyball (0.0008)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -17
+Score gap (bg_score - human_score): 0.7309
+⚠️  Background action in top 5!

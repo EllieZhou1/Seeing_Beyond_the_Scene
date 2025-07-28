@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001625_catching or throwing frisbee_to_golf driving_a6KJuGCozc4_000014_000024_bg_C8H4iQ2s4Ig_000086_000096
+Frame: 000050.jpg
+Human Action Label (Correct): catching or throwing frisbee
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.2904)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing frisbee' ranked: #4/50 (score: 0.0607)
+  Background Action 'golf driving' ranked: #14/50 (score: 0.0111)
+
+Top 10 predictions:
+      1. surfing water (0.2904)
+      2. juggling soccer ball (0.2292)
+      3. juggling balls (0.0648)
+  👤  4. catching or throwing frisbee (0.0607)
+      5. shooting goal (soccer) (0.0565)
+      6. skipping rope (0.0529)
+      7. walking the dog (0.0473)
+      8. hitting baseball (0.0262)
+      9. dunking basketball (0.0221)
+     10. flying kite (0.0218)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 10
+Score gap (bg_score - human_score): -0.0496
+✅ Human action in top 5

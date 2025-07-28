@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: VsX3y5vPBbM
+Action: punching person (boxing)
+Time: 74-84s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.9957)
+  Top 10 predictions:
+    👉  1. punching person (boxing) (0.9957)
+        2. catching or throwing baseball (0.0007)
+        3. climbing a rope (0.0006)
+        4. hitting baseball (0.0004)
+        5. sword fighting (0.0004)
+        6. eating ice cream (0.0002)
+        7. cleaning windows (0.0002)
+        8. drinking (0.0002)
+        9. reading book (0.0002)
+       10. catching or throwing frisbee (0.0002)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.9866)
+  Top 10 predictions:
+    👉  1. punching person (boxing) (0.9866)
+        2. climbing a rope (0.0025)
+        3. brushing hair (0.0012)
+        4. hitting baseball (0.0010)
+        5. hurdling (0.0008)
+        6. catching or throwing baseball (0.0007)
+        7. brushing teeth (0.0007)
+        8. reading book (0.0006)
+        9. sword fighting (0.0005)
+       10. drinking (0.0005)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.9903)
+  Top 10 predictions:
+    👉  1. punching person (boxing) (0.9903)
+        2. hitting baseball (0.0014)
+        3. catching or throwing baseball (0.0011)
+        4. reading book (0.0009)
+        5. sword fighting (0.0008)
+        6. climbing a rope (0.0007)
+        7. hurdling (0.0006)
+        8. eating ice cream (0.0005)
+        9. drinking (0.0005)
+       10. brushing hair (0.0004)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: 0

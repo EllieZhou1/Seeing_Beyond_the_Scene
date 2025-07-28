@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000901_punching person (boxing)_to_juggling balls_9fEKX0jlAJs_000095_000105_bg_7IyMtOv_tk4_000044_000054
+Frame: 000050.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): juggling balls
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.4356)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #1/50 (score: 0.4356)
+  Background Action 'juggling balls' ranked: #3/50 (score: 0.0255)
+
+Top 10 predictions:
+  👤  1. punching person (boxing) (0.4356)
+      2. sword fighting (0.3791)
+  🏞️  3. juggling balls (0.0255)
+      4. playing accordion (0.0241)
+      5. bowling (0.0165)
+      6. brushing teeth (0.0129)
+      7. dunking basketball (0.0107)
+      8. brushing hair (0.0091)
+      9. juggling soccer ball (0.0079)
+     10. eating ice cream (0.0065)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 2
+Score gap (bg_score - human_score): -0.4101
+⚠️  Background action in top 5!
+✅ Human action in top 5

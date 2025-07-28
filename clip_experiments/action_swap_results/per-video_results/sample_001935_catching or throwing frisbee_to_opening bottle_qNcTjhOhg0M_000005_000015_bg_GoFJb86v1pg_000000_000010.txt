@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001935_catching or throwing frisbee_to_opening bottle_qNcTjhOhg0M_000005_000015_bg_GoFJb86v1pg_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): catching or throwing frisbee
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.9156)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing frisbee' ranked: #47/50 (score: 0.0000)
+  Background Action 'opening bottle' ranked: #1/50 (score: 0.9156)
+
+Top 10 predictions:
+  🏞️  1. opening bottle (0.9156)
+      2. drinking (0.0651)
+      3. brushing hair (0.0030)
+      4. smoking (0.0016)
+      5. brushing teeth (0.0014)
+      6. juggling balls (0.0011)
+      7. shooting goal (soccer) (0.0010)
+      8. playing trumpet (0.0008)
+      9. reading book (0.0008)
+     10. tying tie (0.0007)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -46
+Score gap (bg_score - human_score): 0.9156
+⚠️  Background action in top 5!

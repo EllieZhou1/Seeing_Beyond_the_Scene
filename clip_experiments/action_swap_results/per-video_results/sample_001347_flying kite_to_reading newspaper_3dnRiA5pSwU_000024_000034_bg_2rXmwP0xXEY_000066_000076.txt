@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001347_flying kite_to_reading newspaper_3dnRiA5pSwU_000024_000034_bg_2rXmwP0xXEY_000066_000076
+Frame: 000050.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): reading newspaper
+
+CLIP PREDICTIONS:
+  Predicted Label: reading newspaper (score: 0.9305)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #47/50 (score: 0.0000)
+  Background Action 'reading newspaper' ranked: #1/50 (score: 0.9305)
+
+Top 10 predictions:
+  🏞️  1. reading newspaper (0.9305)
+      2. playing accordion (0.0115)
+      3. playing piano (0.0086)
+      4. writing (0.0085)
+      5. reading book (0.0068)
+      6. cleaning windows (0.0043)
+      7. sweeping floor (0.0038)
+      8. playing trumpet (0.0035)
+      9. playing violin (0.0029)
+     10. brushing teeth (0.0022)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -46
+Score gap (bg_score - human_score): 0.9305
+⚠️  Background action in top 5!

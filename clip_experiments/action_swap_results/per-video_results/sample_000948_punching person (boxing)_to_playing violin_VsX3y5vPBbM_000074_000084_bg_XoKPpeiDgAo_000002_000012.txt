@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000948_punching person (boxing)_to_playing violin_VsX3y5vPBbM_000074_000084_bg_XoKPpeiDgAo_000002_000012
+Frame: 000050.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): playing violin
+
+CLIP PREDICTIONS:
+  Predicted Label: playing piano (score: 0.8345)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #25/50 (score: 0.0001)
+  Background Action 'playing violin' ranked: #3/50 (score: 0.0321)
+
+Top 10 predictions:
+      1. playing piano (0.8345)
+      2. playing accordion (0.0827)
+  🏞️  3. playing violin (0.0321)
+      4. playing saxophone (0.0191)
+      5. playing guitar (0.0107)
+      6. playing trumpet (0.0059)
+      7. writing (0.0048)
+      8. brushing teeth (0.0020)
+      9. brushing hair (0.0015)
+     10. playing bass guitar (0.0013)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -22
+Score gap (bg_score - human_score): 0.0320
+⚠️  Background action in top 5!

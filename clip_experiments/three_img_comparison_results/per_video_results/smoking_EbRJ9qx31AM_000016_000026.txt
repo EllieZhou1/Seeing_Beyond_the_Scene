@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: EbRJ9qx31AM
+Action: smoking
+Time: 16-26s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 4/50 (score: 0.0164)
+  Top 10 predictions:
+        1. brushing hair (0.8179)
+        2. tying tie (0.0560)
+        3. playing accordion (0.0313)
+    👉  4. smoking (0.0164)
+        5. playing guitar (0.0140)
+        6. opening bottle (0.0110)
+        7. brushing teeth (0.0077)
+        8. juggling balls (0.0067)
+        9. skipping rope (0.0047)
+       10. eating cake (0.0046)
+
+HUMAN ONLY:
+  Correct action rank: 10/50 (score: 0.0332)
+  Top 10 predictions:
+        1. playing accordion (0.1855)
+        2. brushing hair (0.1704)
+        3. tying tie (0.1361)
+        4. playing saxophone (0.0714)
+        5. playing guitar (0.0623)
+        6. juggling balls (0.0518)
+        7. juggling soccer ball (0.0489)
+        8. skipping rope (0.0387)
+        9. climbing a rope (0.0366)
+    👉 10. smoking (0.0332)
+
+BACKGROUND ONLY:
+  Correct action rank: 13/50 (score: 0.0119)
+  Top 10 predictions:
+        1. cleaning windows (0.5000)
+        2. playing accordion (0.0562)
+        3. drinking (0.0555)
+        4. opening bottle (0.0347)
+        5. playing saxophone (0.0330)
+        6. brushing hair (0.0290)
+        7. surfing water (0.0261)
+        8. reading newspaper (0.0255)
+        9. reading book (0.0248)
+       10. playing tennis (0.0217)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 9
+Ranking drop from human to background: 3

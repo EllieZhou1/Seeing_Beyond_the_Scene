@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000329_shooting basketball_to_skipping rope_83IZbPMEO-0_000035_000045_bg_gn97KDKen_U_000053_000063
+Frame: 000050.jpg
+Human Action Label (Correct): shooting basketball
+Background Label (Incorrect): skipping rope
+
+CLIP PREDICTIONS:
+  Predicted Label: dribbling basketball (score: 0.3572)
+
+RANKING ANALYSIS:
+  Human Action 'shooting basketball' ranked: #3/50 (score: 0.1325)
+  Background Action 'skipping rope' ranked: #8/50 (score: 0.0427)
+
+Top 10 predictions:
+      1. dribbling basketball (0.3572)
+      2. playing basketball (0.1999)
+  👤  3. shooting basketball (0.1325)
+      4. juggling balls (0.0728)
+      5. dunking basketball (0.0594)
+      6. juggling soccer ball (0.0561)
+      7. playing volleyball (0.0492)
+  🏞️  8. skipping rope (0.0427)
+      9. shooting goal (soccer) (0.0210)
+     10. catching or throwing frisbee (0.0024)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 5
+Score gap (bg_score - human_score): -0.0898
+✅ Human action in top 5

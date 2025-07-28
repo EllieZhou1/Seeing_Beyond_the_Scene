@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: iyHDKRtcqgA
+Action: hitting baseball
+Time: 19-29s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.7738)
+  Top 10 predictions:
+    👉  1. hitting baseball (0.7738)
+        2. catching or throwing baseball (0.2125)
+        3. catching or throwing frisbee (0.0057)
+        4. shooting goal (soccer) (0.0023)
+        5. juggling soccer ball (0.0008)
+        6. sword fighting (0.0008)
+        7. hurdling (0.0008)
+        8. dribbling basketball (0.0005)
+        9. flying kite (0.0003)
+       10. dunking basketball (0.0003)
+
+HUMAN ONLY:
+  Correct action rank: 13/50 (score: 0.0054)
+  Top 10 predictions:
+        1. juggling balls (0.3482)
+        2. skipping rope (0.2376)
+        3. juggling soccer ball (0.1858)
+        4. climbing a rope (0.0414)
+        5. dribbling basketball (0.0340)
+        6. flying kite (0.0261)
+        7. dunking basketball (0.0254)
+        8. climbing ladder (0.0252)
+        9. hurdling (0.0109)
+       10. catching or throwing baseball (0.0093)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.6234)
+  Top 10 predictions:
+    👉  1. hitting baseball (0.6234)
+        2. catching or throwing baseball (0.3340)
+        3. catching or throwing frisbee (0.0174)
+        4. shooting goal (soccer) (0.0137)
+        5. playing tennis (0.0028)
+        6. juggling soccer ball (0.0020)
+        7. sweeping floor (0.0015)
+        8. dribbling basketball (0.0007)
+        9. shooting basketball (0.0006)
+       10. flying kite (0.0005)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -12
+🚨 WARNING: Background ranks higher than human-only!

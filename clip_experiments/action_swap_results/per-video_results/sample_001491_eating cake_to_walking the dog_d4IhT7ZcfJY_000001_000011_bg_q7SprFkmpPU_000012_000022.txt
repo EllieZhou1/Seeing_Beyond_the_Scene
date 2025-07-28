@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001491_eating cake_to_walking the dog_d4IhT7ZcfJY_000001_000011_bg_q7SprFkmpPU_000012_000022
+Frame: 000050.jpg
+Human Action Label (Correct): eating cake
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.1487)
+
+RANKING ANALYSIS:
+  Human Action 'eating cake' ranked: #6/50 (score: 0.0492)
+  Background Action 'walking the dog' ranked: #25/50 (score: 0.0066)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.1487)
+      2. playing accordion (0.1467)
+      3. reading newspaper (0.1180)
+      4. cleaning windows (0.0719)
+      5. catching or throwing frisbee (0.0518)
+  👤  6. eating cake (0.0492)
+      7. dribbling basketball (0.0464)
+      8. playing piano (0.0397)
+      9. playing violin (0.0291)
+     10. juggling balls (0.0279)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 19
+Score gap (bg_score - human_score): -0.0426

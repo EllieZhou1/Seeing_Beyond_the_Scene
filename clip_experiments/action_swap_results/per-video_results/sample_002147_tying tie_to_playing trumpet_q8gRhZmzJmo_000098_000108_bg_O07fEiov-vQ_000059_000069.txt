@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002147_tying tie_to_playing trumpet_q8gRhZmzJmo_000098_000108_bg_O07fEiov-vQ_000059_000069
+Frame: 000050.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: tying tie (score: 0.9791)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #1/50 (score: 0.9791)
+  Background Action 'playing trumpet' ranked: #8/50 (score: 0.0003)
+
+Top 10 predictions:
+  👤  1. tying tie (0.9791)
+      2. playing accordion (0.0152)
+      3. brushing hair (0.0011)
+      4. playing violin (0.0010)
+      5. juggling balls (0.0008)
+      6. juggling soccer ball (0.0005)
+      7. opening bottle (0.0003)
+  🏞️  8. playing trumpet (0.0003)
+      9. playing guitar (0.0002)
+     10. climbing a rope (0.0002)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 7
+Score gap (bg_score - human_score): -0.9788
+✅ Human action in top 5

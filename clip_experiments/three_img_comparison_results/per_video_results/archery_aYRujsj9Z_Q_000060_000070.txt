@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: aYRujsj9Z_Q
+Action: archery
+Time: 60-70s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 3/50 (score: 0.1642)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.5223)
+        2. juggling balls (0.1652)
+    👉  3. archery (0.1642)
+        4. juggling soccer ball (0.0597)
+        5. flying kite (0.0247)
+        6. shooting basketball (0.0201)
+        7. catching or throwing frisbee (0.0120)
+        8. catching or throwing baseball (0.0086)
+        9. hitting baseball (0.0052)
+       10. dribbling basketball (0.0033)
+
+HUMAN ONLY:
+  Correct action rank: 28/50 (score: 0.0031)
+  Top 10 predictions:
+        1. punching person (boxing) (0.1816)
+        2. juggling balls (0.1570)
+        3. juggling soccer ball (0.1426)
+        4. skipping rope (0.0969)
+        5. climbing a rope (0.0727)
+        6. tying tie (0.0654)
+        7. opening bottle (0.0396)
+        8. shooting goal (soccer) (0.0238)
+        9. cleaning windows (0.0195)
+       10. sword fighting (0.0166)
+
+BACKGROUND ONLY:
+  Correct action rank: 5/50 (score: 0.0139)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.8069)
+        2. juggling balls (0.0469)
+        3. juggling soccer ball (0.0432)
+        4. shooting basketball (0.0305)
+    👉  5. archery (0.0139)
+        6. flying kite (0.0131)
+        7. catching or throwing frisbee (0.0085)
+        8. catching or throwing baseball (0.0080)
+        9. hitting baseball (0.0065)
+       10. dribbling basketball (0.0054)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 2
+Ranking drop from human to background: -23
+🚨 WARNING: Background ranks higher than human-only!

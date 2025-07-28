@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002258_sweeping floor_to_reading book_dgQo1UGs0HA_000031_000041_bg_hPnRaC9MPKI_000157_000167
+Frame: 000050.jpg
+Human Action Label (Correct): sweeping floor
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: writing (score: 0.4515)
+
+RANKING ANALYSIS:
+  Human Action 'sweeping floor' ranked: #5/50 (score: 0.0369)
+  Background Action 'reading book' ranked: #2/50 (score: 0.1343)
+
+Top 10 predictions:
+      1. writing (0.4515)
+  🏞️  2. reading book (0.1343)
+      3. reading newspaper (0.0662)
+      4. climbing a rope (0.0463)
+  👤  5. sweeping floor (0.0369)
+      6. opening bottle (0.0368)
+      7. tying tie (0.0267)
+      8. playing guitar (0.0222)
+      9. playing accordion (0.0214)
+     10. playing piano (0.0205)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -3
+Score gap (bg_score - human_score): 0.0974
+⚠️  Background action in top 5!
+✅ Human action in top 5

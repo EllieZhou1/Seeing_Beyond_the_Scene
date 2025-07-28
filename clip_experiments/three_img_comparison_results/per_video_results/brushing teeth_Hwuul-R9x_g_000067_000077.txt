@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: Hwuul-R9x_g
+Action: brushing teeth
+Time: 67-77s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 9/50 (score: 0.0287)
+  Top 10 predictions:
+        1. brushing hair (0.5669)
+        2. juggling soccer ball (0.0552)
+        3. cleaning windows (0.0487)
+        4. opening bottle (0.0330)
+        5. sword fighting (0.0304)
+        6. juggling balls (0.0299)
+        7. punching person (boxing) (0.0299)
+        8. walking the dog (0.0291)
+    👉  9. brushing teeth (0.0287)
+       10. catching or throwing frisbee (0.0221)
+
+HUMAN ONLY:
+  Correct action rank: 40/50 (score: 0.0003)
+  Top 10 predictions:
+        1. juggling soccer ball (0.3307)
+        2. juggling balls (0.2041)
+        3. deadlifting (0.1058)
+        4. clean and jerk (0.0866)
+        5. skipping rope (0.0662)
+        6. punching person (boxing) (0.0642)
+        7. dribbling basketball (0.0265)
+        8. climbing a rope (0.0137)
+        9. hitting baseball (0.0136)
+       10. catching or throwing frisbee (0.0118)
+
+BACKGROUND ONLY:
+  Correct action rank: 39/50 (score: 0.0001)
+  Top 10 predictions:
+        1. juggling soccer ball (0.5755)
+        2. juggling balls (0.1004)
+        3. catching or throwing frisbee (0.0669)
+        4. playing basketball (0.0521)
+        5. playing volleyball (0.0375)
+        6. dribbling basketball (0.0348)
+        7. shooting goal (soccer) (0.0157)
+        8. dunking basketball (0.0152)
+        9. catching or throwing baseball (0.0134)
+       10. skipping rope (0.0119)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 30
+Ranking drop from human to background: -1
+🚨 WARNING: Background ranks higher than human-only!

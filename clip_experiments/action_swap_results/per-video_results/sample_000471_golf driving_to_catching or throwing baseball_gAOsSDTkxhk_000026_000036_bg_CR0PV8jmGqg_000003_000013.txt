@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000471_golf driving_to_catching or throwing baseball_gAOsSDTkxhk_000026_000036_bg_CR0PV8jmGqg_000003_000013
+Frame: 000050.jpg
+Human Action Label (Correct): golf driving
+Background Label (Incorrect): catching or throwing baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.4532)
+
+RANKING ANALYSIS:
+  Human Action 'golf driving' ranked: #20/50 (score: 0.0066)
+  Background Action 'catching or throwing baseball' ranked: #44/50 (score: 0.0004)
+
+Top 10 predictions:
+      1. skipping rope (0.4532)
+      2. climbing ladder (0.0994)
+      3. punching person (boxing) (0.0486)
+      4. playing volleyball (0.0475)
+      5. playing tennis (0.0460)
+      6. juggling soccer ball (0.0332)
+      7. clean and jerk (0.0308)
+      8. juggling balls (0.0228)
+      9. deadlifting (0.0210)
+     10. flying kite (0.0209)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 24
+Score gap (bg_score - human_score): -0.0062

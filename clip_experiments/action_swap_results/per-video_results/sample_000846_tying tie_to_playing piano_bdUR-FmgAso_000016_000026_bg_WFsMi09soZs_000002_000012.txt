@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000846_tying tie_to_playing piano_bdUR-FmgAso_000016_000026_bg_WFsMi09soZs_000002_000012
+Frame: 000050.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): playing piano
+
+CLIP PREDICTIONS:
+  Predicted Label: tying tie (score: 0.4270)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #1/50 (score: 0.4270)
+  Background Action 'playing piano' ranked: #30/50 (score: 0.0026)
+
+Top 10 predictions:
+  👤  1. tying tie (0.4270)
+      2. climbing a rope (0.1165)
+      3. smoking (0.0697)
+      4. juggling soccer ball (0.0520)
+      5. juggling balls (0.0450)
+      6. playing saxophone (0.0449)
+      7. eating ice cream (0.0322)
+      8. playing accordion (0.0313)
+      9. opening bottle (0.0302)
+     10. playing violin (0.0163)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 29
+Score gap (bg_score - human_score): -0.4244
+✅ Human action in top 5

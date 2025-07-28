@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002250_shooting goal (soccer)_to_climbing a rope_zNiy_rf_m4Y_000057_000067_bg_M2anYJApuvQ_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): shooting goal (soccer)
+Background Label (Incorrect): climbing a rope
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.4076)
+
+RANKING ANALYSIS:
+  Human Action 'shooting goal (soccer)' ranked: #2/50 (score: 0.2260)
+  Background Action 'climbing a rope' ranked: #6/50 (score: 0.0194)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.4076)
+  👤  2. shooting goal (soccer) (0.2260)
+      3. juggling soccer ball (0.1881)
+      4. tying tie (0.0401)
+      5. opening bottle (0.0197)
+  🏞️  6. climbing a rope (0.0194)
+      7. sword fighting (0.0137)
+      8. walking the dog (0.0095)
+      9. juggling balls (0.0089)
+     10. catching or throwing baseball (0.0079)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 4
+Score gap (bg_score - human_score): -0.2066
+✅ Human action in top 5

@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: -ITTI--fkvo
+Action: shooting goal (soccer)
+Time: 2-12s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.5750)
+  Top 10 predictions:
+    👉  1. shooting goal (soccer) (0.5750)
+        2. dribbling basketball (0.1017)
+        3. shooting basketball (0.0470)
+        4. skiing slalom (0.0451)
+        5. dunking basketball (0.0430)
+        6. juggling soccer ball (0.0302)
+        7. opening bottle (0.0176)
+        8. playing violin (0.0158)
+        9. punching person (boxing) (0.0141)
+       10. skiing (not slalom or crosscountry) (0.0126)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.1511)
+  Top 10 predictions:
+    👉  1. shooting goal (soccer) (0.1511)
+        2. dunking basketball (0.0902)
+        3. shooting basketball (0.0729)
+        4. hitting baseball (0.0599)
+        5. juggling soccer ball (0.0542)
+        6. playing basketball (0.0515)
+        7. dribbling basketball (0.0417)
+        8. playing guitar (0.0326)
+        9. skiing slalom (0.0283)
+       10. playing tennis (0.0248)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.2595)
+  Top 10 predictions:
+    👉  1. shooting goal (soccer) (0.2595)
+        2. dribbling basketball (0.1495)
+        3. playing violin (0.1044)
+        4. skiing slalom (0.0554)
+        5. shooting basketball (0.0539)
+        6. dunking basketball (0.0503)
+        7. opening bottle (0.0429)
+        8. walking the dog (0.0276)
+        9. juggling soccer ball (0.0222)
+       10. skiing (not slalom or crosscountry) (0.0203)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: 0

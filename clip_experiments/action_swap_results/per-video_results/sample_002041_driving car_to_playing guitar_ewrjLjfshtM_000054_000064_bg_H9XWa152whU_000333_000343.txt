@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002041_driving car_to_playing guitar_ewrjLjfshtM_000054_000064_bg_H9XWa152whU_000333_000343
+Frame: 000050.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): playing guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.2785)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #36/50 (score: 0.0025)
+  Background Action 'playing guitar' ranked: #2/50 (score: 0.1323)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.2785)
+  🏞️  2. playing guitar (0.1323)
+      3. juggling soccer ball (0.1314)
+      4. playing saxophone (0.0685)
+      5. golf driving (0.0440)
+      6. shooting goal (soccer) (0.0319)
+      7. opening bottle (0.0286)
+      8. playing bass guitar (0.0253)
+      9. juggling balls (0.0238)
+     10. playing accordion (0.0235)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -34
+Score gap (bg_score - human_score): 0.1298
+⚠️  Background action in top 5!

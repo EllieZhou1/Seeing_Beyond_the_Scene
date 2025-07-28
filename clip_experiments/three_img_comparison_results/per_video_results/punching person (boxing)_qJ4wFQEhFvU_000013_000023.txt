@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: qJ4wFQEhFvU
+Action: punching person (boxing)
+Time: 13-23s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 8/50 (score: 0.0125)
+  Top 10 predictions:
+        1. sword fighting (0.5745)
+        2. skipping rope (0.1210)
+        3. clean and jerk (0.0603)
+        4. juggling balls (0.0525)
+        5. juggling soccer ball (0.0512)
+        6. dunking basketball (0.0233)
+        7. opening bottle (0.0151)
+    👉  8. punching person (boxing) (0.0125)
+        9. playing volleyball (0.0097)
+       10. dribbling basketball (0.0088)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.8266)
+  Top 10 predictions:
+    👉  1. punching person (boxing) (0.8266)
+        2. clean and jerk (0.0572)
+        3. sword fighting (0.0300)
+        4. juggling balls (0.0269)
+        5. skipping rope (0.0219)
+        6. juggling soccer ball (0.0151)
+        7. dunking basketball (0.0055)
+        8. shooting basketball (0.0026)
+        9. deadlifting (0.0019)
+       10. climbing a rope (0.0013)
+
+BACKGROUND ONLY:
+  Correct action rank: 28/50 (score: 0.0013)
+  Top 10 predictions:
+        1. juggling soccer ball (0.5878)
+        2. juggling balls (0.0732)
+        3. playing basketball (0.0508)
+        4. dunking basketball (0.0422)
+        5. shooting basketball (0.0344)
+        6. playing volleyball (0.0317)
+        7. shooting goal (soccer) (0.0293)
+        8. dribbling basketball (0.0237)
+        9. playing trumpet (0.0161)
+       10. hitting baseball (0.0140)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 20
+Ranking drop from human to background: 27

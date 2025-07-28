@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: ZFat-Gd-ws8
+Action: surfing water
+Time: 140-150s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.9952)
+  Top 10 predictions:
+    👉  1. surfing water (0.9952)
+        2. canoeing or kayaking (0.0014)
+        3. climbing a rope (0.0008)
+        4. skiing slalom (0.0006)
+        5. skiing (not slalom or crosscountry) (0.0003)
+        6. catching or throwing frisbee (0.0003)
+        7. hurdling (0.0002)
+        8. climbing ladder (0.0002)
+        9. clean and jerk (0.0001)
+       10. opening bottle (0.0001)
+
+HUMAN ONLY:
+  Correct action rank: 9/50 (score: 0.0351)
+  Top 10 predictions:
+        1. flying kite (0.1440)
+        2. walking the dog (0.0959)
+        3. smoking (0.0808)
+        4. climbing a rope (0.0645)
+        5. eating ice cream (0.0415)
+        6. catching or throwing baseball (0.0366)
+        7. punching person (boxing) (0.0359)
+        8. dribbling basketball (0.0353)
+    👉  9. surfing water (0.0351)
+       10. catching or throwing frisbee (0.0349)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.9931)
+  Top 10 predictions:
+    👉  1. surfing water (0.9931)
+        2. opening bottle (0.0007)
+        3. climbing a rope (0.0006)
+        4. catching or throwing frisbee (0.0005)
+        5. skiing slalom (0.0004)
+        6. cleaning windows (0.0004)
+        7. shooting goal (soccer) (0.0004)
+        8. canoeing or kayaking (0.0003)
+        9. hitting baseball (0.0003)
+       10. catching or throwing baseball (0.0003)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -8
+🚨 WARNING: Background ranks higher than human-only!

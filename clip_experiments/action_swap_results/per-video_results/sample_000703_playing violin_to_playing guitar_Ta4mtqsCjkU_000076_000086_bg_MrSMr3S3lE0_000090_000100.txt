@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000703_playing violin_to_playing guitar_Ta4mtqsCjkU_000076_000086_bg_MrSMr3S3lE0_000090_000100
+Frame: 000050.jpg
+Human Action Label (Correct): playing violin
+Background Label (Incorrect): playing guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.2836)
+
+RANKING ANALYSIS:
+  Human Action 'playing violin' ranked: #4/50 (score: 0.0966)
+  Background Action 'playing guitar' ranked: #18/50 (score: 0.0090)
+
+Top 10 predictions:
+      1. skipping rope (0.2836)
+      2. sword fighting (0.1742)
+      3. brushing hair (0.1062)
+  👤  4. playing violin (0.0966)
+      5. tying tie (0.0526)
+      6. sweeping floor (0.0376)
+      7. punching person (boxing) (0.0284)
+      8. archery (0.0274)
+      9. flying kite (0.0225)
+     10. juggling soccer ball (0.0193)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 14
+Score gap (bg_score - human_score): -0.0877
+✅ Human action in top 5

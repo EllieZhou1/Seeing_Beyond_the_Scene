@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: EurLx7PG7S4
+Action: playing violin
+Time: 26-36s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 12/50 (score: 0.0234)
+  Top 10 predictions:
+        1. flying kite (0.1829)
+        2. opening bottle (0.1538)
+        3. sword fighting (0.0870)
+        4. playing accordion (0.0757)
+        5. juggling balls (0.0705)
+        6. tying tie (0.0463)
+        7. reading newspaper (0.0412)
+        8. shooting goal (soccer) (0.0313)
+        9. playing bass guitar (0.0299)
+       10. skipping rope (0.0240)
+
+HUMAN ONLY:
+  Correct action rank: 11/50 (score: 0.0158)
+  Top 10 predictions:
+        1. juggling soccer ball (0.2903)
+        2. juggling balls (0.2208)
+        3. sword fighting (0.0846)
+        4. shooting goal (soccer) (0.0464)
+        5. flying kite (0.0206)
+        6. skipping rope (0.0192)
+        7. playing trumpet (0.0183)
+        8. writing (0.0174)
+        9. walking the dog (0.0167)
+       10. climbing a rope (0.0165)
+
+BACKGROUND ONLY:
+  Correct action rank: 4/50 (score: 0.0788)
+  Top 10 predictions:
+        1. flying kite (0.1537)
+        2. playing piano (0.1292)
+        3. tying tie (0.0892)
+    👉  4. playing violin (0.0788)
+        5. playing bass guitar (0.0730)
+        6. opening bottle (0.0602)
+        7. playing accordion (0.0583)
+        8. juggling balls (0.0434)
+        9. playing saxophone (0.0305)
+       10. reading newspaper (0.0286)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -8
+Ranking drop from human to background: -7
+🚨 WARNING: Background ranks higher than human-only!

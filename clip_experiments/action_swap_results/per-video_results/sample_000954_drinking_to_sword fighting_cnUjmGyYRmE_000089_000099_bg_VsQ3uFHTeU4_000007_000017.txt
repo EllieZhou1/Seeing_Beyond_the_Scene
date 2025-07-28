@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000954_drinking_to_sword fighting_cnUjmGyYRmE_000089_000099_bg_VsQ3uFHTeU4_000007_000017
+Frame: 000050.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.5973)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #34/50 (score: 0.0012)
+  Background Action 'sword fighting' ranked: #2/50 (score: 0.1585)
+
+Top 10 predictions:
+      1. climbing a rope (0.5973)
+  🏞️  2. sword fighting (0.1585)
+      3. skipping rope (0.0553)
+      4. archery (0.0253)
+      5. climbing ladder (0.0212)
+      6. tying tie (0.0156)
+      7. playing violin (0.0134)
+      8. flying kite (0.0121)
+      9. hurdling (0.0105)
+     10. juggling balls (0.0097)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -32
+Score gap (bg_score - human_score): 0.1573
+⚠️  Background action in top 5!

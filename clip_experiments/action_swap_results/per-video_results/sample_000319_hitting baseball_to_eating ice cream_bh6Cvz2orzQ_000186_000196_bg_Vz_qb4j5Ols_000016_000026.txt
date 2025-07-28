@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000319_hitting baseball_to_eating ice cream_bh6Cvz2orzQ_000186_000196_bg_Vz_qb4j5Ols_000016_000026
+Frame: 000050.jpg
+Human Action Label (Correct): hitting baseball
+Background Label (Incorrect): eating ice cream
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.1808)
+
+RANKING ANALYSIS:
+  Human Action 'hitting baseball' ranked: #14/50 (score: 0.0122)
+  Background Action 'eating ice cream' ranked: #34/50 (score: 0.0017)
+
+Top 10 predictions:
+      1. cleaning windows (0.1808)
+      2. climbing a rope (0.1526)
+      3. punching person (boxing) (0.1047)
+      4. sword fighting (0.1040)
+      5. skipping rope (0.0660)
+      6. juggling balls (0.0647)
+      7. juggling soccer ball (0.0566)
+      8. archery (0.0508)
+      9. opening bottle (0.0303)
+     10. dunking basketball (0.0272)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 20
+Score gap (bg_score - human_score): -0.0105

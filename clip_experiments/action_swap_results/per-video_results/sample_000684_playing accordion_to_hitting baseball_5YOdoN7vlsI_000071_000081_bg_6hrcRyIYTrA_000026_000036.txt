@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000684_playing accordion_to_hitting baseball_5YOdoN7vlsI_000071_000081_bg_6hrcRyIYTrA_000026_000036
+Frame: 000050.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): hitting baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: catching or throwing baseball (score: 0.4230)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #20/50 (score: 0.0003)
+  Background Action 'hitting baseball' ranked: #2/50 (score: 0.4160)
+
+Top 10 predictions:
+      1. catching or throwing baseball (0.4230)
+  🏞️  2. hitting baseball (0.4160)
+      3. catching or throwing frisbee (0.1141)
+      4. shooting goal (soccer) (0.0096)
+      5. juggling soccer ball (0.0085)
+      6. sword fighting (0.0078)
+      7. juggling balls (0.0058)
+      8. hurdling (0.0045)
+      9. skipping rope (0.0012)
+     10. playing trumpet (0.0011)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -18
+Score gap (bg_score - human_score): 0.4156
+⚠️  Background action in top 5!

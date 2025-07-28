@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: MCaiKmg6qo8
+Action: brushing hair
+Time: 1-11s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 20/50 (score: 0.0075)
+  Top 10 predictions:
+        1. playing accordion (0.1571)
+        2. juggling soccer ball (0.1520)
+        3. climbing a rope (0.0919)
+        4. juggling balls (0.0759)
+        5. eating cake (0.0675)
+        6. playing piano (0.0555)
+        7. skipping rope (0.0523)
+        8. playing violin (0.0476)
+        9. playing saxophone (0.0411)
+       10. clean and jerk (0.0279)
+
+HUMAN ONLY:
+  Correct action rank: 36/50 (score: 0.0007)
+  Top 10 predictions:
+        1. juggling soccer ball (0.2071)
+        2. juggling balls (0.2041)
+        3. skipping rope (0.1719)
+        4. playing accordion (0.1349)
+        5. climbing a rope (0.0342)
+        6. playing violin (0.0336)
+        7. dribbling basketball (0.0316)
+        8. punching person (boxing) (0.0206)
+        9. clean and jerk (0.0163)
+       10. playing saxophone (0.0159)
+
+BACKGROUND ONLY:
+  Correct action rank: 9/50 (score: 0.0326)
+  Top 10 predictions:
+        1. juggling soccer ball (0.1169)
+        2. playing piano (0.0821)
+        3. playing saxophone (0.0750)
+        4. playing accordion (0.0669)
+        5. punching person (boxing) (0.0624)
+        6. juggling balls (0.0518)
+        7. climbing a rope (0.0488)
+        8. opening bottle (0.0423)
+    👉  9. brushing hair (0.0326)
+       10. climbing ladder (0.0290)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: -11
+Ranking drop from human to background: -27
+🚨 WARNING: Background ranks higher than human-only!

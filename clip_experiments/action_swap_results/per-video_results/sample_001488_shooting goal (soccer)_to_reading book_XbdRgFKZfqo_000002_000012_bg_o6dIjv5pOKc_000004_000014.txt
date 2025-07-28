@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001488_shooting goal (soccer)_to_reading book_XbdRgFKZfqo_000002_000012_bg_o6dIjv5pOKc_000004_000014
+Frame: 000050.jpg
+Human Action Label (Correct): shooting goal (soccer)
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: flying kite (score: 0.3068)
+
+RANKING ANALYSIS:
+  Human Action 'shooting goal (soccer)' ranked: #44/50 (score: 0.0007)
+  Background Action 'reading book' ranked: #5/50 (score: 0.0677)
+
+Top 10 predictions:
+      1. flying kite (0.3068)
+      2. eating cake (0.1339)
+      3. eating ice cream (0.0976)
+      4. hurdling (0.0968)
+  🏞️  5. reading book (0.0677)
+      6. reading newspaper (0.0353)
+      7. playing piano (0.0287)
+      8. dunking basketball (0.0238)
+      9. sword fighting (0.0232)
+     10. shooting basketball (0.0180)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -39
+Score gap (bg_score - human_score): 0.0671
+⚠️  Background action in top 5!

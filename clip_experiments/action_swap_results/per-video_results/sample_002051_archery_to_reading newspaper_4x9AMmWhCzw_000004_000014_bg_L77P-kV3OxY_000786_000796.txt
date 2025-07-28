@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002051_archery_to_reading newspaper_4x9AMmWhCzw_000004_000014_bg_L77P-kV3OxY_000786_000796
+Frame: 000050.jpg
+Human Action Label (Correct): archery
+Background Label (Incorrect): reading newspaper
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.6613)
+
+RANKING ANALYSIS:
+  Human Action 'archery' ranked: #31/50 (score: 0.0018)
+  Background Action 'reading newspaper' ranked: #40/50 (score: 0.0010)
+
+Top 10 predictions:
+      1. surfing water (0.6613)
+      2. opening bottle (0.0512)
+      3. sword fighting (0.0379)
+      4. punching person (boxing) (0.0364)
+      5. sweeping floor (0.0194)
+      6. juggling balls (0.0165)
+      7. drinking (0.0165)
+      8. playing saxophone (0.0152)
+      9. dunking basketball (0.0138)
+     10. juggling soccer ball (0.0132)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 9
+Score gap (bg_score - human_score): -0.0008

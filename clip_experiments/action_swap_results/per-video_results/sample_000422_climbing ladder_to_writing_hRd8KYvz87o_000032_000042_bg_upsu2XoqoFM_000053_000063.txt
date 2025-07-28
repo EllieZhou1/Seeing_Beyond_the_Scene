@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000422_climbing ladder_to_writing_hRd8KYvz87o_000032_000042_bg_upsu2XoqoFM_000053_000063
+Frame: 000050.jpg
+Human Action Label (Correct): climbing ladder
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.2063)
+
+RANKING ANALYSIS:
+  Human Action 'climbing ladder' ranked: #4/50 (score: 0.0806)
+  Background Action 'writing' ranked: #41/50 (score: 0.0009)
+
+Top 10 predictions:
+      1. shooting goal (soccer) (0.2063)
+      2. climbing a rope (0.1130)
+      3. skipping rope (0.1012)
+  👤  4. climbing ladder (0.0806)
+      5. hurdling (0.0747)
+      6. bowling (0.0412)
+      7. skiing slalom (0.0375)
+      8. punching person (boxing) (0.0363)
+      9. skiing (not slalom or crosscountry) (0.0293)
+     10. hitting baseball (0.0262)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 37
+Score gap (bg_score - human_score): -0.0797
+✅ Human action in top 5

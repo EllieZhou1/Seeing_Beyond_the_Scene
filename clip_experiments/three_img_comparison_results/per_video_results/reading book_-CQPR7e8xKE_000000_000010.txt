@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: -CQPR7e8xKE
+Action: reading book
+Time: 0-10s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.2756)
+  Top 10 predictions:
+        1. reading newspaper (0.3880)
+    👉  2. reading book (0.2756)
+        3. playing accordion (0.1161)
+        4. playing piano (0.0856)
+        5. opening bottle (0.0420)
+        6. eating cake (0.0201)
+        7. writing (0.0103)
+        8. brushing hair (0.0101)
+        9. playing guitar (0.0096)
+       10. playing violin (0.0071)
+
+HUMAN ONLY:
+  Correct action rank: 35/50 (score: 0.0040)
+  Top 10 predictions:
+        1. opening bottle (0.1082)
+        2. dribbling basketball (0.0697)
+        3. playing piano (0.0665)
+        4. playing trumpet (0.0643)
+        5. playing saxophone (0.0621)
+        6. playing accordion (0.0547)
+        7. playing violin (0.0532)
+        8. juggling soccer ball (0.0515)
+        9. eating ice cream (0.0510)
+       10. juggling balls (0.0352)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.3151)
+  Top 10 predictions:
+        1. reading newspaper (0.3635)
+    👉  2. reading book (0.3151)
+        3. writing (0.0646)
+        4. playing piano (0.0387)
+        5. playing accordion (0.0320)
+        6. opening bottle (0.0150)
+        7. playing guitar (0.0133)
+        8. sweeping floor (0.0127)
+        9. eating ice cream (0.0126)
+       10. eating cake (0.0124)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -33
+🚨 WARNING: Background ranks higher than human-only!

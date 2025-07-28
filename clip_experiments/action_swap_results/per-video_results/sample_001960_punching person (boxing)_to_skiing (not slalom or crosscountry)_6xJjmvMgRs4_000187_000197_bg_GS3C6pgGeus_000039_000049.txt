@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001960_punching person (boxing)_to_skiing (not slalom or crosscountry)_6xJjmvMgRs4_000187_000197_bg_GS3C6pgGeus_000039_000049
+Frame: 000050.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): skiing (not slalom or crosscountry)
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.8111)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #4/50 (score: 0.0022)
+  Background Action 'skiing (not slalom or crosscountry)' ranked: #2/50 (score: 0.1764)
+
+Top 10 predictions:
+      1. skiing slalom (0.8111)
+  🏞️  2. skiing (not slalom or crosscountry) (0.1764)
+      3. sword fighting (0.0039)
+  👤  4. punching person (boxing) (0.0022)
+      5. shooting goal (soccer) (0.0014)
+      6. hurdling (0.0011)
+      7. clean and jerk (0.0007)
+      8. skipping rope (0.0005)
+      9. dunking basketball (0.0005)
+     10. hitting baseball (0.0003)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.1742
+⚠️  Background action in top 5!
+✅ Human action in top 5

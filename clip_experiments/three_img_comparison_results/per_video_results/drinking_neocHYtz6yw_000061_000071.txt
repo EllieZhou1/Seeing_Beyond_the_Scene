@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: neocHYtz6yw
+Action: drinking
+Time: 61-71s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 44/50 (score: 0.0005)
+  Top 10 predictions:
+        1. juggling soccer ball (0.1399)
+        2. juggling balls (0.0975)
+        3. dribbling basketball (0.0873)
+        4. golf driving (0.0745)
+        5. driving car (0.0680)
+        6. sword fighting (0.0571)
+        7. cleaning windows (0.0569)
+        8. skipping rope (0.0483)
+        9. hitting baseball (0.0480)
+       10. walking the dog (0.0441)
+
+HUMAN ONLY:
+  Correct action rank: 44/50 (score: 0.0001)
+  Top 10 predictions:
+        1. juggling balls (0.3863)
+        2. juggling soccer ball (0.1803)
+        3. sword fighting (0.1473)
+        4. skipping rope (0.1078)
+        5. punching person (boxing) (0.0763)
+        6. catching or throwing frisbee (0.0206)
+        7. hitting baseball (0.0151)
+        8. catching or throwing baseball (0.0129)
+        9. climbing a rope (0.0093)
+       10. dribbling basketball (0.0065)
+
+BACKGROUND ONLY:
+  Correct action rank: 41/50 (score: 0.0002)
+  Top 10 predictions:
+        1. walking the dog (0.1545)
+        2. driving car (0.1397)
+        3. dribbling basketball (0.1045)
+        4. golf driving (0.1026)
+        5. cleaning windows (0.0998)
+        6. shooting goal (soccer) (0.0711)
+        7. juggling soccer ball (0.0604)
+        8. catching or throwing baseball (0.0460)
+        9. hitting baseball (0.0304)
+       10. flying kite (0.0249)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: -3
+Ranking drop from human to background: -3
+🚨 WARNING: Background ranks higher than human-only!

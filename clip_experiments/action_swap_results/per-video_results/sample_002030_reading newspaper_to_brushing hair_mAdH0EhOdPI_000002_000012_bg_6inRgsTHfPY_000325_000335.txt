@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002030_reading newspaper_to_brushing hair_mAdH0EhOdPI_000002_000012_bg_6inRgsTHfPY_000325_000335
+Frame: 000050.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): brushing hair
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.7943)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #17/50 (score: 0.0034)
+  Background Action 'brushing hair' ranked: #3/50 (score: 0.0327)
+
+Top 10 predictions:
+      1. cleaning windows (0.7943)
+      2. opening bottle (0.0337)
+  🏞️  3. brushing hair (0.0327)
+      4. juggling soccer ball (0.0177)
+      5. brushing teeth (0.0162)
+      6. playing violin (0.0151)
+      7. punching person (boxing) (0.0079)
+      8. playing tennis (0.0073)
+      9. smoking (0.0071)
+     10. climbing ladder (0.0065)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -14
+Score gap (bg_score - human_score): 0.0293
+⚠️  Background action in top 5!

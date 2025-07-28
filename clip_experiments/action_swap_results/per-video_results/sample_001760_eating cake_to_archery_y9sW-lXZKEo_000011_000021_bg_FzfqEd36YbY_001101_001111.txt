@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001760_eating cake_to_archery_y9sW-lXZKEo_000011_000021_bg_FzfqEd36YbY_001101_001111
+Frame: 000050.jpg
+Human Action Label (Correct): eating cake
+Background Label (Incorrect): archery
+
+CLIP PREDICTIONS:
+  Predicted Label: playing piano (score: 0.2036)
+
+RANKING ANALYSIS:
+  Human Action 'eating cake' ranked: #26/50 (score: 0.0062)
+  Background Action 'archery' ranked: #43/50 (score: 0.0014)
+
+Top 10 predictions:
+      1. playing piano (0.2036)
+      2. driving car (0.1492)
+      3. playing violin (0.0883)
+      4. dribbling basketball (0.0476)
+      5. opening bottle (0.0453)
+      6. playing bass guitar (0.0416)
+      7. playing saxophone (0.0408)
+      8. playing accordion (0.0318)
+      9. cleaning windows (0.0316)
+     10. drinking (0.0307)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 17
+Score gap (bg_score - human_score): -0.0048

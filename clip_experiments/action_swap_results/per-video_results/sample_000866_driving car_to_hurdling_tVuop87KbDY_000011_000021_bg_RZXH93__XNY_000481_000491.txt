@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000866_driving car_to_hurdling_tVuop87KbDY_000011_000021_bg_RZXH93__XNY_000481_000491
+Frame: 000050.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): hurdling
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.6893)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #6/50 (score: 0.0090)
+  Background Action 'hurdling' ranked: #18/50 (score: 0.0016)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.6893)
+      2. shooting goal (soccer) (0.2051)
+      3. catching or throwing frisbee (0.0157)
+      4. flying kite (0.0122)
+      5. golf driving (0.0110)
+  👤  6. driving car (0.0090)
+      7. juggling balls (0.0090)
+      8. hitting baseball (0.0084)
+      9. dribbling basketball (0.0071)
+     10. catching or throwing baseball (0.0051)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 12
+Score gap (bg_score - human_score): -0.0074

@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: COO3QyFJ6WQ
+Action: playing saxophone
+Time: 2-12s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 5/50 (score: 0.0101)
+  Top 10 predictions:
+        1. juggling soccer ball (0.6031)
+        2. juggling balls (0.2217)
+        3. skipping rope (0.0622)
+        4. playing violin (0.0148)
+    👉  5. playing saxophone (0.0101)
+        6. playing guitar (0.0096)
+        7. playing trumpet (0.0096)
+        8. playing accordion (0.0073)
+        9. playing piano (0.0062)
+       10. shooting goal (soccer) (0.0058)
+
+HUMAN ONLY:
+  Correct action rank: 19/50 (score: 0.0032)
+  Top 10 predictions:
+        1. juggling soccer ball (0.5034)
+        2. juggling balls (0.2369)
+        3. skipping rope (0.0826)
+        4. dribbling basketball (0.0252)
+        5. dunking basketball (0.0237)
+        6. shooting basketball (0.0190)
+        7. shooting goal (soccer) (0.0130)
+        8. clean and jerk (0.0091)
+        9. punching person (boxing) (0.0086)
+       10. playing basketball (0.0078)
+
+BACKGROUND ONLY:
+  Correct action rank: 3/50 (score: 0.1149)
+  Top 10 predictions:
+        1. sweeping floor (0.3473)
+        2. smoking (0.1640)
+    👉  3. playing saxophone (0.1149)
+        4. skipping rope (0.0741)
+        5. opening bottle (0.0595)
+        6. juggling soccer ball (0.0389)
+        7. hitting baseball (0.0352)
+        8. shooting goal (soccer) (0.0272)
+        9. cleaning windows (0.0237)
+       10. juggling balls (0.0147)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -2
+Ranking drop from human to background: -16
+🚨 WARNING: Background ranks higher than human-only!

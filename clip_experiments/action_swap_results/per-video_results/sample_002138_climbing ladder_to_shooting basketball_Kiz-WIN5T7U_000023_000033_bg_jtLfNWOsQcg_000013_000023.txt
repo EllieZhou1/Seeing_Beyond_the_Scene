@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002138_climbing ladder_to_shooting basketball_Kiz-WIN5T7U_000023_000033_bg_jtLfNWOsQcg_000013_000023
+Frame: 000050.jpg
+Human Action Label (Correct): climbing ladder
+Background Label (Incorrect): shooting basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: walking the dog (score: 0.2136)
+
+RANKING ANALYSIS:
+  Human Action 'climbing ladder' ranked: #15/50 (score: 0.0156)
+  Background Action 'shooting basketball' ranked: #12/50 (score: 0.0220)
+
+Top 10 predictions:
+      1. walking the dog (0.2136)
+      2. juggling soccer ball (0.1151)
+      3. playing basketball (0.0784)
+      4. cleaning windows (0.0750)
+      5. juggling balls (0.0689)
+      6. dribbling basketball (0.0491)
+      7. flying kite (0.0414)
+      8. climbing a rope (0.0311)
+      9. skipping rope (0.0276)
+     10. catching or throwing frisbee (0.0273)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -3
+Score gap (bg_score - human_score): 0.0064

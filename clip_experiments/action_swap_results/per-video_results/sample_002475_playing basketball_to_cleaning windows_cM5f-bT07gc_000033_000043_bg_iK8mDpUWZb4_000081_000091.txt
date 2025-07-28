@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002475_playing basketball_to_cleaning windows_cM5f-bT07gc_000033_000043_bg_iK8mDpUWZb4_000081_000091
+Frame: 000050.jpg
+Human Action Label (Correct): playing basketball
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: playing basketball (score: 0.3589)
+
+RANKING ANALYSIS:
+  Human Action 'playing basketball' ranked: #1/50 (score: 0.3589)
+  Background Action 'cleaning windows' ranked: #5/50 (score: 0.0237)
+
+Top 10 predictions:
+  👤  1. playing basketball (0.3589)
+      2. dunking basketball (0.2851)
+      3. shooting basketball (0.1644)
+      4. dribbling basketball (0.0570)
+  🏞️  5. cleaning windows (0.0237)
+      6. shooting goal (soccer) (0.0132)
+      7. climbing ladder (0.0131)
+      8. playing volleyball (0.0125)
+      9. skipping rope (0.0103)
+     10. flying kite (0.0070)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 4
+Score gap (bg_score - human_score): -0.3353
+⚠️  Background action in top 5!
+✅ Human action in top 5

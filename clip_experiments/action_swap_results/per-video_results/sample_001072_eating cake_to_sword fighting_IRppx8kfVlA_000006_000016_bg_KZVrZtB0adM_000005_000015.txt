@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001072_eating cake_to_sword fighting_IRppx8kfVlA_000006_000016_bg_KZVrZtB0adM_000005_000015
+Frame: 000050.jpg
+Human Action Label (Correct): eating cake
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.1576)
+
+RANKING ANALYSIS:
+  Human Action 'eating cake' ranked: #36/50 (score: 0.0044)
+  Background Action 'sword fighting' ranked: #21/50 (score: 0.0115)
+
+Top 10 predictions:
+      1. climbing a rope (0.1576)
+      2. dribbling basketball (0.1231)
+      3. hitting baseball (0.0594)
+      4. playing accordion (0.0524)
+      5. juggling soccer ball (0.0507)
+      6. punching person (boxing) (0.0501)
+      7. playing basketball (0.0419)
+      8. opening bottle (0.0411)
+      9. driving car (0.0404)
+     10. playing violin (0.0325)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -15
+Score gap (bg_score - human_score): 0.0071

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000453_catching or throwing frisbee_to_brushing hair__cyz8Z0xjwg_000088_000098_bg_gHKQZvQ3RAk_000047_000057
+Frame: 000050.jpg
+Human Action Label (Correct): catching or throwing frisbee
+Background Label (Incorrect): brushing hair
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling balls (score: 0.3756)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing frisbee' ranked: #14/50 (score: 0.0162)
+  Background Action 'brushing hair' ranked: #10/50 (score: 0.0191)
+
+Top 10 predictions:
+      1. juggling balls (0.3756)
+      2. juggling soccer ball (0.1790)
+      3. surfing water (0.0618)
+      4. opening bottle (0.0604)
+      5. skipping rope (0.0514)
+      6. climbing a rope (0.0291)
+      7. playing violin (0.0223)
+      8. playing trumpet (0.0218)
+      9. cleaning windows (0.0214)
+  🏞️ 10. brushing hair (0.0191)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -4
+Score gap (bg_score - human_score): 0.0029

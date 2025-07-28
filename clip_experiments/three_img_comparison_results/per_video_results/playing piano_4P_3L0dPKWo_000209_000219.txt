@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 4P_3L0dPKWo
+Action: playing piano
+Time: 209-219s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 4/50 (score: 0.0528)
+  Top 10 predictions:
+        1. tying tie (0.5772)
+        2. playing accordion (0.1181)
+        3. playing saxophone (0.0995)
+    👉  4. playing piano (0.0528)
+        5. writing (0.0522)
+        6. playing trumpet (0.0220)
+        7. playing bass guitar (0.0171)
+        8. playing guitar (0.0110)
+        9. playing violin (0.0100)
+       10. juggling balls (0.0072)
+
+HUMAN ONLY:
+  Correct action rank: 4/50 (score: 0.0607)
+  Top 10 predictions:
+        1. tying tie (0.4678)
+        2. playing saxophone (0.1446)
+        3. playing accordion (0.0863)
+    👉  4. playing piano (0.0607)
+        5. writing (0.0443)
+        6. playing trumpet (0.0422)
+        7. playing bass guitar (0.0229)
+        8. playing guitar (0.0226)
+        9. playing violin (0.0154)
+       10. juggling balls (0.0139)
+
+BACKGROUND ONLY:
+  Correct action rank: 5/50 (score: 0.0735)
+  Top 10 predictions:
+        1. playing saxophone (0.1348)
+        2. playing accordion (0.1117)
+        3. writing (0.0952)
+        4. playing guitar (0.0775)
+    👉  5. playing piano (0.0735)
+        6. brushing hair (0.0709)
+        7. brushing teeth (0.0634)
+        8. playing violin (0.0621)
+        9. playing bass guitar (0.0607)
+       10. sword fighting (0.0603)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 1
+Ranking drop from human to background: 1

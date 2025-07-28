@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001242_driving car_to_climbing a rope_sJ9aA_w87II_000047_000057_bg_5HcTcVVikHs_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): climbing a rope
+
+CLIP PREDICTIONS:
+  Predicted Label: bowling (score: 0.2471)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #16/50 (score: 0.0123)
+  Background Action 'climbing a rope' ranked: #27/50 (score: 0.0036)
+
+Top 10 predictions:
+      1. bowling (0.2471)
+      2. hurdling (0.1734)
+      3. skipping rope (0.0590)
+      4. dunking basketball (0.0574)
+      5. playing volleyball (0.0537)
+      6. sword fighting (0.0484)
+      7. playing piano (0.0431)
+      8. playing basketball (0.0426)
+      9. dribbling basketball (0.0408)
+     10. shooting basketball (0.0390)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 11
+Score gap (bg_score - human_score): -0.0087

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001185_flying kite_to_playing guitar_xFfuQPo-K6U_000000_000010_bg_H7RA7onD_P8_000081_000091
+Frame: 000050.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): playing guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.1987)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #4/50 (score: 0.0620)
+  Background Action 'playing guitar' ranked: #16/50 (score: 0.0151)
+
+Top 10 predictions:
+      1. dunking basketball (0.1987)
+      2. climbing ladder (0.1497)
+      3. surfing water (0.0770)
+  👤  4. flying kite (0.0620)
+      5. shooting goal (soccer) (0.0591)
+      6. playing basketball (0.0507)
+      7. skipping rope (0.0478)
+      8. climbing a rope (0.0422)
+      9. hurdling (0.0399)
+     10. dribbling basketball (0.0361)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 12
+Score gap (bg_score - human_score): -0.0468
+✅ Human action in top 5

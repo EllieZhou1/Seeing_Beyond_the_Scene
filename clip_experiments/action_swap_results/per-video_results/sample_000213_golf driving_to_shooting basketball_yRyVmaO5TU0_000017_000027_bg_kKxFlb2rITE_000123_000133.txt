@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000213_golf driving_to_shooting basketball_yRyVmaO5TU0_000017_000027_bg_kKxFlb2rITE_000123_000133
+Frame: 000050.jpg
+Human Action Label (Correct): golf driving
+Background Label (Incorrect): shooting basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: golf driving (score: 0.6945)
+
+RANKING ANALYSIS:
+  Human Action 'golf driving' ranked: #1/50 (score: 0.6945)
+  Background Action 'shooting basketball' ranked: #34/50 (score: 0.0004)
+
+Top 10 predictions:
+  👤  1. golf driving (0.6945)
+      2. climbing ladder (0.0821)
+      3. climbing a rope (0.0512)
+      4. hurdling (0.0265)
+      5. juggling balls (0.0258)
+      6. juggling soccer ball (0.0187)
+      7. catching or throwing baseball (0.0135)
+      8. opening bottle (0.0121)
+      9. hitting baseball (0.0110)
+     10. sweeping floor (0.0065)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 33
+Score gap (bg_score - human_score): -0.6940
+✅ Human action in top 5

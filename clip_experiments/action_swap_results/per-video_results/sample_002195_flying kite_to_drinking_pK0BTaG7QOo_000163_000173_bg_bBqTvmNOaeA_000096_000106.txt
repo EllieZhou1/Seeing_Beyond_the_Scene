@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002195_flying kite_to_drinking_pK0BTaG7QOo_000163_000173_bg_bBqTvmNOaeA_000096_000106
+Frame: 000050.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): drinking
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.3191)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #43/50 (score: 0.0006)
+  Background Action 'drinking' ranked: #22/50 (score: 0.0091)
+
+Top 10 predictions:
+      1. opening bottle (0.3191)
+      2. smoking (0.1099)
+      3. playing piano (0.0695)
+      4. eating cake (0.0676)
+      5. cleaning windows (0.0453)
+      6. punching person (boxing) (0.0357)
+      7. driving car (0.0310)
+      8. reading book (0.0306)
+      9. brushing hair (0.0283)
+     10. climbing a rope (0.0262)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -21
+Score gap (bg_score - human_score): 0.0085

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002204_bowling_to_sword fighting_Epp4z1hle48_000033_000043_bg_WilGS1NzncU_000029_000039
+Frame: 000050.jpg
+Human Action Label (Correct): bowling
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting basketball (score: 0.2618)
+
+RANKING ANALYSIS:
+  Human Action 'bowling' ranked: #23/50 (score: 0.0024)
+  Background Action 'sword fighting' ranked: #13/50 (score: 0.0204)
+
+Top 10 predictions:
+      1. shooting basketball (0.2618)
+      2. skipping rope (0.1784)
+      3. archery (0.1690)
+      4. shooting goal (soccer) (0.0460)
+      5. playing volleyball (0.0412)
+      6. dunking basketball (0.0409)
+      7. juggling soccer ball (0.0386)
+      8. juggling balls (0.0344)
+      9. playing basketball (0.0305)
+     10. punching person (boxing) (0.0240)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -10
+Score gap (bg_score - human_score): 0.0180

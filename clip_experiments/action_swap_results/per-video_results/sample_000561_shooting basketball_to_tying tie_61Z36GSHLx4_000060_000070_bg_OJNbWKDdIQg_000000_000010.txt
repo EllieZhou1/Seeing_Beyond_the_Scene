@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000561_shooting basketball_to_tying tie_61Z36GSHLx4_000060_000070_bg_OJNbWKDdIQg_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): shooting basketball
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.7315)
+
+RANKING ANALYSIS:
+  Human Action 'shooting basketball' ranked: #8/50 (score: 0.0120)
+  Background Action 'tying tie' ranked: #26/50 (score: 0.0016)
+
+Top 10 predictions:
+      1. climbing ladder (0.7315)
+      2. bowling (0.0479)
+      3. hurdling (0.0386)
+      4. playing trumpet (0.0336)
+      5. playing bass guitar (0.0148)
+      6. dunking basketball (0.0131)
+      7. playing guitar (0.0128)
+  👤  8. shooting basketball (0.0120)
+      9. climbing a rope (0.0114)
+     10. playing piano (0.0102)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 18
+Score gap (bg_score - human_score): -0.0104

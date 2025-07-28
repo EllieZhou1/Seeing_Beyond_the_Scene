@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: p0pp-37fOdo
+Action: playing guitar
+Time: 123-133s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 17/50 (score: 0.0072)
+  Top 10 predictions:
+        1. tying tie (0.5008)
+        2. playing accordion (0.1909)
+        3. playing piano (0.0358)
+        4. skipping rope (0.0321)
+        5. playing bass guitar (0.0250)
+        6. smoking (0.0215)
+        7. flying kite (0.0199)
+        8. climbing ladder (0.0164)
+        9. playing saxophone (0.0150)
+       10. reading book (0.0131)
+
+HUMAN ONLY:
+  Correct action rank: 36/50 (score: 0.0012)
+  Top 10 predictions:
+        1. tying tie (0.5300)
+        2. juggling balls (0.1131)
+        3. juggling soccer ball (0.0764)
+        4. climbing ladder (0.0409)
+        5. skipping rope (0.0310)
+        6. playing accordion (0.0304)
+        7. brushing teeth (0.0124)
+        8. smoking (0.0114)
+        9. dribbling basketball (0.0113)
+       10. playing saxophone (0.0099)
+
+BACKGROUND ONLY:
+  Correct action rank: 23/50 (score: 0.0089)
+  Top 10 predictions:
+        1. playing saxophone (0.1630)
+        2. cleaning windows (0.1580)
+        3. skipping rope (0.0833)
+        4. brushing hair (0.0615)
+        5. smoking (0.0527)
+        6. climbing ladder (0.0483)
+        7. tying tie (0.0340)
+        8. opening bottle (0.0316)
+        9. playing accordion (0.0298)
+       10. playing trumpet (0.0287)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 6
+Ranking drop from human to background: -13
+🚨 WARNING: Background ranks higher than human-only!

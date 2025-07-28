@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 9yqjAckuPM0
+Action: skiing slalom
+Time: 136-146s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 5/50 (score: 0.0353)
+  Top 10 predictions:
+        1. skipping rope (0.6410)
+        2. tying tie (0.0904)
+        3. climbing a rope (0.0749)
+        4. sword fighting (0.0431)
+    👉  5. skiing slalom (0.0353)
+        6. climbing ladder (0.0119)
+        7. playing violin (0.0116)
+        8. smoking (0.0107)
+        9. skiing (not slalom or crosscountry) (0.0085)
+       10. playing accordion (0.0073)
+
+HUMAN ONLY:
+  Correct action rank: 14/50 (score: 0.0144)
+  Top 10 predictions:
+        1. smoking (0.2591)
+        2. skipping rope (0.1491)
+        3. playing saxophone (0.0759)
+        4. playing trumpet (0.0678)
+        5. sword fighting (0.0611)
+        6. brushing teeth (0.0364)
+        7. punching person (boxing) (0.0361)
+        8. opening bottle (0.0351)
+        9. playing violin (0.0310)
+       10. tying tie (0.0275)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.2220)
+  Top 10 predictions:
+    👉  1. skiing slalom (0.2220)
+        2. writing (0.1923)
+        3. tying tie (0.1395)
+        4. skipping rope (0.0768)
+        5. climbing a rope (0.0718)
+        6. sweeping floor (0.0555)
+        7. sword fighting (0.0353)
+        8. playing piano (0.0215)
+        9. climbing ladder (0.0215)
+       10. skiing (not slalom or crosscountry) (0.0189)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -4
+Ranking drop from human to background: -13
+🚨 WARNING: Background ranks higher than human-only!

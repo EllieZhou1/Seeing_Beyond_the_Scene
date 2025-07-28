@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001963_reading newspaper_to_sword fighting_gKqKWn6Nl0A_000035_000045_bg_K76Ezw4EbiM_000134_000144
+Frame: 000050.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.2229)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #33/50 (score: 0.0046)
+  Background Action 'sword fighting' ranked: #4/50 (score: 0.0678)
+
+Top 10 predictions:
+      1. climbing a rope (0.2229)
+      2. archery (0.1023)
+      3. skiing slalom (0.0758)
+  🏞️  4. sword fighting (0.0678)
+      5. hurdling (0.0614)
+      6. shooting goal (soccer) (0.0522)
+      7. opening bottle (0.0317)
+      8. climbing ladder (0.0283)
+      9. skipping rope (0.0267)
+     10. walking the dog (0.0235)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -29
+Score gap (bg_score - human_score): 0.0632
+⚠️  Background action in top 5!

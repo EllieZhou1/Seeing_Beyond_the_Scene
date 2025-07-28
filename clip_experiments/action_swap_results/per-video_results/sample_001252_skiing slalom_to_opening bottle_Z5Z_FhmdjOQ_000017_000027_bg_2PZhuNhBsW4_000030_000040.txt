@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001252_skiing slalom_to_opening bottle_Z5Z_FhmdjOQ_000017_000027_bg_2PZhuNhBsW4_000030_000040
+Frame: 000050.jpg
+Human Action Label (Correct): skiing slalom
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.7875)
+
+RANKING ANALYSIS:
+  Human Action 'skiing slalom' ranked: #33/50 (score: 0.0003)
+  Background Action 'opening bottle' ranked: #1/50 (score: 0.7875)
+
+Top 10 predictions:
+  🏞️  1. opening bottle (0.7875)
+      2. drinking (0.0742)
+      3. reading newspaper (0.0359)
+      4. reading book (0.0195)
+      5. sword fighting (0.0136)
+      6. shooting goal (soccer) (0.0117)
+      7. writing (0.0101)
+      8. punching person (boxing) (0.0079)
+      9. tying tie (0.0057)
+     10. playing accordion (0.0045)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -32
+Score gap (bg_score - human_score): 0.7872
+⚠️  Background action in top 5!

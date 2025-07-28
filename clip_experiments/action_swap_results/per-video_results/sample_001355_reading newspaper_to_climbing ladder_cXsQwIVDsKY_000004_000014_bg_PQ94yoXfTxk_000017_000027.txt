@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001355_reading newspaper_to_climbing ladder_cXsQwIVDsKY_000004_000014_bg_PQ94yoXfTxk_000017_000027
+Frame: 000050.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): climbing ladder
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.6606)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #42/50 (score: 0.0004)
+  Background Action 'climbing ladder' ranked: #2/50 (score: 0.0927)
+
+Top 10 predictions:
+      1. surfing water (0.6606)
+  🏞️  2. climbing ladder (0.0927)
+      3. climbing a rope (0.0841)
+      4. cleaning windows (0.0271)
+      5. dunking basketball (0.0195)
+      6. sword fighting (0.0194)
+      7. canoeing or kayaking (0.0111)
+      8. hurdling (0.0108)
+      9. opening bottle (0.0063)
+     10. bowling (0.0062)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -40
+Score gap (bg_score - human_score): 0.0924
+⚠️  Background action in top 5!

@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: pK0BTaG7QOo
+Action: flying kite
+Time: 163-173s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.9988)
+  Top 10 predictions:
+    👉  1. flying kite (0.9988)
+        2. catching or throwing frisbee (0.0007)
+        3. skiing slalom (0.0002)
+        4. skiing (not slalom or crosscountry) (0.0001)
+        5. juggling balls (0.0000)
+        6. climbing a rope (0.0000)
+        7. shooting goal (soccer) (0.0000)
+        8. catching or throwing baseball (0.0000)
+        9. surfing water (0.0000)
+       10. dunking basketball (0.0000)
+
+HUMAN ONLY:
+  Correct action rank: 18/50 (score: 0.0126)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.1893)
+        2. dunking basketball (0.1167)
+        3. skiing slalom (0.1048)
+        4. shooting basketball (0.0574)
+        5. dribbling basketball (0.0546)
+        6. playing basketball (0.0458)
+        7. juggling soccer ball (0.0423)
+        8. climbing ladder (0.0331)
+        9. hitting baseball (0.0291)
+       10. skipping rope (0.0270)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.9988)
+  Top 10 predictions:
+    👉  1. flying kite (0.9988)
+        2. catching or throwing frisbee (0.0007)
+        3. skiing slalom (0.0002)
+        4. juggling balls (0.0001)
+        5. skiing (not slalom or crosscountry) (0.0000)
+        6. climbing a rope (0.0000)
+        7. shooting goal (soccer) (0.0000)
+        8. catching or throwing baseball (0.0000)
+        9. surfing water (0.0000)
+       10. juggling soccer ball (0.0000)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -17
+🚨 WARNING: Background ranks higher than human-only!

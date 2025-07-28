@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: HxsXFx953aA
+Action: climbing ladder
+Time: 27-37s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 3/50 (score: 0.0824)
+  Top 10 predictions:
+        1. skipping rope (0.5681)
+        2. climbing a rope (0.2057)
+    👉  3. climbing ladder (0.0824)
+        4. flying kite (0.0363)
+        5. archery (0.0151)
+        6. playing violin (0.0148)
+        7. juggling balls (0.0146)
+        8. sword fighting (0.0142)
+        9. dunking basketball (0.0103)
+       10. dribbling basketball (0.0072)
+
+HUMAN ONLY:
+  Correct action rank: 20/50 (score: 0.0040)
+  Top 10 predictions:
+        1. skipping rope (0.5641)
+        2. punching person (boxing) (0.0678)
+        3. juggling balls (0.0635)
+        4. juggling soccer ball (0.0623)
+        5. playing violin (0.0522)
+        6. playing accordion (0.0190)
+        7. dribbling basketball (0.0179)
+        8. playing basketball (0.0121)
+        9. shooting goal (soccer) (0.0095)
+       10. playing saxophone (0.0092)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.3717)
+  Top 10 predictions:
+    👉  1. climbing ladder (0.3717)
+        2. climbing a rope (0.2086)
+        3. dunking basketball (0.1411)
+        4. flying kite (0.0665)
+        5. hurdling (0.0559)
+        6. dribbling basketball (0.0398)
+        7. skipping rope (0.0308)
+        8. shooting goal (soccer) (0.0221)
+        9. skiing slalom (0.0176)
+       10. sweeping floor (0.0051)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -2
+Ranking drop from human to background: -19
+🚨 WARNING: Background ranks higher than human-only!

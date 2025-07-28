@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: cOktW9SKRBM
+Action: hurdling
+Time: 3-13s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.8871)
+  Top 10 predictions:
+    👉  1. hurdling (0.8871)
+        2. catching or throwing frisbee (0.0394)
+        3. skiing slalom (0.0171)
+        4. shooting goal (soccer) (0.0107)
+        5. skipping rope (0.0095)
+        6. catching or throwing baseball (0.0077)
+        7. sweeping floor (0.0059)
+        8. skiing (not slalom or crosscountry) (0.0038)
+        9. dribbling basketball (0.0028)
+       10. clean and jerk (0.0019)
+
+HUMAN ONLY:
+  Correct action rank: 4/50 (score: 0.0742)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.4141)
+        2. juggling soccer ball (0.1271)
+        3. dribbling basketball (0.0909)
+    👉  4. hurdling (0.0742)
+        5. skiing slalom (0.0635)
+        6. catching or throwing frisbee (0.0443)
+        7. punching person (boxing) (0.0239)
+        8. skipping rope (0.0230)
+        9. juggling balls (0.0155)
+       10. playing basketball (0.0141)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.8357)
+  Top 10 predictions:
+    👉  1. hurdling (0.8357)
+        2. skiing slalom (0.0996)
+        3. skiing (not slalom or crosscountry) (0.0132)
+        4. sweeping floor (0.0108)
+        5. catching or throwing frisbee (0.0080)
+        6. dribbling basketball (0.0054)
+        7. driving car (0.0043)
+        8. shooting goal (soccer) (0.0038)
+        9. climbing a rope (0.0028)
+       10. bowling (0.0027)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -3
+🚨 WARNING: Background ranks higher than human-only!

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001729_punching person (boxing)_to_skipping rope_1OnrPst_Cxs_000000_000010_bg_nxDAt9SkPoA_000123_000133
+Frame: 000050.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): skipping rope
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.4340)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #1/50 (score: 0.4340)
+  Background Action 'skipping rope' ranked: #8/50 (score: 0.0146)
+
+Top 10 predictions:
+  👤  1. punching person (boxing) (0.4340)
+      2. sword fighting (0.2650)
+      3. sweeping floor (0.1006)
+      4. climbing ladder (0.0361)
+      5. juggling balls (0.0294)
+      6. climbing a rope (0.0254)
+      7. clean and jerk (0.0246)
+  🏞️  8. skipping rope (0.0146)
+      9. deadlifting (0.0115)
+     10. opening bottle (0.0091)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 7
+Score gap (bg_score - human_score): -0.4194
+✅ Human action in top 5

@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 9mUwLfcztyE
+Action: playing bass guitar
+Time: 18-28s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 18/50 (score: 0.0096)
+  Top 10 predictions:
+        1. playing accordion (0.2265)
+        2. juggling soccer ball (0.1332)
+        3. playing trumpet (0.1195)
+        4. playing guitar (0.0873)
+        5. playing violin (0.0740)
+        6. playing saxophone (0.0600)
+        7. skipping rope (0.0301)
+        8. playing piano (0.0298)
+        9. brushing teeth (0.0280)
+       10. eating cake (0.0258)
+
+HUMAN ONLY:
+  Correct action rank: 27/50 (score: 0.0042)
+  Top 10 predictions:
+        1. punching person (boxing) (0.4474)
+        2. juggling soccer ball (0.0870)
+        3. opening bottle (0.0554)
+        4. juggling balls (0.0443)
+        5. eating ice cream (0.0366)
+        6. brushing teeth (0.0315)
+        7. cleaning windows (0.0306)
+        8. playing saxophone (0.0227)
+        9. playing accordion (0.0222)
+       10. smoking (0.0199)
+
+BACKGROUND ONLY:
+  Correct action rank: 32/50 (score: 0.0037)
+  Top 10 predictions:
+        1. cleaning windows (0.2727)
+        2. opening bottle (0.1189)
+        3. climbing a rope (0.0875)
+        4. climbing ladder (0.0539)
+        5. playing saxophone (0.0439)
+        6. surfing water (0.0428)
+        7. playing accordion (0.0381)
+        8. juggling soccer ball (0.0323)
+        9. dribbling basketball (0.0257)
+       10. dunking basketball (0.0235)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 14
+Ranking drop from human to background: 5

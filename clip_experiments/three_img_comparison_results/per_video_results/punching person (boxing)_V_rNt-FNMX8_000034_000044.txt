@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: V_rNt-FNMX8
+Action: punching person (boxing)
+Time: 34-44s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.9841)
+  Top 10 predictions:
+    👉  1. punching person (boxing) (0.9841)
+        2. clean and jerk (0.0043)
+        3. hurdling (0.0038)
+        4. sword fighting (0.0011)
+        5. dribbling basketball (0.0008)
+        6. climbing ladder (0.0007)
+        7. climbing a rope (0.0006)
+        8. opening bottle (0.0005)
+        9. dunking basketball (0.0005)
+       10. shooting goal (soccer) (0.0004)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.9964)
+  Top 10 predictions:
+    👉  1. punching person (boxing) (0.9964)
+        2. hurdling (0.0011)
+        3. climbing a rope (0.0003)
+        4. tying tie (0.0003)
+        5. clean and jerk (0.0003)
+        6. climbing ladder (0.0002)
+        7. opening bottle (0.0002)
+        8. sword fighting (0.0002)
+        9. smoking (0.0001)
+       10. juggling balls (0.0001)
+
+BACKGROUND ONLY:
+  Correct action rank: 10/50 (score: 0.0336)
+  Top 10 predictions:
+        1. climbing ladder (0.1152)
+        2. climbing a rope (0.1031)
+        3. flying kite (0.0606)
+        4. skiing slalom (0.0567)
+        5. playing saxophone (0.0521)
+        6. sword fighting (0.0509)
+        7. smoking (0.0424)
+        8. surfing water (0.0415)
+        9. skiing (not slalom or crosscountry) (0.0403)
+    👉 10. punching person (boxing) (0.0336)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 9
+Ranking drop from human to background: 9

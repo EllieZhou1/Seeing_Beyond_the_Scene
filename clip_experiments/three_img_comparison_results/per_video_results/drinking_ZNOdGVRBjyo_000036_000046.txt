@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: ZNOdGVRBjyo
+Action: drinking
+Time: 36-46s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 9/50 (score: 0.0328)
+  Top 10 predictions:
+        1. dribbling basketball (0.0960)
+        2. dunking basketball (0.0884)
+        3. playing basketball (0.0862)
+        4. shooting basketball (0.0669)
+        5. playing saxophone (0.0568)
+        6. playing trumpet (0.0487)
+        7. writing (0.0477)
+        8. hitting baseball (0.0402)
+    👉  9. drinking (0.0328)
+       10. smoking (0.0325)
+
+HUMAN ONLY:
+  Correct action rank: 10/50 (score: 0.0369)
+  Top 10 predictions:
+        1. dunking basketball (0.1220)
+        2. dribbling basketball (0.1108)
+        3. playing saxophone (0.0803)
+        4. playing basketball (0.0529)
+        5. shooting basketball (0.0514)
+        6. writing (0.0437)
+        7. hitting baseball (0.0422)
+        8. smoking (0.0420)
+        9. playing trumpet (0.0415)
+    👉 10. drinking (0.0369)
+
+BACKGROUND ONLY:
+  Correct action rank: 11/50 (score: 0.0122)
+  Top 10 predictions:
+        1. surfing water (0.6170)
+        2. opening bottle (0.0802)
+        3. brushing hair (0.0551)
+        4. dunking basketball (0.0432)
+        5. hitting baseball (0.0254)
+        6. playing saxophone (0.0188)
+        7. dribbling basketball (0.0147)
+        8. cleaning windows (0.0144)
+        9. sweeping floor (0.0131)
+       10. brushing teeth (0.0128)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 2
+Ranking drop from human to background: 1

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001298_tying tie_to_surfing water_Nbr7vfA0a6s_000077_000087_bg_g42jMCq1E4Q_000081_000091
+Frame: 000050.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): surfing water
+
+CLIP PREDICTIONS:
+  Predicted Label: tying tie (score: 0.9411)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #1/50 (score: 0.9411)
+  Background Action 'surfing water' ranked: #35/50 (score: 0.0001)
+
+Top 10 predictions:
+  👤  1. tying tie (0.9411)
+      2. juggling balls (0.0098)
+      3. brushing teeth (0.0082)
+      4. juggling soccer ball (0.0077)
+      5. punching person (boxing) (0.0069)
+      6. smoking (0.0041)
+      7. drinking (0.0034)
+      8. opening bottle (0.0024)
+      9. cleaning windows (0.0018)
+     10. playing trumpet (0.0016)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 34
+Score gap (bg_score - human_score): -0.9410
+✅ Human action in top 5

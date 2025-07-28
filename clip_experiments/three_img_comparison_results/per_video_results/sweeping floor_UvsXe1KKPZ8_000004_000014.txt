@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: UvsXe1KKPZ8
+Action: sweeping floor
+Time: 4-14s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 7/50 (score: 0.0442)
+  Top 10 predictions:
+        1. climbing ladder (0.1580)
+        2. opening bottle (0.1184)
+        3. climbing a rope (0.0900)
+        4. juggling soccer ball (0.0674)
+        5. playing piano (0.0588)
+        6. punching person (boxing) (0.0545)
+    👉  7. sweeping floor (0.0442)
+        8. playing violin (0.0424)
+        9. skipping rope (0.0404)
+       10. cleaning windows (0.0399)
+
+HUMAN ONLY:
+  Correct action rank: 37/50 (score: 0.0026)
+  Top 10 predictions:
+        1. punching person (boxing) (0.3413)
+        2. juggling soccer ball (0.0579)
+        3. dribbling basketball (0.0478)
+        4. playing violin (0.0414)
+        5. drinking (0.0389)
+        6. juggling balls (0.0385)
+        7. opening bottle (0.0382)
+        8. playing saxophone (0.0367)
+        9. smoking (0.0299)
+       10. skipping rope (0.0283)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.2741)
+  Top 10 predictions:
+    👉  1. sweeping floor (0.2741)
+        2. playing piano (0.2654)
+        3. playing accordion (0.1365)
+        4. climbing ladder (0.0372)
+        5. opening bottle (0.0338)
+        6. punching person (boxing) (0.0274)
+        7. playing violin (0.0274)
+        8. cleaning windows (0.0250)
+        9. juggling soccer ball (0.0157)
+       10. hurdling (0.0150)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -6
+Ranking drop from human to background: -36
+🚨 WARNING: Background ranks higher than human-only!

@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000814_playing violin_to_opening bottle_RL9vt7ZinXU_000116_000126_bg_6bwkUwMT87E_000003_000013
+Frame: 000050.jpg
+Human Action Label (Correct): playing violin
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.6691)
+
+RANKING ANALYSIS:
+  Human Action 'playing violin' ranked: #3/50 (score: 0.0350)
+  Background Action 'opening bottle' ranked: #1/50 (score: 0.6691)
+
+Top 10 predictions:
+  🏞️  1. opening bottle (0.6691)
+      2. drinking (0.0980)
+  👤  3. playing violin (0.0350)
+      4. sword fighting (0.0334)
+      5. brushing teeth (0.0242)
+      6. writing (0.0195)
+      7. cleaning windows (0.0190)
+      8. brushing hair (0.0145)
+      9. juggling balls (0.0118)
+     10. smoking (0.0110)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.6341
+⚠️  Background action in top 5!
+✅ Human action in top 5

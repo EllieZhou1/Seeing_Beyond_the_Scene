@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 6Q1bpfHknHs
+Action: smoking
+Time: 5-15s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.1853)
+  Top 10 predictions:
+    👉  1. smoking (0.1853)
+        2. playing saxophone (0.0811)
+        3. eating cake (0.0776)
+        4. writing (0.0646)
+        5. playing guitar (0.0583)
+        6. playing piano (0.0561)
+        7. juggling soccer ball (0.0545)
+        8. reading book (0.0299)
+        9. playing accordion (0.0272)
+       10. drinking (0.0271)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.1704)
+  Top 10 predictions:
+    👉  1. smoking (0.1704)
+        2. juggling soccer ball (0.1307)
+        3. writing (0.0630)
+        4. brushing teeth (0.0628)
+        5. playing accordion (0.0558)
+        6. skipping rope (0.0529)
+        7. playing saxophone (0.0439)
+        8. playing guitar (0.0356)
+        9. eating cake (0.0302)
+       10. punching person (boxing) (0.0291)
+
+BACKGROUND ONLY:
+  Correct action rank: 28/50 (score: 0.0115)
+  Top 10 predictions:
+        1. skiing slalom (0.0841)
+        2. catching or throwing baseball (0.0729)
+        3. punching person (boxing) (0.0579)
+        4. climbing ladder (0.0557)
+        5. reading newspaper (0.0512)
+        6. shooting goal (soccer) (0.0492)
+        7. sweeping floor (0.0468)
+        8. dunking basketball (0.0452)
+        9. opening bottle (0.0435)
+       10. dribbling basketball (0.0412)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 27
+Ranking drop from human to background: 27

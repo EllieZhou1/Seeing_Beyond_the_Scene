@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: M99mgKKmPqs
+Action: bowling
+Time: 2-12s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 15/50 (score: 0.0124)
+  Top 10 predictions:
+        1. playing piano (0.1362)
+        2. juggling soccer ball (0.1303)
+        3. juggling balls (0.0956)
+        4. playing accordion (0.0674)
+        5. smoking (0.0668)
+        6. punching person (boxing) (0.0600)
+        7. playing saxophone (0.0520)
+        8. opening bottle (0.0426)
+        9. playing violin (0.0366)
+       10. playing trumpet (0.0332)
+
+HUMAN ONLY:
+  Correct action rank: 24/50 (score: 0.0091)
+  Top 10 predictions:
+        1. juggling soccer ball (0.1125)
+        2. smoking (0.1076)
+        3. juggling balls (0.0747)
+        4. walking the dog (0.0744)
+        5. punching person (boxing) (0.0608)
+        6. shooting goal (soccer) (0.0524)
+        7. skipping rope (0.0516)
+        8. dribbling basketball (0.0366)
+        9. writing (0.0312)
+       10. climbing a rope (0.0312)
+
+BACKGROUND ONLY:
+  Correct action rank: 7/50 (score: 0.0375)
+  Top 10 predictions:
+        1. skiing (not slalom or crosscountry) (0.0984)
+        2. surfing water (0.0949)
+        3. skiing slalom (0.0871)
+        4. flying kite (0.0798)
+        5. cleaning windows (0.0760)
+        6. canoeing or kayaking (0.0619)
+    👉  7. bowling (0.0375)
+        8. shooting basketball (0.0336)
+        9. smoking (0.0330)
+       10. hurdling (0.0316)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: -8
+Ranking drop from human to background: -17
+🚨 WARNING: Background ranks higher than human-only!

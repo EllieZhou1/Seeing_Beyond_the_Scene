@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000771_climbing a rope_to_brushing hair_d4i08JKdXXI_000031_000041_bg_MPDAag15nXA_000016_000026
+Frame: 000050.jpg
+Human Action Label (Correct): climbing a rope
+Background Label (Incorrect): brushing hair
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.7083)
+
+RANKING ANALYSIS:
+  Human Action 'climbing a rope' ranked: #13/50 (score: 0.0047)
+  Background Action 'brushing hair' ranked: #46/50 (score: 0.0002)
+
+Top 10 predictions:
+      1. skiing slalom (0.7083)
+      2. skiing (not slalom or crosscountry) (0.0745)
+      3. hurdling (0.0423)
+      4. dribbling basketball (0.0333)
+      5. surfing water (0.0216)
+      6. shooting goal (soccer) (0.0178)
+      7. flying kite (0.0097)
+      8. archery (0.0089)
+      9. dunking basketball (0.0084)
+     10. writing (0.0058)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 33
+Score gap (bg_score - human_score): -0.0045

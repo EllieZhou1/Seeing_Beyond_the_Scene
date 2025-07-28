@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001981_brushing hair_to_golf driving_GlykR4fqsVc_000049_000059_bg_RAmkFqPXKF4_000003_000013
+Frame: 000050.jpg
+Human Action Label (Correct): brushing hair
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.3289)
+
+RANKING ANALYSIS:
+  Human Action 'brushing hair' ranked: #7/50 (score: 0.0239)
+  Background Action 'golf driving' ranked: #12/50 (score: 0.0129)
+
+Top 10 predictions:
+      1. sword fighting (0.3289)
+      2. shooting goal (soccer) (0.1530)
+      3. archery (0.1407)
+      4. juggling soccer ball (0.1165)
+      5. skipping rope (0.0515)
+      6. hitting baseball (0.0339)
+  👤  7. brushing hair (0.0239)
+      8. playing violin (0.0203)
+      9. playing tennis (0.0172)
+     10. catching or throwing frisbee (0.0171)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 5
+Score gap (bg_score - human_score): -0.0110

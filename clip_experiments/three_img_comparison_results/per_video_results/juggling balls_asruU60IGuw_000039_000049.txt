@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: asruU60IGuw
+Action: juggling balls
+Time: 39-49s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.5866)
+  Top 10 predictions:
+    👉  1. juggling balls (0.5866)
+        2. juggling soccer ball (0.2695)
+        3. playing accordion (0.0201)
+        4. playing trumpet (0.0151)
+        5. opening bottle (0.0126)
+        6. eating ice cream (0.0094)
+        7. drinking (0.0087)
+        8. writing (0.0086)
+        9. playing guitar (0.0061)
+       10. shooting basketball (0.0055)
+
+HUMAN ONLY:
+  Correct action rank: 2/50 (score: 0.3244)
+  Top 10 predictions:
+        1. juggling soccer ball (0.3472)
+    👉  2. juggling balls (0.3244)
+        3. punching person (boxing) (0.1005)
+        4. skipping rope (0.0413)
+        5. playing trumpet (0.0166)
+        6. eating ice cream (0.0154)
+        7. playing saxophone (0.0110)
+        8. dribbling basketball (0.0100)
+        9. smoking (0.0092)
+       10. brushing teeth (0.0076)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.2208)
+  Top 10 predictions:
+    👉  1. juggling balls (0.2208)
+        2. reading book (0.0871)
+        3. playing piano (0.0749)
+        4. playing accordion (0.0603)
+        5. writing (0.0571)
+        6. juggling soccer ball (0.0482)
+        7. sweeping floor (0.0460)
+        8. shooting basketball (0.0409)
+        9. flying kite (0.0362)
+       10. playing trumpet (0.0284)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -1
+🚨 WARNING: Background ranks higher than human-only!

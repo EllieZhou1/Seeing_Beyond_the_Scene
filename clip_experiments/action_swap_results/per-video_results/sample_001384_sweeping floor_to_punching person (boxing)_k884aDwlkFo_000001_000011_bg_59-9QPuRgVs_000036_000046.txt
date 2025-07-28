@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001384_sweeping floor_to_punching person (boxing)_k884aDwlkFo_000001_000011_bg_59-9QPuRgVs_000036_000046
+Frame: 000050.jpg
+Human Action Label (Correct): sweeping floor
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.4672)
+
+RANKING ANALYSIS:
+  Human Action 'sweeping floor' ranked: #5/50 (score: 0.0352)
+  Background Action 'punching person (boxing)' ranked: #23/50 (score: 0.0042)
+
+Top 10 predictions:
+      1. skipping rope (0.4672)
+      2. playing tennis (0.1367)
+      3. sword fighting (0.0660)
+      4. climbing a rope (0.0378)
+  👤  5. sweeping floor (0.0352)
+      6. bowling (0.0324)
+      7. hitting baseball (0.0301)
+      8. dribbling basketball (0.0242)
+      9. juggling soccer ball (0.0235)
+     10. skiing slalom (0.0199)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 18
+Score gap (bg_score - human_score): -0.0310
+✅ Human action in top 5

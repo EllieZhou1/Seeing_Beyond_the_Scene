@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: SXDvx7OFRRQ
+Action: writing
+Time: 1-11s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.2433)
+  Top 10 predictions:
+    👉  1. writing (0.2433)
+        2. opening bottle (0.1989)
+        3. skiing (not slalom or crosscountry) (0.1931)
+        4. skiing slalom (0.1027)
+        5. reading book (0.0783)
+        6. eating ice cream (0.0619)
+        7. reading newspaper (0.0327)
+        8. brushing teeth (0.0131)
+        9. deadlifting (0.0084)
+       10. shooting goal (soccer) (0.0082)
+
+HUMAN ONLY:
+  Correct action rank: 17/50 (score: 0.0086)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.2439)
+        2. skiing slalom (0.1752)
+        3. dunking basketball (0.1059)
+        4. shooting basketball (0.0485)
+        5. dribbling basketball (0.0423)
+        6. climbing ladder (0.0358)
+        7. playing basketball (0.0338)
+        8. punching person (boxing) (0.0251)
+        9. hitting baseball (0.0240)
+       10. skipping rope (0.0233)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.1926)
+  Top 10 predictions:
+        1. opening bottle (0.2307)
+    👉  2. writing (0.1926)
+        3. skiing (not slalom or crosscountry) (0.1807)
+        4. skiing slalom (0.1560)
+        5. eating ice cream (0.0715)
+        6. reading book (0.0505)
+        7. reading newspaper (0.0273)
+        8. brushing teeth (0.0150)
+        9. tying tie (0.0077)
+       10. sword fighting (0.0061)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 1
+Ranking drop from human to background: -15
+🚨 WARNING: Background ranks higher than human-only!

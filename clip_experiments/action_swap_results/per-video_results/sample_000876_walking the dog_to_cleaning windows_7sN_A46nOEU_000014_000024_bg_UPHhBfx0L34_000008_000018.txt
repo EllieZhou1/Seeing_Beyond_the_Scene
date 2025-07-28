@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000876_walking the dog_to_cleaning windows_7sN_A46nOEU_000014_000024_bg_UPHhBfx0L34_000008_000018
+Frame: 000050.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.7496)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #32/50 (score: 0.0001)
+  Background Action 'cleaning windows' ranked: #1/50 (score: 0.7496)
+
+Top 10 predictions:
+  🏞️  1. cleaning windows (0.7496)
+      2. climbing ladder (0.1429)
+      3. climbing a rope (0.0729)
+      4. dunking basketball (0.0096)
+      5. skipping rope (0.0053)
+      6. juggling balls (0.0043)
+      7. juggling soccer ball (0.0022)
+      8. punching person (boxing) (0.0020)
+      9. catching or throwing frisbee (0.0013)
+     10. hurdling (0.0010)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -31
+Score gap (bg_score - human_score): 0.7495
+⚠️  Background action in top 5!

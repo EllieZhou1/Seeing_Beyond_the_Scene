@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: UItbuPersiY
+Action: driving car
+Time: 95-105s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 14/50 (score: 0.0210)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.2833)
+        2. skiing slalom (0.0654)
+        3. hurdling (0.0619)
+        4. catching or throwing baseball (0.0553)
+        5. catching or throwing frisbee (0.0536)
+        6. juggling soccer ball (0.0421)
+        7. flying kite (0.0408)
+        8. climbing a rope (0.0312)
+        9. archery (0.0302)
+       10. sword fighting (0.0296)
+
+HUMAN ONLY:
+  Correct action rank: 33/50 (score: 0.0048)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.2439)
+        2. skiing slalom (0.1752)
+        3. dunking basketball (0.1059)
+        4. shooting basketball (0.0485)
+        5. dribbling basketball (0.0423)
+        6. climbing ladder (0.0358)
+        7. playing basketball (0.0338)
+        8. punching person (boxing) (0.0251)
+        9. hitting baseball (0.0240)
+       10. skipping rope (0.0233)
+
+BACKGROUND ONLY:
+  Correct action rank: 17/50 (score: 0.0177)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.2644)
+        2. skiing slalom (0.0747)
+        3. hurdling (0.0686)
+        4. catching or throwing baseball (0.0593)
+        5. catching or throwing frisbee (0.0539)
+        6. juggling soccer ball (0.0423)
+        7. flying kite (0.0404)
+        8. archery (0.0337)
+        9. climbing a rope (0.0301)
+       10. skiing (not slalom or crosscountry) (0.0290)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 3
+Ranking drop from human to background: -16
+🚨 WARNING: Background ranks higher than human-only!

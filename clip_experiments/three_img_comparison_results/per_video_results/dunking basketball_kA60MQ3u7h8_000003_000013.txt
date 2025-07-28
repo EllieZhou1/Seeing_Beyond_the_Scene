@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: kA60MQ3u7h8
+Action: dunking basketball
+Time: 3-13s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 8/50 (score: 0.0402)
+  Top 10 predictions:
+        1. skiing slalom (0.1575)
+        2. shooting goal (soccer) (0.1507)
+        3. catching or throwing frisbee (0.0724)
+        4. playing tennis (0.0552)
+        5. dribbling basketball (0.0543)
+        6. skiing (not slalom or crosscountry) (0.0452)
+        7. golf driving (0.0438)
+    👉  8. dunking basketball (0.0402)
+        9. driving car (0.0374)
+       10. sweeping floor (0.0366)
+
+HUMAN ONLY:
+  Correct action rank: 3/50 (score: 0.1065)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.2423)
+        2. skiing slalom (0.1735)
+    👉  3. dunking basketball (0.1065)
+        4. shooting basketball (0.0487)
+        5. dribbling basketball (0.0425)
+        6. climbing ladder (0.0360)
+        7. playing basketball (0.0340)
+        8. punching person (boxing) (0.0250)
+        9. hitting baseball (0.0241)
+       10. skipping rope (0.0235)
+
+BACKGROUND ONLY:
+  Correct action rank: 11/50 (score: 0.0326)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.1517)
+        2. skiing slalom (0.1475)
+        3. catching or throwing frisbee (0.0666)
+        4. golf driving (0.0622)
+        5. playing tennis (0.0610)
+        6. skiing (not slalom or crosscountry) (0.0599)
+        7. clean and jerk (0.0472)
+        8. driving car (0.0419)
+        9. dribbling basketball (0.0409)
+       10. hitting baseball (0.0349)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 3
+Ranking drop from human to background: 8

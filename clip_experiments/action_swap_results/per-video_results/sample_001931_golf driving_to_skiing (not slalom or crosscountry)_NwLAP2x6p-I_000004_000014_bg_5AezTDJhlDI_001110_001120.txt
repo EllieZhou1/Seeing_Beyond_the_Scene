@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001931_golf driving_to_skiing (not slalom or crosscountry)_NwLAP2x6p-I_000004_000014_bg_5AezTDJhlDI_001110_001120
+Frame: 000050.jpg
+Human Action Label (Correct): golf driving
+Background Label (Incorrect): skiing (not slalom or crosscountry)
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.6542)
+
+RANKING ANALYSIS:
+  Human Action 'golf driving' ranked: #10/50 (score: 0.0037)
+  Background Action 'skiing (not slalom or crosscountry)' ranked: #3/50 (score: 0.0654)
+
+Top 10 predictions:
+      1. climbing a rope (0.6542)
+      2. skiing slalom (0.1760)
+  🏞️  3. skiing (not slalom or crosscountry) (0.0654)
+      4. climbing ladder (0.0400)
+      5. juggling soccer ball (0.0187)
+      6. juggling balls (0.0130)
+      7. cleaning windows (0.0069)
+      8. opening bottle (0.0045)
+      9. surfing water (0.0042)
+  👤 10. golf driving (0.0037)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -7
+Score gap (bg_score - human_score): 0.0616
+⚠️  Background action in top 5!

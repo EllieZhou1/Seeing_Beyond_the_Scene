@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001612_surfing water_to_deadlifting_D1q_q75iB4c_000011_000021_bg_x5355Hq9nPE_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: deadlifting (score: 0.6813)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #14/50 (score: 0.0015)
+  Background Action 'deadlifting' ranked: #1/50 (score: 0.6813)
+
+Top 10 predictions:
+  🏞️  1. deadlifting (0.6813)
+      2. clean and jerk (0.2314)
+      3. hurdling (0.0218)
+      4. sword fighting (0.0136)
+      5. skiing slalom (0.0089)
+      6. skipping rope (0.0077)
+      7. sweeping floor (0.0074)
+      8. archery (0.0042)
+      9. driving car (0.0023)
+     10. punching person (boxing) (0.0023)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -13
+Score gap (bg_score - human_score): 0.6798
+⚠️  Background action in top 5!

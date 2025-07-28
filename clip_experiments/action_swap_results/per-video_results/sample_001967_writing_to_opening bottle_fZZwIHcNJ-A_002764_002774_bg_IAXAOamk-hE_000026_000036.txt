@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001967_writing_to_opening bottle_fZZwIHcNJ-A_002764_002774_bg_IAXAOamk-hE_000026_000036
+Frame: 000050.jpg
+Human Action Label (Correct): writing
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2330)
+
+RANKING ANALYSIS:
+  Human Action 'writing' ranked: #18/50 (score: 0.0103)
+  Background Action 'opening bottle' ranked: #6/50 (score: 0.0613)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2330)
+      2. dunking basketball (0.0877)
+      3. climbing ladder (0.0863)
+      4. shooting goal (soccer) (0.0712)
+      5. playing saxophone (0.0621)
+  🏞️  6. opening bottle (0.0613)
+      7. dribbling basketball (0.0541)
+      8. shooting basketball (0.0439)
+      9. juggling balls (0.0288)
+     10. playing trumpet (0.0248)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -12
+Score gap (bg_score - human_score): 0.0510

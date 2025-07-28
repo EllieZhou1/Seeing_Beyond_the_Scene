@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: a-gdhotwJAg
+Action: opening bottle
+Time: 43-53s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 6/50 (score: 0.0446)
+  Top 10 predictions:
+        1. tying tie (0.2898)
+        2. climbing a rope (0.2591)
+        3. punching person (boxing) (0.1208)
+        4. climbing ladder (0.0795)
+        5. deadlifting (0.0502)
+    👉  6. opening bottle (0.0446)
+        7. skipping rope (0.0201)
+        8. sword fighting (0.0176)
+        9. sweeping floor (0.0156)
+       10. juggling soccer ball (0.0149)
+
+HUMAN ONLY:
+  Correct action rank: 7/50 (score: 0.0251)
+  Top 10 predictions:
+        1. tying tie (0.3784)
+        2. punching person (boxing) (0.2359)
+        3. climbing a rope (0.0995)
+        4. juggling balls (0.0706)
+        5. juggling soccer ball (0.0593)
+        6. climbing ladder (0.0258)
+    👉  7. opening bottle (0.0251)
+        8. dribbling basketball (0.0207)
+        9. skipping rope (0.0152)
+       10. sword fighting (0.0143)
+
+BACKGROUND ONLY:
+  Correct action rank: 6/50 (score: 0.0200)
+  Top 10 predictions:
+        1. cleaning windows (0.3650)
+        2. sweeping floor (0.2137)
+        3. surfing water (0.1669)
+        4. playing saxophone (0.0316)
+        5. playing piano (0.0229)
+    👉  6. opening bottle (0.0200)
+        7. climbing a rope (0.0136)
+        8. deadlifting (0.0135)
+        9. dribbling basketball (0.0127)
+       10. brushing hair (0.0093)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 0
+Ranking drop from human to background: -1
+🚨 WARNING: Background ranks higher than human-only!

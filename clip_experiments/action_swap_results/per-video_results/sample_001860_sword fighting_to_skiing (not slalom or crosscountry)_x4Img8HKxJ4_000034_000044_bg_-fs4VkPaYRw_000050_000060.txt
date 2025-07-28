@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001860_sword fighting_to_skiing (not slalom or crosscountry)_x4Img8HKxJ4_000034_000044_bg_-fs4VkPaYRw_000050_000060
+Frame: 000050.jpg
+Human Action Label (Correct): sword fighting
+Background Label (Incorrect): skiing (not slalom or crosscountry)
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.1829)
+
+RANKING ANALYSIS:
+  Human Action 'sword fighting' ranked: #22/50 (score: 0.0029)
+  Background Action 'skiing (not slalom or crosscountry)' ranked: #3/50 (score: 0.1149)
+
+Top 10 predictions:
+      1. climbing a rope (0.1829)
+      2. juggling soccer ball (0.1301)
+  🏞️  3. skiing (not slalom or crosscountry) (0.1149)
+      4. surfing water (0.1147)
+      5. skiing slalom (0.0995)
+      6. juggling balls (0.0835)
+      7. climbing ladder (0.0494)
+      8. dunking basketball (0.0332)
+      9. flying kite (0.0331)
+     10. skipping rope (0.0324)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -19
+Score gap (bg_score - human_score): 0.1120
+⚠️  Background action in top 5!

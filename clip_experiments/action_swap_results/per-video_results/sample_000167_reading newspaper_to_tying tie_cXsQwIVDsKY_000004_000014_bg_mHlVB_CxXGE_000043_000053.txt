@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000167_reading newspaper_to_tying tie_cXsQwIVDsKY_000004_000014_bg_mHlVB_CxXGE_000043_000053
+Frame: 000050.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.1839)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #22/50 (score: 0.0072)
+  Background Action 'tying tie' ranked: #34/50 (score: 0.0028)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.1839)
+      2. brushing hair (0.0942)
+      3. juggling soccer ball (0.0883)
+      4. juggling balls (0.0740)
+      5. eating cake (0.0649)
+      6. climbing a rope (0.0579)
+      7. cleaning windows (0.0488)
+      8. dribbling basketball (0.0427)
+      9. brushing teeth (0.0424)
+     10. skipping rope (0.0344)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 12
+Score gap (bg_score - human_score): -0.0044

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001900_drinking_to_walking the dog_FHuwsNkjQvA_001339_001349_bg_pprpfyJDcj4_000009_000019
+Frame: 000050.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.1101)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #3/50 (score: 0.0728)
+  Background Action 'walking the dog' ranked: #40/50 (score: 0.0058)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.1101)
+      2. hitting baseball (0.0845)
+  👤  3. drinking (0.0728)
+      4. smoking (0.0529)
+      5. playing saxophone (0.0519)
+      6. playing trumpet (0.0485)
+      7. tying tie (0.0482)
+      8. eating cake (0.0399)
+      9. driving car (0.0269)
+     10. eating ice cream (0.0264)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 37
+Score gap (bg_score - human_score): -0.0670
+✅ Human action in top 5

@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000969_playing trumpet_to_catching or throwing frisbee_O07fEiov-vQ_000059_000069_bg_v-YI47Q0Mv4_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): playing trumpet
+Background Label (Incorrect): catching or throwing frisbee
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.3622)
+
+RANKING ANALYSIS:
+  Human Action 'playing trumpet' ranked: #2/50 (score: 0.2086)
+  Background Action 'catching or throwing frisbee' ranked: #3/50 (score: 0.1543)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.3622)
+  👤  2. playing trumpet (0.2086)
+  🏞️  3. catching or throwing frisbee (0.1543)
+      4. flying kite (0.0772)
+      5. juggling balls (0.0643)
+      6. catching or throwing baseball (0.0456)
+      7. hitting baseball (0.0226)
+      8. shooting goal (soccer) (0.0112)
+      9. sword fighting (0.0090)
+     10. opening bottle (0.0087)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0543
+⚠️  Background action in top 5!
+✅ Human action in top 5

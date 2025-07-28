@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001934_climbing a rope_to_opening bottle_mzqDvgpiGP4_000013_000023_bg_9A9XdI8Kudo_000056_000066
+Frame: 000050.jpg
+Human Action Label (Correct): climbing a rope
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.1988)
+
+RANKING ANALYSIS:
+  Human Action 'climbing a rope' ranked: #9/50 (score: 0.0279)
+  Background Action 'opening bottle' ranked: #2/50 (score: 0.1919)
+
+Top 10 predictions:
+      1. surfing water (0.1988)
+  🏞️  2. opening bottle (0.1919)
+      3. juggling soccer ball (0.1050)
+      4. cleaning windows (0.0832)
+      5. drinking (0.0679)
+      6. juggling balls (0.0400)
+      7. punching person (boxing) (0.0376)
+      8. dunking basketball (0.0287)
+  👤  9. climbing a rope (0.0279)
+     10. playing basketball (0.0192)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -7
+Score gap (bg_score - human_score): 0.1640
+⚠️  Background action in top 5!

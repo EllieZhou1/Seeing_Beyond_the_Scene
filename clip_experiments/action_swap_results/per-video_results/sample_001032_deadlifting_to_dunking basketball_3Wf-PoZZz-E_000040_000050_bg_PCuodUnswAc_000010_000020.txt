@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001032_deadlifting_to_dunking basketball_3Wf-PoZZz-E_000040_000050_bg_PCuodUnswAc_000010_000020
+Frame: 000050.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): dunking basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.3378)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #6/50 (score: 0.0564)
+  Background Action 'dunking basketball' ranked: #3/50 (score: 0.1073)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.3378)
+      2. dribbling basketball (0.1145)
+  🏞️  3. dunking basketball (0.1073)
+      4. skipping rope (0.0701)
+      5. juggling balls (0.0580)
+  👤  6. deadlifting (0.0564)
+      7. playing volleyball (0.0493)
+      8. shooting goal (soccer) (0.0425)
+      9. clean and jerk (0.0394)
+     10. playing basketball (0.0337)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -3
+Score gap (bg_score - human_score): 0.0509
+⚠️  Background action in top 5!

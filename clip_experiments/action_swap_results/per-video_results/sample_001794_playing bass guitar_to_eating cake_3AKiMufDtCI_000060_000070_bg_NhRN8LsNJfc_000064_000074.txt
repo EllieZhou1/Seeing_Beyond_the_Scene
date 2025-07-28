@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001794_playing bass guitar_to_eating cake_3AKiMufDtCI_000060_000070_bg_NhRN8LsNJfc_000064_000074
+Frame: 000050.jpg
+Human Action Label (Correct): playing bass guitar
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.1617)
+
+RANKING ANALYSIS:
+  Human Action 'playing bass guitar' ranked: #9/50 (score: 0.0220)
+  Background Action 'eating cake' ranked: #46/50 (score: 0.0007)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.1617)
+      2. clean and jerk (0.1414)
+      3. juggling soccer ball (0.1137)
+      4. deadlifting (0.0747)
+      5. juggling balls (0.0659)
+      6. shooting goal (soccer) (0.0537)
+      7. dribbling basketball (0.0383)
+      8. skipping rope (0.0308)
+  👤  9. playing bass guitar (0.0220)
+     10. sword fighting (0.0217)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 37
+Score gap (bg_score - human_score): -0.0212

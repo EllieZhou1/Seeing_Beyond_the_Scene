@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002037_walking the dog_to_catching or throwing baseball__NnV0Wjzq5o_000000_000010_bg_FbImz9B2jBY_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): catching or throwing baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.4020)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #24/50 (score: 0.0003)
+  Background Action 'catching or throwing baseball' ranked: #17/50 (score: 0.0022)
+
+Top 10 predictions:
+      1. skipping rope (0.4020)
+      2. juggling balls (0.1313)
+      3. juggling soccer ball (0.1256)
+      4. dribbling basketball (0.0493)
+      5. dunking basketball (0.0469)
+      6. catching or throwing frisbee (0.0402)
+      7. playing basketball (0.0354)
+      8. shooting goal (soccer) (0.0326)
+      9. playing volleyball (0.0322)
+     10. sword fighting (0.0270)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -7
+Score gap (bg_score - human_score): 0.0019

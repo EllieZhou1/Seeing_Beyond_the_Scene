@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000205_skiing slalom_to_catching or throwing baseball_snvZDqfJ9Mw_000105_000115_bg_SzWZQDfymmY_000068_000078
+Frame: 000050.jpg
+Human Action Label (Correct): skiing slalom
+Background Label (Incorrect): catching or throwing baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing (not slalom or crosscountry) (score: 0.4958)
+
+RANKING ANALYSIS:
+  Human Action 'skiing slalom' ranked: #2/50 (score: 0.3568)
+  Background Action 'catching or throwing baseball' ranked: #16/50 (score: 0.0005)
+
+Top 10 predictions:
+      1. skiing (not slalom or crosscountry) (0.4958)
+  👤  2. skiing slalom (0.3568)
+      3. eating cake (0.0966)
+      4. eating ice cream (0.0166)
+      5. hurdling (0.0099)
+      6. smoking (0.0072)
+      7. hitting baseball (0.0049)
+      8. opening bottle (0.0024)
+      9. juggling soccer ball (0.0014)
+     10. skipping rope (0.0009)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 14
+Score gap (bg_score - human_score): -0.3564
+✅ Human action in top 5

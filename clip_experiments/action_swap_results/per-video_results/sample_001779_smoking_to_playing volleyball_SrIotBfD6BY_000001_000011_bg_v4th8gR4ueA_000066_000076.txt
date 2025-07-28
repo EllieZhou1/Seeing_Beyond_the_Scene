@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001779_smoking_to_playing volleyball_SrIotBfD6BY_000001_000011_bg_v4th8gR4ueA_000066_000076
+Frame: 000050.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): playing volleyball
+
+CLIP PREDICTIONS:
+  Predicted Label: smoking (score: 0.2241)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #1/50 (score: 0.2241)
+  Background Action 'playing volleyball' ranked: #14/50 (score: 0.0163)
+
+Top 10 predictions:
+  👤  1. smoking (0.2241)
+      2. dunking basketball (0.1093)
+      3. shooting basketball (0.1010)
+      4. punching person (boxing) (0.0848)
+      5. brushing teeth (0.0465)
+      6. playing basketball (0.0461)
+      7. surfing water (0.0389)
+      8. eating ice cream (0.0356)
+      9. hitting baseball (0.0354)
+     10. dribbling basketball (0.0294)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 13
+Score gap (bg_score - human_score): -0.2078
+✅ Human action in top 5

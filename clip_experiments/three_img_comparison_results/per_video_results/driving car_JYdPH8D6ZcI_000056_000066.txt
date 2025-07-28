@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: JYdPH8D6ZcI
+Action: driving car
+Time: 56-66s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.5290)
+  Top 10 predictions:
+    👉  1. driving car (0.5290)
+        2. golf driving (0.2781)
+        3. hitting baseball (0.0365)
+        4. juggling balls (0.0210)
+        5. dribbling basketball (0.0207)
+        6. juggling soccer ball (0.0183)
+        7. playing accordion (0.0122)
+        8. skiing (not slalom or crosscountry) (0.0114)
+        9. skipping rope (0.0071)
+       10. cleaning windows (0.0065)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.2620)
+  Top 10 predictions:
+    👉  1. driving car (0.2620)
+        2. golf driving (0.2323)
+        3. eating ice cream (0.0811)
+        4. sword fighting (0.0633)
+        5. playing accordion (0.0293)
+        6. hitting baseball (0.0261)
+        7. opening bottle (0.0255)
+        8. playing saxophone (0.0235)
+        9. playing trumpet (0.0201)
+       10. skipping rope (0.0199)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.5085)
+  Top 10 predictions:
+    👉  1. driving car (0.5085)
+        2. golf driving (0.4005)
+        3. dribbling basketball (0.0111)
+        4. juggling soccer ball (0.0090)
+        5. playing accordion (0.0069)
+        6. playing basketball (0.0066)
+        7. hitting baseball (0.0062)
+        8. cleaning windows (0.0054)
+        9. shooting basketball (0.0051)
+       10. shooting goal (soccer) (0.0043)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: 0

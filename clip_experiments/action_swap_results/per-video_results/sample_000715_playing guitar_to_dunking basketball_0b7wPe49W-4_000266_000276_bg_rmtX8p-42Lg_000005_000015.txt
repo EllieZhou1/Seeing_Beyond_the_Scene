@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000715_playing guitar_to_dunking basketball_0b7wPe49W-4_000266_000276_bg_rmtX8p-42Lg_000005_000015
+Frame: 000050.jpg
+Human Action Label (Correct): playing guitar
+Background Label (Incorrect): dunking basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.3944)
+
+RANKING ANALYSIS:
+  Human Action 'playing guitar' ranked: #23/50 (score: 0.0043)
+  Background Action 'dunking basketball' ranked: #10/50 (score: 0.0241)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.3944)
+      2. juggling soccer ball (0.1704)
+      3. hitting baseball (0.0598)
+      4. clean and jerk (0.0482)
+      5. catching or throwing baseball (0.0444)
+      6. dribbling basketball (0.0373)
+      7. playing basketball (0.0344)
+      8. juggling balls (0.0300)
+      9. skipping rope (0.0241)
+  🏞️ 10. dunking basketball (0.0241)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -13
+Score gap (bg_score - human_score): 0.0198

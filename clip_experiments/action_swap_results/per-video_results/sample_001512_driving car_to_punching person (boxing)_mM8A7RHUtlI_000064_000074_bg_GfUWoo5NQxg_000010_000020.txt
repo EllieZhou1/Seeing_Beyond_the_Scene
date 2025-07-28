@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001512_driving car_to_punching person (boxing)_mM8A7RHUtlI_000064_000074_bg_GfUWoo5NQxg_000010_000020
+Frame: 000050.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.1993)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #3/50 (score: 0.1001)
+  Background Action 'punching person (boxing)' ranked: #21/50 (score: 0.0092)
+
+Top 10 predictions:
+      1. playing accordion (0.1993)
+      2. golf driving (0.1164)
+  👤  3. driving car (0.1001)
+      4. playing saxophone (0.0699)
+      5. playing trumpet (0.0446)
+      6. writing (0.0416)
+      7. juggling balls (0.0385)
+      8. walking the dog (0.0377)
+      9. cleaning windows (0.0345)
+     10. juggling soccer ball (0.0335)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 18
+Score gap (bg_score - human_score): -0.0909
+✅ Human action in top 5

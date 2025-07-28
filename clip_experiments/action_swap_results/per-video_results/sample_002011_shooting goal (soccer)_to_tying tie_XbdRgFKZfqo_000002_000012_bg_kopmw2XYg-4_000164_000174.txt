@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002011_shooting goal (soccer)_to_tying tie_XbdRgFKZfqo_000002_000012_bg_kopmw2XYg-4_000164_000174
+Frame: 000050.jpg
+Human Action Label (Correct): shooting goal (soccer)
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.4793)
+
+RANKING ANALYSIS:
+  Human Action 'shooting goal (soccer)' ranked: #38/50 (score: 0.0011)
+  Background Action 'tying tie' ranked: #4/50 (score: 0.0894)
+
+Top 10 predictions:
+      1. brushing hair (0.4793)
+      2. brushing teeth (0.1081)
+      3. climbing a rope (0.0944)
+  🏞️  4. tying tie (0.0894)
+      5. surfing water (0.0436)
+      6. climbing ladder (0.0319)
+      7. skipping rope (0.0225)
+      8. cleaning windows (0.0141)
+      9. playing accordion (0.0130)
+     10. writing (0.0091)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -34
+Score gap (bg_score - human_score): 0.0884
+⚠️  Background action in top 5!

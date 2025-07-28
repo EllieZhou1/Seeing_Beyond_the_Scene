@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001191_playing accordion_to_deadlifting_nrF8FOuvACg_000127_000137_bg_2FXe-MKinMA_000028_000038
+Frame: 000050.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: deadlifting (score: 0.5497)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #41/50 (score: 0.0000)
+  Background Action 'deadlifting' ranked: #1/50 (score: 0.5497)
+
+Top 10 predictions:
+  🏞️  1. deadlifting (0.5497)
+      2. clean and jerk (0.4335)
+      3. hitting baseball (0.0050)
+      4. hurdling (0.0022)
+      5. climbing ladder (0.0014)
+      6. skipping rope (0.0011)
+      7. climbing a rope (0.0009)
+      8. juggling soccer ball (0.0007)
+      9. shooting goal (soccer) (0.0006)
+     10. juggling balls (0.0006)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -40
+Score gap (bg_score - human_score): 0.5497
+⚠️  Background action in top 5!

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002130_sweeping floor_to_punching person (boxing)_-8wsYw78yTc_000007_000017_bg_LQmy-JW6tbA_000042_000052
+Frame: 000050.jpg
+Human Action Label (Correct): sweeping floor
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.2960)
+
+RANKING ANALYSIS:
+  Human Action 'sweeping floor' ranked: #27/50 (score: 0.0024)
+  Background Action 'punching person (boxing)' ranked: #8/50 (score: 0.0174)
+
+Top 10 predictions:
+      1. climbing a rope (0.2960)
+      2. climbing ladder (0.2204)
+      3. dunking basketball (0.1167)
+      4. hurdling (0.0860)
+      5. skipping rope (0.0812)
+      6. playing basketball (0.0183)
+      7. playing trumpet (0.0176)
+  🏞️  8. punching person (boxing) (0.0174)
+      9. surfing water (0.0168)
+     10. playing bass guitar (0.0117)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -19
+Score gap (bg_score - human_score): 0.0150

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000488_walking the dog_to_flying kite_DoH8sIQyOyk_000000_000010_bg_8IRYUWc1dn0_000193_000203
+Frame: 000050.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: golf driving (score: 0.2044)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #21/50 (score: 0.0056)
+  Background Action 'flying kite' ranked: #3/50 (score: 0.1302)
+
+Top 10 predictions:
+      1. golf driving (0.2044)
+      2. shooting goal (soccer) (0.1316)
+  🏞️  3. flying kite (0.1302)
+      4. driving car (0.0930)
+      5. juggling soccer ball (0.0711)
+      6. skiing slalom (0.0494)
+      7. skiing (not slalom or crosscountry) (0.0466)
+      8. catching or throwing frisbee (0.0365)
+      9. climbing a rope (0.0355)
+     10. skipping rope (0.0283)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -18
+Score gap (bg_score - human_score): 0.1246
+⚠️  Background action in top 5!

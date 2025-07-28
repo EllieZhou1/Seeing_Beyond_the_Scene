@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000290_sword fighting_to_tying tie_d9ELWl9-8NE_000003_000013_bg_zVlHUt0eWbU_000090_000100
+Frame: 000050.jpg
+Human Action Label (Correct): sword fighting
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.1581)
+
+RANKING ANALYSIS:
+  Human Action 'sword fighting' ranked: #21/50 (score: 0.0101)
+  Background Action 'tying tie' ranked: #37/50 (score: 0.0025)
+
+Top 10 predictions:
+      1. playing accordion (0.1581)
+      2. juggling soccer ball (0.1535)
+      3. punching person (boxing) (0.1461)
+      4. playing violin (0.0530)
+      5. smoking (0.0495)
+      6. juggling balls (0.0405)
+      7. playing saxophone (0.0377)
+      8. hurdling (0.0341)
+      9. playing piano (0.0296)
+     10. dribbling basketball (0.0263)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 16
+Score gap (bg_score - human_score): -0.0076

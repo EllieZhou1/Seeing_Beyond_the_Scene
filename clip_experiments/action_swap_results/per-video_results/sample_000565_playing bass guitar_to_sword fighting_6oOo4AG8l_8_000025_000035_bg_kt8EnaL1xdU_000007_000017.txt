@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000565_playing bass guitar_to_sword fighting_6oOo4AG8l_8_000025_000035_bg_kt8EnaL1xdU_000007_000017
+Frame: 000050.jpg
+Human Action Label (Correct): playing bass guitar
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.5075)
+
+RANKING ANALYSIS:
+  Human Action 'playing bass guitar' ranked: #36/50 (score: 0.0008)
+  Background Action 'sword fighting' ranked: #11/50 (score: 0.0069)
+
+Top 10 predictions:
+      1. climbing ladder (0.5075)
+      2. reading book (0.1563)
+      3. sweeping floor (0.1186)
+      4. playing accordion (0.0419)
+      5. opening bottle (0.0394)
+      6. cleaning windows (0.0199)
+      7. reading newspaper (0.0156)
+      8. juggling balls (0.0097)
+      9. juggling soccer ball (0.0082)
+     10. dunking basketball (0.0071)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -25
+Score gap (bg_score - human_score): 0.0061

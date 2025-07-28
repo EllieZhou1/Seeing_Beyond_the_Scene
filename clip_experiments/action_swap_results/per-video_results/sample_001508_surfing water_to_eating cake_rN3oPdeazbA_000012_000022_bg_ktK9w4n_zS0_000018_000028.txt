@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001508_surfing water_to_eating cake_rN3oPdeazbA_000012_000022_bg_ktK9w4n_zS0_000018_000028
+Frame: 000050.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.2439)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #27/50 (score: 0.0053)
+  Background Action 'eating cake' ranked: #15/50 (score: 0.0184)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.2439)
+      2. playing basketball (0.0904)
+      3. dunking basketball (0.0848)
+      4. juggling balls (0.0662)
+      5. dribbling basketball (0.0651)
+      6. sword fighting (0.0555)
+      7. climbing a rope (0.0471)
+      8. juggling soccer ball (0.0352)
+      9. skipping rope (0.0311)
+     10. sweeping floor (0.0291)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -12
+Score gap (bg_score - human_score): 0.0132

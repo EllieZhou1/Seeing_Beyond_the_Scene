@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002259_cleaning windows_to_reading book_8ciou4_tgD8_000016_000026_bg_HxZTtP7Okxg_000021_000031
+Frame: 000050.jpg
+Human Action Label (Correct): cleaning windows
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling balls (score: 0.2613)
+
+RANKING ANALYSIS:
+  Human Action 'cleaning windows' ranked: #15/50 (score: 0.0114)
+  Background Action 'reading book' ranked: #49/50 (score: 0.0004)
+
+Top 10 predictions:
+      1. juggling balls (0.2613)
+      2. juggling soccer ball (0.1896)
+      3. playing violin (0.0855)
+      4. playing accordion (0.0762)
+      5. bowling (0.0596)
+      6. playing trumpet (0.0442)
+      7. opening bottle (0.0389)
+      8. playing saxophone (0.0385)
+      9. punching person (boxing) (0.0192)
+     10. skipping rope (0.0178)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 34
+Score gap (bg_score - human_score): -0.0111

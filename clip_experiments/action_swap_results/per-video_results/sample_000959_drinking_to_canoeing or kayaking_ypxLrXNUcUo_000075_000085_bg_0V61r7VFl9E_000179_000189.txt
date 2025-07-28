@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000959_drinking_to_canoeing or kayaking_ypxLrXNUcUo_000075_000085_bg_0V61r7VFl9E_000179_000189
+Frame: 000050.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): canoeing or kayaking
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.4698)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #12/50 (score: 0.0153)
+  Background Action 'canoeing or kayaking' ranked: #4/50 (score: 0.0684)
+
+Top 10 predictions:
+      1. surfing water (0.4698)
+      2. golf driving (0.0954)
+      3. catching or throwing baseball (0.0746)
+  🏞️  4. canoeing or kayaking (0.0684)
+      5. climbing a rope (0.0338)
+      6. sword fighting (0.0334)
+      7. catching or throwing frisbee (0.0257)
+      8. hitting baseball (0.0233)
+      9. juggling balls (0.0213)
+     10. skiing slalom (0.0187)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -8
+Score gap (bg_score - human_score): 0.0531
+⚠️  Background action in top 5!

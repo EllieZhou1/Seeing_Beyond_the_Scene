@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000104_playing accordion_to_climbing a rope_UBvJD2xjtvY_000000_000010_bg_M0BedpP3Ya4_000017_000027
+Frame: 000050.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): climbing a rope
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.1619)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #19/50 (score: 0.0048)
+  Background Action 'climbing a rope' ranked: #6/50 (score: 0.0773)
+
+Top 10 predictions:
+      1. cleaning windows (0.1619)
+      2. archery (0.1292)
+      3. playing violin (0.1268)
+      4. playing trumpet (0.1141)
+      5. sword fighting (0.0996)
+  🏞️  6. climbing a rope (0.0773)
+      7. juggling balls (0.0630)
+      8. juggling soccer ball (0.0373)
+      9. punching person (boxing) (0.0262)
+     10. skipping rope (0.0185)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -13
+Score gap (bg_score - human_score): 0.0725

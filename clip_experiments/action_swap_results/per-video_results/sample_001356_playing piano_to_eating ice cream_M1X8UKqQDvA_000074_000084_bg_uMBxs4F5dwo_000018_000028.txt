@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001356_playing piano_to_eating ice cream_M1X8UKqQDvA_000074_000084_bg_uMBxs4F5dwo_000018_000028
+Frame: 000050.jpg
+Human Action Label (Correct): playing piano
+Background Label (Incorrect): eating ice cream
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.9972)
+
+RANKING ANALYSIS:
+  Human Action 'playing piano' ranked: #30/50 (score: 0.0000)
+  Background Action 'eating ice cream' ranked: #12/50 (score: 0.0001)
+
+Top 10 predictions:
+      1. cleaning windows (0.9972)
+      2. climbing ladder (0.0005)
+      3. sweeping floor (0.0004)
+      4. opening bottle (0.0004)
+      5. surfing water (0.0002)
+      6. reading newspaper (0.0002)
+      7. punching person (boxing) (0.0001)
+      8. playing violin (0.0001)
+      9. climbing a rope (0.0001)
+     10. drinking (0.0001)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -18
+Score gap (bg_score - human_score): 0.0000

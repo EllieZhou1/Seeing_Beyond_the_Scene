@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002462_shooting goal (soccer)_to_writing_iMkymcBJUTE_000075_000085_bg_6Y4ir41xy-0_000218_000228
+Frame: 000050.jpg
+Human Action Label (Correct): shooting goal (soccer)
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: writing (score: 0.9496)
+
+RANKING ANALYSIS:
+  Human Action 'shooting goal (soccer)' ranked: #9/50 (score: 0.0013)
+  Background Action 'writing' ranked: #1/50 (score: 0.9496)
+
+Top 10 predictions:
+  🏞️  1. writing (0.9496)
+      2. reading book (0.0129)
+      3. opening bottle (0.0062)
+      4. reading newspaper (0.0059)
+      5. juggling balls (0.0051)
+      6. drinking (0.0019)
+      7. smoking (0.0019)
+      8. playing piano (0.0019)
+  👤  9. shooting goal (soccer) (0.0013)
+     10. playing accordion (0.0009)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -8
+Score gap (bg_score - human_score): 0.9483
+⚠️  Background action in top 5!

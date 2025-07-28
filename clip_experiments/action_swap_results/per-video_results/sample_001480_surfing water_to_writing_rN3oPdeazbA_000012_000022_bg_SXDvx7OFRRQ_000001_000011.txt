@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001480_surfing water_to_writing_rN3oPdeazbA_000012_000022_bg_SXDvx7OFRRQ_000001_000011
+Frame: 000050.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing (not slalom or crosscountry) (score: 0.3212)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #19/50 (score: 0.0094)
+  Background Action 'writing' ranked: #15/50 (score: 0.0121)
+
+Top 10 predictions:
+      1. skiing (not slalom or crosscountry) (0.3212)
+      2. skiing slalom (0.1316)
+      3. skipping rope (0.0737)
+      4. juggling balls (0.0667)
+      5. juggling soccer ball (0.0606)
+      6. dribbling basketball (0.0413)
+      7. climbing ladder (0.0292)
+      8. opening bottle (0.0284)
+      9. dunking basketball (0.0206)
+     10. shooting goal (soccer) (0.0153)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -4
+Score gap (bg_score - human_score): 0.0027

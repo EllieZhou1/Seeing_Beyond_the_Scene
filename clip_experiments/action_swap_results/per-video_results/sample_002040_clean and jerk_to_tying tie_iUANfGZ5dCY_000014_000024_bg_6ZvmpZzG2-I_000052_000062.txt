@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002040_clean and jerk_to_tying tie_iUANfGZ5dCY_000014_000024_bg_6ZvmpZzG2-I_000052_000062
+Frame: 000050.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.2311)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #2/50 (score: 0.1772)
+  Background Action 'tying tie' ranked: #43/50 (score: 0.0002)
+
+Top 10 predictions:
+      1. dunking basketball (0.2311)
+  👤  2. clean and jerk (0.1772)
+      3. climbing ladder (0.1379)
+      4. juggling soccer ball (0.0663)
+      5. climbing a rope (0.0653)
+      6. playing basketball (0.0412)
+      7. shooting basketball (0.0341)
+      8. juggling balls (0.0297)
+      9. skipping rope (0.0209)
+     10. playing trumpet (0.0191)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 41
+Score gap (bg_score - human_score): -0.1770
+✅ Human action in top 5

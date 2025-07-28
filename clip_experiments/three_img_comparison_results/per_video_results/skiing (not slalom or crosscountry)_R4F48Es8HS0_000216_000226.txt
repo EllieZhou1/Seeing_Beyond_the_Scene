@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: R4F48Es8HS0
+Action: skiing (not slalom or crosscountry)
+Time: 216-226s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.4367)
+  Top 10 predictions:
+    👉  1. skiing (not slalom or crosscountry) (0.4367)
+        2. skiing slalom (0.3682)
+        3. hurdling (0.0615)
+        4. climbing a rope (0.0409)
+        5. catching or throwing frisbee (0.0167)
+        6. flying kite (0.0162)
+        7. climbing ladder (0.0110)
+        8. dunking basketball (0.0101)
+        9. catching or throwing baseball (0.0060)
+       10. surfing water (0.0051)
+
+HUMAN ONLY:
+  Correct action rank: 8/50 (score: 0.0273)
+  Top 10 predictions:
+        1. climbing a rope (0.2342)
+        2. skiing slalom (0.1275)
+        3. skipping rope (0.1237)
+        4. juggling soccer ball (0.0619)
+        5. flying kite (0.0576)
+        6. juggling balls (0.0472)
+        7. surfing water (0.0471)
+    👉  8. skiing (not slalom or crosscountry) (0.0273)
+        9. playing saxophone (0.0263)
+       10. shooting goal (soccer) (0.0203)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.4043)
+  Top 10 predictions:
+        1. skiing slalom (0.4290)
+    👉  2. skiing (not slalom or crosscountry) (0.4043)
+        3. shooting goal (soccer) (0.0279)
+        4. flying kite (0.0208)
+        5. juggling soccer ball (0.0199)
+        6. catching or throwing frisbee (0.0154)
+        7. golf driving (0.0098)
+        8. hitting baseball (0.0092)
+        9. walking the dog (0.0086)
+       10. climbing a rope (0.0069)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 1
+Ranking drop from human to background: -6
+🚨 WARNING: Background ranks higher than human-only!

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001128_sweeping floor_to_climbing ladder_k884aDwlkFo_000001_000011_bg_lJKMnpXzkWk_000004_000014
+Frame: 000050.jpg
+Human Action Label (Correct): sweeping floor
+Background Label (Incorrect): climbing ladder
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.3635)
+
+RANKING ANALYSIS:
+  Human Action 'sweeping floor' ranked: #34/50 (score: 0.0017)
+  Background Action 'climbing ladder' ranked: #3/50 (score: 0.0797)
+
+Top 10 predictions:
+      1. skipping rope (0.3635)
+      2. playing tennis (0.1319)
+  🏞️  3. climbing ladder (0.0797)
+      4. skiing (not slalom or crosscountry) (0.0644)
+      5. skiing slalom (0.0594)
+      6. juggling soccer ball (0.0444)
+      7. flying kite (0.0369)
+      8. climbing a rope (0.0360)
+      9. cleaning windows (0.0241)
+     10. hitting baseball (0.0198)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -31
+Score gap (bg_score - human_score): 0.0780
+⚠️  Background action in top 5!

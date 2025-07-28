@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000734_smoking_to_playing accordion_1o-qGrLLihw_000021_000031_bg_YgXLcOtQcSg_000028_000038
+Frame: 000050.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2007)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #19/50 (score: 0.0046)
+  Background Action 'playing accordion' ranked: #4/50 (score: 0.0853)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2007)
+      2. climbing a rope (0.1041)
+      3. opening bottle (0.0931)
+  🏞️  4. playing accordion (0.0853)
+      5. cleaning windows (0.0795)
+      6. juggling balls (0.0738)
+      7. climbing ladder (0.0689)
+      8. punching person (boxing) (0.0647)
+      9. dunking basketball (0.0607)
+     10. playing guitar (0.0183)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -15
+Score gap (bg_score - human_score): 0.0807
+⚠️  Background action in top 5!

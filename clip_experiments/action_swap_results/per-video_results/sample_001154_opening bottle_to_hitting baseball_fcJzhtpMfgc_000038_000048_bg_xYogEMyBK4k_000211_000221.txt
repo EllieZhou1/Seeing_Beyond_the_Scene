@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001154_opening bottle_to_hitting baseball_fcJzhtpMfgc_000038_000048_bg_xYogEMyBK4k_000211_000221
+Frame: 000050.jpg
+Human Action Label (Correct): opening bottle
+Background Label (Incorrect): hitting baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling balls (score: 0.3790)
+
+RANKING ANALYSIS:
+  Human Action 'opening bottle' ranked: #14/50 (score: 0.0114)
+  Background Action 'hitting baseball' ranked: #11/50 (score: 0.0142)
+
+Top 10 predictions:
+      1. juggling balls (0.3790)
+      2. juggling soccer ball (0.2623)
+      3. punching person (boxing) (0.0734)
+      4. dribbling basketball (0.0256)
+      5. shooting goal (soccer) (0.0240)
+      6. dunking basketball (0.0220)
+      7. skipping rope (0.0204)
+      8. catching or throwing baseball (0.0187)
+      9. playing trumpet (0.0163)
+     10. sword fighting (0.0155)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -3
+Score gap (bg_score - human_score): 0.0027

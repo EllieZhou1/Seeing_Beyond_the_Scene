@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001078_playing guitar_to_bowling_MrSMr3S3lE0_000090_000100_bg_6V6DgC9u7Y0_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): playing guitar
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: bowling (score: 0.9519)
+
+RANKING ANALYSIS:
+  Human Action 'playing guitar' ranked: #38/50 (score: 0.0000)
+  Background Action 'bowling' ranked: #1/50 (score: 0.9519)
+
+Top 10 predictions:
+  🏞️  1. bowling (0.9519)
+      2. juggling balls (0.0104)
+      3. hurdling (0.0099)
+      4. shooting basketball (0.0058)
+      5. dribbling basketball (0.0051)
+      6. playing volleyball (0.0034)
+      7. playing basketball (0.0029)
+      8. archery (0.0018)
+      9. climbing a rope (0.0012)
+     10. dunking basketball (0.0009)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -37
+Score gap (bg_score - human_score): 0.9518
+⚠️  Background action in top 5!

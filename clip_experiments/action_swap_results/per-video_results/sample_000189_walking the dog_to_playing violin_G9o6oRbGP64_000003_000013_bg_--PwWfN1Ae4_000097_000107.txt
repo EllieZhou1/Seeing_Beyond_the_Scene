@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000189_walking the dog_to_playing violin_G9o6oRbGP64_000003_000013_bg_--PwWfN1Ae4_000097_000107
+Frame: 000050.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): playing violin
+
+CLIP PREDICTIONS:
+  Predicted Label: playing saxophone (score: 0.4015)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #30/50 (score: 0.0047)
+  Background Action 'playing violin' ranked: #29/50 (score: 0.0052)
+
+Top 10 predictions:
+      1. playing saxophone (0.4015)
+      2. driving car (0.0728)
+      3. sweeping floor (0.0639)
+      4. bowling (0.0336)
+      5. playing trumpet (0.0308)
+      6. climbing ladder (0.0264)
+      7. hitting baseball (0.0245)
+      8. opening bottle (0.0244)
+      9. playing accordion (0.0238)
+     10. deadlifting (0.0230)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.0004

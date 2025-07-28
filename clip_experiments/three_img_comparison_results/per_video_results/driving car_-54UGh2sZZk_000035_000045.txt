@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: -54UGh2sZZk
+Action: driving car
+Time: 35-45s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.6595)
+  Top 10 predictions:
+    👉  1. driving car (0.6595)
+        2. golf driving (0.2092)
+        3. shooting goal (soccer) (0.0268)
+        4. dribbling basketball (0.0168)
+        5. juggling soccer ball (0.0105)
+        6. flying kite (0.0099)
+        7. cleaning windows (0.0087)
+        8. skiing slalom (0.0076)
+        9. skiing (not slalom or crosscountry) (0.0075)
+       10. punching person (boxing) (0.0050)
+
+HUMAN ONLY:
+  Correct action rank: 33/50 (score: 0.0048)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.2439)
+        2. skiing slalom (0.1752)
+        3. dunking basketball (0.1059)
+        4. shooting basketball (0.0485)
+        5. dribbling basketball (0.0423)
+        6. climbing ladder (0.0358)
+        7. playing basketball (0.0338)
+        8. punching person (boxing) (0.0251)
+        9. hitting baseball (0.0240)
+       10. skipping rope (0.0233)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.6815)
+  Top 10 predictions:
+    👉  1. driving car (0.6815)
+        2. golf driving (0.2323)
+        3. shooting goal (soccer) (0.0168)
+        4. dribbling basketball (0.0139)
+        5. flying kite (0.0099)
+        6. skiing (not slalom or crosscountry) (0.0055)
+        7. cleaning windows (0.0048)
+        8. juggling soccer ball (0.0047)
+        9. skiing slalom (0.0039)
+       10. clean and jerk (0.0031)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -32
+🚨 WARNING: Background ranks higher than human-only!

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000030_canoeing or kayaking_to_reading book_YLuft2I6YYc_000092_000102_bg_taZtEzvkg3M_000002_000012
+Frame: 000050.jpg
+Human Action Label (Correct): canoeing or kayaking
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: reading book (score: 0.3740)
+
+RANKING ANALYSIS:
+  Human Action 'canoeing or kayaking' ranked: #49/50 (score: 0.0004)
+  Background Action 'reading book' ranked: #1/50 (score: 0.3740)
+
+Top 10 predictions:
+  🏞️  1. reading book (0.3740)
+      2. playing accordion (0.0758)
+      3. reading newspaper (0.0751)
+      4. writing (0.0586)
+      5. playing saxophone (0.0524)
+      6. playing bass guitar (0.0453)
+      7. playing piano (0.0372)
+      8. playing guitar (0.0232)
+      9. hurdling (0.0195)
+     10. playing tennis (0.0178)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -48
+Score gap (bg_score - human_score): 0.3735
+⚠️  Background action in top 5!

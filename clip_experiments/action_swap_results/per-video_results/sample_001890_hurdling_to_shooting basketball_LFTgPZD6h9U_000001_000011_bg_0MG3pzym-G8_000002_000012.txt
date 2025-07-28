@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001890_hurdling_to_shooting basketball_LFTgPZD6h9U_000001_000011_bg_0MG3pzym-G8_000002_000012
+Frame: 000050.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): shooting basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.1982)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #5/50 (score: 0.0819)
+  Background Action 'shooting basketball' ranked: #28/50 (score: 0.0022)
+
+Top 10 predictions:
+      1. climbing ladder (0.1982)
+      2. juggling balls (0.1057)
+      3. flying kite (0.1040)
+      4. climbing a rope (0.0822)
+  👤  5. hurdling (0.0819)
+      6. juggling soccer ball (0.0774)
+      7. playing bass guitar (0.0690)
+      8. dunking basketball (0.0596)
+      9. playing guitar (0.0500)
+     10. playing piano (0.0295)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 23
+Score gap (bg_score - human_score): -0.0797
+✅ Human action in top 5

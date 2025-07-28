@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: C8H4iQ2s4Ig
+Action: golf driving
+Time: 86-96s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.2110)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.3104)
+    👉  2. golf driving (0.2110)
+        3. skiing slalom (0.0937)
+        4. flying kite (0.0905)
+        5. surfing water (0.0729)
+        6. juggling soccer ball (0.0469)
+        7. skiing (not slalom or crosscountry) (0.0350)
+        8. hitting baseball (0.0183)
+        9. canoeing or kayaking (0.0179)
+       10. catching or throwing frisbee (0.0162)
+
+HUMAN ONLY:
+  Correct action rank: 26/50 (score: 0.0063)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.2439)
+        2. skiing slalom (0.1752)
+        3. dunking basketball (0.1059)
+        4. shooting basketball (0.0485)
+        5. dribbling basketball (0.0423)
+        6. climbing ladder (0.0358)
+        7. playing basketball (0.0338)
+        8. punching person (boxing) (0.0251)
+        9. hitting baseball (0.0240)
+       10. skipping rope (0.0233)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.2289)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.3380)
+    👉  2. golf driving (0.2289)
+        3. skiing slalom (0.0801)
+        4. flying kite (0.0684)
+        5. juggling soccer ball (0.0567)
+        6. surfing water (0.0450)
+        7. skiing (not slalom or crosscountry) (0.0246)
+        8. catching or throwing frisbee (0.0179)
+        9. hitting baseball (0.0175)
+       10. canoeing or kayaking (0.0158)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -24
+🚨 WARNING: Background ranks higher than human-only!

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001174_bowling_to_juggling balls_a3C8ayqyGdg_000002_000012_bg_H1HLH6V2bU4_000035_000045
+Frame: 000050.jpg
+Human Action Label (Correct): bowling
+Background Label (Incorrect): juggling balls
+
+CLIP PREDICTIONS:
+  Predicted Label: clean and jerk (score: 0.2262)
+
+RANKING ANALYSIS:
+  Human Action 'bowling' ranked: #24/50 (score: 0.0003)
+  Background Action 'juggling balls' ranked: #8/50 (score: 0.0322)
+
+Top 10 predictions:
+      1. clean and jerk (0.2262)
+      2. climbing a rope (0.2052)
+      3. dunking basketball (0.1806)
+      4. climbing ladder (0.1175)
+      5. shooting basketball (0.0697)
+      6. playing basketball (0.0508)
+      7. dribbling basketball (0.0367)
+  🏞️  8. juggling balls (0.0322)
+      9. skipping rope (0.0210)
+     10. juggling soccer ball (0.0180)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -16
+Score gap (bg_score - human_score): 0.0319

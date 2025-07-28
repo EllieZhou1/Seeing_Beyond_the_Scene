@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: xmue_fxvlp0
+Action: playing saxophone
+Time: 32-42s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 30/50 (score: 0.0030)
+  Top 10 predictions:
+        1. tying tie (0.2525)
+        2. cleaning windows (0.1367)
+        3. juggling soccer ball (0.0903)
+        4. skipping rope (0.0837)
+        5. punching person (boxing) (0.0734)
+        6. opening bottle (0.0580)
+        7. climbing a rope (0.0445)
+        8. brushing hair (0.0375)
+        9. juggling balls (0.0370)
+       10. sword fighting (0.0156)
+
+HUMAN ONLY:
+  Correct action rank: 26/50 (score: 0.0027)
+  Top 10 predictions:
+        1. tying tie (0.6463)
+        2. punching person (boxing) (0.0461)
+        3. opening bottle (0.0412)
+        4. skipping rope (0.0342)
+        5. juggling soccer ball (0.0327)
+        6. shooting goal (soccer) (0.0313)
+        7. cleaning windows (0.0161)
+        8. juggling balls (0.0139)
+        9. climbing a rope (0.0132)
+       10. playing tennis (0.0104)
+
+BACKGROUND ONLY:
+  Correct action rank: 6/50 (score: 0.0347)
+  Top 10 predictions:
+        1. cleaning windows (0.3038)
+        2. playing accordion (0.0855)
+        3. driving car (0.0664)
+        4. reading book (0.0546)
+        5. playing trumpet (0.0453)
+    👉  6. playing saxophone (0.0347)
+        7. playing piano (0.0322)
+        8. playing guitar (0.0238)
+        9. smoking (0.0225)
+       10. sweeping floor (0.0217)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: -24
+Ranking drop from human to background: -20
+🚨 WARNING: Background ranks higher than human-only!

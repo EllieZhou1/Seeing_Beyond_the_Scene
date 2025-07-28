@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: lmn_PczIHHo
+Action: playing violin
+Time: 47-57s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 48/50 (score: 0.0001)
+  Top 10 predictions:
+        1. juggling soccer ball (0.4969)
+        2. shooting goal (soccer) (0.3544)
+        3. tying tie (0.0221)
+        4. opening bottle (0.0185)
+        5. hurdling (0.0161)
+        6. sword fighting (0.0148)
+        7. catching or throwing frisbee (0.0111)
+        8. juggling balls (0.0107)
+        9. playing trumpet (0.0048)
+       10. climbing ladder (0.0046)
+
+HUMAN ONLY:
+  Correct action rank: 36/50 (score: 0.0022)
+  Top 10 predictions:
+        1. shooting basketball (0.1549)
+        2. dunking basketball (0.1160)
+        3. hitting baseball (0.1136)
+        4. dribbling basketball (0.1093)
+        5. catching or throwing baseball (0.0792)
+        6. shooting goal (soccer) (0.0668)
+        7. skiing slalom (0.0518)
+        8. deadlifting (0.0255)
+        9. bowling (0.0253)
+       10. juggling soccer ball (0.0213)
+
+BACKGROUND ONLY:
+  Correct action rank: 27/50 (score: 0.0002)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.4573)
+        2. juggling soccer ball (0.2075)
+        3. catching or throwing frisbee (0.2054)
+        4. hurdling (0.0442)
+        5. hitting baseball (0.0121)
+        6. juggling balls (0.0108)
+        7. catching or throwing baseball (0.0106)
+        8. playing tennis (0.0083)
+        9. shooting basketball (0.0066)
+       10. dribbling basketball (0.0056)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: -21
+Ranking drop from human to background: -9
+🚨 WARNING: Background ranks higher than human-only!

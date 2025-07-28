@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000623_climbing a rope_to_canoeing or kayaking_6Lz09qQhHkM_000001_000011_bg_0lqKvDiwZDc_000171_000181
+Frame: 000050.jpg
+Human Action Label (Correct): climbing a rope
+Background Label (Incorrect): canoeing or kayaking
+
+CLIP PREDICTIONS:
+  Predicted Label: canoeing or kayaking (score: 0.9709)
+
+RANKING ANALYSIS:
+  Human Action 'climbing a rope' ranked: #3/50 (score: 0.0079)
+  Background Action 'canoeing or kayaking' ranked: #1/50 (score: 0.9709)
+
+Top 10 predictions:
+  🏞️  1. canoeing or kayaking (0.9709)
+      2. surfing water (0.0095)
+  👤  3. climbing a rope (0.0079)
+      4. flying kite (0.0049)
+      5. skiing slalom (0.0024)
+      6. skiing (not slalom or crosscountry) (0.0008)
+      7. juggling balls (0.0006)
+      8. archery (0.0006)
+      9. catching or throwing frisbee (0.0004)
+     10. juggling soccer ball (0.0004)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.9629
+⚠️  Background action in top 5!
+✅ Human action in top 5

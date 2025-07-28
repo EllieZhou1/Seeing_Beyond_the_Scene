@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001460_playing guitar_to_canoeing or kayaking_WCyove7hRPc_000024_000034_bg_ZDqjye955e0_000018_000028
+Frame: 000050.jpg
+Human Action Label (Correct): playing guitar
+Background Label (Incorrect): canoeing or kayaking
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.1094)
+
+RANKING ANALYSIS:
+  Human Action 'playing guitar' ranked: #16/50 (score: 0.0172)
+  Background Action 'canoeing or kayaking' ranked: #42/50 (score: 0.0017)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.1094)
+      2. eating ice cream (0.1086)
+      3. climbing a rope (0.1052)
+      4. opening bottle (0.0805)
+      5. juggling soccer ball (0.0550)
+      6. climbing ladder (0.0541)
+      7. smoking (0.0512)
+      8. drinking (0.0435)
+      9. juggling balls (0.0400)
+     10. skipping rope (0.0234)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 26
+Score gap (bg_score - human_score): -0.0155

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000207_skipping rope_to_reading book_ln9NeisDnFU_000116_000126_bg_eSlFKXW_tHQ_000185_000195
+Frame: 000050.jpg
+Human Action Label (Correct): skipping rope
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2474)
+
+RANKING ANALYSIS:
+  Human Action 'skipping rope' ranked: #11/50 (score: 0.0197)
+  Background Action 'reading book' ranked: #47/50 (score: 0.0000)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2474)
+      2. dunking basketball (0.2050)
+      3. playing basketball (0.1809)
+      4. playing volleyball (0.0743)
+      5. dribbling basketball (0.0713)
+      6. shooting basketball (0.0460)
+      7. juggling balls (0.0334)
+      8. sword fighting (0.0279)
+      9. clean and jerk (0.0211)
+     10. hurdling (0.0202)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 36
+Score gap (bg_score - human_score): -0.0197

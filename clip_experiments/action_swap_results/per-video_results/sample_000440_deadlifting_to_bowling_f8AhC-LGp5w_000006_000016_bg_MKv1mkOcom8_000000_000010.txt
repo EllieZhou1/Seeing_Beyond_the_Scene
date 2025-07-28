@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000440_deadlifting_to_bowling_f8AhC-LGp5w_000006_000016_bg_MKv1mkOcom8_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: bowling (score: 0.9471)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #22/50 (score: 0.0004)
+  Background Action 'bowling' ranked: #1/50 (score: 0.9471)
+
+Top 10 predictions:
+  🏞️  1. bowling (0.9471)
+      2. juggling balls (0.0156)
+      3. climbing a rope (0.0073)
+      4. climbing ladder (0.0047)
+      5. punching person (boxing) (0.0025)
+      6. juggling soccer ball (0.0024)
+      7. driving car (0.0019)
+      8. shooting goal (soccer) (0.0019)
+      9. hitting baseball (0.0017)
+     10. golf driving (0.0016)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -21
+Score gap (bg_score - human_score): 0.9468
+⚠️  Background action in top 5!

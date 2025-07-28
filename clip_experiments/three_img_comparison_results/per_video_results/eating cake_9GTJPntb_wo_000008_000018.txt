@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 9GTJPntb_wo
+Action: eating cake
+Time: 8-18s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 12/50 (score: 0.0152)
+  Top 10 predictions:
+        1. playing guitar (0.2000)
+        2. playing accordion (0.1989)
+        3. climbing ladder (0.1356)
+        4. opening bottle (0.0719)
+        5. sweeping floor (0.0539)
+        6. playing piano (0.0509)
+        7. brushing hair (0.0428)
+        8. playing bass guitar (0.0413)
+        9. playing violin (0.0297)
+       10. dribbling basketball (0.0214)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.2298)
+  Top 10 predictions:
+    👉  1. eating cake (0.2298)
+        2. brushing hair (0.1121)
+        3. dribbling basketball (0.0785)
+        4. punching person (boxing) (0.0596)
+        5. opening bottle (0.0386)
+        6. playing piano (0.0382)
+        7. climbing ladder (0.0364)
+        8. playing accordion (0.0355)
+        9. dunking basketball (0.0326)
+       10. clean and jerk (0.0294)
+
+BACKGROUND ONLY:
+  Correct action rank: 5/50 (score: 0.0343)
+  Top 10 predictions:
+        1. sweeping floor (0.3351)
+        2. cleaning windows (0.1375)
+        3. opening bottle (0.1022)
+        4. drinking (0.0502)
+    👉  5. eating cake (0.0343)
+        6. dunking basketball (0.0293)
+        7. dribbling basketball (0.0270)
+        8. climbing ladder (0.0258)
+        9. surfing water (0.0254)
+       10. playing saxophone (0.0187)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -7
+Ranking drop from human to background: 4

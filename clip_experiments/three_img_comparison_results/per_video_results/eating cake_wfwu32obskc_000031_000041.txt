@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: wfwu32obskc
+Action: eating cake
+Time: 31-41s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.9599)
+  Top 10 predictions:
+    👉  1. eating cake (0.9599)
+        2. eating ice cream (0.0280)
+        3. juggling balls (0.0015)
+        4. opening bottle (0.0013)
+        5. juggling soccer ball (0.0012)
+        6. dribbling basketball (0.0011)
+        7. playing accordion (0.0010)
+        8. hitting baseball (0.0009)
+        9. drinking (0.0008)
+       10. catching or throwing baseball (0.0006)
+
+HUMAN ONLY:
+  Correct action rank: 9/50 (score: 0.0252)
+  Top 10 predictions:
+        1. juggling soccer ball (0.3435)
+        2. juggling balls (0.1150)
+        3. dribbling basketball (0.0841)
+        4. playing accordion (0.0750)
+        5. hitting baseball (0.0566)
+        6. catching or throwing baseball (0.0316)
+        7. shooting goal (soccer) (0.0306)
+        8. opening bottle (0.0277)
+    👉  9. eating cake (0.0252)
+       10. punching person (boxing) (0.0238)
+
+BACKGROUND ONLY:
+  Correct action rank: 3/50 (score: 0.0979)
+  Top 10 predictions:
+        1. climbing a rope (0.2038)
+        2. sweeping floor (0.1152)
+    👉  3. eating cake (0.0979)
+        4. dribbling basketball (0.0930)
+        5. juggling balls (0.0711)
+        6. eating ice cream (0.0661)
+        7. opening bottle (0.0655)
+        8. juggling soccer ball (0.0539)
+        9. dunking basketball (0.0488)
+       10. cleaning windows (0.0418)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 2
+Ranking drop from human to background: -6
+🚨 WARNING: Background ranks higher than human-only!

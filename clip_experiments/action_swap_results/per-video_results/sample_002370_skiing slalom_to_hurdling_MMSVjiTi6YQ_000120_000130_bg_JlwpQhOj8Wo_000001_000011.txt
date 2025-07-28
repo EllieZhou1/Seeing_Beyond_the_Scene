@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002370_skiing slalom_to_hurdling_MMSVjiTi6YQ_000120_000130_bg_JlwpQhOj8Wo_000001_000011
+Frame: 000050.jpg
+Human Action Label (Correct): skiing slalom
+Background Label (Incorrect): hurdling
+
+CLIP PREDICTIONS:
+  Predicted Label: hurdling (score: 0.9468)
+
+RANKING ANALYSIS:
+  Human Action 'skiing slalom' ranked: #5/50 (score: 0.0036)
+  Background Action 'hurdling' ranked: #1/50 (score: 0.9468)
+
+Top 10 predictions:
+  🏞️  1. hurdling (0.9468)
+      2. shooting goal (soccer) (0.0217)
+      3. catching or throwing frisbee (0.0061)
+      4. flying kite (0.0039)
+  👤  5. skiing slalom (0.0036)
+      6. juggling soccer ball (0.0031)
+      7. catching or throwing baseball (0.0029)
+      8. hitting baseball (0.0029)
+      9. juggling balls (0.0027)
+     10. skipping rope (0.0013)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -4
+Score gap (bg_score - human_score): 0.9432
+⚠️  Background action in top 5!
+✅ Human action in top 5

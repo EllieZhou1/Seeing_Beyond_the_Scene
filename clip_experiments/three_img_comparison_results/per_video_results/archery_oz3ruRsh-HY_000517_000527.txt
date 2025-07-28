@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: oz3ruRsh-HY
+Action: archery
+Time: 517-527s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 35/50 (score: 0.0011)
+  Top 10 predictions:
+        1. opening bottle (0.2882)
+        2. skiing slalom (0.2340)
+        3. playing guitar (0.1007)
+        4. climbing a rope (0.0542)
+        5. playing violin (0.0473)
+        6. climbing ladder (0.0437)
+        7. driving car (0.0275)
+        8. surfing water (0.0267)
+        9. sword fighting (0.0230)
+       10. playing bass guitar (0.0191)
+
+HUMAN ONLY:
+  Correct action rank: 43/50 (score: 0.0012)
+  Top 10 predictions:
+        1. playing piano (0.3442)
+        2. playing violin (0.1236)
+        3. punching person (boxing) (0.0823)
+        4. playing trumpet (0.0809)
+        5. playing saxophone (0.0805)
+        6. playing accordion (0.0604)
+        7. playing guitar (0.0239)
+        8. driving car (0.0230)
+        9. opening bottle (0.0215)
+       10. hitting baseball (0.0145)
+
+BACKGROUND ONLY:
+  Correct action rank: 23/50 (score: 0.0046)
+  Top 10 predictions:
+        1. skiing slalom (0.3286)
+        2. playing violin (0.1201)
+        3. playing guitar (0.1138)
+        4. driving car (0.0538)
+        5. opening bottle (0.0506)
+        6. climbing a rope (0.0435)
+        7. playing bass guitar (0.0290)
+        8. sword fighting (0.0262)
+        9. climbing ladder (0.0247)
+       10. hurdling (0.0221)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: -12
+Ranking drop from human to background: -20
+🚨 WARNING: Background ranks higher than human-only!

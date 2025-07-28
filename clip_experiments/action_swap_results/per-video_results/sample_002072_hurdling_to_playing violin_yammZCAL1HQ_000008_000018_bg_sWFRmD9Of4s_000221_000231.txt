@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002072_hurdling_to_playing violin_yammZCAL1HQ_000008_000018_bg_sWFRmD9Of4s_000221_000231
+Frame: 000050.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): playing violin
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.3866)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #2/50 (score: 0.2972)
+  Background Action 'playing violin' ranked: #17/50 (score: 0.0047)
+
+Top 10 predictions:
+      1. surfing water (0.3866)
+  👤  2. hurdling (0.2972)
+      3. dunking basketball (0.0732)
+      4. skiing slalom (0.0624)
+      5. climbing ladder (0.0191)
+      6. skiing (not slalom or crosscountry) (0.0189)
+      7. sword fighting (0.0148)
+      8. juggling balls (0.0136)
+      9. canoeing or kayaking (0.0131)
+     10. shooting goal (soccer) (0.0099)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 15
+Score gap (bg_score - human_score): -0.2924
+✅ Human action in top 5

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000783_playing bass guitar_to_deadlifting_--GF746y6UM_000496_000506_bg_x6CMl1kTx0w_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): playing bass guitar
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: playing bass guitar (score: 0.2102)
+
+RANKING ANALYSIS:
+  Human Action 'playing bass guitar' ranked: #1/50 (score: 0.2102)
+  Background Action 'deadlifting' ranked: #16/50 (score: 0.0145)
+
+Top 10 predictions:
+  👤  1. playing bass guitar (0.2102)
+      2. skipping rope (0.1731)
+      3. juggling soccer ball (0.0828)
+      4. playing guitar (0.0715)
+      5. playing trumpet (0.0683)
+      6. juggling balls (0.0571)
+      7. skiing slalom (0.0426)
+      8. golf driving (0.0219)
+      9. surfing water (0.0213)
+     10. playing accordion (0.0204)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 15
+Score gap (bg_score - human_score): -0.1957
+✅ Human action in top 5

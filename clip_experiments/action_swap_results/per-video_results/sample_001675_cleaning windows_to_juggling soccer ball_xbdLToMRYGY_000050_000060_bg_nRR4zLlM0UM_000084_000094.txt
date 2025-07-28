@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001675_cleaning windows_to_juggling soccer ball_xbdLToMRYGY_000050_000060_bg_nRR4zLlM0UM_000084_000094
+Frame: 000050.jpg
+Human Action Label (Correct): cleaning windows
+Background Label (Incorrect): juggling soccer ball
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.1360)
+
+RANKING ANALYSIS:
+  Human Action 'cleaning windows' ranked: #4/50 (score: 0.0552)
+  Background Action 'juggling soccer ball' ranked: #2/50 (score: 0.0804)
+
+Top 10 predictions:
+      1. shooting goal (soccer) (0.1360)
+  🏞️  2. juggling soccer ball (0.0804)
+      3. dribbling basketball (0.0685)
+  👤  4. cleaning windows (0.0552)
+      5. shooting basketball (0.0509)
+      6. skiing slalom (0.0487)
+      7. juggling balls (0.0423)
+      8. hitting baseball (0.0376)
+      9. bowling (0.0337)
+     10. playing trumpet (0.0276)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.0252
+⚠️  Background action in top 5!
+✅ Human action in top 5

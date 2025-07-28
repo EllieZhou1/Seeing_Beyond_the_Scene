@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002357_dribbling basketball_to_eating cake_UthqVZFc6Zk_000145_000155_bg_IRppx8kfVlA_000006_000016
+Frame: 000050.jpg
+Human Action Label (Correct): dribbling basketball
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.5294)
+
+RANKING ANALYSIS:
+  Human Action 'dribbling basketball' ranked: #2/50 (score: 0.1757)
+  Background Action 'eating cake' ranked: #30/50 (score: 0.0003)
+
+Top 10 predictions:
+      1. dunking basketball (0.5294)
+  👤  2. dribbling basketball (0.1757)
+      3. hurdling (0.0749)
+      4. playing basketball (0.0648)
+      5. juggling soccer ball (0.0430)
+      6. shooting basketball (0.0320)
+      7. climbing ladder (0.0204)
+      8. opening bottle (0.0152)
+      9. juggling balls (0.0106)
+     10. climbing a rope (0.0062)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 28
+Score gap (bg_score - human_score): -0.1755
+✅ Human action in top 5

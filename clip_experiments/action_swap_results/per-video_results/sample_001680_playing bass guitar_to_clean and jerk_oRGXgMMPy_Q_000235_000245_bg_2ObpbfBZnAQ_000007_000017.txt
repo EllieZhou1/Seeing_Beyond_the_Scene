@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001680_playing bass guitar_to_clean and jerk_oRGXgMMPy_Q_000235_000245_bg_2ObpbfBZnAQ_000007_000017
+Frame: 000050.jpg
+Human Action Label (Correct): playing bass guitar
+Background Label (Incorrect): clean and jerk
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.4234)
+
+RANKING ANALYSIS:
+  Human Action 'playing bass guitar' ranked: #46/50 (score: 0.0000)
+  Background Action 'clean and jerk' ranked: #7/50 (score: 0.0379)
+
+Top 10 predictions:
+      1. dunking basketball (0.4234)
+      2. shooting basketball (0.1288)
+      3. playing basketball (0.1247)
+      4. dribbling basketball (0.0738)
+      5. playing volleyball (0.0421)
+      6. shooting goal (soccer) (0.0383)
+  🏞️  7. clean and jerk (0.0379)
+      8. juggling soccer ball (0.0351)
+      9. juggling balls (0.0266)
+     10. climbing a rope (0.0133)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -39
+Score gap (bg_score - human_score): 0.0379

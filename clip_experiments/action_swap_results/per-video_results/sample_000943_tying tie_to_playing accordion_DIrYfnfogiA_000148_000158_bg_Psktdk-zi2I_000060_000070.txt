@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000943_tying tie_to_playing accordion_DIrYfnfogiA_000148_000158_bg_Psktdk-zi2I_000060_000070
+Frame: 000050.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: tying tie (score: 0.3539)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #1/50 (score: 0.3539)
+  Background Action 'playing accordion' ranked: #13/50 (score: 0.0175)
+
+Top 10 predictions:
+  👤  1. tying tie (0.3539)
+      2. punching person (boxing) (0.1029)
+      3. juggling soccer ball (0.0552)
+      4. juggling balls (0.0520)
+      5. opening bottle (0.0451)
+      6. brushing hair (0.0326)
+      7. eating cake (0.0324)
+      8. dribbling basketball (0.0318)
+      9. climbing a rope (0.0271)
+     10. catching or throwing baseball (0.0206)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 12
+Score gap (bg_score - human_score): -0.3363
+✅ Human action in top 5

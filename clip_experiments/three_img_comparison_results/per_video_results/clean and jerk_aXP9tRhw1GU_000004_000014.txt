@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: aXP9tRhw1GU
+Action: clean and jerk
+Time: 4-14s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.3989)
+  Top 10 predictions:
+        1. deadlifting (0.4776)
+    👉  2. clean and jerk (0.3989)
+        3. sword fighting (0.0307)
+        4. skipping rope (0.0253)
+        5. juggling balls (0.0160)
+        6. playing violin (0.0096)
+        7. juggling soccer ball (0.0054)
+        8. archery (0.0044)
+        9. climbing a rope (0.0040)
+       10. hitting baseball (0.0040)
+
+HUMAN ONLY:
+  Correct action rank: 15/50 (score: 0.0166)
+  Top 10 predictions:
+        1. juggling balls (0.2205)
+        2. skipping rope (0.1209)
+        3. juggling soccer ball (0.0869)
+        4. playing accordion (0.0673)
+        5. playing saxophone (0.0424)
+        6. playing violin (0.0404)
+        7. punching person (boxing) (0.0340)
+        8. deadlifting (0.0299)
+        9. climbing a rope (0.0274)
+       10. playing trumpet (0.0252)
+
+BACKGROUND ONLY:
+  Correct action rank: 16/50 (score: 0.0087)
+  Top 10 predictions:
+        1. playing piano (0.2057)
+        2. juggling soccer ball (0.1814)
+        3. juggling balls (0.1565)
+        4. playing accordion (0.1289)
+        5. sword fighting (0.0393)
+        6. sweeping floor (0.0384)
+        7. playing violin (0.0317)
+        8. playing trumpet (0.0254)
+        9. playing guitar (0.0204)
+       10. deadlifting (0.0198)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 14
+Ranking drop from human to background: 1

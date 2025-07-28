@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: X4Pj7_V1zBA
+Action: eating cake
+Time: 216-226s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 3/50 (score: 0.0803)
+  Top 10 predictions:
+        1. playing accordion (0.4240)
+        2. opening bottle (0.0858)
+    👉  3. eating cake (0.0803)
+        4. climbing a rope (0.0786)
+        5. brushing hair (0.0727)
+        6. brushing teeth (0.0573)
+        7. eating ice cream (0.0323)
+        8. drinking (0.0228)
+        9. playing saxophone (0.0191)
+       10. playing violin (0.0187)
+
+HUMAN ONLY:
+  Correct action rank: 3/50 (score: 0.0977)
+  Top 10 predictions:
+        1. playing accordion (0.3611)
+        2. opening bottle (0.1064)
+    👉  3. eating cake (0.0977)
+        4. climbing a rope (0.0878)
+        5. brushing hair (0.0804)
+        6. brushing teeth (0.0475)
+        7. eating ice cream (0.0396)
+        8. drinking (0.0215)
+        9. playing saxophone (0.0197)
+       10. playing violin (0.0195)
+
+BACKGROUND ONLY:
+  Correct action rank: 31/50 (score: 0.0078)
+  Top 10 predictions:
+        1. playing saxophone (0.1437)
+        2. driving car (0.1332)
+        3. opening bottle (0.0662)
+        4. cleaning windows (0.0441)
+        5. drinking (0.0408)
+        6. smoking (0.0399)
+        7. playing accordion (0.0339)
+        8. shooting basketball (0.0311)
+        9. deadlifting (0.0272)
+       10. bowling (0.0263)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 28
+Ranking drop from human to background: 28

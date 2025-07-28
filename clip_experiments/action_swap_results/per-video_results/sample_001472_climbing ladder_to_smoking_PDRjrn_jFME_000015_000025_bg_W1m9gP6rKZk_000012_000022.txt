@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001472_climbing ladder_to_smoking_PDRjrn_jFME_000015_000025_bg_W1m9gP6rKZk_000012_000022
+Frame: 000050.jpg
+Human Action Label (Correct): climbing ladder
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.6334)
+
+RANKING ANALYSIS:
+  Human Action 'climbing ladder' ranked: #3/50 (score: 0.1523)
+  Background Action 'smoking' ranked: #12/50 (score: 0.0014)
+
+Top 10 predictions:
+      1. climbing a rope (0.6334)
+      2. clean and jerk (0.1629)
+  👤  3. climbing ladder (0.1523)
+      4. tying tie (0.0132)
+      5. skipping rope (0.0055)
+      6. cleaning windows (0.0048)
+      7. deadlifting (0.0031)
+      8. opening bottle (0.0030)
+      9. drinking (0.0028)
+     10. brushing hair (0.0024)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 9
+Score gap (bg_score - human_score): -0.1509
+✅ Human action in top 5

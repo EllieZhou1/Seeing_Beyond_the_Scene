@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002262_driving car_to_bowling_8yRWHKGwKk4_000002_000012_bg_PO7vXwGJ-os_000663_000673
+Frame: 000050.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: bowling (score: 0.9919)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #18/50 (score: 0.0000)
+  Background Action 'bowling' ranked: #1/50 (score: 0.9919)
+
+Top 10 predictions:
+  🏞️  1. bowling (0.9919)
+      2. juggling balls (0.0040)
+      3. juggling soccer ball (0.0013)
+      4. sweeping floor (0.0008)
+      5. dribbling basketball (0.0003)
+      6. hitting baseball (0.0002)
+      7. climbing a rope (0.0002)
+      8. opening bottle (0.0001)
+      9. shooting goal (soccer) (0.0001)
+     10. catching or throwing baseball (0.0001)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -17
+Score gap (bg_score - human_score): 0.9919
+⚠️  Background action in top 5!

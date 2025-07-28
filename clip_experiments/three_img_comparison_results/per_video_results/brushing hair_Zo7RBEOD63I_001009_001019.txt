@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: Zo7RBEOD63I
+Action: brushing hair
+Time: 1009-1019s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.2578)
+  Top 10 predictions:
+        1. playing guitar (0.2971)
+    👉  2. brushing hair (0.2578)
+        3. playing bass guitar (0.0675)
+        4. writing (0.0664)
+        5. playing piano (0.0451)
+        6. playing accordion (0.0429)
+        7. tying tie (0.0408)
+        8. opening bottle (0.0290)
+        9. smoking (0.0212)
+       10. playing violin (0.0209)
+
+HUMAN ONLY:
+  Correct action rank: 2/50 (score: 0.1766)
+  Top 10 predictions:
+        1. playing guitar (0.2302)
+    👉  2. brushing hair (0.1766)
+        3. writing (0.0920)
+        4. playing bass guitar (0.0663)
+        5. tying tie (0.0535)
+        6. playing accordion (0.0495)
+        7. juggling balls (0.0462)
+        8. opening bottle (0.0420)
+        9. smoking (0.0394)
+       10. playing piano (0.0261)
+
+BACKGROUND ONLY:
+  Correct action rank: 24/50 (score: 0.0120)
+  Top 10 predictions:
+        1. playing accordion (0.2079)
+        2. cleaning windows (0.0637)
+        3. playing saxophone (0.0601)
+        4. playing trumpet (0.0570)
+        5. climbing a rope (0.0433)
+        6. juggling soccer ball (0.0374)
+        7. dunking basketball (0.0367)
+        8. hitting baseball (0.0360)
+        9. dribbling basketball (0.0308)
+       10. playing piano (0.0281)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 22
+Ranking drop from human to background: 22

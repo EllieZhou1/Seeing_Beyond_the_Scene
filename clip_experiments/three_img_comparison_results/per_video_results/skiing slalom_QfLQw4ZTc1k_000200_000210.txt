@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: QfLQw4ZTc1k
+Action: skiing slalom
+Time: 200-210s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.3107)
+  Top 10 predictions:
+        1. skiing (not slalom or crosscountry) (0.3239)
+    👉  2. skiing slalom (0.3107)
+        3. smoking (0.0511)
+        4. opening bottle (0.0320)
+        5. eating ice cream (0.0285)
+        6. climbing a rope (0.0255)
+        7. juggling soccer ball (0.0239)
+        8. punching person (boxing) (0.0226)
+        9. drinking (0.0218)
+       10. hitting baseball (0.0204)
+
+HUMAN ONLY:
+  Correct action rank: 9/50 (score: 0.0408)
+  Top 10 predictions:
+        1. opening bottle (0.1086)
+        2. smoking (0.0928)
+        3. climbing a rope (0.0862)
+        4. juggling soccer ball (0.0753)
+        5. eating ice cream (0.0613)
+        6. skiing (not slalom or crosscountry) (0.0578)
+        7. punching person (boxing) (0.0515)
+        8. drinking (0.0428)
+    👉  9. skiing slalom (0.0408)
+       10. juggling balls (0.0401)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.0717)
+  Top 10 predictions:
+        1. cleaning windows (0.0836)
+    👉  2. skiing slalom (0.0717)
+        3. driving car (0.0684)
+        4. surfing water (0.0528)
+        5. writing (0.0469)
+        6. opening bottle (0.0458)
+        7. dribbling basketball (0.0410)
+        8. skiing (not slalom or crosscountry) (0.0291)
+        9. bowling (0.0274)
+       10. shooting goal (soccer) (0.0245)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -7
+🚨 WARNING: Background ranks higher than human-only!

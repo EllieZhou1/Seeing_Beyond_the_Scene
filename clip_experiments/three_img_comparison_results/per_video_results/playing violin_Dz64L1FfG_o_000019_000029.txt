@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: Dz64L1FfG_o
+Action: playing violin
+Time: 19-29s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.9906)
+  Top 10 predictions:
+    👉  1. playing violin (0.9906)
+        2. playing trumpet (0.0038)
+        3. archery (0.0014)
+        4. playing bass guitar (0.0012)
+        5. sword fighting (0.0007)
+        6. opening bottle (0.0006)
+        7. playing guitar (0.0005)
+        8. playing saxophone (0.0003)
+        9. playing accordion (0.0003)
+       10. writing (0.0001)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.5505)
+  Top 10 predictions:
+    👉  1. playing violin (0.5505)
+        2. skipping rope (0.1709)
+        3. juggling balls (0.0311)
+        4. juggling soccer ball (0.0289)
+        5. playing trumpet (0.0240)
+        6. punching person (boxing) (0.0228)
+        7. sword fighting (0.0219)
+        8. playing saxophone (0.0141)
+        9. flying kite (0.0132)
+       10. archery (0.0126)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.9854)
+  Top 10 predictions:
+    👉  1. playing violin (0.9854)
+        2. playing trumpet (0.0043)
+        3. archery (0.0026)
+        4. playing saxophone (0.0016)
+        5. climbing a rope (0.0012)
+        6. sword fighting (0.0011)
+        7. playing bass guitar (0.0008)
+        8. playing accordion (0.0006)
+        9. playing guitar (0.0005)
+       10. climbing ladder (0.0004)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: 0

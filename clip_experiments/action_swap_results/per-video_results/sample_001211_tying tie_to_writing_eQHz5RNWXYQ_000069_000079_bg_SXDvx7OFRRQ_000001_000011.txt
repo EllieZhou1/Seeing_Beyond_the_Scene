@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001211_tying tie_to_writing_eQHz5RNWXYQ_000069_000079_bg_SXDvx7OFRRQ_000001_000011
+Frame: 000050.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: tying tie (score: 0.7947)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #1/50 (score: 0.7947)
+  Background Action 'writing' ranked: #24/50 (score: 0.0004)
+
+Top 10 predictions:
+  👤  1. tying tie (0.7947)
+      2. skipping rope (0.0908)
+      3. brushing hair (0.0205)
+      4. opening bottle (0.0201)
+      5. skiing (not slalom or crosscountry) (0.0181)
+      6. punching person (boxing) (0.0092)
+      7. juggling soccer ball (0.0083)
+      8. dribbling basketball (0.0060)
+      9. juggling balls (0.0055)
+     10. skiing slalom (0.0047)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 23
+Score gap (bg_score - human_score): -0.7944
+✅ Human action in top 5

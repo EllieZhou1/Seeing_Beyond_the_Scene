@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: C9boKvSr3kU
+Action: playing piano
+Time: 15-25s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 5/50 (score: 0.0730)
+  Top 10 predictions:
+        1. eating cake (0.2352)
+        2. climbing ladder (0.1614)
+        3. brushing teeth (0.1183)
+        4. opening bottle (0.1151)
+    👉  5. playing piano (0.0730)
+        6. eating ice cream (0.0724)
+        7. climbing a rope (0.0436)
+        8. brushing hair (0.0386)
+        9. drinking (0.0153)
+       10. playing violin (0.0150)
+
+HUMAN ONLY:
+  Correct action rank: 33/50 (score: 0.0020)
+  Top 10 predictions:
+        1. juggling soccer ball (0.2866)
+        2. juggling balls (0.1861)
+        3. opening bottle (0.0799)
+        4. clean and jerk (0.0643)
+        5. climbing a rope (0.0593)
+        6. punching person (boxing) (0.0315)
+        7. skipping rope (0.0307)
+        8. dribbling basketball (0.0290)
+        9. playing violin (0.0288)
+       10. playing trumpet (0.0285)
+
+BACKGROUND ONLY:
+  Correct action rank: 11/50 (score: 0.0078)
+  Top 10 predictions:
+        1. juggling soccer ball (0.4692)
+        2. sweeping floor (0.2506)
+        3. juggling balls (0.0591)
+        4. catching or throwing frisbee (0.0295)
+        5. dribbling basketball (0.0282)
+        6. skipping rope (0.0226)
+        7. cleaning windows (0.0211)
+        8. shooting goal (soccer) (0.0135)
+        9. playing basketball (0.0100)
+       10. catching or throwing baseball (0.0097)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 6
+Ranking drop from human to background: -22
+🚨 WARNING: Background ranks higher than human-only!

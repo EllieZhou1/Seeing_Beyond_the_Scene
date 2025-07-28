@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: I131OC6fVSk
+Action: reading book
+Time: 19-29s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 36/50 (score: 0.0034)
+  Top 10 predictions:
+        1. punching person (boxing) (0.2298)
+        2. brushing hair (0.1344)
+        3. climbing a rope (0.0983)
+        4. opening bottle (0.0494)
+        5. climbing ladder (0.0394)
+        6. playing violin (0.0325)
+        7. juggling soccer ball (0.0323)
+        8. hitting baseball (0.0323)
+        9. dribbling basketball (0.0302)
+       10. sword fighting (0.0288)
+
+HUMAN ONLY:
+  Correct action rank: 44/50 (score: 0.0018)
+  Top 10 predictions:
+        1. punching person (boxing) (0.4249)
+        2. hitting baseball (0.0662)
+        3. driving car (0.0605)
+        4. playing violin (0.0357)
+        5. opening bottle (0.0338)
+        6. drinking (0.0325)
+        7. dribbling basketball (0.0231)
+        8. dunking basketball (0.0207)
+        9. eating ice cream (0.0197)
+       10. sword fighting (0.0176)
+
+BACKGROUND ONLY:
+  Correct action rank: 30/50 (score: 0.0087)
+  Top 10 predictions:
+        1. brushing hair (0.3095)
+        2. opening bottle (0.0575)
+        3. climbing ladder (0.0426)
+        4. climbing a rope (0.0380)
+        5. playing guitar (0.0372)
+        6. juggling soccer ball (0.0360)
+        7. playing saxophone (0.0342)
+        8. playing piano (0.0306)
+        9. playing violin (0.0288)
+       10. drinking (0.0258)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: -6
+Ranking drop from human to background: -14
+🚨 WARNING: Background ranks higher than human-only!

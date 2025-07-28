@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: G2MO_SNlO2s
+Action: writing
+Time: 274-284s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 5/50 (score: 0.0302)
+  Top 10 predictions:
+        1. cleaning windows (0.6669)
+        2. reading newspaper (0.0504)
+        3. reading book (0.0478)
+        4. shooting goal (soccer) (0.0309)
+    👉  5. writing (0.0302)
+        6. juggling balls (0.0294)
+        7. juggling soccer ball (0.0222)
+        8. opening bottle (0.0165)
+        9. skipping rope (0.0109)
+       10. smoking (0.0095)
+
+HUMAN ONLY:
+  Correct action rank: 13/50 (score: 0.0212)
+  Top 10 predictions:
+        1. juggling soccer ball (0.1627)
+        2. juggling balls (0.1481)
+        3. punching person (boxing) (0.1352)
+        4. dribbling basketball (0.0518)
+        5. opening bottle (0.0500)
+        6. shooting goal (soccer) (0.0343)
+        7. smoking (0.0340)
+        8. hitting baseball (0.0261)
+        9. playing trumpet (0.0231)
+       10. catching or throwing baseball (0.0223)
+
+BACKGROUND ONLY:
+  Correct action rank: 4/50 (score: 0.0636)
+  Top 10 predictions:
+        1. cleaning windows (0.5004)
+        2. reading book (0.1302)
+        3. reading newspaper (0.1182)
+    👉  4. writing (0.0636)
+        5. shooting goal (soccer) (0.0299)
+        6. opening bottle (0.0191)
+        7. juggling balls (0.0169)
+        8. smoking (0.0140)
+        9. juggling soccer ball (0.0138)
+       10. skipping rope (0.0137)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -1
+Ranking drop from human to background: -9
+🚨 WARNING: Background ranks higher than human-only!

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000160_clean and jerk_to_surfing water_B98EOBpM5YQ_000017_000027_bg_yF3kyTjZuz4_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): surfing water
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.1157)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #29/50 (score: 0.0059)
+  Background Action 'surfing water' ranked: #12/50 (score: 0.0307)
+
+Top 10 predictions:
+      1. shooting goal (soccer) (0.1157)
+      2. juggling soccer ball (0.0968)
+      3. climbing a rope (0.0708)
+      4. juggling balls (0.0642)
+      5. climbing ladder (0.0592)
+      6. golf driving (0.0565)
+      7. smoking (0.0526)
+      8. playing basketball (0.0469)
+      9. shooting basketball (0.0409)
+     10. dunking basketball (0.0393)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -17
+Score gap (bg_score - human_score): 0.0248

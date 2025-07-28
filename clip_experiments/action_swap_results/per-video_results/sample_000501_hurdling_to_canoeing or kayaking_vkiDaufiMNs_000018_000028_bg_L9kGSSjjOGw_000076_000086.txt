@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000501_hurdling_to_canoeing or kayaking_vkiDaufiMNs_000018_000028_bg_L9kGSSjjOGw_000076_000086
+Frame: 000050.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): canoeing or kayaking
+
+CLIP PREDICTIONS:
+  Predicted Label: archery (score: 0.1507)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #9/50 (score: 0.0444)
+  Background Action 'canoeing or kayaking' ranked: #23/50 (score: 0.0065)
+
+Top 10 predictions:
+      1. archery (0.1507)
+      2. skiing slalom (0.1127)
+      3. juggling soccer ball (0.1101)
+      4. skiing (not slalom or crosscountry) (0.1055)
+      5. shooting goal (soccer) (0.0734)
+      6. climbing a rope (0.0700)
+      7. flying kite (0.0609)
+      8. sword fighting (0.0577)
+  👤  9. hurdling (0.0444)
+     10. juggling balls (0.0247)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 14
+Score gap (bg_score - human_score): -0.0379

@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000226_climbing a rope_to_bowling_iqUz-YuearY_000026_000036_bg_MKv1mkOcom8_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): climbing a rope
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: bowling (score: 0.9329)
+
+RANKING ANALYSIS:
+  Human Action 'climbing a rope' ranked: #5/50 (score: 0.0061)
+  Background Action 'bowling' ranked: #1/50 (score: 0.9329)
+
+Top 10 predictions:
+  🏞️  1. bowling (0.9329)
+      2. juggling balls (0.0222)
+      3. dunking basketball (0.0082)
+      4. dribbling basketball (0.0061)
+  👤  5. climbing a rope (0.0061)
+      6. juggling soccer ball (0.0038)
+      7. hurdling (0.0030)
+      8. climbing ladder (0.0023)
+      9. shooting goal (soccer) (0.0022)
+     10. shooting basketball (0.0020)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -4
+Score gap (bg_score - human_score): 0.9268
+⚠️  Background action in top 5!
+✅ Human action in top 5

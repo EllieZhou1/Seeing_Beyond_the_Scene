@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002122_eating ice cream_to_juggling balls_1HWS43YWRB0_000011_000021_bg_hWn5R3BQBys_000020_000030
+Frame: 000050.jpg
+Human Action Label (Correct): eating ice cream
+Background Label (Incorrect): juggling balls
+
+CLIP PREDICTIONS:
+  Predicted Label: eating ice cream (score: 0.6786)
+
+RANKING ANALYSIS:
+  Human Action 'eating ice cream' ranked: #1/50 (score: 0.6786)
+  Background Action 'juggling balls' ranked: #18/50 (score: 0.0006)
+
+Top 10 predictions:
+  👤  1. eating ice cream (0.6786)
+      2. eating cake (0.2227)
+      3. smoking (0.0371)
+      4. brushing teeth (0.0351)
+      5. opening bottle (0.0037)
+      6. drinking (0.0031)
+      7. skipping rope (0.0022)
+      8. playing trumpet (0.0021)
+      9. flying kite (0.0019)
+     10. playing saxophone (0.0014)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 17
+Score gap (bg_score - human_score): -0.6780
+✅ Human action in top 5

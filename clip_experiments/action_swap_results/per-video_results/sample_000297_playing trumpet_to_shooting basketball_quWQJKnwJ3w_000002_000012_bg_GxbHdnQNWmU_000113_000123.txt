@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000297_playing trumpet_to_shooting basketball_quWQJKnwJ3w_000002_000012_bg_GxbHdnQNWmU_000113_000123
+Frame: 000050.jpg
+Human Action Label (Correct): playing trumpet
+Background Label (Incorrect): shooting basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: eating ice cream (score: 0.2774)
+
+RANKING ANALYSIS:
+  Human Action 'playing trumpet' ranked: #8/50 (score: 0.0308)
+  Background Action 'shooting basketball' ranked: #35/50 (score: 0.0024)
+
+Top 10 predictions:
+      1. eating ice cream (0.2774)
+      2. drinking (0.1428)
+      3. smoking (0.1118)
+      4. driving car (0.0846)
+      5. playing saxophone (0.0621)
+      6. opening bottle (0.0458)
+      7. eating cake (0.0315)
+  👤  8. playing trumpet (0.0308)
+      9. cleaning windows (0.0196)
+     10. golf driving (0.0178)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 27
+Score gap (bg_score - human_score): -0.0284

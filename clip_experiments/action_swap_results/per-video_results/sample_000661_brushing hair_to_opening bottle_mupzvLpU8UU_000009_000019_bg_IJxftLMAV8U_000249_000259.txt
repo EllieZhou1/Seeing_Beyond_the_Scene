@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000661_brushing hair_to_opening bottle_mupzvLpU8UU_000009_000019_bg_IJxftLMAV8U_000249_000259
+Frame: 000050.jpg
+Human Action Label (Correct): brushing hair
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: playing piano (score: 0.1794)
+
+RANKING ANALYSIS:
+  Human Action 'brushing hair' ranked: #5/50 (score: 0.0459)
+  Background Action 'opening bottle' ranked: #28/50 (score: 0.0049)
+
+Top 10 predictions:
+      1. playing piano (0.1794)
+      2. playing accordion (0.1743)
+      3. bowling (0.1617)
+      4. playing violin (0.0682)
+  👤  5. brushing hair (0.0459)
+      6. playing saxophone (0.0367)
+      7. playing guitar (0.0360)
+      8. eating cake (0.0275)
+      9. climbing ladder (0.0255)
+     10. sweeping floor (0.0231)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 23
+Score gap (bg_score - human_score): -0.0411
+✅ Human action in top 5

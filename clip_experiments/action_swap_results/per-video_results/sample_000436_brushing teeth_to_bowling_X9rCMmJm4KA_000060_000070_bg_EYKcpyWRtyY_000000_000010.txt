@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000436_brushing teeth_to_bowling_X9rCMmJm4KA_000060_000070_bg_EYKcpyWRtyY_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): brushing teeth
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: dribbling basketball (score: 0.3662)
+
+RANKING ANALYSIS:
+  Human Action 'brushing teeth' ranked: #29/50 (score: 0.0034)
+  Background Action 'bowling' ranked: #2/50 (score: 0.1225)
+
+Top 10 predictions:
+      1. dribbling basketball (0.3662)
+  🏞️  2. bowling (0.1225)
+      3. hitting baseball (0.0646)
+      4. juggling soccer ball (0.0488)
+      5. catching or throwing baseball (0.0445)
+      6. sweeping floor (0.0322)
+      7. juggling balls (0.0318)
+      8. playing accordion (0.0245)
+      9. climbing a rope (0.0220)
+     10. clean and jerk (0.0213)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -27
+Score gap (bg_score - human_score): 0.1191
+⚠️  Background action in top 5!

@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: X8Tzn9cdCiA
+Action: brushing teeth
+Time: 43-53s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.1296)
+  Top 10 predictions:
+        1. brushing hair (0.3101)
+    👉  2. brushing teeth (0.1296)
+        3. dribbling basketball (0.0741)
+        4. eating cake (0.0563)
+        5. dunking basketball (0.0438)
+        6. playing piano (0.0312)
+        7. shooting basketball (0.0294)
+        8. climbing ladder (0.0246)
+        9. playing accordion (0.0236)
+       10. eating ice cream (0.0228)
+
+HUMAN ONLY:
+  Correct action rank: 3/50 (score: 0.0632)
+  Top 10 predictions:
+        1. brushing hair (0.1768)
+        2. dribbling basketball (0.1420)
+    👉  3. brushing teeth (0.0632)
+        4. eating cake (0.0568)
+        5. dunking basketball (0.0564)
+        6. shooting basketball (0.0546)
+        7. shooting goal (soccer) (0.0315)
+        8. playing piano (0.0287)
+        9. juggling balls (0.0271)
+       10. bowling (0.0249)
+
+BACKGROUND ONLY:
+  Correct action rank: 24/50 (score: 0.0079)
+  Top 10 predictions:
+        1. sweeping floor (0.1397)
+        2. cleaning windows (0.0945)
+        3. hitting baseball (0.0932)
+        4. brushing hair (0.0903)
+        5. writing (0.0661)
+        6. smoking (0.0535)
+        7. reading book (0.0428)
+        8. playing saxophone (0.0401)
+        9. playing trumpet (0.0351)
+       10. opening bottle (0.0306)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 22
+Ranking drop from human to background: 21

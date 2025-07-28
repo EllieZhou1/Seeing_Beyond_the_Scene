@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000225_archery_to_golf driving_erSoY-STyBQ_000207_000217_bg_dhpzYm8xWYg_000004_000014
+Frame: 000050.jpg
+Human Action Label (Correct): archery
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: flying kite (score: 0.9097)
+
+RANKING ANALYSIS:
+  Human Action 'archery' ranked: #14/50 (score: 0.0011)
+  Background Action 'golf driving' ranked: #5/50 (score: 0.0114)
+
+Top 10 predictions:
+      1. flying kite (0.9097)
+      2. shooting goal (soccer) (0.0175)
+      3. catching or throwing frisbee (0.0132)
+      4. juggling balls (0.0124)
+  🏞️  5. golf driving (0.0114)
+      6. skiing slalom (0.0087)
+      7. catching or throwing baseball (0.0078)
+      8. skiing (not slalom or crosscountry) (0.0056)
+      9. juggling soccer ball (0.0033)
+     10. hitting baseball (0.0030)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -9
+Score gap (bg_score - human_score): 0.0103
+⚠️  Background action in top 5!

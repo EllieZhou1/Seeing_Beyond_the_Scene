@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: Vo0bAkmnns4
+Action: eating ice cream
+Time: 10-20s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.7662)
+  Top 10 predictions:
+    👉  1. eating ice cream (0.7662)
+        2. eating cake (0.2192)
+        3. dribbling basketball (0.0023)
+        4. hitting baseball (0.0017)
+        5. opening bottle (0.0017)
+        6. drinking (0.0014)
+        7. brushing teeth (0.0012)
+        8. catching or throwing baseball (0.0010)
+        9. juggling soccer ball (0.0006)
+       10. juggling balls (0.0005)
+
+HUMAN ONLY:
+  Correct action rank: 8/50 (score: 0.0342)
+  Top 10 predictions:
+        1. juggling soccer ball (0.2012)
+        2. dribbling basketball (0.1322)
+        3. punching person (boxing) (0.1309)
+        4. hitting baseball (0.0776)
+        5. catching or throwing baseball (0.0690)
+        6. playing accordion (0.0599)
+        7. driving car (0.0342)
+    👉  8. eating ice cream (0.0342)
+        9. opening bottle (0.0323)
+       10. juggling balls (0.0296)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.1433)
+  Top 10 predictions:
+        1. eating cake (0.3219)
+    👉  2. eating ice cream (0.1433)
+        3. smoking (0.1060)
+        4. drinking (0.0898)
+        5. opening bottle (0.0837)
+        6. sword fighting (0.0290)
+        7. playing accordion (0.0280)
+        8. juggling soccer ball (0.0212)
+        9. reading newspaper (0.0151)
+       10. playing saxophone (0.0149)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 1
+Ranking drop from human to background: -6
+🚨 WARNING: Background ranks higher than human-only!

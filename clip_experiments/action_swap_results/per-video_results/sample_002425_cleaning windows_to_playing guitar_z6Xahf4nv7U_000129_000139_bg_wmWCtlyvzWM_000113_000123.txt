@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002425_cleaning windows_to_playing guitar_z6Xahf4nv7U_000129_000139_bg_wmWCtlyvzWM_000113_000123
+Frame: 000050.jpg
+Human Action Label (Correct): cleaning windows
+Background Label (Incorrect): playing guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.4018)
+
+RANKING ANALYSIS:
+  Human Action 'cleaning windows' ranked: #2/50 (score: 0.0829)
+  Background Action 'playing guitar' ranked: #24/50 (score: 0.0055)
+
+Top 10 predictions:
+      1. skiing slalom (0.4018)
+  👤  2. cleaning windows (0.0829)
+      3. clean and jerk (0.0829)
+      4. skiing (not slalom or crosscountry) (0.0762)
+      5. catching or throwing baseball (0.0367)
+      6. hitting baseball (0.0352)
+      7. juggling soccer ball (0.0321)
+      8. climbing a rope (0.0276)
+      9. punching person (boxing) (0.0217)
+     10. shooting goal (soccer) (0.0188)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 22
+Score gap (bg_score - human_score): -0.0774
+✅ Human action in top 5

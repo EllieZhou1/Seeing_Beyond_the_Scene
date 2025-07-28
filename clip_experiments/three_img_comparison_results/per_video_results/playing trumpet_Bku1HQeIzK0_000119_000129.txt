@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: Bku1HQeIzK0
+Action: playing trumpet
+Time: 119-129s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.5717)
+  Top 10 predictions:
+    👉  1. playing trumpet (0.5717)
+        2. playing saxophone (0.4107)
+        3. playing accordion (0.0083)
+        4. skiing slalom (0.0017)
+        5. playing violin (0.0017)
+        6. sword fighting (0.0017)
+        7. playing piano (0.0008)
+        8. skiing (not slalom or crosscountry) (0.0006)
+        9. playing bass guitar (0.0005)
+       10. hurdling (0.0005)
+
+HUMAN ONLY:
+  Correct action rank: 14/50 (score: 0.0191)
+  Top 10 predictions:
+        1. juggling balls (0.2429)
+        2. punching person (boxing) (0.1548)
+        3. skiing slalom (0.0829)
+        4. skipping rope (0.0408)
+        5. sword fighting (0.0375)
+        6. archery (0.0349)
+        7. playing volleyball (0.0341)
+        8. bowling (0.0308)
+        9. walking the dog (0.0303)
+       10. skiing (not slalom or crosscountry) (0.0271)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.4681)
+  Top 10 predictions:
+    👉  1. playing trumpet (0.4681)
+        2. playing saxophone (0.3457)
+        3. playing accordion (0.0963)
+        4. playing piano (0.0408)
+        5. playing violin (0.0207)
+        6. sword fighting (0.0062)
+        7. skiing slalom (0.0046)
+        8. reading newspaper (0.0018)
+        9. juggling balls (0.0015)
+       10. sweeping floor (0.0014)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -13
+🚨 WARNING: Background ranks higher than human-only!

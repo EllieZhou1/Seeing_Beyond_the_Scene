@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001707_shooting basketball_to_eating ice cream_im-WH6TyOfg_000002_000012_bg_xIHGScywA0s_000256_000266
+Frame: 000050.jpg
+Human Action Label (Correct): shooting basketball
+Background Label (Incorrect): eating ice cream
+
+CLIP PREDICTIONS:
+  Predicted Label: eating cake (score: 0.5493)
+
+RANKING ANALYSIS:
+  Human Action 'shooting basketball' ranked: #42/50 (score: 0.0005)
+  Background Action 'eating ice cream' ranked: #9/50 (score: 0.0143)
+
+Top 10 predictions:
+      1. eating cake (0.5493)
+      2. playing accordion (0.0988)
+      3. bowling (0.0623)
+      4. surfing water (0.0503)
+      5. driving car (0.0420)
+      6. opening bottle (0.0284)
+      7. drinking (0.0250)
+      8. playing saxophone (0.0170)
+  🏞️  9. eating ice cream (0.0143)
+     10. playing piano (0.0138)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -33
+Score gap (bg_score - human_score): 0.0138

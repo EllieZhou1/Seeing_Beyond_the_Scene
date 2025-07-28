@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 4XeeI5868Y4
+Action: surfing water
+Time: 31-41s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 11/50 (score: 0.0301)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.0846)
+        2. juggling soccer ball (0.0761)
+        3. walking the dog (0.0705)
+        4. hitting baseball (0.0483)
+        5. climbing a rope (0.0479)
+        6. playing saxophone (0.0472)
+        7. punching person (boxing) (0.0467)
+        8. smoking (0.0411)
+        9. climbing ladder (0.0381)
+       10. playing trumpet (0.0302)
+
+HUMAN ONLY:
+  Correct action rank: 42/50 (score: 0.0025)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.2439)
+        2. skiing slalom (0.1752)
+        3. dunking basketball (0.1059)
+        4. shooting basketball (0.0485)
+        5. dribbling basketball (0.0423)
+        6. climbing ladder (0.0358)
+        7. playing basketball (0.0338)
+        8. punching person (boxing) (0.0251)
+        9. hitting baseball (0.0240)
+       10. skipping rope (0.0233)
+
+BACKGROUND ONLY:
+  Correct action rank: 26/50 (score: 0.0138)
+  Top 10 predictions:
+        1. juggling soccer ball (0.1045)
+        2. shooting goal (soccer) (0.0708)
+        3. punching person (boxing) (0.0526)
+        4. hitting baseball (0.0482)
+        5. playing saxophone (0.0479)
+        6. climbing ladder (0.0457)
+        7. climbing a rope (0.0421)
+        8. smoking (0.0397)
+        9. walking the dog (0.0334)
+       10. dribbling basketball (0.0310)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 15
+Ranking drop from human to background: -16
+🚨 WARNING: Background ranks higher than human-only!

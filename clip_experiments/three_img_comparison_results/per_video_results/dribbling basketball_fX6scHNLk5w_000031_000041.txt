@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: fX6scHNLk5w
+Action: dribbling basketball
+Time: 31-41s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 3/50 (score: 0.2099)
+  Top 10 predictions:
+        1. shooting basketball (0.4053)
+        2. playing basketball (0.2280)
+    👉  3. dribbling basketball (0.2099)
+        4. dunking basketball (0.1431)
+        5. juggling balls (0.0034)
+        6. shooting goal (soccer) (0.0021)
+        7. juggling soccer ball (0.0015)
+        8. hurdling (0.0009)
+        9. sweeping floor (0.0006)
+       10. opening bottle (0.0005)
+
+HUMAN ONLY:
+  Correct action rank: 4/50 (score: 0.1236)
+  Top 10 predictions:
+        1. shooting basketball (0.3535)
+        2. playing basketball (0.3446)
+        3. dunking basketball (0.1306)
+    👉  4. dribbling basketball (0.1236)
+        5. juggling balls (0.0225)
+        6. juggling soccer ball (0.0044)
+        7. opening bottle (0.0028)
+        8. shooting goal (soccer) (0.0017)
+        9. playing volleyball (0.0013)
+       10. climbing ladder (0.0013)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.3579)
+  Top 10 predictions:
+    👉  1. dribbling basketball (0.3579)
+        2. shooting basketball (0.2881)
+        3. shooting goal (soccer) (0.0895)
+        4. playing basketball (0.0782)
+        5. dunking basketball (0.0627)
+        6. sweeping floor (0.0287)
+        7. climbing a rope (0.0192)
+        8. hurdling (0.0152)
+        9. juggling soccer ball (0.0101)
+       10. skipping rope (0.0089)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -2
+Ranking drop from human to background: -3
+🚨 WARNING: Background ranks higher than human-only!

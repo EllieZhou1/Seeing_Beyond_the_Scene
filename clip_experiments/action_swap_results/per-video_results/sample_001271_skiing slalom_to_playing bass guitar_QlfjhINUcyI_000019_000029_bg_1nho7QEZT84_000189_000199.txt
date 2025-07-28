@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001271_skiing slalom_to_playing bass guitar_QlfjhINUcyI_000019_000029_bg_1nho7QEZT84_000189_000199
+Frame: 000050.jpg
+Human Action Label (Correct): skiing slalom
+Background Label (Incorrect): playing bass guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: playing bass guitar (score: 0.5669)
+
+RANKING ANALYSIS:
+  Human Action 'skiing slalom' ranked: #8/50 (score: 0.0165)
+  Background Action 'playing bass guitar' ranked: #1/50 (score: 0.5669)
+
+Top 10 predictions:
+  🏞️  1. playing bass guitar (0.5669)
+      2. surfing water (0.1439)
+      3. canoeing or kayaking (0.0736)
+      4. climbing ladder (0.0592)
+      5. playing violin (0.0362)
+      6. playing guitar (0.0307)
+      7. climbing a rope (0.0198)
+  👤  8. skiing slalom (0.0165)
+      9. playing saxophone (0.0150)
+     10. playing trumpet (0.0109)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -7
+Score gap (bg_score - human_score): 0.5505
+⚠️  Background action in top 5!

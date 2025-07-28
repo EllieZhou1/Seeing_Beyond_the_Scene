@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: _3XAZZnZLlc
+Action: walking the dog
+Time: 76-86s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 4/50 (score: 0.0725)
+  Top 10 predictions:
+        1. climbing a rope (0.2437)
+        2. shooting goal (soccer) (0.1521)
+        3. juggling soccer ball (0.1170)
+    👉  4. walking the dog (0.0725)
+        5. catching or throwing frisbee (0.0695)
+        6. surfing water (0.0381)
+        7. golf driving (0.0381)
+        8. catching or throwing baseball (0.0364)
+        9. cleaning windows (0.0282)
+       10. dribbling basketball (0.0217)
+
+HUMAN ONLY:
+  Correct action rank: 20/50 (score: 0.0167)
+  Top 10 predictions:
+        1. juggling soccer ball (0.1157)
+        2. shooting goal (soccer) (0.0657)
+        3. dunking basketball (0.0636)
+        4. dribbling basketball (0.0562)
+        5. shooting basketball (0.0540)
+        6. punching person (boxing) (0.0421)
+        7. playing basketball (0.0385)
+        8. hitting baseball (0.0330)
+        9. playing guitar (0.0324)
+       10. juggling balls (0.0283)
+
+BACKGROUND ONLY:
+  Correct action rank: 5/50 (score: 0.0646)
+  Top 10 predictions:
+        1. climbing a rope (0.2153)
+        2. shooting goal (soccer) (0.1558)
+        3. juggling soccer ball (0.1279)
+        4. catching or throwing frisbee (0.0801)
+    👉  5. walking the dog (0.0646)
+        6. catching or throwing baseball (0.0453)
+        7. golf driving (0.0376)
+        8. surfing water (0.0321)
+        9. cleaning windows (0.0317)
+       10. hitting baseball (0.0214)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 1
+Ranking drop from human to background: -15
+🚨 WARNING: Background ranks higher than human-only!

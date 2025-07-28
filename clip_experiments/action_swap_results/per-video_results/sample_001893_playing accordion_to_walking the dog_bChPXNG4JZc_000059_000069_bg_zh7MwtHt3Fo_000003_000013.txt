@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001893_playing accordion_to_walking the dog_bChPXNG4JZc_000059_000069_bg_zh7MwtHt3Fo_000003_000013
+Frame: 000050.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.3321)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #27/50 (score: 0.0014)
+  Background Action 'walking the dog' ranked: #26/50 (score: 0.0015)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.3321)
+      2. punching person (boxing) (0.2297)
+      3. juggling balls (0.2173)
+      4. opening bottle (0.0675)
+      5. skipping rope (0.0295)
+      6. shooting goal (soccer) (0.0175)
+      7. sword fighting (0.0151)
+      8. shooting basketball (0.0100)
+      9. dunking basketball (0.0080)
+     10. eating ice cream (0.0069)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.0001

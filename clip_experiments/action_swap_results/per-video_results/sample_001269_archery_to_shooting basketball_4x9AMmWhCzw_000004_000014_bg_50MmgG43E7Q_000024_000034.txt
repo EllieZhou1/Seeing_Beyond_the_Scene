@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001269_archery_to_shooting basketball_4x9AMmWhCzw_000004_000014_bg_50MmgG43E7Q_000024_000034
+Frame: 000050.jpg
+Human Action Label (Correct): archery
+Background Label (Incorrect): shooting basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.1961)
+
+RANKING ANALYSIS:
+  Human Action 'archery' ranked: #12/50 (score: 0.0211)
+  Background Action 'shooting basketball' ranked: #17/50 (score: 0.0110)
+
+Top 10 predictions:
+      1. climbing a rope (0.1961)
+      2. dunking basketball (0.1394)
+      3. climbing ladder (0.1147)
+      4. punching person (boxing) (0.0946)
+      5. juggling balls (0.0506)
+      6. sword fighting (0.0454)
+      7. skipping rope (0.0450)
+      8. juggling soccer ball (0.0342)
+      9. surfing water (0.0324)
+     10. cleaning windows (0.0298)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 5
+Score gap (bg_score - human_score): -0.0101

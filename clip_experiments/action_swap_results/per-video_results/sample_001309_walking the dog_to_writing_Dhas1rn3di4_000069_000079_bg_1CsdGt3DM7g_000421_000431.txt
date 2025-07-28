@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001309_walking the dog_to_writing_Dhas1rn3di4_000069_000079_bg_1CsdGt3DM7g_000421_000431
+Frame: 000050.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: writing (score: 0.3059)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #42/50 (score: 0.0007)
+  Background Action 'writing' ranked: #1/50 (score: 0.3059)
+
+Top 10 predictions:
+  🏞️  1. writing (0.3059)
+      2. opening bottle (0.1061)
+      3. punching person (boxing) (0.0965)
+      4. juggling balls (0.0649)
+      5. smoking (0.0603)
+      6. playing accordion (0.0520)
+      7. reading book (0.0485)
+      8. juggling soccer ball (0.0470)
+      9. playing guitar (0.0303)
+     10. skipping rope (0.0176)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -41
+Score gap (bg_score - human_score): 0.3053
+⚠️  Background action in top 5!

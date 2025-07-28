@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001302_driving car_to_archery_bWLksTAnuFE_000019_000029_bg_mnUVG7T6iKg_000109_000119
+Frame: 000050.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): archery
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.1088)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #41/50 (score: 0.0020)
+  Background Action 'archery' ranked: #7/50 (score: 0.0526)
+
+Top 10 predictions:
+      1. sword fighting (0.1088)
+      2. punching person (boxing) (0.1027)
+      3. cleaning windows (0.0933)
+      4. playing trumpet (0.0929)
+      5. juggling balls (0.0742)
+      6. juggling soccer ball (0.0668)
+  🏞️  7. archery (0.0526)
+      8. playing accordion (0.0469)
+      9. playing saxophone (0.0462)
+     10. playing violin (0.0410)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -34
+Score gap (bg_score - human_score): 0.0505

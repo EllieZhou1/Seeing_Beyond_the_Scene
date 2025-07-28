@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002364_hurdling_to_punching person (boxing)_hKdVTLOym0U_000075_000085_bg_GCeJ0S7BWj4_000342_000352
+Frame: 000050.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: dribbling basketball (score: 0.4408)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #13/50 (score: 0.0017)
+  Background Action 'punching person (boxing)' ranked: #19/50 (score: 0.0007)
+
+Top 10 predictions:
+      1. dribbling basketball (0.4408)
+      2. juggling soccer ball (0.2066)
+      3. juggling balls (0.1424)
+      4. dunking basketball (0.0758)
+      5. playing basketball (0.0553)
+      6. shooting goal (soccer) (0.0210)
+      7. shooting basketball (0.0138)
+      8. catching or throwing frisbee (0.0110)
+      9. clean and jerk (0.0096)
+     10. playing tennis (0.0054)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 6
+Score gap (bg_score - human_score): -0.0010

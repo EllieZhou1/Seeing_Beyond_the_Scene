@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000853_reading book_to_tying tie_PsiGCxGW12A_000086_000096_bg_l2GKT_nRoOU_000073_000083
+Frame: 000050.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.3104)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #19/50 (score: 0.0082)
+  Background Action 'tying tie' ranked: #8/50 (score: 0.0337)
+
+Top 10 predictions:
+      1. brushing hair (0.3104)
+      2. playing violin (0.1232)
+      3. playing accordion (0.0540)
+      4. juggling soccer ball (0.0530)
+      5. playing piano (0.0507)
+      6. playing trumpet (0.0454)
+      7. playing saxophone (0.0453)
+  🏞️  8. tying tie (0.0337)
+      9. playing guitar (0.0320)
+     10. sword fighting (0.0311)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -11
+Score gap (bg_score - human_score): 0.0255

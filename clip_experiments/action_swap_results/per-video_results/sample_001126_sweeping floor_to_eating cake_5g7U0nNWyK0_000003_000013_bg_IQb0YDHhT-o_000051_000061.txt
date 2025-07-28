@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001126_sweeping floor_to_eating cake_5g7U0nNWyK0_000003_000013_bg_IQb0YDHhT-o_000051_000061
+Frame: 000050.jpg
+Human Action Label (Correct): sweeping floor
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.5022)
+
+RANKING ANALYSIS:
+  Human Action 'sweeping floor' ranked: #48/50 (score: 0.0017)
+  Background Action 'eating cake' ranked: #2/50 (score: 0.0462)
+
+Top 10 predictions:
+      1. opening bottle (0.5022)
+  🏞️  2. eating cake (0.0462)
+      3. flying kite (0.0435)
+      4. drinking (0.0375)
+      5. brushing teeth (0.0286)
+      6. eating ice cream (0.0263)
+      7. playing saxophone (0.0210)
+      8. playing violin (0.0170)
+      9. surfing water (0.0158)
+     10. juggling soccer ball (0.0153)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -46
+Score gap (bg_score - human_score): 0.0444
+⚠️  Background action in top 5!

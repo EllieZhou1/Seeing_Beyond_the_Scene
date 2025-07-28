@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001695_catching or throwing baseball_to_smoking_eECGtFjKTY8_000018_000028_bg_Ag9mJ4tEIEE_000273_000283
+Frame: 000050.jpg
+Human Action Label (Correct): catching or throwing baseball
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.1597)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing baseball' ranked: #14/50 (score: 0.0240)
+  Background Action 'smoking' ranked: #25/50 (score: 0.0127)
+
+Top 10 predictions:
+      1. climbing a rope (0.1597)
+      2. shooting goal (soccer) (0.0996)
+      3. climbing ladder (0.0652)
+      4. cleaning windows (0.0635)
+      5. juggling soccer ball (0.0567)
+      6. skiing slalom (0.0473)
+      7. catching or throwing frisbee (0.0327)
+      8. hitting baseball (0.0318)
+      9. dunking basketball (0.0298)
+     10. shooting basketball (0.0269)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 11
+Score gap (bg_score - human_score): -0.0113

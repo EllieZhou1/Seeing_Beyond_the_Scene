@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001699_playing saxophone_to_cleaning windows_5bRseNSffik_000455_000465_bg_jIwEkMWm-mQ_000009_000019
+Frame: 000050.jpg
+Human Action Label (Correct): playing saxophone
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.2805)
+
+RANKING ANALYSIS:
+  Human Action 'playing saxophone' ranked: #14/50 (score: 0.0145)
+  Background Action 'cleaning windows' ranked: #25/50 (score: 0.0077)
+
+Top 10 predictions:
+      1. sword fighting (0.2805)
+      2. juggling balls (0.0792)
+      3. climbing a rope (0.0680)
+      4. brushing teeth (0.0617)
+      5. archery (0.0548)
+      6. eating ice cream (0.0482)
+      7. playing accordion (0.0445)
+      8. playing violin (0.0362)
+      9. skiing slalom (0.0291)
+     10. opening bottle (0.0290)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 11
+Score gap (bg_score - human_score): -0.0068

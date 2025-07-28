@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: JH9LRAoctDo
+Action: reading book
+Time: 12-22s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 13/50 (score: 0.0201)
+  Top 10 predictions:
+        1. opening bottle (0.3346)
+        2. dribbling basketball (0.0879)
+        3. playing accordion (0.0526)
+        4. reading newspaper (0.0504)
+        5. writing (0.0478)
+        6. climbing a rope (0.0414)
+        7. drinking (0.0374)
+        8. catching or throwing baseball (0.0357)
+        9. sword fighting (0.0344)
+       10. eating ice cream (0.0335)
+
+HUMAN ONLY:
+  Correct action rank: 6/50 (score: 0.0418)
+  Top 10 predictions:
+        1. opening bottle (0.2032)
+        2. reading newspaper (0.1362)
+        3. drinking (0.1203)
+        4. writing (0.0533)
+        5. eating cake (0.0434)
+    👉  6. reading book (0.0418)
+        7. tying tie (0.0402)
+        8. climbing a rope (0.0289)
+        9. eating ice cream (0.0281)
+       10. juggling balls (0.0280)
+
+BACKGROUND ONLY:
+  Correct action rank: 15/50 (score: 0.0153)
+  Top 10 predictions:
+        1. opening bottle (0.4129)
+        2. playing accordion (0.0771)
+        3. dribbling basketball (0.0759)
+        4. juggling soccer ball (0.0459)
+        5. sword fighting (0.0339)
+        6. writing (0.0296)
+        7. climbing a rope (0.0290)
+        8. juggling balls (0.0256)
+        9. reading newspaper (0.0254)
+       10. drinking (0.0228)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 2
+Ranking drop from human to background: 9

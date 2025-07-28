@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002421_hurdling_to_cleaning windows_keFnOl0RleQ_000002_000012_bg_VXqSVV_-XB0_000001_000011
+Frame: 000050.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.5396)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #17/50 (score: 0.0002)
+  Background Action 'cleaning windows' ranked: #1/50 (score: 0.5396)
+
+Top 10 predictions:
+  🏞️  1. cleaning windows (0.5396)
+      2. climbing ladder (0.4201)
+      3. climbing a rope (0.0201)
+      4. dunking basketball (0.0051)
+      5. juggling balls (0.0048)
+      6. juggling soccer ball (0.0031)
+      7. sword fighting (0.0010)
+      8. flying kite (0.0010)
+      9. playing basketball (0.0008)
+     10. skipping rope (0.0007)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -16
+Score gap (bg_score - human_score): 0.5394
+⚠️  Background action in top 5!

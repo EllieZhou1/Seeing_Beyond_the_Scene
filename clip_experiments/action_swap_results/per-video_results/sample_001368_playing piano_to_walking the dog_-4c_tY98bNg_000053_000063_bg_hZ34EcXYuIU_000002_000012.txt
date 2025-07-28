@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001368_playing piano_to_walking the dog_-4c_tY98bNg_000053_000063_bg_hZ34EcXYuIU_000002_000012
+Frame: 000050.jpg
+Human Action Label (Correct): playing piano
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.3033)
+
+RANKING ANALYSIS:
+  Human Action 'playing piano' ranked: #43/50 (score: 0.0001)
+  Background Action 'walking the dog' ranked: #6/50 (score: 0.0371)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.3033)
+      2. skipping rope (0.1438)
+      3. juggling balls (0.1126)
+      4. catching or throwing frisbee (0.0811)
+      5. shooting goal (soccer) (0.0793)
+  🏞️  6. walking the dog (0.0371)
+      7. dribbling basketball (0.0364)
+      8. golf driving (0.0265)
+      9. flying kite (0.0256)
+     10. driving car (0.0210)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -37
+Score gap (bg_score - human_score): 0.0370

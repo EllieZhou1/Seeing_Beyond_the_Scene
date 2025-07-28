@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: mYyfgoOtcQc
+Action: skiing (not slalom or crosscountry)
+Time: 226-236s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.1680)
+  Top 10 predictions:
+        1. skiing slalom (0.8246)
+    👉  2. skiing (not slalom or crosscountry) (0.1680)
+        3. climbing a rope (0.0026)
+        4. surfing water (0.0010)
+        5. driving car (0.0007)
+        6. hurdling (0.0004)
+        7. golf driving (0.0003)
+        8. climbing ladder (0.0003)
+        9. shooting goal (soccer) (0.0002)
+       10. hitting baseball (0.0002)
+
+HUMAN ONLY:
+  Correct action rank: 42/50 (score: 0.0054)
+  Top 10 predictions:
+        1. smoking (0.1510)
+        2. punching person (boxing) (0.1031)
+        3. hitting baseball (0.0531)
+        4. writing (0.0436)
+        5. climbing a rope (0.0357)
+        6. climbing ladder (0.0300)
+        7. playing saxophone (0.0297)
+        8. playing violin (0.0295)
+        9. drinking (0.0290)
+       10. juggling balls (0.0278)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.1713)
+  Top 10 predictions:
+        1. skiing slalom (0.8201)
+    👉  2. skiing (not slalom or crosscountry) (0.1713)
+        3. climbing a rope (0.0026)
+        4. surfing water (0.0017)
+        5. hurdling (0.0005)
+        6. driving car (0.0004)
+        7. dribbling basketball (0.0004)
+        8. juggling soccer ball (0.0003)
+        9. hitting baseball (0.0002)
+       10. shooting goal (soccer) (0.0002)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -40
+🚨 WARNING: Background ranks higher than human-only!

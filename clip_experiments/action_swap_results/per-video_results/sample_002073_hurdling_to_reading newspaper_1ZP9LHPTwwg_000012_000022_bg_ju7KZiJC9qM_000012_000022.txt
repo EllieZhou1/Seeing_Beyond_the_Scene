@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002073_hurdling_to_reading newspaper_1ZP9LHPTwwg_000012_000022_bg_ju7KZiJC9qM_000012_000022
+Frame: 000050.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): reading newspaper
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.2215)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #23/50 (score: 0.0054)
+  Background Action 'reading newspaper' ranked: #6/50 (score: 0.0552)
+
+Top 10 predictions:
+      1. skiing slalom (0.2215)
+      2. shooting goal (soccer) (0.1660)
+      3. archery (0.1019)
+      4. skiing (not slalom or crosscountry) (0.0752)
+      5. shooting basketball (0.0700)
+  🏞️  6. reading newspaper (0.0552)
+      7. bowling (0.0419)
+      8. dribbling basketball (0.0263)
+      9. flying kite (0.0235)
+     10. juggling soccer ball (0.0227)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -17
+Score gap (bg_score - human_score): 0.0498

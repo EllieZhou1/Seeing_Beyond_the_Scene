@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000710_shooting goal (soccer)_to_sword fighting_m8-MAjGR7-E_000011_000021_bg_QEMrisQ7bXI_000037_000047
+Frame: 000050.jpg
+Human Action Label (Correct): shooting goal (soccer)
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.4156)
+
+RANKING ANALYSIS:
+  Human Action 'shooting goal (soccer)' ranked: #5/50 (score: 0.0337)
+  Background Action 'sword fighting' ranked: #2/50 (score: 0.1596)
+
+Top 10 predictions:
+      1. skipping rope (0.4156)
+  🏞️  2. sword fighting (0.1596)
+      3. juggling soccer ball (0.1243)
+      4. juggling balls (0.1195)
+  👤  5. shooting goal (soccer) (0.0337)
+      6. sweeping floor (0.0229)
+      7. walking the dog (0.0218)
+      8. dribbling basketball (0.0109)
+      9. climbing a rope (0.0092)
+     10. catching or throwing frisbee (0.0087)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -3
+Score gap (bg_score - human_score): 0.1259
+⚠️  Background action in top 5!
+✅ Human action in top 5

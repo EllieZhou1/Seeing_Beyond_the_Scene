@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001650_hitting baseball_to_shooting basketball_Zp9aDp2YTBw_000002_000012_bg_im-WH6TyOfg_000002_000012
+Frame: 000050.jpg
+Human Action Label (Correct): hitting baseball
+Background Label (Incorrect): shooting basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.5503)
+
+RANKING ANALYSIS:
+  Human Action 'hitting baseball' ranked: #19/50 (score: 0.0013)
+  Background Action 'shooting basketball' ranked: #6/50 (score: 0.0242)
+
+Top 10 predictions:
+      1. shooting goal (soccer) (0.5503)
+      2. juggling soccer ball (0.2282)
+      3. dribbling basketball (0.0412)
+      4. dunking basketball (0.0281)
+      5. punching person (boxing) (0.0274)
+  🏞️  6. shooting basketball (0.0242)
+      7. playing volleyball (0.0166)
+      8. juggling balls (0.0157)
+      9. playing basketball (0.0151)
+     10. deadlifting (0.0092)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -13
+Score gap (bg_score - human_score): 0.0229

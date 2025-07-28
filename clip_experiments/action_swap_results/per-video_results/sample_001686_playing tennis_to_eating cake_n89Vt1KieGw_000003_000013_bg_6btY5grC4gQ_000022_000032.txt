@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001686_playing tennis_to_eating cake_n89Vt1KieGw_000003_000013_bg_6btY5grC4gQ_000022_000032
+Frame: 000050.jpg
+Human Action Label (Correct): playing tennis
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: catching or throwing baseball (score: 0.2758)
+
+RANKING ANALYSIS:
+  Human Action 'playing tennis' ranked: #18/50 (score: 0.0098)
+  Background Action 'eating cake' ranked: #9/50 (score: 0.0295)
+
+Top 10 predictions:
+      1. catching or throwing baseball (0.2758)
+      2. dunking basketball (0.1129)
+      3. eating ice cream (0.0866)
+      4. hitting baseball (0.0657)
+      5. climbing a rope (0.0574)
+      6. catching or throwing frisbee (0.0473)
+      7. cleaning windows (0.0427)
+      8. opening bottle (0.0373)
+  🏞️  9. eating cake (0.0295)
+     10. playing basketball (0.0280)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -9
+Score gap (bg_score - human_score): 0.0197

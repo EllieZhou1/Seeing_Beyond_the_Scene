@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001111_drinking_to_brushing hair_wByNrVN5dr4_000100_000110_bg_AuqIu3x_lhY_000118_000128
+Frame: 000050.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): brushing hair
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.1672)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #9/50 (score: 0.0309)
+  Background Action 'brushing hair' ranked: #11/50 (score: 0.0262)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.1672)
+      2. brushing teeth (0.1364)
+      3. juggling balls (0.1229)
+      4. punching person (boxing) (0.0782)
+      5. opening bottle (0.0592)
+      6. eating cake (0.0517)
+      7. eating ice cream (0.0490)
+      8. sword fighting (0.0344)
+  👤  9. drinking (0.0309)
+     10. smoking (0.0269)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 2
+Score gap (bg_score - human_score): -0.0047

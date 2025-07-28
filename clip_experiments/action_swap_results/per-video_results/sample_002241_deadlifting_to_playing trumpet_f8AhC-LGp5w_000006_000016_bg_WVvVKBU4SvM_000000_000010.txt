@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002241_deadlifting_to_playing trumpet_f8AhC-LGp5w_000006_000016_bg_WVvVKBU4SvM_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: clean and jerk (score: 0.1994)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #5/50 (score: 0.0893)
+  Background Action 'playing trumpet' ranked: #18/50 (score: 0.0065)
+
+Top 10 predictions:
+      1. clean and jerk (0.1994)
+      2. sword fighting (0.1299)
+      3. climbing a rope (0.1248)
+      4. climbing ladder (0.1192)
+  👤  5. deadlifting (0.0893)
+      6. hurdling (0.0517)
+      7. juggling balls (0.0384)
+      8. skiing slalom (0.0339)
+      9. juggling soccer ball (0.0327)
+     10. hitting baseball (0.0291)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 13
+Score gap (bg_score - human_score): -0.0828
+✅ Human action in top 5

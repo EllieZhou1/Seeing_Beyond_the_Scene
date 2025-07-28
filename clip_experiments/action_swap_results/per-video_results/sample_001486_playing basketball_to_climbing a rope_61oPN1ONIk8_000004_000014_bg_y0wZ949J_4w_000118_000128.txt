@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001486_playing basketball_to_climbing a rope_61oPN1ONIk8_000004_000014_bg_y0wZ949J_4w_000118_000128
+Frame: 000050.jpg
+Human Action Label (Correct): playing basketball
+Background Label (Incorrect): climbing a rope
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.1724)
+
+RANKING ANALYSIS:
+  Human Action 'playing basketball' ranked: #11/50 (score: 0.0196)
+  Background Action 'climbing a rope' ranked: #1/50 (score: 0.1724)
+
+Top 10 predictions:
+  🏞️  1. climbing a rope (0.1724)
+      2. skiing slalom (0.1719)
+      3. climbing ladder (0.1580)
+      4. sword fighting (0.1066)
+      5. dunking basketball (0.0655)
+      6. skiing (not slalom or crosscountry) (0.0613)
+      7. skipping rope (0.0320)
+      8. surfing water (0.0247)
+      9. archery (0.0236)
+     10. dribbling basketball (0.0197)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -10
+Score gap (bg_score - human_score): 0.1527
+⚠️  Background action in top 5!

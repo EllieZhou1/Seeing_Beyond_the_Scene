@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001297_playing bass guitar_to_skipping rope__5cvAd0KAk4_000159_000169_bg_xzXJJIni2hQ_000238_000248
+Frame: 000050.jpg
+Human Action Label (Correct): playing bass guitar
+Background Label (Incorrect): skipping rope
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.1685)
+
+RANKING ANALYSIS:
+  Human Action 'playing bass guitar' ranked: #39/50 (score: 0.0002)
+  Background Action 'skipping rope' ranked: #2/50 (score: 0.1594)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.1685)
+  🏞️  2. skipping rope (0.1594)
+      3. playing volleyball (0.1383)
+      4. hurdling (0.0678)
+      5. shooting goal (soccer) (0.0570)
+      6. dribbling basketball (0.0529)
+      7. juggling balls (0.0519)
+      8. clean and jerk (0.0415)
+      9. climbing a rope (0.0392)
+     10. skiing slalom (0.0280)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -37
+Score gap (bg_score - human_score): 0.1592
+⚠️  Background action in top 5!

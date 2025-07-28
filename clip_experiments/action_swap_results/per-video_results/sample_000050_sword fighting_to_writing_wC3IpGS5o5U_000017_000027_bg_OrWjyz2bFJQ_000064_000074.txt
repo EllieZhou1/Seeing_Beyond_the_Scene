@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000050_sword fighting_to_writing_wC3IpGS5o5U_000017_000027_bg_OrWjyz2bFJQ_000064_000074
+Frame: 000050.jpg
+Human Action Label (Correct): sword fighting
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: reading book (score: 0.3657)
+
+RANKING ANALYSIS:
+  Human Action 'sword fighting' ranked: #34/50 (score: 0.0024)
+  Background Action 'writing' ranked: #2/50 (score: 0.0880)
+
+Top 10 predictions:
+      1. reading book (0.3657)
+  🏞️  2. writing (0.0880)
+      3. opening bottle (0.0877)
+      4. climbing ladder (0.0489)
+      5. hurdling (0.0378)
+      6. dunking basketball (0.0372)
+      7. dribbling basketball (0.0350)
+      8. flying kite (0.0330)
+      9. juggling soccer ball (0.0226)
+     10. skipping rope (0.0204)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -32
+Score gap (bg_score - human_score): 0.0855
+⚠️  Background action in top 5!

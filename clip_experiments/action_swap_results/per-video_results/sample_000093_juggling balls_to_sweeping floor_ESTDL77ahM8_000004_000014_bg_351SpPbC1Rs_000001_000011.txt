@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000093_juggling balls_to_sweeping floor_ESTDL77ahM8_000004_000014_bg_351SpPbC1Rs_000001_000011
+Frame: 000050.jpg
+Human Action Label (Correct): juggling balls
+Background Label (Incorrect): sweeping floor
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.2123)
+
+RANKING ANALYSIS:
+  Human Action 'juggling balls' ranked: #10/50 (score: 0.0260)
+  Background Action 'sweeping floor' ranked: #2/50 (score: 0.1930)
+
+Top 10 predictions:
+      1. driving car (0.2123)
+  🏞️  2. sweeping floor (0.1930)
+      3. cleaning windows (0.1000)
+      4. juggling soccer ball (0.0500)
+      5. golf driving (0.0377)
+      6. sword fighting (0.0363)
+      7. playing volleyball (0.0303)
+      8. clean and jerk (0.0286)
+      9. bowling (0.0263)
+  👤 10. juggling balls (0.0260)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -8
+Score gap (bg_score - human_score): 0.1669
+⚠️  Background action in top 5!

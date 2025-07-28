@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000682_playing accordion_to_dunking basketball_syp1O0cjens_000038_000048_bg_f0H5AVFMHrg_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): dunking basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: playing violin (score: 0.1994)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #19/50 (score: 0.0092)
+  Background Action 'dunking basketball' ranked: #22/50 (score: 0.0068)
+
+Top 10 predictions:
+      1. playing violin (0.1994)
+      2. tying tie (0.1332)
+      3. brushing teeth (0.0745)
+      4. sword fighting (0.0703)
+      5. juggling balls (0.0677)
+      6. juggling soccer ball (0.0624)
+      7. brushing hair (0.0600)
+      8. skipping rope (0.0445)
+      9. climbing a rope (0.0427)
+     10. cleaning windows (0.0204)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 3
+Score gap (bg_score - human_score): -0.0024

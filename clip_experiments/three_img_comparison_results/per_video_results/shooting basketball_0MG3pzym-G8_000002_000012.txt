@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 0MG3pzym-G8
+Action: shooting basketball
+Time: 2-12s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 18/50 (score: 0.0028)
+  Top 10 predictions:
+        1. playing piano (0.5317)
+        2. playing accordion (0.1467)
+        3. playing violin (0.0773)
+        4. playing guitar (0.0496)
+        5. playing bass guitar (0.0353)
+        6. playing saxophone (0.0345)
+        7. dribbling basketball (0.0232)
+        8. juggling soccer ball (0.0181)
+        9. skipping rope (0.0143)
+       10. playing trumpet (0.0092)
+
+HUMAN ONLY:
+  Correct action rank: 18/50 (score: 0.0084)
+  Top 10 predictions:
+        1. juggling soccer ball (0.2663)
+        2. dribbling basketball (0.1385)
+        3. skipping rope (0.0948)
+        4. juggling balls (0.0818)
+        5. playing accordion (0.0779)
+        6. playing violin (0.0541)
+        7. playing piano (0.0366)
+        8. dunking basketball (0.0235)
+        9. playing saxophone (0.0221)
+       10. shooting goal (soccer) (0.0218)
+
+BACKGROUND ONLY:
+  Correct action rank: 20/50 (score: 0.0031)
+  Top 10 predictions:
+        1. playing guitar (0.4103)
+        2. playing accordion (0.2030)
+        3. playing violin (0.0801)
+        4. playing bass guitar (0.0484)
+        5. climbing ladder (0.0344)
+        6. playing saxophone (0.0338)
+        7. playing piano (0.0329)
+        8. juggling soccer ball (0.0239)
+        9. dunking basketball (0.0210)
+       10. playing trumpet (0.0173)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 2
+Ranking drop from human to background: 2

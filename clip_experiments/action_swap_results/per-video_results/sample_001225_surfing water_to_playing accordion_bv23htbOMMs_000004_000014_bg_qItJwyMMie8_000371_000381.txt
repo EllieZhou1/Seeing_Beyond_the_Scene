@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001225_surfing water_to_playing accordion_bv23htbOMMs_000004_000014_bg_qItJwyMMie8_000371_000381
+Frame: 000050.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.9995)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #44/50 (score: 0.0000)
+  Background Action 'playing accordion' ranked: #1/50 (score: 0.9995)
+
+Top 10 predictions:
+  🏞️  1. playing accordion (0.9995)
+      2. playing piano (0.0003)
+      3. smoking (0.0000)
+      4. eating cake (0.0000)
+      5. opening bottle (0.0000)
+      6. playing saxophone (0.0000)
+      7. playing trumpet (0.0000)
+      8. playing guitar (0.0000)
+      9. playing violin (0.0000)
+     10. drinking (0.0000)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -43
+Score gap (bg_score - human_score): 0.9995
+⚠️  Background action in top 5!

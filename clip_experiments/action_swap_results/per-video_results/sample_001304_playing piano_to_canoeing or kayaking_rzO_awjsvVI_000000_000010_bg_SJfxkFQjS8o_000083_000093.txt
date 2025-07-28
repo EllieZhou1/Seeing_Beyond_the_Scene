@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001304_playing piano_to_canoeing or kayaking_rzO_awjsvVI_000000_000010_bg_SJfxkFQjS8o_000083_000093
+Frame: 000050.jpg
+Human Action Label (Correct): playing piano
+Background Label (Incorrect): canoeing or kayaking
+
+CLIP PREDICTIONS:
+  Predicted Label: canoeing or kayaking (score: 0.5578)
+
+RANKING ANALYSIS:
+  Human Action 'playing piano' ranked: #41/50 (score: 0.0003)
+  Background Action 'canoeing or kayaking' ranked: #1/50 (score: 0.5578)
+
+Top 10 predictions:
+  🏞️  1. canoeing or kayaking (0.5578)
+      2. surfing water (0.2646)
+      3. juggling soccer ball (0.0527)
+      4. juggling balls (0.0327)
+      5. climbing a rope (0.0159)
+      6. driving car (0.0100)
+      7. tying tie (0.0069)
+      8. golf driving (0.0066)
+      9. catching or throwing frisbee (0.0065)
+     10. hitting baseball (0.0060)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -40
+Score gap (bg_score - human_score): 0.5575
+⚠️  Background action in top 5!

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000062_playing basketball_to_catching or throwing baseball_3mIvIgAlniY_000001_000011_bg_SzWZQDfymmY_000068_000078
+Frame: 000050.jpg
+Human Action Label (Correct): playing basketball
+Background Label (Incorrect): catching or throwing baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: hurdling (score: 0.2805)
+
+RANKING ANALYSIS:
+  Human Action 'playing basketball' ranked: #9/50 (score: 0.0263)
+  Background Action 'catching or throwing baseball' ranked: #19/50 (score: 0.0114)
+
+Top 10 predictions:
+      1. hurdling (0.2805)
+      2. dunking basketball (0.1281)
+      3. flying kite (0.0780)
+      4. shooting goal (soccer) (0.0607)
+      5. dribbling basketball (0.0593)
+      6. surfing water (0.0525)
+      7. juggling soccer ball (0.0518)
+      8. climbing a rope (0.0350)
+  👤  9. playing basketball (0.0263)
+     10. skiing slalom (0.0259)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 10
+Score gap (bg_score - human_score): -0.0149

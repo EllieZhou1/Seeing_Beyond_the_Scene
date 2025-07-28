@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000714_hurdling_to_clean and jerk_UytdOEGAZbs_000014_000024_bg_sSuVVd9H43E_000004_000014
+Frame: 000050.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): clean and jerk
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.2907)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #13/50 (score: 0.0242)
+  Background Action 'clean and jerk' ranked: #2/50 (score: 0.1490)
+
+Top 10 predictions:
+      1. skiing slalom (0.2907)
+  🏞️  2. clean and jerk (0.1490)
+      3. deadlifting (0.0622)
+      4. bowling (0.0510)
+      5. dribbling basketball (0.0457)
+      6. climbing a rope (0.0455)
+      7. opening bottle (0.0362)
+      8. skiing (not slalom or crosscountry) (0.0359)
+      9. playing volleyball (0.0300)
+     10. eating cake (0.0295)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -11
+Score gap (bg_score - human_score): 0.1248
+⚠️  Background action in top 5!

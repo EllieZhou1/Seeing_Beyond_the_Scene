@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001071_golf driving_to_playing bass guitar_C3l5Lmaghr8_000065_000075_bg_0Pdt1UFwVn4_000371_000381
+Frame: 000050.jpg
+Human Action Label (Correct): golf driving
+Background Label (Incorrect): playing bass guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.1916)
+
+RANKING ANALYSIS:
+  Human Action 'golf driving' ranked: #4/50 (score: 0.0634)
+  Background Action 'playing bass guitar' ranked: #12/50 (score: 0.0194)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.1916)
+      2. juggling balls (0.1879)
+      3. skipping rope (0.0985)
+  👤  4. golf driving (0.0634)
+      5. playing violin (0.0528)
+      6. hitting baseball (0.0382)
+      7. playing tennis (0.0300)
+      8. playing trumpet (0.0258)
+      9. climbing a rope (0.0228)
+     10. shooting goal (soccer) (0.0217)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 8
+Score gap (bg_score - human_score): -0.0440
+✅ Human action in top 5

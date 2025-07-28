@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002481_clean and jerk_to_reading newspaper_D3cbdvK7B9U_000022_000032_bg_mAdH0EhOdPI_000002_000012
+Frame: 000050.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): reading newspaper
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.6434)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #9/50 (score: 0.0074)
+  Background Action 'reading newspaper' ranked: #38/50 (score: 0.0001)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.6434)
+      2. juggling balls (0.2308)
+      3. punching person (boxing) (0.0226)
+      4. cleaning windows (0.0151)
+      5. playing volleyball (0.0109)
+      6. playing basketball (0.0098)
+      7. skipping rope (0.0095)
+      8. dribbling basketball (0.0094)
+  👤  9. clean and jerk (0.0074)
+     10. shooting goal (soccer) (0.0064)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 29
+Score gap (bg_score - human_score): -0.0073

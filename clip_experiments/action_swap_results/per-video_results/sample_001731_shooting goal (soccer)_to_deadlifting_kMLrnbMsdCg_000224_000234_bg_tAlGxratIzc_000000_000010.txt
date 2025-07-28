@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001731_shooting goal (soccer)_to_deadlifting_kMLrnbMsdCg_000224_000234_bg_tAlGxratIzc_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): shooting goal (soccer)
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: deadlifting (score: 0.7613)
+
+RANKING ANALYSIS:
+  Human Action 'shooting goal (soccer)' ranked: #17/50 (score: 0.0014)
+  Background Action 'deadlifting' ranked: #1/50 (score: 0.7613)
+
+Top 10 predictions:
+  🏞️  1. deadlifting (0.7613)
+      2. clean and jerk (0.1533)
+      3. skiing slalom (0.0165)
+      4. skiing (not slalom or crosscountry) (0.0122)
+      5. hurdling (0.0101)
+      6. driving car (0.0081)
+      7. archery (0.0077)
+      8. sword fighting (0.0036)
+      9. climbing ladder (0.0029)
+     10. punching person (boxing) (0.0029)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -16
+Score gap (bg_score - human_score): 0.7599
+⚠️  Background action in top 5!

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001196_driving car_to_writing_E6cLsQqwcbQ_000040_000050_bg_kHSpzsmCFGo_000078_000088
+Frame: 000050.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.4065)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #9/50 (score: 0.0165)
+  Background Action 'writing' ranked: #3/50 (score: 0.0493)
+
+Top 10 predictions:
+      1. skiing slalom (0.4065)
+      2. skiing (not slalom or crosscountry) (0.0592)
+  🏞️  3. writing (0.0493)
+      4. playing guitar (0.0453)
+      5. punching person (boxing) (0.0445)
+      6. playing violin (0.0421)
+      7. hitting baseball (0.0268)
+      8. playing piano (0.0175)
+  👤  9. driving car (0.0165)
+     10. dribbling basketball (0.0159)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -6
+Score gap (bg_score - human_score): 0.0328
+⚠️  Background action in top 5!

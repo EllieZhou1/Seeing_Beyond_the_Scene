@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001313_walking the dog_to_cleaning windows_xX2PVUErcbE_000015_000025_bg_jIwEkMWm-mQ_000009_000019
+Frame: 000050.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.3710)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #47/50 (score: 0.0003)
+  Background Action 'cleaning windows' ranked: #7/50 (score: 0.0197)
+
+Top 10 predictions:
+      1. opening bottle (0.3710)
+      2. drinking (0.2183)
+      3. playing accordion (0.0770)
+      4. reading newspaper (0.0622)
+      5. sword fighting (0.0432)
+      6. eating ice cream (0.0392)
+  🏞️  7. cleaning windows (0.0197)
+      8. reading book (0.0161)
+      9. archery (0.0142)
+     10. smoking (0.0124)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -40
+Score gap (bg_score - human_score): 0.0194

@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002188_playing violin_to_playing trumpet_sWFRmD9Of4s_000221_000231_bg_-BtzVCzSnLk_000073_000083
+Frame: 000050.jpg
+Human Action Label (Correct): playing violin
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: playing violin (score: 0.3354)
+
+RANKING ANALYSIS:
+  Human Action 'playing violin' ranked: #1/50 (score: 0.3354)
+  Background Action 'playing trumpet' ranked: #4/50 (score: 0.0881)
+
+Top 10 predictions:
+  👤  1. playing violin (0.3354)
+      2. playing piano (0.2702)
+      3. playing accordion (0.0942)
+  🏞️  4. playing trumpet (0.0881)
+      5. playing saxophone (0.0550)
+      6. juggling balls (0.0495)
+      7. playing bass guitar (0.0181)
+      8. climbing ladder (0.0097)
+      9. skipping rope (0.0097)
+     10. tying tie (0.0086)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 3
+Score gap (bg_score - human_score): -0.2473
+⚠️  Background action in top 5!
+✅ Human action in top 5

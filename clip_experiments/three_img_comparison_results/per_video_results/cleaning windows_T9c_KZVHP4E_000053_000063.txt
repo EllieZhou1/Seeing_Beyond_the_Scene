@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: T9c_KZVHP4E
+Action: cleaning windows
+Time: 53-63s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 6/50 (score: 0.0153)
+  Top 10 predictions:
+        1. canoeing or kayaking (0.4572)
+        2. surfing water (0.3118)
+        3. climbing a rope (0.1051)
+        4. skiing slalom (0.0178)
+        5. skiing (not slalom or crosscountry) (0.0164)
+    👉  6. cleaning windows (0.0153)
+        7. flying kite (0.0140)
+        8. climbing ladder (0.0115)
+        9. shooting goal (soccer) (0.0079)
+       10. archery (0.0067)
+
+HUMAN ONLY:
+  Correct action rank: 13/50 (score: 0.0187)
+  Top 10 predictions:
+        1. sword fighting (0.1436)
+        2. playing violin (0.1336)
+        3. climbing a rope (0.1041)
+        4. skiing slalom (0.0769)
+        5. playing bass guitar (0.0645)
+        6. playing saxophone (0.0615)
+        7. archery (0.0509)
+        8. playing trumpet (0.0365)
+        9. golf driving (0.0292)
+       10. smoking (0.0236)
+
+BACKGROUND ONLY:
+  Correct action rank: 6/50 (score: 0.0224)
+  Top 10 predictions:
+        1. surfing water (0.4809)
+        2. canoeing or kayaking (0.2376)
+        3. climbing a rope (0.0715)
+        4. skiing slalom (0.0561)
+        5. skiing (not slalom or crosscountry) (0.0250)
+    👉  6. cleaning windows (0.0224)
+        7. shooting goal (soccer) (0.0213)
+        8. flying kite (0.0122)
+        9. climbing ladder (0.0092)
+       10. archery (0.0089)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 0
+Ranking drop from human to background: -7
+🚨 WARNING: Background ranks higher than human-only!

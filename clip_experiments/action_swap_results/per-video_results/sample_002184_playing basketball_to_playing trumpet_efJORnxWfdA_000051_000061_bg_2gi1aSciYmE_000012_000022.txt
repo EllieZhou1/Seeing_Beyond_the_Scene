@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002184_playing basketball_to_playing trumpet_efJORnxWfdA_000051_000061_bg_2gi1aSciYmE_000012_000022
+Frame: 000050.jpg
+Human Action Label (Correct): playing basketball
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.2679)
+
+RANKING ANALYSIS:
+  Human Action 'playing basketball' ranked: #27/50 (score: 0.0070)
+  Background Action 'playing trumpet' ranked: #2/50 (score: 0.0713)
+
+Top 10 predictions:
+      1. cleaning windows (0.2679)
+  🏞️  2. playing trumpet (0.0713)
+      3. hitting baseball (0.0703)
+      4. playing violin (0.0580)
+      5. sword fighting (0.0522)
+      6. shooting goal (soccer) (0.0516)
+      7. climbing a rope (0.0374)
+      8. climbing ladder (0.0345)
+      9. playing saxophone (0.0286)
+     10. catching or throwing baseball (0.0265)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -25
+Score gap (bg_score - human_score): 0.0644
+⚠️  Background action in top 5!

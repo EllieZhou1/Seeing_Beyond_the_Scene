@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001155_deadlifting_to_golf driving_5Sz9BkIQv0Q_000020_000030_bg_RdamAcdVqpM_000010_000020
+Frame: 000050.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.2317)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #22/50 (score: 0.0029)
+  Background Action 'golf driving' ranked: #23/50 (score: 0.0019)
+
+Top 10 predictions:
+      1. dunking basketball (0.2317)
+      2. climbing ladder (0.2004)
+      3. juggling soccer ball (0.1408)
+      4. juggling balls (0.1002)
+      5. skipping rope (0.0770)
+      6. surfing water (0.0453)
+      7. hurdling (0.0301)
+      8. climbing a rope (0.0252)
+      9. cleaning windows (0.0231)
+     10. playing basketball (0.0180)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0010

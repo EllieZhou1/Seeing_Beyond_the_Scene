@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000548_playing saxophone_to_hurdling_GCh5bbKJgbE_000148_000158_bg_0uXd4qQfICw_000026_000036
+Frame: 000050.jpg
+Human Action Label (Correct): playing saxophone
+Background Label (Incorrect): hurdling
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.3798)
+
+RANKING ANALYSIS:
+  Human Action 'playing saxophone' ranked: #22/50 (score: 0.0032)
+  Background Action 'hurdling' ranked: #5/50 (score: 0.0613)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.3798)
+      2. archery (0.1141)
+      3. juggling balls (0.0903)
+      4. catching or throwing frisbee (0.0804)
+  🏞️  5. hurdling (0.0613)
+      6. shooting goal (soccer) (0.0515)
+      7. catching or throwing baseball (0.0339)
+      8. sword fighting (0.0331)
+      9. hitting baseball (0.0282)
+     10. shooting basketball (0.0267)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -17
+Score gap (bg_score - human_score): 0.0581
+⚠️  Background action in top 5!

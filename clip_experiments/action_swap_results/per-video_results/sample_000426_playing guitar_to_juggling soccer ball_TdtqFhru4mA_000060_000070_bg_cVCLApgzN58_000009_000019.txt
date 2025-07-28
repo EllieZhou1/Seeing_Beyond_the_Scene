@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000426_playing guitar_to_juggling soccer ball_TdtqFhru4mA_000060_000070_bg_cVCLApgzN58_000009_000019
+Frame: 000050.jpg
+Human Action Label (Correct): playing guitar
+Background Label (Incorrect): juggling soccer ball
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2416)
+
+RANKING ANALYSIS:
+  Human Action 'playing guitar' ranked: #17/50 (score: 0.0084)
+  Background Action 'juggling soccer ball' ranked: #1/50 (score: 0.2416)
+
+Top 10 predictions:
+  🏞️  1. juggling soccer ball (0.2416)
+      2. catching or throwing frisbee (0.1238)
+      3. juggling balls (0.1052)
+      4. playing violin (0.0840)
+      5. catching or throwing baseball (0.0631)
+      6. flying kite (0.0574)
+      7. hurdling (0.0411)
+      8. playing bass guitar (0.0407)
+      9. playing tennis (0.0404)
+     10. archery (0.0361)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -16
+Score gap (bg_score - human_score): 0.2332
+⚠️  Background action in top 5!

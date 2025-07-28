@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000004_smoking_to_deadlifting_EbRJ9qx31AM_000016_000026_bg_zplKZpwToWc_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.5029)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #12/50 (score: 0.0224)
+  Background Action 'deadlifting' ranked: #29/50 (score: 0.0027)
+
+Top 10 predictions:
+      1. brushing hair (0.5029)
+      2. playing accordion (0.0475)
+      3. bowling (0.0458)
+      4. drinking (0.0449)
+      5. tying tie (0.0376)
+      6. opening bottle (0.0374)
+      7. juggling soccer ball (0.0358)
+      8. eating ice cream (0.0318)
+      9. eating cake (0.0299)
+     10. driving car (0.0245)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 17
+Score gap (bg_score - human_score): -0.0197

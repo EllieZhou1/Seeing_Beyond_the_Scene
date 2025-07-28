@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: Jck4NlSIX-I
+Action: archery
+Time: 19-29s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 35/50 (score: 0.0031)
+  Top 10 predictions:
+        1. skipping rope (0.1742)
+        2. climbing a rope (0.1344)
+        3. hurdling (0.0905)
+        4. climbing ladder (0.0855)
+        5. flying kite (0.0774)
+        6. playing violin (0.0655)
+        7. shooting goal (soccer) (0.0311)
+        8. deadlifting (0.0283)
+        9. juggling balls (0.0259)
+       10. clean and jerk (0.0234)
+
+HUMAN ONLY:
+  Correct action rank: 45/50 (score: 0.0009)
+  Top 10 predictions:
+        1. climbing a rope (0.1810)
+        2. skipping rope (0.1649)
+        3. climbing ladder (0.1493)
+        4. hurdling (0.0551)
+        5. flying kite (0.0542)
+        6. juggling balls (0.0448)
+        7. shooting goal (soccer) (0.0401)
+        8. clean and jerk (0.0259)
+        9. tying tie (0.0242)
+       10. dribbling basketball (0.0232)
+
+BACKGROUND ONLY:
+  Correct action rank: 28/50 (score: 0.0077)
+  Top 10 predictions:
+        1. skipping rope (0.1194)
+        2. shooting goal (soccer) (0.0926)
+        3. juggling soccer ball (0.0911)
+        4. climbing a rope (0.0698)
+        5. punching person (boxing) (0.0467)
+        6. shooting basketball (0.0428)
+        7. tying tie (0.0402)
+        8. juggling balls (0.0380)
+        9. dribbling basketball (0.0330)
+       10. playing guitar (0.0320)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: -7
+Ranking drop from human to background: -17
+🚨 WARNING: Background ranks higher than human-only!

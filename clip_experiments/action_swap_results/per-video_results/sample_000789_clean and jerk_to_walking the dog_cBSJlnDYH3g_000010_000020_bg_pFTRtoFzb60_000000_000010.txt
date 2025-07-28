@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000789_clean and jerk_to_walking the dog_cBSJlnDYH3g_000010_000020_bg_pFTRtoFzb60_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.1842)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #37/50 (score: 0.0026)
+  Background Action 'walking the dog' ranked: #24/50 (score: 0.0070)
+
+Top 10 predictions:
+      1. skipping rope (0.1842)
+      2. cleaning windows (0.1275)
+      3. drinking (0.0867)
+      4. shooting goal (soccer) (0.0606)
+      5. playing trumpet (0.0559)
+      6. juggling soccer ball (0.0448)
+      7. playing saxophone (0.0404)
+      8. surfing water (0.0366)
+      9. dribbling basketball (0.0360)
+     10. opening bottle (0.0356)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -13
+Score gap (bg_score - human_score): 0.0044

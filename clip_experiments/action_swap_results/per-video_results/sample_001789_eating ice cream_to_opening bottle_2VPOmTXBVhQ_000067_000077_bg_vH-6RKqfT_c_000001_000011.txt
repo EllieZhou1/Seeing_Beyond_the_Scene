@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001789_eating ice cream_to_opening bottle_2VPOmTXBVhQ_000067_000077_bg_vH-6RKqfT_c_000001_000011
+Frame: 000050.jpg
+Human Action Label (Correct): eating ice cream
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.1338)
+
+RANKING ANALYSIS:
+  Human Action 'eating ice cream' ranked: #11/50 (score: 0.0333)
+  Background Action 'opening bottle' ranked: #19/50 (score: 0.0062)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.1338)
+      2. punching person (boxing) (0.1206)
+      3. juggling balls (0.1118)
+      4. skipping rope (0.1116)
+      5. dunking basketball (0.0663)
+      6. bowling (0.0652)
+      7. playing basketball (0.0518)
+      8. eating cake (0.0469)
+      9. smoking (0.0421)
+     10. dribbling basketball (0.0394)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 8
+Score gap (bg_score - human_score): -0.0271

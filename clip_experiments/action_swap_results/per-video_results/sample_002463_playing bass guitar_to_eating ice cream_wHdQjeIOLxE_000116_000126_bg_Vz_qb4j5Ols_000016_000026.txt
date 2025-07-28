@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002463_playing bass guitar_to_eating ice cream_wHdQjeIOLxE_000116_000126_bg_Vz_qb4j5Ols_000016_000026
+Frame: 000050.jpg
+Human Action Label (Correct): playing bass guitar
+Background Label (Incorrect): eating ice cream
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.2495)
+
+RANKING ANALYSIS:
+  Human Action 'playing bass guitar' ranked: #42/50 (score: 0.0005)
+  Background Action 'eating ice cream' ranked: #25/50 (score: 0.0016)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.2495)
+      2. juggling balls (0.1714)
+      3. juggling soccer ball (0.1539)
+      4. dribbling basketball (0.0746)
+      5. cleaning windows (0.0581)
+      6. opening bottle (0.0473)
+      7. playing violin (0.0412)
+      8. playing accordion (0.0342)
+      9. climbing a rope (0.0196)
+     10. shooting basketball (0.0185)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -17
+Score gap (bg_score - human_score): 0.0011

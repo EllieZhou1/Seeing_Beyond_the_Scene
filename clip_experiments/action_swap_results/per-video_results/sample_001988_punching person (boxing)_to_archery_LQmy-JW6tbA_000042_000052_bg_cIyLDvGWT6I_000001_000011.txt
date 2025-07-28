@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001988_punching person (boxing)_to_archery_LQmy-JW6tbA_000042_000052_bg_cIyLDvGWT6I_000001_000011
+Frame: 000050.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): archery
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.1602)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #1/50 (score: 0.1602)
+  Background Action 'archery' ranked: #14/50 (score: 0.0207)
+
+Top 10 predictions:
+  👤  1. punching person (boxing) (0.1602)
+      2. sword fighting (0.1172)
+      3. cleaning windows (0.1108)
+      4. golf driving (0.0711)
+      5. climbing a rope (0.0699)
+      6. walking the dog (0.0661)
+      7. driving car (0.0523)
+      8. deadlifting (0.0460)
+      9. clean and jerk (0.0386)
+     10. skipping rope (0.0239)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 13
+Score gap (bg_score - human_score): -0.1395
+✅ Human action in top 5

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001733_playing saxophone_to_skipping rope_-zpKHNrNsn4_000226_000236_bg_GU5SV08xxVU_000330_000340
+Frame: 000050.jpg
+Human Action Label (Correct): playing saxophone
+Background Label (Incorrect): skipping rope
+
+CLIP PREDICTIONS:
+  Predicted Label: archery (score: 0.2858)
+
+RANKING ANALYSIS:
+  Human Action 'playing saxophone' ranked: #41/50 (score: 0.0000)
+  Background Action 'skipping rope' ranked: #4/50 (score: 0.0996)
+
+Top 10 predictions:
+      1. archery (0.2858)
+      2. juggling balls (0.1245)
+      3. shooting goal (soccer) (0.1076)
+  🏞️  4. skipping rope (0.0996)
+      5. clean and jerk (0.0701)
+      6. shooting basketball (0.0597)
+      7. juggling soccer ball (0.0561)
+      8. sword fighting (0.0283)
+      9. sweeping floor (0.0275)
+     10. dribbling basketball (0.0247)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -37
+Score gap (bg_score - human_score): 0.0996
+⚠️  Background action in top 5!

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000977_opening bottle_to_skiing (not slalom or crosscountry)_gdmm2hTI4y4_000001_000011_bg_GS3C6pgGeus_000039_000049
+Frame: 000050.jpg
+Human Action Label (Correct): opening bottle
+Background Label (Incorrect): skiing (not slalom or crosscountry)
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.5887)
+
+RANKING ANALYSIS:
+  Human Action 'opening bottle' ranked: #23/50 (score: 0.0003)
+  Background Action 'skiing (not slalom or crosscountry)' ranked: #2/50 (score: 0.3307)
+
+Top 10 predictions:
+      1. skiing slalom (0.5887)
+  🏞️  2. skiing (not slalom or crosscountry) (0.3307)
+      3. climbing a rope (0.0424)
+      4. hurdling (0.0078)
+      5. climbing ladder (0.0062)
+      6. juggling balls (0.0024)
+      7. skipping rope (0.0023)
+      8. juggling soccer ball (0.0022)
+      9. sword fighting (0.0017)
+     10. bowling (0.0015)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -21
+Score gap (bg_score - human_score): 0.3304
+⚠️  Background action in top 5!

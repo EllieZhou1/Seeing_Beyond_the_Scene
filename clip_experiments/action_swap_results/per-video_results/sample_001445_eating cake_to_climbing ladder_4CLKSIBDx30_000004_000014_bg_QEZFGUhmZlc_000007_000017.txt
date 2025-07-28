@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001445_eating cake_to_climbing ladder_4CLKSIBDx30_000004_000014_bg_QEZFGUhmZlc_000007_000017
+Frame: 000050.jpg
+Human Action Label (Correct): eating cake
+Background Label (Incorrect): climbing ladder
+
+CLIP PREDICTIONS:
+  Predicted Label: eating cake (score: 0.7104)
+
+RANKING ANALYSIS:
+  Human Action 'eating cake' ranked: #1/50 (score: 0.7104)
+  Background Action 'climbing ladder' ranked: #24/50 (score: 0.0014)
+
+Top 10 predictions:
+  👤  1. eating cake (0.7104)
+      2. opening bottle (0.2091)
+      3. drinking (0.0078)
+      4. juggling balls (0.0075)
+      5. playing accordion (0.0074)
+      6. eating ice cream (0.0062)
+      7. driving car (0.0050)
+      8. reading newspaper (0.0043)
+      9. playing violin (0.0038)
+     10. hitting baseball (0.0029)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 23
+Score gap (bg_score - human_score): -0.7090
+✅ Human action in top 5

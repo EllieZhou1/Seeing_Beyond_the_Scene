@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 9vSb28P8u98
+Action: deadlifting
+Time: 150-160s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.1787)
+  Top 10 predictions:
+        1. clean and jerk (0.8103)
+    👉  2. deadlifting (0.1787)
+        3. climbing ladder (0.0044)
+        4. climbing a rope (0.0020)
+        5. hurdling (0.0020)
+        6. juggling balls (0.0004)
+        7. hitting baseball (0.0004)
+        8. juggling soccer ball (0.0004)
+        9. shooting goal (soccer) (0.0003)
+       10. dribbling basketball (0.0002)
+
+HUMAN ONLY:
+  Correct action rank: 8/50 (score: 0.0319)
+  Top 10 predictions:
+        1. punching person (boxing) (0.1851)
+        2. skipping rope (0.1345)
+        3. juggling balls (0.1154)
+        4. juggling soccer ball (0.0947)
+        5. clean and jerk (0.0752)
+        6. dribbling basketball (0.0427)
+        7. playing violin (0.0372)
+    👉  8. deadlifting (0.0319)
+        9. climbing a rope (0.0276)
+       10. bowling (0.0182)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.3388)
+  Top 10 predictions:
+        1. clean and jerk (0.6507)
+    👉  2. deadlifting (0.3388)
+        3. climbing ladder (0.0028)
+        4. hitting baseball (0.0015)
+        5. climbing a rope (0.0011)
+        6. hurdling (0.0008)
+        7. juggling balls (0.0007)
+        8. shooting goal (soccer) (0.0007)
+        9. juggling soccer ball (0.0007)
+       10. sweeping floor (0.0005)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -6
+🚨 WARNING: Background ranks higher than human-only!

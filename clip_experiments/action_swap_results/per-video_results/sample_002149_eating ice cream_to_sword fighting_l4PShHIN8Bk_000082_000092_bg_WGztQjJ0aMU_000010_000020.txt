@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002149_eating ice cream_to_sword fighting_l4PShHIN8Bk_000082_000092_bg_WGztQjJ0aMU_000010_000020
+Frame: 000050.jpg
+Human Action Label (Correct): eating ice cream
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: eating ice cream (score: 0.5234)
+
+RANKING ANALYSIS:
+  Human Action 'eating ice cream' ranked: #1/50 (score: 0.5234)
+  Background Action 'sword fighting' ranked: #24/50 (score: 0.0002)
+
+Top 10 predictions:
+  👤  1. eating ice cream (0.5234)
+      2. eating cake (0.2425)
+      3. opening bottle (0.0956)
+      4. brushing teeth (0.0888)
+      5. drinking (0.0215)
+      6. playing trumpet (0.0051)
+      7. smoking (0.0048)
+      8. playing saxophone (0.0035)
+      9. brushing hair (0.0023)
+     10. playing accordion (0.0022)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 23
+Score gap (bg_score - human_score): -0.5232
+✅ Human action in top 5

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001901_hurdling_to_driving car_1ZP9LHPTwwg_000012_000022_bg_ggAtdTQHGIQ_000133_000143
+Frame: 000050.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.6840)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #40/50 (score: 0.0004)
+  Background Action 'driving car' ranked: #1/50 (score: 0.6840)
+
+Top 10 predictions:
+  🏞️  1. driving car (0.6840)
+      2. golf driving (0.0368)
+      3. opening bottle (0.0327)
+      4. juggling balls (0.0256)
+      5. juggling soccer ball (0.0243)
+      6. archery (0.0174)
+      7. skiing slalom (0.0166)
+      8. shooting goal (soccer) (0.0147)
+      9. cleaning windows (0.0132)
+     10. climbing ladder (0.0131)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -39
+Score gap (bg_score - human_score): 0.6836
+⚠️  Background action in top 5!

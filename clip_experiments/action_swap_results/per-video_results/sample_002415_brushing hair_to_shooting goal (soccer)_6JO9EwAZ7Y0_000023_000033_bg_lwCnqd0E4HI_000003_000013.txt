@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002415_brushing hair_to_shooting goal (soccer)_6JO9EwAZ7Y0_000023_000033_bg_lwCnqd0E4HI_000003_000013
+Frame: 000050.jpg
+Human Action Label (Correct): brushing hair
+Background Label (Incorrect): shooting goal (soccer)
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.6495)
+
+RANKING ANALYSIS:
+  Human Action 'brushing hair' ranked: #18/50 (score: 0.0024)
+  Background Action 'shooting goal (soccer)' ranked: #21/50 (score: 0.0022)
+
+Top 10 predictions:
+      1. climbing ladder (0.6495)
+      2. climbing a rope (0.1639)
+      3. dunking basketball (0.0362)
+      4. cleaning windows (0.0176)
+      5. sword fighting (0.0168)
+      6. opening bottle (0.0128)
+      7. hurdling (0.0127)
+      8. skipping rope (0.0121)
+      9. dribbling basketball (0.0120)
+     10. punching person (boxing) (0.0116)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 3
+Score gap (bg_score - human_score): -0.0003

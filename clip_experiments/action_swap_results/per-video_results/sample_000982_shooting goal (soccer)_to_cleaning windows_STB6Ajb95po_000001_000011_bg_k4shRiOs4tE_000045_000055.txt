@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000982_shooting goal (soccer)_to_cleaning windows_STB6Ajb95po_000001_000011_bg_k4shRiOs4tE_000045_000055
+Frame: 000050.jpg
+Human Action Label (Correct): shooting goal (soccer)
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.8585)
+
+RANKING ANALYSIS:
+  Human Action 'shooting goal (soccer)' ranked: #16/50 (score: 0.0010)
+  Background Action 'cleaning windows' ranked: #1/50 (score: 0.8585)
+
+Top 10 predictions:
+  🏞️  1. cleaning windows (0.8585)
+      2. driving car (0.0741)
+      3. climbing ladder (0.0204)
+      4. dunking basketball (0.0088)
+      5. juggling soccer ball (0.0062)
+      6. golf driving (0.0038)
+      7. playing basketball (0.0037)
+      8. shooting basketball (0.0031)
+      9. dribbling basketball (0.0024)
+     10. climbing a rope (0.0019)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -15
+Score gap (bg_score - human_score): 0.8575
+⚠️  Background action in top 5!

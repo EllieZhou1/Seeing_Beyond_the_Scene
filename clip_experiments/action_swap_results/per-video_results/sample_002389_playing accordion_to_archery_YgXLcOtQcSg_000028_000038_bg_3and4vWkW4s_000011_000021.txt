@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002389_playing accordion_to_archery_YgXLcOtQcSg_000028_000038_bg_3and4vWkW4s_000011_000021
+Frame: 000050.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): archery
+
+CLIP PREDICTIONS:
+  Predicted Label: archery (score: 0.9133)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #46/50 (score: 0.0000)
+  Background Action 'archery' ranked: #1/50 (score: 0.9133)
+
+Top 10 predictions:
+  🏞️  1. archery (0.9133)
+      2. shooting goal (soccer) (0.0440)
+      3. juggling balls (0.0088)
+      4. flying kite (0.0076)
+      5. catching or throwing frisbee (0.0076)
+      6. juggling soccer ball (0.0037)
+      7. skiing slalom (0.0031)
+      8. opening bottle (0.0018)
+      9. sword fighting (0.0018)
+     10. catching or throwing baseball (0.0018)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -45
+Score gap (bg_score - human_score): 0.9133
+⚠️  Background action in top 5!

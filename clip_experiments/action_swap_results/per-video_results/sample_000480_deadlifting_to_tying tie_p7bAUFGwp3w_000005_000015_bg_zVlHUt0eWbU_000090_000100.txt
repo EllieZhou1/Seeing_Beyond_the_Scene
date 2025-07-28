@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000480_deadlifting_to_tying tie_p7bAUFGwp3w_000005_000015_bg_zVlHUt0eWbU_000090_000100
+Frame: 000050.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.3112)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #4/50 (score: 0.0781)
+  Background Action 'tying tie' ranked: #46/50 (score: 0.0001)
+
+Top 10 predictions:
+      1. climbing ladder (0.3112)
+      2. hurdling (0.2793)
+      3. skipping rope (0.1392)
+  👤  4. deadlifting (0.0781)
+      5. dunking basketball (0.0477)
+      6. climbing a rope (0.0217)
+      7. walking the dog (0.0162)
+      8. sweeping floor (0.0104)
+      9. shooting goal (soccer) (0.0100)
+     10. clean and jerk (0.0096)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 42
+Score gap (bg_score - human_score): -0.0779
+✅ Human action in top 5

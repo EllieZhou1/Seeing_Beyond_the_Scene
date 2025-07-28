@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000680_brushing hair_to_hurdling_63T-_NmyrqA_000032_000042_bg_omTYfJegx0U_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): brushing hair
+Background Label (Incorrect): hurdling
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.2695)
+
+RANKING ANALYSIS:
+  Human Action 'brushing hair' ranked: #33/50 (score: 0.0012)
+  Background Action 'hurdling' ranked: #47/50 (score: 0.0001)
+
+Top 10 predictions:
+      1. cleaning windows (0.2695)
+      2. juggling soccer ball (0.1804)
+      3. punching person (boxing) (0.1731)
+      4. juggling balls (0.1269)
+      5. shooting goal (soccer) (0.0422)
+      6. skipping rope (0.0360)
+      7. playing basketball (0.0312)
+      8. shooting basketball (0.0195)
+      9. smoking (0.0113)
+     10. dribbling basketball (0.0100)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 14
+Score gap (bg_score - human_score): -0.0011

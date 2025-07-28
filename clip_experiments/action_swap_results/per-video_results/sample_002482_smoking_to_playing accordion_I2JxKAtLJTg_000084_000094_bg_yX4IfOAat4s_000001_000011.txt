@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002482_smoking_to_playing accordion_I2JxKAtLJTg_000084_000094_bg_yX4IfOAat4s_000001_000011
+Frame: 000050.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: hurdling (score: 0.6541)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #45/50 (score: 0.0002)
+  Background Action 'playing accordion' ranked: #5/50 (score: 0.0206)
+
+Top 10 predictions:
+      1. hurdling (0.6541)
+      2. bowling (0.0706)
+      3. playing piano (0.0619)
+      4. sword fighting (0.0207)
+  🏞️  5. playing accordion (0.0206)
+      6. sweeping floor (0.0170)
+      7. dribbling basketball (0.0164)
+      8. playing volleyball (0.0145)
+      9. dunking basketball (0.0111)
+     10. juggling balls (0.0102)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -40
+Score gap (bg_score - human_score): 0.0205
+⚠️  Background action in top 5!

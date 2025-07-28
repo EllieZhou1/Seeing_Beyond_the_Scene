@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002438_catching or throwing baseball_to_playing saxophone_aU2ByztjE60_000009_000019_bg_Y1NEWHZywDM_000008_000018
+Frame: 000050.jpg
+Human Action Label (Correct): catching or throwing baseball
+Background Label (Incorrect): playing saxophone
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.1763)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing baseball' ranked: #35/50 (score: 0.0007)
+  Background Action 'playing saxophone' ranked: #5/50 (score: 0.0877)
+
+Top 10 predictions:
+      1. climbing a rope (0.1763)
+      2. dunking basketball (0.1467)
+      3. skipping rope (0.1084)
+      4. flying kite (0.1042)
+  🏞️  5. playing saxophone (0.0877)
+      6. climbing ladder (0.0566)
+      7. playing trumpet (0.0531)
+      8. bowling (0.0498)
+      9. surfing water (0.0419)
+     10. skiing slalom (0.0402)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -30
+Score gap (bg_score - human_score): 0.0870
+⚠️  Background action in top 5!

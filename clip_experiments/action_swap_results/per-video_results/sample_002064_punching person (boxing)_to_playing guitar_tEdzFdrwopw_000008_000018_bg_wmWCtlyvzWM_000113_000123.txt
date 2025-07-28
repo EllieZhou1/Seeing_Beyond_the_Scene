@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002064_punching person (boxing)_to_playing guitar_tEdzFdrwopw_000008_000018_bg_wmWCtlyvzWM_000113_000123
+Frame: 000050.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): playing guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.4508)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #2/50 (score: 0.1431)
+  Background Action 'playing guitar' ranked: #11/50 (score: 0.0166)
+
+Top 10 predictions:
+      1. skipping rope (0.4508)
+  👤  2. punching person (boxing) (0.1431)
+      3. juggling balls (0.0782)
+      4. juggling soccer ball (0.0591)
+      5. clean and jerk (0.0260)
+      6. sword fighting (0.0253)
+      7. sweeping floor (0.0199)
+      8. playing accordion (0.0193)
+      9. deadlifting (0.0178)
+     10. playing violin (0.0167)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 9
+Score gap (bg_score - human_score): -0.1265
+✅ Human action in top 5

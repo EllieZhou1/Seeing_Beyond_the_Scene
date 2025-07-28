@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: j1oRoItcdHQ
+Action: eating cake
+Time: 58-68s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.8337)
+  Top 10 predictions:
+    👉  1. eating cake (0.8337)
+        2. eating ice cream (0.1495)
+        3. brushing teeth (0.0122)
+        4. opening bottle (0.0016)
+        5. drinking (0.0013)
+        6. brushing hair (0.0005)
+        7. climbing ladder (0.0002)
+        8. hitting baseball (0.0001)
+        9. reading newspaper (0.0001)
+       10. cleaning windows (0.0001)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.5770)
+  Top 10 predictions:
+    👉  1. eating cake (0.5770)
+        2. eating ice cream (0.3439)
+        3. brushing teeth (0.0607)
+        4. drinking (0.0031)
+        5. brushing hair (0.0028)
+        6. opening bottle (0.0027)
+        7. hitting baseball (0.0014)
+        8. cleaning windows (0.0010)
+        9. dribbling basketball (0.0007)
+       10. smoking (0.0006)
+
+BACKGROUND ONLY:
+  Correct action rank: 18/50 (score: 0.0012)
+  Top 10 predictions:
+        1. juggling soccer ball (0.6280)
+        2. dribbling basketball (0.1433)
+        3. juggling balls (0.1265)
+        4. playing basketball (0.0189)
+        5. opening bottle (0.0138)
+        6. cleaning windows (0.0102)
+        7. dunking basketball (0.0070)
+        8. shooting basketball (0.0061)
+        9. playing volleyball (0.0053)
+       10. catching or throwing frisbee (0.0048)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 17
+Ranking drop from human to background: 17

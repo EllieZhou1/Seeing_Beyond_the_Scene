@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000361_punching person (boxing)_to_catching or throwing frisbee_xxWhTcGLnNM_000015_000025_bg_9RKVtmshPrg_000014_000024
+Frame: 000050.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): catching or throwing frisbee
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.1849)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #2/50 (score: 0.1690)
+  Background Action 'catching or throwing frisbee' ranked: #9/50 (score: 0.0229)
+
+Top 10 predictions:
+      1. surfing water (0.1849)
+  👤  2. punching person (boxing) (0.1690)
+      3. sword fighting (0.1319)
+      4. canoeing or kayaking (0.0772)
+      5. dunking basketball (0.0692)
+      6. hurdling (0.0618)
+      7. juggling balls (0.0321)
+      8. juggling soccer ball (0.0312)
+  🏞️  9. catching or throwing frisbee (0.0229)
+     10. skipping rope (0.0203)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 7
+Score gap (bg_score - human_score): -0.1461
+✅ Human action in top 5

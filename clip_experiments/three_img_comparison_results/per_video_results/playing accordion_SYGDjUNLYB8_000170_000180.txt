@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: SYGDjUNLYB8
+Action: playing accordion
+Time: 170-180s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.9992)
+  Top 10 predictions:
+    👉  1. playing accordion (0.9992)
+        2. playing piano (0.0002)
+        3. playing saxophone (0.0002)
+        4. playing trumpet (0.0001)
+        5. juggling balls (0.0001)
+        6. writing (0.0001)
+        7. opening bottle (0.0000)
+        8. playing bass guitar (0.0000)
+        9. playing violin (0.0000)
+       10. juggling soccer ball (0.0000)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.3608)
+  Top 10 predictions:
+    👉  1. playing accordion (0.3608)
+        2. juggling balls (0.3017)
+        3. juggling soccer ball (0.0812)
+        4. playing saxophone (0.0317)
+        5. playing trumpet (0.0271)
+        6. skipping rope (0.0230)
+        7. opening bottle (0.0200)
+        8. punching person (boxing) (0.0182)
+        9. writing (0.0165)
+       10. catching or throwing baseball (0.0126)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.9580)
+  Top 10 predictions:
+    👉  1. playing accordion (0.9580)
+        2. playing piano (0.0397)
+        3. playing saxophone (0.0006)
+        4. playing trumpet (0.0004)
+        5. writing (0.0004)
+        6. playing bass guitar (0.0002)
+        7. playing violin (0.0002)
+        8. playing guitar (0.0001)
+        9. opening bottle (0.0001)
+       10. climbing ladder (0.0000)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: 0

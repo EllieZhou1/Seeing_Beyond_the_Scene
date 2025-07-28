@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000332_opening bottle_to_eating cake_-4szNHl4P0c_000012_000022_bg_2mFclrl0wo8_000044_000054
+Frame: 000050.jpg
+Human Action Label (Correct): opening bottle
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.4564)
+
+RANKING ANALYSIS:
+  Human Action 'opening bottle' ranked: #6/50 (score: 0.0293)
+  Background Action 'eating cake' ranked: #30/50 (score: 0.0030)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.4564)
+      2. sword fighting (0.0734)
+      3. playing accordion (0.0552)
+      4. hurdling (0.0530)
+      5. playing violin (0.0399)
+  👤  6. opening bottle (0.0293)
+      7. climbing a rope (0.0290)
+      8. juggling soccer ball (0.0250)
+      9. playing saxophone (0.0224)
+     10. hitting baseball (0.0216)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 24
+Score gap (bg_score - human_score): -0.0263

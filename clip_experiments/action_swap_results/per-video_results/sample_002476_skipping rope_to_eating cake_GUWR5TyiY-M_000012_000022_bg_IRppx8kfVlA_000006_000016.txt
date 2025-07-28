@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002476_skipping rope_to_eating cake_GUWR5TyiY-M_000012_000022_bg_IRppx8kfVlA_000006_000016
+Frame: 000050.jpg
+Human Action Label (Correct): skipping rope
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: dribbling basketball (score: 0.2467)
+
+RANKING ANALYSIS:
+  Human Action 'skipping rope' ranked: #7/50 (score: 0.0448)
+  Background Action 'eating cake' ranked: #34/50 (score: 0.0005)
+
+Top 10 predictions:
+      1. dribbling basketball (0.2467)
+      2. dunking basketball (0.1836)
+      3. hurdling (0.1818)
+      4. juggling soccer ball (0.0866)
+      5. shooting goal (soccer) (0.0669)
+      6. playing basketball (0.0527)
+  👤  7. skipping rope (0.0448)
+      8. shooting basketball (0.0385)
+      9. juggling balls (0.0269)
+     10. sweeping floor (0.0094)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 27
+Score gap (bg_score - human_score): -0.0443

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000694_tying tie_to_walking the dog_d2owlPKG5bY_000096_000106_bg_KbXOZPf5laY_000026_000036
+Frame: 000050.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2582)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #25/50 (score: 0.0049)
+  Background Action 'walking the dog' ranked: #12/50 (score: 0.0140)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2582)
+      2. juggling balls (0.1703)
+      3. playing trumpet (0.1136)
+      4. golf driving (0.0792)
+      5. shooting goal (soccer) (0.0458)
+      6. catching or throwing frisbee (0.0437)
+      7. opening bottle (0.0436)
+      8. playing violin (0.0361)
+      9. flying kite (0.0248)
+     10. archery (0.0191)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -13
+Score gap (bg_score - human_score): 0.0092

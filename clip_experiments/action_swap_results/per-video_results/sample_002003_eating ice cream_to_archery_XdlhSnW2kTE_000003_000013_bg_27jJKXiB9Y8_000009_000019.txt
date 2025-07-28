@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002003_eating ice cream_to_archery_XdlhSnW2kTE_000003_000013_bg_27jJKXiB9Y8_000009_000019
+Frame: 000050.jpg
+Human Action Label (Correct): eating ice cream
+Background Label (Incorrect): archery
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.5685)
+
+RANKING ANALYSIS:
+  Human Action 'eating ice cream' ranked: #21/50 (score: 0.0019)
+  Background Action 'archery' ranked: #16/50 (score: 0.0024)
+
+Top 10 predictions:
+      1. climbing a rope (0.5685)
+      2. climbing ladder (0.2191)
+      3. skipping rope (0.0574)
+      4. dunking basketball (0.0250)
+      5. flying kite (0.0249)
+      6. hurdling (0.0156)
+      7. juggling balls (0.0149)
+      8. juggling soccer ball (0.0093)
+      9. walking the dog (0.0059)
+     10. dribbling basketball (0.0051)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -5
+Score gap (bg_score - human_score): 0.0005

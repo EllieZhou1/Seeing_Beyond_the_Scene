@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000239_bowling_to_writing_v_j37nEGZMA_000009_000019_bg_9b4JjMCTuMg_000638_000648
+Frame: 000050.jpg
+Human Action Label (Correct): bowling
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.4137)
+
+RANKING ANALYSIS:
+  Human Action 'bowling' ranked: #31/50 (score: 0.0005)
+  Background Action 'writing' ranked: #4/50 (score: 0.0403)
+
+Top 10 predictions:
+      1. playing accordion (0.4137)
+      2. playing piano (0.2156)
+      3. climbing ladder (0.2109)
+  🏞️  4. writing (0.0403)
+      5. hurdling (0.0324)
+      6. punching person (boxing) (0.0132)
+      7. playing trumpet (0.0079)
+      8. playing bass guitar (0.0069)
+      9. reading book (0.0066)
+     10. playing saxophone (0.0065)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -27
+Score gap (bg_score - human_score): 0.0398
+⚠️  Background action in top 5!

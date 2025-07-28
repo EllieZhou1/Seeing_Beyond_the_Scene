@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001110_smoking_to_opening bottle_ElKBF7RrG1A_000004_000014_bg_qJ6DOrO8A2U_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.1536)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #4/50 (score: 0.0801)
+  Background Action 'opening bottle' ranked: #13/50 (score: 0.0184)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.1536)
+      2. punching person (boxing) (0.1193)
+      3. drinking (0.0965)
+  👤  4. smoking (0.0801)
+      5. bowling (0.0765)
+      6. juggling balls (0.0598)
+      7. playing saxophone (0.0425)
+      8. playing accordion (0.0362)
+      9. tying tie (0.0290)
+     10. cleaning windows (0.0224)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 9
+Score gap (bg_score - human_score): -0.0617
+✅ Human action in top 5

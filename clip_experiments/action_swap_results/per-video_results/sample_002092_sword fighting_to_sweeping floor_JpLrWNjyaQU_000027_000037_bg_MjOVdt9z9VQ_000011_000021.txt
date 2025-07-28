@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002092_sword fighting_to_sweeping floor_JpLrWNjyaQU_000027_000037_bg_MjOVdt9z9VQ_000011_000021
+Frame: 000050.jpg
+Human Action Label (Correct): sword fighting
+Background Label (Incorrect): sweeping floor
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling balls (score: 0.3383)
+
+RANKING ANALYSIS:
+  Human Action 'sword fighting' ranked: #5/50 (score: 0.0476)
+  Background Action 'sweeping floor' ranked: #23/50 (score: 0.0026)
+
+Top 10 predictions:
+      1. juggling balls (0.3383)
+      2. juggling soccer ball (0.1663)
+      3. punching person (boxing) (0.1249)
+      4. playing violin (0.0966)
+  👤  5. sword fighting (0.0476)
+      6. skipping rope (0.0472)
+      7. playing saxophone (0.0390)
+      8. playing trumpet (0.0352)
+      9. climbing a rope (0.0207)
+     10. playing accordion (0.0157)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 18
+Score gap (bg_score - human_score): -0.0450
+✅ Human action in top 5

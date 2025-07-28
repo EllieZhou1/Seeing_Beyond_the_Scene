@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000076_playing accordion_to_climbing a rope_2GhcqTJoEaI_000017_000027_bg_C8_aYXTrthw_000050_000060
+Frame: 000050.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): climbing a rope
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.6485)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #16/50 (score: 0.0034)
+  Background Action 'climbing a rope' ranked: #2/50 (score: 0.0784)
+
+Top 10 predictions:
+      1. climbing ladder (0.6485)
+  🏞️  2. climbing a rope (0.0784)
+      3. juggling soccer ball (0.0481)
+      4. dunking basketball (0.0459)
+      5. cleaning windows (0.0327)
+      6. juggling balls (0.0272)
+      7. sword fighting (0.0199)
+      8. skipping rope (0.0168)
+      9. shooting goal (soccer) (0.0066)
+     10. clean and jerk (0.0059)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -14
+Score gap (bg_score - human_score): 0.0750
+⚠️  Background action in top 5!

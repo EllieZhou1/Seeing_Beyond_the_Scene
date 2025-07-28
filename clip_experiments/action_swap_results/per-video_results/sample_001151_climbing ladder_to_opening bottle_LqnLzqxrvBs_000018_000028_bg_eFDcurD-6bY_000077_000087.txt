@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001151_climbing ladder_to_opening bottle_LqnLzqxrvBs_000018_000028_bg_eFDcurD-6bY_000077_000087
+Frame: 000050.jpg
+Human Action Label (Correct): climbing ladder
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.2595)
+
+RANKING ANALYSIS:
+  Human Action 'climbing ladder' ranked: #4/50 (score: 0.0970)
+  Background Action 'opening bottle' ranked: #22/50 (score: 0.0014)
+
+Top 10 predictions:
+      1. skipping rope (0.2595)
+      2. juggling soccer ball (0.1913)
+      3. juggling balls (0.1378)
+  👤  4. climbing ladder (0.0970)
+      5. climbing a rope (0.0780)
+      6. hurdling (0.0566)
+      7. dribbling basketball (0.0303)
+      8. dunking basketball (0.0265)
+      9. shooting goal (soccer) (0.0229)
+     10. hitting baseball (0.0205)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 18
+Score gap (bg_score - human_score): -0.0956
+✅ Human action in top 5

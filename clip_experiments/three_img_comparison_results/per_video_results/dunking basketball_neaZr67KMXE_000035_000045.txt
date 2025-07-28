@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: neaZr67KMXE
+Action: dunking basketball
+Time: 35-45s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 5/50 (score: 0.0591)
+  Top 10 predictions:
+        1. juggling soccer ball (0.4206)
+        2. shooting goal (soccer) (0.1550)
+        3. catching or throwing baseball (0.0845)
+        4. juggling balls (0.0616)
+    👉  5. dunking basketball (0.0591)
+        6. hitting baseball (0.0431)
+        7. dribbling basketball (0.0330)
+        8. catching or throwing frisbee (0.0264)
+        9. punching person (boxing) (0.0204)
+       10. playing basketball (0.0160)
+
+HUMAN ONLY:
+  Correct action rank: 6/50 (score: 0.0318)
+  Top 10 predictions:
+        1. juggling soccer ball (0.2758)
+        2. punching person (boxing) (0.2366)
+        3. juggling balls (0.1373)
+        4. clean and jerk (0.0634)
+        5. catching or throwing baseball (0.0435)
+    👉  6. dunking basketball (0.0318)
+        7. dribbling basketball (0.0275)
+        8. skipping rope (0.0260)
+        9. catching or throwing frisbee (0.0217)
+       10. shooting goal (soccer) (0.0211)
+
+BACKGROUND ONLY:
+  Correct action rank: 3/50 (score: 0.0939)
+  Top 10 predictions:
+        1. juggling soccer ball (0.4079)
+        2. juggling balls (0.0981)
+    👉  3. dunking basketball (0.0939)
+        4. shooting goal (soccer) (0.0635)
+        5. catching or throwing baseball (0.0473)
+        6. hitting baseball (0.0329)
+        7. dribbling basketball (0.0293)
+        8. climbing a rope (0.0195)
+        9. catching or throwing frisbee (0.0186)
+       10. punching person (boxing) (0.0176)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -2
+Ranking drop from human to background: -3
+🚨 WARNING: Background ranks higher than human-only!

@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: PCuodUnswAc
+Action: dunking basketball
+Time: 10-20s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.7270)
+  Top 10 predictions:
+    👉  1. dunking basketball (0.7270)
+        2. drinking (0.1369)
+        3. dribbling basketball (0.0679)
+        4. opening bottle (0.0107)
+        5. writing (0.0062)
+        6. driving car (0.0055)
+        7. playing basketball (0.0054)
+        8. playing piano (0.0052)
+        9. smoking (0.0032)
+       10. shooting basketball (0.0026)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.8393)
+  Top 10 predictions:
+    👉  1. dunking basketball (0.8393)
+        2. dribbling basketball (0.0752)
+        3. drinking (0.0255)
+        4. opening bottle (0.0075)
+        5. driving car (0.0063)
+        6. shooting basketball (0.0059)
+        7. playing basketball (0.0053)
+        8. juggling balls (0.0039)
+        9. smoking (0.0025)
+       10. juggling soccer ball (0.0024)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.7076)
+  Top 10 predictions:
+    👉  1. dunking basketball (0.7076)
+        2. drinking (0.1289)
+        3. dribbling basketball (0.0745)
+        4. opening bottle (0.0105)
+        5. writing (0.0090)
+        6. driving car (0.0071)
+        7. playing piano (0.0071)
+        8. playing basketball (0.0057)
+        9. smoking (0.0044)
+       10. juggling balls (0.0036)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: 0

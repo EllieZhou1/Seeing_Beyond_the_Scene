@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: mtm9hz6cmr4
+Action: reading newspaper
+Time: 10-20s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.4143)
+  Top 10 predictions:
+    👉  1. reading newspaper (0.4143)
+        2. reading book (0.3373)
+        3. playing accordion (0.0432)
+        4. juggling soccer ball (0.0230)
+        5. playing trumpet (0.0209)
+        6. playing saxophone (0.0206)
+        7. writing (0.0146)
+        8. juggling balls (0.0125)
+        9. climbing ladder (0.0120)
+       10. archery (0.0085)
+
+HUMAN ONLY:
+  Correct action rank: 4/50 (score: 0.0334)
+  Top 10 predictions:
+        1. juggling soccer ball (0.3681)
+        2. juggling balls (0.2051)
+        3. smoking (0.0347)
+    👉  4. reading newspaper (0.0334)
+        5. tying tie (0.0271)
+        6. skipping rope (0.0268)
+        7. reading book (0.0237)
+        8. punching person (boxing) (0.0210)
+        9. brushing teeth (0.0188)
+       10. playing accordion (0.0171)
+
+BACKGROUND ONLY:
+  Correct action rank: 46/50 (score: 0.0028)
+  Top 10 predictions:
+        1. flying kite (0.1522)
+        2. shooting goal (soccer) (0.1204)
+        3. playing trumpet (0.0806)
+        4. skiing slalom (0.0564)
+        5. archery (0.0552)
+        6. tying tie (0.0490)
+        7. sweeping floor (0.0388)
+        8. shooting basketball (0.0320)
+        9. playing saxophone (0.0300)
+       10. skiing (not slalom or crosscountry) (0.0225)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 45
+Ranking drop from human to background: 42

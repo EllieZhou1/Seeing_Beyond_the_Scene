@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001908_climbing ladder_to_eating cake_C3EwcscJQ1I_000002_000012_bg_ntDFgioEXGE_000022_000032
+Frame: 000050.jpg
+Human Action Label (Correct): climbing ladder
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: sweeping floor (score: 0.7041)
+
+RANKING ANALYSIS:
+  Human Action 'climbing ladder' ranked: #21/50 (score: 0.0027)
+  Background Action 'eating cake' ranked: #15/50 (score: 0.0039)
+
+Top 10 predictions:
+      1. sweeping floor (0.7041)
+      2. skipping rope (0.0614)
+      3. skiing slalom (0.0554)
+      4. climbing a rope (0.0497)
+      5. sword fighting (0.0196)
+      6. playing violin (0.0154)
+      7. dribbling basketball (0.0152)
+      8. surfing water (0.0073)
+      9. dunking basketball (0.0071)
+     10. hurdling (0.0053)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -6
+Score gap (bg_score - human_score): 0.0013

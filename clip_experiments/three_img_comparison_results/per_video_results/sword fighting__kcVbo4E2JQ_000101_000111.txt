@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: _kcVbo4E2JQ
+Action: sword fighting
+Time: 101-111s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 4/50 (score: 0.1034)
+  Top 10 predictions:
+        1. juggling soccer ball (0.2841)
+        2. sweeping floor (0.1781)
+        3. juggling balls (0.1081)
+    👉  4. sword fighting (0.1034)
+        5. skipping rope (0.0767)
+        6. shooting goal (soccer) (0.0619)
+        7. catching or throwing frisbee (0.0223)
+        8. climbing a rope (0.0192)
+        9. dribbling basketball (0.0174)
+       10. hurdling (0.0154)
+
+HUMAN ONLY:
+  Correct action rank: 15/50 (score: 0.0120)
+  Top 10 predictions:
+        1. juggling soccer ball (0.2004)
+        2. juggling balls (0.1734)
+        3. skipping rope (0.1079)
+        4. walking the dog (0.0776)
+        5. punching person (boxing) (0.0669)
+        6. climbing a rope (0.0467)
+        7. dunking basketball (0.0263)
+        8. dribbling basketball (0.0246)
+        9. climbing ladder (0.0244)
+       10. playing saxophone (0.0221)
+
+BACKGROUND ONLY:
+  Correct action rank: 15/50 (score: 0.0068)
+  Top 10 predictions:
+        1. sweeping floor (0.4071)
+        2. juggling soccer ball (0.1752)
+        3. juggling balls (0.0863)
+        4. skipping rope (0.0519)
+        5. shooting goal (soccer) (0.0485)
+        6. hurdling (0.0393)
+        7. dribbling basketball (0.0279)
+        8. dunking basketball (0.0242)
+        9. catching or throwing frisbee (0.0220)
+       10. climbing a rope (0.0129)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 11
+Ranking drop from human to background: 0

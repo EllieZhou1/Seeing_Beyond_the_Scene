@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 36E29x22tnQ
+Action: archery
+Time: 18-28s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.8719)
+  Top 10 predictions:
+    👉  1. archery (0.8719)
+        2. juggling balls (0.0256)
+        3. catching or throwing baseball (0.0133)
+        4. sword fighting (0.0131)
+        5. bowling (0.0119)
+        6. sweeping floor (0.0097)
+        7. hitting baseball (0.0083)
+        8. shooting basketball (0.0078)
+        9. clean and jerk (0.0070)
+       10. catching or throwing frisbee (0.0054)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.3020)
+  Top 10 predictions:
+    👉  1. archery (0.3020)
+        2. playing violin (0.1468)
+        3. playing trumpet (0.1075)
+        4. playing accordion (0.0641)
+        5. playing saxophone (0.0599)
+        6. sword fighting (0.0475)
+        7. bowling (0.0257)
+        8. opening bottle (0.0232)
+        9. juggling balls (0.0225)
+       10. playing bass guitar (0.0215)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.7753)
+  Top 10 predictions:
+    👉  1. archery (0.7753)
+        2. clean and jerk (0.0760)
+        3. skiing slalom (0.0291)
+        4. skiing (not slalom or crosscountry) (0.0190)
+        5. juggling balls (0.0166)
+        6. sweeping floor (0.0150)
+        7. bowling (0.0138)
+        8. shooting goal (soccer) (0.0091)
+        9. catching or throwing baseball (0.0089)
+       10. catching or throwing frisbee (0.0044)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: 0

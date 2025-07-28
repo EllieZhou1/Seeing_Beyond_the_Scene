@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001278_surfing water_to_playing guitar_79RD1NrELZw_000013_000023_bg_ViKaRM7aoy4_000262_000272
+Frame: 000050.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): playing guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.3040)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #1/50 (score: 0.3040)
+  Background Action 'playing guitar' ranked: #9/50 (score: 0.0272)
+
+Top 10 predictions:
+  👤  1. surfing water (0.3040)
+      2. hurdling (0.1278)
+      3. punching person (boxing) (0.0635)
+      4. playing accordion (0.0537)
+      5. climbing ladder (0.0466)
+      6. playing bass guitar (0.0364)
+      7. playing saxophone (0.0299)
+      8. skiing slalom (0.0284)
+  🏞️  9. playing guitar (0.0272)
+     10. smoking (0.0191)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 8
+Score gap (bg_score - human_score): -0.2768
+✅ Human action in top 5

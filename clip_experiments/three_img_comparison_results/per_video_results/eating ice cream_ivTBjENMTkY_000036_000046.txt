@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: ivTBjENMTkY
+Action: eating ice cream
+Time: 36-46s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 14/50 (score: 0.0154)
+  Top 10 predictions:
+        1. playing accordion (0.3617)
+        2. writing (0.1443)
+        3. playing saxophone (0.0859)
+        4. playing trumpet (0.0776)
+        5. playing guitar (0.0484)
+        6. opening bottle (0.0414)
+        7. drinking (0.0380)
+        8. eating cake (0.0306)
+        9. playing violin (0.0259)
+       10. playing piano (0.0207)
+
+HUMAN ONLY:
+  Correct action rank: 17/50 (score: 0.0128)
+  Top 10 predictions:
+        1. playing saxophone (0.1465)
+        2. brushing teeth (0.1274)
+        3. playing violin (0.0789)
+        4. playing trumpet (0.0766)
+        5. writing (0.0734)
+        6. playing piano (0.0686)
+        7. smoking (0.0588)
+        8. playing guitar (0.0565)
+        9. playing accordion (0.0422)
+       10. juggling soccer ball (0.0414)
+
+BACKGROUND ONLY:
+  Correct action rank: 39/50 (score: 0.0005)
+  Top 10 predictions:
+        1. writing (0.6671)
+        2. playing piano (0.0748)
+        3. playing guitar (0.0516)
+        4. playing accordion (0.0329)
+        5. playing saxophone (0.0242)
+        6. reading book (0.0213)
+        7. playing trumpet (0.0154)
+        8. playing violin (0.0149)
+        9. playing bass guitar (0.0125)
+       10. reading newspaper (0.0105)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 25
+Ranking drop from human to background: 22

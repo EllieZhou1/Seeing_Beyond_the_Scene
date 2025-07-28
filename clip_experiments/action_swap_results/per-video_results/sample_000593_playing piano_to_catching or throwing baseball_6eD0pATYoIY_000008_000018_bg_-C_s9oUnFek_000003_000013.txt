@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000593_playing piano_to_catching or throwing baseball_6eD0pATYoIY_000008_000018_bg_-C_s9oUnFek_000003_000013
+Frame: 000050.jpg
+Human Action Label (Correct): playing piano
+Background Label (Incorrect): catching or throwing baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: walking the dog (score: 0.3018)
+
+RANKING ANALYSIS:
+  Human Action 'playing piano' ranked: #42/50 (score: 0.0026)
+  Background Action 'catching or throwing baseball' ranked: #34/50 (score: 0.0040)
+
+Top 10 predictions:
+      1. walking the dog (0.3018)
+      2. skipping rope (0.1394)
+      3. sword fighting (0.0738)
+      4. juggling balls (0.0555)
+      5. punching person (boxing) (0.0431)
+      6. shooting goal (soccer) (0.0242)
+      7. drinking (0.0225)
+      8. surfing water (0.0206)
+      9. dunking basketball (0.0199)
+     10. playing accordion (0.0192)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -8
+Score gap (bg_score - human_score): 0.0014

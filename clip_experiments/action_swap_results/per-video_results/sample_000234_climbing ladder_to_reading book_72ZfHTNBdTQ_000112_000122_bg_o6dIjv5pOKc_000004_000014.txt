@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000234_climbing ladder_to_reading book_72ZfHTNBdTQ_000112_000122_bg_o6dIjv5pOKc_000004_000014
+Frame: 000050.jpg
+Human Action Label (Correct): climbing ladder
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: eating ice cream (score: 0.2023)
+
+RANKING ANALYSIS:
+  Human Action 'climbing ladder' ranked: #37/50 (score: 0.0020)
+  Background Action 'reading book' ranked: #7/50 (score: 0.0388)
+
+Top 10 predictions:
+      1. eating ice cream (0.2023)
+      2. eating cake (0.1466)
+      3. punching person (boxing) (0.1461)
+      4. opening bottle (0.0937)
+      5. drinking (0.0617)
+      6. reading newspaper (0.0432)
+  🏞️  7. reading book (0.0388)
+      8. dunking basketball (0.0331)
+      9. sweeping floor (0.0305)
+     10. smoking (0.0224)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -30
+Score gap (bg_score - human_score): 0.0368

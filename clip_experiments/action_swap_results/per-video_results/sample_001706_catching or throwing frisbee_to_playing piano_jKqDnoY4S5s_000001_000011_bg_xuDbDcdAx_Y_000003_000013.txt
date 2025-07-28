@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001706_catching or throwing frisbee_to_playing piano_jKqDnoY4S5s_000001_000011_bg_xuDbDcdAx_Y_000003_000013
+Frame: 000050.jpg
+Human Action Label (Correct): catching or throwing frisbee
+Background Label (Incorrect): playing piano
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.1369)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing frisbee' ranked: #24/50 (score: 0.0068)
+  Background Action 'playing piano' ranked: #27/50 (score: 0.0047)
+
+Top 10 predictions:
+      1. skipping rope (0.1369)
+      2. playing basketball (0.0902)
+      3. sweeping floor (0.0886)
+      4. dribbling basketball (0.0773)
+      5. hitting baseball (0.0672)
+      6. juggling soccer ball (0.0566)
+      7. walking the dog (0.0529)
+      8. playing volleyball (0.0472)
+      9. dunking basketball (0.0467)
+     10. playing tennis (0.0356)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 3
+Score gap (bg_score - human_score): -0.0021

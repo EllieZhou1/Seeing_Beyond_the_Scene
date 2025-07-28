@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001101_climbing ladder_to_tying tie_n5Fr76ZUlrM_000004_000014_bg_x_fudDEG30o_000005_000015
+Frame: 000050.jpg
+Human Action Label (Correct): climbing ladder
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.1561)
+
+RANKING ANALYSIS:
+  Human Action 'climbing ladder' ranked: #2/50 (score: 0.0869)
+  Background Action 'tying tie' ranked: #6/50 (score: 0.0429)
+
+Top 10 predictions:
+      1. cleaning windows (0.1561)
+  👤  2. climbing ladder (0.0869)
+      3. playing saxophone (0.0547)
+      4. sweeping floor (0.0505)
+      5. smoking (0.0504)
+  🏞️  6. tying tie (0.0429)
+      7. playing trumpet (0.0376)
+      8. hitting baseball (0.0351)
+      9. drinking (0.0306)
+     10. playing bass guitar (0.0268)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 4
+Score gap (bg_score - human_score): -0.0439
+✅ Human action in top 5

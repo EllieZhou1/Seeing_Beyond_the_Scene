@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000793_climbing a rope_to_brushing teeth_0tIJZogdc9U_000022_000032_bg_INNDIp9X43M_000066_000076
+Frame: 000050.jpg
+Human Action Label (Correct): climbing a rope
+Background Label (Incorrect): brushing teeth
+
+CLIP PREDICTIONS:
+  Predicted Label: smoking (score: 0.1277)
+
+RANKING ANALYSIS:
+  Human Action 'climbing a rope' ranked: #32/50 (score: 0.0088)
+  Background Action 'brushing teeth' ranked: #23/50 (score: 0.0135)
+
+Top 10 predictions:
+      1. smoking (0.1277)
+      2. playing trumpet (0.0963)
+      3. playing tennis (0.0529)
+      4. playing saxophone (0.0448)
+      5. playing piano (0.0437)
+      6. writing (0.0427)
+      7. playing bass guitar (0.0419)
+      8. cleaning windows (0.0409)
+      9. shooting basketball (0.0396)
+     10. drinking (0.0341)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -9
+Score gap (bg_score - human_score): 0.0047

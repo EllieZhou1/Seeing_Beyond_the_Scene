@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000328_hurdling_to_bowling_MB5ErocAjTI_000004_000014_bg_Xr_sBDcAEao_000079_000089
+Frame: 000050.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: bowling (score: 0.9402)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #13/50 (score: 0.0009)
+  Background Action 'bowling' ranked: #1/50 (score: 0.9402)
+
+Top 10 predictions:
+  🏞️  1. bowling (0.9402)
+      2. juggling soccer ball (0.0170)
+      3. juggling balls (0.0093)
+      4. shooting goal (soccer) (0.0077)
+      5. catching or throwing baseball (0.0049)
+      6. catching or throwing frisbee (0.0042)
+      7. hitting baseball (0.0021)
+      8. golf driving (0.0016)
+      9. punching person (boxing) (0.0015)
+     10. sweeping floor (0.0015)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -12
+Score gap (bg_score - human_score): 0.9392
+⚠️  Background action in top 5!

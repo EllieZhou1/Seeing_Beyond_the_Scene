@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000166_sword fighting_to_drinking_x4Img8HKxJ4_000034_000044_bg_E6lfrZb-3MY_000003_000013
+Frame: 000050.jpg
+Human Action Label (Correct): sword fighting
+Background Label (Incorrect): drinking
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.2260)
+
+RANKING ANALYSIS:
+  Human Action 'sword fighting' ranked: #4/50 (score: 0.0721)
+  Background Action 'drinking' ranked: #42/50 (score: 0.0004)
+
+Top 10 predictions:
+      1. dunking basketball (0.2260)
+      2. clean and jerk (0.1886)
+      3. punching person (boxing) (0.1323)
+  👤  4. sword fighting (0.0721)
+      5. hurdling (0.0600)
+      6. playing basketball (0.0383)
+      7. bowling (0.0338)
+      8. juggling soccer ball (0.0300)
+      9. shooting basketball (0.0250)
+     10. deadlifting (0.0201)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 38
+Score gap (bg_score - human_score): -0.0717
+✅ Human action in top 5

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000208_shooting basketball_to_brushing hair_d3sgSuaBunI_000147_000157_bg_Dt0O8uruyMI_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): shooting basketball
+Background Label (Incorrect): brushing hair
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.3427)
+
+RANKING ANALYSIS:
+  Human Action 'shooting basketball' ranked: #4/50 (score: 0.0848)
+  Background Action 'brushing hair' ranked: #41/50 (score: 0.0002)
+
+Top 10 predictions:
+      1. climbing a rope (0.3427)
+      2. dunking basketball (0.1199)
+      3. playing basketball (0.1133)
+  👤  4. shooting basketball (0.0848)
+      5. skipping rope (0.0839)
+      6. flying kite (0.0662)
+      7. playing volleyball (0.0324)
+      8. dribbling basketball (0.0301)
+      9. climbing ladder (0.0297)
+     10. juggling balls (0.0128)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 37
+Score gap (bg_score - human_score): -0.0846
+✅ Human action in top 5

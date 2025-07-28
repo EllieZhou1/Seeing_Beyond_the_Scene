@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001388_deadlifting_to_writing_f8dp7wR4GWg_000003_000013_bg_QwxUvhD4ImM_000160_000170
+Frame: 000050.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: hurdling (score: 0.3425)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #3/50 (score: 0.1264)
+  Background Action 'writing' ranked: #23/50 (score: 0.0009)
+
+Top 10 predictions:
+      1. hurdling (0.3425)
+      2. clean and jerk (0.3244)
+  👤  3. deadlifting (0.1264)
+      4. climbing ladder (0.0683)
+      5. climbing a rope (0.0373)
+      6. dunking basketball (0.0179)
+      7. skipping rope (0.0133)
+      8. skiing slalom (0.0114)
+      9. surfing water (0.0096)
+     10. juggling soccer ball (0.0091)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 20
+Score gap (bg_score - human_score): -0.1255
+✅ Human action in top 5

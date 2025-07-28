@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: v66KBZB9N-A
+Action: archery
+Time: 0-10s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 3/50 (score: 0.1409)
+  Top 10 predictions:
+        1. sweeping floor (0.1511)
+        2. climbing a rope (0.1457)
+    👉  3. archery (0.1409)
+        4. playing saxophone (0.1092)
+        5. juggling balls (0.0699)
+        6. sword fighting (0.0682)
+        7. cleaning windows (0.0610)
+        8. juggling soccer ball (0.0427)
+        9. playing trumpet (0.0378)
+       10. opening bottle (0.0352)
+
+HUMAN ONLY:
+  Correct action rank: 15/50 (score: 0.0056)
+  Top 10 predictions:
+        1. juggling balls (0.2762)
+        2. juggling soccer ball (0.1200)
+        3. punching person (boxing) (0.1082)
+        4. skipping rope (0.0841)
+        5. playing saxophone (0.0817)
+        6. sword fighting (0.0808)
+        7. playing violin (0.0579)
+        8. playing accordion (0.0420)
+        9. playing bass guitar (0.0380)
+       10. playing trumpet (0.0244)
+
+BACKGROUND ONLY:
+  Correct action rank: 5/50 (score: 0.0518)
+  Top 10 predictions:
+        1. sweeping floor (0.2805)
+        2. juggling balls (0.1882)
+        3. cleaning windows (0.0929)
+        4. juggling soccer ball (0.0909)
+    👉  5. archery (0.0518)
+        6. skipping rope (0.0394)
+        7. climbing a rope (0.0309)
+        8. sword fighting (0.0224)
+        9. flying kite (0.0200)
+       10. catching or throwing baseball (0.0196)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 2
+Ranking drop from human to background: -10
+🚨 WARNING: Background ranks higher than human-only!

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002460_archery_to_smoking_cIyLDvGWT6I_000001_000011_bg_xhqnmHDI5Hg_000388_000398
+Frame: 000050.jpg
+Human Action Label (Correct): archery
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.1324)
+
+RANKING ANALYSIS:
+  Human Action 'archery' ranked: #37/50 (score: 0.0033)
+  Background Action 'smoking' ranked: #9/50 (score: 0.0364)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.1324)
+      2. brushing hair (0.1005)
+      3. juggling soccer ball (0.0854)
+      4. opening bottle (0.0835)
+      5. playing saxophone (0.0594)
+      6. playing trumpet (0.0470)
+      7. juggling balls (0.0438)
+      8. playing violin (0.0433)
+  🏞️  9. smoking (0.0364)
+     10. cleaning windows (0.0355)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -28
+Score gap (bg_score - human_score): 0.0331

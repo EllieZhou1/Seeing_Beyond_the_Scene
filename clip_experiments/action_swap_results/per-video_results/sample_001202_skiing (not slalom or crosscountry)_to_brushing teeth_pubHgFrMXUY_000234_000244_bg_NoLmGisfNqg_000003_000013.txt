@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001202_skiing (not slalom or crosscountry)_to_brushing teeth_pubHgFrMXUY_000234_000244_bg_NoLmGisfNqg_000003_000013
+Frame: 000050.jpg
+Human Action Label (Correct): skiing (not slalom or crosscountry)
+Background Label (Incorrect): brushing teeth
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.7083)
+
+RANKING ANALYSIS:
+  Human Action 'skiing (not slalom or crosscountry)' ranked: #18/50 (score: 0.0033)
+  Background Action 'brushing teeth' ranked: #2/50 (score: 0.0736)
+
+Top 10 predictions:
+      1. brushing hair (0.7083)
+  🏞️  2. brushing teeth (0.0736)
+      3. skipping rope (0.0289)
+      4. playing violin (0.0260)
+      5. hitting baseball (0.0246)
+      6. playing trumpet (0.0136)
+      7. playing saxophone (0.0134)
+      8. punching person (boxing) (0.0106)
+      9. opening bottle (0.0106)
+     10. climbing a rope (0.0071)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -16
+Score gap (bg_score - human_score): 0.0703
+⚠️  Background action in top 5!

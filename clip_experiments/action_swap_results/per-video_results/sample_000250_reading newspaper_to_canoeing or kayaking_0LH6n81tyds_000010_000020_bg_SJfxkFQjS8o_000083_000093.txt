@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000250_reading newspaper_to_canoeing or kayaking_0LH6n81tyds_000010_000020_bg_SJfxkFQjS8o_000083_000093
+Frame: 000050.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): canoeing or kayaking
+
+CLIP PREDICTIONS:
+  Predicted Label: canoeing or kayaking (score: 0.9834)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #18/50 (score: 0.0001)
+  Background Action 'canoeing or kayaking' ranked: #1/50 (score: 0.9834)
+
+Top 10 predictions:
+  🏞️  1. canoeing or kayaking (0.9834)
+      2. surfing water (0.0053)
+      3. juggling balls (0.0020)
+      4. opening bottle (0.0019)
+      5. walking the dog (0.0014)
+      6. juggling soccer ball (0.0010)
+      7. flying kite (0.0008)
+      8. driving car (0.0006)
+      9. catching or throwing frisbee (0.0005)
+     10. golf driving (0.0005)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -17
+Score gap (bg_score - human_score): 0.9833
+⚠️  Background action in top 5!

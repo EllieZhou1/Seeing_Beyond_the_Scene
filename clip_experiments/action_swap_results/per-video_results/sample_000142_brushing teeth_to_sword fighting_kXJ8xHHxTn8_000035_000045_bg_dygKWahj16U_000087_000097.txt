@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000142_brushing teeth_to_sword fighting_kXJ8xHHxTn8_000035_000045_bg_dygKWahj16U_000087_000097
+Frame: 000050.jpg
+Human Action Label (Correct): brushing teeth
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.2208)
+
+RANKING ANALYSIS:
+  Human Action 'brushing teeth' ranked: #34/50 (score: 0.0045)
+  Background Action 'sword fighting' ranked: #3/50 (score: 0.0994)
+
+Top 10 predictions:
+      1. climbing a rope (0.2208)
+      2. brushing hair (0.1279)
+  🏞️  3. sword fighting (0.0994)
+      4. golf driving (0.0528)
+      5. juggling soccer ball (0.0504)
+      6. punching person (boxing) (0.0421)
+      7. tying tie (0.0362)
+      8. archery (0.0359)
+      9. hitting baseball (0.0299)
+     10. flying kite (0.0298)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -31
+Score gap (bg_score - human_score): 0.0949
+⚠️  Background action in top 5!

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000354_reading book_to_eating ice cream_yPCC6O5DprM_000404_000414_bg_0L8ZcrRtFxI_001103_001113
+Frame: 000050.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): eating ice cream
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.1997)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #19/50 (score: 0.0145)
+  Background Action 'eating ice cream' ranked: #2/50 (score: 0.0866)
+
+Top 10 predictions:
+      1. driving car (0.1997)
+  🏞️  2. eating ice cream (0.0866)
+      3. brushing hair (0.0539)
+      4. playing saxophone (0.0520)
+      5. dribbling basketball (0.0450)
+      6. eating cake (0.0444)
+      7. playing violin (0.0435)
+      8. playing piano (0.0421)
+      9. playing guitar (0.0421)
+     10. golf driving (0.0405)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -17
+Score gap (bg_score - human_score): 0.0721
+⚠️  Background action in top 5!

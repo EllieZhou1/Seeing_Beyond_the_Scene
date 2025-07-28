@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 0LFcgiJKZUw
+Action: tying tie
+Time: 63-73s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.9996)
+  Top 10 predictions:
+    👉  1. tying tie (0.9996)
+        2. juggling balls (0.0001)
+        3. juggling soccer ball (0.0001)
+        4. punching person (boxing) (0.0001)
+        5. brushing hair (0.0000)
+        6. brushing teeth (0.0000)
+        7. opening bottle (0.0000)
+        8. hitting baseball (0.0000)
+        9. shooting goal (soccer) (0.0000)
+       10. climbing a rope (0.0000)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.9986)
+  Top 10 predictions:
+    👉  1. tying tie (0.9986)
+        2. juggling soccer ball (0.0004)
+        3. juggling balls (0.0004)
+        4. punching person (boxing) (0.0001)
+        5. shooting goal (soccer) (0.0001)
+        6. climbing a rope (0.0001)
+        7. skipping rope (0.0001)
+        8. hitting baseball (0.0000)
+        9. dribbling basketball (0.0000)
+       10. opening bottle (0.0000)
+
+BACKGROUND ONLY:
+  Correct action rank: 35/50 (score: 0.0048)
+  Top 10 predictions:
+        1. cleaning windows (0.3745)
+        2. climbing ladder (0.0746)
+        3. playing trumpet (0.0660)
+        4. sweeping floor (0.0570)
+        5. shooting goal (soccer) (0.0332)
+        6. playing saxophone (0.0303)
+        7. climbing a rope (0.0255)
+        8. skiing slalom (0.0225)
+        9. hitting baseball (0.0219)
+       10. shooting basketball (0.0177)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 34
+Ranking drop from human to background: 34

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001497_skiing (not slalom or crosscountry)_to_walking the dog_59Pe1ZaEPPo_000022_000032_bg_9dnXMsrhHC8_000359_000369
+Frame: 000050.jpg
+Human Action Label (Correct): skiing (not slalom or crosscountry)
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: walking the dog (score: 0.5743)
+
+RANKING ANALYSIS:
+  Human Action 'skiing (not slalom or crosscountry)' ranked: #16/50 (score: 0.0028)
+  Background Action 'walking the dog' ranked: #1/50 (score: 0.5743)
+
+Top 10 predictions:
+  🏞️  1. walking the dog (0.5743)
+      2. sword fighting (0.1699)
+      3. surfing water (0.0689)
+      4. punching person (boxing) (0.0517)
+      5. sweeping floor (0.0277)
+      6. climbing a rope (0.0192)
+      7. hurdling (0.0104)
+      8. catching or throwing frisbee (0.0082)
+      9. skiing slalom (0.0070)
+     10. deadlifting (0.0061)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -15
+Score gap (bg_score - human_score): 0.5715
+⚠️  Background action in top 5!

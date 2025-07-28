@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000881_brushing teeth_to_playing bass guitar_DIrJ-X5GLyQ_000060_000070_bg_9mUwLfcztyE_000018_000028
+Frame: 000050.jpg
+Human Action Label (Correct): brushing teeth
+Background Label (Incorrect): playing bass guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.2741)
+
+RANKING ANALYSIS:
+  Human Action 'brushing teeth' ranked: #25/50 (score: 0.0027)
+  Background Action 'playing bass guitar' ranked: #35/50 (score: 0.0017)
+
+Top 10 predictions:
+      1. climbing ladder (0.2741)
+      2. climbing a rope (0.2161)
+      3. juggling balls (0.1032)
+      4. juggling soccer ball (0.0873)
+      5. skipping rope (0.0735)
+      6. surfing water (0.0396)
+      7. dunking basketball (0.0305)
+      8. cleaning windows (0.0239)
+      9. dribbling basketball (0.0160)
+     10. tying tie (0.0127)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 10
+Score gap (bg_score - human_score): -0.0011

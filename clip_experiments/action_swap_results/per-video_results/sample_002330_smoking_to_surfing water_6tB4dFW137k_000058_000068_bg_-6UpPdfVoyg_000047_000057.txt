@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002330_smoking_to_surfing water_6tB4dFW137k_000058_000068_bg_-6UpPdfVoyg_000047_000057
+Frame: 000050.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): surfing water
+
+CLIP PREDICTIONS:
+  Predicted Label: dribbling basketball (score: 0.2527)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #35/50 (score: 0.0055)
+  Background Action 'surfing water' ranked: #47/50 (score: 0.0010)
+
+Top 10 predictions:
+      1. dribbling basketball (0.2527)
+      2. tying tie (0.0774)
+      3. punching person (boxing) (0.0544)
+      4. hurdling (0.0504)
+      5. juggling soccer ball (0.0489)
+      6. hitting baseball (0.0471)
+      7. playing saxophone (0.0348)
+      8. climbing a rope (0.0301)
+      9. juggling balls (0.0285)
+     10. playing accordion (0.0268)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 12
+Score gap (bg_score - human_score): -0.0045

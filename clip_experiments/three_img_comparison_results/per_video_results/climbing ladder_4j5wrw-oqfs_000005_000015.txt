@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 4j5wrw-oqfs
+Action: climbing ladder
+Time: 5-15s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.1513)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.3862)
+    👉  2. climbing ladder (0.1513)
+        3. cleaning windows (0.0904)
+        4. climbing a rope (0.0481)
+        5. skiing (not slalom or crosscountry) (0.0397)
+        6. skiing slalom (0.0392)
+        7. smoking (0.0266)
+        8. opening bottle (0.0260)
+        9. skipping rope (0.0248)
+       10. tying tie (0.0191)
+
+HUMAN ONLY:
+  Correct action rank: 10/50 (score: 0.0322)
+  Top 10 predictions:
+        1. juggling soccer ball (0.1134)
+        2. shooting goal (soccer) (0.0717)
+        3. dunking basketball (0.0672)
+        4. dribbling basketball (0.0498)
+        5. playing basketball (0.0445)
+        6. skiing slalom (0.0429)
+        7. shooting basketball (0.0415)
+        8. punching person (boxing) (0.0395)
+        9. juggling balls (0.0378)
+    👉 10. climbing ladder (0.0322)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.0860)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.3882)
+    👉  2. climbing ladder (0.0860)
+        3. cleaning windows (0.0853)
+        4. climbing a rope (0.0428)
+        5. skiing slalom (0.0405)
+        6. skipping rope (0.0370)
+        7. skiing (not slalom or crosscountry) (0.0314)
+        8. smoking (0.0312)
+        9. tying tie (0.0286)
+       10. juggling soccer ball (0.0268)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -8
+🚨 WARNING: Background ranks higher than human-only!

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000435_eating cake_to_tying tie_BiuX8Y2JfKY_000006_000016_bg_xFMIqMgGSGM_000068_000078
+Frame: 000050.jpg
+Human Action Label (Correct): eating cake
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.1329)
+
+RANKING ANALYSIS:
+  Human Action 'eating cake' ranked: #15/50 (score: 0.0226)
+  Background Action 'tying tie' ranked: #14/50 (score: 0.0244)
+
+Top 10 predictions:
+      1. playing accordion (0.1329)
+      2. juggling soccer ball (0.0650)
+      3. climbing a rope (0.0597)
+      4. playing violin (0.0530)
+      5. flying kite (0.0494)
+      6. eating ice cream (0.0455)
+      7. dribbling basketball (0.0451)
+      8. punching person (boxing) (0.0448)
+      9. opening bottle (0.0376)
+     10. playing saxophone (0.0374)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.0018

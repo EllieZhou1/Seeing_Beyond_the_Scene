@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000446_reading newspaper_to_skiing slalom_zEff1Bb8M7w_000019_000029_bg_c8L5gnF1-sw_000034_000044
+Frame: 000050.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): skiing slalom
+
+CLIP PREDICTIONS:
+  Predicted Label: smoking (score: 0.1515)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #21/50 (score: 0.0126)
+  Background Action 'skiing slalom' ranked: #43/50 (score: 0.0013)
+
+Top 10 predictions:
+      1. smoking (0.1515)
+      2. eating ice cream (0.1004)
+      3. playing accordion (0.0975)
+      4. eating cake (0.0883)
+      5. climbing a rope (0.0458)
+      6. playing piano (0.0443)
+      7. playing saxophone (0.0400)
+      8. playing bass guitar (0.0390)
+      9. drinking (0.0360)
+     10. playing trumpet (0.0346)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 22
+Score gap (bg_score - human_score): -0.0113

@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 5bZojQCp5tk
+Action: writing
+Time: 318-328s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.7492)
+  Top 10 predictions:
+    👉  1. writing (0.7492)
+        2. reading book (0.0267)
+        3. shooting goal (soccer) (0.0263)
+        4. climbing ladder (0.0196)
+        5. playing guitar (0.0180)
+        6. playing piano (0.0163)
+        7. opening bottle (0.0128)
+        8. skiing slalom (0.0127)
+        9. dribbling basketball (0.0122)
+       10. punching person (boxing) (0.0100)
+
+HUMAN ONLY:
+  Correct action rank: 20/50 (score: 0.0086)
+  Top 10 predictions:
+        1. punching person (boxing) (0.3327)
+        2. juggling balls (0.1486)
+        3. juggling soccer ball (0.1400)
+        4. playing violin (0.0360)
+        5. smoking (0.0281)
+        6. dribbling basketball (0.0272)
+        7. playing trumpet (0.0252)
+        8. catching or throwing baseball (0.0251)
+        9. shooting goal (soccer) (0.0243)
+       10. tying tie (0.0162)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.5577)
+  Top 10 predictions:
+    👉  1. writing (0.5577)
+        2. playing guitar (0.0536)
+        3. reading book (0.0488)
+        4. smoking (0.0350)
+        5. opening bottle (0.0318)
+        6. eating cake (0.0314)
+        7. playing piano (0.0295)
+        8. climbing ladder (0.0254)
+        9. dribbling basketball (0.0174)
+       10. shooting goal (soccer) (0.0157)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -19
+🚨 WARNING: Background ranks higher than human-only!

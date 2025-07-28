@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 5qZvnuDbDFY
+Action: surfing water
+Time: 2-12s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.9967)
+  Top 10 predictions:
+    👉  1. surfing water (0.9967)
+        2. skiing slalom (0.0009)
+        3. golf driving (0.0003)
+        4. hurdling (0.0003)
+        5. opening bottle (0.0003)
+        6. shooting goal (soccer) (0.0002)
+        7. skiing (not slalom or crosscountry) (0.0002)
+        8. climbing a rope (0.0002)
+        9. hitting baseball (0.0001)
+       10. drinking (0.0001)
+
+HUMAN ONLY:
+  Correct action rank: 41/50 (score: 0.0023)
+  Top 10 predictions:
+        1. juggling soccer ball (0.2000)
+        2. dribbling basketball (0.1355)
+        3. juggling balls (0.0923)
+        4. shooting basketball (0.0758)
+        5. playing basketball (0.0593)
+        6. dunking basketball (0.0516)
+        7. playing tennis (0.0466)
+        8. walking the dog (0.0395)
+        9. shooting goal (soccer) (0.0389)
+       10. hitting baseball (0.0222)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.9964)
+  Top 10 predictions:
+    👉  1. surfing water (0.9964)
+        2. skiing slalom (0.0007)
+        3. opening bottle (0.0004)
+        4. golf driving (0.0003)
+        5. shooting goal (soccer) (0.0003)
+        6. hurdling (0.0002)
+        7. climbing a rope (0.0002)
+        8. hitting baseball (0.0002)
+        9. drinking (0.0001)
+       10. skiing (not slalom or crosscountry) (0.0001)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -40
+🚨 WARNING: Background ranks higher than human-only!

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000377_climbing ladder_to_clean and jerk_PQ94yoXfTxk_000017_000027_bg_NiYuBZei0aI_000013_000023
+Frame: 000050.jpg
+Human Action Label (Correct): climbing ladder
+Background Label (Incorrect): clean and jerk
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.1669)
+
+RANKING ANALYSIS:
+  Human Action 'climbing ladder' ranked: #1/50 (score: 0.1669)
+  Background Action 'clean and jerk' ranked: #28/50 (score: 0.0049)
+
+Top 10 predictions:
+  👤  1. climbing ladder (0.1669)
+      2. climbing a rope (0.1535)
+      3. playing accordion (0.1112)
+      4. juggling soccer ball (0.1034)
+      5. juggling balls (0.0864)
+      6. punching person (boxing) (0.0362)
+      7. dunking basketball (0.0318)
+      8. bowling (0.0274)
+      9. playing violin (0.0252)
+     10. skipping rope (0.0249)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 27
+Score gap (bg_score - human_score): -0.1620
+✅ Human action in top 5

@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: sspUdoV9Il0
+Action: writing
+Time: 378-388s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 3/50 (score: 0.1266)
+  Top 10 predictions:
+        1. flying kite (0.2028)
+        2. punching person (boxing) (0.1272)
+    👉  3. writing (0.1266)
+        4. sweeping floor (0.0629)
+        5. shooting goal (soccer) (0.0520)
+        6. dunking basketball (0.0476)
+        7. climbing ladder (0.0355)
+        8. dribbling basketball (0.0315)
+        9. catching or throwing frisbee (0.0274)
+       10. shooting basketball (0.0265)
+
+HUMAN ONLY:
+  Correct action rank: 17/50 (score: 0.0086)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.2439)
+        2. skiing slalom (0.1752)
+        3. dunking basketball (0.1060)
+        4. shooting basketball (0.0485)
+        5. dribbling basketball (0.0423)
+        6. climbing ladder (0.0358)
+        7. playing basketball (0.0338)
+        8. punching person (boxing) (0.0251)
+        9. hitting baseball (0.0240)
+       10. skipping rope (0.0233)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.1759)
+  Top 10 predictions:
+        1. flying kite (0.2076)
+    👉  2. writing (0.1759)
+        3. punching person (boxing) (0.1046)
+        4. sweeping floor (0.0547)
+        5. dunking basketball (0.0425)
+        6. shooting goal (soccer) (0.0359)
+        7. climbing ladder (0.0315)
+        8. dribbling basketball (0.0277)
+        9. sword fighting (0.0248)
+       10. catching or throwing frisbee (0.0248)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -1
+Ranking drop from human to background: -15
+🚨 WARNING: Background ranks higher than human-only!

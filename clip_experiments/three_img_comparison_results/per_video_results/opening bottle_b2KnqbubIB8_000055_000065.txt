@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: b2KnqbubIB8
+Action: opening bottle
+Time: 55-65s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 7/50 (score: 0.0204)
+  Top 10 predictions:
+        1. juggling soccer ball (0.3053)
+        2. juggling balls (0.1931)
+        3. punching person (boxing) (0.0968)
+        4. climbing a rope (0.0500)
+        5. cleaning windows (0.0483)
+        6. skipping rope (0.0236)
+    👉  7. opening bottle (0.0204)
+        8. playing basketball (0.0180)
+        9. shooting goal (soccer) (0.0175)
+       10. hitting baseball (0.0149)
+
+HUMAN ONLY:
+  Correct action rank: 13/50 (score: 0.0119)
+  Top 10 predictions:
+        1. juggling soccer ball (0.3293)
+        2. punching person (boxing) (0.1621)
+        3. juggling balls (0.1239)
+        4. climbing a rope (0.0650)
+        5. playing trumpet (0.0364)
+        6. catching or throwing frisbee (0.0299)
+        7. catching or throwing baseball (0.0277)
+        8. playing saxophone (0.0257)
+        9. hitting baseball (0.0212)
+       10. shooting goal (soccer) (0.0165)
+
+BACKGROUND ONLY:
+  Correct action rank: 19/50 (score: 0.0168)
+  Top 10 predictions:
+        1. juggling soccer ball (0.1923)
+        2. shooting goal (soccer) (0.0964)
+        3. climbing a rope (0.0641)
+        4. punching person (boxing) (0.0599)
+        5. hurdling (0.0494)
+        6. walking the dog (0.0436)
+        7. surfing water (0.0421)
+        8. cleaning windows (0.0420)
+        9. dribbling basketball (0.0293)
+       10. driving car (0.0292)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 12
+Ranking drop from human to background: 6

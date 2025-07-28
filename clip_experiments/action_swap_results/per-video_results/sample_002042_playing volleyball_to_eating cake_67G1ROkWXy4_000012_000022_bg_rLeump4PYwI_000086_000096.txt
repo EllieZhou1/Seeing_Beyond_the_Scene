@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002042_playing volleyball_to_eating cake_67G1ROkWXy4_000012_000022_bg_rLeump4PYwI_000086_000096
+Frame: 000050.jpg
+Human Action Label (Correct): playing volleyball
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.3225)
+
+RANKING ANALYSIS:
+  Human Action 'playing volleyball' ranked: #23/50 (score: 0.0035)
+  Background Action 'eating cake' ranked: #46/50 (score: 0.0001)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.3225)
+      2. dunking basketball (0.1013)
+      3. dribbling basketball (0.0941)
+      4. playing basketball (0.0820)
+      5. juggling balls (0.0734)
+      6. catching or throwing frisbee (0.0529)
+      7. flying kite (0.0372)
+      8. catching or throwing baseball (0.0356)
+      9. shooting goal (soccer) (0.0314)
+     10. shooting basketball (0.0272)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 23
+Score gap (bg_score - human_score): -0.0035

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000765_playing piano_to_deadlifting_TYsvvOyPWhs_000003_000013_bg_zvK8RSHR4YU_000013_000023
+Frame: 000050.jpg
+Human Action Label (Correct): playing piano
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: playing piano (score: 0.2096)
+
+RANKING ANALYSIS:
+  Human Action 'playing piano' ranked: #1/50 (score: 0.2096)
+  Background Action 'deadlifting' ranked: #9/50 (score: 0.0362)
+
+Top 10 predictions:
+  👤  1. playing piano (0.2096)
+      2. playing violin (0.1333)
+      3. playing accordion (0.1064)
+      4. playing trumpet (0.0662)
+      5. clean and jerk (0.0552)
+      6. playing bass guitar (0.0479)
+      7. climbing ladder (0.0403)
+      8. climbing a rope (0.0394)
+  🏞️  9. deadlifting (0.0362)
+     10. dribbling basketball (0.0313)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 8
+Score gap (bg_score - human_score): -0.1734
+✅ Human action in top 5

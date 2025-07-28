@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000444_reading newspaper_to_playing volleyball_hqNe549GJwI_001340_001350_bg_R1pusK6KDBw_002108_002118
+Frame: 000050.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): playing volleyball
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.3662)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #10/50 (score: 0.0125)
+  Background Action 'playing volleyball' ranked: #45/50 (score: 0.0006)
+
+Top 10 predictions:
+      1. surfing water (0.3662)
+      2. juggling balls (0.3162)
+      3. cleaning windows (0.0475)
+      4. juggling soccer ball (0.0252)
+      5. dribbling basketball (0.0238)
+      6. bowling (0.0175)
+      7. playing tennis (0.0153)
+      8. skiing slalom (0.0138)
+      9. sword fighting (0.0131)
+  👤 10. reading newspaper (0.0125)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 35
+Score gap (bg_score - human_score): -0.0119

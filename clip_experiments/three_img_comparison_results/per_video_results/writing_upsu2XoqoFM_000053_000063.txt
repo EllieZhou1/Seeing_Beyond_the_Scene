@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: upsu2XoqoFM
+Action: writing
+Time: 53-63s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 12/50 (score: 0.0202)
+  Top 10 predictions:
+        1. opening bottle (0.2292)
+        2. brushing hair (0.1348)
+        3. brushing teeth (0.1020)
+        4. punching person (boxing) (0.0590)
+        5. tying tie (0.0444)
+        6. smoking (0.0409)
+        7. shooting goal (soccer) (0.0382)
+        8. climbing a rope (0.0293)
+        9. playing violin (0.0239)
+       10. driving car (0.0216)
+
+HUMAN ONLY:
+  Correct action rank: 18/50 (score: 0.0133)
+  Top 10 predictions:
+        1. punching person (boxing) (0.2633)
+        2. opening bottle (0.1815)
+        3. smoking (0.0980)
+        4. tying tie (0.0505)
+        5. brushing hair (0.0442)
+        6. climbing a rope (0.0377)
+        7. dribbling basketball (0.0238)
+        8. brushing teeth (0.0203)
+        9. eating ice cream (0.0166)
+       10. driving car (0.0166)
+
+BACKGROUND ONLY:
+  Correct action rank: 7/50 (score: 0.0375)
+  Top 10 predictions:
+        1. brushing hair (0.1869)
+        2. shooting goal (soccer) (0.0848)
+        3. playing saxophone (0.0723)
+        4. brushing teeth (0.0685)
+        5. cleaning windows (0.0447)
+        6. opening bottle (0.0425)
+    👉  7. writing (0.0375)
+        8. smoking (0.0326)
+        9. hitting baseball (0.0312)
+       10. punching person (boxing) (0.0263)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: -5
+Ranking drop from human to background: -11
+🚨 WARNING: Background ranks higher than human-only!

@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: vSEVCFV42pE
+Action: opening bottle
+Time: 6-16s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.2327)
+  Top 10 predictions:
+    👉  1. opening bottle (0.2327)
+        2. eating cake (0.1683)
+        3. punching person (boxing) (0.0669)
+        4. climbing a rope (0.0634)
+        5. brushing teeth (0.0565)
+        6. eating ice cream (0.0453)
+        7. brushing hair (0.0380)
+        8. cleaning windows (0.0357)
+        9. smoking (0.0333)
+       10. juggling soccer ball (0.0318)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.1973)
+  Top 10 predictions:
+    👉  1. opening bottle (0.1973)
+        2. eating cake (0.1493)
+        3. punching person (boxing) (0.0862)
+        4. brushing teeth (0.0621)
+        5. climbing a rope (0.0545)
+        6. eating ice cream (0.0449)
+        7. cleaning windows (0.0427)
+        8. smoking (0.0368)
+        9. juggling soccer ball (0.0362)
+       10. brushing hair (0.0332)
+
+BACKGROUND ONLY:
+  Correct action rank: 32/50 (score: 0.0136)
+  Top 10 predictions:
+        1. writing (0.0524)
+        2. hitting baseball (0.0484)
+        3. playing saxophone (0.0478)
+        4. shooting goal (soccer) (0.0475)
+        5. playing piano (0.0468)
+        6. playing guitar (0.0425)
+        7. shooting basketball (0.0398)
+        8. playing trumpet (0.0330)
+        9. catching or throwing baseball (0.0326)
+       10. smoking (0.0325)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 31
+Ranking drop from human to background: 31

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001493_playing accordion_to_sword fighting_YgXLcOtQcSg_000028_000038_bg_7G7e9f0E-Xk_000042_000052
+Frame: 000050.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.4133)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #11/50 (score: 0.0138)
+  Background Action 'sword fighting' ranked: #12/50 (score: 0.0138)
+
+Top 10 predictions:
+      1. cleaning windows (0.4133)
+      2. punching person (boxing) (0.1980)
+      3. smoking (0.0485)
+      4. juggling soccer ball (0.0365)
+      5. walking the dog (0.0341)
+      6. juggling balls (0.0325)
+      7. skipping rope (0.0272)
+      8. driving car (0.0255)
+      9. opening bottle (0.0187)
+     10. playing basketball (0.0156)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0001

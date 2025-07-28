@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001024_tying tie_to_climbing a rope_KG7T3DDXQBg_000083_000093_bg_O02pJn1BaBk_000006_000016
+Frame: 000050.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): climbing a rope
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.3293)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #10/50 (score: 0.0175)
+  Background Action 'climbing a rope' ranked: #1/50 (score: 0.3293)
+
+Top 10 predictions:
+  🏞️  1. climbing a rope (0.3293)
+      2. cleaning windows (0.1775)
+      3. opening bottle (0.1143)
+      4. sword fighting (0.0328)
+      5. climbing ladder (0.0318)
+      6. surfing water (0.0317)
+      7. juggling balls (0.0193)
+      8. playing violin (0.0188)
+      9. juggling soccer ball (0.0182)
+  👤 10. tying tie (0.0175)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -9
+Score gap (bg_score - human_score): 0.3118
+⚠️  Background action in top 5!

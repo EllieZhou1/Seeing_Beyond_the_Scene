@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002455_playing bass guitar_to_playing guitar_t4-dv6R6L2c_000011_000021_bg_qH1dW6YUeUo_000273_000283
+Frame: 000050.jpg
+Human Action Label (Correct): playing bass guitar
+Background Label (Incorrect): playing guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: playing guitar (score: 0.4716)
+
+RANKING ANALYSIS:
+  Human Action 'playing bass guitar' ranked: #2/50 (score: 0.3733)
+  Background Action 'playing guitar' ranked: #1/50 (score: 0.4716)
+
+Top 10 predictions:
+  🏞️  1. playing guitar (0.4716)
+  👤  2. playing bass guitar (0.3733)
+      3. playing saxophone (0.0775)
+      4. playing piano (0.0226)
+      5. playing accordion (0.0129)
+      6. playing trumpet (0.0113)
+      7. playing violin (0.0098)
+      8. writing (0.0058)
+      9. sweeping floor (0.0047)
+     10. opening bottle (0.0030)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.0983
+⚠️  Background action in top 5!
+✅ Human action in top 5

@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: o5K7K_9JqJo
+Action: skiing slalom
+Time: 48-58s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.8156)
+  Top 10 predictions:
+    👉  1. skiing slalom (0.8156)
+        2. skiing (not slalom or crosscountry) (0.1556)
+        3. climbing a rope (0.0152)
+        4. climbing ladder (0.0113)
+        5. hurdling (0.0015)
+        6. shooting goal (soccer) (0.0001)
+        7. skipping rope (0.0001)
+        8. flying kite (0.0001)
+        9. surfing water (0.0001)
+       10. opening bottle (0.0001)
+
+HUMAN ONLY:
+  Correct action rank: 2/50 (score: 0.0782)
+  Top 10 predictions:
+        1. flying kite (0.4254)
+    👉  2. skiing slalom (0.0782)
+        3. climbing ladder (0.0751)
+        4. surfing water (0.0386)
+        5. catching or throwing baseball (0.0367)
+        6. sword fighting (0.0340)
+        7. sweeping floor (0.0289)
+        8. walking the dog (0.0260)
+        9. climbing a rope (0.0237)
+       10. bowling (0.0225)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.5479)
+  Top 10 predictions:
+    👉  1. skiing slalom (0.5479)
+        2. climbing a rope (0.1832)
+        3. climbing ladder (0.1828)
+        4. skiing (not slalom or crosscountry) (0.0773)
+        5. hurdling (0.0030)
+        6. cleaning windows (0.0010)
+        7. surfing water (0.0008)
+        8. sword fighting (0.0007)
+        9. walking the dog (0.0005)
+       10. shooting goal (soccer) (0.0004)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -1
+🚨 WARNING: Background ranks higher than human-only!

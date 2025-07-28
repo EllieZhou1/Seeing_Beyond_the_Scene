@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002162_playing basketball_to_opening bottle_uPMrdDdZ688_000107_000117_bg_b2KnqbubIB8_000055_000065
+Frame: 000050.jpg
+Human Action Label (Correct): playing basketball
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.4300)
+
+RANKING ANALYSIS:
+  Human Action 'playing basketball' ranked: #2/50 (score: 0.1513)
+  Background Action 'opening bottle' ranked: #15/50 (score: 0.0021)
+
+Top 10 predictions:
+      1. shooting goal (soccer) (0.4300)
+  👤  2. playing basketball (0.1513)
+      3. dribbling basketball (0.1282)
+      4. shooting basketball (0.0795)
+      5. dunking basketball (0.0727)
+      6. juggling soccer ball (0.0628)
+      7. playing volleyball (0.0262)
+      8. hurdling (0.0076)
+      9. climbing ladder (0.0073)
+     10. playing tennis (0.0055)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 13
+Score gap (bg_score - human_score): -0.1492
+✅ Human action in top 5

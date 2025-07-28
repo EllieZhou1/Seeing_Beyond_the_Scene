@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001205_clean and jerk_to_playing trumpet_DkqICnFb_B0_000008_000018_bg_jwYikLyqs0k_000002_000012
+Frame: 000050.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.2110)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #15/50 (score: 0.0118)
+  Background Action 'playing trumpet' ranked: #25/50 (score: 0.0032)
+
+Top 10 predictions:
+      1. surfing water (0.2110)
+      2. hurdling (0.1963)
+      3. climbing ladder (0.1230)
+      4. playing volleyball (0.0980)
+      5. climbing a rope (0.0953)
+      6. deadlifting (0.0269)
+      7. shooting goal (soccer) (0.0236)
+      8. sword fighting (0.0234)
+      9. dunking basketball (0.0194)
+     10. canoeing or kayaking (0.0188)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 10
+Score gap (bg_score - human_score): -0.0087

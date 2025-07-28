@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: bPHsWugu78s
+Action: sword fighting
+Time: 119-129s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.2219)
+  Top 10 predictions:
+    👉  1. sword fighting (0.2219)
+        2. playing violin (0.2125)
+        3. skipping rope (0.1078)
+        4. climbing a rope (0.0712)
+        5. sweeping floor (0.0498)
+        6. climbing ladder (0.0442)
+        7. hitting baseball (0.0310)
+        8. opening bottle (0.0259)
+        9. playing guitar (0.0228)
+       10. playing accordion (0.0203)
+
+HUMAN ONLY:
+  Correct action rank: 15/50 (score: 0.0089)
+  Top 10 predictions:
+        1. climbing a rope (0.3441)
+        2. punching person (boxing) (0.1385)
+        3. climbing ladder (0.0861)
+        4. juggling balls (0.0568)
+        5. opening bottle (0.0564)
+        6. skipping rope (0.0503)
+        7. walking the dog (0.0408)
+        8. tying tie (0.0285)
+        9. juggling soccer ball (0.0162)
+       10. drinking (0.0156)
+
+BACKGROUND ONLY:
+  Correct action rank: 3/50 (score: 0.1194)
+  Top 10 predictions:
+        1. sweeping floor (0.2428)
+        2. playing violin (0.2051)
+    👉  3. sword fighting (0.1194)
+        4. juggling soccer ball (0.0667)
+        5. cleaning windows (0.0606)
+        6. playing accordion (0.0550)
+        7. climbing a rope (0.0357)
+        8. playing guitar (0.0270)
+        9. juggling balls (0.0234)
+       10. playing saxophone (0.0224)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 2
+Ranking drop from human to background: -12
+🚨 WARNING: Background ranks higher than human-only!

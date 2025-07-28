@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000757_drinking_to_golf driving_wByNrVN5dr4_000100_000110_bg_6CbAI0QPeSM_000001_000011
+Frame: 000050.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: smoking (score: 0.2537)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #6/50 (score: 0.0388)
+  Background Action 'golf driving' ranked: #17/50 (score: 0.0146)
+
+Top 10 predictions:
+      1. smoking (0.2537)
+      2. punching person (boxing) (0.1092)
+      3. cleaning windows (0.0815)
+      4. brushing teeth (0.0715)
+      5. sword fighting (0.0649)
+  👤  6. drinking (0.0388)
+      7. eating ice cream (0.0386)
+      8. archery (0.0384)
+      9. eating cake (0.0327)
+     10. climbing a rope (0.0268)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 11
+Score gap (bg_score - human_score): -0.0242

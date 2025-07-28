@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001303_flying kite_to_hurdling_I84fWDl0fRg_000000_000010_bg_JlwpQhOj8Wo_000001_000011
+Frame: 000050.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): hurdling
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.4852)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #10/50 (score: 0.0045)
+  Background Action 'hurdling' ranked: #2/50 (score: 0.4270)
+
+Top 10 predictions:
+      1. shooting goal (soccer) (0.4852)
+  🏞️  2. hurdling (0.4270)
+      3. catching or throwing frisbee (0.0184)
+      4. juggling soccer ball (0.0089)
+      5. hitting baseball (0.0075)
+      6. skipping rope (0.0057)
+      7. dunking basketball (0.0054)
+      8. catching or throwing baseball (0.0046)
+      9. skiing slalom (0.0045)
+  👤 10. flying kite (0.0045)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -8
+Score gap (bg_score - human_score): 0.4226
+⚠️  Background action in top 5!

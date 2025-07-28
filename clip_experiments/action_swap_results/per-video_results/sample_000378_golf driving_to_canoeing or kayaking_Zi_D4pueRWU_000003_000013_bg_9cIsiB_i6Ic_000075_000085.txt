@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000378_golf driving_to_canoeing or kayaking_Zi_D4pueRWU_000003_000013_bg_9cIsiB_i6Ic_000075_000085
+Frame: 000050.jpg
+Human Action Label (Correct): golf driving
+Background Label (Incorrect): canoeing or kayaking
+
+CLIP PREDICTIONS:
+  Predicted Label: golf driving (score: 0.1703)
+
+RANKING ANALYSIS:
+  Human Action 'golf driving' ranked: #1/50 (score: 0.1703)
+  Background Action 'canoeing or kayaking' ranked: #12/50 (score: 0.0173)
+
+Top 10 predictions:
+  👤  1. golf driving (0.1703)
+      2. skiing slalom (0.1173)
+      3. catching or throwing frisbee (0.1160)
+      4. juggling balls (0.1093)
+      5. hitting baseball (0.0998)
+      6. surfing water (0.0964)
+      7. walking the dog (0.0721)
+      8. juggling soccer ball (0.0360)
+      9. catching or throwing baseball (0.0317)
+     10. skiing (not slalom or crosscountry) (0.0175)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 11
+Score gap (bg_score - human_score): -0.1530
+✅ Human action in top 5

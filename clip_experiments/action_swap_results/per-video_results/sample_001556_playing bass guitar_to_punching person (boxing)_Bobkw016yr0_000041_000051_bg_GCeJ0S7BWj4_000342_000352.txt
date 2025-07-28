@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001556_playing bass guitar_to_punching person (boxing)_Bobkw016yr0_000041_000051_bg_GCeJ0S7BWj4_000342_000352
+Frame: 000050.jpg
+Human Action Label (Correct): playing bass guitar
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: playing guitar (score: 0.7036)
+
+RANKING ANALYSIS:
+  Human Action 'playing bass guitar' ranked: #2/50 (score: 0.2355)
+  Background Action 'punching person (boxing)' ranked: #14/50 (score: 0.0003)
+
+Top 10 predictions:
+      1. playing guitar (0.7036)
+  👤  2. playing bass guitar (0.2355)
+      3. playing violin (0.0350)
+      4. playing saxophone (0.0066)
+      5. opening bottle (0.0047)
+      6. playing accordion (0.0042)
+      7. playing trumpet (0.0036)
+      8. cleaning windows (0.0009)
+      9. sword fighting (0.0007)
+     10. brushing hair (0.0007)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 12
+Score gap (bg_score - human_score): -0.2352
+✅ Human action in top 5

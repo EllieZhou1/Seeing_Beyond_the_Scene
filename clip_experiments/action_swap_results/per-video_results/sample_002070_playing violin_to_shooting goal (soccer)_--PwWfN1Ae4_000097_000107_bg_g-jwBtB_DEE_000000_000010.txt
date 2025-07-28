@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002070_playing violin_to_shooting goal (soccer)_--PwWfN1Ae4_000097_000107_bg_g-jwBtB_DEE_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): playing violin
+Background Label (Incorrect): shooting goal (soccer)
+
+CLIP PREDICTIONS:
+  Predicted Label: bowling (score: 0.3685)
+
+RANKING ANALYSIS:
+  Human Action 'playing violin' ranked: #30/50 (score: 0.0046)
+  Background Action 'shooting goal (soccer)' ranked: #14/50 (score: 0.0150)
+
+Top 10 predictions:
+      1. bowling (0.3685)
+      2. skiing slalom (0.0898)
+      3. juggling balls (0.0664)
+      4. dribbling basketball (0.0520)
+      5. playing accordion (0.0385)
+      6. reading newspaper (0.0373)
+      7. dunking basketball (0.0363)
+      8. skiing (not slalom or crosscountry) (0.0273)
+      9. archery (0.0245)
+     10. playing saxophone (0.0226)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -16
+Score gap (bg_score - human_score): 0.0105

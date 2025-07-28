@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000658_smoking_to_reading newspaper_ID55j2rq1sc_000007_000017_bg_7mhUfMvwcjc_000001_000011
+Frame: 000050.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): reading newspaper
+
+CLIP PREDICTIONS:
+  Predicted Label: playing basketball (score: 0.0909)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #8/50 (score: 0.0469)
+  Background Action 'reading newspaper' ranked: #38/50 (score: 0.0031)
+
+Top 10 predictions:
+      1. playing basketball (0.0909)
+      2. juggling soccer ball (0.0881)
+      3. punching person (boxing) (0.0865)
+      4. shooting basketball (0.0657)
+      5. juggling balls (0.0547)
+      6. dribbling basketball (0.0512)
+      7. tying tie (0.0492)
+  👤  8. smoking (0.0469)
+      9. climbing ladder (0.0468)
+     10. dunking basketball (0.0428)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 30
+Score gap (bg_score - human_score): -0.0437

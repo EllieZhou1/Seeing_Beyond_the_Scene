@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001476_sweeping floor_to_playing accordion_dhqT0o9B4pU_000050_000060_bg_YgXLcOtQcSg_000028_000038
+Frame: 000050.jpg
+Human Action Label (Correct): sweeping floor
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.3130)
+
+RANKING ANALYSIS:
+  Human Action 'sweeping floor' ranked: #32/50 (score: 0.0032)
+  Background Action 'playing accordion' ranked: #5/50 (score: 0.0436)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.3130)
+      2. punching person (boxing) (0.0764)
+      3. juggling balls (0.0650)
+      4. playing violin (0.0590)
+  🏞️  5. playing accordion (0.0436)
+      6. cleaning windows (0.0409)
+      7. playing trumpet (0.0408)
+      8. playing saxophone (0.0336)
+      9. dribbling basketball (0.0319)
+     10. opening bottle (0.0283)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -27
+Score gap (bg_score - human_score): 0.0403
+⚠️  Background action in top 5!

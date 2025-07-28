@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: c7u5vt-QgCI
+Action: reading book
+Time: 225-235s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 10/50 (score: 0.0337)
+  Top 10 predictions:
+        1. climbing a rope (0.1039)
+        2. playing violin (0.0798)
+        3. dribbling basketball (0.0574)
+        4. eating cake (0.0519)
+        5. eating ice cream (0.0454)
+        6. hitting baseball (0.0433)
+        7. flying kite (0.0395)
+        8. dunking basketball (0.0377)
+        9. playing basketball (0.0364)
+    👉 10. reading book (0.0337)
+
+HUMAN ONLY:
+  Correct action rank: 37/50 (score: 0.0038)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.2439)
+        2. skiing slalom (0.1752)
+        3. dunking basketball (0.1059)
+        4. shooting basketball (0.0485)
+        5. dribbling basketball (0.0423)
+        6. climbing ladder (0.0358)
+        7. playing basketball (0.0338)
+        8. punching person (boxing) (0.0251)
+        9. hitting baseball (0.0240)
+       10. skipping rope (0.0233)
+
+BACKGROUND ONLY:
+  Correct action rank: 4/50 (score: 0.0576)
+  Top 10 predictions:
+        1. climbing a rope (0.0920)
+        2. playing violin (0.0906)
+        3. flying kite (0.0732)
+    👉  4. reading book (0.0576)
+        5. eating cake (0.0498)
+        6. dribbling basketball (0.0486)
+        7. reading newspaper (0.0400)
+        8. eating ice cream (0.0374)
+        9. hitting baseball (0.0359)
+       10. dunking basketball (0.0348)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -6
+Ranking drop from human to background: -33
+🚨 WARNING: Background ranks higher than human-only!

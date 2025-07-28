@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000404_punching person (boxing)_to_deadlifting_EzVsl4ZXUl8_000146_000156_bg_zplKZpwToWc_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.2657)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #3/50 (score: 0.2458)
+  Background Action 'deadlifting' ranked: #9/50 (score: 0.0067)
+
+Top 10 predictions:
+      1. sword fighting (0.2657)
+      2. clean and jerk (0.2551)
+  👤  3. punching person (boxing) (0.2458)
+      4. dunking basketball (0.0648)
+      5. surfing water (0.0413)
+      6. hurdling (0.0318)
+      7. bowling (0.0136)
+      8. skiing slalom (0.0120)
+  🏞️  9. deadlifting (0.0067)
+     10. dribbling basketball (0.0062)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 6
+Score gap (bg_score - human_score): -0.2391
+✅ Human action in top 5

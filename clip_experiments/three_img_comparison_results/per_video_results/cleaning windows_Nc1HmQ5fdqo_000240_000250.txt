@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: Nc1HmQ5fdqo
+Action: cleaning windows
+Time: 240-250s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.9865)
+  Top 10 predictions:
+    👉  1. cleaning windows (0.9865)
+        2. playing violin (0.0066)
+        3. climbing ladder (0.0019)
+        4. climbing a rope (0.0017)
+        5. playing trumpet (0.0012)
+        6. sword fighting (0.0004)
+        7. skipping rope (0.0003)
+        8. shooting goal (soccer) (0.0002)
+        9. juggling balls (0.0001)
+       10. playing saxophone (0.0001)
+
+HUMAN ONLY:
+  Correct action rank: 17/50 (score: 0.0134)
+  Top 10 predictions:
+        1. juggling balls (0.1514)
+        2. juggling soccer ball (0.1393)
+        3. punching person (boxing) (0.1293)
+        4. eating ice cream (0.0452)
+        5. climbing a rope (0.0435)
+        6. hitting baseball (0.0382)
+        7. walking the dog (0.0371)
+        8. playing violin (0.0351)
+        9. dribbling basketball (0.0231)
+       10. brushing hair (0.0218)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.9972)
+  Top 10 predictions:
+    👉  1. cleaning windows (0.9972)
+        2. climbing ladder (0.0013)
+        3. climbing a rope (0.0006)
+        4. skipping rope (0.0002)
+        5. sword fighting (0.0001)
+        6. shooting goal (soccer) (0.0001)
+        7. playing violin (0.0001)
+        8. sweeping floor (0.0001)
+        9. smoking (0.0000)
+       10. hitting baseball (0.0000)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -16
+🚨 WARNING: Background ranks higher than human-only!

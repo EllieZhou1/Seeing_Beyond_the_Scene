@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002115_skiing slalom_to_playing trumpet_6QcRPmZZVz4_000158_000168_bg_3f9VlqbXH2I_000114_000124
+Frame: 000050.jpg
+Human Action Label (Correct): skiing slalom
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.3803)
+
+RANKING ANALYSIS:
+  Human Action 'skiing slalom' ranked: #8/50 (score: 0.0279)
+  Background Action 'playing trumpet' ranked: #9/50 (score: 0.0206)
+
+Top 10 predictions:
+      1. opening bottle (0.3803)
+      2. cleaning windows (0.1366)
+      3. climbing a rope (0.0809)
+      4. playing violin (0.0655)
+      5. playing saxophone (0.0491)
+      6. sword fighting (0.0414)
+      7. sweeping floor (0.0366)
+  👤  8. skiing slalom (0.0279)
+  🏞️  9. playing trumpet (0.0206)
+     10. driving car (0.0139)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0073

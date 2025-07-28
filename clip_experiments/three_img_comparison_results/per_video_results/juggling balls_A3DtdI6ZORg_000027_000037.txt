@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: A3DtdI6ZORg
+Action: juggling balls
+Time: 27-37s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.1698)
+  Top 10 predictions:
+        1. juggling soccer ball (0.6660)
+    👉  2. juggling balls (0.1698)
+        3. flying kite (0.0455)
+        4. catching or throwing frisbee (0.0435)
+        5. playing basketball (0.0118)
+        6. dunking basketball (0.0110)
+        7. catching or throwing baseball (0.0100)
+        8. shooting goal (soccer) (0.0070)
+        9. playing volleyball (0.0067)
+       10. dribbling basketball (0.0065)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.2411)
+  Top 10 predictions:
+    👉  1. juggling balls (0.2411)
+        2. juggling soccer ball (0.2096)
+        3. skipping rope (0.0811)
+        4. walking the dog (0.0736)
+        5. dunking basketball (0.0526)
+        6. shooting basketball (0.0301)
+        7. dribbling basketball (0.0295)
+        8. climbing a rope (0.0268)
+        9. hitting baseball (0.0239)
+       10. playing basketball (0.0203)
+
+BACKGROUND ONLY:
+  Correct action rank: 3/50 (score: 0.1048)
+  Top 10 predictions:
+        1. juggling soccer ball (0.4921)
+        2. flying kite (0.2703)
+    👉  3. juggling balls (0.1048)
+        4. catching or throwing frisbee (0.0531)
+        5. playing basketball (0.0140)
+        6. dunking basketball (0.0126)
+        7. shooting goal (soccer) (0.0088)
+        8. catching or throwing baseball (0.0077)
+        9. dribbling basketball (0.0073)
+       10. playing volleyball (0.0065)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 1
+Ranking drop from human to background: 2

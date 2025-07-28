@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001283_reading book_to_dribbling basketball_FT4E6NDbzCQ_000000_000010_bg_dzfk3y6_e3A_000010_000020
+Frame: 000050.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): dribbling basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: playing violin (score: 0.1028)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #10/50 (score: 0.0366)
+  Background Action 'dribbling basketball' ranked: #15/50 (score: 0.0203)
+
+Top 10 predictions:
+      1. playing violin (0.1028)
+      2. juggling soccer ball (0.0937)
+      3. reading newspaper (0.0861)
+      4. smoking (0.0810)
+      5. sweeping floor (0.0662)
+      6. skipping rope (0.0635)
+      7. juggling balls (0.0618)
+      8. playing accordion (0.0596)
+      9. playing guitar (0.0573)
+  👤 10. reading book (0.0366)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 5
+Score gap (bg_score - human_score): -0.0163

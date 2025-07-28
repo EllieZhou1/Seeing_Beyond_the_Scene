@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001186_reading newspaper_to_catching or throwing frisbee_ju7KZiJC9qM_000012_000022_bg_71Rq1rCY7N4_000069_000079
+Frame: 000050.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): catching or throwing frisbee
+
+CLIP PREDICTIONS:
+  Predicted Label: tying tie (score: 0.2210)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #4/50 (score: 0.0796)
+  Background Action 'catching or throwing frisbee' ranked: #29/50 (score: 0.0018)
+
+Top 10 predictions:
+      1. tying tie (0.2210)
+      2. juggling balls (0.1728)
+      3. juggling soccer ball (0.0971)
+  👤  4. reading newspaper (0.0796)
+      5. writing (0.0658)
+      6. opening bottle (0.0595)
+      7. reading book (0.0594)
+      8. brushing hair (0.0441)
+      9. playing accordion (0.0288)
+     10. drinking (0.0244)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 25
+Score gap (bg_score - human_score): -0.0778
+✅ Human action in top 5

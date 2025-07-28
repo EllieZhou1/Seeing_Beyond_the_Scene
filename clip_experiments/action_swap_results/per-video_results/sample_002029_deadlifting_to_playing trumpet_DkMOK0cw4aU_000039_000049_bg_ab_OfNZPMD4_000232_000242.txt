@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002029_deadlifting_to_playing trumpet_DkMOK0cw4aU_000039_000049_bg_ab_OfNZPMD4_000232_000242
+Frame: 000050.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: playing bass guitar (score: 0.3221)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #27/50 (score: 0.0010)
+  Background Action 'playing trumpet' ranked: #5/50 (score: 0.0485)
+
+Top 10 predictions:
+      1. playing bass guitar (0.3221)
+      2. playing saxophone (0.2053)
+      3. playing violin (0.1747)
+      4. playing guitar (0.0542)
+  🏞️  5. playing trumpet (0.0485)
+      6. playing accordion (0.0377)
+      7. climbing ladder (0.0362)
+      8. playing piano (0.0360)
+      9. sword fighting (0.0278)
+     10. climbing a rope (0.0114)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -22
+Score gap (bg_score - human_score): 0.0475
+⚠️  Background action in top 5!

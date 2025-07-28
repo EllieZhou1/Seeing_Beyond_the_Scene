@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000084_punching person (boxing)_to_drinking_JosqyNGpXfs_000208_000218_bg_gaj407eSdSs_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): drinking
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.2777)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #5/50 (score: 0.0535)
+  Background Action 'drinking' ranked: #14/50 (score: 0.0147)
+
+Top 10 predictions:
+      1. sword fighting (0.2777)
+      2. surfing water (0.1680)
+      3. dunking basketball (0.0982)
+      4. playing accordion (0.0665)
+  👤  5. punching person (boxing) (0.0535)
+      6. brushing hair (0.0356)
+      7. brushing teeth (0.0255)
+      8. playing piano (0.0223)
+      9. playing basketball (0.0214)
+     10. playing trumpet (0.0200)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 9
+Score gap (bg_score - human_score): -0.0388
+✅ Human action in top 5

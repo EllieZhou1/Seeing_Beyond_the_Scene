@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000785_playing violin_to_skipping rope_a4ROubm0cIc_000000_000010_bg_Cj-BGLVHw4g_000062_000072
+Frame: 000050.jpg
+Human Action Label (Correct): playing violin
+Background Label (Incorrect): skipping rope
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2699)
+
+RANKING ANALYSIS:
+  Human Action 'playing violin' ranked: #10/50 (score: 0.0162)
+  Background Action 'skipping rope' ranked: #19/50 (score: 0.0034)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2699)
+      2. juggling balls (0.2472)
+      3. sword fighting (0.1882)
+      4. shooting goal (soccer) (0.0358)
+      5. playing basketball (0.0356)
+      6. climbing a rope (0.0311)
+      7. dribbling basketball (0.0297)
+      8. archery (0.0272)
+      9. shooting basketball (0.0168)
+  👤 10. playing violin (0.0162)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 9
+Score gap (bg_score - human_score): -0.0127

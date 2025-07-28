@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000606_skiing slalom_to_smoking_o5K7K_9JqJo_000048_000058_bg_-cui-aLqI3g_000541_000551
+Frame: 000050.jpg
+Human Action Label (Correct): skiing slalom
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.3419)
+
+RANKING ANALYSIS:
+  Human Action 'skiing slalom' ranked: #4/50 (score: 0.0550)
+  Background Action 'smoking' ranked: #28/50 (score: 0.0020)
+
+Top 10 predictions:
+      1. opening bottle (0.3419)
+      2. cleaning windows (0.1604)
+      3. sword fighting (0.1267)
+  👤  4. skiing slalom (0.0550)
+      5. skiing (not slalom or crosscountry) (0.0505)
+      6. juggling balls (0.0477)
+      7. drinking (0.0401)
+      8. juggling soccer ball (0.0245)
+      9. brushing teeth (0.0165)
+     10. archery (0.0130)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 24
+Score gap (bg_score - human_score): -0.0530
+✅ Human action in top 5

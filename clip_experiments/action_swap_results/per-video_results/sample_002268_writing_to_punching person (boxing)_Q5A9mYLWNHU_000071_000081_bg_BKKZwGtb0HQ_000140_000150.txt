@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002268_writing_to_punching person (boxing)_Q5A9mYLWNHU_000071_000081_bg_BKKZwGtb0HQ_000140_000150
+Frame: 000050.jpg
+Human Action Label (Correct): writing
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.1025)
+
+RANKING ANALYSIS:
+  Human Action 'writing' ranked: #29/50 (score: 0.0085)
+  Background Action 'punching person (boxing)' ranked: #7/50 (score: 0.0478)
+
+Top 10 predictions:
+      1. dunking basketball (0.1025)
+      2. climbing ladder (0.0929)
+      3. dribbling basketball (0.0907)
+      4. climbing a rope (0.0794)
+      5. opening bottle (0.0540)
+      6. brushing teeth (0.0490)
+  🏞️  7. punching person (boxing) (0.0478)
+      8. surfing water (0.0446)
+      9. brushing hair (0.0410)
+     10. juggling soccer ball (0.0243)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -22
+Score gap (bg_score - human_score): 0.0393

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001273_smoking_to_driving car_6tB4dFW137k_000058_000068_bg_oJOMxFCKHtA_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.1336)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #6/50 (score: 0.0440)
+  Background Action 'driving car' ranked: #2/50 (score: 0.0771)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.1336)
+  🏞️  2. driving car (0.0771)
+      3. dribbling basketball (0.0636)
+      4. golf driving (0.0498)
+      5. playing accordion (0.0458)
+  👤  6. smoking (0.0440)
+      7. playing bass guitar (0.0408)
+      8. drinking (0.0356)
+      9. playing piano (0.0352)
+     10. playing saxophone (0.0349)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -4
+Score gap (bg_score - human_score): 0.0330
+⚠️  Background action in top 5!

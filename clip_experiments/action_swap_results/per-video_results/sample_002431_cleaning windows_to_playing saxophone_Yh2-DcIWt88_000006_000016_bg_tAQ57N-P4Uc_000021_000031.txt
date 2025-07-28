@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002431_cleaning windows_to_playing saxophone_Yh2-DcIWt88_000006_000016_bg_tAQ57N-P4Uc_000021_000031
+Frame: 000050.jpg
+Human Action Label (Correct): cleaning windows
+Background Label (Incorrect): playing saxophone
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.3552)
+
+RANKING ANALYSIS:
+  Human Action 'cleaning windows' ranked: #1/50 (score: 0.3552)
+  Background Action 'playing saxophone' ranked: #10/50 (score: 0.0093)
+
+Top 10 predictions:
+  👤  1. cleaning windows (0.3552)
+      2. climbing a rope (0.2115)
+      3. surfing water (0.1013)
+      4. sweeping floor (0.0817)
+      5. climbing ladder (0.0712)
+      6. opening bottle (0.0681)
+      7. juggling soccer ball (0.0149)
+      8. skiing slalom (0.0096)
+      9. juggling balls (0.0094)
+  🏞️ 10. playing saxophone (0.0093)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 9
+Score gap (bg_score - human_score): -0.3459
+✅ Human action in top 5

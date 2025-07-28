@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001426_smoking_to_walking the dog_3tbUUUqS5U8_000026_000036_bg_Y8TmxcMDS4Y_000012_000022
+Frame: 000050.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.6300)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #4/50 (score: 0.0613)
+  Background Action 'walking the dog' ranked: #34/50 (score: 0.0006)
+
+Top 10 predictions:
+      1. cleaning windows (0.6300)
+      2. driving car (0.1104)
+      3. golf driving (0.0889)
+  👤  4. smoking (0.0613)
+      5. reading newspaper (0.0198)
+      6. playing violin (0.0174)
+      7. playing trumpet (0.0082)
+      8. flying kite (0.0069)
+      9. playing saxophone (0.0061)
+     10. drinking (0.0058)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 30
+Score gap (bg_score - human_score): -0.0607
+✅ Human action in top 5

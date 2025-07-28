@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: VHVZ22Sv_fY
+Action: climbing a rope
+Time: 13-23s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.4528)
+  Top 10 predictions:
+        1. climbing ladder (0.4721)
+    👉  2. climbing a rope (0.4528)
+        3. clean and jerk (0.0560)
+        4. hurdling (0.0035)
+        5. skipping rope (0.0033)
+        6. dunking basketball (0.0030)
+        7. skiing slalom (0.0022)
+        8. skiing (not slalom or crosscountry) (0.0015)
+        9. deadlifting (0.0010)
+       10. juggling balls (0.0006)
+
+HUMAN ONLY:
+  Correct action rank: 7/50 (score: 0.0374)
+  Top 10 predictions:
+        1. skipping rope (0.3302)
+        2. juggling soccer ball (0.1361)
+        3. clean and jerk (0.1174)
+        4. juggling balls (0.0673)
+        5. dribbling basketball (0.0551)
+        6. dunking basketball (0.0458)
+    👉  7. climbing a rope (0.0374)
+        8. shooting goal (soccer) (0.0334)
+        9. climbing ladder (0.0222)
+       10. playing basketball (0.0205)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.2758)
+  Top 10 predictions:
+        1. climbing ladder (0.5072)
+    👉  2. climbing a rope (0.2758)
+        3. cleaning windows (0.0677)
+        4. dunking basketball (0.0427)
+        5. sweeping floor (0.0163)
+        6. driving car (0.0141)
+        7. skipping rope (0.0101)
+        8. skiing slalom (0.0068)
+        9. flying kite (0.0059)
+       10. dribbling basketball (0.0059)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -5
+🚨 WARNING: Background ranks higher than human-only!

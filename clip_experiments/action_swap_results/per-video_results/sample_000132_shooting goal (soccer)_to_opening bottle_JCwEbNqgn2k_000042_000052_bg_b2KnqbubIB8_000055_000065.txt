@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000132_shooting goal (soccer)_to_opening bottle_JCwEbNqgn2k_000042_000052_bg_b2KnqbubIB8_000055_000065
+Frame: 000050.jpg
+Human Action Label (Correct): shooting goal (soccer)
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.3334)
+
+RANKING ANALYSIS:
+  Human Action 'shooting goal (soccer)' ranked: #14/50 (score: 0.0089)
+  Background Action 'opening bottle' ranked: #27/50 (score: 0.0018)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.3334)
+      2. skipping rope (0.3255)
+      3. juggling soccer ball (0.0679)
+      4. juggling balls (0.0355)
+      5. climbing a rope (0.0336)
+      6. walking the dog (0.0331)
+      7. catching or throwing frisbee (0.0264)
+      8. sword fighting (0.0248)
+      9. climbing ladder (0.0126)
+     10. playing basketball (0.0115)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 13
+Score gap (bg_score - human_score): -0.0072

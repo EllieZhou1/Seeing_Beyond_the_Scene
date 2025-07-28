@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 8qNOLE8Du7c
+Action: golf driving
+Time: 3-13s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.8435)
+  Top 10 predictions:
+    👉  1. golf driving (0.8435)
+        2. hitting baseball (0.0392)
+        3. juggling soccer ball (0.0243)
+        4. juggling balls (0.0182)
+        5. shooting goal (soccer) (0.0180)
+        6. climbing a rope (0.0144)
+        7. catching or throwing baseball (0.0076)
+        8. dribbling basketball (0.0067)
+        9. skipping rope (0.0045)
+       10. playing trumpet (0.0025)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.7820)
+  Top 10 predictions:
+    👉  1. golf driving (0.7820)
+        2. playing trumpet (0.0307)
+        3. juggling balls (0.0244)
+        4. hitting baseball (0.0232)
+        5. playing saxophone (0.0158)
+        6. playing violin (0.0147)
+        7. juggling soccer ball (0.0098)
+        8. deadlifting (0.0088)
+        9. skipping rope (0.0077)
+       10. shooting goal (soccer) (0.0068)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.8792)
+  Top 10 predictions:
+    👉  1. golf driving (0.8792)
+        2. shooting goal (soccer) (0.0298)
+        3. hitting baseball (0.0164)
+        4. skiing slalom (0.0136)
+        5. playing tennis (0.0109)
+        6. juggling soccer ball (0.0082)
+        7. dribbling basketball (0.0046)
+        8. catching or throwing frisbee (0.0046)
+        9. skiing (not slalom or crosscountry) (0.0044)
+       10. flying kite (0.0041)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: 0

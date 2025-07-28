@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002065_walking the dog_to_playing piano_DoH8sIQyOyk_000000_000010_bg_M1X8UKqQDvA_000074_000084
+Frame: 000050.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): playing piano
+
+CLIP PREDICTIONS:
+  Predicted Label: playing piano (score: 0.8066)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #20/50 (score: 0.0001)
+  Background Action 'playing piano' ranked: #1/50 (score: 0.8066)
+
+Top 10 predictions:
+  🏞️  1. playing piano (0.8066)
+      2. playing accordion (0.1598)
+      3. playing saxophone (0.0128)
+      4. playing violin (0.0046)
+      5. sweeping floor (0.0034)
+      6. playing guitar (0.0027)
+      7. playing trumpet (0.0025)
+      8. climbing ladder (0.0025)
+      9. writing (0.0010)
+     10. opening bottle (0.0009)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -19
+Score gap (bg_score - human_score): 0.8065
+⚠️  Background action in top 5!

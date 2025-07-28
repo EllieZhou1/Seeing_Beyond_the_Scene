@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001610_surfing water_to_drinking_h723ANamgDY_000011_000021_bg_ypxLrXNUcUo_000075_000085
+Frame: 000050.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): drinking
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.3616)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #34/50 (score: 0.0013)
+  Background Action 'drinking' ranked: #2/50 (score: 0.2240)
+
+Top 10 predictions:
+      1. opening bottle (0.3616)
+  🏞️  2. drinking (0.2240)
+      3. eating cake (0.0632)
+      4. juggling soccer ball (0.0607)
+      5. juggling balls (0.0539)
+      6. sword fighting (0.0402)
+      7. dunking basketball (0.0248)
+      8. dribbling basketball (0.0167)
+      9. sweeping floor (0.0158)
+     10. eating ice cream (0.0149)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -32
+Score gap (bg_score - human_score): 0.2226
+⚠️  Background action in top 5!

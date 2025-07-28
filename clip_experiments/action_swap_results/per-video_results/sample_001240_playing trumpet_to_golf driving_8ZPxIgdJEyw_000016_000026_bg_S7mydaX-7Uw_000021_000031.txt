@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001240_playing trumpet_to_golf driving_8ZPxIgdJEyw_000016_000026_bg_S7mydaX-7Uw_000021_000031
+Frame: 000050.jpg
+Human Action Label (Correct): playing trumpet
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: flying kite (score: 0.1875)
+
+RANKING ANALYSIS:
+  Human Action 'playing trumpet' ranked: #25/50 (score: 0.0033)
+  Background Action 'golf driving' ranked: #15/50 (score: 0.0098)
+
+Top 10 predictions:
+      1. flying kite (0.1875)
+      2. juggling soccer ball (0.1588)
+      3. hurdling (0.1536)
+      4. catching or throwing frisbee (0.1201)
+      5. shooting goal (soccer) (0.0635)
+      6. juggling balls (0.0632)
+      7. catching or throwing baseball (0.0426)
+      8. playing volleyball (0.0400)
+      9. dunking basketball (0.0311)
+     10. hitting baseball (0.0132)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -10
+Score gap (bg_score - human_score): 0.0065

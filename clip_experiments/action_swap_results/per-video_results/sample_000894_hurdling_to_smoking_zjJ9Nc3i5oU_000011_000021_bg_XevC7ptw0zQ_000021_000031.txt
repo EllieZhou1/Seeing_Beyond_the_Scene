@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000894_hurdling_to_smoking_zjJ9Nc3i5oU_000011_000021_bg_XevC7ptw0zQ_000021_000031
+Frame: 000050.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.3035)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #11/50 (score: 0.0198)
+  Background Action 'smoking' ranked: #24/50 (score: 0.0031)
+
+Top 10 predictions:
+      1. sword fighting (0.3035)
+      2. skipping rope (0.1787)
+      3. cleaning windows (0.0724)
+      4. climbing ladder (0.0530)
+      5. skiing slalom (0.0526)
+      6. juggling balls (0.0509)
+      7. playing trumpet (0.0450)
+      8. climbing a rope (0.0426)
+      9. skiing (not slalom or crosscountry) (0.0395)
+     10. flying kite (0.0227)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 13
+Score gap (bg_score - human_score): -0.0167

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000260_reading book_to_hitting baseball_nvexLJf6I0s_000373_000383_bg_6hrcRyIYTrA_000026_000036
+Frame: 000050.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): hitting baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2899)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #23/50 (score: 0.0021)
+  Background Action 'hitting baseball' ranked: #10/50 (score: 0.0216)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2899)
+      2. juggling balls (0.2341)
+      3. playing accordion (0.1135)
+      4. sword fighting (0.0798)
+      5. playing trumpet (0.0359)
+      6. catching or throwing frisbee (0.0328)
+      7. playing saxophone (0.0314)
+      8. punching person (boxing) (0.0294)
+      9. catching or throwing baseball (0.0255)
+  🏞️ 10. hitting baseball (0.0216)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -13
+Score gap (bg_score - human_score): 0.0194

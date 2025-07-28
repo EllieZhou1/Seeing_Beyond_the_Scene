@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: IFFdbQV3X08
+Action: sweeping floor
+Time: 7-17s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.2277)
+  Top 10 predictions:
+        1. climbing ladder (0.2969)
+    👉  2. sweeping floor (0.2277)
+        3. climbing a rope (0.2218)
+        4. deadlifting (0.0258)
+        5. eating cake (0.0256)
+        6. skipping rope (0.0205)
+        7. sword fighting (0.0175)
+        8. cleaning windows (0.0162)
+        9. hitting baseball (0.0159)
+       10. brushing hair (0.0147)
+
+HUMAN ONLY:
+  Correct action rank: 43/50 (score: 0.0015)
+  Top 10 predictions:
+        1. punching person (boxing) (0.3917)
+        2. skipping rope (0.0926)
+        3. dribbling basketball (0.0760)
+        4. climbing a rope (0.0598)
+        5. juggling soccer ball (0.0387)
+        6. climbing ladder (0.0376)
+        7. dunking basketball (0.0300)
+        8. tying tie (0.0232)
+        9. juggling balls (0.0215)
+       10. shooting goal (soccer) (0.0178)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.2924)
+  Top 10 predictions:
+    👉  1. sweeping floor (0.2924)
+        2. climbing a rope (0.2013)
+        3. climbing ladder (0.1442)
+        4. eating cake (0.0373)
+        5. sword fighting (0.0302)
+        6. cleaning windows (0.0239)
+        7. eating ice cream (0.0239)
+        8. deadlifting (0.0235)
+        9. brushing teeth (0.0231)
+       10. playing tennis (0.0180)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -1
+Ranking drop from human to background: -42
+🚨 WARNING: Background ranks higher than human-only!

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002416_playing trumpet_to_driving car_x0J0c8qcL1A_000000_000010_bg_IBz7PG5fOq0_000015_000025
+Frame: 000050.jpg
+Human Action Label (Correct): playing trumpet
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2162)
+
+RANKING ANALYSIS:
+  Human Action 'playing trumpet' ranked: #9/50 (score: 0.0251)
+  Background Action 'driving car' ranked: #21/50 (score: 0.0083)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2162)
+      2. skipping rope (0.1672)
+      3. shooting goal (soccer) (0.1523)
+      4. punching person (boxing) (0.0657)
+      5. hitting baseball (0.0475)
+      6. juggling balls (0.0470)
+      7. flying kite (0.0400)
+      8. catching or throwing baseball (0.0305)
+  👤  9. playing trumpet (0.0251)
+     10. dribbling basketball (0.0247)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 12
+Score gap (bg_score - human_score): -0.0167

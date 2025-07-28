@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001077_driving car_to_drinking_NUG7kwJ-614_000400_000410_bg_xyUeMz9bAsA_000154_000164
+Frame: 000050.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): drinking
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.4006)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #34/50 (score: 0.0012)
+  Background Action 'drinking' ranked: #2/50 (score: 0.3968)
+
+Top 10 predictions:
+      1. opening bottle (0.4006)
+  🏞️  2. drinking (0.3968)
+      3. juggling balls (0.0305)
+      4. smoking (0.0255)
+      5. sword fighting (0.0188)
+      6. writing (0.0130)
+      7. bowling (0.0110)
+      8. juggling soccer ball (0.0099)
+      9. brushing teeth (0.0099)
+     10. reading book (0.0071)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -32
+Score gap (bg_score - human_score): 0.3956
+⚠️  Background action in top 5!

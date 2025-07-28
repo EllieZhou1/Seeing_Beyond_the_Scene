@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002207_skiing (not slalom or crosscountry)_to_reading book_-P56BlJO-gw_000051_000061_bg_c7u5vt-QgCI_000225_000235
+Frame: 000050.jpg
+Human Action Label (Correct): skiing (not slalom or crosscountry)
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: dribbling basketball (score: 0.1455)
+
+RANKING ANALYSIS:
+  Human Action 'skiing (not slalom or crosscountry)' ranked: #49/50 (score: 0.0006)
+  Background Action 'reading book' ranked: #11/50 (score: 0.0251)
+
+Top 10 predictions:
+      1. dribbling basketball (0.1455)
+      2. punching person (boxing) (0.0986)
+      3. reading newspaper (0.0643)
+      4. sweeping floor (0.0568)
+      5. eating cake (0.0542)
+      6. eating ice cream (0.0518)
+      7. climbing a rope (0.0454)
+      8. hitting baseball (0.0337)
+      9. smoking (0.0310)
+     10. playing accordion (0.0301)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -38
+Score gap (bg_score - human_score): 0.0244

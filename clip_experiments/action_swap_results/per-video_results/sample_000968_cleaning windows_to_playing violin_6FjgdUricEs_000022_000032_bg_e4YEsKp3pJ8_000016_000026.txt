@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000968_cleaning windows_to_playing violin_6FjgdUricEs_000022_000032_bg_e4YEsKp3pJ8_000016_000026
+Frame: 000050.jpg
+Human Action Label (Correct): cleaning windows
+Background Label (Incorrect): playing violin
+
+CLIP PREDICTIONS:
+  Predicted Label: golf driving (score: 0.1999)
+
+RANKING ANALYSIS:
+  Human Action 'cleaning windows' ranked: #5/50 (score: 0.0640)
+  Background Action 'playing violin' ranked: #20/50 (score: 0.0039)
+
+Top 10 predictions:
+      1. golf driving (0.1999)
+      2. juggling soccer ball (0.1500)
+      3. catching or throwing baseball (0.0998)
+      4. shooting goal (soccer) (0.0819)
+  👤  5. cleaning windows (0.0640)
+      6. skipping rope (0.0619)
+      7. hitting baseball (0.0575)
+      8. punching person (boxing) (0.0567)
+      9. juggling balls (0.0506)
+     10. catching or throwing frisbee (0.0492)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 15
+Score gap (bg_score - human_score): -0.0600
+✅ Human action in top 5

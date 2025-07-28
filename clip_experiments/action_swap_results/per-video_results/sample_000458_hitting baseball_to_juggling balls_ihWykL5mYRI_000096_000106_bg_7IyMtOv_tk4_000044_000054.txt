@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000458_hitting baseball_to_juggling balls_ihWykL5mYRI_000096_000106_bg_7IyMtOv_tk4_000044_000054
+Frame: 000050.jpg
+Human Action Label (Correct): hitting baseball
+Background Label (Incorrect): juggling balls
+
+CLIP PREDICTIONS:
+  Predicted Label: hitting baseball (score: 0.7346)
+
+RANKING ANALYSIS:
+  Human Action 'hitting baseball' ranked: #1/50 (score: 0.7346)
+  Background Action 'juggling balls' ranked: #12/50 (score: 0.0011)
+
+Top 10 predictions:
+  👤  1. hitting baseball (0.7346)
+      2. catching or throwing baseball (0.2297)
+      3. cleaning windows (0.0085)
+      4. catching or throwing frisbee (0.0064)
+      5. hurdling (0.0033)
+      6. climbing a rope (0.0030)
+      7. sweeping floor (0.0022)
+      8. dunking basketball (0.0018)
+      9. playing tennis (0.0017)
+     10. climbing ladder (0.0013)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 11
+Score gap (bg_score - human_score): -0.7335
+✅ Human action in top 5

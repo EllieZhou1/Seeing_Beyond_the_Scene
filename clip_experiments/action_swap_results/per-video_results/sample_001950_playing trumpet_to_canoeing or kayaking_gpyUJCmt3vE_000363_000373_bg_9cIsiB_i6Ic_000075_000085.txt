@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001950_playing trumpet_to_canoeing or kayaking_gpyUJCmt3vE_000363_000373_bg_9cIsiB_i6Ic_000075_000085
+Frame: 000050.jpg
+Human Action Label (Correct): playing trumpet
+Background Label (Incorrect): canoeing or kayaking
+
+CLIP PREDICTIONS:
+  Predicted Label: playing trumpet (score: 0.4205)
+
+RANKING ANALYSIS:
+  Human Action 'playing trumpet' ranked: #1/50 (score: 0.4205)
+  Background Action 'canoeing or kayaking' ranked: #19/50 (score: 0.0027)
+
+Top 10 predictions:
+  👤  1. playing trumpet (0.4205)
+      2. playing saxophone (0.1800)
+      3. opening bottle (0.1459)
+      4. playing violin (0.0872)
+      5. juggling balls (0.0474)
+      6. playing accordion (0.0276)
+      7. juggling soccer ball (0.0107)
+      8. flying kite (0.0094)
+      9. skipping rope (0.0087)
+     10. playing bass guitar (0.0067)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 18
+Score gap (bg_score - human_score): -0.4178
+✅ Human action in top 5

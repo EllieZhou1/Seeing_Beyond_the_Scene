@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000913_surfing water_to_sword fighting_-6UpPdfVoyg_000047_000057_bg_7G7e9f0E-Xk_000042_000052
+Frame: 000050.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.6099)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #24/50 (score: 0.0043)
+  Background Action 'sword fighting' ranked: #7/50 (score: 0.0255)
+
+Top 10 predictions:
+      1. driving car (0.6099)
+      2. golf driving (0.0561)
+      3. playing basketball (0.0411)
+      4. shooting goal (soccer) (0.0338)
+      5. juggling soccer ball (0.0336)
+      6. dribbling basketball (0.0290)
+  🏞️  7. sword fighting (0.0255)
+      8. cleaning windows (0.0155)
+      9. catching or throwing frisbee (0.0142)
+     10. hurdling (0.0141)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -17
+Score gap (bg_score - human_score): 0.0212

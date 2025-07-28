@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: DIaKcGmlndw
+Action: canoeing or kayaking
+Time: 234-244s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.1217)
+  Top 10 predictions:
+        1. surfing water (0.8396)
+    👉  2. canoeing or kayaking (0.1217)
+        3. climbing a rope (0.0123)
+        4. catching or throwing frisbee (0.0056)
+        5. opening bottle (0.0034)
+        6. hitting baseball (0.0022)
+        7. catching or throwing baseball (0.0017)
+        8. climbing ladder (0.0014)
+        9. juggling balls (0.0013)
+       10. playing trumpet (0.0011)
+
+HUMAN ONLY:
+  Correct action rank: 50/50 (score: 0.0005)
+  Top 10 predictions:
+        1. punching person (boxing) (0.2191)
+        2. juggling soccer ball (0.1617)
+        3. opening bottle (0.1510)
+        4. juggling balls (0.0728)
+        5. dribbling basketball (0.0269)
+        6. drinking (0.0250)
+        7. climbing a rope (0.0203)
+        8. hitting baseball (0.0192)
+        9. playing trumpet (0.0188)
+       10. bowling (0.0182)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.0483)
+  Top 10 predictions:
+        1. surfing water (0.9317)
+    👉  2. canoeing or kayaking (0.0483)
+        3. catching or throwing frisbee (0.0033)
+        4. climbing a rope (0.0033)
+        5. opening bottle (0.0019)
+        6. hitting baseball (0.0013)
+        7. skiing slalom (0.0013)
+        8. catching or throwing baseball (0.0012)
+        9. flying kite (0.0008)
+       10. shooting goal (soccer) (0.0008)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -48
+🚨 WARNING: Background ranks higher than human-only!

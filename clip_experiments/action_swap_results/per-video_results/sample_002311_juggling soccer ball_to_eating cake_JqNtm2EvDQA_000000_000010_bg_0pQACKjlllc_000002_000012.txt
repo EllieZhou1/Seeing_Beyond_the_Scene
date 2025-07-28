@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002311_juggling soccer ball_to_eating cake_JqNtm2EvDQA_000000_000010_bg_0pQACKjlllc_000002_000012
+Frame: 000050.jpg
+Human Action Label (Correct): juggling soccer ball
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.1017)
+
+RANKING ANALYSIS:
+  Human Action 'juggling soccer ball' ranked: #3/50 (score: 0.0816)
+  Background Action 'eating cake' ranked: #9/50 (score: 0.0366)
+
+Top 10 predictions:
+      1. playing accordion (0.1017)
+      2. opening bottle (0.0950)
+  👤  3. juggling soccer ball (0.0816)
+      4. drinking (0.0576)
+      5. cleaning windows (0.0566)
+      6. brushing hair (0.0534)
+      7. hitting baseball (0.0451)
+      8. playing saxophone (0.0420)
+  🏞️  9. eating cake (0.0366)
+     10. punching person (boxing) (0.0326)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 6
+Score gap (bg_score - human_score): -0.0450
+✅ Human action in top 5

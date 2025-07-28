@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001429_skiing slalom_to_reading book_XihcOEopJG0_000041_000051_bg_-CQPR7e8xKE_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): skiing slalom
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.1828)
+
+RANKING ANALYSIS:
+  Human Action 'skiing slalom' ranked: #5/50 (score: 0.0430)
+  Background Action 'reading book' ranked: #17/50 (score: 0.0149)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.1828)
+      2. dribbling basketball (0.1158)
+      3. dunking basketball (0.0716)
+      4. playing basketball (0.0674)
+  👤  5. skiing slalom (0.0430)
+      6. sweeping floor (0.0421)
+      7. hurdling (0.0357)
+      8. shooting basketball (0.0296)
+      9. shooting goal (soccer) (0.0240)
+     10. hitting baseball (0.0229)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 12
+Score gap (bg_score - human_score): -0.0281
+✅ Human action in top 5

@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: -3oo45vpQV4
+Action: writing
+Time: 291-301s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 5/50 (score: 0.0380)
+  Top 10 predictions:
+        1. climbing ladder (0.5355)
+        2. reading book (0.0875)
+        3. playing trumpet (0.0643)
+        4. playing guitar (0.0456)
+    👉  5. writing (0.0380)
+        6. playing bass guitar (0.0316)
+        7. playing saxophone (0.0271)
+        8. punching person (boxing) (0.0223)
+        9. playing accordion (0.0213)
+       10. playing piano (0.0196)
+
+HUMAN ONLY:
+  Correct action rank: 16/50 (score: 0.0223)
+  Top 10 predictions:
+        1. punching person (boxing) (0.1374)
+        2. smoking (0.0983)
+        3. playing basketball (0.0516)
+        4. shooting basketball (0.0466)
+        5. juggling soccer ball (0.0417)
+        6. juggling balls (0.0407)
+        7. dunking basketball (0.0365)
+        8. dribbling basketball (0.0360)
+        9. hitting baseball (0.0353)
+       10. playing trumpet (0.0347)
+
+BACKGROUND ONLY:
+  Correct action rank: 8/50 (score: 0.0287)
+  Top 10 predictions:
+        1. climbing ladder (0.2967)
+        2. playing bass guitar (0.2802)
+        3. playing guitar (0.0888)
+        4. reading book (0.0732)
+        5. playing trumpet (0.0588)
+        6. playing saxophone (0.0317)
+        7. shooting basketball (0.0294)
+    👉  8. writing (0.0287)
+        9. playing piano (0.0193)
+       10. playing violin (0.0145)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 3
+Ranking drop from human to background: -8
+🚨 WARNING: Background ranks higher than human-only!

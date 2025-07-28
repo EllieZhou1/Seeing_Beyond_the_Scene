@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000987_playing bass guitar_to_juggling balls_rqobPuVkiw4_000000_000010_bg_8SZR6USF8s4_000308_000318
+Frame: 000050.jpg
+Human Action Label (Correct): playing bass guitar
+Background Label (Incorrect): juggling balls
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.7644)
+
+RANKING ANALYSIS:
+  Human Action 'playing bass guitar' ranked: #38/50 (score: 0.0010)
+  Background Action 'juggling balls' ranked: #6/50 (score: 0.0138)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.7644)
+      2. hitting baseball (0.0198)
+      3. smoking (0.0162)
+      4. sword fighting (0.0157)
+      5. clean and jerk (0.0155)
+  🏞️  6. juggling balls (0.0138)
+      7. cleaning windows (0.0134)
+      8. sweeping floor (0.0115)
+      9. juggling soccer ball (0.0115)
+     10. deadlifting (0.0098)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -32
+Score gap (bg_score - human_score): 0.0128

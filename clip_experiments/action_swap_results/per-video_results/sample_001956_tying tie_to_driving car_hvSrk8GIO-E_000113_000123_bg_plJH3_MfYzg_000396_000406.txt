@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001956_tying tie_to_driving car_hvSrk8GIO-E_000113_000123_bg_plJH3_MfYzg_000396_000406
+Frame: 000050.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.2508)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #10/50 (score: 0.0160)
+  Background Action 'driving car' ranked: #1/50 (score: 0.2508)
+
+Top 10 predictions:
+  🏞️  1. driving car (0.2508)
+      2. opening bottle (0.2329)
+      3. climbing a rope (0.1112)
+      4. juggling balls (0.1029)
+      5. juggling soccer ball (0.0967)
+      6. eating ice cream (0.0348)
+      7. flying kite (0.0334)
+      8. smoking (0.0286)
+      9. eating cake (0.0241)
+  👤 10. tying tie (0.0160)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -9
+Score gap (bg_score - human_score): 0.2348
+⚠️  Background action in top 5!

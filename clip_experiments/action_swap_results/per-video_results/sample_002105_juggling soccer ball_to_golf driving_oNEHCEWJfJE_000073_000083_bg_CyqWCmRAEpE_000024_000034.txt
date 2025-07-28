@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002105_juggling soccer ball_to_golf driving_oNEHCEWJfJE_000073_000083_bg_CyqWCmRAEpE_000024_000034
+Frame: 000050.jpg
+Human Action Label (Correct): juggling soccer ball
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.6809)
+
+RANKING ANALYSIS:
+  Human Action 'juggling soccer ball' ranked: #9/50 (score: 0.0069)
+  Background Action 'golf driving' ranked: #5/50 (score: 0.0427)
+
+Top 10 predictions:
+      1. shooting goal (soccer) (0.6809)
+      2. flying kite (0.0891)
+      3. skiing slalom (0.0751)
+      4. catching or throwing frisbee (0.0442)
+  🏞️  5. golf driving (0.0427)
+      6. skiing (not slalom or crosscountry) (0.0148)
+      7. archery (0.0141)
+      8. catching or throwing baseball (0.0116)
+  👤  9. juggling soccer ball (0.0069)
+     10. hitting baseball (0.0060)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -4
+Score gap (bg_score - human_score): 0.0359
+⚠️  Background action in top 5!

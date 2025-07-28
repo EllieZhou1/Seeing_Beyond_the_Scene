@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: meU_fRey6Us
+Action: playing basketball
+Time: 1-11s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 4/50 (score: 0.0630)
+  Top 10 predictions:
+        1. juggling soccer ball (0.2403)
+        2. dribbling basketball (0.2235)
+        3. skipping rope (0.0683)
+    👉  4. playing basketball (0.0630)
+        5. juggling balls (0.0573)
+        6. shooting goal (soccer) (0.0563)
+        7. playing tennis (0.0402)
+        8. dunking basketball (0.0389)
+        9. catching or throwing frisbee (0.0315)
+       10. hitting baseball (0.0231)
+
+HUMAN ONLY:
+  Correct action rank: 22/50 (score: 0.0081)
+  Top 10 predictions:
+        1. playing accordion (0.1491)
+        2. juggling soccer ball (0.1164)
+        3. eating ice cream (0.0725)
+        4. skipping rope (0.0694)
+        5. juggling balls (0.0627)
+        6. eating cake (0.0617)
+        7. opening bottle (0.0422)
+        8. dribbling basketball (0.0410)
+        9. playing piano (0.0395)
+       10. playing violin (0.0360)
+
+BACKGROUND ONLY:
+  Correct action rank: 3/50 (score: 0.1460)
+  Top 10 predictions:
+        1. dunking basketball (0.1905)
+        2. dribbling basketball (0.1664)
+    👉  3. playing basketball (0.1460)
+        4. shooting goal (soccer) (0.1160)
+        5. juggling soccer ball (0.1124)
+        6. shooting basketball (0.0619)
+        7. sweeping floor (0.0454)
+        8. catching or throwing frisbee (0.0255)
+        9. flying kite (0.0235)
+       10. hitting baseball (0.0232)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -1
+Ranking drop from human to background: -19
+🚨 WARNING: Background ranks higher than human-only!

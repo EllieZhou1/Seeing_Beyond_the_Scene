@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 9PEcW0QCp0c
+Action: playing bass guitar
+Time: 2-12s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.9615)
+  Top 10 predictions:
+    👉  1. playing bass guitar (0.9615)
+        2. playing guitar (0.0210)
+        3. playing trumpet (0.0077)
+        4. playing saxophone (0.0027)
+        5. playing violin (0.0018)
+        6. shooting goal (soccer) (0.0015)
+        7. writing (0.0010)
+        8. playing accordion (0.0008)
+        9. juggling balls (0.0002)
+       10. opening bottle (0.0002)
+
+HUMAN ONLY:
+  Correct action rank: 2/50 (score: 0.2122)
+  Top 10 predictions:
+        1. playing guitar (0.3804)
+    👉  2. playing bass guitar (0.2122)
+        3. playing violin (0.1674)
+        4. playing saxophone (0.0514)
+        5. playing trumpet (0.0442)
+        6. playing accordion (0.0275)
+        7. opening bottle (0.0175)
+        8. punching person (boxing) (0.0144)
+        9. shooting goal (soccer) (0.0111)
+       10. skiing slalom (0.0074)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.9509)
+  Top 10 predictions:
+    👉  1. playing bass guitar (0.9509)
+        2. playing guitar (0.0402)
+        3. playing trumpet (0.0024)
+        4. writing (0.0022)
+        5. playing saxophone (0.0009)
+        6. playing violin (0.0009)
+        7. driving car (0.0004)
+        8. opening bottle (0.0002)
+        9. hitting baseball (0.0002)
+       10. sweeping floor (0.0002)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -1
+🚨 WARNING: Background ranks higher than human-only!

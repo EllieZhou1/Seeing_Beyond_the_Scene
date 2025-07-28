@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: PDRjrn_jFME
+Action: climbing ladder
+Time: 15-25s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.5003)
+  Top 10 predictions:
+    👉  1. climbing ladder (0.5003)
+        2. climbing a rope (0.3178)
+        3. punching person (boxing) (0.0425)
+        4. dunking basketball (0.0421)
+        5. cleaning windows (0.0319)
+        6. surfing water (0.0242)
+        7. sword fighting (0.0091)
+        8. opening bottle (0.0077)
+        9. playing basketball (0.0027)
+       10. hitting baseball (0.0027)
+
+HUMAN ONLY:
+  Correct action rank: 8/50 (score: 0.0125)
+  Top 10 predictions:
+        1. punching person (boxing) (0.7193)
+        2. clean and jerk (0.0508)
+        3. climbing a rope (0.0435)
+        4. juggling balls (0.0367)
+        5. juggling soccer ball (0.0333)
+        6. skipping rope (0.0135)
+        7. opening bottle (0.0134)
+    👉  8. climbing ladder (0.0125)
+        9. smoking (0.0090)
+       10. catching or throwing baseball (0.0077)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.5723)
+  Top 10 predictions:
+    👉  1. climbing ladder (0.5723)
+        2. cleaning windows (0.1412)
+        3. dunking basketball (0.0659)
+        4. climbing a rope (0.0517)
+        5. surfing water (0.0215)
+        6. opening bottle (0.0155)
+        7. playing basketball (0.0153)
+        8. playing accordion (0.0115)
+        9. sword fighting (0.0093)
+       10. hitting baseball (0.0093)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -7
+🚨 WARNING: Background ranks higher than human-only!

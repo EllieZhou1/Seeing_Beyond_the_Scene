@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000567_playing saxophone_to_surfing water_8vxFri3kYz4_000000_000010_bg_SBY2F917gBs_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): playing saxophone
+Background Label (Incorrect): surfing water
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.2010)
+
+RANKING ANALYSIS:
+  Human Action 'playing saxophone' ranked: #10/50 (score: 0.0388)
+  Background Action 'surfing water' ranked: #6/50 (score: 0.0592)
+
+Top 10 predictions:
+      1. climbing a rope (0.2010)
+      2. flying kite (0.1342)
+      3. tying tie (0.1174)
+      4. cleaning windows (0.1005)
+      5. opening bottle (0.0800)
+  🏞️  6. surfing water (0.0592)
+      7. sword fighting (0.0512)
+      8. playing trumpet (0.0449)
+      9. juggling balls (0.0408)
+  👤 10. playing saxophone (0.0388)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -4
+Score gap (bg_score - human_score): 0.0204

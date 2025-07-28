@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: skexFUHz3_0
+Action: flying kite
+Time: 26-36s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 11/50 (score: 0.0134)
+  Top 10 predictions:
+        1. juggling soccer ball (0.3134)
+        2. climbing a rope (0.2549)
+        3. juggling balls (0.1137)
+        4. shooting goal (soccer) (0.0542)
+        5. skipping rope (0.0416)
+        6. catching or throwing frisbee (0.0388)
+        7. walking the dog (0.0297)
+        8. playing volleyball (0.0170)
+        9. hitting baseball (0.0148)
+       10. climbing ladder (0.0146)
+
+HUMAN ONLY:
+  Correct action rank: 7/50 (score: 0.0404)
+  Top 10 predictions:
+        1. punching person (boxing) (0.1407)
+        2. juggling soccer ball (0.0994)
+        3. climbing a rope (0.0800)
+        4. shooting goal (soccer) (0.0631)
+        5. walking the dog (0.0601)
+        6. juggling balls (0.0559)
+    👉  7. flying kite (0.0404)
+        8. opening bottle (0.0326)
+        9. dribbling basketball (0.0292)
+       10. catching or throwing frisbee (0.0273)
+
+BACKGROUND ONLY:
+  Correct action rank: 10/50 (score: 0.0293)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.2355)
+        2. juggling soccer ball (0.1319)
+        3. walking the dog (0.1272)
+        4. catching or throwing frisbee (0.1015)
+        5. climbing a rope (0.0444)
+        6. hitting baseball (0.0359)
+        7. surfing water (0.0346)
+        8. cleaning windows (0.0329)
+        9. catching or throwing baseball (0.0300)
+    👉 10. flying kite (0.0293)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: -1
+Ranking drop from human to background: 3

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002128_brushing teeth_to_playing guitar_wrlHs_EsLOY_000106_000116_bg_0b7wPe49W-4_000266_000276
+Frame: 000050.jpg
+Human Action Label (Correct): brushing teeth
+Background Label (Incorrect): playing guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing teeth (score: 0.5715)
+
+RANKING ANALYSIS:
+  Human Action 'brushing teeth' ranked: #1/50 (score: 0.5715)
+  Background Action 'playing guitar' ranked: #27/50 (score: 0.0006)
+
+Top 10 predictions:
+  👤  1. brushing teeth (0.5715)
+      2. eating ice cream (0.2227)
+      3. eating cake (0.0977)
+      4. brushing hair (0.0193)
+      5. opening bottle (0.0192)
+      6. hitting baseball (0.0114)
+      7. cleaning windows (0.0090)
+      8. drinking (0.0086)
+      9. punching person (boxing) (0.0082)
+     10. juggling balls (0.0041)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 26
+Score gap (bg_score - human_score): -0.5709
+✅ Human action in top 5

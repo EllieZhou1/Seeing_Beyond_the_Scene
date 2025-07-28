@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: KvgYLMfQh8Q
+Action: catching or throwing frisbee
+Time: 12-22s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 3/50 (score: 0.1169)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.5588)
+        2. juggling soccer ball (0.2712)
+    👉  3. catching or throwing frisbee (0.1169)
+        4. flying kite (0.0127)
+        5. juggling balls (0.0109)
+        6. hitting baseball (0.0080)
+        7. catching or throwing baseball (0.0041)
+        8. skiing slalom (0.0036)
+        9. playing volleyball (0.0022)
+       10. golf driving (0.0017)
+
+HUMAN ONLY:
+  Correct action rank: 29/50 (score: 0.0067)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.1664)
+        2. dunking basketball (0.1225)
+        3. shooting basketball (0.0711)
+        4. skiing slalom (0.0652)
+        5. playing basketball (0.0529)
+        6. dribbling basketball (0.0524)
+        7. juggling soccer ball (0.0432)
+        8. hitting baseball (0.0382)
+        9. skipping rope (0.0363)
+       10. climbing ladder (0.0310)
+
+BACKGROUND ONLY:
+  Correct action rank: 3/50 (score: 0.1079)
+  Top 10 predictions:
+        1. shooting goal (soccer) (0.6270)
+        2. juggling soccer ball (0.2070)
+    👉  3. catching or throwing frisbee (0.1079)
+        4. flying kite (0.0129)
+        5. juggling balls (0.0095)
+        6. hitting baseball (0.0080)
+        7. skiing slalom (0.0058)
+        8. catching or throwing baseball (0.0056)
+        9. playing volleyball (0.0024)
+       10. golf driving (0.0024)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -26
+🚨 WARNING: Background ranks higher than human-only!

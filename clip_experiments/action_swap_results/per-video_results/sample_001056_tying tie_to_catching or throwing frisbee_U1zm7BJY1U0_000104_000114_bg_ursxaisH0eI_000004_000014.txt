@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001056_tying tie_to_catching or throwing frisbee_U1zm7BJY1U0_000104_000114_bg_ursxaisH0eI_000004_000014
+Frame: 000050.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): catching or throwing frisbee
+
+CLIP PREDICTIONS:
+  Predicted Label: tying tie (score: 0.8122)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #1/50 (score: 0.8122)
+  Background Action 'catching or throwing frisbee' ranked: #20/50 (score: 0.0009)
+
+Top 10 predictions:
+  👤  1. tying tie (0.8122)
+      2. juggling soccer ball (0.0630)
+      3. juggling balls (0.0461)
+      4. shooting goal (soccer) (0.0111)
+      5. hitting baseball (0.0098)
+      6. punching person (boxing) (0.0080)
+      7. golf driving (0.0063)
+      8. opening bottle (0.0056)
+      9. playing trumpet (0.0047)
+     10. flying kite (0.0045)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 19
+Score gap (bg_score - human_score): -0.8112
+✅ Human action in top 5

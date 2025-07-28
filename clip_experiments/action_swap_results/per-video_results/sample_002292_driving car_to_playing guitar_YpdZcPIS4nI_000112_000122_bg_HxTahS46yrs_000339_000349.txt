@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002292_driving car_to_playing guitar_YpdZcPIS4nI_000112_000122_bg_HxTahS46yrs_000339_000349
+Frame: 000050.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): playing guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: catching or throwing baseball (score: 0.2127)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #46/50 (score: 0.0001)
+  Background Action 'playing guitar' ranked: #47/50 (score: 0.0001)
+
+Top 10 predictions:
+      1. catching or throwing baseball (0.2127)
+      2. playing tennis (0.1747)
+      3. skiing slalom (0.1471)
+      4. juggling soccer ball (0.1149)
+      5. hitting baseball (0.0670)
+      6. catching or throwing frisbee (0.0551)
+      7. shooting goal (soccer) (0.0358)
+      8. skiing (not slalom or crosscountry) (0.0279)
+      9. hurdling (0.0211)
+     10. juggling balls (0.0174)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0000

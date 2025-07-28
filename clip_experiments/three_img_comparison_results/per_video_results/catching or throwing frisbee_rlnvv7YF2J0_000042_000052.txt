@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: rlnvv7YF2J0
+Action: catching or throwing frisbee
+Time: 42-52s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 42/50 (score: 0.0034)
+  Top 10 predictions:
+        1. opening bottle (0.1250)
+        2. juggling soccer ball (0.1077)
+        3. playing trumpet (0.0634)
+        4. playing saxophone (0.0572)
+        5. punching person (boxing) (0.0465)
+        6. juggling balls (0.0453)
+        7. climbing ladder (0.0390)
+        8. eating ice cream (0.0358)
+        9. dribbling basketball (0.0308)
+       10. drinking (0.0304)
+
+HUMAN ONLY:
+  Correct action rank: 48/50 (score: 0.0017)
+  Top 10 predictions:
+        1. punching person (boxing) (0.2355)
+        2. playing saxophone (0.0576)
+        3. tying tie (0.0497)
+        4. hitting baseball (0.0468)
+        5. smoking (0.0448)
+        6. opening bottle (0.0379)
+        7. climbing ladder (0.0352)
+        8. dribbling basketball (0.0343)
+        9. drinking (0.0336)
+       10. playing trumpet (0.0297)
+
+BACKGROUND ONLY:
+  Correct action rank: 40/50 (score: 0.0055)
+  Top 10 predictions:
+        1. playing saxophone (0.1060)
+        2. playing trumpet (0.0736)
+        3. punching person (boxing) (0.0401)
+        4. dribbling basketball (0.0396)
+        5. drinking (0.0384)
+        6. eating ice cream (0.0347)
+        7. opening bottle (0.0342)
+        8. juggling soccer ball (0.0334)
+        9. smoking (0.0308)
+       10. eating cake (0.0305)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: -2
+Ranking drop from human to background: -8
+🚨 WARNING: Background ranks higher than human-only!

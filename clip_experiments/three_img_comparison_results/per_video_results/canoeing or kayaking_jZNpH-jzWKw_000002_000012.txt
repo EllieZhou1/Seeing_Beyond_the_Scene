@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: jZNpH-jzWKw
+Action: canoeing or kayaking
+Time: 2-12s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.3099)
+  Top 10 predictions:
+        1. surfing water (0.4544)
+    👉  2. canoeing or kayaking (0.3099)
+        3. climbing a rope (0.0588)
+        4. skiing slalom (0.0584)
+        5. flying kite (0.0322)
+        6. catching or throwing frisbee (0.0115)
+        7. skiing (not slalom or crosscountry) (0.0095)
+        8. dunking basketball (0.0093)
+        9. juggling balls (0.0090)
+       10. juggling soccer ball (0.0082)
+
+HUMAN ONLY:
+  Correct action rank: 32/50 (score: 0.0036)
+  Top 10 predictions:
+        1. juggling soccer ball (0.1804)
+        2. dribbling basketball (0.1204)
+        3. shooting goal (soccer) (0.1048)
+        4. punching person (boxing) (0.0727)
+        5. hitting baseball (0.0691)
+        6. juggling balls (0.0672)
+        7. dunking basketball (0.0385)
+        8. skiing slalom (0.0362)
+        9. skipping rope (0.0346)
+       10. walking the dog (0.0310)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.2317)
+  Top 10 predictions:
+        1. surfing water (0.5812)
+    👉  2. canoeing or kayaking (0.2317)
+        3. climbing a rope (0.0494)
+        4. catching or throwing frisbee (0.0415)
+        5. skiing slalom (0.0173)
+        6. dunking basketball (0.0146)
+        7. flying kite (0.0114)
+        8. juggling soccer ball (0.0084)
+        9. juggling balls (0.0067)
+       10. shooting goal (soccer) (0.0053)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -30
+🚨 WARNING: Background ranks higher than human-only!

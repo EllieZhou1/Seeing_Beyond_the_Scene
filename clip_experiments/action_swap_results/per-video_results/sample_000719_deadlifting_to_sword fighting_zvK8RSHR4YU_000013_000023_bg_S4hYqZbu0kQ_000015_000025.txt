@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000719_deadlifting_to_sword fighting_zvK8RSHR4YU_000013_000023_bg_S4hYqZbu0kQ_000015_000025
+Frame: 000050.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.6404)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #37/50 (score: 0.0002)
+  Background Action 'sword fighting' ranked: #19/50 (score: 0.0030)
+
+Top 10 predictions:
+      1. climbing a rope (0.6404)
+      2. climbing ladder (0.1030)
+      3. juggling soccer ball (0.0394)
+      4. skipping rope (0.0358)
+      5. hurdling (0.0340)
+      6. surfing water (0.0173)
+      7. dunking basketball (0.0166)
+      8. juggling balls (0.0159)
+      9. skiing slalom (0.0157)
+     10. shooting goal (soccer) (0.0140)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -18
+Score gap (bg_score - human_score): 0.0028

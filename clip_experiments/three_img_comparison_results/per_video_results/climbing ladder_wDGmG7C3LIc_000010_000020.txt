@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: wDGmG7C3LIc
+Action: climbing ladder
+Time: 10-20s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.9935)
+  Top 10 predictions:
+    👉  1. climbing ladder (0.9935)
+        2. climbing a rope (0.0039)
+        3. brushing teeth (0.0007)
+        4. sweeping floor (0.0003)
+        5. cleaning windows (0.0003)
+        6. dunking basketball (0.0002)
+        7. skipping rope (0.0002)
+        8. opening bottle (0.0001)
+        9. sword fighting (0.0001)
+       10. hitting baseball (0.0001)
+
+HUMAN ONLY:
+  Correct action rank: 6/50 (score: 0.0403)
+  Top 10 predictions:
+        1. juggling soccer ball (0.1684)
+        2. juggling balls (0.1682)
+        3. punching person (boxing) (0.1315)
+        4. skipping rope (0.0793)
+        5. playing saxophone (0.0535)
+    👉  6. climbing ladder (0.0403)
+        7. playing violin (0.0305)
+        8. dribbling basketball (0.0292)
+        9. climbing a rope (0.0288)
+       10. deadlifting (0.0238)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.9916)
+  Top 10 predictions:
+    👉  1. climbing ladder (0.9916)
+        2. climbing a rope (0.0058)
+        3. sweeping floor (0.0004)
+        4. dunking basketball (0.0003)
+        5. brushing teeth (0.0003)
+        6. cleaning windows (0.0003)
+        7. playing accordion (0.0001)
+        8. opening bottle (0.0001)
+        9. hitting baseball (0.0001)
+       10. skipping rope (0.0001)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -5
+🚨 WARNING: Background ranks higher than human-only!

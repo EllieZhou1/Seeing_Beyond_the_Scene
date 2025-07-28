@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001450_brushing hair_to_walking the dog_gl6H-pSUrp4_000262_000272_bg_ypl3JWaPnFA_000063_000073
+Frame: 000050.jpg
+Human Action Label (Correct): brushing hair
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.6129)
+
+RANKING ANALYSIS:
+  Human Action 'brushing hair' ranked: #1/50 (score: 0.6129)
+  Background Action 'walking the dog' ranked: #50/50 (score: 0.0005)
+
+Top 10 predictions:
+  👤  1. brushing hair (0.6129)
+      2. bowling (0.0685)
+      3. playing violin (0.0267)
+      4. sword fighting (0.0196)
+      5. climbing a rope (0.0172)
+      6. punching person (boxing) (0.0169)
+      7. tying tie (0.0160)
+      8. skipping rope (0.0146)
+      9. playing piano (0.0130)
+     10. archery (0.0129)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 49
+Score gap (bg_score - human_score): -0.6124
+✅ Human action in top 5

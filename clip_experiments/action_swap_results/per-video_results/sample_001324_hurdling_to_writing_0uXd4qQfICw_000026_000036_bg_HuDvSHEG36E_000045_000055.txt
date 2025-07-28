@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001324_hurdling_to_writing_0uXd4qQfICw_000026_000036_bg_HuDvSHEG36E_000045_000055
+Frame: 000050.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.1510)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #39/50 (score: 0.0016)
+  Background Action 'writing' ranked: #11/50 (score: 0.0314)
+
+Top 10 predictions:
+      1. sword fighting (0.1510)
+      2. flying kite (0.0759)
+      3. skiing slalom (0.0708)
+      4. archery (0.0692)
+      5. bowling (0.0678)
+      6. juggling balls (0.0494)
+      7. dunking basketball (0.0469)
+      8. climbing ladder (0.0405)
+      9. clean and jerk (0.0365)
+     10. playing volleyball (0.0321)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -28
+Score gap (bg_score - human_score): 0.0298

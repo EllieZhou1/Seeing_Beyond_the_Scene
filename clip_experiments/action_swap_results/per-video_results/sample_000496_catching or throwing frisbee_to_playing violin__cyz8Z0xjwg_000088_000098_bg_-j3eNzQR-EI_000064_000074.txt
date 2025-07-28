@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000496_catching or throwing frisbee_to_playing violin__cyz8Z0xjwg_000088_000098_bg_-j3eNzQR-EI_000064_000074
+Frame: 000050.jpg
+Human Action Label (Correct): catching or throwing frisbee
+Background Label (Incorrect): playing violin
+
+CLIP PREDICTIONS:
+  Predicted Label: playing violin (score: 0.9881)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing frisbee' ranked: #35/50 (score: 0.0000)
+  Background Action 'playing violin' ranked: #1/50 (score: 0.9881)
+
+Top 10 predictions:
+  🏞️  1. playing violin (0.9881)
+      2. playing bass guitar (0.0032)
+      3. playing guitar (0.0026)
+      4. playing trumpet (0.0020)
+      5. archery (0.0010)
+      6. playing accordion (0.0010)
+      7. playing saxophone (0.0004)
+      8. juggling balls (0.0003)
+      9. sword fighting (0.0002)
+     10. juggling soccer ball (0.0002)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -34
+Score gap (bg_score - human_score): 0.9881
+⚠️  Background action in top 5!

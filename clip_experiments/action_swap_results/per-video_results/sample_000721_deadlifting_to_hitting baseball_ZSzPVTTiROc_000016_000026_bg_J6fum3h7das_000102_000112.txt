@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000721_deadlifting_to_hitting baseball_ZSzPVTTiROc_000016_000026_bg_J6fum3h7das_000102_000112
+Frame: 000050.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): hitting baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: hitting baseball (score: 0.4796)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #16/50 (score: 0.0022)
+  Background Action 'hitting baseball' ranked: #1/50 (score: 0.4796)
+
+Top 10 predictions:
+  🏞️  1. hitting baseball (0.4796)
+      2. catching or throwing baseball (0.2905)
+      3. juggling soccer ball (0.0359)
+      4. clean and jerk (0.0308)
+      5. juggling balls (0.0275)
+      6. playing tennis (0.0246)
+      7. hurdling (0.0228)
+      8. climbing a rope (0.0217)
+      9. climbing ladder (0.0155)
+     10. catching or throwing frisbee (0.0137)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -15
+Score gap (bg_score - human_score): 0.4774
+⚠️  Background action in top 5!

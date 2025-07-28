@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: ErsRZ2Cvn-E
+Action: drinking
+Time: 0-10s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 5/50 (score: 0.0473)
+  Top 10 predictions:
+        1. opening bottle (0.3454)
+        2. eating ice cream (0.2071)
+        3. eating cake (0.1960)
+        4. brushing teeth (0.0500)
+    👉  5. drinking (0.0473)
+        6. juggling balls (0.0269)
+        7. juggling soccer ball (0.0262)
+        8. dribbling basketball (0.0204)
+        9. brushing hair (0.0185)
+       10. playing trumpet (0.0110)
+
+HUMAN ONLY:
+  Correct action rank: 4/50 (score: 0.0884)
+  Top 10 predictions:
+        1. opening bottle (0.4551)
+        2. eating ice cream (0.2503)
+        3. eating cake (0.0984)
+    👉  4. drinking (0.0884)
+        5. brushing teeth (0.0530)
+        6. brushing hair (0.0241)
+        7. playing saxophone (0.0068)
+        8. playing trumpet (0.0058)
+        9. playing accordion (0.0057)
+       10. playing violin (0.0025)
+
+BACKGROUND ONLY:
+  Correct action rank: 16/50 (score: 0.0160)
+  Top 10 predictions:
+        1. juggling soccer ball (0.2163)
+        2. juggling balls (0.1385)
+        3. punching person (boxing) (0.0846)
+        4. dribbling basketball (0.0560)
+        5. cleaning windows (0.0373)
+        6. dunking basketball (0.0346)
+        7. playing basketball (0.0313)
+        8. climbing a rope (0.0310)
+        9. playing volleyball (0.0304)
+       10. bowling (0.0266)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 11
+Ranking drop from human to background: 12

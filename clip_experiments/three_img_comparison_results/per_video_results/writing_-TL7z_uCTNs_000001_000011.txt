@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: -TL7z_uCTNs
+Action: writing
+Time: 1-11s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.9837)
+  Top 10 predictions:
+    👉  1. writing (0.9837)
+        2. reading book (0.0119)
+        3. punching person (boxing) (0.0006)
+        4. opening bottle (0.0006)
+        5. tying tie (0.0005)
+        6. reading newspaper (0.0004)
+        7. catching or throwing baseball (0.0003)
+        8. sword fighting (0.0002)
+        9. driving car (0.0002)
+       10. drinking (0.0002)
+
+HUMAN ONLY:
+  Correct action rank: 1/50 (score: 0.9121)
+  Top 10 predictions:
+    👉  1. writing (0.9121)
+        2. reading book (0.0481)
+        3. punching person (boxing) (0.0095)
+        4. skiing slalom (0.0046)
+        5. driving car (0.0029)
+        6. reading newspaper (0.0028)
+        7. sweeping floor (0.0023)
+        8. shooting goal (soccer) (0.0022)
+        9. hurdling (0.0017)
+       10. catching or throwing baseball (0.0017)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.9757)
+  Top 10 predictions:
+    👉  1. writing (0.9757)
+        2. reading book (0.0193)
+        3. punching person (boxing) (0.0009)
+        4. tying tie (0.0005)
+        5. reading newspaper (0.0005)
+        6. opening bottle (0.0003)
+        7. sword fighting (0.0003)
+        8. catching or throwing baseball (0.0003)
+        9. driving car (0.0002)
+       10. drinking (0.0001)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: 0

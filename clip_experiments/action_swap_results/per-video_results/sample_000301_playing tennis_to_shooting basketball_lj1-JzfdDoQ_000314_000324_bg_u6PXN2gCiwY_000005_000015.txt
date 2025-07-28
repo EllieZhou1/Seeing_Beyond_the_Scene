@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000301_playing tennis_to_shooting basketball_lj1-JzfdDoQ_000314_000324_bg_u6PXN2gCiwY_000005_000015
+Frame: 000050.jpg
+Human Action Label (Correct): playing tennis
+Background Label (Incorrect): shooting basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.1702)
+
+RANKING ANALYSIS:
+  Human Action 'playing tennis' ranked: #10/50 (score: 0.0273)
+  Background Action 'shooting basketball' ranked: #15/50 (score: 0.0176)
+
+Top 10 predictions:
+      1. sword fighting (0.1702)
+      2. catching or throwing frisbee (0.1300)
+      3. hitting baseball (0.1298)
+      4. juggling balls (0.0767)
+      5. juggling soccer ball (0.0679)
+      6. cleaning windows (0.0673)
+      7. catching or throwing baseball (0.0537)
+      8. playing basketball (0.0522)
+      9. skipping rope (0.0315)
+  👤 10. playing tennis (0.0273)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 5
+Score gap (bg_score - human_score): -0.0096

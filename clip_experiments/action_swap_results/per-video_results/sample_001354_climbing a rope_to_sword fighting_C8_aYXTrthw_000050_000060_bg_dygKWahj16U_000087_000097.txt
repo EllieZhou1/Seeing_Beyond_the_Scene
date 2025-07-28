@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001354_climbing a rope_to_sword fighting_C8_aYXTrthw_000050_000060_bg_dygKWahj16U_000087_000097
+Frame: 000050.jpg
+Human Action Label (Correct): climbing a rope
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: golf driving (score: 0.9616)
+
+RANKING ANALYSIS:
+  Human Action 'climbing a rope' ranked: #6/50 (score: 0.0020)
+  Background Action 'sword fighting' ranked: #7/50 (score: 0.0015)
+
+Top 10 predictions:
+      1. golf driving (0.9616)
+      2. hitting baseball (0.0120)
+      3. archery (0.0082)
+      4. playing violin (0.0033)
+      5. skipping rope (0.0023)
+  👤  6. climbing a rope (0.0020)
+  🏞️  7. sword fighting (0.0015)
+      8. shooting goal (soccer) (0.0015)
+      9. skiing slalom (0.0010)
+     10. playing tennis (0.0008)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0005

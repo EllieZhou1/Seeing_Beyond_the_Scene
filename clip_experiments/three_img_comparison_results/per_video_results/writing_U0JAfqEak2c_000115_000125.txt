@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: U0JAfqEak2c
+Action: writing
+Time: 115-125s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 6/50 (score: 0.0523)
+  Top 10 predictions:
+        1. eating cake (0.2109)
+        2. skipping rope (0.1530)
+        3. smoking (0.0911)
+        4. eating ice cream (0.0675)
+        5. punching person (boxing) (0.0554)
+    👉  6. writing (0.0523)
+        7. playing trumpet (0.0504)
+        8. reading newspaper (0.0430)
+        9. juggling balls (0.0426)
+       10. reading book (0.0403)
+
+HUMAN ONLY:
+  Correct action rank: 26/50 (score: 0.0027)
+  Top 10 predictions:
+        1. juggling balls (0.3719)
+        2. punching person (boxing) (0.2579)
+        3. juggling soccer ball (0.0802)
+        4. skipping rope (0.0616)
+        5. dunking basketball (0.0233)
+        6. shooting basketball (0.0223)
+        7. dribbling basketball (0.0202)
+        8. smoking (0.0137)
+        9. playing trumpet (0.0115)
+       10. opening bottle (0.0111)
+
+BACKGROUND ONLY:
+  Correct action rank: 1/50 (score: 0.1945)
+  Top 10 predictions:
+    👉  1. writing (0.1945)
+        2. reading book (0.1140)
+        3. smoking (0.1116)
+        4. eating cake (0.0940)
+        5. reading newspaper (0.0761)
+        6. skipping rope (0.0640)
+        7. playing trumpet (0.0569)
+        8. eating ice cream (0.0367)
+        9. juggling balls (0.0213)
+       10. punching person (boxing) (0.0180)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -5
+Ranking drop from human to background: -25
+🚨 WARNING: Background ranks higher than human-only!

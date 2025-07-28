@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: 9-dbTVhvHMs
+Action: playing piano
+Time: 0-10s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.2895)
+  Top 10 predictions:
+        1. climbing ladder (0.5139)
+    👉  2. playing piano (0.2895)
+        3. climbing a rope (0.0377)
+        4. cleaning windows (0.0319)
+        5. skipping rope (0.0226)
+        6. playing accordion (0.0209)
+        7. dunking basketball (0.0118)
+        8. playing violin (0.0101)
+        9. playing saxophone (0.0080)
+       10. dribbling basketball (0.0076)
+
+HUMAN ONLY:
+  Correct action rank: 30/50 (score: 0.0015)
+  Top 10 predictions:
+        1. skipping rope (0.4318)
+        2. shooting goal (soccer) (0.1119)
+        3. climbing a rope (0.0707)
+        4. juggling soccer ball (0.0680)
+        5. dribbling basketball (0.0634)
+        6. juggling balls (0.0630)
+        7. punching person (boxing) (0.0249)
+        8. climbing ladder (0.0231)
+        9. flying kite (0.0182)
+       10. dunking basketball (0.0121)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.1235)
+  Top 10 predictions:
+        1. cleaning windows (0.2485)
+    👉  2. playing piano (0.1235)
+        3. juggling soccer ball (0.1224)
+        4. sweeping floor (0.0508)
+        5. juggling balls (0.0505)
+        6. shooting goal (soccer) (0.0488)
+        7. playing violin (0.0406)
+        8. playing accordion (0.0379)
+        9. climbing ladder (0.0296)
+       10. playing saxophone (0.0193)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 0
+Ranking drop from human to background: -28
+🚨 WARNING: Background ranks higher than human-only!

@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000144_smoking_to_opening bottle_YIlr1ABiWzY_001171_001181_bg_ENwDLQTkIlQ_000001_000011
+Frame: 000050.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.1378)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #5/50 (score: 0.0733)
+  Background Action 'opening bottle' ranked: #2/50 (score: 0.1334)
+
+Top 10 predictions:
+      1. climbing a rope (0.1378)
+  🏞️  2. opening bottle (0.1334)
+      3. drinking (0.0896)
+      4. cleaning windows (0.0848)
+  👤  5. smoking (0.0733)
+      6. juggling balls (0.0563)
+      7. climbing ladder (0.0431)
+      8. playing trumpet (0.0334)
+      9. walking the dog (0.0317)
+     10. hitting baseball (0.0309)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -3
+Score gap (bg_score - human_score): 0.0601
+⚠️  Background action in top 5!
+✅ Human action in top 5

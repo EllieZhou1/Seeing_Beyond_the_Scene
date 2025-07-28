@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001140_canoeing or kayaking_to_playing trumpet_Bi5SWEY6uH8_000034_000044_bg_k4wYU7PZuPY_000029_000039
+Frame: 000050.jpg
+Human Action Label (Correct): canoeing or kayaking
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.1978)
+
+RANKING ANALYSIS:
+  Human Action 'canoeing or kayaking' ranked: #49/50 (score: 0.0002)
+  Background Action 'playing trumpet' ranked: #4/50 (score: 0.1081)
+
+Top 10 predictions:
+      1. sword fighting (0.1978)
+      2. juggling soccer ball (0.1761)
+      3. juggling balls (0.1678)
+  🏞️  4. playing trumpet (0.1081)
+      5. playing saxophone (0.0629)
+      6. archery (0.0521)
+      7. flying kite (0.0380)
+      8. skiing (not slalom or crosscountry) (0.0251)
+      9. playing violin (0.0191)
+     10. opening bottle (0.0177)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -45
+Score gap (bg_score - human_score): 0.1078
+⚠️  Background action in top 5!

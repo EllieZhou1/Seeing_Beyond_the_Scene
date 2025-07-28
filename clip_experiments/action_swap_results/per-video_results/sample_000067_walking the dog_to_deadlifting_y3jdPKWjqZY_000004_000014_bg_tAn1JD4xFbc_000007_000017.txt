@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000067_walking the dog_to_deadlifting_y3jdPKWjqZY_000004_000014_bg_tAn1JD4xFbc_000007_000017
+Frame: 000050.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: deadlifting (score: 0.5181)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #32/50 (score: 0.0000)
+  Background Action 'deadlifting' ranked: #1/50 (score: 0.5181)
+
+Top 10 predictions:
+  🏞️  1. deadlifting (0.5181)
+      2. clean and jerk (0.4702)
+      3. bowling (0.0054)
+      4. climbing ladder (0.0014)
+      5. hitting baseball (0.0007)
+      6. driving car (0.0007)
+      7. sweeping floor (0.0006)
+      8. sword fighting (0.0004)
+      9. hurdling (0.0004)
+     10. climbing a rope (0.0004)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -31
+Score gap (bg_score - human_score): 0.5181
+⚠️  Background action in top 5!

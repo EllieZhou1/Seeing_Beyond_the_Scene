@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000662_playing volleyball_to_sword fighting_XqDgUSMw1gI_000005_000015_bg__kcVbo4E2JQ_000101_000111
+Frame: 000050.jpg
+Human Action Label (Correct): playing volleyball
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: hurdling (score: 0.3191)
+
+RANKING ANALYSIS:
+  Human Action 'playing volleyball' ranked: #17/50 (score: 0.0075)
+  Background Action 'sword fighting' ranked: #2/50 (score: 0.1856)
+
+Top 10 predictions:
+      1. hurdling (0.3191)
+  🏞️  2. sword fighting (0.1856)
+      3. sweeping floor (0.1000)
+      4. skipping rope (0.0849)
+      5. punching person (boxing) (0.0530)
+      6. dunking basketball (0.0359)
+      7. hitting baseball (0.0228)
+      8. climbing a rope (0.0176)
+      9. dribbling basketball (0.0170)
+     10. juggling balls (0.0159)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -15
+Score gap (bg_score - human_score): 0.1780
+⚠️  Background action in top 5!

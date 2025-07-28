@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001376_catching or throwing baseball_to_playing trumpet_F9kCgXa2aTs_000018_000028_bg_ab_OfNZPMD4_000232_000242
+Frame: 000050.jpg
+Human Action Label (Correct): catching or throwing baseball
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: hitting baseball (score: 0.2699)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing baseball' ranked: #6/50 (score: 0.0397)
+  Background Action 'playing trumpet' ranked: #19/50 (score: 0.0059)
+
+Top 10 predictions:
+      1. hitting baseball (0.2699)
+      2. golf driving (0.1741)
+      3. driving car (0.1305)
+      4. sword fighting (0.0816)
+      5. bowling (0.0452)
+  👤  6. catching or throwing baseball (0.0397)
+      7. dunking basketball (0.0292)
+      8. hurdling (0.0279)
+      9. archery (0.0277)
+     10. shooting basketball (0.0217)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 13
+Score gap (bg_score - human_score): -0.0338

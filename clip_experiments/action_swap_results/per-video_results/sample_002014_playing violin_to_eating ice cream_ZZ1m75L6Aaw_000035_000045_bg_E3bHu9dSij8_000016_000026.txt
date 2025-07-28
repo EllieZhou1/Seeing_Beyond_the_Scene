@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002014_playing violin_to_eating ice cream_ZZ1m75L6Aaw_000035_000045_bg_E3bHu9dSij8_000016_000026
+Frame: 000050.jpg
+Human Action Label (Correct): playing violin
+Background Label (Incorrect): eating ice cream
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.1641)
+
+RANKING ANALYSIS:
+  Human Action 'playing violin' ranked: #9/50 (score: 0.0457)
+  Background Action 'eating ice cream' ranked: #3/50 (score: 0.0921)
+
+Top 10 predictions:
+      1. opening bottle (0.1641)
+      2. drinking (0.0983)
+  🏞️  3. eating ice cream (0.0921)
+      4. eating cake (0.0830)
+      5. juggling balls (0.0717)
+      6. punching person (boxing) (0.0623)
+      7. cleaning windows (0.0562)
+      8. tying tie (0.0505)
+  👤  9. playing violin (0.0457)
+     10. juggling soccer ball (0.0433)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -6
+Score gap (bg_score - human_score): 0.0463
+⚠️  Background action in top 5!

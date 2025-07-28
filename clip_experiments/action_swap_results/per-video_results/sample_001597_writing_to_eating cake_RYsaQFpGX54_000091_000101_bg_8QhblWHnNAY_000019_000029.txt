@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001597_writing_to_eating cake_RYsaQFpGX54_000091_000101_bg_8QhblWHnNAY_000019_000029
+Frame: 000050.jpg
+Human Action Label (Correct): writing
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling balls (score: 0.3618)
+
+RANKING ANALYSIS:
+  Human Action 'writing' ranked: #16/50 (score: 0.0053)
+  Background Action 'eating cake' ranked: #8/50 (score: 0.0250)
+
+Top 10 predictions:
+      1. juggling balls (0.3618)
+      2. juggling soccer ball (0.1553)
+      3. eating ice cream (0.0817)
+      4. opening bottle (0.0724)
+      5. smoking (0.0653)
+      6. cleaning windows (0.0491)
+      7. drinking (0.0426)
+  🏞️  8. eating cake (0.0250)
+      9. catching or throwing frisbee (0.0183)
+     10. bowling (0.0134)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -8
+Score gap (bg_score - human_score): 0.0197

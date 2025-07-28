@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000701_dunking basketball_to_climbing ladder_iV66V2rh6l4_000027_000037_bg_q0q7X2V0S8M_000180_000190
+Frame: 000050.jpg
+Human Action Label (Correct): dunking basketball
+Background Label (Incorrect): climbing ladder
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.5035)
+
+RANKING ANALYSIS:
+  Human Action 'dunking basketball' ranked: #1/50 (score: 0.5035)
+  Background Action 'climbing ladder' ranked: #9/50 (score: 0.0182)
+
+Top 10 predictions:
+  👤  1. dunking basketball (0.5035)
+      2. shooting basketball (0.1058)
+      3. sword fighting (0.0895)
+      4. playing basketball (0.0878)
+      5. climbing a rope (0.0534)
+      6. dribbling basketball (0.0288)
+      7. juggling soccer ball (0.0270)
+      8. playing volleyball (0.0197)
+  🏞️  9. climbing ladder (0.0182)
+     10. clean and jerk (0.0178)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 8
+Score gap (bg_score - human_score): -0.4853
+✅ Human action in top 5

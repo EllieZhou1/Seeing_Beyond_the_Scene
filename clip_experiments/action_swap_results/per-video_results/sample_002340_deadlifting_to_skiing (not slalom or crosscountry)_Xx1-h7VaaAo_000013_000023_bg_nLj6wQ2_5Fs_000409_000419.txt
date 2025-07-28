@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002340_deadlifting_to_skiing (not slalom or crosscountry)_Xx1-h7VaaAo_000013_000023_bg_nLj6wQ2_5Fs_000409_000419
+Frame: 000050.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): skiing (not slalom or crosscountry)
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.2871)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #16/50 (score: 0.0051)
+  Background Action 'skiing (not slalom or crosscountry)' ranked: #3/50 (score: 0.1001)
+
+Top 10 predictions:
+      1. skiing slalom (0.2871)
+      2. clean and jerk (0.2780)
+  🏞️  3. skiing (not slalom or crosscountry) (0.1001)
+      4. climbing a rope (0.0847)
+      5. juggling soccer ball (0.0495)
+      6. skipping rope (0.0404)
+      7. shooting goal (soccer) (0.0372)
+      8. juggling balls (0.0298)
+      9. climbing ladder (0.0190)
+     10. playing volleyball (0.0135)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -13
+Score gap (bg_score - human_score): 0.0950
+⚠️  Background action in top 5!

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000729_sword fighting_to_opening bottle_WGztQjJ0aMU_000010_000020_bg_a1gyzJQ6nto_000042_000052
+Frame: 000050.jpg
+Human Action Label (Correct): sword fighting
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: hurdling (score: 0.1820)
+
+RANKING ANALYSIS:
+  Human Action 'sword fighting' ranked: #6/50 (score: 0.0548)
+  Background Action 'opening bottle' ranked: #12/50 (score: 0.0219)
+
+Top 10 predictions:
+      1. hurdling (0.1820)
+      2. climbing a rope (0.1462)
+      3. dunking basketball (0.1049)
+      4. juggling soccer ball (0.0788)
+      5. climbing ladder (0.0600)
+  👤  6. sword fighting (0.0548)
+      7. juggling balls (0.0366)
+      8. catching or throwing frisbee (0.0360)
+      9. catching or throwing baseball (0.0313)
+     10. punching person (boxing) (0.0265)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 6
+Score gap (bg_score - human_score): -0.0329

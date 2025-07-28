@@ -1,0 +1,53 @@
+CLIP Bias Analysis Results
+==================================================
+Video: s0WqJNghk88
+Action: catching or throwing baseball
+Time: 1-11s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 2/50 (score: 0.2731)
+  Top 10 predictions:
+        1. hitting baseball (0.3717)
+    👉  2. catching or throwing baseball (0.2731)
+        3. golf driving (0.1918)
+        4. juggling soccer ball (0.0310)
+        5. cleaning windows (0.0188)
+        6. juggling balls (0.0124)
+        7. catching or throwing frisbee (0.0116)
+        8. shooting basketball (0.0067)
+        9. drinking (0.0059)
+       10. playing tennis (0.0059)
+
+HUMAN ONLY:
+  Correct action rank: 2/50 (score: 0.2251)
+  Top 10 predictions:
+        1. hitting baseball (0.2449)
+    👉  2. catching or throwing baseball (0.2251)
+        3. juggling soccer ball (0.1004)
+        4. golf driving (0.0569)
+        5. juggling balls (0.0471)
+        6. punching person (boxing) (0.0364)
+        7. cleaning windows (0.0268)
+        8. playing accordion (0.0265)
+        9. playing saxophone (0.0182)
+       10. brushing teeth (0.0162)
+
+BACKGROUND ONLY:
+  Correct action rank: 10/50 (score: 0.0177)
+  Top 10 predictions:
+        1. cleaning windows (0.3821)
+        2. surfing water (0.1252)
+        3. opening bottle (0.1209)
+        4. shooting goal (soccer) (0.0447)
+        5. hitting baseball (0.0372)
+        6. golf driving (0.0370)
+        7. driving car (0.0247)
+        8. climbing a rope (0.0223)
+        9. playing saxophone (0.0209)
+    👉 10. catching or throwing baseball (0.0177)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 8
+Ranking drop from human to background: 8

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000560_opening bottle_to_sword fighting_OayCUxccS0w_000002_000012_bg_EXza4JiRURc_000002_000012
+Frame: 000050.jpg
+Human Action Label (Correct): opening bottle
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.3241)
+
+RANKING ANALYSIS:
+  Human Action 'opening bottle' ranked: #4/50 (score: 0.0504)
+  Background Action 'sword fighting' ranked: #26/50 (score: 0.0055)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.3241)
+      2. playing accordion (0.0678)
+      3. playing violin (0.0561)
+  👤  4. opening bottle (0.0504)
+      5. playing saxophone (0.0471)
+      6. juggling soccer ball (0.0411)
+      7. smoking (0.0389)
+      8. juggling balls (0.0370)
+      9. drinking (0.0322)
+     10. tying tie (0.0319)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 22
+Score gap (bg_score - human_score): -0.0449
+✅ Human action in top 5

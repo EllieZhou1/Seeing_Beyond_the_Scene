@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001631_sweeping floor_to_skiing slalom_6pt981rWjLE_000004_000014_bg_20sQeluAuo8_000099_000109
+Frame: 000050.jpg
+Human Action Label (Correct): sweeping floor
+Background Label (Incorrect): skiing slalom
+
+CLIP PREDICTIONS:
+  Predicted Label: flying kite (score: 0.5104)
+
+RANKING ANALYSIS:
+  Human Action 'sweeping floor' ranked: #30/50 (score: 0.0026)
+  Background Action 'skiing slalom' ranked: #10/50 (score: 0.0192)
+
+Top 10 predictions:
+      1. flying kite (0.5104)
+      2. climbing ladder (0.0950)
+      3. shooting goal (soccer) (0.0441)
+      4. climbing a rope (0.0388)
+      5. dunking basketball (0.0299)
+      6. surfing water (0.0294)
+      7. juggling soccer ball (0.0257)
+      8. juggling balls (0.0245)
+      9. dribbling basketball (0.0199)
+  🏞️ 10. skiing slalom (0.0192)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -20
+Score gap (bg_score - human_score): 0.0166

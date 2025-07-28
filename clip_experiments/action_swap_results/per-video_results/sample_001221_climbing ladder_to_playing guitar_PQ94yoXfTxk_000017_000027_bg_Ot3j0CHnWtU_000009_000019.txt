@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001221_climbing ladder_to_playing guitar_PQ94yoXfTxk_000017_000027_bg_Ot3j0CHnWtU_000009_000019
+Frame: 000050.jpg
+Human Action Label (Correct): climbing ladder
+Background Label (Incorrect): playing guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.0961)
+
+RANKING ANALYSIS:
+  Human Action 'climbing ladder' ranked: #4/50 (score: 0.0520)
+  Background Action 'playing guitar' ranked: #26/50 (score: 0.0135)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.0961)
+      2. juggling soccer ball (0.0828)
+      3. eating cake (0.0564)
+  👤  4. climbing ladder (0.0520)
+      5. juggling balls (0.0499)
+      6. playing violin (0.0412)
+      7. hitting baseball (0.0394)
+      8. playing accordion (0.0362)
+      9. cleaning windows (0.0340)
+     10. climbing a rope (0.0334)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 22
+Score gap (bg_score - human_score): -0.0385
+✅ Human action in top 5

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000962_walking the dog_to_flying kite_2Hbz_qxG3qk_000026_000036_bg_OFdRoInpol8_000001_000011
+Frame: 000050.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2460)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #8/50 (score: 0.0522)
+  Background Action 'flying kite' ranked: #5/50 (score: 0.0781)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2460)
+      2. catching or throwing frisbee (0.1305)
+      3. juggling balls (0.1236)
+      4. playing volleyball (0.0900)
+  🏞️  5. flying kite (0.0781)
+      6. dribbling basketball (0.0610)
+      7. skipping rope (0.0588)
+  👤  8. walking the dog (0.0522)
+      9. dunking basketball (0.0238)
+     10. surfing water (0.0221)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -3
+Score gap (bg_score - human_score): 0.0259
+⚠️  Background action in top 5!

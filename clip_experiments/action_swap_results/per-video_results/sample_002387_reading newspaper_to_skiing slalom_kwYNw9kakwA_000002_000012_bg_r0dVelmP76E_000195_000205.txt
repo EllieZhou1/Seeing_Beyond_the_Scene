@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002387_reading newspaper_to_skiing slalom_kwYNw9kakwA_000002_000012_bg_r0dVelmP76E_000195_000205
+Frame: 000050.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): skiing slalom
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.3474)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #41/50 (score: 0.0002)
+  Background Action 'skiing slalom' ranked: #2/50 (score: 0.2288)
+
+Top 10 predictions:
+      1. climbing a rope (0.3474)
+  🏞️  2. skiing slalom (0.2288)
+      3. climbing ladder (0.1783)
+      4. skiing (not slalom or crosscountry) (0.0562)
+      5. golf driving (0.0401)
+      6. dribbling basketball (0.0349)
+      7. dunking basketball (0.0204)
+      8. juggling soccer ball (0.0164)
+      9. juggling balls (0.0097)
+     10. hurdling (0.0076)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -39
+Score gap (bg_score - human_score): 0.2285
+⚠️  Background action in top 5!

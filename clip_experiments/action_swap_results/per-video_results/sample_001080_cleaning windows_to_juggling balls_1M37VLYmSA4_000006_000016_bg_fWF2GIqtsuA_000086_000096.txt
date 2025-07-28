@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001080_cleaning windows_to_juggling balls_1M37VLYmSA4_000006_000016_bg_fWF2GIqtsuA_000086_000096
+Frame: 000050.jpg
+Human Action Label (Correct): cleaning windows
+Background Label (Incorrect): juggling balls
+
+CLIP PREDICTIONS:
+  Predicted Label: sweeping floor (score: 0.2565)
+
+RANKING ANALYSIS:
+  Human Action 'cleaning windows' ranked: #13/50 (score: 0.0118)
+  Background Action 'juggling balls' ranked: #4/50 (score: 0.0944)
+
+Top 10 predictions:
+      1. sweeping floor (0.2565)
+      2. skipping rope (0.1875)
+      3. juggling soccer ball (0.1054)
+  🏞️  4. juggling balls (0.0944)
+      5. climbing a rope (0.0489)
+      6. sword fighting (0.0310)
+      7. deadlifting (0.0299)
+      8. hurdling (0.0215)
+      9. dribbling basketball (0.0191)
+     10. playing violin (0.0186)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -9
+Score gap (bg_score - human_score): 0.0826
+⚠️  Background action in top 5!

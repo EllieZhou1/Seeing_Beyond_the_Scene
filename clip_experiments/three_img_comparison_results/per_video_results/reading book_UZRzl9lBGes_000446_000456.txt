@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: UZRzl9lBGes
+Action: reading book
+Time: 446-456s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 31/50 (score: 0.0010)
+  Top 10 predictions:
+        1. opening bottle (0.2643)
+        2. eating ice cream (0.2247)
+        3. eating cake (0.1565)
+        4. juggling balls (0.0659)
+        5. juggling soccer ball (0.0612)
+        6. cleaning windows (0.0457)
+        7. climbing a rope (0.0256)
+        8. punching person (boxing) (0.0242)
+        9. drinking (0.0229)
+       10. surfing water (0.0156)
+
+HUMAN ONLY:
+  Correct action rank: 41/50 (score: 0.0013)
+  Top 10 predictions:
+        1. punching person (boxing) (0.4284)
+        2. juggling soccer ball (0.1055)
+        3. tying tie (0.0824)
+        4. juggling balls (0.0573)
+        5. dribbling basketball (0.0400)
+        6. climbing a rope (0.0378)
+        7. skipping rope (0.0231)
+        8. opening bottle (0.0220)
+        9. dunking basketball (0.0192)
+       10. climbing ladder (0.0173)
+
+BACKGROUND ONLY:
+  Correct action rank: 35/50 (score: 0.0009)
+  Top 10 predictions:
+        1. eating ice cream (0.3854)
+        2. drinking (0.2260)
+        3. opening bottle (0.1469)
+        4. bowling (0.0388)
+        5. juggling balls (0.0337)
+        6. eating cake (0.0236)
+        7. surfing water (0.0195)
+        8. dunking basketball (0.0160)
+        9. juggling soccer ball (0.0156)
+       10. cleaning windows (0.0113)
+
+BIAS ASSESSMENT:
+✅ Good: Background-only doesn't rank highly
+Ranking drop from original to background: 4
+Ranking drop from human to background: -6
+🚨 WARNING: Background ranks higher than human-only!

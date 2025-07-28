@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: KurBYv9Hi6s
+Action: reading book
+Time: 28-38s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 1/50 (score: 0.5453)
+  Top 10 predictions:
+    👉  1. reading book (0.5453)
+        2. reading newspaper (0.2173)
+        3. playing accordion (0.1210)
+        4. climbing ladder (0.0264)
+        5. eating cake (0.0138)
+        6. playing piano (0.0102)
+        7. brushing hair (0.0097)
+        8. sword fighting (0.0069)
+        9. juggling balls (0.0046)
+       10. juggling soccer ball (0.0040)
+
+HUMAN ONLY:
+  Correct action rank: 7/50 (score: 0.0425)
+  Top 10 predictions:
+        1. playing accordion (0.2901)
+        2. punching person (boxing) (0.1023)
+        3. juggling balls (0.0806)
+        4. sword fighting (0.0652)
+        5. reading newspaper (0.0534)
+        6. juggling soccer ball (0.0471)
+    👉  7. reading book (0.0425)
+        8. opening bottle (0.0373)
+        9. skipping rope (0.0356)
+       10. playing violin (0.0285)
+
+BACKGROUND ONLY:
+  Correct action rank: 3/50 (score: 0.0867)
+  Top 10 predictions:
+        1. sweeping floor (0.4607)
+        2. cleaning windows (0.2467)
+    👉  3. reading book (0.0867)
+        4. surfing water (0.0658)
+        5. reading newspaper (0.0377)
+        6. opening bottle (0.0327)
+        7. catching or throwing baseball (0.0059)
+        8. catching or throwing frisbee (0.0058)
+        9. juggling soccer ball (0.0058)
+       10. climbing ladder (0.0055)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: 2
+Ranking drop from human to background: -4
+🚨 WARNING: Background ranks higher than human-only!

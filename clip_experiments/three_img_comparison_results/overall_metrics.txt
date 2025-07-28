@@ -1,0 +1,43 @@
+OVERALL PERFORMANCE METRICS:
+  Original images - Top-1: 59.6%, Top-5: 86.4%
+  Human-only images - Top-1: 19.3%, Top-5: 42.5%
+  Background-only images - Top-1: 45.0%, Top-5: 71.8%
+
+How Often Background-only in top-5: 1783/2483 (71.8%)
+How Often Background-only in top-10: 2026/2483 (81.6%)
+
+Mean background-only rank: 6.3
+Mean human-only rank: 12.6
+Mean original rank: 3.4
+
+Mean background-only similarity score: 0.4
+Mean human-only similarity score: 0.1
+Mean original similarity score: 0.5
+
+MOST BIASED ACTIONS (actions w/ the highest avg ranking on background-only):
+                                     count  avg_rank  avg_score
+label                                                          
+skiing slalom                           50     1.040      0.767
+cleaning windows                        50     1.380      0.701
+juggling soccer ball                    50     1.840      0.433
+playing tennis                          50     1.960      0.724
+playing piano                           50     2.020      0.703
+skiing (not slalom or crosscountry)     49     2.122      0.261
+canoeing or kayaking                    50     2.220      0.465
+clean and jerk                          49     2.286      0.609
+shooting goal (soccer)                  50     2.300      0.565
+dribbling basketball                    50     2.380      0.407
+
+LEAST BIASED ACTIONS (actions w/ the lowest avg ranking background-only):
+                   count  avg_rank  avg_score
+label                                        
+tying tie             50    23.140      0.083
+eating ice cream      50    18.140      0.051
+drinking              49    15.571      0.045
+brushing hair         50    15.480      0.179
+brushing teeth        50    14.420      0.155
+reading book          50    14.100      0.136
+smoking               49    13.714      0.125
+sword fighting        50    11.180      0.067
+reading newspaper     50    10.420      0.352
+skipping rope         49     9.020      0.044

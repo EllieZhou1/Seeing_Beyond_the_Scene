@@ -1,0 +1,54 @@
+CLIP Bias Analysis Results
+==================================================
+Video: Kiz-WIN5T7U
+Action: climbing ladder
+Time: 23-33s
+Frame: 50
+
+ORIGINAL:
+  Correct action rank: 15/50 (score: 0.0179)
+  Top 10 predictions:
+        1. punching person (boxing) (0.3776)
+        2. playing accordion (0.0629)
+        3. driving car (0.0438)
+        4. cleaning windows (0.0430)
+        5. playing saxophone (0.0380)
+        6. dunking basketball (0.0340)
+        7. playing piano (0.0332)
+        8. juggling soccer ball (0.0308)
+        9. eating cake (0.0278)
+       10. sword fighting (0.0237)
+
+HUMAN ONLY:
+  Correct action rank: 19/50 (score: 0.0168)
+  Top 10 predictions:
+        1. punching person (boxing) (0.1357)
+        2. eating ice cream (0.1132)
+        3. eating cake (0.0870)
+        4. opening bottle (0.0632)
+        5. drinking (0.0559)
+        6. juggling balls (0.0427)
+        7. playing piano (0.0338)
+        8. tying tie (0.0335)
+        9. brushing hair (0.0308)
+       10. smoking (0.0308)
+
+BACKGROUND ONLY:
+  Correct action rank: 2/50 (score: 0.1307)
+  Top 10 predictions:
+        1. punching person (boxing) (0.1410)
+    👉  2. climbing ladder (0.1307)
+        3. playing accordion (0.0869)
+        4. playing saxophone (0.0603)
+        5. playing piano (0.0597)
+        6. dunking basketball (0.0531)
+        7. opening bottle (0.0378)
+        8. playing guitar (0.0291)
+        9. climbing a rope (0.0290)
+       10. playing basketball (0.0267)
+
+BIAS ASSESSMENT:
+⚠️  POTENTIAL BIAS: Background-only ranks in top 5!
+Ranking drop from original to background: -13
+Ranking drop from human to background: -17
+🚨 WARNING: Background ranks higher than human-only!

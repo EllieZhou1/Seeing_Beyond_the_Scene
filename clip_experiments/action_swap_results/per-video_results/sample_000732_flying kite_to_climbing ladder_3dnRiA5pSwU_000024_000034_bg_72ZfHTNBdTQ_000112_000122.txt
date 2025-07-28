@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000732_flying kite_to_climbing ladder_3dnRiA5pSwU_000024_000034_bg_72ZfHTNBdTQ_000112_000122
+Frame: 000050.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): climbing ladder
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.1199)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #40/50 (score: 0.0029)
+  Background Action 'climbing ladder' ranked: #6/50 (score: 0.0553)
+
+Top 10 predictions:
+      1. skiing slalom (0.1199)
+      2. climbing a rope (0.1185)
+      3. opening bottle (0.1100)
+      4. cleaning windows (0.0827)
+      5. surfing water (0.0720)
+  🏞️  6. climbing ladder (0.0553)
+      7. sweeping floor (0.0516)
+      8. walking the dog (0.0500)
+      9. skiing (not slalom or crosscountry) (0.0310)
+     10. eating ice cream (0.0282)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -34
+Score gap (bg_score - human_score): 0.0525

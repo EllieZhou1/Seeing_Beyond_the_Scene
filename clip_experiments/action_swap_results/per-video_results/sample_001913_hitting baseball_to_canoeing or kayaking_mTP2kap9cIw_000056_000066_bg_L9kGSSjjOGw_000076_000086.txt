@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001913_hitting baseball_to_canoeing or kayaking_mTP2kap9cIw_000056_000066_bg_L9kGSSjjOGw_000076_000086
+Frame: 000050.jpg
+Human Action Label (Correct): hitting baseball
+Background Label (Incorrect): canoeing or kayaking
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.2298)
+
+RANKING ANALYSIS:
+  Human Action 'hitting baseball' ranked: #3/50 (score: 0.1061)
+  Background Action 'canoeing or kayaking' ranked: #49/50 (score: 0.0003)
+
+Top 10 predictions:
+      1. sword fighting (0.2298)
+      2. archery (0.1463)
+  👤  3. hitting baseball (0.1061)
+      4. cleaning windows (0.0694)
+      5. skiing slalom (0.0589)
+      6. punching person (boxing) (0.0532)
+      7. climbing ladder (0.0302)
+      8. dunking basketball (0.0248)
+      9. catching or throwing baseball (0.0225)
+     10. playing violin (0.0192)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 46
+Score gap (bg_score - human_score): -0.1058
+✅ Human action in top 5

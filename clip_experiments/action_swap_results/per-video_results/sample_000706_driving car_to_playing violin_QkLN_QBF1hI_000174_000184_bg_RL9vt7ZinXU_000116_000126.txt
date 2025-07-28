@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000706_driving car_to_playing violin_QkLN_QBF1hI_000174_000184_bg_RL9vt7ZinXU_000116_000126
+Frame: 000050.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): playing violin
+
+CLIP PREDICTIONS:
+  Predicted Label: playing violin (score: 0.4425)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #27/50 (score: 0.0013)
+  Background Action 'playing violin' ranked: #1/50 (score: 0.4425)
+
+Top 10 predictions:
+  🏞️  1. playing violin (0.4425)
+      2. playing bass guitar (0.1611)
+      3. playing saxophone (0.0758)
+      4. playing trumpet (0.0510)
+      5. playing guitar (0.0314)
+      6. archery (0.0292)
+      7. playing piano (0.0290)
+      8. sword fighting (0.0283)
+      9. playing accordion (0.0218)
+     10. climbing a rope (0.0218)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -26
+Score gap (bg_score - human_score): 0.4412
+⚠️  Background action in top 5!

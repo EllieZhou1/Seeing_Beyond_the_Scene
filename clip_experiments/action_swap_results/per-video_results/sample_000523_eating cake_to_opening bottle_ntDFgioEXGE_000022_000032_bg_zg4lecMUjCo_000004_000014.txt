@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000523_eating cake_to_opening bottle_ntDFgioEXGE_000022_000032_bg_zg4lecMUjCo_000004_000014
+Frame: 000050.jpg
+Human Action Label (Correct): eating cake
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: dribbling basketball (score: 0.2532)
+
+RANKING ANALYSIS:
+  Human Action 'eating cake' ranked: #2/50 (score: 0.0791)
+  Background Action 'opening bottle' ranked: #6/50 (score: 0.0379)
+
+Top 10 predictions:
+      1. dribbling basketball (0.2532)
+  👤  2. eating cake (0.0791)
+      3. juggling soccer ball (0.0455)
+      4. brushing hair (0.0398)
+      5. drinking (0.0384)
+  🏞️  6. opening bottle (0.0379)
+      7. climbing a rope (0.0374)
+      8. hitting baseball (0.0327)
+      9. playing piano (0.0313)
+     10. juggling balls (0.0311)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 4
+Score gap (bg_score - human_score): -0.0413
+✅ Human action in top 5

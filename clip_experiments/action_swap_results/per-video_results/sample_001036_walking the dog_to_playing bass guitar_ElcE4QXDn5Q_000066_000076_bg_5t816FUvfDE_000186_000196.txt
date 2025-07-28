@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001036_walking the dog_to_playing bass guitar_ElcE4QXDn5Q_000066_000076_bg_5t816FUvfDE_000186_000196
+Frame: 000050.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): playing bass guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: walking the dog (score: 0.2379)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #1/50 (score: 0.2379)
+  Background Action 'playing bass guitar' ranked: #5/50 (score: 0.0488)
+
+Top 10 predictions:
+  👤  1. walking the dog (0.2379)
+      2. climbing a rope (0.1304)
+      3. climbing ladder (0.1044)
+      4. playing violin (0.0502)
+  🏞️  5. playing bass guitar (0.0488)
+      6. playing guitar (0.0485)
+      7. sword fighting (0.0322)
+      8. skiing slalom (0.0317)
+      9. skipping rope (0.0264)
+     10. playing accordion (0.0256)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 4
+Score gap (bg_score - human_score): -0.1891
+⚠️  Background action in top 5!
+✅ Human action in top 5

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002210_playing basketball_to_playing accordion_cM5f-bT07gc_000033_000043_bg_tCCzoeyYHbY_000007_000017
+Frame: 000050.jpg
+Human Action Label (Correct): playing basketball
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.5453)
+
+RANKING ANALYSIS:
+  Human Action 'playing basketball' ranked: #6/50 (score: 0.0265)
+  Background Action 'playing accordion' ranked: #22/50 (score: 0.0031)
+
+Top 10 predictions:
+      1. dunking basketball (0.5453)
+      2. juggling balls (0.1073)
+      3. juggling soccer ball (0.0661)
+      4. flying kite (0.0301)
+      5. hurdling (0.0297)
+  👤  6. playing basketball (0.0265)
+      7. sword fighting (0.0261)
+      8. dribbling basketball (0.0224)
+      9. climbing a rope (0.0206)
+     10. shooting basketball (0.0187)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 16
+Score gap (bg_score - human_score): -0.0234

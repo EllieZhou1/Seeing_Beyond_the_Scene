@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000003_playing piano_to_dunking basketball_6Mc8e7lgJtk_000011_000021_bg_Bl28qY8T6NA_000045_000055
+Frame: 000050.jpg
+Human Action Label (Correct): playing piano
+Background Label (Incorrect): dunking basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.3580)
+
+RANKING ANALYSIS:
+  Human Action 'playing piano' ranked: #11/50 (score: 0.0080)
+  Background Action 'dunking basketball' ranked: #5/50 (score: 0.0272)
+
+Top 10 predictions:
+      1. climbing ladder (0.3580)
+      2. skipping rope (0.2517)
+      3. cleaning windows (0.1520)
+      4. climbing a rope (0.0516)
+  🏞️  5. dunking basketball (0.0272)
+      6. sword fighting (0.0157)
+      7. punching person (boxing) (0.0120)
+      8. flying kite (0.0118)
+      9. opening bottle (0.0095)
+     10. hurdling (0.0081)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -6
+Score gap (bg_score - human_score): 0.0193
+⚠️  Background action in top 5!

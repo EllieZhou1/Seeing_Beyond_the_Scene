@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000886_hitting baseball_to_playing bass guitar_GS-PcxmaHmQ_000847_000857_bg__yjXKwUgolA_000076_000086
+Frame: 000050.jpg
+Human Action Label (Correct): hitting baseball
+Background Label (Incorrect): playing bass guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: archery (score: 0.3205)
+
+RANKING ANALYSIS:
+  Human Action 'hitting baseball' ranked: #2/50 (score: 0.1292)
+  Background Action 'playing bass guitar' ranked: #9/50 (score: 0.0249)
+
+Top 10 predictions:
+      1. archery (0.3205)
+  👤  2. hitting baseball (0.1292)
+      3. sword fighting (0.1244)
+      4. juggling balls (0.1023)
+      5. juggling soccer ball (0.0582)
+      6. catching or throwing baseball (0.0519)
+      7. playing tennis (0.0402)
+      8. playing violin (0.0265)
+  🏞️  9. playing bass guitar (0.0249)
+     10. playing accordion (0.0207)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 7
+Score gap (bg_score - human_score): -0.1042
+✅ Human action in top 5

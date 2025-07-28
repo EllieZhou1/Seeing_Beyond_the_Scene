@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001712_brushing teeth_to_clean and jerk_v2lhU-CtJQc_000000_000010_bg_aZT3e7SrIoI_000003_000013
+Frame: 000050.jpg
+Human Action Label (Correct): brushing teeth
+Background Label (Incorrect): clean and jerk
+
+CLIP PREDICTIONS:
+  Predicted Label: eating ice cream (score: 0.3615)
+
+RANKING ANALYSIS:
+  Human Action 'brushing teeth' ranked: #6/50 (score: 0.0255)
+  Background Action 'clean and jerk' ranked: #35/50 (score: 0.0028)
+
+Top 10 predictions:
+      1. eating ice cream (0.3615)
+      2. eating cake (0.2075)
+      3. drinking (0.0679)
+      4. playing saxophone (0.0374)
+      5. playing trumpet (0.0343)
+  👤  6. brushing teeth (0.0255)
+      7. opening bottle (0.0230)
+      8. playing accordion (0.0198)
+      9. playing violin (0.0181)
+     10. dribbling basketball (0.0174)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 29
+Score gap (bg_score - human_score): -0.0227

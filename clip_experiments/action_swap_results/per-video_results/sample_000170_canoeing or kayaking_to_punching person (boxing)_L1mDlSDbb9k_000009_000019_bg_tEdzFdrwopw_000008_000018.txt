@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000170_canoeing or kayaking_to_punching person (boxing)_L1mDlSDbb9k_000009_000019_bg_tEdzFdrwopw_000008_000018
+Frame: 000050.jpg
+Human Action Label (Correct): canoeing or kayaking
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.2058)
+
+RANKING ANALYSIS:
+  Human Action 'canoeing or kayaking' ranked: #49/50 (score: 0.0001)
+  Background Action 'punching person (boxing)' ranked: #43/50 (score: 0.0008)
+
+Top 10 predictions:
+      1. climbing ladder (0.2058)
+      2. deadlifting (0.1442)
+      3. sweeping floor (0.1121)
+      4. shooting basketball (0.0568)
+      5. playing tennis (0.0555)
+      6. clean and jerk (0.0536)
+      7. shooting goal (soccer) (0.0418)
+      8. skipping rope (0.0393)
+      9. dunking basketball (0.0381)
+     10. flying kite (0.0306)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -6
+Score gap (bg_score - human_score): 0.0007

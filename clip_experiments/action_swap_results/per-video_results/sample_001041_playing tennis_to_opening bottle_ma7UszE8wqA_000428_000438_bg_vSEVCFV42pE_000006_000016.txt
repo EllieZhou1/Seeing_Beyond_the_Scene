@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001041_playing tennis_to_opening bottle_ma7UszE8wqA_000428_000438_bg_vSEVCFV42pE_000006_000016
+Frame: 000050.jpg
+Human Action Label (Correct): playing tennis
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.5794)
+
+RANKING ANALYSIS:
+  Human Action 'playing tennis' ranked: #5/50 (score: 0.0315)
+  Background Action 'opening bottle' ranked: #37/50 (score: 0.0003)
+
+Top 10 predictions:
+      1. skiing slalom (0.5794)
+      2. skiing (not slalom or crosscountry) (0.0722)
+      3. shooting goal (soccer) (0.0483)
+      4. juggling soccer ball (0.0336)
+  👤  5. playing tennis (0.0315)
+      6. flying kite (0.0298)
+      7. surfing water (0.0279)
+      8. catching or throwing frisbee (0.0176)
+      9. dribbling basketball (0.0156)
+     10. sweeping floor (0.0151)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 32
+Score gap (bg_score - human_score): -0.0311
+✅ Human action in top 5

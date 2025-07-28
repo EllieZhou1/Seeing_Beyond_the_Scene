@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001188_cleaning windows_to_archery_6fFmBjQqtI4_000043_000053_bg_oz3ruRsh-HY_000517_000527
+Frame: 000050.jpg
+Human Action Label (Correct): cleaning windows
+Background Label (Incorrect): archery
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.1445)
+
+RANKING ANALYSIS:
+  Human Action 'cleaning windows' ranked: #40/50 (score: 0.0036)
+  Background Action 'archery' ranked: #13/50 (score: 0.0191)
+
+Top 10 predictions:
+      1. sword fighting (0.1445)
+      2. opening bottle (0.1264)
+      3. bowling (0.0996)
+      4. driving car (0.0508)
+      5. surfing water (0.0474)
+      6. climbing a rope (0.0466)
+      7. skiing slalom (0.0431)
+      8. climbing ladder (0.0415)
+      9. sweeping floor (0.0333)
+     10. dribbling basketball (0.0260)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -27
+Score gap (bg_score - human_score): 0.0155

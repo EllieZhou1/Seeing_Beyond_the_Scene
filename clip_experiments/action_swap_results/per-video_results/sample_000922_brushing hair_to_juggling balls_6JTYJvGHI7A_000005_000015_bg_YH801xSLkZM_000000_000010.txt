@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000922_brushing hair_to_juggling balls_6JTYJvGHI7A_000005_000015_bg_YH801xSLkZM_000000_000010
+Frame: 000050.jpg
+Human Action Label (Correct): brushing hair
+Background Label (Incorrect): juggling balls
+
+CLIP PREDICTIONS:
+  Predicted Label: playing guitar (score: 0.1453)
+
+RANKING ANALYSIS:
+  Human Action 'brushing hair' ranked: #2/50 (score: 0.1050)
+  Background Action 'juggling balls' ranked: #21/50 (score: 0.0110)
+
+Top 10 predictions:
+      1. playing guitar (0.1453)
+  👤  2. brushing hair (0.1050)
+      3. sword fighting (0.1004)
+      4. playing violin (0.0852)
+      5. skipping rope (0.0735)
+      6. playing accordion (0.0551)
+      7. playing piano (0.0530)
+      8. brushing teeth (0.0349)
+      9. playing tennis (0.0298)
+     10. eating ice cream (0.0290)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 19
+Score gap (bg_score - human_score): -0.0940
+✅ Human action in top 5

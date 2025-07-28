@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000429_playing volleyball_to_punching person (boxing)_oiwb5wDaotw_000175_000185_bg_JosqyNGpXfs_000208_000218
+Frame: 000050.jpg
+Human Action Label (Correct): playing volleyball
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: hurdling (score: 0.3626)
+
+RANKING ANALYSIS:
+  Human Action 'playing volleyball' ranked: #2/50 (score: 0.2623)
+  Background Action 'punching person (boxing)' ranked: #19/50 (score: 0.0028)
+
+Top 10 predictions:
+      1. hurdling (0.3626)
+  👤  2. playing volleyball (0.2623)
+      3. dunking basketball (0.0838)
+      4. playing basketball (0.0777)
+      5. clean and jerk (0.0495)
+      6. shooting basketball (0.0382)
+      7. juggling soccer ball (0.0231)
+      8. playing tennis (0.0212)
+      9. climbing ladder (0.0126)
+     10. dribbling basketball (0.0093)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 17
+Score gap (bg_score - human_score): -0.2595
+✅ Human action in top 5
