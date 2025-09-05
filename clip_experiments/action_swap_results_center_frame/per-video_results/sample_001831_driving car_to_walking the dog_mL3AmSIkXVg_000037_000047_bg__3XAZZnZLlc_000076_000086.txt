@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001831_driving car_to_walking the dog_mL3AmSIkXVg_000037_000047_bg__3XAZZnZLlc_000076_000086
+Frame: MIDDLE.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling balls (score: 0.2024)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #14/50 (score: 0.0145)
+  Background Action 'walking the dog' ranked: #26/50 (score: 0.0053)
+
+Top 10 predictions:
+      1. juggling balls (0.2024)
+      2. climbing ladder (0.1557)
+      3. eating ice cream (0.1151)
+      4. hitting baseball (0.0794)
+      5. cleaning windows (0.0593)
+      6. climbing a rope (0.0512)
+      7. playing accordion (0.0405)
+      8. catching or throwing baseball (0.0351)
+      9. opening bottle (0.0208)
+     10. eating cake (0.0195)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 12
+Score gap (bg_score - human_score): -0.0092

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001704_surfing water_to_sword fighting_3tKrqlMI8ZU_000053_000063_bg_PCKD6J3760M_000026_000036
+Frame: MIDDLE.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.3984)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #39/50 (score: 0.0014)
+  Background Action 'sword fighting' ranked: #7/50 (score: 0.0283)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.3984)
+      2. juggling balls (0.1122)
+      3. dunking basketball (0.0574)
+      4. cleaning windows (0.0420)
+      5. flying kite (0.0344)
+      6. dribbling basketball (0.0307)
+  🏞️  7. sword fighting (0.0283)
+      8. playing saxophone (0.0245)
+      9. playing basketball (0.0221)
+     10. catching or throwing baseball (0.0215)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -32
+Score gap (bg_score - human_score): 0.0269

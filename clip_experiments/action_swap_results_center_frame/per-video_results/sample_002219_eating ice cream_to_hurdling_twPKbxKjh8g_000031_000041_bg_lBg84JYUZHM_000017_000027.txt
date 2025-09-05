@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002219_eating ice cream_to_hurdling_twPKbxKjh8g_000031_000041_bg_lBg84JYUZHM_000017_000027
+Frame: MIDDLE.jpg
+Human Action Label (Correct): eating ice cream
+Background Label (Incorrect): hurdling
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.1824)
+
+RANKING ANALYSIS:
+  Human Action 'eating ice cream' ranked: #20/50 (score: 0.0034)
+  Background Action 'hurdling' ranked: #2/50 (score: 0.1741)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.1824)
+  🏞️  2. hurdling (0.1741)
+      3. dribbling basketball (0.1032)
+      4. skipping rope (0.0977)
+      5. hitting baseball (0.0803)
+      6. climbing a rope (0.0599)
+      7. catching or throwing baseball (0.0596)
+      8. catching or throwing frisbee (0.0424)
+      9. juggling balls (0.0423)
+     10. shooting goal (soccer) (0.0296)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -18
+Score gap (bg_score - human_score): 0.1707
+⚠️  Background action in top 5!

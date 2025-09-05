@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000308_cleaning windows_to_golf driving_T9c_KZVHP4E_000053_000063_bg_IKonv-whHXo_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): cleaning windows
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: golf driving (score: 0.6761)
+
+RANKING ANALYSIS:
+  Human Action 'cleaning windows' ranked: #19/50 (score: 0.0017)
+  Background Action 'golf driving' ranked: #1/50 (score: 0.6761)
+
+Top 10 predictions:
+  🏞️  1. golf driving (0.6761)
+      2. flying kite (0.1197)
+      3. juggling soccer ball (0.0315)
+      4. hitting baseball (0.0238)
+      5. catching or throwing frisbee (0.0175)
+      6. playing tennis (0.0137)
+      7. shooting goal (soccer) (0.0137)
+      8. sword fighting (0.0131)
+      9. juggling balls (0.0125)
+     10. archery (0.0111)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -18
+Score gap (bg_score - human_score): 0.6744
+⚠️  Background action in top 5!

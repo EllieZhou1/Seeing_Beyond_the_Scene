@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002391_bowling_to_playing trumpet_YlGfbvL4vu4_000005_000015_bg_qt6B6r2eJyw_000019_000029
+Frame: MIDDLE.jpg
+Human Action Label (Correct): bowling
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.1536)
+
+RANKING ANALYSIS:
+  Human Action 'bowling' ranked: #2/50 (score: 0.1364)
+  Background Action 'playing trumpet' ranked: #20/50 (score: 0.0110)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.1536)
+  👤  2. bowling (0.1364)
+      3. juggling balls (0.1011)
+      4. playing tennis (0.0844)
+      5. climbing ladder (0.0796)
+      6. skipping rope (0.0745)
+      7. climbing a rope (0.0598)
+      8. punching person (boxing) (0.0415)
+      9. playing basketball (0.0274)
+     10. dunking basketball (0.0249)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 18
+Score gap (bg_score - human_score): -0.1254
+✅ Human action in top 5

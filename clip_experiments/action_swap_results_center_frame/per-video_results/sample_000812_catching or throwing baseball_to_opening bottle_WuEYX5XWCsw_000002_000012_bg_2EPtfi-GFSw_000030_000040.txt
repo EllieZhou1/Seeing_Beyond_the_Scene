@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000812_catching or throwing baseball_to_opening bottle_WuEYX5XWCsw_000002_000012_bg_2EPtfi-GFSw_000030_000040
+Frame: MIDDLE.jpg
+Human Action Label (Correct): catching or throwing baseball
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.3794)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing baseball' ranked: #38/50 (score: 0.0014)
+  Background Action 'opening bottle' ranked: #1/50 (score: 0.3794)
+
+Top 10 predictions:
+  🏞️  1. opening bottle (0.3794)
+      2. climbing a rope (0.1590)
+      3. skipping rope (0.0493)
+      4. playing violin (0.0450)
+      5. skiing slalom (0.0336)
+      6. flying kite (0.0317)
+      7. sword fighting (0.0314)
+      8. climbing ladder (0.0246)
+      9. hurdling (0.0237)
+     10. juggling balls (0.0232)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -37
+Score gap (bg_score - human_score): 0.3779
+⚠️  Background action in top 5!

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001659_drinking_to_writing_ypxLrXNUcUo_000075_000085_bg_m20BTdy9FGI_000045_000055
+Frame: MIDDLE.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling balls (score: 0.1819)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #14/50 (score: 0.0137)
+  Background Action 'writing' ranked: #35/50 (score: 0.0012)
+
+Top 10 predictions:
+      1. juggling balls (0.1819)
+      2. juggling soccer ball (0.1792)
+      3. punching person (boxing) (0.1491)
+      4. opening bottle (0.0961)
+      5. catching or throwing baseball (0.0637)
+      6. sword fighting (0.0467)
+      7. bowling (0.0308)
+      8. dunking basketball (0.0212)
+      9. hitting baseball (0.0201)
+     10. catching or throwing frisbee (0.0197)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 21
+Score gap (bg_score - human_score): -0.0125

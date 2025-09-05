@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000903_playing piano_to_sweeping floor_tBlO3pzL1_0_000051_000061_bg_d03eVM-eOig_000008_000018
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing piano
+Background Label (Incorrect): sweeping floor
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.2046)
+
+RANKING ANALYSIS:
+  Human Action 'playing piano' ranked: #45/50 (score: 0.0008)
+  Background Action 'sweeping floor' ranked: #29/50 (score: 0.0052)
+
+Top 10 predictions:
+      1. skiing slalom (0.2046)
+      2. driving car (0.0991)
+      3. golf driving (0.0835)
+      4. punching person (boxing) (0.0810)
+      5. skiing (not slalom or crosscountry) (0.0781)
+      6. catching or throwing baseball (0.0718)
+      7. juggling soccer ball (0.0465)
+      8. hitting baseball (0.0357)
+      9. climbing a rope (0.0332)
+     10. dribbling basketball (0.0256)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -16
+Score gap (bg_score - human_score): 0.0043

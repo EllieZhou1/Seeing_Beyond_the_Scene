@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000482_walking the dog_to_sword fighting_ElcE4QXDn5Q_000066_000076_bg_MPVIX-cKe3I_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.2329)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #4/50 (score: 0.0583)
+  Background Action 'sword fighting' ranked: #21/50 (score: 0.0071)
+
+Top 10 predictions:
+      1. climbing ladder (0.2329)
+      2. hurdling (0.2044)
+      3. climbing a rope (0.1642)
+  👤  4. walking the dog (0.0583)
+      5. shooting basketball (0.0353)
+      6. playing basketball (0.0348)
+      7. dunking basketball (0.0268)
+      8. flying kite (0.0197)
+      9. smoking (0.0188)
+     10. sweeping floor (0.0170)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 17
+Score gap (bg_score - human_score): -0.0511
+✅ Human action in top 5

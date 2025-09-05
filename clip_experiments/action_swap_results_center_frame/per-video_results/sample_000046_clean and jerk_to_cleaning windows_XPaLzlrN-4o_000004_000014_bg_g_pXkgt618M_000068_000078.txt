@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000046_clean and jerk_to_cleaning windows_XPaLzlrN-4o_000004_000014_bg_g_pXkgt618M_000068_000078
+Frame: MIDDLE.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2663)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #10/50 (score: 0.0283)
+  Background Action 'cleaning windows' ranked: #4/50 (score: 0.0499)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2663)
+      2. juggling balls (0.1387)
+      3. climbing ladder (0.0926)
+  🏞️  4. cleaning windows (0.0499)
+      5. skipping rope (0.0495)
+      6. hitting baseball (0.0440)
+      7. deadlifting (0.0353)
+      8. dunking basketball (0.0339)
+      9. catching or throwing baseball (0.0328)
+  👤 10. clean and jerk (0.0283)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -6
+Score gap (bg_score - human_score): 0.0216
+⚠️  Background action in top 5!

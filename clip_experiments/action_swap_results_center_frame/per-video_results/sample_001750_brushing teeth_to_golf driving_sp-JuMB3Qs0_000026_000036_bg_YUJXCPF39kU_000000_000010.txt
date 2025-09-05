@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001750_brushing teeth_to_golf driving_sp-JuMB3Qs0_000026_000036_bg_YUJXCPF39kU_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): brushing teeth
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: hitting baseball (score: 0.1032)
+
+RANKING ANALYSIS:
+  Human Action 'brushing teeth' ranked: #8/50 (score: 0.0370)
+  Background Action 'golf driving' ranked: #42/50 (score: 0.0047)
+
+Top 10 predictions:
+      1. hitting baseball (0.1032)
+      2. eating ice cream (0.0598)
+      3. catching or throwing baseball (0.0570)
+      4. dribbling basketball (0.0553)
+      5. juggling soccer ball (0.0456)
+      6. playing accordion (0.0407)
+      7. flying kite (0.0399)
+  👤  8. brushing teeth (0.0370)
+      9. playing basketball (0.0348)
+     10. bowling (0.0337)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 34
+Score gap (bg_score - human_score): -0.0323

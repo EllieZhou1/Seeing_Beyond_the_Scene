@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000840_brushing teeth_to_canoeing or kayaking_0tlGOxUQ0Kw_000074_000084_bg_APbBBzEq7oo_000335_000345
+Frame: MIDDLE.jpg
+Human Action Label (Correct): brushing teeth
+Background Label (Incorrect): canoeing or kayaking
+
+CLIP PREDICTIONS:
+  Predicted Label: catching or throwing frisbee (score: 0.2860)
+
+RANKING ANALYSIS:
+  Human Action 'brushing teeth' ranked: #45/50 (score: 0.0002)
+  Background Action 'canoeing or kayaking' ranked: #37/50 (score: 0.0006)
+
+Top 10 predictions:
+      1. catching or throwing frisbee (0.2860)
+      2. surfing water (0.1964)
+      3. juggling soccer ball (0.1253)
+      4. juggling balls (0.1147)
+      5. catching or throwing baseball (0.0700)
+      6. opening bottle (0.0431)
+      7. tying tie (0.0408)
+      8. climbing a rope (0.0331)
+      9. sword fighting (0.0124)
+     10. flying kite (0.0088)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -8
+Score gap (bg_score - human_score): 0.0003

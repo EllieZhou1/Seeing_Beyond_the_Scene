@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001975_eating cake_to_reading book_Hw278mYOs48_000019_000029_bg_UZRzl9lBGes_000446_000456
+Frame: MIDDLE.jpg
+Human Action Label (Correct): eating cake
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: eating cake (score: 0.6158)
+
+RANKING ANALYSIS:
+  Human Action 'eating cake' ranked: #1/50 (score: 0.6158)
+  Background Action 'reading book' ranked: #36/50 (score: 0.0003)
+
+Top 10 predictions:
+  👤  1. eating cake (0.6158)
+      2. eating ice cream (0.2040)
+      3. playing accordion (0.0305)
+      4. juggling balls (0.0259)
+      5. brushing teeth (0.0190)
+      6. juggling soccer ball (0.0158)
+      7. opening bottle (0.0114)
+      8. drinking (0.0108)
+      9. playing violin (0.0107)
+     10. brushing hair (0.0057)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 35
+Score gap (bg_score - human_score): -0.6155
+✅ Human action in top 5

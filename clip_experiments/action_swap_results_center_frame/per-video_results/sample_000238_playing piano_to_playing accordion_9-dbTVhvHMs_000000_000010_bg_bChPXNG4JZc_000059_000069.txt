@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000238_playing piano_to_playing accordion_9-dbTVhvHMs_000000_000010_bg_bChPXNG4JZc_000059_000069
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing piano
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.6535)
+
+RANKING ANALYSIS:
+  Human Action 'playing piano' ranked: #17/50 (score: 0.0009)
+  Background Action 'playing accordion' ranked: #19/50 (score: 0.0007)
+
+Top 10 predictions:
+      1. climbing ladder (0.6535)
+      2. cleaning windows (0.2120)
+      3. surfing water (0.0336)
+      4. climbing a rope (0.0299)
+      5. dunking basketball (0.0166)
+      6. sweeping floor (0.0152)
+      7. opening bottle (0.0076)
+      8. skipping rope (0.0062)
+      9. hurdling (0.0041)
+     10. punching person (boxing) (0.0029)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 2
+Score gap (bg_score - human_score): -0.0001

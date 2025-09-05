@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001345_smoking_to_sweeping floor_jVP9TvFvrAk_000112_000122_bg_dK8V0bB-m18_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): sweeping floor
+
+CLIP PREDICTIONS:
+  Predicted Label: eating cake (score: 0.3751)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #8/50 (score: 0.0327)
+  Background Action 'sweeping floor' ranked: #26/50 (score: 0.0012)
+
+Top 10 predictions:
+      1. eating cake (0.3751)
+      2. brushing teeth (0.1049)
+      3. playing accordion (0.0719)
+      4. playing piano (0.0710)
+      5. eating ice cream (0.0553)
+      6. drinking (0.0513)
+      7. playing saxophone (0.0452)
+  👤  8. smoking (0.0327)
+      9. playing trumpet (0.0246)
+     10. tying tie (0.0246)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 18
+Score gap (bg_score - human_score): -0.0315

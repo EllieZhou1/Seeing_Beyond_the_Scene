@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000616_juggling soccer ball_to_writing_2WgOKCYyL7g_000084_000094_bg_na9OVxD-EVY_000036_000046
+Frame: MIDDLE.jpg
+Human Action Label (Correct): juggling soccer ball
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: hurdling (score: 0.5958)
+
+RANKING ANALYSIS:
+  Human Action 'juggling soccer ball' ranked: #3/50 (score: 0.0464)
+  Background Action 'writing' ranked: #33/50 (score: 0.0001)
+
+Top 10 predictions:
+      1. hurdling (0.5958)
+      2. skiing slalom (0.1061)
+  👤  3. juggling soccer ball (0.0464)
+      4. skiing (not slalom or crosscountry) (0.0429)
+      5. catching or throwing frisbee (0.0410)
+      6. skipping rope (0.0407)
+      7. surfing water (0.0345)
+      8. shooting goal (soccer) (0.0242)
+      9. playing tennis (0.0222)
+     10. catching or throwing baseball (0.0082)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 30
+Score gap (bg_score - human_score): -0.0463
+✅ Human action in top 5

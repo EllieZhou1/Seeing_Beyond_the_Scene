@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001280_surfing water_to_flying kite_jDTfMSxMSjQ_000112_000122_bg_E-B59dSQhkU_000033_000043
+Frame: MIDDLE.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: flying kite (score: 0.6226)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #23/50 (score: 0.0008)
+  Background Action 'flying kite' ranked: #1/50 (score: 0.6226)
+
+Top 10 predictions:
+  🏞️  1. flying kite (0.6226)
+      2. climbing a rope (0.1589)
+      3. juggling soccer ball (0.0637)
+      4. juggling balls (0.0553)
+      5. hitting baseball (0.0186)
+      6. skiing slalom (0.0151)
+      7. catching or throwing frisbee (0.0123)
+      8. catching or throwing baseball (0.0104)
+      9. climbing ladder (0.0073)
+     10. skiing (not slalom or crosscountry) (0.0048)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -22
+Score gap (bg_score - human_score): 0.6218
+⚠️  Background action in top 5!

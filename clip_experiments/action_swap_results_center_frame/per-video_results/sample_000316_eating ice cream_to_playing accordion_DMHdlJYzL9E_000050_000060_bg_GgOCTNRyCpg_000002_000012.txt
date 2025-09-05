@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000316_eating ice cream_to_playing accordion_DMHdlJYzL9E_000050_000060_bg_GgOCTNRyCpg_000002_000012
+Frame: MIDDLE.jpg
+Human Action Label (Correct): eating ice cream
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: playing piano (score: 0.6821)
+
+RANKING ANALYSIS:
+  Human Action 'eating ice cream' ranked: #12/50 (score: 0.0002)
+  Background Action 'playing accordion' ranked: #2/50 (score: 0.3057)
+
+Top 10 predictions:
+      1. playing piano (0.6821)
+  🏞️  2. playing accordion (0.3057)
+      3. playing saxophone (0.0030)
+      4. playing violin (0.0026)
+      5. playing trumpet (0.0012)
+      6. eating cake (0.0010)
+      7. playing guitar (0.0010)
+      8. climbing ladder (0.0005)
+      9. writing (0.0005)
+     10. reading newspaper (0.0004)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -10
+Score gap (bg_score - human_score): 0.3055
+⚠️  Background action in top 5!

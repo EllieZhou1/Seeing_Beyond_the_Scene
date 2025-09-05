@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000141_writing_to_cleaning windows_5bZojQCp5tk_000318_000328_bg_Yk_4d83mUy0_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): writing
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.7616)
+
+RANKING ANALYSIS:
+  Human Action 'writing' ranked: #16/50 (score: 0.0017)
+  Background Action 'cleaning windows' ranked: #1/50 (score: 0.7616)
+
+Top 10 predictions:
+  🏞️  1. cleaning windows (0.7616)
+      2. climbing a rope (0.0710)
+      3. flying kite (0.0374)
+      4. climbing ladder (0.0286)
+      5. sword fighting (0.0219)
+      6. skipping rope (0.0197)
+      7. smoking (0.0178)
+      8. juggling balls (0.0068)
+      9. brushing teeth (0.0034)
+     10. juggling soccer ball (0.0034)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -15
+Score gap (bg_score - human_score): 0.7599
+⚠️  Background action in top 5!

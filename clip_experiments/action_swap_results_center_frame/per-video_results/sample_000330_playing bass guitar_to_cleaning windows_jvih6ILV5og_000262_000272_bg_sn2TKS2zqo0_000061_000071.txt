@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000330_playing bass guitar_to_cleaning windows_jvih6ILV5og_000262_000272_bg_sn2TKS2zqo0_000061_000071
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing bass guitar
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.3636)
+
+RANKING ANALYSIS:
+  Human Action 'playing bass guitar' ranked: #42/50 (score: 0.0008)
+  Background Action 'cleaning windows' ranked: #3/50 (score: 0.0883)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.3636)
+      2. juggling balls (0.1200)
+  🏞️  3. cleaning windows (0.0883)
+      4. tying tie (0.0880)
+      5. juggling soccer ball (0.0757)
+      6. climbing a rope (0.0375)
+      7. sword fighting (0.0286)
+      8. playing violin (0.0211)
+      9. opening bottle (0.0167)
+     10. playing accordion (0.0143)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -39
+Score gap (bg_score - human_score): 0.0875
+⚠️  Background action in top 5!

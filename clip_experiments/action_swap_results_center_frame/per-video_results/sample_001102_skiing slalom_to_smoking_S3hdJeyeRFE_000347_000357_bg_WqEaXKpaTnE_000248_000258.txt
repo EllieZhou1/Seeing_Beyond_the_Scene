@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001102_skiing slalom_to_smoking_S3hdJeyeRFE_000347_000357_bg_WqEaXKpaTnE_000248_000258
+Frame: MIDDLE.jpg
+Human Action Label (Correct): skiing slalom
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.3401)
+
+RANKING ANALYSIS:
+  Human Action 'skiing slalom' ranked: #8/50 (score: 0.0144)
+  Background Action 'smoking' ranked: #36/50 (score: 0.0011)
+
+Top 10 predictions:
+      1. climbing a rope (0.3401)
+      2. climbing ladder (0.2526)
+      3. cleaning windows (0.0860)
+      4. dunking basketball (0.0650)
+      5. hurdling (0.0419)
+      6. flying kite (0.0196)
+      7. shooting goal (soccer) (0.0195)
+  👤  8. skiing slalom (0.0144)
+      9. juggling soccer ball (0.0138)
+     10. shooting basketball (0.0109)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 28
+Score gap (bg_score - human_score): -0.0134

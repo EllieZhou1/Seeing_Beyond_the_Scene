@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000227_playing tennis_to_bowling_KUPwOAgtqOo_000004_000014_bg_fmBKCRz3yYk_000328_000338
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing tennis
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: bowling (score: 0.6080)
+
+RANKING ANALYSIS:
+  Human Action 'playing tennis' ranked: #44/50 (score: 0.0003)
+  Background Action 'bowling' ranked: #1/50 (score: 0.6080)
+
+Top 10 predictions:
+  🏞️  1. bowling (0.6080)
+      2. playing saxophone (0.0679)
+      3. playing violin (0.0640)
+      4. drinking (0.0360)
+      5. sword fighting (0.0336)
+      6. juggling balls (0.0278)
+      7. skipping rope (0.0193)
+      8. playing trumpet (0.0191)
+      9. eating ice cream (0.0185)
+     10. playing accordion (0.0153)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -43
+Score gap (bg_score - human_score): 0.6078
+⚠️  Background action in top 5!

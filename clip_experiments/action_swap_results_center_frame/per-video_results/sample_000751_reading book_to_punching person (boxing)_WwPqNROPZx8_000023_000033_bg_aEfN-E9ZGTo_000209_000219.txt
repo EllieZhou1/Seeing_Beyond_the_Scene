@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000751_reading book_to_punching person (boxing)_WwPqNROPZx8_000023_000033_bg_aEfN-E9ZGTo_000209_000219
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.8588)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #31/50 (score: 0.0005)
+  Background Action 'punching person (boxing)' ranked: #1/50 (score: 0.8588)
+
+Top 10 predictions:
+  🏞️  1. punching person (boxing) (0.8588)
+      2. climbing ladder (0.0303)
+      3. skipping rope (0.0196)
+      4. climbing a rope (0.0183)
+      5. opening bottle (0.0128)
+      6. playing piano (0.0108)
+      7. bowling (0.0082)
+      8. playing accordion (0.0069)
+      9. clean and jerk (0.0038)
+     10. sweeping floor (0.0025)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -30
+Score gap (bg_score - human_score): 0.8583
+⚠️  Background action in top 5!

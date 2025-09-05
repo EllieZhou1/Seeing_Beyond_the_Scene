@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000879_playing accordion_to_playing trumpet_DYyukPFYRUg_000006_000016_bg_jwYikLyqs0k_000002_000012
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.3118)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #8/50 (score: 0.0178)
+  Background Action 'playing trumpet' ranked: #16/50 (score: 0.0070)
+
+Top 10 predictions:
+      1. cleaning windows (0.3118)
+      2. juggling balls (0.2065)
+      3. punching person (boxing) (0.1208)
+      4. skipping rope (0.0740)
+      5. juggling soccer ball (0.0546)
+      6. playing violin (0.0410)
+      7. deadlifting (0.0201)
+  👤  8. playing accordion (0.0178)
+      9. sword fighting (0.0163)
+     10. hitting baseball (0.0153)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 8
+Score gap (bg_score - human_score): -0.0108

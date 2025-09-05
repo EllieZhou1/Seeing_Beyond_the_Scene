@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000939_sword fighting_to_playing violin_MPVIX-cKe3I_000000_000010_bg_mVH_WLmT_tc_000018_000028
+Frame: MIDDLE.jpg
+Human Action Label (Correct): sword fighting
+Background Label (Incorrect): playing violin
+
+CLIP PREDICTIONS:
+  Predicted Label: playing violin (score: 0.2860)
+
+RANKING ANALYSIS:
+  Human Action 'sword fighting' ranked: #19/50 (score: 0.0056)
+  Background Action 'playing violin' ranked: #1/50 (score: 0.2860)
+
+Top 10 predictions:
+  🏞️  1. playing violin (0.2860)
+      2. juggling balls (0.1181)
+      3. playing piano (0.1168)
+      4. playing saxophone (0.0726)
+      5. playing trumpet (0.0719)
+      6. climbing ladder (0.0619)
+      7. dunking basketball (0.0360)
+      8. hurdling (0.0338)
+      9. climbing a rope (0.0312)
+     10. punching person (boxing) (0.0254)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -18
+Score gap (bg_score - human_score): 0.2803
+⚠️  Background action in top 5!

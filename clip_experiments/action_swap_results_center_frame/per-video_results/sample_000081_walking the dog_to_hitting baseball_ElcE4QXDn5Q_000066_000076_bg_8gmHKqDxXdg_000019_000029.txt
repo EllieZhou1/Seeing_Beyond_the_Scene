@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000081_walking the dog_to_hitting baseball_ElcE4QXDn5Q_000066_000076_bg_8gmHKqDxXdg_000019_000029
+Frame: MIDDLE.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): hitting baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.1436)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #30/50 (score: 0.0043)
+  Background Action 'hitting baseball' ranked: #19/50 (score: 0.0189)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.1436)
+      2. climbing a rope (0.1182)
+      3. skipping rope (0.1000)
+      4. cleaning windows (0.0718)
+      5. skiing slalom (0.0507)
+      6. catching or throwing baseball (0.0455)
+      7. juggling balls (0.0429)
+      8. climbing ladder (0.0319)
+      9. skiing (not slalom or crosscountry) (0.0314)
+     10. flying kite (0.0296)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -11
+Score gap (bg_score - human_score): 0.0146

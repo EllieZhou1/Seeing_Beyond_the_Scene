@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000672_skiing (not slalom or crosscountry)_to_bowling_mYyfgoOtcQc_000226_000236_bg_IknWrGi3QzI_000004_000014
+Frame: MIDDLE.jpg
+Human Action Label (Correct): skiing (not slalom or crosscountry)
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2067)
+
+RANKING ANALYSIS:
+  Human Action 'skiing (not slalom or crosscountry)' ranked: #24/50 (score: 0.0094)
+  Background Action 'bowling' ranked: #2/50 (score: 0.1640)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2067)
+  🏞️  2. bowling (0.1640)
+      3. juggling balls (0.1133)
+      4. dribbling basketball (0.0550)
+      5. shooting basketball (0.0322)
+      6. golf driving (0.0309)
+      7. skiing slalom (0.0299)
+      8. driving car (0.0298)
+      9. playing piano (0.0294)
+     10. dunking basketball (0.0285)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -22
+Score gap (bg_score - human_score): 0.1546
+⚠️  Background action in top 5!

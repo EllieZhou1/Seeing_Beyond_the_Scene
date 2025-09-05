@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001020_playing guitar_to_playing accordion_QjgnG9WpMBE_000020_000030_bg_6-t-BUbr8V4_000005_000015
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing guitar
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.1421)
+
+RANKING ANALYSIS:
+  Human Action 'playing guitar' ranked: #30/50 (score: 0.0040)
+  Background Action 'playing accordion' ranked: #28/50 (score: 0.0044)
+
+Top 10 predictions:
+      1. opening bottle (0.1421)
+      2. cleaning windows (0.1345)
+      3. juggling soccer ball (0.1145)
+      4. juggling balls (0.0922)
+      5. sweeping floor (0.0705)
+      6. skipping rope (0.0589)
+      7. punching person (boxing) (0.0566)
+      8. climbing a rope (0.0349)
+      9. playing saxophone (0.0330)
+     10. dribbling basketball (0.0329)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.0004

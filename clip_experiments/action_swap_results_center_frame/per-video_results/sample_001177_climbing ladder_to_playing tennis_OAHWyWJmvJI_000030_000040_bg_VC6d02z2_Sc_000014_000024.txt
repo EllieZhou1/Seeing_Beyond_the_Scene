@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001177_climbing ladder_to_playing tennis_OAHWyWJmvJI_000030_000040_bg_VC6d02z2_Sc_000014_000024
+Frame: MIDDLE.jpg
+Human Action Label (Correct): climbing ladder
+Background Label (Incorrect): playing tennis
+
+CLIP PREDICTIONS:
+  Predicted Label: playing tennis (score: 0.5988)
+
+RANKING ANALYSIS:
+  Human Action 'climbing ladder' ranked: #16/50 (score: 0.0014)
+  Background Action 'playing tennis' ranked: #1/50 (score: 0.5988)
+
+Top 10 predictions:
+  🏞️  1. playing tennis (0.5988)
+      2. juggling soccer ball (0.1990)
+      3. skipping rope (0.0903)
+      4. shooting goal (soccer) (0.0343)
+      5. juggling balls (0.0222)
+      6. playing volleyball (0.0216)
+      7. hitting baseball (0.0058)
+      8. playing basketball (0.0046)
+      9. hurdling (0.0043)
+     10. dribbling basketball (0.0034)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -15
+Score gap (bg_score - human_score): 0.5974
+⚠️  Background action in top 5!

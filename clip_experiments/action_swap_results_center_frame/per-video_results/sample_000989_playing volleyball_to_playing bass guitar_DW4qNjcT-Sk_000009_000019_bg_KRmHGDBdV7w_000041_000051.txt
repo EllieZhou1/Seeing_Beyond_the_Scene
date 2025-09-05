@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000989_playing volleyball_to_playing bass guitar_DW4qNjcT-Sk_000009_000019_bg_KRmHGDBdV7w_000041_000051
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing volleyball
+Background Label (Incorrect): playing bass guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.2133)
+
+RANKING ANALYSIS:
+  Human Action 'playing volleyball' ranked: #10/50 (score: 0.0372)
+  Background Action 'playing bass guitar' ranked: #4/50 (score: 0.0703)
+
+Top 10 predictions:
+      1. dunking basketball (0.2133)
+      2. hurdling (0.1320)
+      3. playing guitar (0.0836)
+  🏞️  4. playing bass guitar (0.0703)
+      5. skipping rope (0.0554)
+      6. playing tennis (0.0471)
+      7. shooting goal (soccer) (0.0433)
+      8. playing basketball (0.0418)
+      9. dribbling basketball (0.0385)
+  👤 10. playing volleyball (0.0372)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -6
+Score gap (bg_score - human_score): 0.0332
+⚠️  Background action in top 5!

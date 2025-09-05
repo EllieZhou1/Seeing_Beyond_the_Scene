@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000722_playing volleyball_to_tying tie_ZFqcERoPnmg_000413_000423_bg_NjkI5WDOZeo_000157_000167
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing volleyball
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: playing basketball (score: 0.2754)
+
+RANKING ANALYSIS:
+  Human Action 'playing volleyball' ranked: #8/50 (score: 0.0051)
+  Background Action 'tying tie' ranked: #29/50 (score: 0.0003)
+
+Top 10 predictions:
+      1. playing basketball (0.2754)
+      2. dunking basketball (0.2295)
+      3. dribbling basketball (0.2274)
+      4. shooting basketball (0.1638)
+      5. skipping rope (0.0329)
+      6. hurdling (0.0219)
+      7. shooting goal (soccer) (0.0159)
+  👤  8. playing volleyball (0.0051)
+      9. climbing ladder (0.0049)
+     10. bowling (0.0035)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 21
+Score gap (bg_score - human_score): -0.0048

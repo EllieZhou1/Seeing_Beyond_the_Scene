@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001760_eating cake_to_archery_y9sW-lXZKEo_000011_000021_bg_FzfqEd36YbY_001101_001111
+Frame: MIDDLE.jpg
+Human Action Label (Correct): eating cake
+Background Label (Incorrect): archery
+
+CLIP PREDICTIONS:
+  Predicted Label: archery (score: 0.8833)
+
+RANKING ANALYSIS:
+  Human Action 'eating cake' ranked: #39/50 (score: 0.0000)
+  Background Action 'archery' ranked: #1/50 (score: 0.8833)
+
+Top 10 predictions:
+  🏞️  1. archery (0.8833)
+      2. shooting goal (soccer) (0.0374)
+      3. shooting basketball (0.0117)
+      4. juggling balls (0.0095)
+      5. skiing slalom (0.0090)
+      6. dribbling basketball (0.0071)
+      7. hitting baseball (0.0063)
+      8. clean and jerk (0.0037)
+      9. flying kite (0.0036)
+     10. catching or throwing baseball (0.0031)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -38
+Score gap (bg_score - human_score): 0.8832
+⚠️  Background action in top 5!

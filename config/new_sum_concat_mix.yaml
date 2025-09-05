@@ -8,13 +8,15 @@ minikinetics50_validation: dataset/minikinetics50/new_minikinetics50_validation_
 minikinetics50_test: dataset/minikinetics50/new_minikinetics50_test_all.csv
 minikinetics50_places365_mix_train: dataset/places365/new_mix_train.csv #NOT EXISTING YET!
 minikinetics50_places365_mix_validation: dataset/places365/new_mix_validation.csv
-mimetics_test: dataset/mimetics/new_mimetics_all.csv
-hat_actionswap_test: dataset/action_swap/new_action_swap_all.csv
+# mimetics_test: dataset/mimetics/new_mimetics_all.csv
+# hat_actionswap_test: dataset/action_swap/new_action_swap_all.csv
+mimetics_test: dataset/mimetics/mimetics_mcq_all_fields.csv
+hat_actionswap_test: dataset/action_swap/action_swap_mcq_all_fields.csv
 
 batch_size: 20
 learning_rate: 0.001
 num_epochs: 300
-last_epoch_saved: 57 # Last epoch saved, used for resuming training
+last_epoch_saved: 300 # Last epoch saved, used for resuming training
 num_dataloader_workers: 20
 
 model_type: sum_concat #options: ['stack_concat', 'sum_concat', 'slow_r50', 'slow_humanseg', 

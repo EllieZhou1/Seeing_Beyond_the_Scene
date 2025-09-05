@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000904_playing tennis_to_playing violin_3cohYreibXk_000031_000041_bg_P24qs_4ZX0c_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing tennis
+Background Label (Incorrect): playing violin
+
+CLIP PREDICTIONS:
+  Predicted Label: playing piano (score: 0.6030)
+
+RANKING ANALYSIS:
+  Human Action 'playing tennis' ranked: #15/50 (score: 0.0032)
+  Background Action 'playing violin' ranked: #3/50 (score: 0.0776)
+
+Top 10 predictions:
+      1. playing piano (0.6030)
+      2. playing saxophone (0.0988)
+  🏞️  3. playing violin (0.0776)
+      4. playing trumpet (0.0449)
+      5. punching person (boxing) (0.0349)
+      6. hurdling (0.0248)
+      7. playing guitar (0.0204)
+      8. playing accordion (0.0170)
+      9. dribbling basketball (0.0125)
+     10. playing bass guitar (0.0107)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -12
+Score gap (bg_score - human_score): 0.0744
+⚠️  Background action in top 5!

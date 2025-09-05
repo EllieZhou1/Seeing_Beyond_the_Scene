@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000896_flying kite_to_deadlifting_Ic_2a31pwdc_000004_000014_bg_oyN6ldlYUD8_000032_000042
+Frame: MIDDLE.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.4003)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #33/50 (score: 0.0013)
+  Background Action 'deadlifting' ranked: #21/50 (score: 0.0036)
+
+Top 10 predictions:
+      1. driving car (0.4003)
+      2. bowling (0.3985)
+      3. surfing water (0.0223)
+      4. hurdling (0.0222)
+      5. playing tennis (0.0159)
+      6. golf driving (0.0144)
+      7. sweeping floor (0.0097)
+      8. skipping rope (0.0083)
+      9. dribbling basketball (0.0082)
+     10. canoeing or kayaking (0.0081)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -12
+Score gap (bg_score - human_score): 0.0023

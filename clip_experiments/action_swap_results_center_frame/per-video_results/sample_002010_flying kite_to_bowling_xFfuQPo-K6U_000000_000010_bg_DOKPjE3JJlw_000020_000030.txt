@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002010_flying kite_to_bowling_xFfuQPo-K6U_000000_000010_bg_DOKPjE3JJlw_000020_000030
+Frame: MIDDLE.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: bowling (score: 0.2421)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #7/50 (score: 0.0390)
+  Background Action 'bowling' ranked: #1/50 (score: 0.2421)
+
+Top 10 predictions:
+  🏞️  1. bowling (0.2421)
+      2. sword fighting (0.1960)
+      3. juggling balls (0.0690)
+      4. juggling soccer ball (0.0467)
+      5. sweeping floor (0.0434)
+      6. shooting basketball (0.0412)
+  👤  7. flying kite (0.0390)
+      8. playing violin (0.0354)
+      9. playing saxophone (0.0328)
+     10. dunking basketball (0.0284)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -6
+Score gap (bg_score - human_score): 0.2031
+⚠️  Background action in top 5!

@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001099_flying kite_to_playing tennis_29aSgwRL_7Q_000005_000015_bg_FZXpPZmEoCc_000005_000015
+Frame: MIDDLE.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): playing tennis
+
+CLIP PREDICTIONS:
+  Predicted Label: playing tennis (score: 0.9532)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #5/50 (score: 0.0048)
+  Background Action 'playing tennis' ranked: #1/50 (score: 0.9532)
+
+Top 10 predictions:
+  🏞️  1. playing tennis (0.9532)
+      2. catching or throwing baseball (0.0103)
+      3. hitting baseball (0.0101)
+      4. catching or throwing frisbee (0.0060)
+  👤  5. flying kite (0.0048)
+      6. climbing a rope (0.0029)
+      7. juggling soccer ball (0.0027)
+      8. shooting goal (soccer) (0.0016)
+      9. archery (0.0012)
+     10. sweeping floor (0.0012)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -4
+Score gap (bg_score - human_score): 0.9484
+⚠️  Background action in top 5!
+✅ Human action in top 5

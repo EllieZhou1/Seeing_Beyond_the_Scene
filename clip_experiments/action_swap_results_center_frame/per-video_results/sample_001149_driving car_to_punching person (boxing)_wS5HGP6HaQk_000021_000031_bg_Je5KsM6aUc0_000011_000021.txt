@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001149_driving car_to_punching person (boxing)_wS5HGP6HaQk_000021_000031_bg_Je5KsM6aUc0_000011_000021
+Frame: MIDDLE.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: clean and jerk (score: 0.5012)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #32/50 (score: 0.0000)
+  Background Action 'punching person (boxing)' ranked: #7/50 (score: 0.0033)
+
+Top 10 predictions:
+      1. clean and jerk (0.5012)
+      2. climbing a rope (0.2070)
+      3. climbing ladder (0.1622)
+      4. hurdling (0.0514)
+      5. dunking basketball (0.0375)
+      6. deadlifting (0.0143)
+  🏞️  7. punching person (boxing) (0.0033)
+      8. skipping rope (0.0032)
+      9. catching or throwing baseball (0.0029)
+     10. shooting goal (soccer) (0.0028)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -25
+Score gap (bg_score - human_score): 0.0033

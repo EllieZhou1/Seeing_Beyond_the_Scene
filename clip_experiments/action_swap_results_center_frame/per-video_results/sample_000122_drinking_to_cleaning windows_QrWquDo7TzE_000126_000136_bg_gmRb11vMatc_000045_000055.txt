@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000122_drinking_to_cleaning windows_QrWquDo7TzE_000126_000136_bg_gmRb11vMatc_000045_000055
+Frame: MIDDLE.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.2941)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #34/50 (score: 0.0015)
+  Background Action 'cleaning windows' ranked: #39/50 (score: 0.0010)
+
+Top 10 predictions:
+      1. skipping rope (0.2941)
+      2. playing accordion (0.1350)
+      3. brushing teeth (0.0854)
+      4. brushing hair (0.0506)
+      5. climbing ladder (0.0467)
+      6. bowling (0.0463)
+      7. juggling balls (0.0414)
+      8. juggling soccer ball (0.0396)
+      9. eating cake (0.0377)
+     10. playing piano (0.0286)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 5
+Score gap (bg_score - human_score): -0.0006

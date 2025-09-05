@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000052_reading newspaper_to_sweeping floor_-8oPwToqArE_000001_000011_bg_n5ZHSJRZl1U_000002_000012
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): sweeping floor
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.4221)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #32/50 (score: 0.0010)
+  Background Action 'sweeping floor' ranked: #20/50 (score: 0.0034)
+
+Top 10 predictions:
+      1. opening bottle (0.4221)
+      2. punching person (boxing) (0.2620)
+      3. juggling soccer ball (0.0930)
+      4. juggling balls (0.0580)
+      5. cleaning windows (0.0246)
+      6. eating ice cream (0.0166)
+      7. brushing hair (0.0126)
+      8. drinking (0.0109)
+      9. brushing teeth (0.0107)
+     10. eating cake (0.0098)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -12
+Score gap (bg_score - human_score): 0.0024

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001089_punching person (boxing)_to_eating cake_qJ4wFQEhFvU_000013_000023_bg_2WtmYtTUr_c_000090_000100
+Frame: MIDDLE.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.3514)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #1/50 (score: 0.3514)
+  Background Action 'eating cake' ranked: #7/50 (score: 0.0253)
+
+Top 10 predictions:
+  👤  1. punching person (boxing) (0.3514)
+      2. sword fighting (0.1649)
+      3. opening bottle (0.1198)
+      4. dunking basketball (0.0681)
+      5. drinking (0.0631)
+      6. juggling balls (0.0371)
+  🏞️  7. eating cake (0.0253)
+      8. playing trumpet (0.0196)
+      9. juggling soccer ball (0.0175)
+     10. brushing teeth (0.0156)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 6
+Score gap (bg_score - human_score): -0.3261
+✅ Human action in top 5

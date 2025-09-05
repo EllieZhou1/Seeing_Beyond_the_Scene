@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002338_eating ice cream_to_opening bottle_GQQ3s4O_-HY_000006_000016_bg_cO947ZSANRg_000023_000033
+Frame: MIDDLE.jpg
+Human Action Label (Correct): eating ice cream
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.3811)
+
+RANKING ANALYSIS:
+  Human Action 'eating ice cream' ranked: #4/50 (score: 0.0533)
+  Background Action 'opening bottle' ranked: #5/50 (score: 0.0475)
+
+Top 10 predictions:
+      1. brushing hair (0.3811)
+      2. brushing teeth (0.3379)
+      3. playing accordion (0.0825)
+  👤  4. eating ice cream (0.0533)
+  🏞️  5. opening bottle (0.0475)
+      6. playing violin (0.0375)
+      7. eating cake (0.0202)
+      8. playing saxophone (0.0074)
+      9. playing trumpet (0.0069)
+     10. playing piano (0.0044)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0058
+⚠️  Background action in top 5!
+✅ Human action in top 5

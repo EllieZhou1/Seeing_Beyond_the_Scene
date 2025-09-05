@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001789_eating ice cream_to_opening bottle_2VPOmTXBVhQ_000067_000077_bg_vH-6RKqfT_c_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): eating ice cream
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: smoking (score: 0.1770)
+
+RANKING ANALYSIS:
+  Human Action 'eating ice cream' ranked: #31/50 (score: 0.0035)
+  Background Action 'opening bottle' ranked: #9/50 (score: 0.0405)
+
+Top 10 predictions:
+      1. smoking (0.1770)
+      2. juggling soccer ball (0.0847)
+      3. skipping rope (0.0780)
+      4. playing violin (0.0739)
+      5. playing guitar (0.0715)
+      6. playing trumpet (0.0672)
+      7. playing saxophone (0.0532)
+      8. playing accordion (0.0433)
+  🏞️  9. opening bottle (0.0405)
+     10. juggling balls (0.0372)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -22
+Score gap (bg_score - human_score): 0.0370

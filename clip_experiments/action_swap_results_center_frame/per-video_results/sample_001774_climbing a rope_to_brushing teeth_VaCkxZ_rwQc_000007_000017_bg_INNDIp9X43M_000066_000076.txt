@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001774_climbing a rope_to_brushing teeth_VaCkxZ_rwQc_000007_000017_bg_INNDIp9X43M_000066_000076
+Frame: MIDDLE.jpg
+Human Action Label (Correct): climbing a rope
+Background Label (Incorrect): brushing teeth
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.2984)
+
+RANKING ANALYSIS:
+  Human Action 'climbing a rope' ranked: #13/50 (score: 0.0184)
+  Background Action 'brushing teeth' ranked: #43/50 (score: 0.0007)
+
+Top 10 predictions:
+      1. surfing water (0.2984)
+      2. dunking basketball (0.1045)
+      3. flying kite (0.0838)
+      4. hurdling (0.0738)
+      5. shooting goal (soccer) (0.0574)
+      6. climbing ladder (0.0499)
+      7. playing volleyball (0.0472)
+      8. skipping rope (0.0367)
+      9. juggling soccer ball (0.0257)
+     10. juggling balls (0.0226)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 30
+Score gap (bg_score - human_score): -0.0177

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000960_brushing teeth_to_skiing slalom_CfyiD_4zIyY_000113_000123_bg_890WycqQvNc_000933_000943
+Frame: MIDDLE.jpg
+Human Action Label (Correct): brushing teeth
+Background Label (Incorrect): skiing slalom
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.5476)
+
+RANKING ANALYSIS:
+  Human Action 'brushing teeth' ranked: #3/50 (score: 0.0372)
+  Background Action 'skiing slalom' ranked: #17/50 (score: 0.0071)
+
+Top 10 predictions:
+      1. skipping rope (0.5476)
+      2. eating ice cream (0.1421)
+  👤  3. brushing teeth (0.0372)
+      4. climbing a rope (0.0276)
+      5. flying kite (0.0264)
+      6. hitting baseball (0.0217)
+      7. juggling soccer ball (0.0185)
+      8. eating cake (0.0160)
+      9. opening bottle (0.0145)
+     10. playing accordion (0.0113)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 14
+Score gap (bg_score - human_score): -0.0302
+✅ Human action in top 5

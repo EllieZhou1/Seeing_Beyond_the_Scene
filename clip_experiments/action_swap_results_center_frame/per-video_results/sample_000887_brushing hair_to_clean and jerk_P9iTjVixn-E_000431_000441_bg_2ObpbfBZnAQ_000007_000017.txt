@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000887_brushing hair_to_clean and jerk_P9iTjVixn-E_000431_000441_bg_2ObpbfBZnAQ_000007_000017
+Frame: MIDDLE.jpg
+Human Action Label (Correct): brushing hair
+Background Label (Incorrect): clean and jerk
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.9377)
+
+RANKING ANALYSIS:
+  Human Action 'brushing hair' ranked: #1/50 (score: 0.9377)
+  Background Action 'clean and jerk' ranked: #46/50 (score: 0.0001)
+
+Top 10 predictions:
+  👤  1. brushing hair (0.9377)
+      2. tying tie (0.0076)
+      3. playing piano (0.0033)
+      4. opening bottle (0.0033)
+      5. playing saxophone (0.0029)
+      6. sweeping floor (0.0026)
+      7. brushing teeth (0.0025)
+      8. drinking (0.0025)
+      9. playing tennis (0.0023)
+     10. playing bass guitar (0.0022)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 45
+Score gap (bg_score - human_score): -0.9376
+✅ Human action in top 5

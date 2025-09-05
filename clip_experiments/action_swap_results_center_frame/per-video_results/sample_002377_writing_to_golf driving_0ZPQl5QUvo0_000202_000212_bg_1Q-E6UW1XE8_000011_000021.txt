@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002377_writing_to_golf driving_0ZPQl5QUvo0_000202_000212_bg_1Q-E6UW1XE8_000011_000021
+Frame: MIDDLE.jpg
+Human Action Label (Correct): writing
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.4108)
+
+RANKING ANALYSIS:
+  Human Action 'writing' ranked: #11/50 (score: 0.0165)
+  Background Action 'golf driving' ranked: #41/50 (score: 0.0009)
+
+Top 10 predictions:
+      1. opening bottle (0.4108)
+      2. smoking (0.1227)
+      3. playing piano (0.0676)
+      4. playing accordion (0.0672)
+      5. eating cake (0.0488)
+      6. sweeping floor (0.0281)
+      7. playing violin (0.0254)
+      8. punching person (boxing) (0.0227)
+      9. playing guitar (0.0227)
+     10. climbing ladder (0.0186)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 30
+Score gap (bg_score - human_score): -0.0155

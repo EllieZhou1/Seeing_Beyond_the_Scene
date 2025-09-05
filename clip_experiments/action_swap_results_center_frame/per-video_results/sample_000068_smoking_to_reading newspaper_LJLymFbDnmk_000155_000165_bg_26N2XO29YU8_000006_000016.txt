@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000068_smoking_to_reading newspaper_LJLymFbDnmk_000155_000165_bg_26N2XO29YU8_000006_000016
+Frame: MIDDLE.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): reading newspaper
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.5166)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #6/50 (score: 0.0242)
+  Background Action 'reading newspaper' ranked: #25/50 (score: 0.0006)
+
+Top 10 predictions:
+      1. opening bottle (0.5166)
+      2. eating cake (0.2401)
+      3. eating ice cream (0.0501)
+      4. drinking (0.0494)
+      5. juggling balls (0.0254)
+  👤  6. smoking (0.0242)
+      7. tying tie (0.0241)
+      8. brushing teeth (0.0096)
+      9. juggling soccer ball (0.0094)
+     10. playing accordion (0.0094)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 19
+Score gap (bg_score - human_score): -0.0237

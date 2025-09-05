@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002441_playing tennis_to_brushing teeth_KUPwOAgtqOo_000004_000014_bg_xCtFp27ilbU_000003_000013
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing tennis
+Background Label (Incorrect): brushing teeth
+
+CLIP PREDICTIONS:
+  Predicted Label: hurdling (score: 0.1270)
+
+RANKING ANALYSIS:
+  Human Action 'playing tennis' ranked: #15/50 (score: 0.0254)
+  Background Action 'brushing teeth' ranked: #45/50 (score: 0.0012)
+
+Top 10 predictions:
+      1. hurdling (0.1270)
+      2. sword fighting (0.1084)
+      3. climbing ladder (0.0838)
+      4. shooting goal (soccer) (0.0570)
+      5. playing piano (0.0473)
+      6. shooting basketball (0.0444)
+      7. dunking basketball (0.0429)
+      8. skiing slalom (0.0421)
+      9. playing volleyball (0.0340)
+     10. playing violin (0.0334)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 30
+Score gap (bg_score - human_score): -0.0242

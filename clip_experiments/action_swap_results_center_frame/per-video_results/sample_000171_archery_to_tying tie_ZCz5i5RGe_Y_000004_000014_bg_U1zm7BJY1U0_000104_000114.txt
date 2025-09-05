@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000171_archery_to_tying tie_ZCz5i5RGe_Y_000004_000014_bg_U1zm7BJY1U0_000104_000114
+Frame: MIDDLE.jpg
+Human Action Label (Correct): archery
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: archery (score: 0.2460)
+
+RANKING ANALYSIS:
+  Human Action 'archery' ranked: #1/50 (score: 0.2460)
+  Background Action 'tying tie' ranked: #36/50 (score: 0.0018)
+
+Top 10 predictions:
+  👤  1. archery (0.2460)
+      2. hitting baseball (0.1800)
+      3. playing saxophone (0.0817)
+      4. playing bass guitar (0.0680)
+      5. playing accordion (0.0397)
+      6. playing trumpet (0.0395)
+      7. catching or throwing baseball (0.0324)
+      8. climbing a rope (0.0310)
+      9. writing (0.0221)
+     10. smoking (0.0210)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 35
+Score gap (bg_score - human_score): -0.2442
+✅ Human action in top 5

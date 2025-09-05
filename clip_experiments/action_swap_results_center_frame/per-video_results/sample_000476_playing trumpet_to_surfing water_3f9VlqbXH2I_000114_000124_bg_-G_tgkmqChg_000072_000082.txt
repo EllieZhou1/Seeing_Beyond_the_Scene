@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000476_playing trumpet_to_surfing water_3f9VlqbXH2I_000114_000124_bg_-G_tgkmqChg_000072_000082
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing trumpet
+Background Label (Incorrect): surfing water
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.8217)
+
+RANKING ANALYSIS:
+  Human Action 'playing trumpet' ranked: #3/50 (score: 0.0167)
+  Background Action 'surfing water' ranked: #1/50 (score: 0.8217)
+
+Top 10 predictions:
+  🏞️  1. surfing water (0.8217)
+      2. brushing teeth (0.0273)
+  👤  3. playing trumpet (0.0167)
+      4. playing violin (0.0149)
+      5. juggling balls (0.0141)
+      6. opening bottle (0.0131)
+      7. cleaning windows (0.0114)
+      8. eating ice cream (0.0112)
+      9. smoking (0.0094)
+     10. juggling soccer ball (0.0092)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.8050
+⚠️  Background action in top 5!
+✅ Human action in top 5

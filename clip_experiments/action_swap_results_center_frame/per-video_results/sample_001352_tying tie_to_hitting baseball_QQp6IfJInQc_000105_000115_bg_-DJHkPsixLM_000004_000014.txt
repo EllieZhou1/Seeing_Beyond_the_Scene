@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001352_tying tie_to_hitting baseball_QQp6IfJInQc_000105_000115_bg_-DJHkPsixLM_000004_000014
+Frame: MIDDLE.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): hitting baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.5372)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #20/50 (score: 0.0010)
+  Background Action 'hitting baseball' ranked: #4/50 (score: 0.0829)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.5372)
+      2. shooting goal (soccer) (0.1443)
+      3. catching or throwing baseball (0.1154)
+  🏞️  4. hitting baseball (0.0829)
+      5. juggling balls (0.0186)
+      6. dribbling basketball (0.0165)
+      7. playing tennis (0.0163)
+      8. playing volleyball (0.0132)
+      9. catching or throwing frisbee (0.0117)
+     10. dunking basketball (0.0063)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -16
+Score gap (bg_score - human_score): 0.0819
+⚠️  Background action in top 5!

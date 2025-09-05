@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001724_walking the dog_to_playing trumpet_sy9T57J6qEg_000002_000012_bg_gpyUJCmt3vE_000363_000373
+Frame: MIDDLE.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.1331)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #5/50 (score: 0.0610)
+  Background Action 'playing trumpet' ranked: #38/50 (score: 0.0054)
+
+Top 10 predictions:
+      1. skipping rope (0.1331)
+      2. bowling (0.0872)
+      3. climbing ladder (0.0695)
+      4. climbing a rope (0.0680)
+  👤  5. walking the dog (0.0610)
+      6. clean and jerk (0.0546)
+      7. deadlifting (0.0360)
+      8. playing saxophone (0.0339)
+      9. playing bass guitar (0.0337)
+     10. opening bottle (0.0274)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 33
+Score gap (bg_score - human_score): -0.0557
+✅ Human action in top 5

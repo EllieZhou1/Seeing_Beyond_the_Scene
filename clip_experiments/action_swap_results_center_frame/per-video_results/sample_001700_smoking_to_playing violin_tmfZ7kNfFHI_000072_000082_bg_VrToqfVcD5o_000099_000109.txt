@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001700_smoking_to_playing violin_tmfZ7kNfFHI_000072_000082_bg_VrToqfVcD5o_000099_000109
+Frame: MIDDLE.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): playing violin
+
+CLIP PREDICTIONS:
+  Predicted Label: smoking (score: 0.1244)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #1/50 (score: 0.1244)
+  Background Action 'playing violin' ranked: #2/50 (score: 0.0964)
+
+Top 10 predictions:
+  👤  1. smoking (0.1244)
+  🏞️  2. playing violin (0.0964)
+      3. playing trumpet (0.0951)
+      4. climbing a rope (0.0851)
+      5. playing accordion (0.0809)
+      6. playing saxophone (0.0688)
+      7. brushing teeth (0.0628)
+      8. skipping rope (0.0605)
+      9. eating cake (0.0489)
+     10. eating ice cream (0.0366)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0280
+⚠️  Background action in top 5!
+✅ Human action in top 5

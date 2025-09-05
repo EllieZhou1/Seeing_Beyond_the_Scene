@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001876_sweeping floor_to_shooting basketball_k884aDwlkFo_000001_000011_bg_0sCSK1Ox5Ts_000046_000056
+Frame: MIDDLE.jpg
+Human Action Label (Correct): sweeping floor
+Background Label (Incorrect): shooting basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: dribbling basketball (score: 0.7659)
+
+RANKING ANALYSIS:
+  Human Action 'sweeping floor' ranked: #42/50 (score: 0.0000)
+  Background Action 'shooting basketball' ranked: #4/50 (score: 0.0347)
+
+Top 10 predictions:
+      1. dribbling basketball (0.7659)
+      2. playing basketball (0.1054)
+      3. dunking basketball (0.0363)
+  🏞️  4. shooting basketball (0.0347)
+      5. juggling soccer ball (0.0249)
+      6. juggling balls (0.0121)
+      7. playing tennis (0.0034)
+      8. hitting baseball (0.0030)
+      9. playing volleyball (0.0021)
+     10. skipping rope (0.0021)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -38
+Score gap (bg_score - human_score): 0.0347
+⚠️  Background action in top 5!

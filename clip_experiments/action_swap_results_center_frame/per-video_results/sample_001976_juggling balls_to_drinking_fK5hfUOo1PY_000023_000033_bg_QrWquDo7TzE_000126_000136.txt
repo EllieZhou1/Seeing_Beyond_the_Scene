@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001976_juggling balls_to_drinking_fK5hfUOo1PY_000023_000033_bg_QrWquDo7TzE_000126_000136
+Frame: MIDDLE.jpg
+Human Action Label (Correct): juggling balls
+Background Label (Incorrect): drinking
+
+CLIP PREDICTIONS:
+  Predicted Label: playing piano (score: 0.1090)
+
+RANKING ANALYSIS:
+  Human Action 'juggling balls' ranked: #48/50 (score: 0.0008)
+  Background Action 'drinking' ranked: #27/50 (score: 0.0078)
+
+Top 10 predictions:
+      1. playing piano (0.1090)
+      2. shooting basketball (0.0776)
+      3. clean and jerk (0.0770)
+      4. playing saxophone (0.0737)
+      5. playing bass guitar (0.0545)
+      6. punching person (boxing) (0.0493)
+      7. playing basketball (0.0435)
+      8. playing violin (0.0414)
+      9. playing trumpet (0.0411)
+     10. shooting goal (soccer) (0.0392)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -21
+Score gap (bg_score - human_score): 0.0070

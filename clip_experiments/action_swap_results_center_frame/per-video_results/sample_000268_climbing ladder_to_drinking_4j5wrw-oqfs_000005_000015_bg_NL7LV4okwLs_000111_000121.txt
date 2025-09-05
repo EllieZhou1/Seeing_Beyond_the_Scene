@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000268_climbing ladder_to_drinking_4j5wrw-oqfs_000005_000015_bg_NL7LV4okwLs_000111_000121
+Frame: MIDDLE.jpg
+Human Action Label (Correct): climbing ladder
+Background Label (Incorrect): drinking
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.2480)
+
+RANKING ANALYSIS:
+  Human Action 'climbing ladder' ranked: #19/50 (score: 0.0120)
+  Background Action 'drinking' ranked: #12/50 (score: 0.0209)
+
+Top 10 predictions:
+      1. opening bottle (0.2480)
+      2. playing saxophone (0.1424)
+      3. skiing slalom (0.0611)
+      4. driving car (0.0346)
+      5. cleaning windows (0.0341)
+      6. sweeping floor (0.0327)
+      7. surfing water (0.0314)
+      8. skiing (not slalom or crosscountry) (0.0302)
+      9. playing trumpet (0.0272)
+     10. sword fighting (0.0249)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -7
+Score gap (bg_score - human_score): 0.0089

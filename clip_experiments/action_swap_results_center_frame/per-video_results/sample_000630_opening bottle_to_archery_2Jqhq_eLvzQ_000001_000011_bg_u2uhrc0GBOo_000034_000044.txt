@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000630_opening bottle_to_archery_2Jqhq_eLvzQ_000001_000011_bg_u2uhrc0GBOo_000034_000044
+Frame: MIDDLE.jpg
+Human Action Label (Correct): opening bottle
+Background Label (Incorrect): archery
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.2320)
+
+RANKING ANALYSIS:
+  Human Action 'opening bottle' ranked: #4/50 (score: 0.0773)
+  Background Action 'archery' ranked: #33/50 (score: 0.0034)
+
+Top 10 predictions:
+      1. cleaning windows (0.2320)
+      2. climbing a rope (0.1339)
+      3. punching person (boxing) (0.0955)
+  👤  4. opening bottle (0.0773)
+      5. smoking (0.0480)
+      6. climbing ladder (0.0431)
+      7. juggling balls (0.0414)
+      8. playing guitar (0.0286)
+      9. writing (0.0239)
+     10. tying tie (0.0238)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 29
+Score gap (bg_score - human_score): -0.0739
+✅ Human action in top 5

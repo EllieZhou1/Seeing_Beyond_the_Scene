@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001757_climbing a rope_to_surfing water_4vqno9mmRvU_000025_000035_bg_g42jMCq1E4Q_000081_000091
+Frame: MIDDLE.jpg
+Human Action Label (Correct): climbing a rope
+Background Label (Incorrect): surfing water
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.8749)
+
+RANKING ANALYSIS:
+  Human Action 'climbing a rope' ranked: #2/50 (score: 0.0676)
+  Background Action 'surfing water' ranked: #1/50 (score: 0.8749)
+
+Top 10 predictions:
+  🏞️  1. surfing water (0.8749)
+  👤  2. climbing a rope (0.0676)
+      3. climbing ladder (0.0192)
+      4. hurdling (0.0109)
+      5. dunking basketball (0.0056)
+      6. skiing slalom (0.0038)
+      7. skipping rope (0.0027)
+      8. juggling soccer ball (0.0020)
+      9. catching or throwing frisbee (0.0017)
+     10. clean and jerk (0.0013)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.8073
+⚠️  Background action in top 5!
+✅ Human action in top 5

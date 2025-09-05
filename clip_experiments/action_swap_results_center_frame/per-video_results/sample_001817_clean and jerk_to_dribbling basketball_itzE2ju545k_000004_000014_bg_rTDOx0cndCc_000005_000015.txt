@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001817_clean and jerk_to_dribbling basketball_itzE2ju545k_000004_000014_bg_rTDOx0cndCc_000005_000015
+Frame: MIDDLE.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): dribbling basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: clean and jerk (score: 0.2775)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #1/50 (score: 0.2775)
+  Background Action 'dribbling basketball' ranked: #12/50 (score: 0.0114)
+
+Top 10 predictions:
+  👤  1. clean and jerk (0.2775)
+      2. juggling soccer ball (0.2099)
+      3. climbing ladder (0.1604)
+      4. climbing a rope (0.1206)
+      5. juggling balls (0.0518)
+      6. skipping rope (0.0496)
+      7. playing basketball (0.0206)
+      8. dunking basketball (0.0162)
+      9. playing volleyball (0.0157)
+     10. playing tennis (0.0129)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 11
+Score gap (bg_score - human_score): -0.2662
+✅ Human action in top 5

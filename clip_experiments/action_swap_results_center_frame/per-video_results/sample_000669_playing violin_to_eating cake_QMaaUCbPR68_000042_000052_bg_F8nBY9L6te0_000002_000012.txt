@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000669_playing violin_to_eating cake_QMaaUCbPR68_000042_000052_bg_F8nBY9L6te0_000002_000012
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing violin
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.3389)
+
+RANKING ANALYSIS:
+  Human Action 'playing violin' ranked: #12/50 (score: 0.0185)
+  Background Action 'eating cake' ranked: #27/50 (score: 0.0058)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.3389)
+      2. juggling balls (0.1390)
+      3. skipping rope (0.0550)
+      4. sword fighting (0.0410)
+      5. opening bottle (0.0378)
+      6. playing saxophone (0.0351)
+      7. bowling (0.0335)
+      8. smoking (0.0287)
+      9. playing trumpet (0.0272)
+     10. juggling soccer ball (0.0268)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 15
+Score gap (bg_score - human_score): -0.0126

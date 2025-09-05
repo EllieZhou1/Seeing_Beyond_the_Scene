@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000182_reading newspaper_to_playing basketball_26N2XO29YU8_000006_000016_bg_oShj9Rey2ZE_000097_000107
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): playing basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: playing tennis (score: 0.4621)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #32/50 (score: 0.0008)
+  Background Action 'playing basketball' ranked: #4/50 (score: 0.0845)
+
+Top 10 predictions:
+      1. playing tennis (0.4621)
+      2. dribbling basketball (0.1647)
+      3. dunking basketball (0.1076)
+  🏞️  4. playing basketball (0.0845)
+      5. hitting baseball (0.0232)
+      6. shooting basketball (0.0170)
+      7. bowling (0.0143)
+      8. skipping rope (0.0142)
+      9. golf driving (0.0136)
+     10. juggling balls (0.0134)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -28
+Score gap (bg_score - human_score): 0.0837
+⚠️  Background action in top 5!

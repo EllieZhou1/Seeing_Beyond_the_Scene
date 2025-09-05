@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001074_playing saxophone_to_driving car_7YihjsB2CEk_000000_000010_bg_QkLN_QBF1hI_000174_000184
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing saxophone
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.4528)
+
+RANKING ANALYSIS:
+  Human Action 'playing saxophone' ranked: #13/50 (score: 0.0094)
+  Background Action 'driving car' ranked: #11/50 (score: 0.0121)
+
+Top 10 predictions:
+      1. opening bottle (0.4528)
+      2. juggling soccer ball (0.2305)
+      3. juggling balls (0.0420)
+      4. playing accordion (0.0399)
+      5. skipping rope (0.0244)
+      6. drinking (0.0225)
+      7. golf driving (0.0222)
+      8. cleaning windows (0.0198)
+      9. playing tennis (0.0192)
+     10. tying tie (0.0154)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.0027

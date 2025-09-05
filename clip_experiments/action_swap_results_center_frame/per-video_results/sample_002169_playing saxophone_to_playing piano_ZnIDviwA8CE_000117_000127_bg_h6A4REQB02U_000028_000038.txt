@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002169_playing saxophone_to_playing piano_ZnIDviwA8CE_000117_000127_bg_h6A4REQB02U_000028_000038
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing saxophone
+Background Label (Incorrect): playing piano
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.4258)
+
+RANKING ANALYSIS:
+  Human Action 'playing saxophone' ranked: #15/50 (score: 0.0113)
+  Background Action 'playing piano' ranked: #17/50 (score: 0.0108)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.4258)
+      2. sword fighting (0.0743)
+      3. playing violin (0.0718)
+      4. eating cake (0.0476)
+      5. opening bottle (0.0448)
+      6. juggling soccer ball (0.0372)
+      7. juggling balls (0.0349)
+      8. playing accordion (0.0256)
+      9. eating ice cream (0.0214)
+     10. playing trumpet (0.0183)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 2
+Score gap (bg_score - human_score): -0.0005

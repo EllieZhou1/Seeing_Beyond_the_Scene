@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001315_tying tie_to_playing saxophone_eLyyjoO43p4_000000_000010_bg_ZnIDviwA8CE_000117_000127
+Frame: MIDDLE.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): playing saxophone
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling balls (score: 0.2193)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #45/50 (score: 0.0006)
+  Background Action 'playing saxophone' ranked: #25/50 (score: 0.0072)
+
+Top 10 predictions:
+      1. juggling balls (0.2193)
+      2. opening bottle (0.1647)
+      3. juggling soccer ball (0.1206)
+      4. cleaning windows (0.0588)
+      5. climbing a rope (0.0577)
+      6. climbing ladder (0.0318)
+      7. hitting baseball (0.0302)
+      8. playing accordion (0.0285)
+      9. shooting goal (soccer) (0.0247)
+     10. dunking basketball (0.0244)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -20
+Score gap (bg_score - human_score): 0.0066

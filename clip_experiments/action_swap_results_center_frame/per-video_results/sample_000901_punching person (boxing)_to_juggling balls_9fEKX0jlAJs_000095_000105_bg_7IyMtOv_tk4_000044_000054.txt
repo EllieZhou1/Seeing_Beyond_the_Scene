@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000901_punching person (boxing)_to_juggling balls_9fEKX0jlAJs_000095_000105_bg_7IyMtOv_tk4_000044_000054
+Frame: MIDDLE.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): juggling balls
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.1720)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #8/50 (score: 0.0300)
+  Background Action 'juggling balls' ranked: #16/50 (score: 0.0129)
+
+Top 10 predictions:
+      1. playing accordion (0.1720)
+      2. surfing water (0.0991)
+      3. opening bottle (0.0976)
+      4. sword fighting (0.0788)
+      5. drinking (0.0761)
+      6. eating cake (0.0724)
+      7. brushing teeth (0.0593)
+  👤  8. punching person (boxing) (0.0300)
+      9. playing trumpet (0.0272)
+     10. eating ice cream (0.0271)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 8
+Score gap (bg_score - human_score): -0.0171

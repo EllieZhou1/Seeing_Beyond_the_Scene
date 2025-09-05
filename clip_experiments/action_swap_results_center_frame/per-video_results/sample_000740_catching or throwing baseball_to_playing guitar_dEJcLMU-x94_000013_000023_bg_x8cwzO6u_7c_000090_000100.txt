@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000740_catching or throwing baseball_to_playing guitar_dEJcLMU-x94_000013_000023_bg_x8cwzO6u_7c_000090_000100
+Frame: MIDDLE.jpg
+Human Action Label (Correct): catching or throwing baseball
+Background Label (Incorrect): playing guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: playing guitar (score: 0.8422)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing baseball' ranked: #45/50 (score: 0.0000)
+  Background Action 'playing guitar' ranked: #1/50 (score: 0.8422)
+
+Top 10 predictions:
+  🏞️  1. playing guitar (0.8422)
+      2. playing bass guitar (0.1129)
+      3. playing saxophone (0.0122)
+      4. writing (0.0093)
+      5. playing accordion (0.0080)
+      6. playing violin (0.0059)
+      7. opening bottle (0.0022)
+      8. playing trumpet (0.0021)
+      9. playing piano (0.0009)
+     10. sword fighting (0.0006)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -44
+Score gap (bg_score - human_score): 0.8422
+⚠️  Background action in top 5!

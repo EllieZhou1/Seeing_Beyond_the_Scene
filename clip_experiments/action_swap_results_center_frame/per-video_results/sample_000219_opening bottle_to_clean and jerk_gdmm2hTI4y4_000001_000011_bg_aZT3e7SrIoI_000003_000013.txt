@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000219_opening bottle_to_clean and jerk_gdmm2hTI4y4_000001_000011_bg_aZT3e7SrIoI_000003_000013
+Frame: MIDDLE.jpg
+Human Action Label (Correct): opening bottle
+Background Label (Incorrect): clean and jerk
+
+CLIP PREDICTIONS:
+  Predicted Label: drinking (score: 0.2065)
+
+RANKING ANALYSIS:
+  Human Action 'opening bottle' ranked: #4/50 (score: 0.0700)
+  Background Action 'clean and jerk' ranked: #34/50 (score: 0.0022)
+
+Top 10 predictions:
+      1. drinking (0.2065)
+      2. juggling soccer ball (0.1535)
+      3. playing accordion (0.0856)
+  👤  4. opening bottle (0.0700)
+      5. eating cake (0.0475)
+      6. eating ice cream (0.0464)
+      7. juggling balls (0.0431)
+      8. playing trumpet (0.0395)
+      9. playing violin (0.0389)
+     10. playing saxophone (0.0371)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 30
+Score gap (bg_score - human_score): -0.0678
+✅ Human action in top 5

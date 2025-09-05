@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001907_drinking_to_smoking_PkxtlwDr4AU_000073_000083_bg_7INhc7jN5Ps_000004_000014
+Frame: MIDDLE.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.5914)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #2/50 (score: 0.2942)
+  Background Action 'smoking' ranked: #4/50 (score: 0.0202)
+
+Top 10 predictions:
+      1. opening bottle (0.5914)
+  👤  2. drinking (0.2942)
+      3. brushing hair (0.0208)
+  🏞️  4. smoking (0.0202)
+      5. eating ice cream (0.0169)
+      6. brushing teeth (0.0137)
+      7. eating cake (0.0039)
+      8. climbing a rope (0.0037)
+      9. skipping rope (0.0031)
+     10. reading book (0.0029)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 2
+Score gap (bg_score - human_score): -0.2741
+⚠️  Background action in top 5!
+✅ Human action in top 5

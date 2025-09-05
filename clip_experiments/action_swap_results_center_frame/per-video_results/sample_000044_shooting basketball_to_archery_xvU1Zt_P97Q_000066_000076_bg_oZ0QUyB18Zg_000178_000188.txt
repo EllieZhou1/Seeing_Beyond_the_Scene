@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000044_shooting basketball_to_archery_xvU1Zt_P97Q_000066_000076_bg_oZ0QUyB18Zg_000178_000188
+Frame: MIDDLE.jpg
+Human Action Label (Correct): shooting basketball
+Background Label (Incorrect): archery
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.4280)
+
+RANKING ANALYSIS:
+  Human Action 'shooting basketball' ranked: #4/50 (score: 0.0556)
+  Background Action 'archery' ranked: #2/50 (score: 0.0885)
+
+Top 10 predictions:
+      1. shooting goal (soccer) (0.4280)
+  🏞️  2. archery (0.0885)
+      3. hitting baseball (0.0624)
+  👤  4. shooting basketball (0.0556)
+      5. playing basketball (0.0529)
+      6. punching person (boxing) (0.0443)
+      7. catching or throwing frisbee (0.0398)
+      8. juggling soccer ball (0.0384)
+      9. skipping rope (0.0365)
+     10. playing tennis (0.0295)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.0329
+⚠️  Background action in top 5!
+✅ Human action in top 5

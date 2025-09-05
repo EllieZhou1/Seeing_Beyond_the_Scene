@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000829_driving car_to_playing volleyball_IBz7PG5fOq0_000015_000025_bg_8W1jn3V3_Vc_000009_000019
+Frame: MIDDLE.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): playing volleyball
+
+CLIP PREDICTIONS:
+  Predicted Label: playing volleyball (score: 0.4310)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #25/50 (score: 0.0001)
+  Background Action 'playing volleyball' ranked: #1/50 (score: 0.4310)
+
+Top 10 predictions:
+  🏞️  1. playing volleyball (0.4310)
+      2. juggling soccer ball (0.2081)
+      3. shooting goal (soccer) (0.1844)
+      4. juggling balls (0.0458)
+      5. playing tennis (0.0342)
+      6. dribbling basketball (0.0194)
+      7. skipping rope (0.0150)
+      8. playing basketball (0.0138)
+      9. hitting baseball (0.0110)
+     10. catching or throwing frisbee (0.0082)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -24
+Score gap (bg_score - human_score): 0.4309
+⚠️  Background action in top 5!

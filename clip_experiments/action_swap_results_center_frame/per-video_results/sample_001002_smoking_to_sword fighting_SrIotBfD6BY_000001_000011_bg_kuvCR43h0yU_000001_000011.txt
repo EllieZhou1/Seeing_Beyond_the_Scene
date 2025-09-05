@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001002_smoking_to_sword fighting_SrIotBfD6BY_000001_000011_bg_kuvCR43h0yU_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: smoking (score: 0.2221)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #1/50 (score: 0.2221)
+  Background Action 'sword fighting' ranked: #15/50 (score: 0.0134)
+
+Top 10 predictions:
+  👤  1. smoking (0.2221)
+      2. brushing teeth (0.1279)
+      3. reading newspaper (0.0970)
+      4. eating ice cream (0.0946)
+      5. brushing hair (0.0571)
+      6. punching person (boxing) (0.0487)
+      7. eating cake (0.0448)
+      8. writing (0.0365)
+      9. opening bottle (0.0282)
+     10. drinking (0.0273)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 14
+Score gap (bg_score - human_score): -0.2087
+✅ Human action in top 5

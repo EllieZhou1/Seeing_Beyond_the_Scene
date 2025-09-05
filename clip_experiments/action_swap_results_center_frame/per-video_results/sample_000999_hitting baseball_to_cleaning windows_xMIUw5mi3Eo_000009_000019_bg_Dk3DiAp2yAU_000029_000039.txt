@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000999_hitting baseball_to_cleaning windows_xMIUw5mi3Eo_000009_000019_bg_Dk3DiAp2yAU_000029_000039
+Frame: MIDDLE.jpg
+Human Action Label (Correct): hitting baseball
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: catching or throwing baseball (score: 0.6796)
+
+RANKING ANALYSIS:
+  Human Action 'hitting baseball' ranked: #2/50 (score: 0.1852)
+  Background Action 'cleaning windows' ranked: #3/50 (score: 0.0845)
+
+Top 10 predictions:
+      1. catching or throwing baseball (0.6796)
+  👤  2. hitting baseball (0.1852)
+  🏞️  3. cleaning windows (0.0845)
+      4. catching or throwing frisbee (0.0227)
+      5. climbing a rope (0.0073)
+      6. sword fighting (0.0046)
+      7. climbing ladder (0.0041)
+      8. hurdling (0.0033)
+      9. flying kite (0.0016)
+     10. opening bottle (0.0014)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.1007
+⚠️  Background action in top 5!
+✅ Human action in top 5

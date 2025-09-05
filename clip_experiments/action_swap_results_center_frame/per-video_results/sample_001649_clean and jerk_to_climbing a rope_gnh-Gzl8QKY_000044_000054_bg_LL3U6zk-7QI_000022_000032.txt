@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001649_clean and jerk_to_climbing a rope_gnh-Gzl8QKY_000044_000054_bg_LL3U6zk-7QI_000022_000032
+Frame: MIDDLE.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): climbing a rope
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.4509)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #11/50 (score: 0.0325)
+  Background Action 'climbing a rope' ranked: #2/50 (score: 0.0589)
+
+Top 10 predictions:
+      1. shooting goal (soccer) (0.4509)
+  🏞️  2. climbing a rope (0.0589)
+      3. playing volleyball (0.0589)
+      4. dunking basketball (0.0586)
+      5. punching person (boxing) (0.0531)
+      6. skipping rope (0.0503)
+      7. juggling balls (0.0408)
+      8. playing basketball (0.0402)
+      9. juggling soccer ball (0.0374)
+     10. shooting basketball (0.0334)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -9
+Score gap (bg_score - human_score): 0.0264
+⚠️  Background action in top 5!

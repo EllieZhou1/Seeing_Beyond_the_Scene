@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002425_cleaning windows_to_playing guitar_z6Xahf4nv7U_000129_000139_bg_wmWCtlyvzWM_000113_000123
+Frame: MIDDLE.jpg
+Human Action Label (Correct): cleaning windows
+Background Label (Incorrect): playing guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: playing guitar (score: 0.4056)
+
+RANKING ANALYSIS:
+  Human Action 'cleaning windows' ranked: #12/50 (score: 0.0041)
+  Background Action 'playing guitar' ranked: #1/50 (score: 0.4056)
+
+Top 10 predictions:
+  🏞️  1. playing guitar (0.4056)
+      2. playing bass guitar (0.3530)
+      3. playing violin (0.1043)
+      4. playing saxophone (0.0359)
+      5. playing trumpet (0.0211)
+      6. sword fighting (0.0169)
+      7. playing accordion (0.0147)
+      8. climbing a rope (0.0077)
+      9. playing piano (0.0069)
+     10. opening bottle (0.0059)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -11
+Score gap (bg_score - human_score): 0.4015
+⚠️  Background action in top 5!

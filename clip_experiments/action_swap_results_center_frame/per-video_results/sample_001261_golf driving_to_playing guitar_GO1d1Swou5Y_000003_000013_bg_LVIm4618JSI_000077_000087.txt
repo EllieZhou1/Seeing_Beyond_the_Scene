@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001261_golf driving_to_playing guitar_GO1d1Swou5Y_000003_000013_bg_LVIm4618JSI_000077_000087
+Frame: MIDDLE.jpg
+Human Action Label (Correct): golf driving
+Background Label (Incorrect): playing guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: playing guitar (score: 0.8317)
+
+RANKING ANALYSIS:
+  Human Action 'golf driving' ranked: #26/50 (score: 0.0000)
+  Background Action 'playing guitar' ranked: #1/50 (score: 0.8317)
+
+Top 10 predictions:
+  🏞️  1. playing guitar (0.8317)
+      2. playing bass guitar (0.1530)
+      3. writing (0.0040)
+      4. playing violin (0.0033)
+      5. playing saxophone (0.0023)
+      6. playing accordion (0.0018)
+      7. opening bottle (0.0008)
+      8. playing piano (0.0007)
+      9. playing trumpet (0.0005)
+     10. reading book (0.0003)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -25
+Score gap (bg_score - human_score): 0.8316
+⚠️  Background action in top 5!

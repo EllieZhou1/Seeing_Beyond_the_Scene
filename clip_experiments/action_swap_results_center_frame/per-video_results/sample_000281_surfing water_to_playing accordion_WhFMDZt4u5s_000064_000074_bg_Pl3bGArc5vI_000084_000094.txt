@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000281_surfing water_to_playing accordion_WhFMDZt4u5s_000064_000074_bg_Pl3bGArc5vI_000084_000094
+Frame: MIDDLE.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.3460)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #25/50 (score: 0.0027)
+  Background Action 'playing accordion' ranked: #3/50 (score: 0.0989)
+
+Top 10 predictions:
+      1. driving car (0.3460)
+      2. reading newspaper (0.1588)
+  🏞️  3. playing accordion (0.0989)
+      4. playing piano (0.0751)
+      5. cleaning windows (0.0615)
+      6. reading book (0.0472)
+      7. playing violin (0.0351)
+      8. golf driving (0.0268)
+      9. opening bottle (0.0233)
+     10. juggling soccer ball (0.0158)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -22
+Score gap (bg_score - human_score): 0.0961
+⚠️  Background action in top 5!

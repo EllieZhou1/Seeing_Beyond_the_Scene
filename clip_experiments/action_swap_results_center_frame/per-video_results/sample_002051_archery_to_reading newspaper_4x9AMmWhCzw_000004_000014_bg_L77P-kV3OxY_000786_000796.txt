@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002051_archery_to_reading newspaper_4x9AMmWhCzw_000004_000014_bg_L77P-kV3OxY_000786_000796
+Frame: MIDDLE.jpg
+Human Action Label (Correct): archery
+Background Label (Incorrect): reading newspaper
+
+CLIP PREDICTIONS:
+  Predicted Label: reading newspaper (score: 0.7484)
+
+RANKING ANALYSIS:
+  Human Action 'archery' ranked: #27/50 (score: 0.0018)
+  Background Action 'reading newspaper' ranked: #1/50 (score: 0.7484)
+
+Top 10 predictions:
+  🏞️  1. reading newspaper (0.7484)
+      2. punching person (boxing) (0.0844)
+      3. juggling soccer ball (0.0184)
+      4. sword fighting (0.0147)
+      5. opening bottle (0.0125)
+      6. shooting goal (soccer) (0.0110)
+      7. hitting baseball (0.0105)
+      8. cleaning windows (0.0098)
+      9. playing tennis (0.0090)
+     10. catching or throwing baseball (0.0084)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -26
+Score gap (bg_score - human_score): 0.7465
+⚠️  Background action in top 5!

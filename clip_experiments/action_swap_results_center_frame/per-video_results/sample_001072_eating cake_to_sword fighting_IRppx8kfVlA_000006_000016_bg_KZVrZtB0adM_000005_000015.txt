@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001072_eating cake_to_sword fighting_IRppx8kfVlA_000006_000016_bg_KZVrZtB0adM_000005_000015
+Frame: MIDDLE.jpg
+Human Action Label (Correct): eating cake
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.3509)
+
+RANKING ANALYSIS:
+  Human Action 'eating cake' ranked: #11/50 (score: 0.0194)
+  Background Action 'sword fighting' ranked: #19/50 (score: 0.0048)
+
+Top 10 predictions:
+      1. playing accordion (0.3509)
+      2. playing piano (0.2428)
+      3. juggling soccer ball (0.0534)
+      4. playing trumpet (0.0510)
+      5. playing saxophone (0.0485)
+      6. playing guitar (0.0307)
+      7. playing violin (0.0255)
+      8. opening bottle (0.0247)
+      9. dribbling basketball (0.0214)
+     10. juggling balls (0.0200)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 8
+Score gap (bg_score - human_score): -0.0146

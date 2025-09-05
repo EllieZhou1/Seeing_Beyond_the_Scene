@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000075_surfing water_to_juggling soccer ball_yF3kyTjZuz4_000000_000010_bg_YfF6iqYm6J0_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): juggling soccer ball
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling balls (score: 0.4143)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #31/50 (score: 0.0001)
+  Background Action 'juggling soccer ball' ranked: #2/50 (score: 0.3634)
+
+Top 10 predictions:
+      1. juggling balls (0.4143)
+  🏞️  2. juggling soccer ball (0.3634)
+      3. dribbling basketball (0.0655)
+      4. catching or throwing frisbee (0.0505)
+      5. shooting goal (soccer) (0.0219)
+      6. playing basketball (0.0201)
+      7. playing volleyball (0.0152)
+      8. sword fighting (0.0072)
+      9. climbing a rope (0.0063)
+     10. catching or throwing baseball (0.0059)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -29
+Score gap (bg_score - human_score): 0.3633
+⚠️  Background action in top 5!

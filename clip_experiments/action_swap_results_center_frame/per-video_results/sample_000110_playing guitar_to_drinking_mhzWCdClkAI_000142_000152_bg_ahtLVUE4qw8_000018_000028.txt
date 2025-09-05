@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000110_playing guitar_to_drinking_mhzWCdClkAI_000142_000152_bg_ahtLVUE4qw8_000018_000028
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing guitar
+Background Label (Incorrect): drinking
+
+CLIP PREDICTIONS:
+  Predicted Label: hurdling (score: 0.1570)
+
+RANKING ANALYSIS:
+  Human Action 'playing guitar' ranked: #25/50 (score: 0.0092)
+  Background Action 'drinking' ranked: #16/50 (score: 0.0130)
+
+Top 10 predictions:
+      1. hurdling (0.1570)
+      2. juggling balls (0.1531)
+      3. climbing a rope (0.1316)
+      4. juggling soccer ball (0.0667)
+      5. skipping rope (0.0647)
+      6. bowling (0.0432)
+      7. climbing ladder (0.0331)
+      8. sword fighting (0.0313)
+      9. playing saxophone (0.0263)
+     10. playing violin (0.0248)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -9
+Score gap (bg_score - human_score): 0.0038

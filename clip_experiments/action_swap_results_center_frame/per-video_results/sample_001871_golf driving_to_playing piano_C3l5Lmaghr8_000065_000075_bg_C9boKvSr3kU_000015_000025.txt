@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001871_golf driving_to_playing piano_C3l5Lmaghr8_000065_000075_bg_C9boKvSr3kU_000015_000025
+Frame: MIDDLE.jpg
+Human Action Label (Correct): golf driving
+Background Label (Incorrect): playing piano
+
+CLIP PREDICTIONS:
+  Predicted Label: hitting baseball (score: 0.2629)
+
+RANKING ANALYSIS:
+  Human Action 'golf driving' ranked: #2/50 (score: 0.2280)
+  Background Action 'playing piano' ranked: #13/50 (score: 0.0056)
+
+Top 10 predictions:
+      1. hitting baseball (0.2629)
+  👤  2. golf driving (0.2280)
+      3. catching or throwing baseball (0.1395)
+      4. juggling soccer ball (0.1201)
+      5. juggling balls (0.0509)
+      6. playing violin (0.0393)
+      7. sweeping floor (0.0272)
+      8. playing trumpet (0.0222)
+      9. cleaning windows (0.0203)
+     10. playing tennis (0.0201)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 11
+Score gap (bg_score - human_score): -0.2224
+✅ Human action in top 5

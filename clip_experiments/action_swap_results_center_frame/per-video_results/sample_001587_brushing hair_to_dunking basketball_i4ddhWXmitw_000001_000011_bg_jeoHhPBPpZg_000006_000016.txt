@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001587_brushing hair_to_dunking basketball_i4ddhWXmitw_000001_000011_bg_jeoHhPBPpZg_000006_000016
+Frame: MIDDLE.jpg
+Human Action Label (Correct): brushing hair
+Background Label (Incorrect): dunking basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: dribbling basketball (score: 0.4108)
+
+RANKING ANALYSIS:
+  Human Action 'brushing hair' ranked: #28/50 (score: 0.0001)
+  Background Action 'dunking basketball' ranked: #5/50 (score: 0.0382)
+
+Top 10 predictions:
+      1. dribbling basketball (0.4108)
+      2. playing basketball (0.2435)
+      3. shooting basketball (0.1350)
+      4. skipping rope (0.0690)
+  🏞️  5. dunking basketball (0.0382)
+      6. shooting goal (soccer) (0.0356)
+      7. juggling soccer ball (0.0217)
+      8. playing volleyball (0.0185)
+      9. clean and jerk (0.0076)
+     10. juggling balls (0.0063)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -23
+Score gap (bg_score - human_score): 0.0380
+⚠️  Background action in top 5!

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001484_surfing water_to_reading book_WhFMDZt4u5s_000064_000074_bg_4qVBgiGwi2c_000218_000228
+Frame: MIDDLE.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: reading book (score: 0.6350)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #28/50 (score: 0.0017)
+  Background Action 'reading book' ranked: #1/50 (score: 0.6350)
+
+Top 10 predictions:
+  🏞️  1. reading book (0.6350)
+      2. juggling soccer ball (0.0567)
+      3. reading newspaper (0.0456)
+      4. opening bottle (0.0453)
+      5. playing piano (0.0287)
+      6. eating cake (0.0244)
+      7. playing accordion (0.0203)
+      8. dribbling basketball (0.0198)
+      9. juggling balls (0.0188)
+     10. writing (0.0187)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -27
+Score gap (bg_score - human_score): 0.6333
+⚠️  Background action in top 5!

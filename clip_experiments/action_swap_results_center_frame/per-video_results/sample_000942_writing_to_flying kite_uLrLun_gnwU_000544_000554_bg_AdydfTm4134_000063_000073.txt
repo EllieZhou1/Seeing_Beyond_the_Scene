@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000942_writing_to_flying kite_uLrLun_gnwU_000544_000554_bg_AdydfTm4134_000063_000073
+Frame: MIDDLE.jpg
+Human Action Label (Correct): writing
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: flying kite (score: 0.3476)
+
+RANKING ANALYSIS:
+  Human Action 'writing' ranked: #28/50 (score: 0.0018)
+  Background Action 'flying kite' ranked: #1/50 (score: 0.3476)
+
+Top 10 predictions:
+  🏞️  1. flying kite (0.3476)
+      2. juggling soccer ball (0.1602)
+      3. shooting goal (soccer) (0.0998)
+      4. walking the dog (0.0818)
+      5. golf driving (0.0721)
+      6. driving car (0.0463)
+      7. juggling balls (0.0388)
+      8. catching or throwing frisbee (0.0152)
+      9. climbing a rope (0.0142)
+     10. hitting baseball (0.0130)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -27
+Score gap (bg_score - human_score): 0.3457
+⚠️  Background action in top 5!

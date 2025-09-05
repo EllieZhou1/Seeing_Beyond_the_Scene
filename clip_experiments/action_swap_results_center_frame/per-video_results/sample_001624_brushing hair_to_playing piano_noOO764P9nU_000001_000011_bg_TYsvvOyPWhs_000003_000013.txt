@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001624_brushing hair_to_playing piano_noOO764P9nU_000001_000011_bg_TYsvvOyPWhs_000003_000013
+Frame: MIDDLE.jpg
+Human Action Label (Correct): brushing hair
+Background Label (Incorrect): playing piano
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.5007)
+
+RANKING ANALYSIS:
+  Human Action 'brushing hair' ranked: #28/50 (score: 0.0015)
+  Background Action 'playing piano' ranked: #2/50 (score: 0.2608)
+
+Top 10 predictions:
+      1. playing accordion (0.5007)
+  🏞️  2. playing piano (0.2608)
+      3. playing violin (0.0600)
+      4. eating cake (0.0245)
+      5. juggling soccer ball (0.0205)
+      6. playing saxophone (0.0175)
+      7. playing trumpet (0.0145)
+      8. eating ice cream (0.0140)
+      9. opening bottle (0.0087)
+     10. dribbling basketball (0.0081)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -26
+Score gap (bg_score - human_score): 0.2593
+⚠️  Background action in top 5!

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001318_smoking_to_dunking basketball_ID55j2rq1sc_000007_000017_bg_S5b7-MnHens_000003_000013
+Frame: MIDDLE.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): dunking basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: smoking (score: 0.7060)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #1/50 (score: 0.7060)
+  Background Action 'dunking basketball' ranked: #30/50 (score: 0.0006)
+
+Top 10 predictions:
+  👤  1. smoking (0.7060)
+      2. brushing teeth (0.1888)
+      3. climbing a rope (0.0106)
+      4. opening bottle (0.0100)
+      5. brushing hair (0.0096)
+      6. eating cake (0.0090)
+      7. tying tie (0.0089)
+      8. playing trumpet (0.0083)
+      9. playing saxophone (0.0044)
+     10. drinking (0.0041)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 29
+Score gap (bg_score - human_score): -0.7054
+✅ Human action in top 5

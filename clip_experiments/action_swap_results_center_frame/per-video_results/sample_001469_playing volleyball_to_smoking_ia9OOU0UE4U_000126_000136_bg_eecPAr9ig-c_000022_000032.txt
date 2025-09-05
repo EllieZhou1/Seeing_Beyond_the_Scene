@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001469_playing volleyball_to_smoking_ia9OOU0UE4U_000126_000136_bg_eecPAr9ig-c_000022_000032
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing volleyball
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2330)
+
+RANKING ANALYSIS:
+  Human Action 'playing volleyball' ranked: #46/50 (score: 0.0012)
+  Background Action 'smoking' ranked: #7/50 (score: 0.0243)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2330)
+      2. juggling balls (0.1449)
+      3. climbing ladder (0.1143)
+      4. cleaning windows (0.0686)
+      5. playing saxophone (0.0445)
+      6. climbing a rope (0.0324)
+  🏞️  7. smoking (0.0243)
+      8. punching person (boxing) (0.0216)
+      9. playing trumpet (0.0215)
+     10. sweeping floor (0.0213)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -39
+Score gap (bg_score - human_score): 0.0231

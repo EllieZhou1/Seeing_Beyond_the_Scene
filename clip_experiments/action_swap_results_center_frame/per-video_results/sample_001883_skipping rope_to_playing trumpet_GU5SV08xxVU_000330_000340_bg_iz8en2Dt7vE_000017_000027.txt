@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001883_skipping rope_to_playing trumpet_GU5SV08xxVU_000330_000340_bg_iz8en2Dt7vE_000017_000027
+Frame: MIDDLE.jpg
+Human Action Label (Correct): skipping rope
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: dribbling basketball (score: 0.2666)
+
+RANKING ANALYSIS:
+  Human Action 'skipping rope' ranked: #7/50 (score: 0.0149)
+  Background Action 'playing trumpet' ranked: #18/50 (score: 0.0007)
+
+Top 10 predictions:
+      1. dribbling basketball (0.2666)
+      2. playing basketball (0.2474)
+      3. shooting basketball (0.1594)
+      4. dunking basketball (0.1354)
+      5. playing volleyball (0.0903)
+      6. shooting goal (soccer) (0.0394)
+  👤  7. skipping rope (0.0149)
+      8. clean and jerk (0.0147)
+      9. playing tennis (0.0074)
+     10. bowling (0.0066)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 11
+Score gap (bg_score - human_score): -0.0142

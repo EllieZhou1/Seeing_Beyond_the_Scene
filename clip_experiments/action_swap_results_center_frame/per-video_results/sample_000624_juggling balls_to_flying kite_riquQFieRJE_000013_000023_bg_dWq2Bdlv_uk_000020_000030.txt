@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000624_juggling balls_to_flying kite_riquQFieRJE_000013_000023_bg_dWq2Bdlv_uk_000020_000030
+Frame: MIDDLE.jpg
+Human Action Label (Correct): juggling balls
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling balls (score: 0.4634)
+
+RANKING ANALYSIS:
+  Human Action 'juggling balls' ranked: #1/50 (score: 0.4634)
+  Background Action 'flying kite' ranked: #3/50 (score: 0.0364)
+
+Top 10 predictions:
+  👤  1. juggling balls (0.4634)
+      2. juggling soccer ball (0.4599)
+  🏞️  3. flying kite (0.0364)
+      4. catching or throwing frisbee (0.0164)
+      5. opening bottle (0.0046)
+      6. playing trumpet (0.0026)
+      7. climbing a rope (0.0022)
+      8. catching or throwing baseball (0.0020)
+      9. hitting baseball (0.0019)
+     10. skipping rope (0.0018)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 2
+Score gap (bg_score - human_score): -0.4270
+⚠️  Background action in top 5!
+✅ Human action in top 5

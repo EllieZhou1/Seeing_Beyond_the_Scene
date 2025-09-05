@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002235_shooting basketball_to_brushing hair_CpGPWXaPbKo_000030_000040_bg_3-UHHYrkjGM_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): shooting basketball
+Background Label (Incorrect): brushing hair
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.2687)
+
+RANKING ANALYSIS:
+  Human Action 'shooting basketball' ranked: #34/50 (score: 0.0049)
+  Background Action 'brushing hair' ranked: #6/50 (score: 0.0458)
+
+Top 10 predictions:
+      1. opening bottle (0.2687)
+      2. playing piano (0.0792)
+      3. eating cake (0.0620)
+      4. surfing water (0.0563)
+      5. driving car (0.0486)
+  🏞️  6. brushing hair (0.0458)
+      7. playing saxophone (0.0401)
+      8. playing guitar (0.0391)
+      9. reading book (0.0292)
+     10. playing accordion (0.0251)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -28
+Score gap (bg_score - human_score): 0.0409

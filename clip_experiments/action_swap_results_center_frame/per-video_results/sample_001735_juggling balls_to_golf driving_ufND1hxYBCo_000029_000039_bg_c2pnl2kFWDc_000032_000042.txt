@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001735_juggling balls_to_golf driving_ufND1hxYBCo_000029_000039_bg_c2pnl2kFWDc_000032_000042
+Frame: MIDDLE.jpg
+Human Action Label (Correct): juggling balls
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: hitting baseball (score: 0.6502)
+
+RANKING ANALYSIS:
+  Human Action 'juggling balls' ranked: #4/50 (score: 0.0078)
+  Background Action 'golf driving' ranked: #3/50 (score: 0.0176)
+
+Top 10 predictions:
+      1. hitting baseball (0.6502)
+      2. catching or throwing baseball (0.3114)
+  🏞️  3. golf driving (0.0176)
+  👤  4. juggling balls (0.0078)
+      5. juggling soccer ball (0.0058)
+      6. catching or throwing frisbee (0.0024)
+      7. shooting goal (soccer) (0.0019)
+      8. cleaning windows (0.0005)
+      9. playing tennis (0.0005)
+     10. archery (0.0004)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.0098
+⚠️  Background action in top 5!
+✅ Human action in top 5

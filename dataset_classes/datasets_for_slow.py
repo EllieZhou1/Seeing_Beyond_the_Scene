@@ -129,4 +129,79 @@ class DatasetSlow(torch.utils.data.Dataset):
             "label_background":backgroundLabel
         }
         return result
+
+
+#Returns the 5 MCQ choices as a list
+class DatasetSlow_MCQ(torch.utils.data.Dataset):
+    def __init__(self, csv_path, col, isHATActionSwap, max_videos=None):
+        self.max_videos = max_videos
+        self.col = col
+        self.df = pd.read_csv(csv_path)
+        self.isHATActionSwap = isHATActionSwap
+
+        #reduce to max videos if specified
+        # self.df = self.df.sample(n=max_videos) if max_videos is not None else self.df
+        #TODO: reduce df to the max_videos if specified
+
+
+    def __len__(self):
+        if self.max_videos is None:
+            return len(self.df)
+        else:
+            return min(len(self.df), self.max_videos)
+
+    
+    # Compute indices for 8 and 32 evenly spaced frames
+    def sample_indices(self, n, total_frames):
+        return [int(round(i * (total_frames - 1) / (n - 1) + 1)) for i in range(n)]
+    
+    #Given the path to the frames directory and a list of indicies, load the video frames
+    #Returns a tensor of the video frames
+    def load_video_frames(self, frames_path, indices):
+        frames = []
+        for i in indices:
+            image_path = os.path.join(frames_path, f"{i:06d}.jpg")  # Assuming frames are named as 000001.jpg, 000002.jpg, etc.
+            img = Image.open(image_path).convert('RGB')  # Load as RGB
+            img_tensor = torch.from_numpy(np.array(img)).permute(2, 0, 1)  # [C, H, W]
+            frames.append(img_tensor)
+    
+        video_tensor = torch.stack(frames, dim=1)  # [3, num_frames, H, W]
+        video_tensor = transform(video_tensor)  # Apply transformations
+        return video_tensor
+            
+
+    def __getitem__(self, idx): #only outputs one tensor as opposed to
+        row = self.df.iloc[idx]
+
+        if self.isHATActionSwap:
+            label = row['label_A']
+            backgroundLabel = kinetics_classname_to_id[row['label_B']]
+            total_frames = row['num_files_A']
+        else:
+            label = row['label']
+            backgroundLabel = 100
+            total_frames = row['num_files']
+
+        if self.col == 'full_path' or self.col == 'action_swap_path':
+            #If in places365, then always use 32 frames for sampling
+            if row[self.col].startswith("/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/places365/"):
+                idx_slow = self.sample_indices(num_frames_slow, 32)
+            else:
+                idx_slow = self.sample_indices(num_frames_slow, total_frames)
+        elif self.col == 'segmented_path':
+            idx_slow = self.sample_indices(num_frames_slow, 32)
+
+        slow_tensor = self.load_video_frames(row[self.col], idx_slow)
+
+
+        choices = [row['choice_1'], row['choice_2'], row['choice_3'], row['choice_4'], row['choice_5']]
+        choices_tensor = torch.tensor([kinetics_classname_to_id[choice] for choice in choices])
+
+        result = {
+            "inputs": slow_tensor,
+            "label": kinetics_classname_to_id[label],
+            "label_background":backgroundLabel,
+            "choices":choices_tensor
+        }
+        return result
     

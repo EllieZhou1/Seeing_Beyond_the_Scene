@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000080_canoeing or kayaking_to_driving car_Fhj3gXyUukk_000330_000340_bg_8yRWHKGwKk4_000002_000012
+Frame: MIDDLE.jpg
+Human Action Label (Correct): canoeing or kayaking
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.1377)
+
+RANKING ANALYSIS:
+  Human Action 'canoeing or kayaking' ranked: #20/50 (score: 0.0136)
+  Background Action 'driving car' ranked: #3/50 (score: 0.0855)
+
+Top 10 predictions:
+      1. climbing a rope (0.1377)
+      2. hurdling (0.0970)
+  🏞️  3. driving car (0.0855)
+      4. juggling soccer ball (0.0711)
+      5. catching or throwing frisbee (0.0663)
+      6. opening bottle (0.0554)
+      7. climbing ladder (0.0438)
+      8. dunking basketball (0.0433)
+      9. walking the dog (0.0416)
+     10. skipping rope (0.0318)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -17
+Score gap (bg_score - human_score): 0.0720
+⚠️  Background action in top 5!

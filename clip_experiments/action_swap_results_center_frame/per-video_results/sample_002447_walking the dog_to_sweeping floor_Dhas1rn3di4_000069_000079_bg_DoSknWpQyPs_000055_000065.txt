@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002447_walking the dog_to_sweeping floor_Dhas1rn3di4_000069_000079_bg_DoSknWpQyPs_000055_000065
+Frame: MIDDLE.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): sweeping floor
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.1475)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #46/50 (score: 0.0024)
+  Background Action 'sweeping floor' ranked: #3/50 (score: 0.0755)
+
+Top 10 predictions:
+      1. climbing ladder (0.1475)
+      2. punching person (boxing) (0.0757)
+  🏞️  3. sweeping floor (0.0755)
+      4. driving car (0.0550)
+      5. reading newspaper (0.0499)
+      6. golf driving (0.0479)
+      7. reading book (0.0439)
+      8. playing piano (0.0371)
+      9. deadlifting (0.0341)
+     10. playing guitar (0.0313)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -43
+Score gap (bg_score - human_score): 0.0730
+⚠️  Background action in top 5!

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000789_clean and jerk_to_walking the dog_cBSJlnDYH3g_000010_000020_bg_pFTRtoFzb60_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.3993)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #9/50 (score: 0.0122)
+  Background Action 'walking the dog' ranked: #30/50 (score: 0.0020)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.3993)
+      2. juggling balls (0.2107)
+      3. skipping rope (0.0725)
+      4. catching or throwing frisbee (0.0549)
+      5. punching person (boxing) (0.0415)
+      6. shooting goal (soccer) (0.0331)
+      7. sword fighting (0.0175)
+      8. hurdling (0.0141)
+  👤  9. clean and jerk (0.0122)
+     10. dribbling basketball (0.0112)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 21
+Score gap (bg_score - human_score): -0.0102

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002372_opening bottle_to_playing saxophone_cO947ZSANRg_000023_000033_bg_7MT7_Kpj3Y8_000065_000075
+Frame: MIDDLE.jpg
+Human Action Label (Correct): opening bottle
+Background Label (Incorrect): playing saxophone
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.3108)
+
+RANKING ANALYSIS:
+  Human Action 'opening bottle' ranked: #8/50 (score: 0.0174)
+  Background Action 'playing saxophone' ranked: #4/50 (score: 0.1368)
+
+Top 10 predictions:
+      1. playing accordion (0.3108)
+      2. playing bass guitar (0.1487)
+      3. playing trumpet (0.1405)
+  🏞️  4. playing saxophone (0.1368)
+      5. playing piano (0.0674)
+      6. playing violin (0.0627)
+      7. playing guitar (0.0447)
+  👤  8. opening bottle (0.0174)
+      9. juggling balls (0.0173)
+     10. writing (0.0105)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -4
+Score gap (bg_score - human_score): 0.1194
+⚠️  Background action in top 5!

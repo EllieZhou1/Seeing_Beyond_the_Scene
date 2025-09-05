@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001438_playing saxophone_to_skiing (not slalom or crosscountry)_77bGWKIfsvk_000061_000071_bg_GuFI_K7gqwY_000060_000070
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing saxophone
+Background Label (Incorrect): skiing (not slalom or crosscountry)
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.2779)
+
+RANKING ANALYSIS:
+  Human Action 'playing saxophone' ranked: #4/50 (score: 0.0333)
+  Background Action 'skiing (not slalom or crosscountry)' ranked: #3/50 (score: 0.1205)
+
+Top 10 predictions:
+      1. skiing slalom (0.2779)
+      2. surfing water (0.1486)
+  🏞️  3. skiing (not slalom or crosscountry) (0.1205)
+  👤  4. playing saxophone (0.0333)
+      5. sword fighting (0.0255)
+      6. playing accordion (0.0238)
+      7. walking the dog (0.0234)
+      8. bowling (0.0209)
+      9. eating ice cream (0.0199)
+     10. playing volleyball (0.0174)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.0873
+⚠️  Background action in top 5!
+✅ Human action in top 5

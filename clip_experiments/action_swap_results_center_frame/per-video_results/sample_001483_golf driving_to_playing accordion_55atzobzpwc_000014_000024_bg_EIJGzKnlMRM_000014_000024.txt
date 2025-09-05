@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001483_golf driving_to_playing accordion_55atzobzpwc_000014_000024_bg_EIJGzKnlMRM_000014_000024
+Frame: MIDDLE.jpg
+Human Action Label (Correct): golf driving
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.7335)
+
+RANKING ANALYSIS:
+  Human Action 'golf driving' ranked: #5/50 (score: 0.0190)
+  Background Action 'playing accordion' ranked: #21/50 (score: 0.0031)
+
+Top 10 predictions:
+      1. climbing ladder (0.7335)
+      2. cleaning windows (0.0431)
+      3. playing tennis (0.0280)
+      4. climbing a rope (0.0263)
+  👤  5. golf driving (0.0190)
+      6. playing piano (0.0169)
+      7. skipping rope (0.0165)
+      8. hurdling (0.0152)
+      9. playing violin (0.0115)
+     10. skiing slalom (0.0097)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 16
+Score gap (bg_score - human_score): -0.0159
+✅ Human action in top 5

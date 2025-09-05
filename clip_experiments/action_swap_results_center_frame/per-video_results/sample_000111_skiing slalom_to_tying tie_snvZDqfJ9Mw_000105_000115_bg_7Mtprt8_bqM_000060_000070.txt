@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000111_skiing slalom_to_tying tie_snvZDqfJ9Mw_000105_000115_bg_7Mtprt8_bqM_000060_000070
+Frame: MIDDLE.jpg
+Human Action Label (Correct): skiing slalom
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.7469)
+
+RANKING ANALYSIS:
+  Human Action 'skiing slalom' ranked: #2/50 (score: 0.0424)
+  Background Action 'tying tie' ranked: #50/50 (score: 0.0001)
+
+Top 10 predictions:
+      1. surfing water (0.7469)
+  👤  2. skiing slalom (0.0424)
+      3. climbing a rope (0.0283)
+      4. flying kite (0.0141)
+      5. hurdling (0.0133)
+      6. skiing (not slalom or crosscountry) (0.0114)
+      7. climbing ladder (0.0114)
+      8. canoeing or kayaking (0.0109)
+      9. deadlifting (0.0087)
+     10. playing violin (0.0085)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 48
+Score gap (bg_score - human_score): -0.0423
+✅ Human action in top 5

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000757_drinking_to_golf driving_wByNrVN5dr4_000100_000110_bg_6CbAI0QPeSM_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: flying kite (score: 0.1354)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #40/50 (score: 0.0005)
+  Background Action 'golf driving' ranked: #2/50 (score: 0.1234)
+
+Top 10 predictions:
+      1. flying kite (0.1354)
+  🏞️  2. golf driving (0.1234)
+      3. shooting goal (soccer) (0.1084)
+      4. juggling soccer ball (0.1061)
+      5. skipping rope (0.0835)
+      6. punching person (boxing) (0.0781)
+      7. climbing a rope (0.0684)
+      8. juggling balls (0.0634)
+      9. archery (0.0429)
+     10. hitting baseball (0.0342)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -38
+Score gap (bg_score - human_score): 0.1229
+⚠️  Background action in top 5!

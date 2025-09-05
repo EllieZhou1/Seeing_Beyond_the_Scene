@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000609_skiing slalom_to_eating ice cream_o5K7K_9JqJo_000048_000058_bg_0L8ZcrRtFxI_001103_001113
+Frame: MIDDLE.jpg
+Human Action Label (Correct): skiing slalom
+Background Label (Incorrect): eating ice cream
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.3062)
+
+RANKING ANALYSIS:
+  Human Action 'skiing slalom' ranked: #15/50 (score: 0.0075)
+  Background Action 'eating ice cream' ranked: #41/50 (score: 0.0007)
+
+Top 10 predictions:
+      1. cleaning windows (0.3062)
+      2. sweeping floor (0.2358)
+      3. climbing a rope (0.0685)
+      4. sword fighting (0.0636)
+      5. hurdling (0.0478)
+      6. juggling soccer ball (0.0478)
+      7. skipping rope (0.0274)
+      8. climbing ladder (0.0268)
+      9. catching or throwing frisbee (0.0187)
+     10. surfing water (0.0164)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 26
+Score gap (bg_score - human_score): -0.0068

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001808_sword fighting_to_deadlifting__kcVbo4E2JQ_000101_000111_bg_e8-ya-6rqPw_000051_000061
+Frame: MIDDLE.jpg
+Human Action Label (Correct): sword fighting
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: clean and jerk (score: 0.9827)
+
+RANKING ANALYSIS:
+  Human Action 'sword fighting' ranked: #6/50 (score: 0.0006)
+  Background Action 'deadlifting' ranked: #2/50 (score: 0.0128)
+
+Top 10 predictions:
+      1. clean and jerk (0.9827)
+  🏞️  2. deadlifting (0.0128)
+      3. juggling balls (0.0010)
+      4. punching person (boxing) (0.0010)
+      5. juggling soccer ball (0.0007)
+  👤  6. sword fighting (0.0006)
+      7. climbing a rope (0.0002)
+      8. climbing ladder (0.0002)
+      9. catching or throwing baseball (0.0001)
+     10. hitting baseball (0.0001)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -4
+Score gap (bg_score - human_score): 0.0122
+⚠️  Background action in top 5!

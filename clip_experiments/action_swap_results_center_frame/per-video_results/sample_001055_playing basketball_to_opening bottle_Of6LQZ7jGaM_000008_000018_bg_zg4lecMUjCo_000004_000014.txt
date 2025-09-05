@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001055_playing basketball_to_opening bottle_Of6LQZ7jGaM_000008_000018_bg_zg4lecMUjCo_000004_000014
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing basketball
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.2820)
+
+RANKING ANALYSIS:
+  Human Action 'playing basketball' ranked: #37/50 (score: 0.0030)
+  Background Action 'opening bottle' ranked: #2/50 (score: 0.0797)
+
+Top 10 predictions:
+      1. brushing hair (0.2820)
+  🏞️  2. opening bottle (0.0797)
+      3. juggling soccer ball (0.0661)
+      4. playing accordion (0.0571)
+      5. drinking (0.0502)
+      6. brushing teeth (0.0386)
+      7. sword fighting (0.0346)
+      8. punching person (boxing) (0.0269)
+      9. playing violin (0.0235)
+     10. juggling balls (0.0233)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -35
+Score gap (bg_score - human_score): 0.0767
+⚠️  Background action in top 5!

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001989_playing saxophone_to_eating ice cream_Lj3wfxExD-s_000184_000194_bg_XGh8Q2nklzg_000003_000013
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing saxophone
+Background Label (Incorrect): eating ice cream
+
+CLIP PREDICTIONS:
+  Predicted Label: playing saxophone (score: 0.9249)
+
+RANKING ANALYSIS:
+  Human Action 'playing saxophone' ranked: #1/50 (score: 0.9249)
+  Background Action 'eating ice cream' ranked: #25/50 (score: 0.0000)
+
+Top 10 predictions:
+  👤  1. playing saxophone (0.9249)
+      2. playing bass guitar (0.0368)
+      3. playing trumpet (0.0214)
+      4. playing violin (0.0060)
+      5. playing accordion (0.0037)
+      6. playing guitar (0.0030)
+      7. tying tie (0.0016)
+      8. sword fighting (0.0005)
+      9. climbing ladder (0.0004)
+     10. playing piano (0.0003)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 24
+Score gap (bg_score - human_score): -0.9249
+✅ Human action in top 5

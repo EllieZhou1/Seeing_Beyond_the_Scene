@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002375_catching or throwing frisbee_to_walking the dog_a6KJuGCozc4_000014_000024_bg_X6OCjJ8a3-0_000002_000012
+Frame: MIDDLE.jpg
+Human Action Label (Correct): catching or throwing frisbee
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: walking the dog (score: 0.7652)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing frisbee' ranked: #2/50 (score: 0.0426)
+  Background Action 'walking the dog' ranked: #1/50 (score: 0.7652)
+
+Top 10 predictions:
+  🏞️  1. walking the dog (0.7652)
+  👤  2. catching or throwing frisbee (0.0426)
+      3. skipping rope (0.0346)
+      4. sword fighting (0.0209)
+      5. juggling balls (0.0182)
+      6. catching or throwing baseball (0.0175)
+      7. juggling soccer ball (0.0147)
+      8. cleaning windows (0.0146)
+      9. playing saxophone (0.0092)
+     10. hurdling (0.0061)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.7226
+⚠️  Background action in top 5!
+✅ Human action in top 5

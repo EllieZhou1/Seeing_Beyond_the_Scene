@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000436_brushing teeth_to_bowling_X9rCMmJm4KA_000060_000070_bg_EYKcpyWRtyY_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): brushing teeth
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: eating cake (score: 0.2301)
+
+RANKING ANALYSIS:
+  Human Action 'brushing teeth' ranked: #11/50 (score: 0.0219)
+  Background Action 'bowling' ranked: #18/50 (score: 0.0121)
+
+Top 10 predictions:
+      1. eating cake (0.2301)
+      2. dribbling basketball (0.1060)
+      3. eating ice cream (0.1022)
+      4. playing accordion (0.0977)
+      5. climbing a rope (0.0547)
+      6. hitting baseball (0.0449)
+      7. opening bottle (0.0343)
+      8. juggling soccer ball (0.0264)
+      9. juggling balls (0.0250)
+     10. catching or throwing baseball (0.0225)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 7
+Score gap (bg_score - human_score): -0.0098

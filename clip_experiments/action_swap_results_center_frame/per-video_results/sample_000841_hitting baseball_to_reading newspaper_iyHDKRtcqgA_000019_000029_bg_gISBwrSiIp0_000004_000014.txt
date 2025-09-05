@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000841_hitting baseball_to_reading newspaper_iyHDKRtcqgA_000019_000029_bg_gISBwrSiIp0_000004_000014
+Frame: MIDDLE.jpg
+Human Action Label (Correct): hitting baseball
+Background Label (Incorrect): reading newspaper
+
+CLIP PREDICTIONS:
+  Predicted Label: hitting baseball (score: 0.2730)
+
+RANKING ANALYSIS:
+  Human Action 'hitting baseball' ranked: #1/50 (score: 0.2730)
+  Background Action 'reading newspaper' ranked: #4/50 (score: 0.1209)
+
+Top 10 predictions:
+  👤  1. hitting baseball (0.2730)
+      2. punching person (boxing) (0.1723)
+      3. skiing slalom (0.1469)
+  🏞️  4. reading newspaper (0.1209)
+      5. hurdling (0.0335)
+      6. catching or throwing baseball (0.0327)
+      7. dribbling basketball (0.0223)
+      8. opening bottle (0.0161)
+      9. playing tennis (0.0133)
+     10. sword fighting (0.0132)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 3
+Score gap (bg_score - human_score): -0.1521
+⚠️  Background action in top 5!
+✅ Human action in top 5

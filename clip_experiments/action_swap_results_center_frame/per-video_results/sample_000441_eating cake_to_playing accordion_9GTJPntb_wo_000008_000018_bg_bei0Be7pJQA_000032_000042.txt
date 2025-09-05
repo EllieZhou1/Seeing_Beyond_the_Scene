@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000441_eating cake_to_playing accordion_9GTJPntb_wo_000008_000018_bg_bei0Be7pJQA_000032_000042
+Frame: MIDDLE.jpg
+Human Action Label (Correct): eating cake
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.2564)
+
+RANKING ANALYSIS:
+  Human Action 'eating cake' ranked: #11/50 (score: 0.0174)
+  Background Action 'playing accordion' ranked: #17/50 (score: 0.0078)
+
+Top 10 predictions:
+      1. climbing ladder (0.2564)
+      2. brushing hair (0.1166)
+      3. dunking basketball (0.1049)
+      4. skipping rope (0.0931)
+      5. climbing a rope (0.0845)
+      6. opening bottle (0.0661)
+      7. brushing teeth (0.0362)
+      8. playing basketball (0.0252)
+      9. dribbling basketball (0.0252)
+     10. playing violin (0.0247)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 6
+Score gap (bg_score - human_score): -0.0096

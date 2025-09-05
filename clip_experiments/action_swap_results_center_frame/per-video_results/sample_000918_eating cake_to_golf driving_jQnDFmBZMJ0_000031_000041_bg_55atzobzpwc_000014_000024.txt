@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000918_eating cake_to_golf driving_jQnDFmBZMJ0_000031_000041_bg_55atzobzpwc_000014_000024
+Frame: MIDDLE.jpg
+Human Action Label (Correct): eating cake
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.6834)
+
+RANKING ANALYSIS:
+  Human Action 'eating cake' ranked: #48/50 (score: 0.0000)
+  Background Action 'golf driving' ranked: #2/50 (score: 0.1186)
+
+Top 10 predictions:
+      1. shooting goal (soccer) (0.6834)
+  🏞️  2. golf driving (0.1186)
+      3. flying kite (0.0497)
+      4. juggling soccer ball (0.0485)
+      5. hitting baseball (0.0442)
+      6. catching or throwing frisbee (0.0216)
+      7. catching or throwing baseball (0.0089)
+      8. archery (0.0081)
+      9. juggling balls (0.0046)
+     10. skiing slalom (0.0024)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -46
+Score gap (bg_score - human_score): 0.1186
+⚠️  Background action in top 5!

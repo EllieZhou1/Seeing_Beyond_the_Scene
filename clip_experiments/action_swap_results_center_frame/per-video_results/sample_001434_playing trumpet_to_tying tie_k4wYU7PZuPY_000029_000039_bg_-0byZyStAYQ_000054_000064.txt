@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001434_playing trumpet_to_tying tie_k4wYU7PZuPY_000029_000039_bg_-0byZyStAYQ_000054_000064
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing trumpet
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: eating ice cream (score: 0.1390)
+
+RANKING ANALYSIS:
+  Human Action 'playing trumpet' ranked: #11/50 (score: 0.0427)
+  Background Action 'tying tie' ranked: #37/50 (score: 0.0029)
+
+Top 10 predictions:
+      1. eating ice cream (0.1390)
+      2. drinking (0.0695)
+      3. smoking (0.0652)
+      4. eating cake (0.0633)
+      5. playing guitar (0.0613)
+      6. juggling balls (0.0596)
+      7. playing saxophone (0.0511)
+      8. playing accordion (0.0486)
+      9. juggling soccer ball (0.0457)
+     10. reading newspaper (0.0457)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 26
+Score gap (bg_score - human_score): -0.0398

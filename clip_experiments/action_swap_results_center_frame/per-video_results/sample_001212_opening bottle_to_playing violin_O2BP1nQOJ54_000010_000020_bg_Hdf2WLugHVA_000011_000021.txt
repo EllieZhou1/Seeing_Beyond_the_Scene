@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001212_opening bottle_to_playing violin_O2BP1nQOJ54_000010_000020_bg_Hdf2WLugHVA_000011_000021
+Frame: MIDDLE.jpg
+Human Action Label (Correct): opening bottle
+Background Label (Incorrect): playing violin
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2187)
+
+RANKING ANALYSIS:
+  Human Action 'opening bottle' ranked: #5/50 (score: 0.0464)
+  Background Action 'playing violin' ranked: #4/50 (score: 0.0711)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2187)
+      2. juggling balls (0.1065)
+      3. climbing a rope (0.0849)
+  🏞️  4. playing violin (0.0711)
+  👤  5. opening bottle (0.0464)
+      6. dribbling basketball (0.0421)
+      7. playing guitar (0.0412)
+      8. playing piano (0.0409)
+      9. dunking basketball (0.0327)
+     10. eating cake (0.0302)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.0247
+⚠️  Background action in top 5!
+✅ Human action in top 5

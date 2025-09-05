@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000167_reading newspaper_to_tying tie_cXsQwIVDsKY_000004_000014_bg_mHlVB_CxXGE_000043_000053
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.2665)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #5/50 (score: 0.0508)
+  Background Action 'tying tie' ranked: #31/50 (score: 0.0013)
+
+Top 10 predictions:
+      1. cleaning windows (0.2665)
+      2. punching person (boxing) (0.2412)
+      3. opening bottle (0.1139)
+      4. playing accordion (0.0633)
+  👤  5. reading newspaper (0.0508)
+      6. climbing a rope (0.0342)
+      7. brushing hair (0.0336)
+      8. eating ice cream (0.0271)
+      9. drinking (0.0248)
+     10. climbing ladder (0.0226)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 26
+Score gap (bg_score - human_score): -0.0494
+✅ Human action in top 5

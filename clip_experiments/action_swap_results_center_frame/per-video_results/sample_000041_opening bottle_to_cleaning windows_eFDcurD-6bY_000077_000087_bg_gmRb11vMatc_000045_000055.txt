@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000041_opening bottle_to_cleaning windows_eFDcurD-6bY_000077_000087_bg_gmRb11vMatc_000045_000055
+Frame: MIDDLE.jpg
+Human Action Label (Correct): opening bottle
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.5303)
+
+RANKING ANALYSIS:
+  Human Action 'opening bottle' ranked: #8/50 (score: 0.0209)
+  Background Action 'cleaning windows' ranked: #1/50 (score: 0.5303)
+
+Top 10 predictions:
+  🏞️  1. cleaning windows (0.5303)
+      2. climbing a rope (0.0889)
+      3. punching person (boxing) (0.0813)
+      4. skipping rope (0.0597)
+      5. climbing ladder (0.0429)
+      6. sword fighting (0.0325)
+      7. juggling soccer ball (0.0289)
+  👤  8. opening bottle (0.0209)
+      9. catching or throwing frisbee (0.0183)
+     10. dunking basketball (0.0111)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -7
+Score gap (bg_score - human_score): 0.5094
+⚠️  Background action in top 5!

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001492_writing_to_sweeping floor_Ub0rc6U6nfI_000100_000110_bg_Pao46Zf359w_000015_000025
+Frame: MIDDLE.jpg
+Human Action Label (Correct): writing
+Background Label (Incorrect): sweeping floor
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.2757)
+
+RANKING ANALYSIS:
+  Human Action 'writing' ranked: #47/50 (score: 0.0005)
+  Background Action 'sweeping floor' ranked: #2/50 (score: 0.1673)
+
+Top 10 predictions:
+      1. cleaning windows (0.2757)
+  🏞️  2. sweeping floor (0.1673)
+      3. climbing a rope (0.0756)
+      4. playing violin (0.0642)
+      5. sword fighting (0.0458)
+      6. archery (0.0415)
+      7. skipping rope (0.0373)
+      8. opening bottle (0.0346)
+      9. surfing water (0.0266)
+     10. playing tennis (0.0240)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -45
+Score gap (bg_score - human_score): 0.1668
+⚠️  Background action in top 5!

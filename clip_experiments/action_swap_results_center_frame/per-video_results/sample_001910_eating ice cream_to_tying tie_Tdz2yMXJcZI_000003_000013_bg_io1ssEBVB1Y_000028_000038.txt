@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001910_eating ice cream_to_tying tie_Tdz2yMXJcZI_000003_000013_bg_io1ssEBVB1Y_000028_000038
+Frame: MIDDLE.jpg
+Human Action Label (Correct): eating ice cream
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling balls (score: 0.1148)
+
+RANKING ANALYSIS:
+  Human Action 'eating ice cream' ranked: #3/50 (score: 0.0960)
+  Background Action 'tying tie' ranked: #34/50 (score: 0.0035)
+
+Top 10 predictions:
+      1. juggling balls (0.1148)
+      2. juggling soccer ball (0.1019)
+  👤  3. eating ice cream (0.0960)
+      4. eating cake (0.0918)
+      5. smoking (0.0675)
+      6. sword fighting (0.0639)
+      7. drinking (0.0599)
+      8. punching person (boxing) (0.0496)
+      9. playing accordion (0.0475)
+     10. playing trumpet (0.0415)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 31
+Score gap (bg_score - human_score): -0.0926
+✅ Human action in top 5

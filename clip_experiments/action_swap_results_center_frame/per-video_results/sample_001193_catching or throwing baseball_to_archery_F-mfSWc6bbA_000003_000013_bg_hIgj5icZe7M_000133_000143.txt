@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001193_catching or throwing baseball_to_archery_F-mfSWc6bbA_000003_000013_bg_hIgj5icZe7M_000133_000143
+Frame: MIDDLE.jpg
+Human Action Label (Correct): catching or throwing baseball
+Background Label (Incorrect): archery
+
+CLIP PREDICTIONS:
+  Predicted Label: hitting baseball (score: 0.1449)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing baseball' ranked: #15/50 (score: 0.0170)
+  Background Action 'archery' ranked: #13/50 (score: 0.0222)
+
+Top 10 predictions:
+      1. hitting baseball (0.1449)
+      2. skipping rope (0.0956)
+      3. tying tie (0.0746)
+      4. flying kite (0.0695)
+      5. skiing (not slalom or crosscountry) (0.0625)
+      6. climbing ladder (0.0621)
+      7. bowling (0.0580)
+      8. juggling balls (0.0457)
+      9. juggling soccer ball (0.0363)
+     10. brushing hair (0.0354)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.0052

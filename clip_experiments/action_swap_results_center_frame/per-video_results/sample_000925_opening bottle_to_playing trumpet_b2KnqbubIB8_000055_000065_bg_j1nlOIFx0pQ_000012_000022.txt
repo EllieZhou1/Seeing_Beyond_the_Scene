@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000925_opening bottle_to_playing trumpet_b2KnqbubIB8_000055_000065_bg_j1nlOIFx0pQ_000012_000022
+Frame: MIDDLE.jpg
+Human Action Label (Correct): opening bottle
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.6668)
+
+RANKING ANALYSIS:
+  Human Action 'opening bottle' ranked: #3/50 (score: 0.0309)
+  Background Action 'playing trumpet' ranked: #19/50 (score: 0.0053)
+
+Top 10 predictions:
+      1. cleaning windows (0.6668)
+      2. climbing ladder (0.0560)
+  👤  3. opening bottle (0.0309)
+      4. playing saxophone (0.0230)
+      5. climbing a rope (0.0212)
+      6. driving car (0.0167)
+      7. drinking (0.0167)
+      8. playing accordion (0.0160)
+      9. smoking (0.0155)
+     10. juggling soccer ball (0.0154)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 16
+Score gap (bg_score - human_score): -0.0256
+✅ Human action in top 5

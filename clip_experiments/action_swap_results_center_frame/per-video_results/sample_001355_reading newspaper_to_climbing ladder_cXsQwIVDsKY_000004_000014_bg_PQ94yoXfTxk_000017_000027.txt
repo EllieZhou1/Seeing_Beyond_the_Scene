@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001355_reading newspaper_to_climbing ladder_cXsQwIVDsKY_000004_000014_bg_PQ94yoXfTxk_000017_000027
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): climbing ladder
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.3252)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #13/50 (score: 0.0128)
+  Background Action 'climbing ladder' ranked: #10/50 (score: 0.0161)
+
+Top 10 predictions:
+      1. cleaning windows (0.3252)
+      2. punching person (boxing) (0.3099)
+      3. smoking (0.0560)
+      4. opening bottle (0.0558)
+      5. climbing a rope (0.0267)
+      6. sword fighting (0.0211)
+      7. playing violin (0.0187)
+      8. brushing hair (0.0185)
+      9. surfing water (0.0184)
+  🏞️ 10. climbing ladder (0.0161)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -3
+Score gap (bg_score - human_score): 0.0033

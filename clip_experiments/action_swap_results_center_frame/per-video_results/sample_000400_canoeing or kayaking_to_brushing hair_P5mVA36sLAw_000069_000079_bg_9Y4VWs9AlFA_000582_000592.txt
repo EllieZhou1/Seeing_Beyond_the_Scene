@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000400_canoeing or kayaking_to_brushing hair_P5mVA36sLAw_000069_000079_bg_9Y4VWs9AlFA_000582_000592
+Frame: MIDDLE.jpg
+Human Action Label (Correct): canoeing or kayaking
+Background Label (Incorrect): brushing hair
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.8139)
+
+RANKING ANALYSIS:
+  Human Action 'canoeing or kayaking' ranked: #50/50 (score: 0.0000)
+  Background Action 'brushing hair' ranked: #2/50 (score: 0.0341)
+
+Top 10 predictions:
+      1. cleaning windows (0.8139)
+  🏞️  2. brushing hair (0.0341)
+      3. playing accordion (0.0165)
+      4. playing saxophone (0.0155)
+      5. writing (0.0132)
+      6. climbing a rope (0.0117)
+      7. drinking (0.0078)
+      8. reading newspaper (0.0071)
+      9. flying kite (0.0066)
+     10. playing piano (0.0064)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -48
+Score gap (bg_score - human_score): 0.0341
+⚠️  Background action in top 5!

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000002_dunking basketball_to_flying kite_ePkJVG2MnBg_000009_000019_bg_xPYKPbEN6Wc_000104_000114
+Frame: MIDDLE.jpg
+Human Action Label (Correct): dunking basketball
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: catching or throwing frisbee (score: 0.5778)
+
+RANKING ANALYSIS:
+  Human Action 'dunking basketball' ranked: #11/50 (score: 0.0074)
+  Background Action 'flying kite' ranked: #16/50 (score: 0.0032)
+
+Top 10 predictions:
+      1. catching or throwing frisbee (0.5778)
+      2. juggling soccer ball (0.0803)
+      3. juggling balls (0.0794)
+      4. catching or throwing baseball (0.0615)
+      5. walking the dog (0.0431)
+      6. playing basketball (0.0304)
+      7. hitting baseball (0.0266)
+      8. hurdling (0.0231)
+      9. shooting goal (soccer) (0.0186)
+     10. dribbling basketball (0.0099)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 5
+Score gap (bg_score - human_score): -0.0042

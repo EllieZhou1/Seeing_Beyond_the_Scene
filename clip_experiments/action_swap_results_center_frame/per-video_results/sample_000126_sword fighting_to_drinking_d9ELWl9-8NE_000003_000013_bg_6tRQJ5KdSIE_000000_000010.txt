@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000126_sword fighting_to_drinking_d9ELWl9-8NE_000003_000013_bg_6tRQJ5KdSIE_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): sword fighting
+Background Label (Incorrect): drinking
+
+CLIP PREDICTIONS:
+  Predicted Label: playing saxophone (score: 0.1428)
+
+RANKING ANALYSIS:
+  Human Action 'sword fighting' ranked: #14/50 (score: 0.0181)
+  Background Action 'drinking' ranked: #24/50 (score: 0.0046)
+
+Top 10 predictions:
+      1. playing saxophone (0.1428)
+      2. dribbling basketball (0.1040)
+      3. playing violin (0.0864)
+      4. juggling soccer ball (0.0806)
+      5. playing guitar (0.0756)
+      6. playing basketball (0.0752)
+      7. shooting basketball (0.0575)
+      8. skipping rope (0.0497)
+      9. dunking basketball (0.0458)
+     10. playing bass guitar (0.0438)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 10
+Score gap (bg_score - human_score): -0.0135

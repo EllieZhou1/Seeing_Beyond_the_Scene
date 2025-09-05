@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000079_cleaning windows_to_catching or throwing frisbee_1M37VLYmSA4_000006_000016_bg_MsfeeRqyaa4_000003_000013
+Frame: MIDDLE.jpg
+Human Action Label (Correct): cleaning windows
+Background Label (Incorrect): catching or throwing frisbee
+
+CLIP PREDICTIONS:
+  Predicted Label: flying kite (score: 0.9143)
+
+RANKING ANALYSIS:
+  Human Action 'cleaning windows' ranked: #27/50 (score: 0.0001)
+  Background Action 'catching or throwing frisbee' ranked: #3/50 (score: 0.0166)
+
+Top 10 predictions:
+      1. flying kite (0.9143)
+      2. skiing slalom (0.0266)
+  🏞️  3. catching or throwing frisbee (0.0166)
+      4. juggling soccer ball (0.0086)
+      5. skiing (not slalom or crosscountry) (0.0071)
+      6. shooting goal (soccer) (0.0060)
+      7. juggling balls (0.0046)
+      8. climbing a rope (0.0039)
+      9. golf driving (0.0037)
+     10. catching or throwing baseball (0.0023)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -24
+Score gap (bg_score - human_score): 0.0166
+⚠️  Background action in top 5!

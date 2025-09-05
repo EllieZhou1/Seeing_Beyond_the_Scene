@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000520_dribbling basketball_to_playing bass guitar_UthqVZFc6Zk_000145_000155_bg_j6Wh4zu5z74_000115_000125
+Frame: MIDDLE.jpg
+Human Action Label (Correct): dribbling basketball
+Background Label (Incorrect): playing bass guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: playing guitar (score: 0.3455)
+
+RANKING ANALYSIS:
+  Human Action 'dribbling basketball' ranked: #4/50 (score: 0.0789)
+  Background Action 'playing bass guitar' ranked: #5/50 (score: 0.0650)
+
+Top 10 predictions:
+      1. playing guitar (0.3455)
+      2. skipping rope (0.2588)
+      3. juggling soccer ball (0.0832)
+  👤  4. dribbling basketball (0.0789)
+  🏞️  5. playing bass guitar (0.0650)
+      6. shooting goal (soccer) (0.0548)
+      7. juggling balls (0.0185)
+      8. playing violin (0.0179)
+      9. dunking basketball (0.0134)
+     10. playing accordion (0.0115)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0139
+⚠️  Background action in top 5!
+✅ Human action in top 5

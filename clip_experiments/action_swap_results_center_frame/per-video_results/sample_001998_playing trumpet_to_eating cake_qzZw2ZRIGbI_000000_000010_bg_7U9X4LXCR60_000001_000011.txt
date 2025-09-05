@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001998_playing trumpet_to_eating cake_qzZw2ZRIGbI_000000_000010_bg_7U9X4LXCR60_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing trumpet
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.3231)
+
+RANKING ANALYSIS:
+  Human Action 'playing trumpet' ranked: #16/50 (score: 0.0093)
+  Background Action 'eating cake' ranked: #28/50 (score: 0.0035)
+
+Top 10 predictions:
+      1. surfing water (0.3231)
+      2. cleaning windows (0.1221)
+      3. brushing teeth (0.1015)
+      4. opening bottle (0.0968)
+      5. dunking basketball (0.0415)
+      6. drinking (0.0405)
+      7. reading newspaper (0.0286)
+      8. sweeping floor (0.0231)
+      9. brushing hair (0.0215)
+     10. reading book (0.0208)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 12
+Score gap (bg_score - human_score): -0.0059

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000671_bowling_to_catching or throwing baseball_elPyNNFZK6s_000144_000154_bg_d2RIQkmy9cE_000159_000169
+Frame: MIDDLE.jpg
+Human Action Label (Correct): bowling
+Background Label (Incorrect): catching or throwing baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: catching or throwing baseball (score: 0.6803)
+
+RANKING ANALYSIS:
+  Human Action 'bowling' ranked: #30/50 (score: 0.0000)
+  Background Action 'catching or throwing baseball' ranked: #1/50 (score: 0.6803)
+
+Top 10 predictions:
+  🏞️  1. catching or throwing baseball (0.6803)
+      2. hitting baseball (0.1959)
+      3. shooting goal (soccer) (0.0568)
+      4. catching or throwing frisbee (0.0321)
+      5. juggling soccer ball (0.0255)
+      6. playing tennis (0.0015)
+      7. flying kite (0.0014)
+      8. juggling balls (0.0013)
+      9. hurdling (0.0011)
+     10. golf driving (0.0008)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -29
+Score gap (bg_score - human_score): 0.6802
+⚠️  Background action in top 5!

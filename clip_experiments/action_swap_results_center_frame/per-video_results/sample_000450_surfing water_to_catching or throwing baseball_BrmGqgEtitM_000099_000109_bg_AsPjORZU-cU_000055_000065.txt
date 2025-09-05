@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000450_surfing water_to_catching or throwing baseball_BrmGqgEtitM_000099_000109_bg_AsPjORZU-cU_000055_000065
+Frame: MIDDLE.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): catching or throwing baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.3747)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #33/50 (score: 0.0000)
+  Background Action 'catching or throwing baseball' ranked: #10/50 (score: 0.0098)
+
+Top 10 predictions:
+      1. shooting goal (soccer) (0.3747)
+      2. catching or throwing frisbee (0.1972)
+      3. golf driving (0.1345)
+      4. juggling soccer ball (0.1144)
+      5. flying kite (0.0682)
+      6. hitting baseball (0.0174)
+      7. hurdling (0.0173)
+      8. juggling balls (0.0164)
+      9. skiing slalom (0.0116)
+  🏞️ 10. catching or throwing baseball (0.0098)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -23
+Score gap (bg_score - human_score): 0.0097

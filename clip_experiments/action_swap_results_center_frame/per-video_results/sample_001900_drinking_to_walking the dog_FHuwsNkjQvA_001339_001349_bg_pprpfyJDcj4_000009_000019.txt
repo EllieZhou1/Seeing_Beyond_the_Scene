@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001900_drinking_to_walking the dog_FHuwsNkjQvA_001339_001349_bg_pprpfyJDcj4_000009_000019
+Frame: MIDDLE.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: eating cake (score: 0.2697)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #6/50 (score: 0.0363)
+  Background Action 'walking the dog' ranked: #41/50 (score: 0.0002)
+
+Top 10 predictions:
+      1. eating cake (0.2697)
+      2. eating ice cream (0.2188)
+      3. brushing teeth (0.1391)
+      4. opening bottle (0.0905)
+      5. smoking (0.0702)
+  👤  6. drinking (0.0363)
+      7. sword fighting (0.0248)
+      8. playing accordion (0.0236)
+      9. punching person (boxing) (0.0191)
+     10. playing violin (0.0110)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 35
+Score gap (bg_score - human_score): -0.0361

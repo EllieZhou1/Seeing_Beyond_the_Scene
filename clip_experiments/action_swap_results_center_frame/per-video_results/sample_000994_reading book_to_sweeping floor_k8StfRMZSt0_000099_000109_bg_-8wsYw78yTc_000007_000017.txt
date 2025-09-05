@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000994_reading book_to_sweeping floor_k8StfRMZSt0_000099_000109_bg_-8wsYw78yTc_000007_000017
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): sweeping floor
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.4017)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #28/50 (score: 0.0036)
+  Background Action 'sweeping floor' ranked: #20/50 (score: 0.0075)
+
+Top 10 predictions:
+      1. driving car (0.4017)
+      2. juggling balls (0.0875)
+      3. juggling soccer ball (0.0601)
+      4. opening bottle (0.0472)
+      5. punching person (boxing) (0.0465)
+      6. bowling (0.0434)
+      7. brushing hair (0.0258)
+      8. dribbling basketball (0.0255)
+      9. golf driving (0.0237)
+     10. eating ice cream (0.0236)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -8
+Score gap (bg_score - human_score): 0.0039

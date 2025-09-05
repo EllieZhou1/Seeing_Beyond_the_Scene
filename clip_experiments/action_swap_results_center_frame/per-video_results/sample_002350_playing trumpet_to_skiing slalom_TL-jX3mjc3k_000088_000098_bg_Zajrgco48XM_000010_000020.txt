@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002350_playing trumpet_to_skiing slalom_TL-jX3mjc3k_000088_000098_bg_Zajrgco48XM_000010_000020
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing trumpet
+Background Label (Incorrect): skiing slalom
+
+CLIP PREDICTIONS:
+  Predicted Label: eating ice cream (score: 0.3863)
+
+RANKING ANALYSIS:
+  Human Action 'playing trumpet' ranked: #5/50 (score: 0.0446)
+  Background Action 'skiing slalom' ranked: #13/50 (score: 0.0041)
+
+Top 10 predictions:
+      1. eating ice cream (0.3863)
+      2. juggling soccer ball (0.2593)
+      3. hitting baseball (0.1019)
+      4. catching or throwing baseball (0.0452)
+  👤  5. playing trumpet (0.0446)
+      6. playing tennis (0.0388)
+      7. juggling balls (0.0331)
+      8. catching or throwing frisbee (0.0230)
+      9. playing saxophone (0.0120)
+     10. eating cake (0.0090)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 8
+Score gap (bg_score - human_score): -0.0405
+✅ Human action in top 5

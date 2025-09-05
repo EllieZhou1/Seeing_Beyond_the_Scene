@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000156_playing volleyball_to_canoeing or kayaking_R7ClKLBfjuk_000042_000052_bg_jZNpH-jzWKw_000002_000012
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing volleyball
+Background Label (Incorrect): canoeing or kayaking
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.3084)
+
+RANKING ANALYSIS:
+  Human Action 'playing volleyball' ranked: #2/50 (score: 0.2219)
+  Background Action 'canoeing or kayaking' ranked: #4/50 (score: 0.0817)
+
+Top 10 predictions:
+      1. surfing water (0.3084)
+  👤  2. playing volleyball (0.2219)
+      3. juggling soccer ball (0.1785)
+  🏞️  4. canoeing or kayaking (0.0817)
+      5. shooting goal (soccer) (0.0698)
+      6. juggling balls (0.0468)
+      7. catching or throwing frisbee (0.0439)
+      8. skiing slalom (0.0171)
+      9. skipping rope (0.0041)
+     10. skiing (not slalom or crosscountry) (0.0041)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 2
+Score gap (bg_score - human_score): -0.1402
+⚠️  Background action in top 5!
+✅ Human action in top 5

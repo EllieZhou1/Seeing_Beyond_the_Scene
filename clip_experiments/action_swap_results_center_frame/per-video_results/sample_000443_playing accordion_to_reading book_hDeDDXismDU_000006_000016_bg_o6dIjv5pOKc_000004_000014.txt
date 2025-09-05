@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000443_playing accordion_to_reading book_hDeDDXismDU_000006_000016_bg_o6dIjv5pOKc_000004_000014
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: reading book (score: 0.5415)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #2/50 (score: 0.1343)
+  Background Action 'reading book' ranked: #1/50 (score: 0.5415)
+
+Top 10 predictions:
+  🏞️  1. reading book (0.5415)
+  👤  2. playing accordion (0.1343)
+      3. reading newspaper (0.0924)
+      4. opening bottle (0.0394)
+      5. punching person (boxing) (0.0315)
+      6. eating cake (0.0233)
+      7. writing (0.0165)
+      8. playing piano (0.0164)
+      9. playing saxophone (0.0114)
+     10. flying kite (0.0102)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.4072
+⚠️  Background action in top 5!
+✅ Human action in top 5

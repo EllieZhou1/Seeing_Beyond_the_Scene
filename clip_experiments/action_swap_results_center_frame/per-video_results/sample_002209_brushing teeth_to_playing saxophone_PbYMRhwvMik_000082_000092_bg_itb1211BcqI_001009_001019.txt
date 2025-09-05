@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002209_brushing teeth_to_playing saxophone_PbYMRhwvMik_000082_000092_bg_itb1211BcqI_001009_001019
+Frame: MIDDLE.jpg
+Human Action Label (Correct): brushing teeth
+Background Label (Incorrect): playing saxophone
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.3702)
+
+RANKING ANALYSIS:
+  Human Action 'brushing teeth' ranked: #2/50 (score: 0.1994)
+  Background Action 'playing saxophone' ranked: #18/50 (score: 0.0088)
+
+Top 10 predictions:
+      1. cleaning windows (0.3702)
+  👤  2. brushing teeth (0.1994)
+      3. brushing hair (0.0465)
+      4. hitting baseball (0.0440)
+      5. eating ice cream (0.0407)
+      6. opening bottle (0.0383)
+      7. catching or throwing baseball (0.0268)
+      8. playing trumpet (0.0207)
+      9. climbing ladder (0.0203)
+     10. playing violin (0.0167)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 16
+Score gap (bg_score - human_score): -0.1906
+✅ Human action in top 5

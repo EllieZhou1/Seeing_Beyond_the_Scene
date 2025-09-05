@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002141_smoking_to_skiing (not slalom or crosscountry)_7INhc7jN5Ps_000004_000014_bg_mYyfgoOtcQc_000226_000236
+Frame: MIDDLE.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): skiing (not slalom or crosscountry)
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.6470)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #20/50 (score: 0.0022)
+  Background Action 'skiing (not slalom or crosscountry)' ranked: #2/50 (score: 0.1680)
+
+Top 10 predictions:
+      1. skiing slalom (0.6470)
+  🏞️  2. skiing (not slalom or crosscountry) (0.1680)
+      3. playing accordion (0.0345)
+      4. climbing ladder (0.0177)
+      5. playing bass guitar (0.0148)
+      6. surfing water (0.0118)
+      7. playing violin (0.0111)
+      8. playing piano (0.0111)
+      9. playing guitar (0.0104)
+     10. playing saxophone (0.0096)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -18
+Score gap (bg_score - human_score): 0.1658
+⚠️  Background action in top 5!

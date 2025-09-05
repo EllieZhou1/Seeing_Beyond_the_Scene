@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001026_sweeping floor_to_opening bottle_fPwIxLuugmU_000034_000044_bg_--TSmh3wj9I_000118_000128
+Frame: MIDDLE.jpg
+Human Action Label (Correct): sweeping floor
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.1924)
+
+RANKING ANALYSIS:
+  Human Action 'sweeping floor' ranked: #29/50 (score: 0.0054)
+  Background Action 'opening bottle' ranked: #24/50 (score: 0.0097)
+
+Top 10 predictions:
+      1. playing accordion (0.1924)
+      2. playing bass guitar (0.1325)
+      3. playing tennis (0.0709)
+      4. playing guitar (0.0646)
+      5. climbing ladder (0.0457)
+      6. shooting basketball (0.0386)
+      7. playing saxophone (0.0353)
+      8. dunking basketball (0.0318)
+      9. writing (0.0312)
+     10. bowling (0.0294)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -5
+Score gap (bg_score - human_score): 0.0042

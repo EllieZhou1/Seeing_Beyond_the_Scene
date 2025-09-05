@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002270_skipping rope_to_playing tennis_kSMQLslTVGo_000011_000021_bg_VC6d02z2_Sc_000014_000024
+Frame: MIDDLE.jpg
+Human Action Label (Correct): skipping rope
+Background Label (Incorrect): playing tennis
+
+CLIP PREDICTIONS:
+  Predicted Label: playing tennis (score: 0.7803)
+
+RANKING ANALYSIS:
+  Human Action 'skipping rope' ranked: #7/50 (score: 0.0063)
+  Background Action 'playing tennis' ranked: #1/50 (score: 0.7803)
+
+Top 10 predictions:
+  🏞️  1. playing tennis (0.7803)
+      2. juggling soccer ball (0.0929)
+      3. juggling balls (0.0345)
+      4. shooting goal (soccer) (0.0253)
+      5. playing volleyball (0.0225)
+      6. dribbling basketball (0.0162)
+  👤  7. skipping rope (0.0063)
+      8. playing basketball (0.0058)
+      9. catching or throwing frisbee (0.0044)
+     10. dunking basketball (0.0035)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -6
+Score gap (bg_score - human_score): 0.7739
+⚠️  Background action in top 5!

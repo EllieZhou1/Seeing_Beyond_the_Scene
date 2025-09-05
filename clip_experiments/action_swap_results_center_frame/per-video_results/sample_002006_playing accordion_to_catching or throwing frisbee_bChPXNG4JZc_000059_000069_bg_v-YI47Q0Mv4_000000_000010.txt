@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002006_playing accordion_to_catching or throwing frisbee_bChPXNG4JZc_000059_000069_bg_v-YI47Q0Mv4_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): catching or throwing frisbee
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.4208)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #29/50 (score: 0.0008)
+  Background Action 'catching or throwing frisbee' ranked: #14/50 (score: 0.0105)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.4208)
+      2. sword fighting (0.1516)
+      3. shooting goal (soccer) (0.1097)
+      4. archery (0.0693)
+      5. juggling balls (0.0438)
+      6. punching person (boxing) (0.0391)
+      7. opening bottle (0.0249)
+      8. playing trumpet (0.0238)
+      9. shooting basketball (0.0147)
+     10. climbing a rope (0.0131)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -15
+Score gap (bg_score - human_score): 0.0098

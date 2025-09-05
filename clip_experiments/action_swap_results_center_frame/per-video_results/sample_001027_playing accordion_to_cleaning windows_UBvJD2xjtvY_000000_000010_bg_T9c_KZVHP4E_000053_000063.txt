@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001027_playing accordion_to_cleaning windows_UBvJD2xjtvY_000000_000010_bg_T9c_KZVHP4E_000053_000063
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.4026)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #46/50 (score: 0.0010)
+  Background Action 'cleaning windows' ranked: #2/50 (score: 0.1112)
+
+Top 10 predictions:
+      1. surfing water (0.4026)
+  🏞️  2. cleaning windows (0.1112)
+      3. juggling balls (0.0998)
+      4. climbing a rope (0.0423)
+      5. juggling soccer ball (0.0332)
+      6. sword fighting (0.0298)
+      7. punching person (boxing) (0.0237)
+      8. archery (0.0215)
+      9. canoeing or kayaking (0.0199)
+     10. golf driving (0.0182)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -44
+Score gap (bg_score - human_score): 0.1102
+⚠️  Background action in top 5!

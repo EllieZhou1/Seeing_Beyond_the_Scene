@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001062_dunking basketball_to_opening bottle_j3_aKBMC1Aw_000008_000018_bg_OayCUxccS0w_000002_000012
+Frame: MIDDLE.jpg
+Human Action Label (Correct): dunking basketball
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.2803)
+
+RANKING ANALYSIS:
+  Human Action 'dunking basketball' ranked: #10/50 (score: 0.0305)
+  Background Action 'opening bottle' ranked: #25/50 (score: 0.0040)
+
+Top 10 predictions:
+      1. skipping rope (0.2803)
+      2. juggling soccer ball (0.1529)
+      3. climbing a rope (0.0530)
+      4. deadlifting (0.0487)
+      5. bowling (0.0469)
+      6. sweeping floor (0.0383)
+      7. juggling balls (0.0373)
+      8. punching person (boxing) (0.0366)
+      9. playing accordion (0.0322)
+  👤 10. dunking basketball (0.0305)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 15
+Score gap (bg_score - human_score): -0.0265

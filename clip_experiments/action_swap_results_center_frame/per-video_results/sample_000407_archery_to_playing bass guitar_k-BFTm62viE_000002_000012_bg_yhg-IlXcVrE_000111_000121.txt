@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000407_archery_to_playing bass guitar_k-BFTm62viE_000002_000012_bg_yhg-IlXcVrE_000111_000121
+Frame: MIDDLE.jpg
+Human Action Label (Correct): archery
+Background Label (Incorrect): playing bass guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.3000)
+
+RANKING ANALYSIS:
+  Human Action 'archery' ranked: #2/50 (score: 0.2058)
+  Background Action 'playing bass guitar' ranked: #13/50 (score: 0.0065)
+
+Top 10 predictions:
+      1. climbing a rope (0.3000)
+  👤  2. archery (0.2058)
+      3. golf driving (0.1980)
+      4. playing tennis (0.0699)
+      5. catching or throwing baseball (0.0516)
+      6. hitting baseball (0.0452)
+      7. skiing slalom (0.0294)
+      8. cleaning windows (0.0148)
+      9. climbing ladder (0.0135)
+     10. juggling soccer ball (0.0085)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 11
+Score gap (bg_score - human_score): -0.1993
+✅ Human action in top 5

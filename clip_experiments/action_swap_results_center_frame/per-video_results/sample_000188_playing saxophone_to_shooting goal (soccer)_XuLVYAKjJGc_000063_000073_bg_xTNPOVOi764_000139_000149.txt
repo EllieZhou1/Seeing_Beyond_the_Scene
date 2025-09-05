@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000188_playing saxophone_to_shooting goal (soccer)_XuLVYAKjJGc_000063_000073_bg_xTNPOVOi764_000139_000149
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing saxophone
+Background Label (Incorrect): shooting goal (soccer)
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2996)
+
+RANKING ANALYSIS:
+  Human Action 'playing saxophone' ranked: #10/50 (score: 0.0039)
+  Background Action 'shooting goal (soccer)' ranked: #6/50 (score: 0.0221)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2996)
+      2. juggling balls (0.2733)
+      3. skipping rope (0.2155)
+      4. playing tennis (0.0757)
+      5. tying tie (0.0566)
+  🏞️  6. shooting goal (soccer) (0.0221)
+      7. dribbling basketball (0.0184)
+      8. catching or throwing frisbee (0.0061)
+      9. playing trumpet (0.0043)
+  👤 10. playing saxophone (0.0039)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -4
+Score gap (bg_score - human_score): 0.0183

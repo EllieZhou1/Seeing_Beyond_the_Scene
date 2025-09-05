@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001287_skiing slalom_to_eating cake_gfux7QZsXGg_000172_000182_bg_IQb0YDHhT-o_000051_000061
+Frame: MIDDLE.jpg
+Human Action Label (Correct): skiing slalom
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: playing saxophone (score: 0.4301)
+
+RANKING ANALYSIS:
+  Human Action 'skiing slalom' ranked: #3/50 (score: 0.0969)
+  Background Action 'eating cake' ranked: #48/50 (score: 0.0007)
+
+Top 10 predictions:
+      1. playing saxophone (0.4301)
+      2. surfing water (0.1060)
+  👤  3. skiing slalom (0.0969)
+      4. playing accordion (0.0378)
+      5. skiing (not slalom or crosscountry) (0.0348)
+      6. playing bass guitar (0.0336)
+      7. climbing a rope (0.0307)
+      8. climbing ladder (0.0200)
+      9. dunking basketball (0.0189)
+     10. playing tennis (0.0153)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 45
+Score gap (bg_score - human_score): -0.0962
+✅ Human action in top 5

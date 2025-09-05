@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001723_deadlifting_to_smoking_Hu68uLOPeOI_000076_000086_bg_KAuuXjBD3kM_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: deadlifting (score: 0.4929)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #1/50 (score: 0.4929)
+  Background Action 'smoking' ranked: #19/50 (score: 0.0017)
+
+Top 10 predictions:
+  👤  1. deadlifting (0.4929)
+      2. clean and jerk (0.3274)
+      3. hurdling (0.0424)
+      4. playing volleyball (0.0309)
+      5. punching person (boxing) (0.0236)
+      6. skipping rope (0.0125)
+      7. juggling balls (0.0122)
+      8. juggling soccer ball (0.0072)
+      9. shooting goal (soccer) (0.0058)
+     10. playing basketball (0.0057)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 18
+Score gap (bg_score - human_score): -0.4912
+✅ Human action in top 5

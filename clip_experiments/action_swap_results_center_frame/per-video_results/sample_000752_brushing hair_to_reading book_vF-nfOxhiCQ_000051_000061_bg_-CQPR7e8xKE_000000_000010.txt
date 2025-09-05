@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000752_brushing hair_to_reading book_vF-nfOxhiCQ_000051_000061_bg_-CQPR7e8xKE_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): brushing hair
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.8917)
+
+RANKING ANALYSIS:
+  Human Action 'brushing hair' ranked: #1/50 (score: 0.8917)
+  Background Action 'reading book' ranked: #21/50 (score: 0.0013)
+
+Top 10 predictions:
+  👤  1. brushing hair (0.8917)
+      2. brushing teeth (0.0157)
+      3. playing piano (0.0139)
+      4. playing accordion (0.0128)
+      5. skipping rope (0.0095)
+      6. eating cake (0.0080)
+      7. opening bottle (0.0068)
+      8. sword fighting (0.0045)
+      9. climbing a rope (0.0039)
+     10. tying tie (0.0035)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 20
+Score gap (bg_score - human_score): -0.8904
+✅ Human action in top 5

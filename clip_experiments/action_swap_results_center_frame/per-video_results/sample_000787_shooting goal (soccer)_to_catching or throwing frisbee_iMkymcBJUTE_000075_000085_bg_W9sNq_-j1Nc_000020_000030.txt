@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000787_shooting goal (soccer)_to_catching or throwing frisbee_iMkymcBJUTE_000075_000085_bg_W9sNq_-j1Nc_000020_000030
+Frame: MIDDLE.jpg
+Human Action Label (Correct): shooting goal (soccer)
+Background Label (Incorrect): catching or throwing frisbee
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.5977)
+
+RANKING ANALYSIS:
+  Human Action 'shooting goal (soccer)' ranked: #2/50 (score: 0.1426)
+  Background Action 'catching or throwing frisbee' ranked: #3/50 (score: 0.1007)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.5977)
+  👤  2. shooting goal (soccer) (0.1426)
+  🏞️  3. catching or throwing frisbee (0.1007)
+      4. juggling balls (0.0563)
+      5. flying kite (0.0314)
+      6. catching or throwing baseball (0.0305)
+      7. hitting baseball (0.0177)
+      8. hurdling (0.0095)
+      9. skipping rope (0.0036)
+     10. dribbling basketball (0.0019)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0419
+⚠️  Background action in top 5!
+✅ Human action in top 5

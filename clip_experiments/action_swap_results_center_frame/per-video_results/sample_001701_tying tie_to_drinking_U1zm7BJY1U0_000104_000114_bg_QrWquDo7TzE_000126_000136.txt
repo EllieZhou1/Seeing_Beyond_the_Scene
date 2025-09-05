@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001701_tying tie_to_drinking_U1zm7BJY1U0_000104_000114_bg_QrWquDo7TzE_000126_000136
+Frame: MIDDLE.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): drinking
+
+CLIP PREDICTIONS:
+  Predicted Label: tying tie (score: 0.9994)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #1/50 (score: 0.9994)
+  Background Action 'drinking' ranked: #26/50 (score: 0.0000)
+
+Top 10 predictions:
+  👤  1. tying tie (0.9994)
+      2. juggling balls (0.0001)
+      3. climbing a rope (0.0001)
+      4. brushing hair (0.0000)
+      5. punching person (boxing) (0.0000)
+      6. eating ice cream (0.0000)
+      7. reading book (0.0000)
+      8. brushing teeth (0.0000)
+      9. juggling soccer ball (0.0000)
+     10. opening bottle (0.0000)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 25
+Score gap (bg_score - human_score): -0.9994
+✅ Human action in top 5

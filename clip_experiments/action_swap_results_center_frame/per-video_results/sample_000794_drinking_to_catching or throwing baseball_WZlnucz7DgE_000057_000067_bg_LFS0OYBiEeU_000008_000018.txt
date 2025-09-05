@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000794_drinking_to_catching or throwing baseball_WZlnucz7DgE_000057_000067_bg_LFS0OYBiEeU_000008_000018
+Frame: MIDDLE.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): catching or throwing baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: dribbling basketball (score: 0.4499)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #30/50 (score: 0.0009)
+  Background Action 'catching or throwing baseball' ranked: #17/50 (score: 0.0037)
+
+Top 10 predictions:
+      1. dribbling basketball (0.4499)
+      2. juggling soccer ball (0.0905)
+      3. juggling balls (0.0865)
+      4. shooting basketball (0.0794)
+      5. skipping rope (0.0611)
+      6. playing basketball (0.0474)
+      7. sword fighting (0.0356)
+      8. dunking basketball (0.0342)
+      9. punching person (boxing) (0.0184)
+     10. opening bottle (0.0156)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -13
+Score gap (bg_score - human_score): 0.0028

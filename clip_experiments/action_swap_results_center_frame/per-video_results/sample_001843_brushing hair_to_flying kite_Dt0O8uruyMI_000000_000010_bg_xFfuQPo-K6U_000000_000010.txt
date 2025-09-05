@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001843_brushing hair_to_flying kite_Dt0O8uruyMI_000000_000010_bg_xFfuQPo-K6U_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): brushing hair
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: flying kite (score: 0.2232)
+
+RANKING ANALYSIS:
+  Human Action 'brushing hair' ranked: #20/50 (score: 0.0090)
+  Background Action 'flying kite' ranked: #1/50 (score: 0.2232)
+
+Top 10 predictions:
+  🏞️  1. flying kite (0.2232)
+      2. skipping rope (0.1189)
+      3. shooting goal (soccer) (0.0874)
+      4. juggling soccer ball (0.0774)
+      5. playing tennis (0.0622)
+      6. playing volleyball (0.0616)
+      7. catching or throwing frisbee (0.0571)
+      8. playing basketball (0.0326)
+      9. golf driving (0.0263)
+     10. writing (0.0218)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -19
+Score gap (bg_score - human_score): 0.2142
+⚠️  Background action in top 5!

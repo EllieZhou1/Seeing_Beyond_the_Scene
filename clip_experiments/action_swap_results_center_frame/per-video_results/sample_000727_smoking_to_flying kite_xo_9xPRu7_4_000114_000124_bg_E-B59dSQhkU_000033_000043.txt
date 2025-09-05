@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000727_smoking_to_flying kite_xo_9xPRu7_4_000114_000124_bg_E-B59dSQhkU_000033_000043
+Frame: MIDDLE.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: smoking (score: 0.2013)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #1/50 (score: 0.2013)
+  Background Action 'flying kite' ranked: #11/50 (score: 0.0254)
+
+Top 10 predictions:
+  👤  1. smoking (0.2013)
+      2. cleaning windows (0.0992)
+      3. skiing slalom (0.0735)
+      4. skiing (not slalom or crosscountry) (0.0703)
+      5. reading newspaper (0.0435)
+      6. climbing ladder (0.0350)
+      7. eating ice cream (0.0349)
+      8. hitting baseball (0.0309)
+      9. drinking (0.0284)
+     10. brushing teeth (0.0267)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 10
+Score gap (bg_score - human_score): -0.1759
+✅ Human action in top 5

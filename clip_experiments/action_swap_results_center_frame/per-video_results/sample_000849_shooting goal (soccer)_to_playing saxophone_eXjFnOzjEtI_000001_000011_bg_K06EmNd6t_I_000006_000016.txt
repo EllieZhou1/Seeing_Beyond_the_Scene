@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000849_shooting goal (soccer)_to_playing saxophone_eXjFnOzjEtI_000001_000011_bg_K06EmNd6t_I_000006_000016
+Frame: MIDDLE.jpg
+Human Action Label (Correct): shooting goal (soccer)
+Background Label (Incorrect): playing saxophone
+
+CLIP PREDICTIONS:
+  Predicted Label: flying kite (score: 0.2153)
+
+RANKING ANALYSIS:
+  Human Action 'shooting goal (soccer)' ranked: #4/50 (score: 0.1159)
+  Background Action 'playing saxophone' ranked: #35/50 (score: 0.0002)
+
+Top 10 predictions:
+      1. flying kite (0.2153)
+      2. dunking basketball (0.1673)
+      3. juggling soccer ball (0.1400)
+  👤  4. shooting goal (soccer) (0.1159)
+      5. juggling balls (0.1001)
+      6. dribbling basketball (0.0594)
+      7. skiing slalom (0.0376)
+      8. catching or throwing baseball (0.0232)
+      9. hurdling (0.0225)
+     10. skiing (not slalom or crosscountry) (0.0179)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 31
+Score gap (bg_score - human_score): -0.1157
+✅ Human action in top 5

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000120_surfing water_to_smoking_3tKrqlMI8ZU_000053_000063_bg_SrIotBfD6BY_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.5892)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #30/50 (score: 0.0012)
+  Background Action 'smoking' ranked: #18/50 (score: 0.0062)
+
+Top 10 predictions:
+      1. cleaning windows (0.5892)
+      2. climbing ladder (0.0858)
+      3. flying kite (0.0728)
+      4. climbing a rope (0.0479)
+      5. catching or throwing baseball (0.0269)
+      6. shooting basketball (0.0212)
+      7. shooting goal (soccer) (0.0156)
+      8. skiing (not slalom or crosscountry) (0.0144)
+      9. hitting baseball (0.0118)
+     10. tying tie (0.0104)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -12
+Score gap (bg_score - human_score): 0.0050

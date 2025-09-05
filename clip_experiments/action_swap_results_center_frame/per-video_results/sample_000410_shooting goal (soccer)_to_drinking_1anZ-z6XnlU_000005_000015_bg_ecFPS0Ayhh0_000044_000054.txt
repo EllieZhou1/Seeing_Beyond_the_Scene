@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000410_shooting goal (soccer)_to_drinking_1anZ-z6XnlU_000005_000015_bg_ecFPS0Ayhh0_000044_000054
+Frame: MIDDLE.jpg
+Human Action Label (Correct): shooting goal (soccer)
+Background Label (Incorrect): drinking
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.2592)
+
+RANKING ANALYSIS:
+  Human Action 'shooting goal (soccer)' ranked: #20/50 (score: 0.0100)
+  Background Action 'drinking' ranked: #21/50 (score: 0.0093)
+
+Top 10 predictions:
+      1. brushing hair (0.2592)
+      2. playing violin (0.0963)
+      3. climbing a rope (0.0917)
+      4. skipping rope (0.0567)
+      5. skiing (not slalom or crosscountry) (0.0564)
+      6. playing saxophone (0.0551)
+      7. archery (0.0339)
+      8. playing accordion (0.0287)
+      9. sword fighting (0.0287)
+     10. skiing slalom (0.0281)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0007

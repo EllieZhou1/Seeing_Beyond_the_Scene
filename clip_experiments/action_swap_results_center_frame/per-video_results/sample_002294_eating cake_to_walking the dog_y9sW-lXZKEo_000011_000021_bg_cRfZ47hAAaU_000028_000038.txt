@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002294_eating cake_to_walking the dog_y9sW-lXZKEo_000011_000021_bg_cRfZ47hAAaU_000028_000038
+Frame: MIDDLE.jpg
+Human Action Label (Correct): eating cake
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.1586)
+
+RANKING ANALYSIS:
+  Human Action 'eating cake' ranked: #36/50 (score: 0.0013)
+  Background Action 'walking the dog' ranked: #12/50 (score: 0.0251)
+
+Top 10 predictions:
+      1. climbing a rope (0.1586)
+      2. dribbling basketball (0.1450)
+      3. surfing water (0.1247)
+      4. skipping rope (0.1056)
+      5. dunking basketball (0.0696)
+      6. catching or throwing frisbee (0.0502)
+      7. juggling soccer ball (0.0406)
+      8. hitting baseball (0.0330)
+      9. playing basketball (0.0292)
+     10. cleaning windows (0.0277)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -24
+Score gap (bg_score - human_score): 0.0238

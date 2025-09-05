@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002301_drinking_to_climbing a rope_15FiZ48tTUU_000045_000055_bg_mBKGm6cVD0o_000002_000012
+Frame: MIDDLE.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): climbing a rope
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.1053)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #42/50 (score: 0.0007)
+  Background Action 'climbing a rope' ranked: #6/50 (score: 0.0688)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.1053)
+      2. sword fighting (0.0995)
+      3. flying kite (0.0807)
+      4. archery (0.0737)
+      5. skipping rope (0.0709)
+  🏞️  6. climbing a rope (0.0688)
+      7. juggling balls (0.0686)
+      8. dribbling basketball (0.0586)
+      9. skiing slalom (0.0527)
+     10. shooting goal (soccer) (0.0402)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -36
+Score gap (bg_score - human_score): 0.0681

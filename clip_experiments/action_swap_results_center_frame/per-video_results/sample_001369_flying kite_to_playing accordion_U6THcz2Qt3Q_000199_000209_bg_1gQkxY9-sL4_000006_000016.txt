@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001369_flying kite_to_playing accordion_U6THcz2Qt3Q_000199_000209_bg_1gQkxY9-sL4_000006_000016
+Frame: MIDDLE.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.3204)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #7/50 (score: 0.0254)
+  Background Action 'playing accordion' ranked: #5/50 (score: 0.0399)
+
+Top 10 predictions:
+      1. driving car (0.3204)
+      2. sword fighting (0.0993)
+      3. playing saxophone (0.0815)
+      4. hurdling (0.0623)
+  🏞️  5. playing accordion (0.0399)
+      6. archery (0.0340)
+  👤  7. flying kite (0.0254)
+      8. playing piano (0.0247)
+      9. playing trumpet (0.0240)
+     10. climbing ladder (0.0224)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.0145
+⚠️  Background action in top 5!

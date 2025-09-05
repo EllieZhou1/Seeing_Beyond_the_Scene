@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001214_canoeing or kayaking_to_playing saxophone_swDObGd9wd4_000025_000035_bg_8vxFri3kYz4_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): canoeing or kayaking
+Background Label (Incorrect): playing saxophone
+
+CLIP PREDICTIONS:
+  Predicted Label: playing saxophone (score: 0.4245)
+
+RANKING ANALYSIS:
+  Human Action 'canoeing or kayaking' ranked: #40/50 (score: 0.0010)
+  Background Action 'playing saxophone' ranked: #1/50 (score: 0.4245)
+
+Top 10 predictions:
+  🏞️  1. playing saxophone (0.4245)
+      2. climbing a rope (0.1904)
+      3. opening bottle (0.0482)
+      4. climbing ladder (0.0431)
+      5. playing accordion (0.0419)
+      6. playing trumpet (0.0396)
+      7. sword fighting (0.0265)
+      8. tying tie (0.0226)
+      9. flying kite (0.0159)
+     10. shooting goal (soccer) (0.0132)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -39
+Score gap (bg_score - human_score): 0.4235
+⚠️  Background action in top 5!

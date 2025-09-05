@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002200_hurdling_to_playing accordion_qnoPGZUO4xA_000010_000020_bg_k8ahScpAUMc_000105_000115
+Frame: MIDDLE.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.9690)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #39/50 (score: 0.0000)
+  Background Action 'playing accordion' ranked: #1/50 (score: 0.9690)
+
+Top 10 predictions:
+  🏞️  1. playing accordion (0.9690)
+      2. playing piano (0.0210)
+      3. playing saxophone (0.0050)
+      4. playing bass guitar (0.0021)
+      5. playing trumpet (0.0010)
+      6. playing guitar (0.0005)
+      7. playing violin (0.0005)
+      8. climbing ladder (0.0002)
+      9. opening bottle (0.0001)
+     10. writing (0.0001)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -38
+Score gap (bg_score - human_score): 0.9690
+⚠️  Background action in top 5!

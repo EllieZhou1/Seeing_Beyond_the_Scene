@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000953_eating ice cream_to_catching or throwing baseball_fBfHb2lGbHM_000078_000088_bg_F9kCgXa2aTs_000018_000028
+Frame: MIDDLE.jpg
+Human Action Label (Correct): eating ice cream
+Background Label (Incorrect): catching or throwing baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: eating ice cream (score: 0.8078)
+
+RANKING ANALYSIS:
+  Human Action 'eating ice cream' ranked: #1/50 (score: 0.8078)
+  Background Action 'catching or throwing baseball' ranked: #6/50 (score: 0.0078)
+
+Top 10 predictions:
+  👤  1. eating ice cream (0.8078)
+      2. eating cake (0.0671)
+      3. flying kite (0.0360)
+      4. juggling soccer ball (0.0264)
+      5. hitting baseball (0.0144)
+  🏞️  6. catching or throwing baseball (0.0078)
+      7. opening bottle (0.0074)
+      8. brushing teeth (0.0039)
+      9. juggling balls (0.0036)
+     10. catching or throwing frisbee (0.0036)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 5
+Score gap (bg_score - human_score): -0.8000
+✅ Human action in top 5

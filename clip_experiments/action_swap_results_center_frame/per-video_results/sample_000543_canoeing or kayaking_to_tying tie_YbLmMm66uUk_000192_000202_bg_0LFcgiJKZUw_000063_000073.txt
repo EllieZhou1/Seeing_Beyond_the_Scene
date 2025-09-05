@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000543_canoeing or kayaking_to_tying tie_YbLmMm66uUk_000192_000202_bg_0LFcgiJKZUw_000063_000073
+Frame: MIDDLE.jpg
+Human Action Label (Correct): canoeing or kayaking
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2549)
+
+RANKING ANALYSIS:
+  Human Action 'canoeing or kayaking' ranked: #38/50 (score: 0.0004)
+  Background Action 'tying tie' ranked: #43/50 (score: 0.0002)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2549)
+      2. dribbling basketball (0.1113)
+      3. skipping rope (0.0599)
+      4. skiing slalom (0.0540)
+      5. shooting goal (soccer) (0.0539)
+      6. dunking basketball (0.0535)
+      7. playing basketball (0.0504)
+      8. shooting basketball (0.0475)
+      9. walking the dog (0.0386)
+     10. juggling balls (0.0364)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 5
+Score gap (bg_score - human_score): -0.0002

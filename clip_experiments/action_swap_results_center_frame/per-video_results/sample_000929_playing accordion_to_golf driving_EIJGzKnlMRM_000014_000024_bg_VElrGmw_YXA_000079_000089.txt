@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000929_playing accordion_to_golf driving_EIJGzKnlMRM_000014_000024_bg_VElrGmw_YXA_000079_000089
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.1403)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #36/50 (score: 0.0017)
+  Background Action 'golf driving' ranked: #8/50 (score: 0.0462)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.1403)
+      2. catching or throwing frisbee (0.1231)
+      3. juggling balls (0.1155)
+      4. hitting baseball (0.0648)
+      5. catching or throwing baseball (0.0620)
+      6. skipping rope (0.0534)
+      7. punching person (boxing) (0.0521)
+  🏞️  8. golf driving (0.0462)
+      9. climbing a rope (0.0426)
+     10. shooting goal (soccer) (0.0382)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -28
+Score gap (bg_score - human_score): 0.0445

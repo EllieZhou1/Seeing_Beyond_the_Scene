@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002278_catching or throwing frisbee_to_eating ice cream_HV0Hs4UysUM_000004_000014_bg__4i56CbdQcE_000025_000035
+Frame: MIDDLE.jpg
+Human Action Label (Correct): catching or throwing frisbee
+Background Label (Incorrect): eating ice cream
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.3957)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing frisbee' ranked: #22/50 (score: 0.0033)
+  Background Action 'eating ice cream' ranked: #34/50 (score: 0.0005)
+
+Top 10 predictions:
+      1. surfing water (0.3957)
+      2. climbing a rope (0.2146)
+      3. cleaning windows (0.0800)
+      4. golf driving (0.0403)
+      5. dunking basketball (0.0385)
+      6. driving car (0.0375)
+      7. climbing ladder (0.0284)
+      8. hurdling (0.0179)
+      9. juggling balls (0.0166)
+     10. juggling soccer ball (0.0157)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 12
+Score gap (bg_score - human_score): -0.0027

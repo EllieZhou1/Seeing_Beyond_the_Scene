@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000350_brushing teeth_to_playing tennis_4S1k0vHoTw4_000248_000258_bg_rZehb8BQwc4_000034_000044
+Frame: MIDDLE.jpg
+Human Action Label (Correct): brushing teeth
+Background Label (Incorrect): playing tennis
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.6172)
+
+RANKING ANALYSIS:
+  Human Action 'brushing teeth' ranked: #13/50 (score: 0.0052)
+  Background Action 'playing tennis' ranked: #2/50 (score: 0.1840)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.6172)
+  🏞️  2. playing tennis (0.1840)
+      3. juggling soccer ball (0.0306)
+      4. opening bottle (0.0299)
+      5. juggling balls (0.0160)
+      6. skipping rope (0.0151)
+      7. sword fighting (0.0099)
+      8. bowling (0.0094)
+      9. brushing hair (0.0094)
+     10. clean and jerk (0.0078)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -11
+Score gap (bg_score - human_score): 0.1788
+⚠️  Background action in top 5!

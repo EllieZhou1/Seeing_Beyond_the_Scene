@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000435_eating cake_to_tying tie_BiuX8Y2JfKY_000006_000016_bg_xFMIqMgGSGM_000068_000078
+Frame: MIDDLE.jpg
+Human Action Label (Correct): eating cake
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.2170)
+
+RANKING ANALYSIS:
+  Human Action 'eating cake' ranked: #30/50 (score: 0.0026)
+  Background Action 'tying tie' ranked: #33/50 (score: 0.0018)
+
+Top 10 predictions:
+      1. surfing water (0.2170)
+      2. juggling soccer ball (0.1200)
+      3. climbing a rope (0.0828)
+      4. dribbling basketball (0.0577)
+      5. playing saxophone (0.0566)
+      6. opening bottle (0.0391)
+      7. drinking (0.0376)
+      8. flying kite (0.0354)
+      9. catching or throwing frisbee (0.0327)
+     10. catching or throwing baseball (0.0306)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 3
+Score gap (bg_score - human_score): -0.0008

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002079_smoking_to_catching or throwing frisbee_W1m9gP6rKZk_000012_000022_bg_Fi1TkpzQG78_000154_000164
+Frame: MIDDLE.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): catching or throwing frisbee
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.3035)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #3/50 (score: 0.0819)
+  Background Action 'catching or throwing frisbee' ranked: #34/50 (score: 0.0031)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.3035)
+      2. shooting goal (soccer) (0.1013)
+  👤  3. smoking (0.0819)
+      4. punching person (boxing) (0.0793)
+      5. flying kite (0.0453)
+      6. juggling balls (0.0424)
+      7. opening bottle (0.0346)
+      8. eating ice cream (0.0297)
+      9. drinking (0.0295)
+     10. playing volleyball (0.0283)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 31
+Score gap (bg_score - human_score): -0.0788
+✅ Human action in top 5

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000395_brushing teeth_to_driving car_LO0HKBkTsFA_000037_000047_bg_ewrjLjfshtM_000054_000064
+Frame: MIDDLE.jpg
+Human Action Label (Correct): brushing teeth
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.3955)
+
+RANKING ANALYSIS:
+  Human Action 'brushing teeth' ranked: #3/50 (score: 0.0959)
+  Background Action 'driving car' ranked: #12/50 (score: 0.0036)
+
+Top 10 predictions:
+      1. opening bottle (0.3955)
+      2. drinking (0.3724)
+  👤  3. brushing teeth (0.0959)
+      4. smoking (0.0463)
+      5. eating ice cream (0.0248)
+      6. eating cake (0.0084)
+      7. tying tie (0.0073)
+      8. brushing hair (0.0068)
+      9. playing saxophone (0.0049)
+     10. playing trumpet (0.0042)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 9
+Score gap (bg_score - human_score): -0.0923
+✅ Human action in top 5

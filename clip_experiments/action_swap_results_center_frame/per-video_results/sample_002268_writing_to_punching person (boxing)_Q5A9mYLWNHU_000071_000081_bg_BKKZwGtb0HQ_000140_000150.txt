@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002268_writing_to_punching person (boxing)_Q5A9mYLWNHU_000071_000081_bg_BKKZwGtb0HQ_000140_000150
+Frame: MIDDLE.jpg
+Human Action Label (Correct): writing
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.2421)
+
+RANKING ANALYSIS:
+  Human Action 'writing' ranked: #32/50 (score: 0.0042)
+  Background Action 'punching person (boxing)' ranked: #27/50 (score: 0.0059)
+
+Top 10 predictions:
+      1. climbing ladder (0.2421)
+      2. dunking basketball (0.1070)
+      3. sweeping floor (0.0910)
+      4. surfing water (0.0706)
+      5. opening bottle (0.0635)
+      6. brushing teeth (0.0446)
+      7. shooting basketball (0.0420)
+      8. playing basketball (0.0283)
+      9. playing saxophone (0.0264)
+     10. sword fighting (0.0236)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -5
+Score gap (bg_score - human_score): 0.0017

@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002299_hurdling_to_reading book_MB5ErocAjTI_000004_000014_bg_j461TJNd5mY_000045_000055
+Frame: MIDDLE.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: reading book (score: 0.1902)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #5/50 (score: 0.0640)
+  Background Action 'reading book' ranked: #1/50 (score: 0.1902)
+
+Top 10 predictions:
+  🏞️  1. reading book (0.1902)
+      2. writing (0.1792)
+      3. reading newspaper (0.0860)
+      4. skipping rope (0.0803)
+  👤  5. hurdling (0.0640)
+      6. shooting goal (soccer) (0.0489)
+      7. juggling balls (0.0423)
+      8. juggling soccer ball (0.0397)
+      9. walking the dog (0.0389)
+     10. playing volleyball (0.0364)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -4
+Score gap (bg_score - human_score): 0.1262
+⚠️  Background action in top 5!
+✅ Human action in top 5

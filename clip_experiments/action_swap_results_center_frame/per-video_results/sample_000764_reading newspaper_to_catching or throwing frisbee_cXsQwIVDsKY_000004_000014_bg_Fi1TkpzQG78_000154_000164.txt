@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000764_reading newspaper_to_catching or throwing frisbee_cXsQwIVDsKY_000004_000014_bg_Fi1TkpzQG78_000154_000164
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): catching or throwing frisbee
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.6066)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #19/50 (score: 0.0047)
+  Background Action 'catching or throwing frisbee' ranked: #25/50 (score: 0.0029)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.6066)
+      2. climbing a rope (0.0755)
+      3. sword fighting (0.0538)
+      4. opening bottle (0.0277)
+      5. juggling balls (0.0276)
+      6. juggling soccer ball (0.0270)
+      7. cleaning windows (0.0248)
+      8. sweeping floor (0.0173)
+      9. skipping rope (0.0155)
+     10. playing violin (0.0126)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 6
+Score gap (bg_score - human_score): -0.0018

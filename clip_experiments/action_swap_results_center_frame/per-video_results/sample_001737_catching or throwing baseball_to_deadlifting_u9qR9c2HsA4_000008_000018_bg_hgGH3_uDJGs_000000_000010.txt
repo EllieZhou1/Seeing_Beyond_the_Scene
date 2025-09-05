@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001737_catching or throwing baseball_to_deadlifting_u9qR9c2HsA4_000008_000018_bg_hgGH3_uDJGs_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): catching or throwing baseball
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.3547)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing baseball' ranked: #22/50 (score: 0.0063)
+  Background Action 'deadlifting' ranked: #25/50 (score: 0.0054)
+
+Top 10 predictions:
+      1. climbing a rope (0.3547)
+      2. skipping rope (0.0879)
+      3. juggling balls (0.0749)
+      4. dunking basketball (0.0606)
+      5. juggling soccer ball (0.0555)
+      6. dribbling basketball (0.0409)
+      7. clean and jerk (0.0326)
+      8. shooting goal (soccer) (0.0325)
+      9. climbing ladder (0.0259)
+     10. skiing slalom (0.0252)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 3
+Score gap (bg_score - human_score): -0.0008

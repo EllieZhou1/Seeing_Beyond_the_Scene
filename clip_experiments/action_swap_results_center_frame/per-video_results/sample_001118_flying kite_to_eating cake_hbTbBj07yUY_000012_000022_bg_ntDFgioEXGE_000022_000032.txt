@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001118_flying kite_to_eating cake_hbTbBj07yUY_000012_000022_bg_ntDFgioEXGE_000022_000032
+Frame: MIDDLE.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.2674)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #27/50 (score: 0.0061)
+  Background Action 'eating cake' ranked: #2/50 (score: 0.0937)
+
+Top 10 predictions:
+      1. opening bottle (0.2674)
+  🏞️  2. eating cake (0.0937)
+      3. eating ice cream (0.0848)
+      4. climbing a rope (0.0796)
+      5. surfing water (0.0479)
+      6. sweeping floor (0.0478)
+      7. brushing teeth (0.0374)
+      8. smoking (0.0285)
+      9. brushing hair (0.0280)
+     10. dribbling basketball (0.0261)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -25
+Score gap (bg_score - human_score): 0.0876
+⚠️  Background action in top 5!

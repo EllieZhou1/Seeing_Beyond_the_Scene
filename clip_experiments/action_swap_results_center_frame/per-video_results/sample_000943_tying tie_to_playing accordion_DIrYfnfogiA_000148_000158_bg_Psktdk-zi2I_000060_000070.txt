@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000943_tying tie_to_playing accordion_DIrYfnfogiA_000148_000158_bg_Psktdk-zi2I_000060_000070
+Frame: MIDDLE.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.2420)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #3/50 (score: 0.1065)
+  Background Action 'playing accordion' ranked: #4/50 (score: 0.0846)
+
+Top 10 predictions:
+      1. opening bottle (0.2420)
+      2. punching person (boxing) (0.1083)
+  👤  3. tying tie (0.1065)
+  🏞️  4. playing accordion (0.0846)
+      5. smoking (0.0671)
+      6. eating cake (0.0566)
+      7. drinking (0.0483)
+      8. juggling balls (0.0389)
+      9. playing violin (0.0268)
+     10. eating ice cream (0.0252)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0220
+⚠️  Background action in top 5!
+✅ Human action in top 5

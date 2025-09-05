@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000832_skipping rope_to_hitting baseball_UXi0Cy16-0Y_000012_000022_bg_8gmHKqDxXdg_000019_000029
+Frame: MIDDLE.jpg
+Human Action Label (Correct): skipping rope
+Background Label (Incorrect): hitting baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: playing trumpet (score: 0.1416)
+
+RANKING ANALYSIS:
+  Human Action 'skipping rope' ranked: #8/50 (score: 0.0399)
+  Background Action 'hitting baseball' ranked: #12/50 (score: 0.0321)
+
+Top 10 predictions:
+      1. playing trumpet (0.1416)
+      2. bowling (0.1024)
+      3. playing violin (0.0747)
+      4. playing piano (0.0712)
+      5. juggling balls (0.0639)
+      6. playing saxophone (0.0536)
+      7. playing accordion (0.0457)
+  👤  8. skipping rope (0.0399)
+      9. climbing ladder (0.0368)
+     10. dunking basketball (0.0353)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 4
+Score gap (bg_score - human_score): -0.0078

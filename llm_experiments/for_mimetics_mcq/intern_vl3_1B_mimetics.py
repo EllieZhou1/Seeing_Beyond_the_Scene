@@ -20,6 +20,7 @@ IMAGENET_STD = (0.229, 0.224, 0.225)
 def parse_args():
     parser = argparse.ArgumentParser(description="Run LLM model on mimetics MCQ")
     parser.add_argument("--modelname", type=str, required=True, help="Name of the model (e.g. InternVL3-1B)")
+    parser.add_argument("--prompt", type=int, required=True, help="Number of the prompt you want to ask the LLM")
     return parser.parse_args()
 
 def build_transform(input_size):
@@ -155,7 +156,7 @@ total_per_label = defaultdict(int) # correct_per_label['label'] = # of times pre
 correct_per_label = defaultdict(int) #total_per_label['label'] = total number of times the label occurred in mimetics
 
 
-def run_dif_seg(model, model_name, num_seg, tokenizer, generation_config):
+def run_dif_seg(model, model_name, num_seg, tokenizer, generation_config, prompt_num):
     # If you have an 80G A100 GPU, you can put the entire model on a single GPU.
     # Otherwise, you need to load a model using multiple GPUs, please refer to the `Multiple GPUs` section.
     base_dir = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics"
@@ -177,6 +178,8 @@ def run_dif_seg(model, model_name, num_seg, tokenizer, generation_config):
 
     rows = []
 
+    resultdict = defaultdict(dict)
+
     for idx, row in tqdm(df.iterrows()):
         full_path = row['full_path']
         label = row['label']
@@ -190,12 +193,28 @@ def run_dif_seg(model, model_name, num_seg, tokenizer, generation_config):
         pixel_values, num_patches_list = load_video(frame_dir=full_path, num_segments=num_seg, max_num=1)
         pixel_values = pixel_values.to(torch.bfloat16).cuda()
         video_prefix = ''.join([f'Frame{i+1}: <image>\n' for i in range(len(num_patches_list))])
-        question = video_prefix + f'What is the action being performed? A) {choice_1} B) {choice_2} C) {choice_3} D) {choice_4} E) {choice_5}'
+
+ 
+        if prompt_num == 1:
+            prompt_text = f'What is the action being performed? A) {choice_1} B) {choice_2} C) {choice_3} D) {choice_4} E) {choice_5}'
+        elif prompt_num == 2:
+            prefix = "A photo of a human"
+            prompt_text = f'What is the action being performed? A) {prefix} {choice_1} B) {prefix} {choice_2} C) {prefix} {choice_3} D) {prefix} {choice_4} E) {prefix} {choice_5}'
+        elif prompt_num == 3:
+            prompt_text = f'What is the action being performed? Please focus on the human motion, and ignore the background. A) {choice_1} B){choice_2} C) {choice_3} D) {choice_4} E) {choice_5}'
+
+        question = video_prefix + prompt_text
 
         response, history = model.chat(tokenizer, pixel_values, question, generation_config,
                                     num_patches_list=num_patches_list, history=None, return_history=True)
+        
 
+        print("Question:", prompt_text)
+        print("Response:", response)
+    
         choice = response[0]
+        print("LLM CHOICE", choice)
+        
         if choice == mapping[human_choice]:
             pred_human += 1
             correct_per_label[label] += 1
@@ -203,37 +222,41 @@ def run_dif_seg(model, model_name, num_seg, tokenizer, generation_config):
         total += 1
         total_per_label[label] += 1
 
-        new_row = row.copy()
-        new_row['choice'] = choice
-        new_row['choice_is_human'] = (choice==mapping[human_choice])
-        rows.append(new_row)
+        resultdict[f"row_{idx:06d}"] = {
+            "full_path":full_path,
+            "gt_label":label,
+            "prompt":prompt_text,
+            "response":response,
+            "correct_choice":mapping[human_choice],
+            "llm_choice":response[0]
+        }
+        
         del pixel_values, num_patches_list
         torch.cuda.empty_cache()
 
-    print(f"Predicted Human: {pred_human}/{total} = {pred_human/total:.6f}")
+    print(f"Predicted Human for {model_name} and {num_seg} frames: {pred_human}/{total} = {pred_human/total:.6f}")
 
-    dir_name = os.path.join(base_dir, f"llm_experiments/for_mimetics_mcq/results/{model_name}/{num_seg}_segments")
+    dir_name = os.path.join(base_dir, f"llm_experiments/for_mimetics_mcq/prompt_tuning")
     os.makedirs(dir_name, exist_ok=True)
 
-    label_to_accuracy = []
-    with open(os.path.join(dir_name, f"name_{model_name}_seg_{num_seg}_mimetics_mcq_summary.txt"), "w") as f:
-        f.write(f"Predicted Human: {pred_human}/{total} = {pred_human/total:.6f}\n")
-        f.write("Per-label Accuracy:\n")
-        for label, correct_count in correct_per_label.items():
-            total_count = total_per_label.get(label, 0)
-            acc = correct_count / total_count if total_count > 0 else 0.0
-            f.write(f"\n {label}, {acc:.6f}, ({correct_count}/{total_count})")
+    label_to_accuracy = {}
+    for label, correct_count in correct_per_label.items():
+        total_count = total_per_label.get(label, 0)
+        acc = float(correct_count / total_count) if total_count > 0 else 0.0
 
-            label_to_accuracy.append({'label': label, 'accuracy': f"{acc:.6f}"})
-
-    df_result = pd.DataFrame(rows)
-    df_result.to_csv(os.path.join(dir_name, f"name_{model_name}_seg_{num_seg}_mimetics_mcq_results.csv"), index=False)
-
-    df_per_label = pd.DataFrame(label_to_accuracy)
-    df_per_label.to_csv(os.path.join(dir_name, f"name_{model_name}_seg_{num_seg}_mimetics_mcq_results_per_label.csv"), index=False)
+        label_to_accuracy[label] = acc
+        label_to_accuracy.append({'label': label, 'accuracy': f"{acc:.6f}"})
 
 
-def run_model(model_name):
+    #Dump accuracy for each label into json
+    with open(f"llm_experiments/for_mimetics_mcq/per_label_accuracy_for_prompt_{prompt_num}.json", "w") as f:
+        json.dump(label_to_accuracy), f, indent=2) 
+
+    with open(f"llm_experiments/for_mimetics_mcq/llm_responses_for_prompt_{prompt_num}.json", "w") as f:
+        json.dump(resultdict), f, indent=2) 
+
+
+def run_model(model_name, prompt_num):
     base_dir = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics"
     path = os.path.join(base_dir, "llm_experiments", model_name)
     device_map = split_model(path)
@@ -255,15 +278,16 @@ def run_model(model_name):
     generation_config = dict(max_new_tokens=1024, do_sample=False)
     print("Finished creating generation config")
 
-    segments = [1, 2, 4, 8, 16]
+    segments = [8] #TODO: Change this back to all of them
 
     for num_seg in segments:
         print(f"Running model {model_name} with {num_seg} segments")
-        run_dif_seg(model, model_name, num_seg, tokenizer, generation_config)
+        run_dif_seg(model, model_name, num_seg, tokenizer, generation_config, prompt_num)
 
 
 args = parse_args()
 modelname = args.modelname
+prompt_num = args.prompt
 
 run = wandb.init(
     project="Slowfast_Kinetics",
@@ -273,5 +297,6 @@ run = wandb.init(
 )
 num_gpus = torch.cuda.device_count()
 wandb.log({"num_gpus": num_gpus})
+wandb.log({"prompt number":prompt_num})
 
-run_model(model_name=modelname)
+run_model(model_name=modelname, prompt_num=prompt_num)

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001551_clean and jerk_to_skiing slalom_R6pk7NDa7Mw_000015_000025_bg_hx-AbPBIrFE_000039_000049
+Frame: MIDDLE.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): skiing slalom
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.6086)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #5/50 (score: 0.0435)
+  Background Action 'skiing slalom' ranked: #6/50 (score: 0.0373)
+
+Top 10 predictions:
+      1. climbing a rope (0.6086)
+      2. skipping rope (0.1197)
+      3. climbing ladder (0.0609)
+      4. skiing (not slalom or crosscountry) (0.0606)
+  👤  5. clean and jerk (0.0435)
+  🏞️  6. skiing slalom (0.0373)
+      7. juggling soccer ball (0.0244)
+      8. juggling balls (0.0134)
+      9. hurdling (0.0045)
+     10. dunking basketball (0.0040)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0063
+✅ Human action in top 5

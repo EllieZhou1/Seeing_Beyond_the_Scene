@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001902_punching person (boxing)_to_brushing hair_cuoqBzkii1Q_000094_000104_bg_63T-_NmyrqA_000032_000042
+Frame: MIDDLE.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): brushing hair
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.9762)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #1/50 (score: 0.9762)
+  Background Action 'brushing hair' ranked: #40/50 (score: 0.0000)
+
+Top 10 predictions:
+  👤  1. punching person (boxing) (0.9762)
+      2. sword fighting (0.0115)
+      3. dunking basketball (0.0020)
+      4. hurdling (0.0014)
+      5. deadlifting (0.0009)
+      6. shooting basketball (0.0008)
+      7. smoking (0.0008)
+      8. dribbling basketball (0.0007)
+      9. playing basketball (0.0007)
+     10. sweeping floor (0.0007)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 39
+Score gap (bg_score - human_score): -0.9762
+✅ Human action in top 5

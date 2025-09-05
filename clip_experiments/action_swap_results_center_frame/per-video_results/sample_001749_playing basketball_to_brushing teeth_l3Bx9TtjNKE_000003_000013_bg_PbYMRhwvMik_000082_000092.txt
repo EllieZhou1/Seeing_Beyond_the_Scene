@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001749_playing basketball_to_brushing teeth_l3Bx9TtjNKE_000003_000013_bg_PbYMRhwvMik_000082_000092
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing basketball
+Background Label (Incorrect): brushing teeth
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.3906)
+
+RANKING ANALYSIS:
+  Human Action 'playing basketball' ranked: #7/50 (score: 0.0232)
+  Background Action 'brushing teeth' ranked: #40/50 (score: 0.0004)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.3906)
+      2. juggling balls (0.1938)
+      3. dribbling basketball (0.0587)
+      4. skipping rope (0.0482)
+      5. hitting baseball (0.0370)
+      6. bowling (0.0320)
+  👤  7. playing basketball (0.0232)
+      8. climbing a rope (0.0219)
+      9. dunking basketball (0.0214)
+     10. playing volleyball (0.0136)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 33
+Score gap (bg_score - human_score): -0.0227

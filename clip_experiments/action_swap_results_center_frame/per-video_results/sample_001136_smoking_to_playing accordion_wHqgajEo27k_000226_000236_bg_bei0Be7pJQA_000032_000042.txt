@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001136_smoking_to_playing accordion_wHqgajEo27k_000226_000236_bg_bei0Be7pJQA_000032_000042
+Frame: MIDDLE.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.1527)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #7/50 (score: 0.0360)
+  Background Action 'playing accordion' ranked: #3/50 (score: 0.0759)
+
+Top 10 predictions:
+      1. cleaning windows (0.1527)
+      2. writing (0.1297)
+  🏞️  3. playing accordion (0.0759)
+      4. brushing teeth (0.0688)
+      5. juggling soccer ball (0.0478)
+      6. golf driving (0.0393)
+  👤  7. smoking (0.0360)
+      8. brushing hair (0.0343)
+      9. drinking (0.0327)
+     10. opening bottle (0.0286)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -4
+Score gap (bg_score - human_score): 0.0399
+⚠️  Background action in top 5!

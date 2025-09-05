@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000611_playing saxophone_to_smoking_uukFI6uF-Uk_000045_000055_bg_7INhc7jN5Ps_000004_000014
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing saxophone
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.1824)
+
+RANKING ANALYSIS:
+  Human Action 'playing saxophone' ranked: #4/50 (score: 0.0503)
+  Background Action 'smoking' ranked: #5/50 (score: 0.0472)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.1824)
+      2. juggling balls (0.0978)
+      3. dunking basketball (0.0628)
+  👤  4. playing saxophone (0.0503)
+  🏞️  5. smoking (0.0472)
+      6. tying tie (0.0428)
+      7. juggling soccer ball (0.0416)
+      8. dribbling basketball (0.0402)
+      9. shooting basketball (0.0379)
+     10. walking the dog (0.0365)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0030
+⚠️  Background action in top 5!
+✅ Human action in top 5

@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001539_catching or throwing frisbee_to_skiing (not slalom or crosscountry)_KvgYLMfQh8Q_000012_000022_bg_e7N8az-eqS8_001153_001163
+Frame: MIDDLE.jpg
+Human Action Label (Correct): catching or throwing frisbee
+Background Label (Incorrect): skiing (not slalom or crosscountry)
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.8227)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing frisbee' ranked: #3/50 (score: 0.0128)
+  Background Action 'skiing (not slalom or crosscountry)' ranked: #2/50 (score: 0.1490)
+
+Top 10 predictions:
+      1. skiing slalom (0.8227)
+  🏞️  2. skiing (not slalom or crosscountry) (0.1490)
+  👤  3. catching or throwing frisbee (0.0128)
+      4. shooting goal (soccer) (0.0044)
+      5. juggling soccer ball (0.0041)
+      6. juggling balls (0.0016)
+      7. catching or throwing baseball (0.0011)
+      8. archery (0.0007)
+      9. flying kite (0.0006)
+     10. bowling (0.0005)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.1362
+⚠️  Background action in top 5!
+✅ Human action in top 5

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002479_archery_to_sweeping floor_O9cTHUPbLE8_000090_000100_bg_-jCjPMzZulU_000021_000031
+Frame: MIDDLE.jpg
+Human Action Label (Correct): archery
+Background Label (Incorrect): sweeping floor
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.6118)
+
+RANKING ANALYSIS:
+  Human Action 'archery' ranked: #47/50 (score: 0.0003)
+  Background Action 'sweeping floor' ranked: #35/50 (score: 0.0010)
+
+Top 10 predictions:
+      1. driving car (0.6118)
+      2. bowling (0.0617)
+      3. golf driving (0.0584)
+      4. playing accordion (0.0450)
+      5. drinking (0.0401)
+      6. hurdling (0.0256)
+      7. opening bottle (0.0168)
+      8. playing saxophone (0.0159)
+      9. sword fighting (0.0150)
+     10. dunking basketball (0.0133)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -12
+Score gap (bg_score - human_score): 0.0007

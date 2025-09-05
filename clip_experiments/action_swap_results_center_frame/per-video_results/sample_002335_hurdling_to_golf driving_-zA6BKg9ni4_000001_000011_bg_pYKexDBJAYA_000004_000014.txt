@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002335_hurdling_to_golf driving_-zA6BKg9ni4_000001_000011_bg_pYKexDBJAYA_000004_000014
+Frame: MIDDLE.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: golf driving (score: 0.6067)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #16/50 (score: 0.0011)
+  Background Action 'golf driving' ranked: #1/50 (score: 0.6067)
+
+Top 10 predictions:
+  🏞️  1. golf driving (0.6067)
+      2. catching or throwing frisbee (0.0961)
+      3. shooting goal (soccer) (0.0736)
+      4. juggling balls (0.0641)
+      5. hitting baseball (0.0621)
+      6. juggling soccer ball (0.0382)
+      7. catching or throwing baseball (0.0201)
+      8. flying kite (0.0147)
+      9. dribbling basketball (0.0056)
+     10. playing tennis (0.0028)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -15
+Score gap (bg_score - human_score): 0.6056
+⚠️  Background action in top 5!

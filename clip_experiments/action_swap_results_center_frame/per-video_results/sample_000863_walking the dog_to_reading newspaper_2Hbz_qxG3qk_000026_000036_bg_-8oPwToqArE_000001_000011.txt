@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000863_walking the dog_to_reading newspaper_2Hbz_qxG3qk_000026_000036_bg_-8oPwToqArE_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): reading newspaper
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.2243)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #2/50 (score: 0.1562)
+  Background Action 'reading newspaper' ranked: #24/50 (score: 0.0077)
+
+Top 10 predictions:
+      1. driving car (0.2243)
+  👤  2. walking the dog (0.1562)
+      3. bowling (0.0874)
+      4. skipping rope (0.0832)
+      5. hurdling (0.0531)
+      6. eating ice cream (0.0499)
+      7. climbing ladder (0.0325)
+      8. dribbling basketball (0.0288)
+      9. smoking (0.0209)
+     10. skiing (not slalom or crosscountry) (0.0199)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 22
+Score gap (bg_score - human_score): -0.1485
+✅ Human action in top 5

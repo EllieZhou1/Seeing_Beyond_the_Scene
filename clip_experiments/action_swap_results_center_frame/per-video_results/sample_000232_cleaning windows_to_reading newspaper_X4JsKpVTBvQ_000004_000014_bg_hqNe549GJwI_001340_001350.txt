@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000232_cleaning windows_to_reading newspaper_X4JsKpVTBvQ_000004_000014_bg_hqNe549GJwI_001340_001350
+Frame: MIDDLE.jpg
+Human Action Label (Correct): cleaning windows
+Background Label (Incorrect): reading newspaper
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.2252)
+
+RANKING ANALYSIS:
+  Human Action 'cleaning windows' ranked: #1/50 (score: 0.2252)
+  Background Action 'reading newspaper' ranked: #18/50 (score: 0.0071)
+
+Top 10 predictions:
+  👤  1. cleaning windows (0.2252)
+      2. opening bottle (0.1217)
+      3. juggling balls (0.1147)
+      4. playing saxophone (0.0794)
+      5. juggling soccer ball (0.0754)
+      6. sword fighting (0.0573)
+      7. playing violin (0.0492)
+      8. punching person (boxing) (0.0353)
+      9. climbing a rope (0.0344)
+     10. playing trumpet (0.0300)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 17
+Score gap (bg_score - human_score): -0.2181
+✅ Human action in top 5

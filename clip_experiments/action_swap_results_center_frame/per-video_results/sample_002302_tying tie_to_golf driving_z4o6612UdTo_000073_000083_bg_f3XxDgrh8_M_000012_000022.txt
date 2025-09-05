@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002302_tying tie_to_golf driving_z4o6612UdTo_000073_000083_bg_f3XxDgrh8_M_000012_000022
+Frame: MIDDLE.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: hurdling (score: 0.7030)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #29/50 (score: 0.0001)
+  Background Action 'golf driving' ranked: #3/50 (score: 0.0273)
+
+Top 10 predictions:
+      1. hurdling (0.7030)
+      2. shooting goal (soccer) (0.0681)
+  🏞️  3. golf driving (0.0273)
+      4. flying kite (0.0271)
+      5. climbing ladder (0.0261)
+      6. climbing a rope (0.0224)
+      7. juggling soccer ball (0.0193)
+      8. juggling balls (0.0190)
+      9. dunking basketball (0.0158)
+     10. skipping rope (0.0150)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -26
+Score gap (bg_score - human_score): 0.0272
+⚠️  Background action in top 5!

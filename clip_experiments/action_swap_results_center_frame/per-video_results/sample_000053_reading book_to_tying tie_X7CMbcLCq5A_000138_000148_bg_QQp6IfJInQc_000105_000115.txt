@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000053_reading book_to_tying tie_X7CMbcLCq5A_000138_000148_bg_QQp6IfJInQc_000105_000115
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.1972)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #17/50 (score: 0.0073)
+  Background Action 'tying tie' ranked: #15/50 (score: 0.0153)
+
+Top 10 predictions:
+      1. cleaning windows (0.1972)
+      2. sweeping floor (0.1313)
+      3. catching or throwing baseball (0.1172)
+      4. surfing water (0.0771)
+      5. catching or throwing frisbee (0.0756)
+      6. juggling soccer ball (0.0517)
+      7. juggling balls (0.0432)
+      8. opening bottle (0.0431)
+      9. punching person (boxing) (0.0299)
+     10. flying kite (0.0290)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.0080

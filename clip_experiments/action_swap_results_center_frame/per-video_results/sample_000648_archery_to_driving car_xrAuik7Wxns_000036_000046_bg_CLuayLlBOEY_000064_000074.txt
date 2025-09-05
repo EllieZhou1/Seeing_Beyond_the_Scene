@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000648_archery_to_driving car_xrAuik7Wxns_000036_000046_bg_CLuayLlBOEY_000064_000074
+Frame: MIDDLE.jpg
+Human Action Label (Correct): archery
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: golf driving (score: 0.9691)
+
+RANKING ANALYSIS:
+  Human Action 'archery' ranked: #10/50 (score: 0.0004)
+  Background Action 'driving car' ranked: #3/50 (score: 0.0070)
+
+Top 10 predictions:
+      1. golf driving (0.9691)
+      2. hitting baseball (0.0136)
+  🏞️  3. driving car (0.0070)
+      4. smoking (0.0025)
+      5. catching or throwing baseball (0.0021)
+      6. playing tennis (0.0014)
+      7. juggling balls (0.0005)
+      8. juggling soccer ball (0.0005)
+      9. cleaning windows (0.0005)
+  👤 10. archery (0.0004)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -7
+Score gap (bg_score - human_score): 0.0066
+⚠️  Background action in top 5!

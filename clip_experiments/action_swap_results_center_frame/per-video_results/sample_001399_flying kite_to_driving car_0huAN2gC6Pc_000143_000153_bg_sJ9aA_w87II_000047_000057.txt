@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001399_flying kite_to_driving car_0huAN2gC6Pc_000143_000153_bg_sJ9aA_w87II_000047_000057
+Frame: MIDDLE.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.2861)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #20/50 (score: 0.0053)
+  Background Action 'driving car' ranked: #2/50 (score: 0.1510)
+
+Top 10 predictions:
+      1. skipping rope (0.2861)
+  🏞️  2. driving car (0.1510)
+      3. juggling soccer ball (0.1349)
+      4. hitting baseball (0.0619)
+      5. cleaning windows (0.0545)
+      6. dribbling basketball (0.0344)
+      7. catching or throwing frisbee (0.0341)
+      8. juggling balls (0.0311)
+      9. sword fighting (0.0294)
+     10. playing basketball (0.0272)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -18
+Score gap (bg_score - human_score): 0.1457
+⚠️  Background action in top 5!

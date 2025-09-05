@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001028_sweeping floor_to_sword fighting__8c2EG7JDOw_000001_000011_bg_7G7e9f0E-Xk_000042_000052
+Frame: MIDDLE.jpg
+Human Action Label (Correct): sweeping floor
+Background Label (Incorrect): sword fighting
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.4107)
+
+RANKING ANALYSIS:
+  Human Action 'sweeping floor' ranked: #27/50 (score: 0.0043)
+  Background Action 'sword fighting' ranked: #7/50 (score: 0.0361)
+
+Top 10 predictions:
+      1. driving car (0.4107)
+      2. cleaning windows (0.0691)
+      3. dribbling basketball (0.0653)
+      4. playing basketball (0.0602)
+      5. golf driving (0.0495)
+      6. dunking basketball (0.0366)
+  🏞️  7. sword fighting (0.0361)
+      8. skipping rope (0.0309)
+      9. hurdling (0.0256)
+     10. shooting goal (soccer) (0.0235)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -20
+Score gap (bg_score - human_score): 0.0318

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000201_hurdling_to_playing bass guitar_Q99scMw_PH8_000013_000023_bg_qx8eYKeDhmw_000187_000197
+Frame: MIDDLE.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): playing bass guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2480)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #2/50 (score: 0.1411)
+  Background Action 'playing bass guitar' ranked: #48/50 (score: 0.0000)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2480)
+  👤  2. hurdling (0.1411)
+      3. dribbling basketball (0.1233)
+      4. skipping rope (0.1018)
+      5. shooting goal (soccer) (0.0805)
+      6. skiing slalom (0.0615)
+      7. juggling balls (0.0398)
+      8. punching person (boxing) (0.0386)
+      9. shooting basketball (0.0252)
+     10. dunking basketball (0.0209)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 46
+Score gap (bg_score - human_score): -0.1411
+✅ Human action in top 5

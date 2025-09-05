@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002419_canoeing or kayaking_to_playing accordion_neGcxrCAyug_000075_000085_bg_YgXLcOtQcSg_000028_000038
+Frame: MIDDLE.jpg
+Human Action Label (Correct): canoeing or kayaking
+Background Label (Incorrect): playing accordion
+
+CLIP PREDICTIONS:
+  Predicted Label: playing violin (score: 0.6234)
+
+RANKING ANALYSIS:
+  Human Action 'canoeing or kayaking' ranked: #50/50 (score: 0.0000)
+  Background Action 'playing accordion' ranked: #6/50 (score: 0.0203)
+
+Top 10 predictions:
+      1. playing violin (0.6234)
+      2. playing trumpet (0.1410)
+      3. playing piano (0.0306)
+      4. juggling balls (0.0282)
+      5. playing saxophone (0.0261)
+  🏞️  6. playing accordion (0.0203)
+      7. punching person (boxing) (0.0174)
+      8. sword fighting (0.0149)
+      9. playing guitar (0.0138)
+     10. flying kite (0.0108)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -44
+Score gap (bg_score - human_score): 0.0203

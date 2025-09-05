@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001084_clean and jerk_to_brushing teeth_9tYNQlZO1Rw_000010_000020_bg_y1FlaXV3sQY_000004_000014
+Frame: MIDDLE.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): brushing teeth
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.1916)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #32/50 (score: 0.0032)
+  Background Action 'brushing teeth' ranked: #18/50 (score: 0.0132)
+
+Top 10 predictions:
+      1. dunking basketball (0.1916)
+      2. juggling soccer ball (0.1072)
+      3. playing basketball (0.1022)
+      4. climbing a rope (0.0672)
+      5. climbing ladder (0.0623)
+      6. cleaning windows (0.0505)
+      7. juggling balls (0.0502)
+      8. shooting basketball (0.0422)
+      9. punching person (boxing) (0.0352)
+     10. sword fighting (0.0270)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -14
+Score gap (bg_score - human_score): 0.0100

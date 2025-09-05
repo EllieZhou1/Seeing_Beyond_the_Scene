@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000973_drinking_to_playing volleyball_iKWouH2g2Pg_000022_000032_bg_S8-9GshrLTw_000010_000020
+Frame: MIDDLE.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): playing volleyball
+
+CLIP PREDICTIONS:
+  Predicted Label: eating ice cream (score: 0.4207)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #8/50 (score: 0.0288)
+  Background Action 'playing volleyball' ranked: #40/50 (score: 0.0004)
+
+Top 10 predictions:
+      1. eating ice cream (0.4207)
+      2. eating cake (0.1745)
+      3. juggling balls (0.0647)
+      4. brushing hair (0.0491)
+      5. opening bottle (0.0429)
+      6. surfing water (0.0332)
+      7. juggling soccer ball (0.0319)
+  👤  8. drinking (0.0288)
+      9. brushing teeth (0.0282)
+     10. skipping rope (0.0239)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 32
+Score gap (bg_score - human_score): -0.0285

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002321_hurdling_to_sweeping floor_HeHaCIdpRdo_000006_000016_bg_LNMNZZ4g51I_000047_000057
+Frame: MIDDLE.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): sweeping floor
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing teeth (score: 0.4206)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #45/50 (score: 0.0006)
+  Background Action 'sweeping floor' ranked: #5/50 (score: 0.0542)
+
+Top 10 predictions:
+      1. brushing teeth (0.4206)
+      2. cleaning windows (0.0874)
+      3. opening bottle (0.0788)
+      4. brushing hair (0.0577)
+  🏞️  5. sweeping floor (0.0542)
+      6. surfing water (0.0335)
+      7. juggling soccer ball (0.0268)
+      8. dribbling basketball (0.0268)
+      9. tying tie (0.0242)
+     10. walking the dog (0.0239)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -40
+Score gap (bg_score - human_score): 0.0535
+⚠️  Background action in top 5!

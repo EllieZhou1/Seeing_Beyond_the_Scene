@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002228_tying tie_to_clean and jerk_PdsCFMJr8jA_000090_000100_bg_2ObpbfBZnAQ_000007_000017
+Frame: MIDDLE.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): clean and jerk
+
+CLIP PREDICTIONS:
+  Predicted Label: tying tie (score: 0.3581)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #1/50 (score: 0.3581)
+  Background Action 'clean and jerk' ranked: #33/50 (score: 0.0011)
+
+Top 10 predictions:
+  👤  1. tying tie (0.3581)
+      2. brushing hair (0.1218)
+      3. brushing teeth (0.0908)
+      4. opening bottle (0.0667)
+      5. eating cake (0.0478)
+      6. smoking (0.0356)
+      7. playing saxophone (0.0289)
+      8. eating ice cream (0.0285)
+      9. playing accordion (0.0281)
+     10. climbing a rope (0.0248)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 32
+Score gap (bg_score - human_score): -0.3571
+✅ Human action in top 5

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001563_writing_to_reading newspaper_vYfm8bO--TM_000004_000014_bg_4zpTIveqvL8_000004_000014
+Frame: MIDDLE.jpg
+Human Action Label (Correct): writing
+Background Label (Incorrect): reading newspaper
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.2422)
+
+RANKING ANALYSIS:
+  Human Action 'writing' ranked: #29/50 (score: 0.0036)
+  Background Action 'reading newspaper' ranked: #3/50 (score: 0.0959)
+
+Top 10 predictions:
+      1. opening bottle (0.2422)
+      2. cleaning windows (0.2222)
+  🏞️  3. reading newspaper (0.0959)
+      4. punching person (boxing) (0.0893)
+      5. juggling balls (0.0653)
+      6. juggling soccer ball (0.0238)
+      7. dunking basketball (0.0216)
+      8. dribbling basketball (0.0199)
+      9. smoking (0.0186)
+     10. drinking (0.0183)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -26
+Score gap (bg_score - human_score): 0.0923
+⚠️  Background action in top 5!

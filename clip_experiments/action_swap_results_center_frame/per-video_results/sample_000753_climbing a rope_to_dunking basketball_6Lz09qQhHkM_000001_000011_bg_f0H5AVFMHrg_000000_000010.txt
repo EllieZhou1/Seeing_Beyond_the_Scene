@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000753_climbing a rope_to_dunking basketball_6Lz09qQhHkM_000001_000011_bg_f0H5AVFMHrg_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): climbing a rope
+Background Label (Incorrect): dunking basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing teeth (score: 0.4525)
+
+RANKING ANALYSIS:
+  Human Action 'climbing a rope' ranked: #9/50 (score: 0.0124)
+  Background Action 'dunking basketball' ranked: #18/50 (score: 0.0046)
+
+Top 10 predictions:
+      1. brushing teeth (0.4525)
+      2. opening bottle (0.1199)
+      3. brushing hair (0.1127)
+      4. juggling soccer ball (0.0821)
+      5. surfing water (0.0456)
+      6. juggling balls (0.0410)
+      7. sword fighting (0.0161)
+      8. playing trumpet (0.0147)
+  👤  9. climbing a rope (0.0124)
+     10. playing saxophone (0.0099)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 9
+Score gap (bg_score - human_score): -0.0077

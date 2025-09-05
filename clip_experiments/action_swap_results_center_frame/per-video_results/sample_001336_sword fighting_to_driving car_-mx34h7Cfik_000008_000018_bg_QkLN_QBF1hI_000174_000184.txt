@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001336_sword fighting_to_driving car_-mx34h7Cfik_000008_000018_bg_QkLN_QBF1hI_000174_000184
+Frame: MIDDLE.jpg
+Human Action Label (Correct): sword fighting
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2370)
+
+RANKING ANALYSIS:
+  Human Action 'sword fighting' ranked: #19/50 (score: 0.0080)
+  Background Action 'driving car' ranked: #7/50 (score: 0.0422)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2370)
+      2. skipping rope (0.1315)
+      3. golf driving (0.1232)
+      4. climbing a rope (0.0887)
+      5. juggling balls (0.0558)
+      6. walking the dog (0.0538)
+  🏞️  7. driving car (0.0422)
+      8. climbing ladder (0.0298)
+      9. shooting goal (soccer) (0.0275)
+     10. hitting baseball (0.0234)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -12
+Score gap (bg_score - human_score): 0.0342

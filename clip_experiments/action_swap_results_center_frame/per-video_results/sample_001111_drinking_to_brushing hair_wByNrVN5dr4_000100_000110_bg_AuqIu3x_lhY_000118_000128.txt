@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001111_drinking_to_brushing hair_wByNrVN5dr4_000100_000110_bg_AuqIu3x_lhY_000118_000128
+Frame: MIDDLE.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): brushing hair
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.2171)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #12/50 (score: 0.0218)
+  Background Action 'brushing hair' ranked: #11/50 (score: 0.0263)
+
+Top 10 predictions:
+      1. playing accordion (0.2171)
+      2. archery (0.0818)
+      3. climbing a rope (0.0755)
+      4. flying kite (0.0578)
+      5. playing violin (0.0451)
+      6. playing saxophone (0.0402)
+      7. playing guitar (0.0396)
+      8. playing trumpet (0.0348)
+      9. sword fighting (0.0276)
+     10. playing bass guitar (0.0267)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.0045

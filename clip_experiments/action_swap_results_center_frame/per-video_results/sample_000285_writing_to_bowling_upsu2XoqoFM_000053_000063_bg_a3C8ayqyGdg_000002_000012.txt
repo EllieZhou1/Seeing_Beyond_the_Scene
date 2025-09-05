@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000285_writing_to_bowling_upsu2XoqoFM_000053_000063_bg_a3C8ayqyGdg_000002_000012
+Frame: MIDDLE.jpg
+Human Action Label (Correct): writing
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: bowling (score: 0.6112)
+
+RANKING ANALYSIS:
+  Human Action 'writing' ranked: #46/50 (score: 0.0003)
+  Background Action 'bowling' ranked: #1/50 (score: 0.6112)
+
+Top 10 predictions:
+  🏞️  1. bowling (0.6112)
+      2. juggling balls (0.0566)
+      3. juggling soccer ball (0.0309)
+      4. shooting goal (soccer) (0.0286)
+      5. punching person (boxing) (0.0274)
+      6. climbing ladder (0.0251)
+      7. climbing a rope (0.0210)
+      8. cleaning windows (0.0190)
+      9. sweeping floor (0.0180)
+     10. shooting basketball (0.0178)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -45
+Score gap (bg_score - human_score): 0.6109
+⚠️  Background action in top 5!

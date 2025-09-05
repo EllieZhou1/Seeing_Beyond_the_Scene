@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000007_catching or throwing baseball_to_sweeping floor_w1c9XilT7NU_000007_000017_bg_fkZxB6qCvf4_000003_000013
+Frame: MIDDLE.jpg
+Human Action Label (Correct): catching or throwing baseball
+Background Label (Incorrect): sweeping floor
+
+CLIP PREDICTIONS:
+  Predicted Label: sweeping floor (score: 0.3747)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing baseball' ranked: #27/50 (score: 0.0024)
+  Background Action 'sweeping floor' ranked: #1/50 (score: 0.3747)
+
+Top 10 predictions:
+  🏞️  1. sweeping floor (0.3747)
+      2. skipping rope (0.1151)
+      3. playing basketball (0.0770)
+      4. playing tennis (0.0590)
+      5. playing volleyball (0.0494)
+      6. shooting goal (soccer) (0.0404)
+      7. juggling soccer ball (0.0365)
+      8. hurdling (0.0307)
+      9. punching person (boxing) (0.0295)
+     10. dunking basketball (0.0191)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -26
+Score gap (bg_score - human_score): 0.3724
+⚠️  Background action in top 5!

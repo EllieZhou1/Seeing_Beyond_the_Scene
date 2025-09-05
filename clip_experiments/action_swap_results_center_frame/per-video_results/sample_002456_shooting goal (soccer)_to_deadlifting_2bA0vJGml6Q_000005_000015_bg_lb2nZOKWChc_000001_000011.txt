@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002456_shooting goal (soccer)_to_deadlifting_2bA0vJGml6Q_000005_000015_bg_lb2nZOKWChc_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): shooting goal (soccer)
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.1835)
+
+RANKING ANALYSIS:
+  Human Action 'shooting goal (soccer)' ranked: #1/50 (score: 0.1835)
+  Background Action 'deadlifting' ranked: #27/50 (score: 0.0014)
+
+Top 10 predictions:
+  👤  1. shooting goal (soccer) (0.1835)
+      2. skipping rope (0.1495)
+      3. juggling soccer ball (0.0881)
+      4. hurdling (0.0700)
+      5. playing basketball (0.0637)
+      6. driving car (0.0603)
+      7. walking the dog (0.0577)
+      8. dunking basketball (0.0357)
+      9. catching or throwing frisbee (0.0289)
+     10. punching person (boxing) (0.0273)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 26
+Score gap (bg_score - human_score): -0.1821
+✅ Human action in top 5

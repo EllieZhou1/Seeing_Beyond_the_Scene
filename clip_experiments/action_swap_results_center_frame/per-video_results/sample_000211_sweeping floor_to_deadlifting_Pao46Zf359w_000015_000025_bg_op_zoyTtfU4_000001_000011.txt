@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000211_sweeping floor_to_deadlifting_Pao46Zf359w_000015_000025_bg_op_zoyTtfU4_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): sweeping floor
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: clean and jerk (score: 0.4470)
+
+RANKING ANALYSIS:
+  Human Action 'sweeping floor' ranked: #26/50 (score: 0.0001)
+  Background Action 'deadlifting' ranked: #4/50 (score: 0.0229)
+
+Top 10 predictions:
+      1. clean and jerk (0.4470)
+      2. climbing a rope (0.3535)
+      3. climbing ladder (0.1338)
+  🏞️  4. deadlifting (0.0229)
+      5. skipping rope (0.0136)
+      6. dunking basketball (0.0080)
+      7. juggling balls (0.0067)
+      8. juggling soccer ball (0.0056)
+      9. punching person (boxing) (0.0009)
+     10. hurdling (0.0008)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -22
+Score gap (bg_score - human_score): 0.0228
+⚠️  Background action in top 5!

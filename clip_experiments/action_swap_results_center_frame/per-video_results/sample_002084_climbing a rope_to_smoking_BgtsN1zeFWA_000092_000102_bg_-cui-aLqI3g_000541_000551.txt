@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002084_climbing a rope_to_smoking_BgtsN1zeFWA_000092_000102_bg_-cui-aLqI3g_000541_000551
+Frame: MIDDLE.jpg
+Human Action Label (Correct): climbing a rope
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.2249)
+
+RANKING ANALYSIS:
+  Human Action 'climbing a rope' ranked: #1/50 (score: 0.2249)
+  Background Action 'smoking' ranked: #42/50 (score: 0.0008)
+
+Top 10 predictions:
+  👤  1. climbing a rope (0.2249)
+      2. sword fighting (0.1569)
+      3. punching person (boxing) (0.0952)
+      4. climbing ladder (0.0663)
+      5. opening bottle (0.0659)
+      6. juggling soccer ball (0.0579)
+      7. juggling balls (0.0543)
+      8. skipping rope (0.0471)
+      9. dunking basketball (0.0382)
+     10. dribbling basketball (0.0184)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 41
+Score gap (bg_score - human_score): -0.2241
+✅ Human action in top 5

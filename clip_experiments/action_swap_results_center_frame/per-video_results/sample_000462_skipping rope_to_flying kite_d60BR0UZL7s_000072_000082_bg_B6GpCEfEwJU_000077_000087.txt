@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000462_skipping rope_to_flying kite_d60BR0UZL7s_000072_000082_bg_B6GpCEfEwJU_000077_000087
+Frame: MIDDLE.jpg
+Human Action Label (Correct): skipping rope
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.2987)
+
+RANKING ANALYSIS:
+  Human Action 'skipping rope' ranked: #2/50 (score: 0.1269)
+  Background Action 'flying kite' ranked: #14/50 (score: 0.0087)
+
+Top 10 predictions:
+      1. dunking basketball (0.2987)
+  👤  2. skipping rope (0.1269)
+      3. dribbling basketball (0.0885)
+      4. shooting goal (soccer) (0.0844)
+      5. playing volleyball (0.0727)
+      6. playing basketball (0.0543)
+      7. climbing ladder (0.0488)
+      8. playing tennis (0.0404)
+      9. skiing slalom (0.0326)
+     10. shooting basketball (0.0319)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 12
+Score gap (bg_score - human_score): -0.1182
+✅ Human action in top 5

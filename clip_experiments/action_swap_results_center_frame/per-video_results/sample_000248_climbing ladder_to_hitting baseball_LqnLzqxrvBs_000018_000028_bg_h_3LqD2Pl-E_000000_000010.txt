@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000248_climbing ladder_to_hitting baseball_LqnLzqxrvBs_000018_000028_bg_h_3LqD2Pl-E_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): climbing ladder
+Background Label (Incorrect): hitting baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: hitting baseball (score: 0.6139)
+
+RANKING ANALYSIS:
+  Human Action 'climbing ladder' ranked: #22/50 (score: 0.0001)
+  Background Action 'hitting baseball' ranked: #1/50 (score: 0.6139)
+
+Top 10 predictions:
+  🏞️  1. hitting baseball (0.6139)
+      2. catching or throwing baseball (0.3202)
+      3. shooting goal (soccer) (0.0304)
+      4. catching or throwing frisbee (0.0123)
+      5. juggling soccer ball (0.0098)
+      6. juggling balls (0.0050)
+      7. clean and jerk (0.0022)
+      8. archery (0.0012)
+      9. dribbling basketball (0.0011)
+     10. playing tennis (0.0006)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -21
+Score gap (bg_score - human_score): 0.6138
+⚠️  Background action in top 5!

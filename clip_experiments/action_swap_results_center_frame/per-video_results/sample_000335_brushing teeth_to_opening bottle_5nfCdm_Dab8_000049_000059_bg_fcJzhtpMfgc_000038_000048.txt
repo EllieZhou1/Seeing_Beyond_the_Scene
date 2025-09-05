@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000335_brushing teeth_to_opening bottle_5nfCdm_Dab8_000049_000059_bg_fcJzhtpMfgc_000038_000048
+Frame: MIDDLE.jpg
+Human Action Label (Correct): brushing teeth
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.1836)
+
+RANKING ANALYSIS:
+  Human Action 'brushing teeth' ranked: #8/50 (score: 0.0335)
+  Background Action 'opening bottle' ranked: #13/50 (score: 0.0295)
+
+Top 10 predictions:
+      1. brushing hair (0.1836)
+      2. cleaning windows (0.0665)
+      3. eating ice cream (0.0543)
+      4. drinking (0.0497)
+      5. climbing ladder (0.0469)
+      6. punching person (boxing) (0.0432)
+      7. climbing a rope (0.0362)
+  👤  8. brushing teeth (0.0335)
+      9. juggling soccer ball (0.0327)
+     10. hitting baseball (0.0327)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 5
+Score gap (bg_score - human_score): -0.0041

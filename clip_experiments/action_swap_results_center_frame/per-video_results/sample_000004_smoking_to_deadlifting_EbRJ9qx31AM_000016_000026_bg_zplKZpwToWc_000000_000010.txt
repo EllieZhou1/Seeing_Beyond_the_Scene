@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000004_smoking_to_deadlifting_EbRJ9qx31AM_000016_000026_bg_zplKZpwToWc_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.1937)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #10/50 (score: 0.0214)
+  Background Action 'deadlifting' ranked: #17/50 (score: 0.0142)
+
+Top 10 predictions:
+      1. driving car (0.1937)
+      2. bowling (0.1250)
+      3. juggling balls (0.0950)
+      4. tying tie (0.0789)
+      5. playing accordion (0.0783)
+      6. juggling soccer ball (0.0761)
+      7. punching person (boxing) (0.0272)
+      8. golf driving (0.0267)
+      9. brushing hair (0.0227)
+  👤 10. smoking (0.0214)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 7
+Score gap (bg_score - human_score): -0.0073

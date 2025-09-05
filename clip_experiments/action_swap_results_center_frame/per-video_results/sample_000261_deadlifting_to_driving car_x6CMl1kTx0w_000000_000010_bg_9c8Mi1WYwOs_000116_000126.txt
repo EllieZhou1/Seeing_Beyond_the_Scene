@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000261_deadlifting_to_driving car_x6CMl1kTx0w_000000_000010_bg_9c8Mi1WYwOs_000116_000126
+Frame: MIDDLE.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.3883)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #22/50 (score: 0.0028)
+  Background Action 'driving car' ranked: #1/50 (score: 0.3883)
+
+Top 10 predictions:
+  🏞️  1. driving car (0.3883)
+      2. golf driving (0.3269)
+      3. cleaning windows (0.0563)
+      4. juggling soccer ball (0.0301)
+      5. climbing ladder (0.0249)
+      6. playing basketball (0.0227)
+      7. dunking basketball (0.0183)
+      8. climbing a rope (0.0133)
+      9. dribbling basketball (0.0122)
+     10. punching person (boxing) (0.0122)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -21
+Score gap (bg_score - human_score): 0.3855
+⚠️  Background action in top 5!

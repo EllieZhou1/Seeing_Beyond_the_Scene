@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001248_surfing water_to_walking the dog_8cKtR2aYbeo_000014_000024_bg_KvVRY61JS7A_000023_000033
+Frame: MIDDLE.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.2606)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #1/50 (score: 0.2606)
+  Background Action 'walking the dog' ranked: #11/50 (score: 0.0117)
+
+Top 10 predictions:
+  👤  1. surfing water (0.2606)
+      2. driving car (0.2568)
+      3. golf driving (0.1669)
+      4. cleaning windows (0.0380)
+      5. smoking (0.0369)
+      6. canoeing or kayaking (0.0289)
+      7. flying kite (0.0228)
+      8. juggling balls (0.0214)
+      9. shooting goal (soccer) (0.0174)
+     10. juggling soccer ball (0.0150)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 10
+Score gap (bg_score - human_score): -0.2488
+✅ Human action in top 5

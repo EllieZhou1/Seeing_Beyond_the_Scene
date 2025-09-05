@@ -1,0 +1,29 @@
+device: cuda  # Will need to be dynamically determined in code
+metadata_dir: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics  # Directory containing curated CSV files
+
+#Predefining paths that can be used later
+segmented_minikinetics50_train: dataset/segmented_minikinetics50/segmented_minikinetics50_train.csv
+segmented_minikinetics50_val: dataset/segmented_minikinetics50/segmented_minikinetics50_validation.csv
+original_minikinetics50_train: dataset/mini50_clean_train.csv
+original_minikinetics50_val: dataset/HAT_minikinetics50_validation.csv
+
+batch_size: 20
+learning_rate: 0.01
+num_epochs: 300
+
+last_epoch_saved: None # Last epoch saved, used for resuming training
+num_dataloader_workers: 20
+
+model_type: weighted_focus #options: ['stack_concat', 'sum_concat', 'slow_r50', 'weighted_focus']
+
+dataset_type_train: original_and_binmask_minikinetics50_train
+#options: ['segmented_minikinetics50_train', 'original_minikinetics50_train', 'dual_original_and_segmented_minikinetics50_train',
+# 'original_and_binmask_minikinetics50_train']
+
+dataset_type_val: original_and_binmask_minikinetics50_val
+#options: ['segmented_minikinetics50_val', 'original_minikinetics50_val', 'dual_original_and_segmented_minikinetics50_val',
+# 'original_and_binmask_minikinetics50_val']
+
+#TODO: change this name
+wandb_name: Weighted-Focus DELTA(SGD, LR 0.01)
+weights_dir: slowfast_minikinetics50/weighted_focus_sgd_lr_01_new  # Directory to save model weights

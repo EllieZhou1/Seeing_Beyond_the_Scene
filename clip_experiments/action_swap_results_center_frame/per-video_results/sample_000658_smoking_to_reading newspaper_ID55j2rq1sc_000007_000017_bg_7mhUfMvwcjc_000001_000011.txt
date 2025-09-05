@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000658_smoking_to_reading newspaper_ID55j2rq1sc_000007_000017_bg_7mhUfMvwcjc_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): reading newspaper
+
+CLIP PREDICTIONS:
+  Predicted Label: smoking (score: 0.5439)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #1/50 (score: 0.5439)
+  Background Action 'reading newspaper' ranked: #31/50 (score: 0.0003)
+
+Top 10 predictions:
+  👤  1. smoking (0.5439)
+      2. brushing teeth (0.2449)
+      3. playing trumpet (0.0883)
+      4. playing saxophone (0.0338)
+      5. eating ice cream (0.0176)
+      6. eating cake (0.0163)
+      7. tying tie (0.0087)
+      8. brushing hair (0.0049)
+      9. drinking (0.0046)
+     10. climbing a rope (0.0035)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 30
+Score gap (bg_score - human_score): -0.5436
+✅ Human action in top 5

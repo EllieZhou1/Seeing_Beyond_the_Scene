@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000756_climbing a rope_to_hurdling_mzqDvgpiGP4_000013_000023_bg_Q99scMw_PH8_000013_000023
+Frame: MIDDLE.jpg
+Human Action Label (Correct): climbing a rope
+Background Label (Incorrect): hurdling
+
+CLIP PREDICTIONS:
+  Predicted Label: hurdling (score: 0.9924)
+
+RANKING ANALYSIS:
+  Human Action 'climbing a rope' ranked: #6/50 (score: 0.0008)
+  Background Action 'hurdling' ranked: #1/50 (score: 0.9924)
+
+Top 10 predictions:
+  🏞️  1. hurdling (0.9924)
+      2. clean and jerk (0.0015)
+      3. shooting goal (soccer) (0.0012)
+      4. catching or throwing baseball (0.0010)
+      5. catching or throwing frisbee (0.0009)
+  👤  6. climbing a rope (0.0008)
+      7. flying kite (0.0003)
+      8. skipping rope (0.0002)
+      9. climbing ladder (0.0002)
+     10. playing volleyball (0.0002)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -5
+Score gap (bg_score - human_score): 0.9917
+⚠️  Background action in top 5!

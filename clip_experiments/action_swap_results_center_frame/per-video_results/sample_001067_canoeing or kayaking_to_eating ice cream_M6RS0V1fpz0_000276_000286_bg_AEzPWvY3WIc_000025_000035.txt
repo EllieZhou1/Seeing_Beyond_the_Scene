@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001067_canoeing or kayaking_to_eating ice cream_M6RS0V1fpz0_000276_000286_bg_AEzPWvY3WIc_000025_000035
+Frame: MIDDLE.jpg
+Human Action Label (Correct): canoeing or kayaking
+Background Label (Incorrect): eating ice cream
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.2157)
+
+RANKING ANALYSIS:
+  Human Action 'canoeing or kayaking' ranked: #34/50 (score: 0.0019)
+  Background Action 'eating ice cream' ranked: #22/50 (score: 0.0062)
+
+Top 10 predictions:
+      1. opening bottle (0.2157)
+      2. clean and jerk (0.1739)
+      3. skiing slalom (0.1050)
+      4. climbing a rope (0.0931)
+      5. smoking (0.0702)
+      6. juggling soccer ball (0.0488)
+      7. skiing (not slalom or crosscountry) (0.0407)
+      8. punching person (boxing) (0.0257)
+      9. hurdling (0.0225)
+     10. climbing ladder (0.0203)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -12
+Score gap (bg_score - human_score): 0.0043

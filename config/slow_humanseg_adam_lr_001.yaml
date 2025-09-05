@@ -1,0 +1,32 @@
+device: cuda  # Will need to be dynamically determined in code
+metadata_dir: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics  # Directory containing curated CSV files
+
+#Predefining paths that can be used later
+segmented_minikinetics50_train: dataset/segmented_minikinetics50/segmented_minikinetics50_train.csv
+segmented_minikinetics50_val: dataset/segmented_minikinetics50/segmented_minikinetics50_validation.csv
+original_minikinetics50_train: dataset/mini50_clean_train.csv
+original_minikinetics50_val: dataset/HAT_minikinetics50_validation.csv
+mimetics: dataset/mimetics.csv
+segmented_mimetics: dataset/segmented_mimetics/segmented_mimetics.csv
+HAT_action_swap: dataset/action_swap/action_swap_all.csv
+
+batch_size: 20
+model_type: slow_r50 #options: ['stack_concat', 'sum_concat', 'slow_r50', 'weighted_focus1', 'weighted_focus2']
+last_epoch_saved: 300 # Last epoch saved, used for resuming training or testing
+wandb_name: Segmented (ADAM, LR 0.001)
+weights_dir: saved_weights/slowfast_minikinetics50/slow_humanseg_adam_lr_001_new  # Directory to save model weights
+
+train:
+  learning_rate: 0.01
+  num_epochs: 300
+  num_dataloader_workers: 20
+  dataset_type_train: segmented_minikinetics50_train
+  #options: ['segmented_minikinetics50_train', 'original_minikinetics50_train', 'dual_original_and_segmented_minikinetics50_train',
+  # 'original_and_binmask_minikinetics50_train']
+  dataset_type_val: segmented_minikinetics50_val 
+  #options: ['segmented_minikinetics50_val', 'original_minikinetics50_val', 'dual_original_and_segmented_minikinetics50_val',
+  # 'original_and_binmask_minikinetics50_val']
+
+test:
+  batch_size: 1
+  dataset_type: segmented_HAT_action_swap

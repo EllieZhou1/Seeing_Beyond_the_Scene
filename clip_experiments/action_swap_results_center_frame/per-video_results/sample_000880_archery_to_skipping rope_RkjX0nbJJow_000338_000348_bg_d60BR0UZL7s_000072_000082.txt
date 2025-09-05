@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000880_archery_to_skipping rope_RkjX0nbJJow_000338_000348_bg_d60BR0UZL7s_000072_000082
+Frame: MIDDLE.jpg
+Human Action Label (Correct): archery
+Background Label (Incorrect): skipping rope
+
+CLIP PREDICTIONS:
+  Predicted Label: playing piano (score: 0.2095)
+
+RANKING ANALYSIS:
+  Human Action 'archery' ranked: #25/50 (score: 0.0055)
+  Background Action 'skipping rope' ranked: #31/50 (score: 0.0031)
+
+Top 10 predictions:
+      1. playing piano (0.2095)
+      2. playing accordion (0.1837)
+      3. playing saxophone (0.0557)
+      4. writing (0.0532)
+      5. playing guitar (0.0493)
+      6. playing trumpet (0.0407)
+      7. playing violin (0.0404)
+      8. driving car (0.0400)
+      9. cleaning windows (0.0393)
+     10. climbing ladder (0.0377)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 6
+Score gap (bg_score - human_score): -0.0024

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000197_drinking_to_playing tennis_baZKgZy9wdI_000035_000045_bg_DR2x0iYXt_8_000181_000191
+Frame: MIDDLE.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): playing tennis
+
+CLIP PREDICTIONS:
+  Predicted Label: dribbling basketball (score: 0.3138)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #32/50 (score: 0.0010)
+  Background Action 'playing tennis' ranked: #2/50 (score: 0.2311)
+
+Top 10 predictions:
+      1. dribbling basketball (0.3138)
+  🏞️  2. playing tennis (0.2311)
+      3. juggling balls (0.1121)
+      4. juggling soccer ball (0.1026)
+      5. playing basketball (0.0716)
+      6. playing accordion (0.0291)
+      7. skipping rope (0.0195)
+      8. hitting baseball (0.0144)
+      9. dunking basketball (0.0140)
+     10. shooting basketball (0.0097)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -30
+Score gap (bg_score - human_score): 0.2301
+⚠️  Background action in top 5!

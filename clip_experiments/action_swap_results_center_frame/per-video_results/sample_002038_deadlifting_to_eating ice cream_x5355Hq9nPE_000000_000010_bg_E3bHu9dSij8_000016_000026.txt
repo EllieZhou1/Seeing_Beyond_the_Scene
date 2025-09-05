@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002038_deadlifting_to_eating ice cream_x5355Hq9nPE_000000_000010_bg_E3bHu9dSij8_000016_000026
+Frame: MIDDLE.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): eating ice cream
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.4022)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #3/50 (score: 0.1237)
+  Background Action 'eating ice cream' ranked: #17/50 (score: 0.0066)
+
+Top 10 predictions:
+      1. sword fighting (0.4022)
+      2. skipping rope (0.1432)
+  👤  3. deadlifting (0.1237)
+      4. punching person (boxing) (0.0831)
+      5. archery (0.0399)
+      6. juggling balls (0.0214)
+      7. bowling (0.0185)
+      8. playing volleyball (0.0133)
+      9. sweeping floor (0.0124)
+     10. juggling soccer ball (0.0123)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 14
+Score gap (bg_score - human_score): -0.1171
+✅ Human action in top 5

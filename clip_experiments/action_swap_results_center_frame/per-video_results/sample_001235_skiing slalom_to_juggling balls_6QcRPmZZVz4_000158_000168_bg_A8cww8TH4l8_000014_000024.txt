@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001235_skiing slalom_to_juggling balls_6QcRPmZZVz4_000158_000168_bg_A8cww8TH4l8_000014_000024
+Frame: MIDDLE.jpg
+Human Action Label (Correct): skiing slalom
+Background Label (Incorrect): juggling balls
+
+CLIP PREDICTIONS:
+  Predicted Label: flying kite (score: 0.2095)
+
+RANKING ANALYSIS:
+  Human Action 'skiing slalom' ranked: #33/50 (score: 0.0021)
+  Background Action 'juggling balls' ranked: #20/50 (score: 0.0081)
+
+Top 10 predictions:
+      1. flying kite (0.2095)
+      2. catching or throwing baseball (0.1312)
+      3. dunking basketball (0.0982)
+      4. sword fighting (0.0697)
+      5. climbing a rope (0.0627)
+      6. playing saxophone (0.0581)
+      7. hitting baseball (0.0472)
+      8. climbing ladder (0.0424)
+      9. hurdling (0.0423)
+     10. playing guitar (0.0337)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -13
+Score gap (bg_score - human_score): 0.0060

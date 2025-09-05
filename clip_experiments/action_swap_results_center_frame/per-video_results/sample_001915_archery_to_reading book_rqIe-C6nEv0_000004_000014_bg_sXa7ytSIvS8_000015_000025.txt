@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001915_archery_to_reading book_rqIe-C6nEv0_000004_000014_bg_sXa7ytSIvS8_000015_000025
+Frame: MIDDLE.jpg
+Human Action Label (Correct): archery
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: playing volleyball (score: 0.2686)
+
+RANKING ANALYSIS:
+  Human Action 'archery' ranked: #15/50 (score: 0.0215)
+  Background Action 'reading book' ranked: #46/50 (score: 0.0001)
+
+Top 10 predictions:
+      1. playing volleyball (0.2686)
+      2. hitting baseball (0.0843)
+      3. playing tennis (0.0834)
+      4. catching or throwing frisbee (0.0515)
+      5. playing basketball (0.0475)
+      6. climbing a rope (0.0427)
+      7. juggling soccer ball (0.0420)
+      8. catching or throwing baseball (0.0418)
+      9. flying kite (0.0379)
+     10. skipping rope (0.0322)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 31
+Score gap (bg_score - human_score): -0.0214

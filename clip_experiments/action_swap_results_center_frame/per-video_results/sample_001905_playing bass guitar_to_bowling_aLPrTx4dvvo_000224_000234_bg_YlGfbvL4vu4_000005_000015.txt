@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001905_playing bass guitar_to_bowling_aLPrTx4dvvo_000224_000234_bg_YlGfbvL4vu4_000005_000015
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing bass guitar
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: bowling (score: 0.8998)
+
+RANKING ANALYSIS:
+  Human Action 'playing bass guitar' ranked: #39/50 (score: 0.0001)
+  Background Action 'bowling' ranked: #1/50 (score: 0.8998)
+
+Top 10 predictions:
+  🏞️  1. bowling (0.8998)
+      2. juggling balls (0.0225)
+      3. juggling soccer ball (0.0108)
+      4. catching or throwing baseball (0.0093)
+      5. opening bottle (0.0061)
+      6. shooting goal (soccer) (0.0055)
+      7. golf driving (0.0045)
+      8. driving car (0.0042)
+      9. hitting baseball (0.0041)
+     10. smoking (0.0036)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -38
+Score gap (bg_score - human_score): 0.8996
+⚠️  Background action in top 5!

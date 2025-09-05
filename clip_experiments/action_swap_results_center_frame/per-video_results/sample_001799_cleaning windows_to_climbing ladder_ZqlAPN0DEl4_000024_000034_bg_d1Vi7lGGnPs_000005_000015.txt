@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001799_cleaning windows_to_climbing ladder_ZqlAPN0DEl4_000024_000034_bg_d1Vi7lGGnPs_000005_000015
+Frame: MIDDLE.jpg
+Human Action Label (Correct): cleaning windows
+Background Label (Incorrect): climbing ladder
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.7376)
+
+RANKING ANALYSIS:
+  Human Action 'cleaning windows' ranked: #13/50 (score: 0.0011)
+  Background Action 'climbing ladder' ranked: #1/50 (score: 0.7376)
+
+Top 10 predictions:
+  🏞️  1. climbing ladder (0.7376)
+      2. climbing a rope (0.2114)
+      3. dunking basketball (0.0179)
+      4. sword fighting (0.0057)
+      5. hurdling (0.0046)
+      6. skipping rope (0.0032)
+      7. hitting baseball (0.0028)
+      8. skiing slalom (0.0028)
+      9. playing basketball (0.0019)
+     10. flying kite (0.0013)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -12
+Score gap (bg_score - human_score): 0.7365
+⚠️  Background action in top 5!

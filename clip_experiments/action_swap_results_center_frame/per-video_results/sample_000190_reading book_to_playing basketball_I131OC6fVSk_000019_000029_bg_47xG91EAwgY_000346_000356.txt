@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000190_reading book_to_playing basketball_I131OC6fVSk_000019_000029_bg_47xG91EAwgY_000346_000356
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): playing basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.6581)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #35/50 (score: 0.0015)
+  Background Action 'playing basketball' ranked: #33/50 (score: 0.0016)
+
+Top 10 predictions:
+      1. cleaning windows (0.6581)
+      2. opening bottle (0.0405)
+      3. brushing teeth (0.0296)
+      4. surfing water (0.0273)
+      5. drinking (0.0261)
+      6. playing violin (0.0244)
+      7. climbing a rope (0.0188)
+      8. juggling soccer ball (0.0162)
+      9. playing trumpet (0.0160)
+     10. brushing hair (0.0159)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.0000

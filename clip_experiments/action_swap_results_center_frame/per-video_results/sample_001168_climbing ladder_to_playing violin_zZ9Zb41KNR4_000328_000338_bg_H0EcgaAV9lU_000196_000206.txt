@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001168_climbing ladder_to_playing violin_zZ9Zb41KNR4_000328_000338_bg_H0EcgaAV9lU_000196_000206
+Frame: MIDDLE.jpg
+Human Action Label (Correct): climbing ladder
+Background Label (Incorrect): playing violin
+
+CLIP PREDICTIONS:
+  Predicted Label: playing guitar (score: 0.4805)
+
+RANKING ANALYSIS:
+  Human Action 'climbing ladder' ranked: #13/50 (score: 0.0002)
+  Background Action 'playing violin' ranked: #3/50 (score: 0.1078)
+
+Top 10 predictions:
+      1. playing guitar (0.4805)
+      2. playing bass guitar (0.3861)
+  🏞️  3. playing violin (0.1078)
+      4. playing accordion (0.0100)
+      5. writing (0.0056)
+      6. playing trumpet (0.0026)
+      7. playing piano (0.0022)
+      8. playing saxophone (0.0022)
+      9. opening bottle (0.0003)
+     10. tying tie (0.0003)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -10
+Score gap (bg_score - human_score): 0.1076
+⚠️  Background action in top 5!

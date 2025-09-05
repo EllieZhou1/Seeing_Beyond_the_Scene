@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002387_reading newspaper_to_skiing slalom_kwYNw9kakwA_000002_000012_bg_r0dVelmP76E_000195_000205
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): skiing slalom
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.2041)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #29/50 (score: 0.0044)
+  Background Action 'skiing slalom' ranked: #13/50 (score: 0.0182)
+
+Top 10 predictions:
+      1. playing accordion (0.2041)
+      2. playing violin (0.1159)
+      3. juggling soccer ball (0.0750)
+      4. playing saxophone (0.0730)
+      5. opening bottle (0.0622)
+      6. playing trumpet (0.0621)
+      7. juggling balls (0.0489)
+      8. drinking (0.0437)
+      9. eating ice cream (0.0426)
+     10. surfing water (0.0335)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -16
+Score gap (bg_score - human_score): 0.0138

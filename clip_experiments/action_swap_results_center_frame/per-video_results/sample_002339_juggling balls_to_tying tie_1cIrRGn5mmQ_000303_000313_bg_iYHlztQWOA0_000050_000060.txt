@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002339_juggling balls_to_tying tie_1cIrRGn5mmQ_000303_000313_bg_iYHlztQWOA0_000050_000060
+Frame: MIDDLE.jpg
+Human Action Label (Correct): juggling balls
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.4240)
+
+RANKING ANALYSIS:
+  Human Action 'juggling balls' ranked: #12/50 (score: 0.0114)
+  Background Action 'tying tie' ranked: #8/50 (score: 0.0236)
+
+Top 10 predictions:
+      1. climbing a rope (0.4240)
+      2. skiing (not slalom or crosscountry) (0.2299)
+      3. climbing ladder (0.0472)
+      4. playing tennis (0.0328)
+      5. juggling soccer ball (0.0309)
+      6. skiing slalom (0.0249)
+      7. playing basketball (0.0247)
+  🏞️  8. tying tie (0.0236)
+      9. shooting goal (soccer) (0.0227)
+     10. dunking basketball (0.0156)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -4
+Score gap (bg_score - human_score): 0.0122

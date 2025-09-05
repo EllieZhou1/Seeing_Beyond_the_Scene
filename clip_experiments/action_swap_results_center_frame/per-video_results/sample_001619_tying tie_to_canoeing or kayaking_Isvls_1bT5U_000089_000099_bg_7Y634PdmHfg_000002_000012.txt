@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001619_tying tie_to_canoeing or kayaking_Isvls_1bT5U_000089_000099_bg_7Y634PdmHfg_000002_000012
+Frame: MIDDLE.jpg
+Human Action Label (Correct): tying tie
+Background Label (Incorrect): canoeing or kayaking
+
+CLIP PREDICTIONS:
+  Predicted Label: canoeing or kayaking (score: 0.3068)
+
+RANKING ANALYSIS:
+  Human Action 'tying tie' ranked: #32/50 (score: 0.0006)
+  Background Action 'canoeing or kayaking' ranked: #1/50 (score: 0.3068)
+
+Top 10 predictions:
+  🏞️  1. canoeing or kayaking (0.3068)
+      2. surfing water (0.2859)
+      3. flying kite (0.0810)
+      4. opening bottle (0.0739)
+      5. catching or throwing frisbee (0.0732)
+      6. climbing a rope (0.0265)
+      7. juggling soccer ball (0.0226)
+      8. juggling balls (0.0208)
+      9. catching or throwing baseball (0.0176)
+     10. golf driving (0.0160)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -31
+Score gap (bg_score - human_score): 0.3061
+⚠️  Background action in top 5!

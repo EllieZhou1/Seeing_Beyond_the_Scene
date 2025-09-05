@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001730_playing tennis_to_punching person (boxing)_FZXpPZmEoCc_000005_000015_bg_BKKZwGtb0HQ_000140_000150
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing tennis
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.4783)
+
+RANKING ANALYSIS:
+  Human Action 'playing tennis' ranked: #31/50 (score: 0.0030)
+  Background Action 'punching person (boxing)' ranked: #5/50 (score: 0.0441)
+
+Top 10 predictions:
+      1. climbing ladder (0.4783)
+      2. dunking basketball (0.0925)
+      3. cleaning windows (0.0777)
+      4. climbing a rope (0.0457)
+  🏞️  5. punching person (boxing) (0.0441)
+      6. playing saxophone (0.0359)
+      7. walking the dog (0.0167)
+      8. shooting basketball (0.0154)
+      9. dribbling basketball (0.0149)
+     10. playing trumpet (0.0136)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -26
+Score gap (bg_score - human_score): 0.0410
+⚠️  Background action in top 5!

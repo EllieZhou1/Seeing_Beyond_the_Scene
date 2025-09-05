@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001798_flying kite_to_catching or throwing baseball_H-aC3KJGvZg_000008_000018_bg_URS81Krk6pE_000062_000072
+Frame: MIDDLE.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): catching or throwing baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: sweeping floor (score: 0.1043)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #20/50 (score: 0.0097)
+  Background Action 'catching or throwing baseball' ranked: #27/50 (score: 0.0050)
+
+Top 10 predictions:
+      1. sweeping floor (0.1043)
+      2. skiing slalom (0.0989)
+      3. golf driving (0.0928)
+      4. juggling soccer ball (0.0864)
+      5. sword fighting (0.0826)
+      6. bowling (0.0679)
+      7. archery (0.0676)
+      8. shooting goal (soccer) (0.0591)
+      9. juggling balls (0.0569)
+     10. hurdling (0.0345)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 7
+Score gap (bg_score - human_score): -0.0046

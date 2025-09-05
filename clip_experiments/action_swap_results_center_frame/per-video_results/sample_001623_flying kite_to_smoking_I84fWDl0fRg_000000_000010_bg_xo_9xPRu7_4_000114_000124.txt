@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001623_flying kite_to_smoking_I84fWDl0fRg_000000_000010_bg_xo_9xPRu7_4_000114_000124
+Frame: MIDDLE.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.7010)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #14/50 (score: 0.0054)
+  Background Action 'smoking' ranked: #21/50 (score: 0.0030)
+
+Top 10 predictions:
+      1. surfing water (0.7010)
+      2. hitting baseball (0.0425)
+      3. shooting basketball (0.0383)
+      4. playing trumpet (0.0236)
+      5. dunking basketball (0.0232)
+      6. playing volleyball (0.0226)
+      7. shooting goal (soccer) (0.0199)
+      8. catching or throwing baseball (0.0182)
+      9. playing basketball (0.0168)
+     10. dribbling basketball (0.0106)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 7
+Score gap (bg_score - human_score): -0.0025

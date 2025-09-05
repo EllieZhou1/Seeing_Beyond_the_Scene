@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002081_hitting baseball_to_eating cake_O2GSaYqH8JY_000047_000057_bg_ntDFgioEXGE_000022_000032
+Frame: MIDDLE.jpg
+Human Action Label (Correct): hitting baseball
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.1746)
+
+RANKING ANALYSIS:
+  Human Action 'hitting baseball' ranked: #20/50 (score: 0.0099)
+  Background Action 'eating cake' ranked: #9/50 (score: 0.0230)
+
+Top 10 predictions:
+      1. skipping rope (0.1746)
+      2. climbing a rope (0.1704)
+      3. playing saxophone (0.1054)
+      4. eating ice cream (0.0694)
+      5. sweeping floor (0.0584)
+      6. walking the dog (0.0500)
+      7. sword fighting (0.0375)
+      8. drinking (0.0235)
+  🏞️  9. eating cake (0.0230)
+     10. opening bottle (0.0227)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -11
+Score gap (bg_score - human_score): 0.0131

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000317_drinking_to_playing trumpet_xyUeMz9bAsA_000154_000164_bg_hmzR04qjaz8_000008_000018
+Frame: MIDDLE.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.1405)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #34/50 (score: 0.0031)
+  Background Action 'playing trumpet' ranked: #26/50 (score: 0.0045)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.1405)
+      2. surfing water (0.1280)
+      3. sword fighting (0.1215)
+      4. cleaning windows (0.0743)
+      5. brushing hair (0.0675)
+      6. climbing a rope (0.0534)
+      7. opening bottle (0.0522)
+      8. juggling soccer ball (0.0451)
+      9. juggling balls (0.0390)
+     10. sweeping floor (0.0331)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -8
+Score gap (bg_score - human_score): 0.0015

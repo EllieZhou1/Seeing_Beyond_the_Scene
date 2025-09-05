@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001134_walking the dog_to_punching person (boxing)_G4wgZyOgcFc_000004_000014_bg_BqdjAlbg9XE_000021_000031
+Frame: MIDDLE.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.1495)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #43/50 (score: 0.0001)
+  Background Action 'punching person (boxing)' ranked: #20/50 (score: 0.0148)
+
+Top 10 predictions:
+      1. surfing water (0.1495)
+      2. juggling balls (0.1066)
+      3. juggling soccer ball (0.0938)
+      4. dunking basketball (0.0897)
+      5. catching or throwing frisbee (0.0690)
+      6. shooting goal (soccer) (0.0530)
+      7. playing volleyball (0.0481)
+      8. hurdling (0.0439)
+      9. climbing a rope (0.0413)
+     10. sweeping floor (0.0352)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -23
+Score gap (bg_score - human_score): 0.0147

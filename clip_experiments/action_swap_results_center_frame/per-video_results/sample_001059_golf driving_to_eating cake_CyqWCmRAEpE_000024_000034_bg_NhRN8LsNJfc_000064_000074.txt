@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001059_golf driving_to_eating cake_CyqWCmRAEpE_000024_000034_bg_NhRN8LsNJfc_000064_000074
+Frame: MIDDLE.jpg
+Human Action Label (Correct): golf driving
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.1923)
+
+RANKING ANALYSIS:
+  Human Action 'golf driving' ranked: #4/50 (score: 0.1166)
+  Background Action 'eating cake' ranked: #50/50 (score: 0.0000)
+
+Top 10 predictions:
+      1. skiing slalom (0.1923)
+      2. climbing a rope (0.1284)
+      3. cleaning windows (0.1217)
+  👤  4. golf driving (0.1166)
+      5. skiing (not slalom or crosscountry) (0.1021)
+      6. sweeping floor (0.0501)
+      7. climbing ladder (0.0440)
+      8. surfing water (0.0391)
+      9. bowling (0.0287)
+     10. hurdling (0.0284)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 46
+Score gap (bg_score - human_score): -0.1165
+✅ Human action in top 5

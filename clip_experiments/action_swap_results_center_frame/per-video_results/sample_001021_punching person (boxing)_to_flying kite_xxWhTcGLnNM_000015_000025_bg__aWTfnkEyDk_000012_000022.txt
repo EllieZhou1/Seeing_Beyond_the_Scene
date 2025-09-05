@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001021_punching person (boxing)_to_flying kite_xxWhTcGLnNM_000015_000025_bg__aWTfnkEyDk_000012_000022
+Frame: MIDDLE.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.5269)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #1/50 (score: 0.5269)
+  Background Action 'flying kite' ranked: #18/50 (score: 0.0022)
+
+Top 10 predictions:
+  👤  1. punching person (boxing) (0.5269)
+      2. hurdling (0.1582)
+      3. skipping rope (0.0741)
+      4. sword fighting (0.0602)
+      5. dunking basketball (0.0388)
+      6. climbing a rope (0.0359)
+      7. playing basketball (0.0146)
+      8. catching or throwing frisbee (0.0142)
+      9. hitting baseball (0.0128)
+     10. cleaning windows (0.0097)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 17
+Score gap (bg_score - human_score): -0.5247
+✅ Human action in top 5

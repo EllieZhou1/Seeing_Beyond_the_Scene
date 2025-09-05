@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001682_sword fighting_to_catching or throwing baseball_VH7Z2Bolvt4_000002_000012_bg_LRQcX_Dp7mE_000011_000021
+Frame: MIDDLE.jpg
+Human Action Label (Correct): sword fighting
+Background Label (Incorrect): catching or throwing baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: catching or throwing baseball (score: 0.6944)
+
+RANKING ANALYSIS:
+  Human Action 'sword fighting' ranked: #4/50 (score: 0.0038)
+  Background Action 'catching or throwing baseball' ranked: #1/50 (score: 0.6944)
+
+Top 10 predictions:
+  🏞️  1. catching or throwing baseball (0.6944)
+      2. hitting baseball (0.2308)
+      3. catching or throwing frisbee (0.0520)
+  👤  4. sword fighting (0.0038)
+      5. juggling soccer ball (0.0036)
+      6. hurdling (0.0034)
+      7. punching person (boxing) (0.0032)
+      8. shooting goal (soccer) (0.0020)
+      9. flying kite (0.0013)
+     10. juggling balls (0.0010)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -3
+Score gap (bg_score - human_score): 0.6906
+⚠️  Background action in top 5!
+✅ Human action in top 5

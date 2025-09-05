@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001015_smoking_to_reading book_gNKzNFKm-VA_000049_000059_bg_qIoLkehWIXc_000003_000013
+Frame: MIDDLE.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.2170)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #7/50 (score: 0.0326)
+  Background Action 'reading book' ranked: #20/50 (score: 0.0110)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.2170)
+      2. writing (0.1015)
+      3. bowling (0.0886)
+      4. sword fighting (0.0779)
+      5. drinking (0.0597)
+      6. juggling balls (0.0417)
+  👤  7. smoking (0.0326)
+      8. eating cake (0.0320)
+      9. dunking basketball (0.0235)
+     10. eating ice cream (0.0229)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 13
+Score gap (bg_score - human_score): -0.0216

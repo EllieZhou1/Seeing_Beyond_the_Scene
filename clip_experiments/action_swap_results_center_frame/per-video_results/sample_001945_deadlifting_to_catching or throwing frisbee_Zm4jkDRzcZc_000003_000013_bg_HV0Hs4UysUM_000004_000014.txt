@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001945_deadlifting_to_catching or throwing frisbee_Zm4jkDRzcZc_000003_000013_bg_HV0Hs4UysUM_000004_000014
+Frame: MIDDLE.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): catching or throwing frisbee
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.3505)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #18/50 (score: 0.0055)
+  Background Action 'catching or throwing frisbee' ranked: #13/50 (score: 0.0091)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.3505)
+      2. juggling balls (0.2214)
+      3. skipping rope (0.0928)
+      4. hitting baseball (0.0678)
+      5. punching person (boxing) (0.0534)
+      6. dribbling basketball (0.0485)
+      7. climbing a rope (0.0282)
+      8. playing basketball (0.0224)
+      9. playing volleyball (0.0152)
+     10. catching or throwing baseball (0.0128)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -5
+Score gap (bg_score - human_score): 0.0036

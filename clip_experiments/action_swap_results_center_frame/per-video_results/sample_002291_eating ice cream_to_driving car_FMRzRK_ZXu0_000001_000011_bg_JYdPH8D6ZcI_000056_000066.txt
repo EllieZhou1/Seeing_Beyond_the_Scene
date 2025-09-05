@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002291_eating ice cream_to_driving car_FMRzRK_ZXu0_000001_000011_bg_JYdPH8D6ZcI_000056_000066
+Frame: MIDDLE.jpg
+Human Action Label (Correct): eating ice cream
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: tying tie (score: 0.3069)
+
+RANKING ANALYSIS:
+  Human Action 'eating ice cream' ranked: #18/50 (score: 0.0045)
+  Background Action 'driving car' ranked: #5/50 (score: 0.0281)
+
+Top 10 predictions:
+      1. tying tie (0.3069)
+      2. punching person (boxing) (0.2811)
+      3. brushing hair (0.1181)
+      4. climbing ladder (0.0447)
+  🏞️  5. driving car (0.0281)
+      6. golf driving (0.0265)
+      7. opening bottle (0.0264)
+      8. smoking (0.0256)
+      9. playing accordion (0.0189)
+     10. climbing a rope (0.0186)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -13
+Score gap (bg_score - human_score): 0.0236
+⚠️  Background action in top 5!

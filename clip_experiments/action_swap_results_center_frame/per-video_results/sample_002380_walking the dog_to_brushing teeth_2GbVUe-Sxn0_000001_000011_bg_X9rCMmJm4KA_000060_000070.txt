@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002380_walking the dog_to_brushing teeth_2GbVUe-Sxn0_000001_000011_bg_X9rCMmJm4KA_000060_000070
+Frame: MIDDLE.jpg
+Human Action Label (Correct): walking the dog
+Background Label (Incorrect): brushing teeth
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.7693)
+
+RANKING ANALYSIS:
+  Human Action 'walking the dog' ranked: #45/50 (score: 0.0008)
+  Background Action 'brushing teeth' ranked: #3/50 (score: 0.0196)
+
+Top 10 predictions:
+      1. cleaning windows (0.7693)
+      2. sweeping floor (0.0330)
+  🏞️  3. brushing teeth (0.0196)
+      4. sword fighting (0.0165)
+      5. playing piano (0.0159)
+      6. surfing water (0.0141)
+      7. skipping rope (0.0103)
+      8. opening bottle (0.0090)
+      9. climbing a rope (0.0080)
+     10. juggling balls (0.0067)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -42
+Score gap (bg_score - human_score): 0.0188
+⚠️  Background action in top 5!

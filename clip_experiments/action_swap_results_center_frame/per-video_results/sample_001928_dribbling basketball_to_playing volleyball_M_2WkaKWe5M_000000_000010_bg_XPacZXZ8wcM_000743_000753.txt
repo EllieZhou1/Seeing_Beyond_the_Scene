@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001928_dribbling basketball_to_playing volleyball_M_2WkaKWe5M_000000_000010_bg_XPacZXZ8wcM_000743_000753
+Frame: MIDDLE.jpg
+Human Action Label (Correct): dribbling basketball
+Background Label (Incorrect): playing volleyball
+
+CLIP PREDICTIONS:
+  Predicted Label: hurdling (score: 0.2417)
+
+RANKING ANALYSIS:
+  Human Action 'dribbling basketball' ranked: #12/50 (score: 0.0317)
+  Background Action 'playing volleyball' ranked: #13/50 (score: 0.0238)
+
+Top 10 predictions:
+      1. hurdling (0.2417)
+      2. golf driving (0.1036)
+      3. shooting goal (soccer) (0.0789)
+      4. skiing slalom (0.0605)
+      5. driving car (0.0579)
+      6. skiing (not slalom or crosscountry) (0.0521)
+      7. skipping rope (0.0446)
+      8. hitting baseball (0.0432)
+      9. climbing a rope (0.0424)
+     10. playing basketball (0.0339)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.0080

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002164_reading book_to_playing saxophone_dBm6aq52E-I_000025_000035_bg_eXBaVsma73Q_000301_000311
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): playing saxophone
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.1709)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #20/50 (score: 0.0041)
+  Background Action 'playing saxophone' ranked: #11/50 (score: 0.0415)
+
+Top 10 predictions:
+      1. skipping rope (0.1709)
+      2. playing trumpet (0.0996)
+      3. playing violin (0.0879)
+      4. juggling balls (0.0867)
+      5. juggling soccer ball (0.0769)
+      6. opening bottle (0.0627)
+      7. playing accordion (0.0610)
+      8. climbing a rope (0.0522)
+      9. dribbling basketball (0.0510)
+     10. playing piano (0.0428)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -9
+Score gap (bg_score - human_score): 0.0374

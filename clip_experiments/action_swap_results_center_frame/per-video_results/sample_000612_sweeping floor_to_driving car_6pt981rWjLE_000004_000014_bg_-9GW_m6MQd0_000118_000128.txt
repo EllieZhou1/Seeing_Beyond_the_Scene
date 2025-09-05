@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000612_sweeping floor_to_driving car_6pt981rWjLE_000004_000014_bg_-9GW_m6MQd0_000118_000128
+Frame: MIDDLE.jpg
+Human Action Label (Correct): sweeping floor
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.5804)
+
+RANKING ANALYSIS:
+  Human Action 'sweeping floor' ranked: #41/50 (score: 0.0000)
+  Background Action 'driving car' ranked: #1/50 (score: 0.5804)
+
+Top 10 predictions:
+  🏞️  1. driving car (0.5804)
+      2. golf driving (0.3657)
+      3. dribbling basketball (0.0229)
+      4. punching person (boxing) (0.0037)
+      5. shooting goal (soccer) (0.0036)
+      6. juggling soccer ball (0.0031)
+      7. skipping rope (0.0017)
+      8. climbing a rope (0.0017)
+      9. cleaning windows (0.0015)
+     10. climbing ladder (0.0015)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -40
+Score gap (bg_score - human_score): 0.5803
+⚠️  Background action in top 5!

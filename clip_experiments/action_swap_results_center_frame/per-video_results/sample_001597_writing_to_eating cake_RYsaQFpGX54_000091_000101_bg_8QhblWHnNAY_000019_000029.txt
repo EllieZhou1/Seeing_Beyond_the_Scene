@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001597_writing_to_eating cake_RYsaQFpGX54_000091_000101_bg_8QhblWHnNAY_000019_000029
+Frame: MIDDLE.jpg
+Human Action Label (Correct): writing
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: golf driving (score: 0.1475)
+
+RANKING ANALYSIS:
+  Human Action 'writing' ranked: #19/50 (score: 0.0167)
+  Background Action 'eating cake' ranked: #13/50 (score: 0.0212)
+
+Top 10 predictions:
+      1. golf driving (0.1475)
+      2. bowling (0.0905)
+      3. drinking (0.0843)
+      4. punching person (boxing) (0.0617)
+      5. sword fighting (0.0611)
+      6. playing accordion (0.0539)
+      7. playing violin (0.0469)
+      8. playing trumpet (0.0396)
+      9. playing saxophone (0.0329)
+     10. playing piano (0.0324)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -6
+Score gap (bg_score - human_score): 0.0045

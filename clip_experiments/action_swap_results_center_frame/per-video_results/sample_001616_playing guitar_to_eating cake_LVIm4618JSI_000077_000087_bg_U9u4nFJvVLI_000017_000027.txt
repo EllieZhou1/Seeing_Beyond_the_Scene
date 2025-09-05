@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001616_playing guitar_to_eating cake_LVIm4618JSI_000077_000087_bg_U9u4nFJvVLI_000017_000027
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing guitar
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: playing guitar (score: 0.8736)
+
+RANKING ANALYSIS:
+  Human Action 'playing guitar' ranked: #1/50 (score: 0.8736)
+  Background Action 'eating cake' ranked: #9/50 (score: 0.0004)
+
+Top 10 predictions:
+  👤  1. playing guitar (0.8736)
+      2. playing bass guitar (0.0989)
+      3. playing violin (0.0145)
+      4. writing (0.0046)
+      5. playing accordion (0.0029)
+      6. playing saxophone (0.0016)
+      7. opening bottle (0.0013)
+      8. playing trumpet (0.0012)
+  🏞️  9. eating cake (0.0004)
+     10. eating ice cream (0.0003)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 8
+Score gap (bg_score - human_score): -0.8733
+✅ Human action in top 5

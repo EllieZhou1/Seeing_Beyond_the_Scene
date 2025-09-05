@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002330_smoking_to_surfing water_6tB4dFW137k_000058_000068_bg_-6UpPdfVoyg_000047_000057
+Frame: MIDDLE.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): surfing water
+
+CLIP PREDICTIONS:
+  Predicted Label: playing violin (score: 0.1641)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #20/50 (score: 0.0082)
+  Background Action 'surfing water' ranked: #6/50 (score: 0.0636)
+
+Top 10 predictions:
+      1. playing violin (0.1641)
+      2. playing guitar (0.1283)
+      3. playing bass guitar (0.0982)
+      4. sword fighting (0.0930)
+      5. punching person (boxing) (0.0821)
+  🏞️  6. surfing water (0.0636)
+      7. juggling soccer ball (0.0447)
+      8. playing saxophone (0.0435)
+      9. playing trumpet (0.0336)
+     10. skipping rope (0.0299)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -14
+Score gap (bg_score - human_score): 0.0554

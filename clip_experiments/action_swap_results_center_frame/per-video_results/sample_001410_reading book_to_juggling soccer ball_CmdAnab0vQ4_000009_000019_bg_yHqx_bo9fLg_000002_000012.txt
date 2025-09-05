@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001410_reading book_to_juggling soccer ball_CmdAnab0vQ4_000009_000019_bg_yHqx_bo9fLg_000002_000012
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): juggling soccer ball
+
+CLIP PREDICTIONS:
+  Predicted Label: flying kite (score: 0.2342)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #29/50 (score: 0.0042)
+  Background Action 'juggling soccer ball' ranked: #4/50 (score: 0.0948)
+
+Top 10 predictions:
+      1. flying kite (0.2342)
+      2. shooting goal (soccer) (0.1420)
+      3. climbing a rope (0.0997)
+  🏞️  4. juggling soccer ball (0.0948)
+      5. skipping rope (0.0817)
+      6. dribbling basketball (0.0445)
+      7. juggling balls (0.0320)
+      8. hurdling (0.0279)
+      9. playing accordion (0.0268)
+     10. hitting baseball (0.0191)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -25
+Score gap (bg_score - human_score): 0.0907
+⚠️  Background action in top 5!

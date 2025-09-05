@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002298_driving car_to_catching or throwing frisbee_ewrjLjfshtM_000054_000064_bg_jEi37FhW-9s_000008_000018
+Frame: MIDDLE.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): catching or throwing frisbee
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.5228)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #26/50 (score: 0.0004)
+  Background Action 'catching or throwing frisbee' ranked: #9/50 (score: 0.0040)
+
+Top 10 predictions:
+      1. shooting goal (soccer) (0.5228)
+      2. juggling soccer ball (0.3834)
+      3. golf driving (0.0203)
+      4. archery (0.0136)
+      5. flying kite (0.0095)
+      6. hitting baseball (0.0079)
+      7. juggling balls (0.0063)
+      8. playing tennis (0.0057)
+  🏞️  9. catching or throwing frisbee (0.0040)
+     10. skipping rope (0.0036)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -17
+Score gap (bg_score - human_score): 0.0036

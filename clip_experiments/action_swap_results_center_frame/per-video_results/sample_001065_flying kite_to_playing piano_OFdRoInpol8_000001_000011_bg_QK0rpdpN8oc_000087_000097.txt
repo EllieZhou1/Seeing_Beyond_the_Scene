@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001065_flying kite_to_playing piano_OFdRoInpol8_000001_000011_bg_QK0rpdpN8oc_000087_000097
+Frame: MIDDLE.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): playing piano
+
+CLIP PREDICTIONS:
+  Predicted Label: playing piano (score: 0.9108)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #47/50 (score: 0.0000)
+  Background Action 'playing piano' ranked: #1/50 (score: 0.9108)
+
+Top 10 predictions:
+  🏞️  1. playing piano (0.9108)
+      2. playing accordion (0.0797)
+      3. playing saxophone (0.0030)
+      4. playing trumpet (0.0018)
+      5. playing violin (0.0014)
+      6. writing (0.0013)
+      7. playing guitar (0.0010)
+      8. playing bass guitar (0.0003)
+      9. opening bottle (0.0002)
+     10. climbing ladder (0.0001)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -46
+Score gap (bg_score - human_score): 0.9108
+⚠️  Background action in top 5!

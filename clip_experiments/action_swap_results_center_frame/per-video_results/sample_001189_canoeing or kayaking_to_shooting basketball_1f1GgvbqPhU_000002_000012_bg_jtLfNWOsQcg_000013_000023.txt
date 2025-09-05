@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001189_canoeing or kayaking_to_shooting basketball_1f1GgvbqPhU_000002_000012_bg_jtLfNWOsQcg_000013_000023
+Frame: MIDDLE.jpg
+Human Action Label (Correct): canoeing or kayaking
+Background Label (Incorrect): shooting basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: walking the dog (score: 0.2370)
+
+RANKING ANALYSIS:
+  Human Action 'canoeing or kayaking' ranked: #31/50 (score: 0.0009)
+  Background Action 'shooting basketball' ranked: #16/50 (score: 0.0108)
+
+Top 10 predictions:
+      1. walking the dog (0.2370)
+      2. juggling soccer ball (0.1776)
+      3. golf driving (0.1315)
+      4. catching or throwing frisbee (0.0647)
+      5. juggling balls (0.0596)
+      6. shooting goal (soccer) (0.0455)
+      7. flying kite (0.0435)
+      8. skipping rope (0.0373)
+      9. dribbling basketball (0.0273)
+     10. playing basketball (0.0263)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -15
+Score gap (bg_score - human_score): 0.0099

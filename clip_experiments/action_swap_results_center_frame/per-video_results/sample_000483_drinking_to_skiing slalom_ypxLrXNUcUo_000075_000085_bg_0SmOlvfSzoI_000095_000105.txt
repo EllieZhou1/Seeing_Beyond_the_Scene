@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000483_drinking_to_skiing slalom_ypxLrXNUcUo_000075_000085_bg_0SmOlvfSzoI_000095_000105
+Frame: MIDDLE.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): skiing slalom
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.3143)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #19/50 (score: 0.0044)
+  Background Action 'skiing slalom' ranked: #1/50 (score: 0.3143)
+
+Top 10 predictions:
+  🏞️  1. skiing slalom (0.3143)
+      2. skiing (not slalom or crosscountry) (0.1363)
+      3. hitting baseball (0.1024)
+      4. climbing a rope (0.0779)
+      5. catching or throwing baseball (0.0598)
+      6. cleaning windows (0.0402)
+      7. climbing ladder (0.0349)
+      8. clean and jerk (0.0298)
+      9. hurdling (0.0270)
+     10. surfing water (0.0245)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -18
+Score gap (bg_score - human_score): 0.3099
+⚠️  Background action in top 5!

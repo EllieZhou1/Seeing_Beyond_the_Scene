@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002083_playing accordion_to_skiing slalom_bei0Be7pJQA_000032_000042_bg_-Q2OO6q6-iM_000008_000018
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): skiing slalom
+
+CLIP PREDICTIONS:
+  Predicted Label: archery (score: 0.2516)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #30/50 (score: 0.0041)
+  Background Action 'skiing slalom' ranked: #4/50 (score: 0.0656)
+
+Top 10 predictions:
+      1. archery (0.2516)
+      2. shooting basketball (0.0927)
+      3. bowling (0.0866)
+  🏞️  4. skiing slalom (0.0656)
+      5. shooting goal (soccer) (0.0602)
+      6. punching person (boxing) (0.0397)
+      7. climbing ladder (0.0354)
+      8. flying kite (0.0301)
+      9. dunking basketball (0.0299)
+     10. climbing a rope (0.0287)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -26
+Score gap (bg_score - human_score): 0.0615
+⚠️  Background action in top 5!

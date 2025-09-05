@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001160_flying kite_to_climbing a rope_E-B59dSQhkU_000033_000043_bg_O02pJn1BaBk_000006_000016
+Frame: MIDDLE.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): climbing a rope
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.1295)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #2/50 (score: 0.1111)
+  Background Action 'climbing a rope' ranked: #1/50 (score: 0.1295)
+
+Top 10 predictions:
+  🏞️  1. climbing a rope (0.1295)
+  👤  2. flying kite (0.1111)
+      3. driving car (0.0779)
+      4. juggling soccer ball (0.0769)
+      5. climbing ladder (0.0750)
+      6. shooting goal (soccer) (0.0574)
+      7. golf driving (0.0511)
+      8. skiing (not slalom or crosscountry) (0.0507)
+      9. sword fighting (0.0402)
+     10. walking the dog (0.0323)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.0184
+⚠️  Background action in top 5!
+✅ Human action in top 5

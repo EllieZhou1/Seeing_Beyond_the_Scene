@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002022_dribbling basketball_to_surfing water_-QhxoSeCqYE_000065_000075_bg_FEJFDsPci1o_000135_000145
+Frame: MIDDLE.jpg
+Human Action Label (Correct): dribbling basketball
+Background Label (Incorrect): surfing water
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.3775)
+
+RANKING ANALYSIS:
+  Human Action 'dribbling basketball' ranked: #2/50 (score: 0.1562)
+  Background Action 'surfing water' ranked: #4/50 (score: 0.1193)
+
+Top 10 predictions:
+      1. dunking basketball (0.3775)
+  👤  2. dribbling basketball (0.1562)
+      3. playing basketball (0.1220)
+  🏞️  4. surfing water (0.1193)
+      5. shooting basketball (0.1047)
+      6. hurdling (0.0263)
+      7. climbing a rope (0.0201)
+      8. climbing ladder (0.0187)
+      9. juggling soccer ball (0.0074)
+     10. juggling balls (0.0072)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 2
+Score gap (bg_score - human_score): -0.0369
+⚠️  Background action in top 5!
+✅ Human action in top 5

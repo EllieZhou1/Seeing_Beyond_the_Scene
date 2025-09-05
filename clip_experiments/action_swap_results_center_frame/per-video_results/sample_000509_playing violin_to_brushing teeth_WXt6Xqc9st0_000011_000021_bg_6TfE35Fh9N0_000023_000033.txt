@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000509_playing violin_to_brushing teeth_WXt6Xqc9st0_000011_000021_bg_6TfE35Fh9N0_000023_000033
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing violin
+Background Label (Incorrect): brushing teeth
+
+CLIP PREDICTIONS:
+  Predicted Label: tying tie (score: 0.1387)
+
+RANKING ANALYSIS:
+  Human Action 'playing violin' ranked: #10/50 (score: 0.0378)
+  Background Action 'brushing teeth' ranked: #2/50 (score: 0.1267)
+
+Top 10 predictions:
+      1. tying tie (0.1387)
+  🏞️  2. brushing teeth (0.1267)
+      3. eating cake (0.1141)
+      4. juggling soccer ball (0.0519)
+      5. drinking (0.0473)
+      6. juggling balls (0.0471)
+      7. brushing hair (0.0465)
+      8. punching person (boxing) (0.0464)
+      9. eating ice cream (0.0400)
+  👤 10. playing violin (0.0378)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -8
+Score gap (bg_score - human_score): 0.0889
+⚠️  Background action in top 5!

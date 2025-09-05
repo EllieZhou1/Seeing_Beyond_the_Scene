@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001281_eating ice cream_to_cleaning windows_XGh8Q2nklzg_000003_000013_bg_qxSXq3EHCWQ_000054_000064
+Frame: MIDDLE.jpg
+Human Action Label (Correct): eating ice cream
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2474)
+
+RANKING ANALYSIS:
+  Human Action 'eating ice cream' ranked: #12/50 (score: 0.0138)
+  Background Action 'cleaning windows' ranked: #10/50 (score: 0.0171)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2474)
+      2. brushing teeth (0.1853)
+      3. opening bottle (0.1396)
+      4. brushing hair (0.0741)
+      5. drinking (0.0417)
+      6. juggling balls (0.0312)
+      7. shooting goal (soccer) (0.0307)
+      8. eating cake (0.0266)
+      9. playing trumpet (0.0175)
+  🏞️ 10. cleaning windows (0.0171)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.0033

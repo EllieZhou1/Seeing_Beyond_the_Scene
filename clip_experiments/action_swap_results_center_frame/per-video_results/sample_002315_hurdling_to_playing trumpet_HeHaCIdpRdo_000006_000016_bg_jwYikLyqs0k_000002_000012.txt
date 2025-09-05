@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002315_hurdling_to_playing trumpet_HeHaCIdpRdo_000006_000016_bg_jwYikLyqs0k_000002_000012
+Frame: MIDDLE.jpg
+Human Action Label (Correct): hurdling
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.3976)
+
+RANKING ANALYSIS:
+  Human Action 'hurdling' ranked: #13/50 (score: 0.0148)
+  Background Action 'playing trumpet' ranked: #19/50 (score: 0.0095)
+
+Top 10 predictions:
+      1. surfing water (0.3976)
+      2. dunking basketball (0.0667)
+      3. flying kite (0.0649)
+      4. opening bottle (0.0583)
+      5. drinking (0.0426)
+      6. cleaning windows (0.0391)
+      7. climbing a rope (0.0377)
+      8. skiing (not slalom or crosscountry) (0.0295)
+      9. skiing slalom (0.0259)
+     10. sweeping floor (0.0219)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 6
+Score gap (bg_score - human_score): -0.0052

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001050_deadlifting_to_eating cake_lb2nZOKWChc_000001_000011_bg_ktK9w4n_zS0_000018_000028
+Frame: MIDDLE.jpg
+Human Action Label (Correct): deadlifting
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: eating cake (score: 0.4131)
+
+RANKING ANALYSIS:
+  Human Action 'deadlifting' ranked: #10/50 (score: 0.0226)
+  Background Action 'eating cake' ranked: #1/50 (score: 0.4131)
+
+Top 10 predictions:
+  🏞️  1. eating cake (0.4131)
+      2. climbing a rope (0.0930)
+      3. eating ice cream (0.0536)
+      4. cleaning windows (0.0531)
+      5. opening bottle (0.0525)
+      6. dunking basketball (0.0377)
+      7. punching person (boxing) (0.0342)
+      8. archery (0.0314)
+      9. climbing ladder (0.0256)
+  👤 10. deadlifting (0.0226)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -9
+Score gap (bg_score - human_score): 0.3905
+⚠️  Background action in top 5!

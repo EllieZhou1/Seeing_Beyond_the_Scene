@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000522_dunking basketball_to_tying tie_IbhU85-DEic_000007_000017_bg_ecNLf37mews_000012_000022
+Frame: MIDDLE.jpg
+Human Action Label (Correct): dunking basketball
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.3200)
+
+RANKING ANALYSIS:
+  Human Action 'dunking basketball' ranked: #12/50 (score: 0.0168)
+  Background Action 'tying tie' ranked: #35/50 (score: 0.0051)
+
+Top 10 predictions:
+      1. climbing a rope (0.3200)
+      2. clean and jerk (0.1045)
+      3. cleaning windows (0.0646)
+      4. playing violin (0.0574)
+      5. playing saxophone (0.0445)
+      6. playing trumpet (0.0299)
+      7. climbing ladder (0.0268)
+      8. skipping rope (0.0266)
+      9. punching person (boxing) (0.0229)
+     10. opening bottle (0.0223)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 23
+Score gap (bg_score - human_score): -0.0117

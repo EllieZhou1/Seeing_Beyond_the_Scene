@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001241_playing saxophone_to_smoking_C9jFsikga4Y_000148_000158_bg_6tB4dFW137k_000058_000068
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing saxophone
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.5848)
+
+RANKING ANALYSIS:
+  Human Action 'playing saxophone' ranked: #19/50 (score: 0.0025)
+  Background Action 'smoking' ranked: #11/50 (score: 0.0077)
+
+Top 10 predictions:
+      1. opening bottle (0.5848)
+      2. tying tie (0.1331)
+      3. brushing hair (0.0661)
+      4. brushing teeth (0.0527)
+      5. drinking (0.0266)
+      6. juggling balls (0.0229)
+      7. playing violin (0.0188)
+      8. juggling soccer ball (0.0182)
+      9. playing accordion (0.0093)
+     10. cleaning windows (0.0084)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -8
+Score gap (bg_score - human_score): 0.0052

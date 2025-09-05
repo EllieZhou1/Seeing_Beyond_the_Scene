@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001270_dunking basketball_to_eating ice cream_A2I07wKnRA0_000011_000021_bg__4i56CbdQcE_000025_000035
+Frame: MIDDLE.jpg
+Human Action Label (Correct): dunking basketball
+Background Label (Incorrect): eating ice cream
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.3347)
+
+RANKING ANALYSIS:
+  Human Action 'dunking basketball' ranked: #1/50 (score: 0.3347)
+  Background Action 'eating ice cream' ranked: #36/50 (score: 0.0001)
+
+Top 10 predictions:
+  👤  1. dunking basketball (0.3347)
+      2. surfing water (0.1374)
+      3. dribbling basketball (0.1051)
+      4. hurdling (0.0749)
+      5. climbing a rope (0.0706)
+      6. playing basketball (0.0487)
+      7. shooting basketball (0.0484)
+      8. shooting goal (soccer) (0.0467)
+      9. skiing slalom (0.0246)
+     10. juggling soccer ball (0.0149)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 35
+Score gap (bg_score - human_score): -0.3346
+✅ Human action in top 5

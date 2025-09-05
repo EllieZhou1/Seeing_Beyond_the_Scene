@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000237_writing_to_playing tennis_OrWjyz2bFJQ_000064_000074_bg_BiPEqlFe9uA_000024_000034
+Frame: MIDDLE.jpg
+Human Action Label (Correct): writing
+Background Label (Incorrect): playing tennis
+
+CLIP PREDICTIONS:
+  Predicted Label: sweeping floor (score: 0.2878)
+
+RANKING ANALYSIS:
+  Human Action 'writing' ranked: #28/50 (score: 0.0031)
+  Background Action 'playing tennis' ranked: #14/50 (score: 0.0148)
+
+Top 10 predictions:
+      1. sweeping floor (0.2878)
+      2. dribbling basketball (0.2151)
+      3. cleaning windows (0.0960)
+      4. surfing water (0.0433)
+      5. punching person (boxing) (0.0408)
+      6. juggling soccer ball (0.0381)
+      7. shooting goal (soccer) (0.0252)
+      8. playing basketball (0.0232)
+      9. climbing a rope (0.0210)
+     10. shooting basketball (0.0199)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -14
+Score gap (bg_score - human_score): 0.0118

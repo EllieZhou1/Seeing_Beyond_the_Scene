@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001872_playing piano_to_eating cake_4mQP7S4EGwg_000020_000030_bg_7U9X4LXCR60_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing piano
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: surfing water (score: 0.5346)
+
+RANKING ANALYSIS:
+  Human Action 'playing piano' ranked: #6/50 (score: 0.0200)
+  Background Action 'eating cake' ranked: #29/50 (score: 0.0014)
+
+Top 10 predictions:
+      1. surfing water (0.5346)
+      2. cleaning windows (0.2357)
+      3. dunking basketball (0.0299)
+      4. brushing teeth (0.0240)
+      5. climbing ladder (0.0208)
+  👤  6. playing piano (0.0200)
+      7. opening bottle (0.0188)
+      8. playing saxophone (0.0127)
+      9. playing accordion (0.0119)
+     10. eating ice cream (0.0092)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 23
+Score gap (bg_score - human_score): -0.0186

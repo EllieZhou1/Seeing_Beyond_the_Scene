@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001246_driving car_to_catching or throwing baseball_-5EkeE4syvA_000006_000016_bg_s0WqJNghk88_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): catching or throwing baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: hitting baseball (score: 0.7437)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #21/50 (score: 0.0002)
+  Background Action 'catching or throwing baseball' ranked: #2/50 (score: 0.1713)
+
+Top 10 predictions:
+      1. hitting baseball (0.7437)
+  🏞️  2. catching or throwing baseball (0.1713)
+      3. shooting goal (soccer) (0.0254)
+      4. hurdling (0.0181)
+      5. catching or throwing frisbee (0.0129)
+      6. juggling soccer ball (0.0058)
+      7. playing tennis (0.0040)
+      8. playing volleyball (0.0033)
+      9. shooting basketball (0.0023)
+     10. flying kite (0.0018)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -19
+Score gap (bg_score - human_score): 0.1711
+⚠️  Background action in top 5!

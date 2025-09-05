@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002395_opening bottle_to_archery_2PZhuNhBsW4_000030_000040_bg_S0Xwh6F6tz0_000031_000041
+Frame: MIDDLE.jpg
+Human Action Label (Correct): opening bottle
+Background Label (Incorrect): archery
+
+CLIP PREDICTIONS:
+  Predicted Label: playing trumpet (score: 0.1863)
+
+RANKING ANALYSIS:
+  Human Action 'opening bottle' ranked: #3/50 (score: 0.1216)
+  Background Action 'archery' ranked: #10/50 (score: 0.0321)
+
+Top 10 predictions:
+      1. playing trumpet (0.1863)
+      2. sword fighting (0.1460)
+  👤  3. opening bottle (0.1216)
+      4. playing saxophone (0.1191)
+      5. juggling balls (0.0986)
+      6. juggling soccer ball (0.0632)
+      7. golf driving (0.0500)
+      8. climbing a rope (0.0330)
+      9. skipping rope (0.0323)
+  🏞️ 10. archery (0.0321)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 7
+Score gap (bg_score - human_score): -0.0895
+✅ Human action in top 5

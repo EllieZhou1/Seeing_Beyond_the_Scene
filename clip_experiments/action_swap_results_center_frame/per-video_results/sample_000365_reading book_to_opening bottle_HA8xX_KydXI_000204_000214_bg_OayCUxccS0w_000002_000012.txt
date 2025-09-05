@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000365_reading book_to_opening bottle_HA8xX_KydXI_000204_000214_bg_OayCUxccS0w_000002_000012
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.3489)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #10/50 (score: 0.0273)
+  Background Action 'opening bottle' ranked: #4/50 (score: 0.0620)
+
+Top 10 predictions:
+      1. playing accordion (0.3489)
+      2. smoking (0.0749)
+      3. reading newspaper (0.0739)
+  🏞️  4. opening bottle (0.0620)
+      5. eating ice cream (0.0460)
+      6. eating cake (0.0378)
+      7. drinking (0.0370)
+      8. writing (0.0305)
+      9. cleaning windows (0.0284)
+  👤 10. reading book (0.0273)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -6
+Score gap (bg_score - human_score): 0.0347
+⚠️  Background action in top 5!

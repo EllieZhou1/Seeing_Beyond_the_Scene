@@ -13,7 +13,7 @@ processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 print("Loaded CLIP model")
 
 def save_detailed_results_to_txt(result, action_swap_path, label_A, label_B, 
-                                output_dir="/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/clip_experiments/action_swap_results/per-video_results"):
+                                output_dir="/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/clip_experiments/action_swap_results_center_frame/per-video_results"):
     """
     Save detailed results for one action-swap image to a txt file
     
@@ -37,7 +37,7 @@ def save_detailed_results_to_txt(result, action_swap_path, label_A, label_B,
         f.write(f"Action-Swap CLIP Bias Analysis Results\n")
         f.write(f"=" * 60 + "\n")
         f.write(f"Video Directory: {action_swap_path}\n")
-        f.write(f"Frame: 000050.jpg\n")
+        f.write(f"Frame: MIDDLE.jpg\n")
         f.write(f"Human Action Label (Correct): {label_A}\n") 
         f.write(f"Background Label (Incorrect): {label_B}\n\n")
         
@@ -74,7 +74,7 @@ def save_detailed_results_to_txt(result, action_swap_path, label_A, label_B,
         if result['human_top5']:
             f.write("✅ Human action in top 5\n")
 
-def test_action_swap_image(action_swap_dir, all_labels, label_A, label_B, frame_num=50):
+def test_action_swap_image(action_swap_dir, all_labels, label_A, label_B, frame_num):
     """
     Test bias for one action-swap video (using specific frame)
     
@@ -91,6 +91,7 @@ def test_action_swap_image(action_swap_dir, all_labels, label_A, label_B, frame_
     
     try:
         # Get path to specific frame
+        # print("frame num", frame_num)
         frame_path = os.path.join(action_swap_dir, f"{frame_num:06d}.jpg")
         
         # Check if file exists
@@ -222,12 +223,16 @@ def analyze_action_swap_dataset(csv_path, output_csv, sample_size=None):
     # Process each action-swap image
     for idx, row in tqdm(valid_df.iterrows(), total=len(valid_df), desc="Analyzing action-swap images"):
         
+        jpg_count = len([f for f in os.listdir(row['action_swap_path']) if f.lower().endswith('.jpg')])
+
+
+    
         result = test_action_swap_image(
             action_swap_dir=row['action_swap_path'],
             all_labels=all_labels,
             label_A=row['label_A'],  # Human action
             label_B=row['label_B'],  # Background action
-            frame_num=50
+            frame_num=int(jpg_count/2)
         )
         
         if result is None:
@@ -245,7 +250,7 @@ def analyze_action_swap_dataset(csv_path, output_csv, sample_size=None):
         # Create row for CSV
         results_rows.append({
             'action_swap_path': row['action_swap_path'],
-            'frame_num': 50,
+            'frame_num': jpg_count/2,
             'label_A': row['label_A'],  # Human action
             'label_B': row['label_B'],  # Background action
             'predicted_label': result['predicted_label'],
@@ -281,8 +286,8 @@ def analyze_action_swap_bias_results(results_csv):
     
     # Overall statistics
     print("OVERALL PERFORMANCE METRICS:")
-    print(f"  Human label top-1: {df['human_top1'].mean():.1%}")
-    print(f"  Human label top-5: {df['human_top5'].mean():.1%}")
+    print(f"  Human label top-1: {df['human_top1'].mean():.3%}")
+    print(f"  Human label top-5: {df['human_top5'].mean():.3%}")
     print(f"  Background label top-1: {df['background_top1'].mean():.1%}")
     print(f"  Background label top-5: {df['background_top5'].mean():.1%}")
     print(f"  How Often Background wins (ranks higher): {df['background_wins'].mean():.1%}")
@@ -338,10 +343,10 @@ def analyze_action_swap_bias_results(results_csv):
 if __name__ == "__main__":
     # Paths
     csv_path = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/new_action_swap_all.csv"
-    output_csv = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/clip_experiments/action_swap_results/action_swap_results.csv"
+    output_csv = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/clip_experiments/action_swap_results_center_frame/action_swap_results.csv"
     
     # Create output directory if it doesn't exist
-    output_dir = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/clip_experiments/action_swap_results"
+    output_dir = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/clip_experiments/action_swap_results_center_frame"
     os.makedirs(output_dir, exist_ok=True)
     os.makedirs(os.path.join(output_dir, "per-video_results"), exist_ok=True)
     

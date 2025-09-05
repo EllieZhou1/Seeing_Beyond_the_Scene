@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002367_playing accordion_to_punching person (boxing)_YgXLcOtQcSg_000028_000038_bg_UL0MlmAzn6Y_000376_000386
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing accordion
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.9864)
+
+RANKING ANALYSIS:
+  Human Action 'playing accordion' ranked: #10/50 (score: 0.0005)
+  Background Action 'punching person (boxing)' ranked: #1/50 (score: 0.9864)
+
+Top 10 predictions:
+  🏞️  1. punching person (boxing) (0.9864)
+      2. juggling balls (0.0020)
+      3. climbing a rope (0.0014)
+      4. sword fighting (0.0013)
+      5. opening bottle (0.0011)
+      6. climbing ladder (0.0011)
+      7. skipping rope (0.0007)
+      8. juggling soccer ball (0.0007)
+      9. cleaning windows (0.0005)
+  👤 10. playing accordion (0.0005)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -9
+Score gap (bg_score - human_score): 0.9858
+⚠️  Background action in top 5!

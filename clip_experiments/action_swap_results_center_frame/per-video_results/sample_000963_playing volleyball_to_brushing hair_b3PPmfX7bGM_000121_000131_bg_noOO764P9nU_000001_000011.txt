@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000963_playing volleyball_to_brushing hair_b3PPmfX7bGM_000121_000131_bg_noOO764P9nU_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing volleyball
+Background Label (Incorrect): brushing hair
+
+CLIP PREDICTIONS:
+  Predicted Label: playing volleyball (score: 0.4329)
+
+RANKING ANALYSIS:
+  Human Action 'playing volleyball' ranked: #1/50 (score: 0.4329)
+  Background Action 'brushing hair' ranked: #50/50 (score: 0.0000)
+
+Top 10 predictions:
+  👤  1. playing volleyball (0.4329)
+      2. dribbling basketball (0.1487)
+      3. clean and jerk (0.0562)
+      4. skipping rope (0.0526)
+      5. playing basketball (0.0524)
+      6. shooting basketball (0.0452)
+      7. dunking basketball (0.0422)
+      8. shooting goal (soccer) (0.0417)
+      9. hurdling (0.0231)
+     10. juggling soccer ball (0.0207)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 49
+Score gap (bg_score - human_score): -0.4329
+✅ Human action in top 5

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001599_punching person (boxing)_to_walking the dog_59-9QPuRgVs_000036_000046_bg_KbXOZPf5laY_000026_000036
+Frame: MIDDLE.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.5643)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #1/50 (score: 0.5643)
+  Background Action 'walking the dog' ranked: #16/50 (score: 0.0080)
+
+Top 10 predictions:
+  👤  1. punching person (boxing) (0.5643)
+      2. catching or throwing frisbee (0.0691)
+      3. skipping rope (0.0503)
+      4. playing basketball (0.0477)
+      5. sword fighting (0.0458)
+      6. hitting baseball (0.0449)
+      7. juggling soccer ball (0.0224)
+      8. shooting goal (soccer) (0.0148)
+      9. shooting basketball (0.0133)
+     10. opening bottle (0.0130)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 15
+Score gap (bg_score - human_score): -0.5563
+✅ Human action in top 5

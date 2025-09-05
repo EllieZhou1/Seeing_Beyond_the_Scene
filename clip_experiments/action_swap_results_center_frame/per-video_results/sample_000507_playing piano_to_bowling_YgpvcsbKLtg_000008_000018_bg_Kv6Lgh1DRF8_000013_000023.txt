@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000507_playing piano_to_bowling_YgpvcsbKLtg_000008_000018_bg_Kv6Lgh1DRF8_000013_000023
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing piano
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.1733)
+
+RANKING ANALYSIS:
+  Human Action 'playing piano' ranked: #39/50 (score: 0.0009)
+  Background Action 'bowling' ranked: #5/50 (score: 0.0610)
+
+Top 10 predictions:
+      1. skipping rope (0.1733)
+      2. climbing ladder (0.1526)
+      3. skiing slalom (0.1473)
+      4. skiing (not slalom or crosscountry) (0.1294)
+  🏞️  5. bowling (0.0610)
+      6. surfing water (0.0464)
+      7. dribbling basketball (0.0419)
+      8. dunking basketball (0.0362)
+      9. climbing a rope (0.0336)
+     10. hurdling (0.0325)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -34
+Score gap (bg_score - human_score): 0.0602
+⚠️  Background action in top 5!

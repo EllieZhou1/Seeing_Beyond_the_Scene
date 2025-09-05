@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000279_playing piano_to_flying kite_4P-itbH9hRo_000057_000067_bg_XIkSWOfhvwE_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing piano
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.1694)
+
+RANKING ANALYSIS:
+  Human Action 'playing piano' ranked: #34/50 (score: 0.0034)
+  Background Action 'flying kite' ranked: #20/50 (score: 0.0121)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.1694)
+      2. shooting goal (soccer) (0.1108)
+      3. juggling balls (0.0784)
+      4. skipping rope (0.0722)
+      5. punching person (boxing) (0.0679)
+      6. dribbling basketball (0.0574)
+      7. golf driving (0.0528)
+      8. catching or throwing frisbee (0.0421)
+      9. playing basketball (0.0335)
+     10. playing tennis (0.0286)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -14
+Score gap (bg_score - human_score): 0.0088

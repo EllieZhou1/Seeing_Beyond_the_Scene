@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000014_bowling_to_eating ice cream_Epp4z1hle48_000033_000043_bg_dxV0ZeVJYAU_000005_000015
+Frame: MIDDLE.jpg
+Human Action Label (Correct): bowling
+Background Label (Incorrect): eating ice cream
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.5637)
+
+RANKING ANALYSIS:
+  Human Action 'bowling' ranked: #21/50 (score: 0.0026)
+  Background Action 'eating ice cream' ranked: #40/50 (score: 0.0004)
+
+Top 10 predictions:
+      1. driving car (0.5637)
+      2. golf driving (0.2417)
+      3. punching person (boxing) (0.0279)
+      4. opening bottle (0.0229)
+      5. hitting baseball (0.0150)
+      6. playing saxophone (0.0136)
+      7. deadlifting (0.0136)
+      8. dribbling basketball (0.0120)
+      9. cleaning windows (0.0120)
+     10. juggling soccer ball (0.0079)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 19
+Score gap (bg_score - human_score): -0.0022

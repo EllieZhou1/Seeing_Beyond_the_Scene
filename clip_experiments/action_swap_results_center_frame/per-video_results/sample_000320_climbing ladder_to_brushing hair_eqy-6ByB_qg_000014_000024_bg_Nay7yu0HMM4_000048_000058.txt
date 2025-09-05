@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000320_climbing ladder_to_brushing hair_eqy-6ByB_qg_000014_000024_bg_Nay7yu0HMM4_000048_000058
+Frame: MIDDLE.jpg
+Human Action Label (Correct): climbing ladder
+Background Label (Incorrect): brushing hair
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing teeth (score: 0.1650)
+
+RANKING ANALYSIS:
+  Human Action 'climbing ladder' ranked: #19/50 (score: 0.0076)
+  Background Action 'brushing hair' ranked: #11/50 (score: 0.0243)
+
+Top 10 predictions:
+      1. brushing teeth (0.1650)
+      2. smoking (0.1562)
+      3. opening bottle (0.1110)
+      4. playing violin (0.1103)
+      5. cleaning windows (0.0723)
+      6. juggling soccer ball (0.0636)
+      7. playing accordion (0.0482)
+      8. reading newspaper (0.0345)
+      9. playing saxophone (0.0302)
+     10. playing piano (0.0269)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -8
+Score gap (bg_score - human_score): 0.0167

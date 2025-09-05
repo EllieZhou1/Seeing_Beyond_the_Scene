@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000463_cleaning windows_to_brushing teeth_z6Xahf4nv7U_000129_000139_bg_aJm8LDLH0EE_000048_000058
+Frame: MIDDLE.jpg
+Human Action Label (Correct): cleaning windows
+Background Label (Incorrect): brushing teeth
+
+CLIP PREDICTIONS:
+  Predicted Label: bowling (score: 0.4639)
+
+RANKING ANALYSIS:
+  Human Action 'cleaning windows' ranked: #29/50 (score: 0.0028)
+  Background Action 'brushing teeth' ranked: #33/50 (score: 0.0019)
+
+Top 10 predictions:
+      1. bowling (0.4639)
+      2. archery (0.0803)
+      3. juggling balls (0.0563)
+      4. opening bottle (0.0507)
+      5. sword fighting (0.0449)
+      6. climbing a rope (0.0334)
+      7. punching person (boxing) (0.0293)
+      8. sweeping floor (0.0288)
+      9. playing basketball (0.0243)
+     10. hitting baseball (0.0220)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 4
+Score gap (bg_score - human_score): -0.0009

@@ -238,7 +238,7 @@ def run_model(model_name):
     generation_config = dict(max_new_tokens=1024, do_sample=False)
     print("Finished creating generation config")
 
-    segments = [1, 2, 4, 8, 16]
+    segments = [16]
 
     for num_seg in segments:
         print(f"Running model {model_name} with {num_seg} segments")

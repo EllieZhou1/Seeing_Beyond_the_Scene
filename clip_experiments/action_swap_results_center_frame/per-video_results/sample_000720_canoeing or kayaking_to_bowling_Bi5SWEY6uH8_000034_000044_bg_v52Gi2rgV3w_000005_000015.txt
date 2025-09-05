@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000720_canoeing or kayaking_to_bowling_Bi5SWEY6uH8_000034_000044_bg_v52Gi2rgV3w_000005_000015
+Frame: MIDDLE.jpg
+Human Action Label (Correct): canoeing or kayaking
+Background Label (Incorrect): bowling
+
+CLIP PREDICTIONS:
+  Predicted Label: bowling (score: 0.8771)
+
+RANKING ANALYSIS:
+  Human Action 'canoeing or kayaking' ranked: #29/50 (score: 0.0002)
+  Background Action 'bowling' ranked: #1/50 (score: 0.8771)
+
+Top 10 predictions:
+  🏞️  1. bowling (0.8771)
+      2. skiing slalom (0.0515)
+      3. hurdling (0.0291)
+      4. skiing (not slalom or crosscountry) (0.0112)
+      5. driving car (0.0040)
+      6. playing volleyball (0.0028)
+      7. shooting basketball (0.0025)
+      8. clean and jerk (0.0024)
+      9. hitting baseball (0.0023)
+     10. surfing water (0.0020)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -28
+Score gap (bg_score - human_score): 0.8770
+⚠️  Background action in top 5!

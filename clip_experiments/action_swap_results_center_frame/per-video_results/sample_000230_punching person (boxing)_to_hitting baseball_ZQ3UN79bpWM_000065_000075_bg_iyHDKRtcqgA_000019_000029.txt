@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000230_punching person (boxing)_to_hitting baseball_ZQ3UN79bpWM_000065_000075_bg_iyHDKRtcqgA_000019_000029
+Frame: MIDDLE.jpg
+Human Action Label (Correct): punching person (boxing)
+Background Label (Incorrect): hitting baseball
+
+CLIP PREDICTIONS:
+  Predicted Label: hitting baseball (score: 0.5598)
+
+RANKING ANALYSIS:
+  Human Action 'punching person (boxing)' ranked: #19/50 (score: 0.0003)
+  Background Action 'hitting baseball' ranked: #1/50 (score: 0.5598)
+
+Top 10 predictions:
+  🏞️  1. hitting baseball (0.5598)
+      2. catching or throwing baseball (0.2031)
+      3. juggling soccer ball (0.0823)
+      4. catching or throwing frisbee (0.0403)
+      5. juggling balls (0.0393)
+      6. playing tennis (0.0226)
+      7. climbing a rope (0.0137)
+      8. shooting goal (soccer) (0.0104)
+      9. skipping rope (0.0092)
+     10. dribbling basketball (0.0074)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -18
+Score gap (bg_score - human_score): 0.5595
+⚠️  Background action in top 5!

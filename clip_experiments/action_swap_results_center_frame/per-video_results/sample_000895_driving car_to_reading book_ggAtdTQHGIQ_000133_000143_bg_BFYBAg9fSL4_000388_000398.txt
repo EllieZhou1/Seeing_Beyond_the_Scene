@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000895_driving car_to_reading book_ggAtdTQHGIQ_000133_000143_bg_BFYBAg9fSL4_000388_000398
+Frame: MIDDLE.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: reading book (score: 0.8173)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #8/50 (score: 0.0036)
+  Background Action 'reading book' ranked: #1/50 (score: 0.8173)
+
+Top 10 predictions:
+  🏞️  1. reading book (0.8173)
+      2. reading newspaper (0.0913)
+      3. flying kite (0.0315)
+      4. climbing ladder (0.0054)
+      5. juggling balls (0.0051)
+      6. sweeping floor (0.0046)
+      7. playing piano (0.0042)
+  👤  8. driving car (0.0036)
+      9. dribbling basketball (0.0028)
+     10. sword fighting (0.0027)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -7
+Score gap (bg_score - human_score): 0.8137
+⚠️  Background action in top 5!

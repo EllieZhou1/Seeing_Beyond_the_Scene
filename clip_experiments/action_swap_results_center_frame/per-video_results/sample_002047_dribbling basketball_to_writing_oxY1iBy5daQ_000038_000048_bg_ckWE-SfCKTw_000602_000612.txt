@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002047_dribbling basketball_to_writing_oxY1iBy5daQ_000038_000048_bg_ckWE-SfCKTw_000602_000612
+Frame: MIDDLE.jpg
+Human Action Label (Correct): dribbling basketball
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: writing (score: 0.5260)
+
+RANKING ANALYSIS:
+  Human Action 'dribbling basketball' ranked: #21/50 (score: 0.0060)
+  Background Action 'writing' ranked: #1/50 (score: 0.5260)
+
+Top 10 predictions:
+  🏞️  1. writing (0.5260)
+      2. tying tie (0.0465)
+      3. reading newspaper (0.0357)
+      4. opening bottle (0.0331)
+      5. sword fighting (0.0329)
+      6. skiing slalom (0.0313)
+      7. punching person (boxing) (0.0310)
+      8. reading book (0.0306)
+      9. playing piano (0.0304)
+     10. flying kite (0.0280)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -20
+Score gap (bg_score - human_score): 0.5200
+⚠️  Background action in top 5!

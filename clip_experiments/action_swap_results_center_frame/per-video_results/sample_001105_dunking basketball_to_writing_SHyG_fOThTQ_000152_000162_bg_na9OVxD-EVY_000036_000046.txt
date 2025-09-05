@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001105_dunking basketball_to_writing_SHyG_fOThTQ_000152_000162_bg_na9OVxD-EVY_000036_000046
+Frame: MIDDLE.jpg
+Human Action Label (Correct): dunking basketball
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: hitting baseball (score: 0.5631)
+
+RANKING ANALYSIS:
+  Human Action 'dunking basketball' ranked: #7/50 (score: 0.0308)
+  Background Action 'writing' ranked: #34/50 (score: 0.0002)
+
+Top 10 predictions:
+      1. hitting baseball (0.5631)
+      2. catching or throwing baseball (0.0764)
+      3. hurdling (0.0622)
+      4. juggling soccer ball (0.0442)
+      5. skiing slalom (0.0436)
+      6. dribbling basketball (0.0346)
+  👤  7. dunking basketball (0.0308)
+      8. skipping rope (0.0226)
+      9. playing basketball (0.0188)
+     10. shooting goal (soccer) (0.0158)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 27
+Score gap (bg_score - human_score): -0.0305

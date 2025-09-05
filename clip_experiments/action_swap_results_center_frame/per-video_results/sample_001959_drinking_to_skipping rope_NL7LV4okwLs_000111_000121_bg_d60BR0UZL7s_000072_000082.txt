@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001959_drinking_to_skipping rope_NL7LV4okwLs_000111_000121_bg_d60BR0UZL7s_000072_000082
+Frame: MIDDLE.jpg
+Human Action Label (Correct): drinking
+Background Label (Incorrect): skipping rope
+
+CLIP PREDICTIONS:
+  Predicted Label: opening bottle (score: 0.7355)
+
+RANKING ANALYSIS:
+  Human Action 'drinking' ranked: #2/50 (score: 0.1673)
+  Background Action 'skipping rope' ranked: #33/50 (score: 0.0003)
+
+Top 10 predictions:
+      1. opening bottle (0.7355)
+  👤  2. drinking (0.1673)
+      3. dribbling basketball (0.0319)
+      4. eating ice cream (0.0071)
+      5. dunking basketball (0.0065)
+      6. shooting basketball (0.0059)
+      7. playing basketball (0.0058)
+      8. eating cake (0.0045)
+      9. brushing hair (0.0038)
+     10. brushing teeth (0.0029)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 31
+Score gap (bg_score - human_score): -0.1670
+✅ Human action in top 5

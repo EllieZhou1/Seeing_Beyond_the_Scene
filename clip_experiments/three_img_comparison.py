@@ -321,7 +321,7 @@ if __name__ == "__main__":
     # Analyze dataset - start with a small sample for testing
     csv_path = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/hat2_dataset.csv"  # Your CSV file path
     
-    results_csv_path = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/clip_experiments/three_img_comparison_results/three_img_comparison_results.csv"
+    results_csv_path = "/n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/clip_experiments/three_img_comparison_results/three_img_comparison_results_2_and_6.csv"
     results_df = analyze_hat2_dataset(
         csv_path=csv_path,
         output_csv=results_csv_path, 

@@ -1,0 +1,512 @@
+
+
+=== Report for Epoch 300 mini-kinetics 50 final===
+                                     precision    recall  f1-score   support
+
+                     playing guitar       0.60      0.64      0.62        50
+                            bowling       0.65      0.69      0.67        49
+                  playing saxophone       0.64      0.60      0.62        50
+                     brushing teeth       0.37      0.48      0.42        50
+                 playing basketball       0.23      0.24      0.24        50
+                          tying tie       0.74      0.70      0.72        50
+                      skiing slalom       0.74      0.64      0.69        50
+                      brushing hair       0.39      0.52      0.45        50
+           punching person (boxing)       0.75      0.43      0.55        49
+                  playing accordion       0.64      0.78      0.70        49
+                            archery       0.29      0.40      0.33        50
+       catching or throwing frisbee       0.31      0.34      0.32        50
+                           drinking       0.00      0.00      0.00        49
+                       reading book       0.28      0.48      0.35        50
+                   eating ice cream       0.29      0.24      0.26        50
+                        flying kite       0.61      0.74      0.67        50
+                     sweeping floor       0.51      0.52      0.51        50
+                    walking the dog       0.48      0.58      0.52        50
+                      skipping rope       0.86      0.39      0.54        49
+                     clean and jerk       0.73      0.73      0.73        49
+                        eating cake       0.52      0.22      0.31        50
+      catching or throwing baseball       0.07      0.04      0.05        50
+skiing (not slalom or crosscountry)       0.60      0.84      0.70        49
+               juggling soccer ball       0.70      0.32      0.44        50
+                        deadlifting       0.78      0.63      0.70        49
+                        driving car       0.69      0.65      0.67        48
+                   cleaning windows       0.35      0.58      0.44        50
+                shooting basketball       0.19      0.10      0.13        50
+               canoeing or kayaking       0.65      0.80      0.71        50
+                      surfing water       0.74      0.71      0.72        48
+                 playing volleyball       0.55      0.57      0.56        49
+                     opening bottle       0.39      0.26      0.31        50
+                      playing piano       0.66      0.70      0.68        50
+                            writing       0.69      0.66      0.67        50
+               dribbling basketball       0.50      0.46      0.48        50
+                  reading newspaper       0.36      0.32      0.34        50
+                     playing violin       0.62      0.62      0.62        50
+                     juggling balls       0.48      0.54      0.51        50
+                    playing trumpet       0.50      0.52      0.51        50
+                            smoking       0.25      0.49      0.33        49
+             shooting goal (soccer)       0.67      0.32      0.43        50
+                   hitting baseball       0.56      0.68      0.61        50
+                     sword fighting       0.35      0.12      0.18        50
+                    climbing ladder       0.43      0.36      0.39        50
+                playing bass guitar       0.85      0.82      0.84        50
+                     playing tennis       0.61      0.86      0.71        50
+                    climbing a rope       0.68      0.42      0.52        50
+                       golf driving       0.65      0.84      0.73        50
+                           hurdling       0.75      0.82      0.78        50
+                 dunking basketball       0.23      0.37      0.29        49
+
+                           accuracy                           0.52      2485
+                          macro avg       0.52      0.52      0.51      2485
+                       weighted avg       0.52      0.52      0.51      2485
+
+Top-1 Accuracy w/ GT = Human: 51.51%
+Top-5 Accuracy w/ GT = Human: 78.59%
+Mean AP: 0.4761
+
+
+=== Report for Epoch 300 mimetics final===
+                                     precision    recall  f1-score   support
+
+                     playing guitar       0.11      0.06      0.07        18
+                            bowling       0.18      0.15      0.17        13
+                  playing saxophone       0.00      0.00      0.00        13
+                     brushing teeth       0.17      0.07      0.10        15
+                 playing basketball       0.10      0.07      0.08        14
+                          tying tie       0.13      0.25      0.17         8
+                      skiing slalom       0.00      0.00      0.00        10
+                      brushing hair       0.05      0.05      0.05        20
+           punching person (boxing)       0.06      0.12      0.08        16
+                  playing accordion       0.04      0.09      0.05        11
+                            archery       0.00      0.00      0.00        19
+       catching or throwing frisbee       0.20      0.21      0.21        14
+                           drinking       0.00      0.00      0.00        27
+                       reading book       0.08      0.20      0.11        10
+                   eating ice cream       0.00      0.00      0.00        11
+                        flying kite       0.00      0.00      0.00        10
+                     sweeping floor       0.00      0.00      0.00        11
+                    walking the dog       0.00      0.00      0.00        15
+                      skipping rope       0.00      0.00      0.00        12
+                     clean and jerk       0.13      0.31      0.19        13
+                        eating cake       0.00      0.00      0.00        19
+      catching or throwing baseball       0.19      0.21      0.20        14
+skiing (not slalom or crosscountry)       0.00      0.00      0.00        10
+               juggling soccer ball       0.14      0.11      0.12        18
+                        deadlifting       0.23      0.27      0.25        11
+                        driving car       0.25      0.06      0.10        16
+                   cleaning windows       0.11      0.12      0.12        16
+                shooting basketball       0.00      0.00      0.00        19
+               canoeing or kayaking       0.20      0.07      0.11        14
+                      surfing water       0.00      0.00      0.00        10
+                 playing volleyball       0.00      0.00      0.00        13
+                     opening bottle       0.00      0.00      0.00         9
+                      playing piano       0.10      0.12      0.11        17
+                            writing       0.00      0.00      0.00        13
+               dribbling basketball       0.00      0.00      0.00        18
+                  reading newspaper       0.09      0.10      0.10        10
+                     playing violin       0.00      0.00      0.00        20
+                     juggling balls       0.05      0.42      0.09        12
+                    playing trumpet       0.00      0.00      0.00        14
+                            smoking       0.08      0.26      0.12        19
+             shooting goal (soccer)       0.67      0.14      0.24        14
+                   hitting baseball       0.07      0.13      0.10        15
+                     sword fighting       0.07      0.06      0.06        17
+                    climbing ladder       0.00      0.00      0.00        13
+                playing bass guitar       0.00      0.00      0.00        13
+                     playing tennis       0.21      0.16      0.18        19
+                    climbing a rope       0.20      0.07      0.11        14
+                       golf driving       0.15      0.19      0.17        16
+                           hurdling       0.00      0.00      0.00        10
+                 dunking basketball       0.13      0.20      0.16        10
+
+                           accuracy                           0.08       713
+                          macro avg       0.08      0.09      0.07       713
+                       weighted avg       0.08      0.08      0.07       713
+
+Top-1 Accuracy w/ GT = Human: 8.27%
+Top-5 Accuracy w/ GT = Human: 27.63%
+Mean AP: 0.0687
+
+
+=== Report for Epoch 300 hat action swap final===
+                                     precision    recall  f1-score   support
+
+                     playing guitar       0.38      0.45      0.41        49
+                            bowling       0.03      0.04      0.03        49
+                  playing saxophone       0.31      0.16      0.21        58
+                     brushing teeth       0.24      0.35      0.28        46
+                 playing basketball       0.07      0.08      0.07        49
+                          tying tie       0.68      0.48      0.57        54
+                      skiing slalom       0.03      0.02      0.03        48
+                      brushing hair       0.23      0.46      0.31        52
+           punching person (boxing)       0.12      0.11      0.11        37
+                  playing accordion       0.04      0.03      0.03        62
+                            archery       0.07      0.14      0.10        43
+       catching or throwing frisbee       0.02      0.02      0.02        51
+                           drinking       0.03      0.03      0.03        39
+                       reading book       0.11      0.28      0.16        47
+                   eating ice cream       0.28      0.29      0.29        51
+                        flying kite       0.04      0.04      0.04        47
+                     sweeping floor       0.07      0.10      0.08        41
+                    walking the dog       0.06      0.12      0.08        48
+                      skipping rope       0.09      0.02      0.03        49
+                     clean and jerk       0.36      0.17      0.23        47
+                        eating cake       0.24      0.09      0.13        58
+      catching or throwing baseball       0.03      0.02      0.02        59
+skiing (not slalom or crosscountry)       0.02      0.02      0.02        44
+               juggling soccer ball       0.15      0.08      0.10        53
+                        deadlifting       0.32      0.17      0.22        53
+                        driving car       0.04      0.04      0.04        54
+                   cleaning windows       0.02      0.04      0.03        45
+                shooting basketball       0.11      0.06      0.07        54
+               canoeing or kayaking       0.04      0.04      0.04        55
+                      surfing water       0.02      0.02      0.02        49
+                 playing volleyball       0.19      0.07      0.10        58
+                     opening bottle       0.07      0.08      0.07        36
+                      playing piano       0.09      0.10      0.10        52
+                            writing       0.02      0.02      0.02        45
+               dribbling basketball       0.30      0.20      0.24        61
+                  reading newspaper       0.07      0.07      0.07        43
+                     playing violin       0.18      0.12      0.14        49
+                     juggling balls       0.22      0.29      0.25        49
+                    playing trumpet       0.24      0.12      0.16        51
+                            smoking       0.23      0.42      0.30        57
+             shooting goal (soccer)       0.00      0.00      0.00        54
+                   hitting baseball       0.09      0.10      0.10        49
+                     sword fighting       0.10      0.05      0.06        43
+                    climbing ladder       0.02      0.02      0.02        44
+                playing bass guitar       0.04      0.04      0.04        55
+                     playing tennis       0.08      0.08      0.08        52
+                    climbing a rope       0.12      0.06      0.08        48
+                       golf driving       0.27      0.35      0.30        43
+                           hurdling       0.04      0.04      0.04        51
+                 dunking basketball       0.10      0.17      0.12        54
+
+                           accuracy                           0.13      2485
+                          macro avg       0.13      0.13      0.12      2485
+                       weighted avg       0.14      0.13      0.12      2485
+
+Top-1 Accuracy w/ GT = Human: 12.80%
+Top-5 Accuracy w/ GT = Human: 34.97%
+Top-1 Accuracy w/ GT = Background: 19.80%
+Top-5 Accuracy w/ GT = Background: 42.01%
+Mean AP: 0.0995
+
+
+=== Report for Epoch 300 hat action swap final===
+                                     precision    recall  f1-score   support
+
+                     playing guitar       0.38      0.45      0.41        49
+                            bowling       0.03      0.04      0.03        49
+                  playing saxophone       0.31      0.16      0.21        58
+                     brushing teeth       0.24      0.35      0.28        46
+                 playing basketball       0.07      0.08      0.07        49
+                          tying tie       0.68      0.48      0.57        54
+                      skiing slalom       0.03      0.02      0.03        48
+                      brushing hair       0.23      0.46      0.31        52
+           punching person (boxing)       0.12      0.11      0.11        37
+                  playing accordion       0.04      0.03      0.03        62
+                            archery       0.07      0.14      0.10        43
+       catching or throwing frisbee       0.02      0.02      0.02        51
+                           drinking       0.03      0.03      0.03        39
+                       reading book       0.11      0.28      0.16        47
+                   eating ice cream       0.28      0.29      0.29        51
+                        flying kite       0.04      0.04      0.04        47
+                     sweeping floor       0.07      0.10      0.08        41
+                    walking the dog       0.06      0.12      0.08        48
+                      skipping rope       0.09      0.02      0.03        49
+                     clean and jerk       0.36      0.17      0.23        47
+                        eating cake       0.24      0.09      0.13        58
+      catching or throwing baseball       0.03      0.02      0.02        59
+skiing (not slalom or crosscountry)       0.02      0.02      0.02        44
+               juggling soccer ball       0.15      0.08      0.10        53
+                        deadlifting       0.32      0.17      0.22        53
+                        driving car       0.04      0.04      0.04        54
+                   cleaning windows       0.02      0.04      0.03        45
+                shooting basketball       0.11      0.06      0.07        54
+               canoeing or kayaking       0.04      0.04      0.04        55
+                      surfing water       0.02      0.02      0.02        49
+                 playing volleyball       0.19      0.07      0.10        58
+                     opening bottle       0.07      0.08      0.07        36
+                      playing piano       0.09      0.10      0.10        52
+                            writing       0.02      0.02      0.02        45
+               dribbling basketball       0.30      0.20      0.24        61
+                  reading newspaper       0.07      0.07      0.07        43
+                     playing violin       0.18      0.12      0.14        49
+                     juggling balls       0.22      0.29      0.25        49
+                    playing trumpet       0.24      0.12      0.16        51
+                            smoking       0.23      0.42      0.30        57
+             shooting goal (soccer)       0.00      0.00      0.00        54
+                   hitting baseball       0.09      0.10      0.10        49
+                     sword fighting       0.10      0.05      0.06        43
+                    climbing ladder       0.02      0.02      0.02        44
+                playing bass guitar       0.04      0.04      0.04        55
+                     playing tennis       0.08      0.08      0.08        52
+                    climbing a rope       0.12      0.06      0.08        48
+                       golf driving       0.27      0.35      0.30        43
+                           hurdling       0.04      0.04      0.04        51
+                 dunking basketball       0.10      0.17      0.12        54
+
+                           accuracy                           0.13      2485
+                          macro avg       0.13      0.13      0.12      2485
+                       weighted avg       0.14      0.13      0.12      2485
+
+Top-1 Accuracy w/ GT = Human: 12.80%
+Top-5 Accuracy w/ GT = Human: 34.97%
+Top-1 Accuracy w/ GT = Background: 19.80%
+Top-5 Accuracy w/ GT = Background: 42.01%
+Mean AP: 0.0995
+
+
+=== Report for Epoch 300 hat action swap final===
+                                     precision    recall  f1-score   support
+
+                     playing guitar       0.38      0.45      0.41        49
+                            bowling       0.03      0.04      0.03        49
+                  playing saxophone       0.31      0.16      0.21        58
+                     brushing teeth       0.24      0.35      0.28        46
+                 playing basketball       0.07      0.08      0.07        49
+                          tying tie       0.68      0.48      0.57        54
+                      skiing slalom       0.03      0.02      0.03        48
+                      brushing hair       0.23      0.46      0.31        52
+           punching person (boxing)       0.12      0.11      0.11        37
+                  playing accordion       0.04      0.03      0.03        62
+                            archery       0.07      0.14      0.10        43
+       catching or throwing frisbee       0.02      0.02      0.02        51
+                           drinking       0.03      0.03      0.03        39
+                       reading book       0.11      0.28      0.16        47
+                   eating ice cream       0.28      0.29      0.29        51
+                        flying kite       0.04      0.04      0.04        47
+                     sweeping floor       0.07      0.10      0.08        41
+                    walking the dog       0.06      0.12      0.08        48
+                      skipping rope       0.09      0.02      0.03        49
+                     clean and jerk       0.36      0.17      0.23        47
+                        eating cake       0.24      0.09      0.13        58
+      catching or throwing baseball       0.03      0.02      0.02        59
+skiing (not slalom or crosscountry)       0.02      0.02      0.02        44
+               juggling soccer ball       0.15      0.08      0.10        53
+                        deadlifting       0.32      0.17      0.22        53
+                        driving car       0.04      0.04      0.04        54
+                   cleaning windows       0.02      0.04      0.03        45
+                shooting basketball       0.11      0.06      0.07        54
+               canoeing or kayaking       0.04      0.04      0.04        55
+                      surfing water       0.02      0.02      0.02        49
+                 playing volleyball       0.19      0.07      0.10        58
+                     opening bottle       0.07      0.08      0.07        36
+                      playing piano       0.09      0.10      0.10        52
+                            writing       0.02      0.02      0.02        45
+               dribbling basketball       0.30      0.20      0.24        61
+                  reading newspaper       0.07      0.07      0.07        43
+                     playing violin       0.18      0.12      0.14        49
+                     juggling balls       0.22      0.29      0.25        49
+                    playing trumpet       0.24      0.12      0.16        51
+                            smoking       0.23      0.42      0.30        57
+             shooting goal (soccer)       0.00      0.00      0.00        54
+                   hitting baseball       0.09      0.10      0.10        49
+                     sword fighting       0.10      0.05      0.06        43
+                    climbing ladder       0.02      0.02      0.02        44
+                playing bass guitar       0.04      0.04      0.04        55
+                     playing tennis       0.08      0.08      0.08        52
+                    climbing a rope       0.12      0.06      0.08        48
+                       golf driving       0.27      0.35      0.30        43
+                           hurdling       0.04      0.04      0.04        51
+                 dunking basketball       0.10      0.17      0.12        54
+
+                           accuracy                           0.13      2485
+                          macro avg       0.13      0.13      0.12      2485
+                       weighted avg       0.14      0.13      0.12      2485
+
+Top-1 Accuracy w/ GT = Human: 12.80%
+Top-5 Accuracy w/ GT = Human: 34.97%
+Top-1 Accuracy w/ GT = Background: 19.80%
+Top-5 Accuracy w/ GT = Background: 42.01%
+Mean AP: 0.0995
+
+
+=== Report for Epoch 300 mini-kinetics 50 final===
+                                     precision    recall  f1-score   support
+
+                     playing guitar       0.58      0.50      0.54        50
+                            bowling       0.39      0.61      0.48        49
+                  playing saxophone       0.47      0.46      0.46        50
+                     brushing teeth       0.43      0.44      0.44        50
+                 playing basketball       0.24      0.30      0.27        50
+                          tying tie       0.66      0.62      0.64        50
+                      skiing slalom       0.89      0.68      0.77        50
+                      brushing hair       0.33      0.48      0.39        50
+           punching person (boxing)       0.48      0.31      0.38        49
+                  playing accordion       0.56      0.67      0.61        49
+                            archery       0.21      0.20      0.21        50
+       catching or throwing frisbee       0.15      0.16      0.16        50
+                           drinking       0.12      0.04      0.06        49
+                       reading book       0.18      0.30      0.23        50
+                   eating ice cream       0.27      0.24      0.26        50
+                        flying kite       0.46      0.60      0.52        50
+                     sweeping floor       0.50      0.40      0.44        50
+                    walking the dog       0.27      0.46      0.34        50
+                      skipping rope       0.44      0.33      0.38        49
+                     clean and jerk       0.59      0.65      0.62        49
+                        eating cake       0.39      0.22      0.28        50
+      catching or throwing baseball       0.19      0.14      0.16        50
+skiing (not slalom or crosscountry)       0.58      0.76      0.65        49
+               juggling soccer ball       0.48      0.32      0.39        50
+                        deadlifting       0.69      0.73      0.71        49
+                        driving car       0.54      0.71      0.61        48
+                   cleaning windows       0.38      0.40      0.39        50
+                shooting basketball       0.19      0.06      0.09        50
+               canoeing or kayaking       0.50      0.70      0.58        50
+                      surfing water       0.73      0.50      0.59        48
+                 playing volleyball       0.43      0.41      0.42        49
+                     opening bottle       0.18      0.18      0.18        50
+                      playing piano       0.51      0.44      0.47        50
+                            writing       0.45      0.54      0.49        50
+               dribbling basketball       0.44      0.38      0.41        50
+                  reading newspaper       0.12      0.04      0.06        50
+                     playing violin       0.50      0.38      0.43        50
+                     juggling balls       0.47      0.60      0.53        50
+                    playing trumpet       0.38      0.34      0.36        50
+                            smoking       0.27      0.45      0.34        49
+             shooting goal (soccer)       0.54      0.28      0.37        50
+                   hitting baseball       0.51      0.48      0.49        50
+                     sword fighting       0.42      0.16      0.23        50
+                    climbing ladder       0.33      0.32      0.33        50
+                playing bass guitar       0.61      0.78      0.68        50
+                     playing tennis       0.43      0.78      0.56        50
+                    climbing a rope       0.68      0.38      0.49        50
+                       golf driving       0.70      0.70      0.70        50
+                           hurdling       0.60      0.68      0.64        50
+                 dunking basketball       0.15      0.20      0.17        49
+
+                           accuracy                           0.43      2485
+                          macro avg       0.43      0.43      0.42      2485
+                       weighted avg       0.43      0.43      0.42      2485
+
+Top-1 Accuracy w/ GT = Human: 42.98%
+Top-5 Accuracy w/ GT = Human: 72.88%
+Mean AP: 0.3375
+
+
+=== Report for Epoch 300 mimetics final===
+                                     precision    recall  f1-score   support
+
+                     playing guitar       0.00      0.00      0.00        18
+                            bowling       0.00      0.00      0.00        13
+                  playing saxophone       0.00      0.00      0.00        13
+                     brushing teeth       0.29      0.13      0.18        15
+                 playing basketball       0.20      0.14      0.17        14
+                          tying tie       0.00      0.00      0.00         8
+                      skiing slalom       0.00      0.00      0.00        10
+                      brushing hair       0.07      0.05      0.06        20
+           punching person (boxing)       0.09      0.12      0.11        16
+                  playing accordion       0.03      0.09      0.05        11
+                            archery       0.14      0.26      0.19        19
+       catching or throwing frisbee       0.21      0.21      0.21        14
+                           drinking       0.14      0.04      0.06        27
+                       reading book       0.12      0.20      0.15        10
+                   eating ice cream       0.00      0.00      0.00        11
+                        flying kite       0.33      0.10      0.15        10
+                     sweeping floor       0.00      0.00      0.00        11
+                    walking the dog       0.20      0.13      0.16        15
+                      skipping rope       0.10      0.08      0.09        12
+                     clean and jerk       0.20      0.62      0.30        13
+                        eating cake       0.00      0.00      0.00        19
+      catching or throwing baseball       0.07      0.07      0.07        14
+skiing (not slalom or crosscountry)       0.00      0.00      0.00        10
+               juggling soccer ball       0.11      0.17      0.13        18
+                        deadlifting       0.36      0.73      0.48        11
+                        driving car       0.00      0.00      0.00        16
+                   cleaning windows       0.06      0.06      0.06        16
+                shooting basketball       0.00      0.00      0.00        19
+               canoeing or kayaking       0.08      0.07      0.07        14
+                      surfing water       0.00      0.00      0.00        10
+                 playing volleyball       0.33      0.08      0.12        13
+                     opening bottle       0.00      0.00      0.00         9
+                      playing piano       0.75      0.18      0.29        17
+                            writing       0.00      0.00      0.00        13
+               dribbling basketball       0.25      0.17      0.20        18
+                  reading newspaper       0.00      0.00      0.00        10
+                     playing violin       0.10      0.10      0.10        20
+                     juggling balls       0.02      0.17      0.04        12
+                    playing trumpet       0.10      0.14      0.12        14
+                            smoking       0.08      0.11      0.09        19
+             shooting goal (soccer)       0.25      0.07      0.11        14
+                   hitting baseball       0.08      0.13      0.10        15
+                     sword fighting       0.33      0.29      0.31        17
+                    climbing ladder       0.06      0.08      0.06        13
+                playing bass guitar       0.00      0.00      0.00        13
+                     playing tennis       0.12      0.11      0.11        19
+                    climbing a rope       0.12      0.07      0.09        14
+                       golf driving       0.38      0.31      0.34        16
+                           hurdling       0.33      0.10      0.15        10
+                 dunking basketball       0.00      0.00      0.00        10
+
+                           accuracy                           0.11       713
+                          macro avg       0.12      0.11      0.10       713
+                       weighted avg       0.13      0.11      0.10       713
+
+Top-1 Accuracy w/ GT = Human: 10.94%
+Top-5 Accuracy w/ GT = Human: 31.42%
+Mean AP: 0.0828
+
+
+=== Report for Epoch 300 hat action swap final===
+                                     precision    recall  f1-score   support
+
+                     playing guitar       0.50      0.49      0.49        49
+                            bowling       0.16      0.29      0.21        49
+                  playing saxophone       0.23      0.19      0.21        58
+                     brushing teeth       0.27      0.30      0.29        46
+                 playing basketball       0.07      0.10      0.08        49
+                          tying tie       0.53      0.56      0.54        54
+                      skiing slalom       0.43      0.19      0.26        48
+                      brushing hair       0.24      0.38      0.29        52
+           punching person (boxing)       0.19      0.14      0.16        37
+                  playing accordion       0.37      0.45      0.41        62
+                            archery       0.09      0.14      0.11        43
+       catching or throwing frisbee       0.08      0.10      0.09        51
+                           drinking       0.16      0.13      0.14        39
+                       reading book       0.14      0.28      0.19        47
+                   eating ice cream       0.22      0.24      0.23        51
+                        flying kite       0.09      0.09      0.09        47
+                     sweeping floor       0.40      0.41      0.41        41
+                    walking the dog       0.12      0.29      0.17        48
+                      skipping rope       0.31      0.16      0.21        49
+                     clean and jerk       0.54      0.55      0.55        47
+                        eating cake       0.41      0.19      0.26        58
+      catching or throwing baseball       0.06      0.03      0.04        59
+skiing (not slalom or crosscountry)       0.14      0.16      0.15        44
+               juggling soccer ball       0.42      0.34      0.38        53
+                        deadlifting       0.63      0.51      0.56        53
+                        driving car       0.12      0.13      0.13        54
+                   cleaning windows       0.04      0.04      0.04        45
+                shooting basketball       0.19      0.06      0.09        54
+               canoeing or kayaking       0.12      0.11      0.12        55
+                      surfing water       0.06      0.04      0.05        49
+                 playing volleyball       0.30      0.14      0.19        58
+                     opening bottle       0.09      0.14      0.11        36
+                      playing piano       0.38      0.29      0.33        52
+                            writing       0.16      0.18      0.17        45
+               dribbling basketball       0.32      0.34      0.33        61
+                  reading newspaper       0.18      0.09      0.12        43
+                     playing violin       0.29      0.14      0.19        49
+                     juggling balls       0.34      0.37      0.35        49
+                    playing trumpet       0.36      0.29      0.32        51
+                            smoking       0.19      0.28      0.22        57
+             shooting goal (soccer)       0.11      0.02      0.03        54
+                   hitting baseball       0.27      0.31      0.29        49
+                     sword fighting       0.25      0.12      0.16        43
+                    climbing ladder       0.05      0.07      0.06        44
+                playing bass guitar       0.34      0.27      0.30        55
+                     playing tennis       0.17      0.29      0.22        52
+                    climbing a rope       0.42      0.29      0.35        48
+                       golf driving       0.56      0.53      0.55        43
+                           hurdling       0.04      0.04      0.04        51
+                 dunking basketball       0.13      0.20      0.16        54
+
+                           accuracy                           0.23      2485
+                          macro avg       0.25      0.23      0.23      2485
+                       weighted avg       0.25      0.23      0.23      2485
+
+Top-1 Accuracy w/ GT = Human: 23.18%
+Top-5 Accuracy w/ GT = Human: 48.89%
+Top-1 Accuracy w/ GT = Background: 8.57%
+Top-5 Accuracy w/ GT = Background: 26.24%
+Mean AP: 0.1372

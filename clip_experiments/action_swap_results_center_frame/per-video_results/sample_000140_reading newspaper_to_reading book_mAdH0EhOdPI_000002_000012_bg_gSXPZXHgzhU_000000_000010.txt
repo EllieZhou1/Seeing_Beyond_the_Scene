@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000140_reading newspaper_to_reading book_mAdH0EhOdPI_000002_000012_bg_gSXPZXHgzhU_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading newspaper
+Background Label (Incorrect): reading book
+
+CLIP PREDICTIONS:
+  Predicted Label: reading newspaper (score: 0.2270)
+
+RANKING ANALYSIS:
+  Human Action 'reading newspaper' ranked: #1/50 (score: 0.2270)
+  Background Action 'reading book' ranked: #7/50 (score: 0.0365)
+
+Top 10 predictions:
+  👤  1. reading newspaper (0.2270)
+      2. playing violin (0.1001)
+      3. playing piano (0.0992)
+      4. skipping rope (0.0855)
+      5. brushing teeth (0.0531)
+      6. tying tie (0.0407)
+  🏞️  7. reading book (0.0365)
+      8. playing guitar (0.0357)
+      9. brushing hair (0.0329)
+     10. eating cake (0.0306)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 6
+Score gap (bg_score - human_score): -0.1905
+✅ Human action in top 5

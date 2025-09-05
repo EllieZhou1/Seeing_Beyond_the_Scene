@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001367_clean and jerk_to_brushing hair_egZqefmMHOQ_000076_000086_bg_6inRgsTHfPY_000325_000335
+Frame: MIDDLE.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): brushing hair
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.2673)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #42/50 (score: 0.0007)
+  Background Action 'brushing hair' ranked: #3/50 (score: 0.1183)
+
+Top 10 predictions:
+      1. climbing ladder (0.2673)
+      2. climbing a rope (0.1468)
+  🏞️  3. brushing hair (0.1183)
+      4. brushing teeth (0.0869)
+      5. opening bottle (0.0665)
+      6. punching person (boxing) (0.0411)
+      7. playing violin (0.0267)
+      8. surfing water (0.0220)
+      9. skipping rope (0.0215)
+     10. drinking (0.0212)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -39
+Score gap (bg_score - human_score): 0.1176
+⚠️  Background action in top 5!

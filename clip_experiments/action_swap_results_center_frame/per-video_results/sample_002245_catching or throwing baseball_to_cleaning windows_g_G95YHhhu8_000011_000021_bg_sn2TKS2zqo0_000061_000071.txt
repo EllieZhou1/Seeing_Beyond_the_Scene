@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002245_catching or throwing baseball_to_cleaning windows_g_G95YHhhu8_000011_000021_bg_sn2TKS2zqo0_000061_000071
+Frame: MIDDLE.jpg
+Human Action Label (Correct): catching or throwing baseball
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.1804)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing baseball' ranked: #18/50 (score: 0.0074)
+  Background Action 'cleaning windows' ranked: #23/50 (score: 0.0025)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.1804)
+      2. dunking basketball (0.1342)
+      3. skipping rope (0.1271)
+      4. playing volleyball (0.0839)
+      5. hurdling (0.0832)
+      6. dribbling basketball (0.0708)
+      7. shooting goal (soccer) (0.0646)
+      8. playing basketball (0.0515)
+      9. juggling balls (0.0443)
+     10. climbing a rope (0.0275)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 5
+Score gap (bg_score - human_score): -0.0050

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001335_playing volleyball_to_cleaning windows_Djgz_dNVPjA_000069_000079_bg_Dk3DiAp2yAU_000029_000039
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing volleyball
+Background Label (Incorrect): cleaning windows
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.7662)
+
+RANKING ANALYSIS:
+  Human Action 'playing volleyball' ranked: #50/50 (score: 0.0000)
+  Background Action 'cleaning windows' ranked: #3/50 (score: 0.0629)
+
+Top 10 predictions:
+      1. skiing slalom (0.7662)
+      2. skiing (not slalom or crosscountry) (0.1055)
+  🏞️  3. cleaning windows (0.0629)
+      4. climbing ladder (0.0156)
+      5. climbing a rope (0.0103)
+      6. sword fighting (0.0034)
+      7. walking the dog (0.0031)
+      8. opening bottle (0.0029)
+      9. smoking (0.0026)
+     10. sweeping floor (0.0024)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -47
+Score gap (bg_score - human_score): 0.0628
+⚠️  Background action in top 5!

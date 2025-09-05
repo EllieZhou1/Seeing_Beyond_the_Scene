@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002074_archery_to_playing tennis_cIyLDvGWT6I_000001_000011_bg_XqC5n_zyCic_000077_000087
+Frame: MIDDLE.jpg
+Human Action Label (Correct): archery
+Background Label (Incorrect): playing tennis
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.2311)
+
+RANKING ANALYSIS:
+  Human Action 'archery' ranked: #15/50 (score: 0.0154)
+  Background Action 'playing tennis' ranked: #4/50 (score: 0.0584)
+
+Top 10 predictions:
+      1. climbing a rope (0.2311)
+      2. skiing slalom (0.1965)
+      3. hurdling (0.0942)
+  🏞️  4. playing tennis (0.0584)
+      5. shooting goal (soccer) (0.0567)
+      6. skiing (not slalom or crosscountry) (0.0379)
+      7. opening bottle (0.0349)
+      8. hitting baseball (0.0271)
+      9. driving car (0.0233)
+     10. golf driving (0.0220)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -11
+Score gap (bg_score - human_score): 0.0430
+⚠️  Background action in top 5!

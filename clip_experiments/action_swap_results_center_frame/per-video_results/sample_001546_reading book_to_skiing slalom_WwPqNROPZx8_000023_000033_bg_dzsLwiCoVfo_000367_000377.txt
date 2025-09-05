@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001546_reading book_to_skiing slalom_WwPqNROPZx8_000023_000033_bg_dzsLwiCoVfo_000367_000377
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): skiing slalom
+
+CLIP PREDICTIONS:
+  Predicted Label: reading newspaper (score: 0.3627)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #3/50 (score: 0.0489)
+  Background Action 'skiing slalom' ranked: #2/50 (score: 0.1388)
+
+Top 10 predictions:
+      1. reading newspaper (0.3627)
+  🏞️  2. skiing slalom (0.1388)
+  👤  3. reading book (0.0489)
+      4. playing violin (0.0442)
+      5. sweeping floor (0.0421)
+      6. flying kite (0.0420)
+      7. skiing (not slalom or crosscountry) (0.0403)
+      8. eating cake (0.0279)
+      9. playing piano (0.0233)
+     10. eating ice cream (0.0230)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.0899
+⚠️  Background action in top 5!
+✅ Human action in top 5

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000723_archery_to_surfing water_3and4vWkW4s_000011_000021_bg_Q4kAb9-wvCw_000364_000374
+Frame: MIDDLE.jpg
+Human Action Label (Correct): archery
+Background Label (Incorrect): surfing water
+
+CLIP PREDICTIONS:
+  Predicted Label: skiing slalom (score: 0.5812)
+
+RANKING ANALYSIS:
+  Human Action 'archery' ranked: #5/50 (score: 0.0047)
+  Background Action 'surfing water' ranked: #11/50 (score: 0.0009)
+
+Top 10 predictions:
+      1. skiing slalom (0.5812)
+      2. sword fighting (0.2760)
+      3. skiing (not slalom or crosscountry) (0.1064)
+      4. climbing ladder (0.0104)
+  👤  5. archery (0.0047)
+      6. hurdling (0.0044)
+      7. hitting baseball (0.0026)
+      8. brushing teeth (0.0019)
+      9. punching person (boxing) (0.0012)
+     10. smoking (0.0010)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 6
+Score gap (bg_score - human_score): -0.0038
+✅ Human action in top 5

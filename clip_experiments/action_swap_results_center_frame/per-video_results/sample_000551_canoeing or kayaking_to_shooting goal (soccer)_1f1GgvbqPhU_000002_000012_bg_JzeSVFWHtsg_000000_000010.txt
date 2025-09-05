@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000551_canoeing or kayaking_to_shooting goal (soccer)_1f1GgvbqPhU_000002_000012_bg_JzeSVFWHtsg_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): canoeing or kayaking
+Background Label (Incorrect): shooting goal (soccer)
+
+CLIP PREDICTIONS:
+  Predicted Label: shooting goal (soccer) (score: 0.5455)
+
+RANKING ANALYSIS:
+  Human Action 'canoeing or kayaking' ranked: #37/50 (score: 0.0000)
+  Background Action 'shooting goal (soccer)' ranked: #1/50 (score: 0.5455)
+
+Top 10 predictions:
+  🏞️  1. shooting goal (soccer) (0.5455)
+      2. juggling soccer ball (0.1503)
+      3. hitting baseball (0.1314)
+      4. catching or throwing baseball (0.0712)
+      5. playing tennis (0.0350)
+      6. catching or throwing frisbee (0.0316)
+      7. dribbling basketball (0.0052)
+      8. hurdling (0.0048)
+      9. juggling balls (0.0046)
+     10. climbing a rope (0.0039)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -36
+Score gap (bg_score - human_score): 0.5455
+⚠️  Background action in top 5!

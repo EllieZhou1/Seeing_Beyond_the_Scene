@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001190_skipping rope_to_golf driving_r8bZcy0V-A8_000402_000412_bg_xIHQ0z4WOhg_000056_000066
+Frame: MIDDLE.jpg
+Human Action Label (Correct): skipping rope
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.2812)
+
+RANKING ANALYSIS:
+  Human Action 'skipping rope' ranked: #5/50 (score: 0.0768)
+  Background Action 'golf driving' ranked: #3/50 (score: 0.1148)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.2812)
+      2. juggling balls (0.1219)
+  🏞️  3. golf driving (0.1148)
+      4. shooting goal (soccer) (0.0773)
+  👤  5. skipping rope (0.0768)
+      6. playing tennis (0.0594)
+      7. archery (0.0578)
+      8. playing volleyball (0.0500)
+      9. dribbling basketball (0.0299)
+     10. shooting basketball (0.0210)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -2
+Score gap (bg_score - human_score): 0.0380
+⚠️  Background action in top 5!
+✅ Human action in top 5

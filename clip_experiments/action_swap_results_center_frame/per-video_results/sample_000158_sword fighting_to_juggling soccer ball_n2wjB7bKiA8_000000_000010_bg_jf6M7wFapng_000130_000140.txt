@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000158_sword fighting_to_juggling soccer ball_n2wjB7bKiA8_000000_000010_bg_jf6M7wFapng_000130_000140
+Frame: MIDDLE.jpg
+Human Action Label (Correct): sword fighting
+Background Label (Incorrect): juggling soccer ball
+
+CLIP PREDICTIONS:
+  Predicted Label: catching or throwing frisbee (score: 0.3716)
+
+RANKING ANALYSIS:
+  Human Action 'sword fighting' ranked: #17/50 (score: 0.0020)
+  Background Action 'juggling soccer ball' ranked: #2/50 (score: 0.3418)
+
+Top 10 predictions:
+      1. catching or throwing frisbee (0.3716)
+  🏞️  2. juggling soccer ball (0.3418)
+      3. walking the dog (0.0770)
+      4. shooting goal (soccer) (0.0503)
+      5. flying kite (0.0355)
+      6. juggling balls (0.0348)
+      7. dribbling basketball (0.0120)
+      8. playing basketball (0.0111)
+      9. hurdling (0.0105)
+     10. playing tennis (0.0103)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -15
+Score gap (bg_score - human_score): 0.3398
+⚠️  Background action in top 5!

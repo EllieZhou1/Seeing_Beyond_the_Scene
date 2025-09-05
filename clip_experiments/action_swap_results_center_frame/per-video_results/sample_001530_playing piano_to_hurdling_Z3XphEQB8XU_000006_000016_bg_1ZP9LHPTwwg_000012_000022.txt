@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001530_playing piano_to_hurdling_Z3XphEQB8XU_000006_000016_bg_1ZP9LHPTwwg_000012_000022
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing piano
+Background Label (Incorrect): hurdling
+
+CLIP PREDICTIONS:
+  Predicted Label: hurdling (score: 0.5627)
+
+RANKING ANALYSIS:
+  Human Action 'playing piano' ranked: #35/50 (score: 0.0002)
+  Background Action 'hurdling' ranked: #1/50 (score: 0.5627)
+
+Top 10 predictions:
+  🏞️  1. hurdling (0.5627)
+      2. shooting goal (soccer) (0.1228)
+      3. climbing a rope (0.0728)
+      4. archery (0.0649)
+      5. skipping rope (0.0564)
+      6. climbing ladder (0.0225)
+      7. skiing slalom (0.0196)
+      8. flying kite (0.0154)
+      9. skiing (not slalom or crosscountry) (0.0086)
+     10. catching or throwing frisbee (0.0055)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -34
+Score gap (bg_score - human_score): 0.5625
+⚠️  Background action in top 5!

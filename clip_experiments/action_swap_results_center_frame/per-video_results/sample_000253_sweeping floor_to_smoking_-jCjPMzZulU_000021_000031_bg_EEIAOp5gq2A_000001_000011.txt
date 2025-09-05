@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000253_sweeping floor_to_smoking_-jCjPMzZulU_000021_000031_bg_EEIAOp5gq2A_000001_000011
+Frame: MIDDLE.jpg
+Human Action Label (Correct): sweeping floor
+Background Label (Incorrect): smoking
+
+CLIP PREDICTIONS:
+  Predicted Label: golf driving (score: 0.4143)
+
+RANKING ANALYSIS:
+  Human Action 'sweeping floor' ranked: #3/50 (score: 0.0963)
+  Background Action 'smoking' ranked: #18/50 (score: 0.0084)
+
+Top 10 predictions:
+      1. golf driving (0.4143)
+      2. bowling (0.1038)
+  👤  3. sweeping floor (0.0963)
+      4. juggling balls (0.0453)
+      5. sword fighting (0.0421)
+      6. playing tennis (0.0311)
+      7. hitting baseball (0.0257)
+      8. playing violin (0.0250)
+      9. punching person (boxing) (0.0197)
+     10. juggling soccer ball (0.0180)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 15
+Score gap (bg_score - human_score): -0.0879
+✅ Human action in top 5

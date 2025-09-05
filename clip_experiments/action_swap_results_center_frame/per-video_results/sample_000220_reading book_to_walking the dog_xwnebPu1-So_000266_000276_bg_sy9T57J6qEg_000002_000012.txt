@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000220_reading book_to_walking the dog_xwnebPu1-So_000266_000276_bg_sy9T57J6qEg_000002_000012
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): walking the dog
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.8000)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #48/50 (score: 0.0000)
+  Background Action 'walking the dog' ranked: #24/50 (score: 0.0001)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.8000)
+      2. juggling balls (0.1281)
+      3. dribbling basketball (0.0377)
+      4. shooting goal (soccer) (0.0047)
+      5. playing basketball (0.0041)
+      6. sweeping floor (0.0039)
+      7. catching or throwing frisbee (0.0032)
+      8. playing volleyball (0.0030)
+      9. skipping rope (0.0023)
+     10. catching or throwing baseball (0.0022)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -24
+Score gap (bg_score - human_score): 0.0001

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001328_hitting baseball_to_eating cake_Zp9aDp2YTBw_000002_000012_bg_dQcNfbY0hwg_000037_000047
+Frame: MIDDLE.jpg
+Human Action Label (Correct): hitting baseball
+Background Label (Incorrect): eating cake
+
+CLIP PREDICTIONS:
+  Predicted Label: dunking basketball (score: 0.4234)
+
+RANKING ANALYSIS:
+  Human Action 'hitting baseball' ranked: #29/50 (score: 0.0007)
+  Background Action 'eating cake' ranked: #6/50 (score: 0.0236)
+
+Top 10 predictions:
+      1. dunking basketball (0.4234)
+      2. surfing water (0.1999)
+      3. dribbling basketball (0.1314)
+      4. playing basketball (0.0506)
+      5. juggling soccer ball (0.0373)
+  🏞️  6. eating cake (0.0236)
+      7. juggling balls (0.0205)
+      8. shooting basketball (0.0185)
+      9. bowling (0.0114)
+     10. punching person (boxing) (0.0108)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -23
+Score gap (bg_score - human_score): 0.0229

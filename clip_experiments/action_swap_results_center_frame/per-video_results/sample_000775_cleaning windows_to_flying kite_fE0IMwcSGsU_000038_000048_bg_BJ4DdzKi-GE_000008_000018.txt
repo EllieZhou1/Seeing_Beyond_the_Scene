@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000775_cleaning windows_to_flying kite_fE0IMwcSGsU_000038_000048_bg_BJ4DdzKi-GE_000008_000018
+Frame: MIDDLE.jpg
+Human Action Label (Correct): cleaning windows
+Background Label (Incorrect): flying kite
+
+CLIP PREDICTIONS:
+  Predicted Label: walking the dog (score: 0.1598)
+
+RANKING ANALYSIS:
+  Human Action 'cleaning windows' ranked: #42/50 (score: 0.0012)
+  Background Action 'flying kite' ranked: #4/50 (score: 0.0785)
+
+Top 10 predictions:
+      1. walking the dog (0.1598)
+      2. surfing water (0.1161)
+      3. skipping rope (0.0990)
+  🏞️  4. flying kite (0.0785)
+      5. playing volleyball (0.0671)
+      6. catching or throwing frisbee (0.0637)
+      7. juggling balls (0.0506)
+      8. climbing a rope (0.0472)
+      9. canoeing or kayaking (0.0431)
+     10. playing saxophone (0.0246)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -38
+Score gap (bg_score - human_score): 0.0773
+⚠️  Background action in top 5!

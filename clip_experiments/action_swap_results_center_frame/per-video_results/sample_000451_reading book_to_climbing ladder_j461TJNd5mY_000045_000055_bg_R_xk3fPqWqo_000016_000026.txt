@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000451_reading book_to_climbing ladder_j461TJNd5mY_000045_000055_bg_R_xk3fPqWqo_000016_000026
+Frame: MIDDLE.jpg
+Human Action Label (Correct): reading book
+Background Label (Incorrect): climbing ladder
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing ladder (score: 0.4158)
+
+RANKING ANALYSIS:
+  Human Action 'reading book' ranked: #19/50 (score: 0.0071)
+  Background Action 'climbing ladder' ranked: #1/50 (score: 0.4158)
+
+Top 10 predictions:
+  🏞️  1. climbing ladder (0.4158)
+      2. reading newspaper (0.1003)
+      3. hurdling (0.0683)
+      4. sweeping floor (0.0480)
+      5. cleaning windows (0.0477)
+      6. sword fighting (0.0374)
+      7. shooting goal (soccer) (0.0307)
+      8. climbing a rope (0.0281)
+      9. dribbling basketball (0.0265)
+     10. flying kite (0.0217)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -18
+Score gap (bg_score - human_score): 0.4087
+⚠️  Background action in top 5!

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000850_smoking_to_writing_JzSw34VjIzo_000032_000042_bg_r-5lYAlq4F0_000072_000082
+Frame: MIDDLE.jpg
+Human Action Label (Correct): smoking
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: eating cake (score: 0.2132)
+
+RANKING ANALYSIS:
+  Human Action 'smoking' ranked: #4/50 (score: 0.0862)
+  Background Action 'writing' ranked: #8/50 (score: 0.0282)
+
+Top 10 predictions:
+      1. eating cake (0.2132)
+      2. eating ice cream (0.1752)
+      3. playing saxophone (0.0931)
+  👤  4. smoking (0.0862)
+      5. drinking (0.0576)
+      6. playing guitar (0.0414)
+      7. playing accordion (0.0398)
+  🏞️  8. writing (0.0282)
+      9. brushing hair (0.0267)
+     10. playing trumpet (0.0266)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 4
+Score gap (bg_score - human_score): -0.0580
+✅ Human action in top 5

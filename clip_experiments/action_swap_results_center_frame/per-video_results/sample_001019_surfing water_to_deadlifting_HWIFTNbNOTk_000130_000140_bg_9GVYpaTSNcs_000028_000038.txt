@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001019_surfing water_to_deadlifting_HWIFTNbNOTk_000130_000140_bg_9GVYpaTSNcs_000028_000038
+Frame: MIDDLE.jpg
+Human Action Label (Correct): surfing water
+Background Label (Incorrect): deadlifting
+
+CLIP PREDICTIONS:
+  Predicted Label: cleaning windows (score: 0.3084)
+
+RANKING ANALYSIS:
+  Human Action 'surfing water' ranked: #29/50 (score: 0.0013)
+  Background Action 'deadlifting' ranked: #6/50 (score: 0.0374)
+
+Top 10 predictions:
+      1. cleaning windows (0.3084)
+      2. climbing ladder (0.2909)
+      3. sweeping floor (0.0722)
+      4. hurdling (0.0511)
+      5. climbing a rope (0.0383)
+  🏞️  6. deadlifting (0.0374)
+      7. juggling balls (0.0349)
+      8. dunking basketball (0.0321)
+      9. driving car (0.0208)
+     10. juggling soccer ball (0.0188)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -23
+Score gap (bg_score - human_score): 0.0361

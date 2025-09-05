@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001196_driving car_to_writing_E6cLsQqwcbQ_000040_000050_bg_kHSpzsmCFGo_000078_000088
+Frame: MIDDLE.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): writing
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.1174)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #1/50 (score: 0.1174)
+  Background Action 'writing' ranked: #8/50 (score: 0.0421)
+
+Top 10 predictions:
+  👤  1. driving car (0.1174)
+      2. opening bottle (0.0835)
+      3. climbing ladder (0.0827)
+      4. skipping rope (0.0793)
+      5. smoking (0.0765)
+      6. reading book (0.0675)
+      7. playing saxophone (0.0433)
+  🏞️  8. writing (0.0421)
+      9. eating cake (0.0401)
+     10. eating ice cream (0.0391)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 7
+Score gap (bg_score - human_score): -0.0753
+✅ Human action in top 5

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001778_opening bottle_to_playing trumpet_6bwkUwMT87E_000003_000013_bg_k4wYU7PZuPY_000029_000039
+Frame: MIDDLE.jpg
+Human Action Label (Correct): opening bottle
+Background Label (Incorrect): playing trumpet
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.1590)
+
+RANKING ANALYSIS:
+  Human Action 'opening bottle' ranked: #20/50 (score: 0.0093)
+  Background Action 'playing trumpet' ranked: #4/50 (score: 0.0913)
+
+Top 10 predictions:
+      1. sword fighting (0.1590)
+      2. juggling soccer ball (0.1047)
+      3. archery (0.0985)
+  🏞️  4. playing trumpet (0.0913)
+      5. juggling balls (0.0803)
+      6. climbing a rope (0.0604)
+      7. playing saxophone (0.0569)
+      8. flying kite (0.0370)
+      9. skiing slalom (0.0363)
+     10. playing violin (0.0354)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -16
+Score gap (bg_score - human_score): 0.0820
+⚠️  Background action in top 5!

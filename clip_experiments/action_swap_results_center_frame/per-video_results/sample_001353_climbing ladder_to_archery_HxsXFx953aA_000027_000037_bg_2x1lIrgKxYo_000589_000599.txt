@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001353_climbing ladder_to_archery_HxsXFx953aA_000027_000037_bg_2x1lIrgKxYo_000589_000599
+Frame: MIDDLE.jpg
+Human Action Label (Correct): climbing ladder
+Background Label (Incorrect): archery
+
+CLIP PREDICTIONS:
+  Predicted Label: skipping rope (score: 0.1723)
+
+RANKING ANALYSIS:
+  Human Action 'climbing ladder' ranked: #10/50 (score: 0.0367)
+  Background Action 'archery' ranked: #2/50 (score: 0.1083)
+
+Top 10 predictions:
+      1. skipping rope (0.1723)
+  🏞️  2. archery (0.1083)
+      3. climbing a rope (0.1068)
+      4. catching or throwing frisbee (0.0834)
+      5. juggling soccer ball (0.0744)
+      6. juggling balls (0.0606)
+      7. flying kite (0.0523)
+      8. surfing water (0.0474)
+      9. shooting goal (soccer) (0.0420)
+  👤 10. climbing ladder (0.0367)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -8
+Score gap (bg_score - human_score): 0.0716
+⚠️  Background action in top 5!

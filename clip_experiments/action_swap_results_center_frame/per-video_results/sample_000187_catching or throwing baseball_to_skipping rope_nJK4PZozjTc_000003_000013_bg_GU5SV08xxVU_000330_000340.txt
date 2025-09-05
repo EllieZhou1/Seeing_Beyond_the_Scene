@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000187_catching or throwing baseball_to_skipping rope_nJK4PZozjTc_000003_000013_bg_GU5SV08xxVU_000330_000340
+Frame: MIDDLE.jpg
+Human Action Label (Correct): catching or throwing baseball
+Background Label (Incorrect): skipping rope
+
+CLIP PREDICTIONS:
+  Predicted Label: sword fighting (score: 0.1824)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing baseball' ranked: #5/50 (score: 0.0833)
+  Background Action 'skipping rope' ranked: #9/50 (score: 0.0490)
+
+Top 10 predictions:
+      1. sword fighting (0.1824)
+      2. hitting baseball (0.1066)
+      3. juggling balls (0.0931)
+      4. juggling soccer ball (0.0911)
+  👤  5. catching or throwing baseball (0.0833)
+      6. dribbling basketball (0.0696)
+      7. playing tennis (0.0566)
+      8. shooting basketball (0.0530)
+  🏞️  9. skipping rope (0.0490)
+     10. hurdling (0.0380)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 4
+Score gap (bg_score - human_score): -0.0343
+✅ Human action in top 5

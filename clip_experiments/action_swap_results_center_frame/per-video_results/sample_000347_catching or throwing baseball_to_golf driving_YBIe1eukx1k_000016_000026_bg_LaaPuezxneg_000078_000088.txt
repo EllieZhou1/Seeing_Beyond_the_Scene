@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000347_catching or throwing baseball_to_golf driving_YBIe1eukx1k_000016_000026_bg_LaaPuezxneg_000078_000088
+Frame: MIDDLE.jpg
+Human Action Label (Correct): catching or throwing baseball
+Background Label (Incorrect): golf driving
+
+CLIP PREDICTIONS:
+  Predicted Label: flying kite (score: 0.5414)
+
+RANKING ANALYSIS:
+  Human Action 'catching or throwing baseball' ranked: #18/50 (score: 0.0020)
+  Background Action 'golf driving' ranked: #2/50 (score: 0.2274)
+
+Top 10 predictions:
+      1. flying kite (0.5414)
+  🏞️  2. golf driving (0.2274)
+      3. skiing slalom (0.0980)
+      4. shooting goal (soccer) (0.0422)
+      5. skiing (not slalom or crosscountry) (0.0237)
+      6. catching or throwing frisbee (0.0086)
+      7. archery (0.0063)
+      8. surfing water (0.0061)
+      9. climbing ladder (0.0051)
+     10. hurdling (0.0047)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -16
+Score gap (bg_score - human_score): 0.2254
+⚠️  Background action in top 5!

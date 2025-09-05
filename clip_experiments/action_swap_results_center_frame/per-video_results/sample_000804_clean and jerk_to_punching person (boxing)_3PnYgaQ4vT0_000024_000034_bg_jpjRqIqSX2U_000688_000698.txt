@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000804_clean and jerk_to_punching person (boxing)_3PnYgaQ4vT0_000024_000034_bg_jpjRqIqSX2U_000688_000698
+Frame: MIDDLE.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): punching person (boxing)
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.8127)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #2/50 (score: 0.0447)
+  Background Action 'punching person (boxing)' ranked: #1/50 (score: 0.8127)
+
+Top 10 predictions:
+  🏞️  1. punching person (boxing) (0.8127)
+  👤  2. clean and jerk (0.0447)
+      3. juggling balls (0.0284)
+      4. juggling soccer ball (0.0221)
+      5. hurdling (0.0200)
+      6. climbing a rope (0.0143)
+      7. shooting goal (soccer) (0.0106)
+      8. dunking basketball (0.0084)
+      9. climbing ladder (0.0063)
+     10. skipping rope (0.0053)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -1
+Score gap (bg_score - human_score): 0.7680
+⚠️  Background action in top 5!
+✅ Human action in top 5

@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001703_playing piano_to_archery_9o68AyEWzcM_000081_000091_bg_CjMcGn6C3h0_000003_000013
+Frame: MIDDLE.jpg
+Human Action Label (Correct): playing piano
+Background Label (Incorrect): archery
+
+CLIP PREDICTIONS:
+  Predicted Label: juggling soccer ball (score: 0.5194)
+
+RANKING ANALYSIS:
+  Human Action 'playing piano' ranked: #39/50 (score: 0.0002)
+  Background Action 'archery' ranked: #9/50 (score: 0.0088)
+
+Top 10 predictions:
+      1. juggling soccer ball (0.5194)
+      2. juggling balls (0.1949)
+      3. catching or throwing frisbee (0.0917)
+      4. sword fighting (0.0386)
+      5. shooting goal (soccer) (0.0302)
+      6. catching or throwing baseball (0.0190)
+      7. skipping rope (0.0155)
+      8. dribbling basketball (0.0149)
+  🏞️  9. archery (0.0088)
+     10. playing trumpet (0.0078)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -30
+Score gap (bg_score - human_score): 0.0087

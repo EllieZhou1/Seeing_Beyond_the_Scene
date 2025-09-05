@@ -1,0 +1,32 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001051_brushing hair_to_driving car_9LnZrptwj6Q_000314_000324_bg_JYdPH8D6ZcI_000056_000066
+Frame: MIDDLE.jpg
+Human Action Label (Correct): brushing hair
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.4929)
+
+RANKING ANALYSIS:
+  Human Action 'brushing hair' ranked: #1/50 (score: 0.4929)
+  Background Action 'driving car' ranked: #2/50 (score: 0.3486)
+
+Top 10 predictions:
+  👤  1. brushing hair (0.4929)
+  🏞️  2. driving car (0.3486)
+      3. cleaning windows (0.0470)
+      4. golf driving (0.0259)
+      5. drinking (0.0070)
+      6. opening bottle (0.0064)
+      7. eating ice cream (0.0063)
+      8. climbing ladder (0.0060)
+      9. smoking (0.0060)
+     10. playing piano (0.0058)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 1
+Score gap (bg_score - human_score): -0.1443
+⚠️  Background action in top 5!
+✅ Human action in top 5

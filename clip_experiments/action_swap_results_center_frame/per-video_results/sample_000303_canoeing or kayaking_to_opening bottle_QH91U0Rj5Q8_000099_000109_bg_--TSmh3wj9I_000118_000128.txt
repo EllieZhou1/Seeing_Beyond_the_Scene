@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000303_canoeing or kayaking_to_opening bottle_QH91U0Rj5Q8_000099_000109_bg_--TSmh3wj9I_000118_000128
+Frame: MIDDLE.jpg
+Human Action Label (Correct): canoeing or kayaking
+Background Label (Incorrect): opening bottle
+
+CLIP PREDICTIONS:
+  Predicted Label: climbing a rope (score: 0.2545)
+
+RANKING ANALYSIS:
+  Human Action 'canoeing or kayaking' ranked: #34/50 (score: 0.0014)
+  Background Action 'opening bottle' ranked: #5/50 (score: 0.0624)
+
+Top 10 predictions:
+      1. climbing a rope (0.2545)
+      2. golf driving (0.1445)
+      3. driving car (0.1280)
+      4. climbing ladder (0.0906)
+  🏞️  5. opening bottle (0.0624)
+      6. hitting baseball (0.0537)
+      7. dribbling basketball (0.0340)
+      8. catching or throwing baseball (0.0321)
+      9. playing accordion (0.0255)
+     10. playing saxophone (0.0250)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -29
+Score gap (bg_score - human_score): 0.0610
+⚠️  Background action in top 5!

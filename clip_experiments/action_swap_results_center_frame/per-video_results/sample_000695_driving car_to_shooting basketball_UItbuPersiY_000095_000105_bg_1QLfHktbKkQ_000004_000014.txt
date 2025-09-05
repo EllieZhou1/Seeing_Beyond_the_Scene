@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000695_driving car_to_shooting basketball_UItbuPersiY_000095_000105_bg_1QLfHktbKkQ_000004_000014
+Frame: MIDDLE.jpg
+Human Action Label (Correct): driving car
+Background Label (Incorrect): shooting basketball
+
+CLIP PREDICTIONS:
+  Predicted Label: punching person (boxing) (score: 0.2494)
+
+RANKING ANALYSIS:
+  Human Action 'driving car' ranked: #2/50 (score: 0.1002)
+  Background Action 'shooting basketball' ranked: #15/50 (score: 0.0138)
+
+Top 10 predictions:
+      1. punching person (boxing) (0.2494)
+  👤  2. driving car (0.1002)
+      3. cleaning windows (0.0916)
+      4. bowling (0.0620)
+      5. juggling soccer ball (0.0607)
+      6. hitting baseball (0.0537)
+      7. dunking basketball (0.0524)
+      8. dribbling basketball (0.0352)
+      9. juggling balls (0.0349)
+     10. opening bottle (0.0273)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 13
+Score gap (bg_score - human_score): -0.0864
+✅ Human action in top 5

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001185_flying kite_to_playing guitar_xFfuQPo-K6U_000000_000010_bg_H7RA7onD_P8_000081_000091
+Frame: MIDDLE.jpg
+Human Action Label (Correct): flying kite
+Background Label (Incorrect): playing guitar
+
+CLIP PREDICTIONS:
+  Predicted Label: playing guitar (score: 0.7159)
+
+RANKING ANALYSIS:
+  Human Action 'flying kite' ranked: #18/50 (score: 0.0003)
+  Background Action 'playing guitar' ranked: #1/50 (score: 0.7159)
+
+Top 10 predictions:
+  🏞️  1. playing guitar (0.7159)
+      2. playing bass guitar (0.2351)
+      3. cleaning windows (0.0084)
+      4. playing saxophone (0.0075)
+      5. writing (0.0073)
+      6. playing violin (0.0069)
+      7. playing accordion (0.0037)
+      8. surfing water (0.0021)
+      9. opening bottle (0.0018)
+     10. playing trumpet (0.0016)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -17
+Score gap (bg_score - human_score): 0.7156
+⚠️  Background action in top 5!

@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000827_bowling_to_driving car_xCwDi3Vqm0s_000002_000012_bg_UXLLg2SGJPs_000011_000021
+Frame: MIDDLE.jpg
+Human Action Label (Correct): bowling
+Background Label (Incorrect): driving car
+
+CLIP PREDICTIONS:
+  Predicted Label: driving car (score: 0.9493)
+
+RANKING ANALYSIS:
+  Human Action 'bowling' ranked: #15/50 (score: 0.0005)
+  Background Action 'driving car' ranked: #1/50 (score: 0.9493)
+
+Top 10 predictions:
+  🏞️  1. driving car (0.9493)
+      2. golf driving (0.0209)
+      3. skiing slalom (0.0133)
+      4. hurdling (0.0025)
+      5. climbing a rope (0.0015)
+      6. climbing ladder (0.0014)
+      7. skipping rope (0.0014)
+      8. skiing (not slalom or crosscountry) (0.0013)
+      9. smoking (0.0012)
+     10. punching person (boxing) (0.0007)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -14
+Score gap (bg_score - human_score): 0.9488
+⚠️  Background action in top 5!

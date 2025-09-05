@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_002434_clean and jerk_to_canoeing or kayaking_B98EOBpM5YQ_000017_000027_bg_Bi5SWEY6uH8_000034_000044
+Frame: MIDDLE.jpg
+Human Action Label (Correct): clean and jerk
+Background Label (Incorrect): canoeing or kayaking
+
+CLIP PREDICTIONS:
+  Predicted Label: clean and jerk (score: 0.7200)
+
+RANKING ANALYSIS:
+  Human Action 'clean and jerk' ranked: #1/50 (score: 0.7200)
+  Background Action 'canoeing or kayaking' ranked: #18/50 (score: 0.0020)
+
+Top 10 predictions:
+  👤  1. clean and jerk (0.7200)
+      2. catching or throwing frisbee (0.0559)
+      3. dribbling basketball (0.0431)
+      4. deadlifting (0.0370)
+      5. shooting goal (soccer) (0.0213)
+      6. juggling soccer ball (0.0171)
+      7. climbing a rope (0.0162)
+      8. catching or throwing baseball (0.0132)
+      9. playing volleyball (0.0117)
+     10. flying kite (0.0110)
+
+BIAS ASSESSMENT:
+✅ No bias: Human action ranks higher than background action
+Ranking gap (bg_rank - human_rank): 17
+Score gap (bg_score - human_score): -0.7180
+✅ Human action in top 5

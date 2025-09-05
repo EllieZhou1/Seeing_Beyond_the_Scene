@@ -1,0 +1,31 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_000938_sweeping floor_to_brushing teeth_bA2rzUIQKTk_000020_000030_bg_DIrJ-X5GLyQ_000060_000070
+Frame: MIDDLE.jpg
+Human Action Label (Correct): sweeping floor
+Background Label (Incorrect): brushing teeth
+
+CLIP PREDICTIONS:
+  Predicted Label: brushing hair (score: 0.1805)
+
+RANKING ANALYSIS:
+  Human Action 'sweeping floor' ranked: #16/50 (score: 0.0163)
+  Background Action 'brushing teeth' ranked: #3/50 (score: 0.0925)
+
+Top 10 predictions:
+      1. brushing hair (0.1805)
+      2. eating ice cream (0.1352)
+  🏞️  3. brushing teeth (0.0925)
+      4. juggling soccer ball (0.0711)
+      5. opening bottle (0.0646)
+      6. playing violin (0.0633)
+      7. skipping rope (0.0464)
+      8. cleaning windows (0.0429)
+      9. eating cake (0.0332)
+     10. climbing a rope (0.0302)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -13
+Score gap (bg_score - human_score): 0.0762
+⚠️  Background action in top 5!

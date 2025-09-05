@@ -1,0 +1,30 @@
+Action-Swap CLIP Bias Analysis Results
+============================================================
+Video Directory: /n/fs/visualai-scr/temp_LLP/ellie/slowfast_kinetics/dataset/action_swap/original_action_swap/sample_001156_writing_to_tying tie_Ub0rc6U6nfI_000100_000110_bg_k0BHkAT22vE_000000_000010
+Frame: MIDDLE.jpg
+Human Action Label (Correct): writing
+Background Label (Incorrect): tying tie
+
+CLIP PREDICTIONS:
+  Predicted Label: playing accordion (score: 0.4238)
+
+RANKING ANALYSIS:
+  Human Action 'writing' ranked: #28/50 (score: 0.0040)
+  Background Action 'tying tie' ranked: #22/50 (score: 0.0062)
+
+Top 10 predictions:
+      1. playing accordion (0.4238)
+      2. cleaning windows (0.0875)
+      3. climbing a rope (0.0684)
+      4. brushing hair (0.0679)
+      5. playing trumpet (0.0636)
+      6. playing saxophone (0.0352)
+      7. playing piano (0.0159)
+      8. brushing teeth (0.0155)
+      9. shooting goal (soccer) (0.0150)
+     10. opening bottle (0.0139)
+
+BIAS ASSESSMENT:
+🚨 BIAS DETECTED: Background action ranks higher than human action!
+Ranking gap (bg_rank - human_rank): -6
+Score gap (bg_score - human_score): 0.0021
